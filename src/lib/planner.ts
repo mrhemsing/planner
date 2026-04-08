@@ -1,4 +1,4 @@
-import { recipes } from "@/data/recipes";
+import { mealPlan } from "@/data/recipes";
 
 export type GroceryItem = {
   name: string;
@@ -7,7 +7,7 @@ export type GroceryItem = {
   recipeTitles: string[];
 };
 
-export const mealPlan = recipes;
+export { mealPlan };
 
 export function buildGroceryList() {
   const merged = new Map<string, GroceryItem>();
