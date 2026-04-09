@@ -1,0 +1,37 @@
+[
+  {
+    "id": "veggie-egg-bites",
+    "title": "Veggie Egg Bites",
+    "sourceUrl": "https://wildrose.ca/blogs/recipes/veggie-egg-bites",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0951/2484/9006/articles/WR_26.01_Recipe_EggBites_17bdce13-51d9-42c2-a079-465ad4611a3c.jpg?v=1771030444",
+    "description": "Looking for a make-ahead, cleanse-approved breakfast to power you through busy weekdays or lazy weekends? These easy veggie egg bites fit that role well."
+  },
+  {
+    "id": "turmeric-chicken-soup",
+    "title": "Turmeric Chicken Soup",
+    "sourceUrl": "https://wildrose.ca/blogs/recipes/turmeric-chicken-soup",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0951/2484/9006/articles/WR_25.10_Recipe_TurmericGingerSoup_2a557ff2-8099-48f7-85d5-25961d2686ac.jpg?v=1767820273",
+    "description": "A warming soup recipe from Wild Rose with comforting ingredients that works well as a lunch or dinner anchor."
+  },
+  {
+    "id": "tofu-veggie-stir-fry",
+    "title": "Tofu Veggie Stir Fry",
+    "sourceUrl": "https://wildrose.ca/blogs/recipes/tofu-veggie-stir-fry",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0951/2484/9006/articles/WR_26.01_Recipe_TofuStirFry_e3e167ae-e09f-49b4-b5be-8774bef496ec.jpg?v=1771955734",
+    "description": "A light, nourishing, and full-of-flavor cleanse-approved tofu stir fry that works as a fast dinner option."
+  },
+  {
+    "id": "morning-movement-smoothie",
+    "title": "Morning Movement Smoothie",
+    "sourceUrl": "https://wildrose.ca/blogs/recipes/morning-movement-smoothie",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0951/2484/9006/articles/WR_26.01_Recipe_MorningSmoothie_1a735609-c6ae-4f98-966d-3f8a70adb71f.jpg?v=1768517633",
+    "description": "A hydrating smoothie from Wild Rose that works well for a light breakfast or mid-day snack."
+  },
+  {
+    "id": "berry-popsicles",
+    "title": "Berry Popsicles",
+    "sourceUrl": "https://wildrose.ca/blogs/recipes/berry-popsicles",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0951/2484/9006/articles/WR_25.05_Recipe_SummerBerryPopsicle_P02_1_c63d7cea-fd8b-4f50-b160-38494615aaeb.jpg?v=1761148130",
+    "description": "A berry-based Wild Rose snack recipe that now has a real imported photo and source link in the app."
+  }
+]

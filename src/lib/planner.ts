@@ -1,4 +1,4 @@
-import { mealPlan } from "@/data/recipes";
+import { mealPlan, recipeLibrary } from "@/data/recipes";
 
 export type GroceryItem = {
   name: string;
@@ -7,12 +7,16 @@ export type GroceryItem = {
   recipeTitles: string[];
 };
 
-export { mealPlan };
+export { mealPlan, recipeLibrary };
+
+export const todayPlan = mealPlan[0];
+export const upcomingPlan = mealPlan.slice(1, 4);
 
 export function buildGroceryList() {
+  const activePlan = mealPlan.slice(0, 4);
   const merged = new Map<string, GroceryItem>();
 
-  for (const recipe of mealPlan) {
+  for (const recipe of activePlan) {
     for (const ingredient of recipe.ingredients) {
       const key = ingredient.item.toLowerCase();
       const existing = merged.get(key);

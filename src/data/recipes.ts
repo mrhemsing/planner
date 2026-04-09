@@ -5,6 +5,7 @@ export type Ingredient = {
 };
 
 export type MealType = "Breakfast" | "Lunch" | "Dinner" | "Snack";
+export type RecipeCategory = "Main" | "Side" | "Snack";
 
 export type MealPlanEntry = {
   id: string;
@@ -23,10 +24,26 @@ export type MealPlanEntry = {
   ingredients: Ingredient[];
 };
 
+import wildRoseImports from "@/data/wildrose-imports.json";
+import generatedWildRoseImports from "@/data/wildrose-imports.generated.json";
+
+export type RecipeLibraryEntry = {
+  id: string;
+  title: string;
+  category: RecipeCategory;
+  sourceName: string;
+  sourceUrl: string;
+  imageUrl: string;
+  description: string;
+  favourite: boolean;
+  tags: string[];
+  plannedDays: string[];
+};
+
 export const mealPlan: MealPlanEntry[] = [
   {
     id: "day-1-breakfast",
-    day: "Day 1",
+    day: "Today",
     mealType: "Breakfast",
     title: "Veggie Egg Bites with fresh fruit",
     description:
@@ -50,7 +67,7 @@ export const mealPlan: MealPlanEntry[] = [
   },
   {
     id: "day-2-lunch",
-    day: "Day 2",
+    day: "Tomorrow",
     mealType: "Lunch",
     title: "Turmeric Chicken Soup with greens",
     description:
@@ -143,3 +160,169 @@ export const mealPlan: MealPlanEntry[] = [
     ],
   },
 ];
+
+const importedRecipeMeta: Record<
+  string,
+  Partial<{ category: RecipeCategory; favourite: boolean; tags: string[] }>
+> = {
+  "veggie-egg-bites": { category: "Main", favourite: true, tags: ["breakfast"] },
+  "turmeric-chicken-soup": { category: "Main", favourite: true, tags: ["soup"] },
+  "tofu-veggie-stir-fry": { category: "Main", favourite: false, tags: ["dinner"] },
+  "morning-movement-smoothie": { category: "Snack", favourite: false, tags: ["breakfast", "drink"] },
+  "berry-popsicles": { category: "Snack", favourite: true, tags: ["cool"] },
+  "quinoa-salad": { category: "Side", favourite: false, tags: ["salad"] },
+  "peach-arugula-salad": { category: "Side", favourite: false, tags: ["salad"] },
+  "curried-spinach-soup": { category: "Main", favourite: false, tags: ["soup"] },
+  falafel: { category: "Main", favourite: true, tags: ["protein"] },
+  "coconut-chicken-with-spinach": { category: "Main", favourite: true, tags: ["dinner"] },
+  "caesar-salad-dressing": { category: "Side", favourite: false, tags: ["dressings"] },
+  "rice-pilaf": { category: "Side", favourite: true, tags: ["grain"] },
+  "lentil-dhal": { category: "Main", favourite: true, tags: ["comfort"] },
+  "strawberry-lemonade-slushy": { category: "Snack", favourite: false, tags: ["drink"] },
+  "rustic-buckwheat-bread": { category: "Side", favourite: false, tags: ["bread"] },
+  "sweet-bell-pepper-and-fresh-herb-fritatta": {
+    category: "Main",
+    favourite: true,
+    tags: ["breakfast"],
+  },
+  "savoury-almond-biscuits": { category: "Snack", favourite: false, tags: ["baked"] },
+  "almond-milk": { category: "Snack", favourite: false, tags: ["drink"] },
+  "almond-butter-on-celery": { category: "Snack", favourite: true, tags: ["quick"] },
+  "coconut-milk": { category: "Snack", favourite: false, tags: ["drink"] },
+  "veggie-juice": { category: "Snack", favourite: false, tags: ["drink"] },
+  "green-drink": { category: "Snack", favourite: false, tags: ["drink"] },
+  "chocolate-avocado-smoothie": { category: "Snack", favourite: true, tags: ["drink"] },
+  "rosemary-zucchini-soup": { category: "Main", favourite: false, tags: ["soup"] },
+  "tomato-zucchini-soup": { category: "Main", favourite: false, tags: ["soup"] },
+  "vegetable-stock": { category: "Side", favourite: false, tags: ["basics"] },
+  "vegetable-rice-soup": { category: "Main", favourite: false, tags: ["soup"] },
+  "vegetable-chowder": { category: "Main", favourite: false, tags: ["soup"] },
+  "fresh-beet-borscht": { category: "Main", favourite: false, tags: ["soup"] },
+  kitcheri: { category: "Main", favourite: true, tags: ["comfort"] },
+  "moroccan-chickpea-and-millet-soup": { category: "Main", favourite: false, tags: ["soup"] },
+  "warm-sesame-cucumber-rice-salad": { category: "Side", favourite: false, tags: ["salad"] },
+  "salmon-seaweed-salad": { category: "Main", favourite: true, tags: ["salad", "protein"] },
+  "kale-corn-and-beet-salad": { category: "Side", favourite: false, tags: ["salad"] },
+};
+
+const sideKeywords = [
+  "salad",
+  "rice",
+  "pilaf",
+  "bread",
+  "stock",
+  "dressing",
+  "slaw",
+  "sauce",
+];
+const snackKeywords = [
+  "smoothie",
+  "juice",
+  "drink",
+  "slushy",
+  "slushie",
+  "popsicle",
+  "popsicles",
+  "milk",
+  "biscuit",
+  "bites",
+  "crumble",
+  "apple",
+  "snack",
+];
+
+function inferRecipeCategory(id: string, title: string): RecipeCategory {
+  const value = `${id} ${title}`.toLowerCase();
+
+  if (sideKeywords.some((keyword) => value.includes(keyword))) {
+    return "Side";
+  }
+
+  if (snackKeywords.some((keyword) => value.includes(keyword))) {
+    return "Snack";
+  }
+
+  return "Main";
+}
+
+function inferTags(title: string, category: RecipeCategory) {
+  const value = title.toLowerCase();
+  const tags = new Set<string>();
+
+  if (value.includes("soup")) tags.add("soup");
+  if (value.includes("salad")) tags.add("salad");
+  if (value.includes("smoothie") || value.includes("juice") || value.includes("drink")) {
+    tags.add("drink");
+  }
+  if (value.includes("breakfast") || value.includes("egg") || value.includes("fritatta")) {
+    tags.add("breakfast");
+  }
+  if (category === "Main" && !tags.size) tags.add("meal");
+  if (category === "Side" && !tags.size) tags.add("side");
+  if (category === "Snack" && !tags.size) tags.add("snack");
+
+  return Array.from(tags);
+}
+
+const importedOverrides = new Map(wildRoseImports.map((recipe) => [recipe.id, recipe]));
+
+const mergedWildRoseImports = generatedWildRoseImports.map((generatedRecipe) => {
+  const override = importedOverrides.get(generatedRecipe.id);
+
+  return {
+    id: generatedRecipe.id,
+    title: override?.title || generatedRecipe.title || generatedRecipe.id,
+    sourceUrl: override?.sourceUrl || generatedRecipe.sourceUrl,
+    imageUrl: override?.imageUrl || generatedRecipe.imageUrl || "",
+    description: override?.description || generatedRecipe.description || "",
+  };
+});
+
+function buildImportedDescription(title: string, category: RecipeCategory) {
+  if (category === "Main") {
+    return `${title} is a Wild Rose main recipe that can anchor a full meal in the planner.`;
+  }
+
+  if (category === "Side") {
+    return `${title} is a Wild Rose side recipe that can round out lunches and dinners.`;
+  }
+
+  return `${title} is a Wild Rose snack or drink option for lighter moments between meals.`;
+}
+
+const plannedRecipeDays = new Map<string, string[]>();
+
+for (const entry of mealPlan) {
+  const recipeId = entry.sourceUrl.split("/").filter(Boolean).pop();
+  if (!recipeId) continue;
+
+  const days = plannedRecipeDays.get(recipeId) ?? [];
+  days.push(entry.day);
+  plannedRecipeDays.set(recipeId, days);
+}
+
+const importedRecipes: RecipeLibraryEntry[] = mergedWildRoseImports.map((recipe) => {
+  const meta = importedRecipeMeta[recipe.id];
+  const category = meta?.category ?? inferRecipeCategory(recipe.id, recipe.title);
+  const plannedDays = plannedRecipeDays.get(recipe.id) ?? [];
+  const tags = Array.from(
+    new Set([...(meta?.tags ?? []), ...inferTags(recipe.title, category), ...(plannedDays.length ? ["planned"] : [])]),
+  );
+
+  return {
+    id: recipe.id,
+    title: recipe.title,
+    category,
+    sourceName: "Wild Rose",
+    sourceUrl: recipe.sourceUrl,
+    imageUrl: recipe.imageUrl,
+    description: recipe.description || buildImportedDescription(recipe.title, category),
+    favourite: meta?.favourite ?? false,
+    tags,
+    plannedDays,
+  };
+});
+
+export const recipeLibrary: RecipeLibraryEntry[] = importedRecipes.sort((a, b) =>
+  a.title.localeCompare(b.title),
+);

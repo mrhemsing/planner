@@ -1,179 +1,217 @@
 import Image from "next/image";
+import { RecipeBrowser } from "@/components/recipe-browser";
 import { ShoppingList } from "@/components/shopping-list";
-import { buildGroceryList, mealPlan } from "@/lib/planner";
+import {
+  buildGroceryList,
+  recipeLibrary,
+  todayPlan,
+  upcomingPlan,
+} from "@/lib/planner";
 
 const groceryList = buildGroceryList();
 
 export default function Home() {
+  const todayRecipeId = getRecipeIdFromUrl(todayPlan.sourceUrl);
+
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,#fff7f5_0%,#fffaf7_35%,#ffffff_100%)] px-4 py-5 text-stone-900 sm:px-6 sm:py-8 lg:px-10">
+    <main className="min-h-screen bg-[linear-gradient(180deg,#fff6fa_0%,#fff9fc_34%,#ffffff_100%)] px-4 py-5 text-stone-900 sm:px-6 sm:py-8 lg:px-10">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 sm:gap-8">
-        <section className="rounded-[28px] border border-rose-200/80 bg-white/95 p-5 shadow-lg shadow-rose-100/40 backdrop-blur sm:rounded-[32px] sm:p-8">
+        <section className="rounded-[30px] border border-rose-200 bg-white p-5 shadow-lg shadow-rose-100/50 sm:p-8">
           <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-3">
-              <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-rose-100 bg-rose-50 shadow-sm shadow-rose-100/60 sm:h-20 sm:w-20">
+            <div className="flex items-center gap-4">
+              <div className="flex h-18 w-18 items-center justify-center overflow-hidden rounded-[24px] border border-rose-100 bg-rose-50 shadow-sm shadow-rose-100/70 sm:h-24 sm:w-24">
                 <Image
                   src="/princess-planner-logo.jpg"
                   alt="Princess Planner logo"
-                  width={80}
-                  height={80}
+                  width={96}
+                  height={96}
                   className="h-full w-full object-cover"
                   priority
                 />
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-rose-500 sm:text-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-rose-600">
                   Princess Planner
                 </p>
-                <p className="mt-1 text-sm text-stone-500">
-                  Mobile-first meal planning
+                <p className="mt-1 text-lg font-medium text-stone-700 sm:text-xl">
+                  Xinyi Xu
+                </p>
+                <p className="mt-1 text-base text-stone-600 sm:text-lg">
+                  Easy daily meal planning
                 </p>
               </div>
             </div>
 
-            <div className="max-w-3xl">
-              <h1 className="text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl">
-                Full meals for 5 days, with quick recipe links and a tap-friendly grocery checklist.
+            <div className="max-w-4xl">
+              <h1 className="text-4xl font-semibold tracking-tight text-stone-900 sm:text-5xl lg:text-6xl">
+                Today first, then the next 3 days, with clear meals and an easy shopping list.
               </h1>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-stone-600 sm:text-base sm:leading-8 lg:text-lg">
-                Each day is built around a complete meal, usually a main and a side,
-                plus optional snacks in between. No dessert planning, just simple meals
-                that are easy to shop and use on your phone.
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700 sm:text-xl sm:leading-9">
+                Large text, simple sections, and pink accents that stay easy to read.
+                Meals focus on a main dish with a side, plus optional snacks between meals.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <Metric label="Days" value="5" />
-              <Metric label="Meals" value={String(mealPlan.length)} />
-              <Metric label="Checklist" value={String(groceryList.length)} />
-              <Metric label="Source" value="Wild Rose" />
+              <Metric label="Focus" value="Today" />
+              <Metric label="Next up" value="3 days" />
+              <Metric label="Shopping" value={String(groceryList.length)} />
+              <Metric label="Recipes" value={String(recipeLibrary.length)} />
             </div>
           </div>
         </section>
 
-        <section className="grid gap-6 xl:grid-cols-[1.2fr_0.95fr] xl:items-start">
-          <div className="rounded-[28px] border border-stone-200 bg-white p-5 shadow-sm shadow-stone-200/50 sm:p-6">
-            <div className="mb-5 flex flex-col gap-3 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-stone-500">
-                  Meal plan
-                </p>
-                <h2 className="mt-2 text-xl font-semibold text-stone-900 sm:text-2xl">
-                  At-a-glance 5-day flow
-                </h2>
-              </div>
-              <div className="rounded-full bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700">
-                Built for quick phone scanning
-              </div>
+        <section className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr] xl:items-start">
+          <section className="rounded-[30px] border border-rose-200 bg-white p-5 shadow-sm shadow-rose-100/40 sm:p-6">
+            <div className="mb-5 flex flex-col gap-3">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-rose-600">
+                Today
+              </p>
+              <h2 className="text-3xl font-semibold text-stone-900 sm:text-4xl">
+                {todayPlan.title}
+              </h2>
+              <p className="text-lg leading-8 text-stone-700 sm:text-xl sm:leading-9">
+                {todayPlan.description}
+              </p>
             </div>
 
-            <div className="space-y-4">
-              {mealPlan.map((entry) => (
-                <article
-                  key={entry.id}
-                  className="rounded-[24px] border border-stone-200 bg-stone-50/80 p-4 transition hover:border-rose-200 hover:bg-rose-50/40 sm:p-5"
-                >
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
-                      <p className="text-sm font-medium text-rose-500">{entry.day}</p>
-                      <h3 className="mt-1 text-lg font-semibold text-stone-900 sm:text-xl">
-                        {entry.title}
-                      </h3>
-                    </div>
-                    <span className="self-start rounded-full bg-white px-3 py-1 text-xs font-medium text-stone-500">
-                      {entry.mealType}
-                    </span>
-                  </div>
+            <div className="grid gap-4">
+              <InfoCard label="Main dish" value={todayPlan.main} />
+              <InfoCard label="Side" value={todayPlan.side ?? todayPlan.snackNote ?? ""} />
+            </div>
 
-                  <p className="mt-3 text-sm leading-6 text-stone-600">
-                    {entry.description}
-                  </p>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <InfoCard label="Prep time" value={todayPlan.prepTime} compact />
+              <InfoCard label="Serves" value={String(todayPlan.serves)} compact />
+            </div>
 
-                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-2xl bg-white px-4 py-3">
-                      <p className="text-xs uppercase tracking-[0.2em] text-stone-400">
-                        Main
-                      </p>
-                      <p className="mt-1 text-sm font-medium text-stone-900">{entry.main}</p>
-                    </div>
-                    <div className="rounded-2xl bg-white px-4 py-3">
-                      <p className="text-xs uppercase tracking-[0.2em] text-stone-400">
-                        {entry.side ? "Side" : "Note"}
-                      </p>
-                      <p className="mt-1 text-sm font-medium text-stone-900">
-                        {entry.side ?? entry.snackNote}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {entry.highlights.map((highlight) => (
-                      <span
-                        key={highlight}
-                        className="rounded-full bg-white px-3 py-1 text-xs font-medium text-stone-500"
-                      >
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-stone-600">
-                    <div className="rounded-2xl bg-white px-4 py-3">
-                      <p className="text-xs uppercase tracking-[0.2em] text-stone-400">
-                        Prep
-                      </p>
-                      <p className="mt-1 font-medium text-stone-900">{entry.prepTime}</p>
-                    </div>
-                    <div className="rounded-2xl bg-white px-4 py-3">
-                      <p className="text-xs uppercase tracking-[0.2em] text-stone-400">
-                        Serves
-                      </p>
-                      <p className="mt-1 font-medium text-stone-900">{entry.serves}</p>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 rounded-2xl bg-white px-4 py-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-stone-400">
-                      Ingredient snapshot
-                    </p>
-                    <ul className="mt-3 space-y-2 text-sm text-stone-700">
-                      {entry.ingredients.slice(0, 4).map((ingredient) => (
-                        <li
-                          key={`${entry.id}-${ingredient.item}`}
-                          className="flex justify-between gap-4"
-                        >
-                          <span>{ingredient.item}</span>
-                          <span className="text-stone-500">{ingredient.amount}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <a
-                    href={entry.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center text-sm font-medium text-rose-600 transition hover:text-rose-700"
+            <div className="mt-5 rounded-[24px] border border-rose-100 bg-rose-50/60 p-4 sm:p-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-600">
+                Ingredient snapshot
+              </p>
+              <ul className="mt-3 space-y-3 text-lg text-stone-800 sm:text-xl">
+                {todayPlan.ingredients.slice(0, 5).map((ingredient) => (
+                  <li
+                    key={`${todayPlan.id}-${ingredient.item}`}
+                    className="flex items-start justify-between gap-4"
                   >
-                    View source on {entry.sourceName}
-                  </a>
-                </article>
-              ))}
+                    <span>{ingredient.item}</span>
+                    <span className="font-medium text-stone-600">{ingredient.amount}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+
+            <div className="mt-5 flex flex-wrap gap-3">
+              <a
+                href={todayPlan.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center rounded-full bg-rose-500 px-5 text-lg font-semibold text-white transition hover:bg-rose-600"
+              >
+                View today&apos;s recipe
+              </a>
+              {todayRecipeId ? (
+                <a
+                  href={`#recipe-${todayRecipeId}`}
+                  className="inline-flex min-h-12 items-center rounded-full border border-rose-200 bg-white px-5 text-lg font-semibold text-rose-700 transition hover:bg-rose-50"
+                >
+                  Find in recipe library
+                </a>
+              ) : null}
+            </div>
+          </section>
 
           <ShoppingList items={groceryList} />
         </section>
+
+        <section id="next-3-days" className="rounded-[30px] border border-rose-200 bg-white p-5 shadow-sm shadow-rose-100/40 sm:p-6 scroll-mt-6">
+          <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-rose-600">
+                Next 3 days
+              </p>
+              <h2 className="mt-2 text-3xl font-semibold text-stone-900 sm:text-4xl">
+                Coming up
+              </h2>
+            </div>
+            <p className="text-lg text-stone-600 sm:text-xl">
+              Short, easy-to-scan meal cards
+            </p>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-3">
+            {upcomingPlan.map((entry) => (
+              <article
+                key={entry.id}
+                className="rounded-[26px] border border-stone-200 bg-stone-50/70 p-5"
+              >
+                <p className="text-base font-semibold text-rose-600">{entry.day}</p>
+                <h3 className="mt-2 text-2xl font-semibold text-stone-900">
+                  {entry.title}
+                </h3>
+                <p className="mt-3 text-lg leading-8 text-stone-700">{entry.description}</p>
+
+                <div className="mt-4 space-y-3">
+                  <InfoCard label="Main" value={entry.main} compact />
+                  <InfoCard
+                    label={entry.side ? "Side" : "Note"}
+                    value={entry.side ?? entry.snackNote ?? ""}
+                    compact
+                  />
+                </div>
+
+                {getRecipeIdFromUrl(entry.sourceUrl) ? (
+                  <a
+                    href={`#recipe-${getRecipeIdFromUrl(entry.sourceUrl)}`}
+                    className="mt-4 inline-flex min-h-12 items-center rounded-full border border-rose-200 bg-white px-5 text-base font-semibold text-rose-700 transition hover:bg-rose-50"
+                  >
+                    Find in recipe library
+                  </a>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <RecipeBrowser recipes={recipeLibrary} />
+
+        <footer className="pb-3 pt-2 text-center text-xl font-semibold text-rose-600 sm:text-2xl">
+          Reset, Renew, Repeat!
+        </footer>
       </div>
     </main>
   );
 }
 
+function getRecipeIdFromUrl(url: string) {
+  return url.split("/").filter(Boolean).pop();
+}
+
 function Metric({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-rose-100 bg-rose-50/80 px-4 py-3">
-      <p className="text-xs uppercase tracking-[0.2em] text-rose-400">{label}</p>
-      <p className="mt-1 text-base font-semibold text-stone-900 sm:text-lg">{value}</p>
+    <div className="rounded-[22px] border border-rose-100 bg-rose-50 px-4 py-4">
+      <p className="text-sm uppercase tracking-[0.16em] text-rose-500">{label}</p>
+      <p className="mt-2 text-2xl font-semibold text-stone-900 sm:text-3xl">{value}</p>
+    </div>
+  );
+}
+
+function InfoCard({
+  label,
+  value,
+  compact = false,
+}: {
+  label: string;
+  value: string;
+  compact?: boolean;
+}) {
+  return (
+    <div className="rounded-[22px] border border-stone-200 bg-white px-4 py-4">
+      <p className="text-sm uppercase tracking-[0.16em] text-stone-500">{label}</p>
+      <p className={`mt-2 font-semibold text-stone-900 ${compact ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"}`}>
+        {value}
+      </p>
     </div>
   );
 }
