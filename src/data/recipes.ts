@@ -4,8 +4,8 @@ export type Ingredient = {
   category: "produce" | "protein" | "pantry" | "fridge" | "frozen";
 };
 
-export type MealType = "Breakfast" | "Lunch" | "Dinner" | "Snack";
-export type RecipeCategory = "Main" | "Side" | "Snack";
+export type MealType = "Lunch" | "Dinner";
+export type RecipeCategory = "Lunch" | "Dinner" | "Bonus";
 
 export type MealPlanEntry = {
   id: string;
@@ -19,13 +19,9 @@ export type MealPlanEntry = {
   sourceUrl: string;
   main: string;
   side?: string;
-  snackNote?: string;
   highlights: string[];
   ingredients: Ingredient[];
 };
-
-import wildRoseImports from "@/data/wildrose-imports.json";
-import generatedWildRoseImports from "@/data/wildrose-imports.generated.json";
 
 export type RecipeLibraryEntry = {
   id: string;
@@ -40,289 +36,154 @@ export type RecipeLibraryEntry = {
   plannedDays: string[];
 };
 
+const dinnerSource = {
+  name: "NYT Cooking · Healthy Weeknight Dinners",
+  url: "https://cooking.nytimes.com/68861692-nyt-cooking/2110373-healthy-weeknight-dinners",
+};
+
+const lunchSource = {
+  name: "NYT Cooking · Healthy Weekday Lunches",
+  url: "https://cooking.nytimes.com/68861692-nyt-cooking/2110355-healthy-weekday-lunches",
+};
+
+const bonusSource = {
+  name: "NYT Cooking · Top 50 Reader Favorites",
+  url: "https://cooking.nytimes.com/68861692-nyt-cooking/13395693-our-50-most-popular-recipes-of-all-time-so-far",
+};
+
 export const mealPlan: MealPlanEntry[] = [
   {
-    id: "day-1-breakfast",
+    id: "today-dinner",
     day: "Today",
-    mealType: "Breakfast",
-    title: "Veggie Egg Bites with fresh fruit",
+    mealType: "Dinner",
+    title: "Dinner pick from Healthy Weeknight Dinners",
     description:
-      "A complete breakfast with a protein-forward main and a simple side to make the morning feel finished.",
+      "Dinner planning now pulls from the NYT Cooking Healthy Weeknight Dinners collection, with priority on strong ratings and weeknight-friendly meals.",
     serves: 2,
-    prepTime: "20 min",
-    sourceName: "Wild Rose",
-    sourceUrl: "https://wildrose.ca/blogs/recipes/veggie-egg-bites",
-    main: "Veggie Egg Bites",
-    side: "Fresh berries and orange slices",
-    highlights: ["make-ahead", "full breakfast", "weekday friendly"],
+    prepTime: "TBD",
+    sourceName: dinnerSource.name,
+    sourceUrl: dinnerSource.url,
+    main: "Choose from the top-rated Healthy Weeknight Dinners list",
+    side: "Optional simple vegetable or grain side",
+    highlights: ["nyt cooking", "weeknight dinner", "top rated pool"],
     ingredients: [
-      { item: "eggs", amount: "6", category: "fridge" },
-      { item: "spinach", amount: "2 cups", category: "produce" },
-      { item: "bell pepper", amount: "1", category: "produce" },
-      { item: "green onion", amount: "2 stalks", category: "produce" },
-      { item: "olive oil", amount: "1 tbsp", category: "pantry" },
-      { item: "fresh berries", amount: "2 cups", category: "produce" },
-      { item: "oranges", amount: "2", category: "produce" },
+      { item: "dinner recipe ingredients", amount: "depends on selected recipe", category: "pantry" },
+      { item: "vegetable side ingredients", amount: "optional", category: "produce" },
     ],
   },
   {
-    id: "day-2-lunch",
+    id: "tomorrow-lunch",
     day: "Tomorrow",
     mealType: "Lunch",
-    title: "Turmeric Chicken Soup with greens",
+    title: "Lunch pick from Healthy Weekday Lunches",
     description:
-      "A fuller lunch built from the Wild Rose soup recipe plus a light green side.",
+      "Lunch planning now pulls from the NYT Cooking Healthy Weekday Lunches collection so lunches stay lighter, practical, and weekday-friendly.",
     serves: 2,
-    prepTime: "35 min",
-    sourceName: "Wild Rose",
-    sourceUrl: "https://wildrose.ca/blogs/recipes/turmeric-chicken-soup",
-    main: "Turmeric Chicken Soup",
-    side: "Simple arugula salad with lemon",
-    highlights: ["warming", "full lunch", "meal prep friendly"],
+    prepTime: "TBD",
+    sourceName: lunchSource.name,
+    sourceUrl: lunchSource.url,
+    main: "Choose from the Healthy Weekday Lunches list",
+    side: "Optional fruit, soup, or salad add-on",
+    highlights: ["nyt cooking", "weekday lunch", "lighter meal"],
     ingredients: [
-      { item: "chicken broth", amount: "2 cups", category: "pantry" },
-      { item: "chicken breast", amount: "2 breasts", category: "protein" },
-      { item: "onion", amount: "1", category: "produce" },
-      { item: "acorn squash", amount: "1 small", category: "produce" },
-      { item: "ginger", amount: "1 tsp", category: "produce" },
-      { item: "milk", amount: "1 cup", category: "fridge" },
-      { item: "avocado oil", amount: "1 tbsp", category: "pantry" },
-      { item: "arugula", amount: "1 bag", category: "produce" },
-      { item: "lemon", amount: "1", category: "produce" },
+      { item: "lunch recipe ingredients", amount: "depends on selected recipe", category: "pantry" },
+      { item: "simple lunch add-on", amount: "optional", category: "produce" },
     ],
   },
   {
     id: "day-3-dinner",
     day: "Day 3",
     mealType: "Dinner",
-    title: "Tofu Veggie Stir Fry with brown rice",
+    title: "Another top-rated NYT dinner slot",
     description:
-      "A complete dinner with a satisfying main dish and a steady side for the evening meal.",
+      "A second dinner slot reserved for another highly rated dinner from the NYT Healthy Weeknight Dinners collection.",
     serves: 2,
-    prepTime: "25 min",
-    sourceName: "Wild Rose",
-    sourceUrl: "https://wildrose.ca/blogs/recipes/tofu-veggie-stir-fry",
-    main: "Tofu Veggie Stir Fry",
-    side: "Brown rice",
-    highlights: ["plant-based", "full dinner", "fast cook"],
+    prepTime: "TBD",
+    sourceName: dinnerSource.name,
+    sourceUrl: dinnerSource.url,
+    main: "Pick another dinner from the top-rated dinner pool",
+    side: "Optional easy side",
+    highlights: ["dinner", "planner slot", "nyt cooking"],
     ingredients: [
-      { item: "firm tofu", amount: "1 block", category: "protein" },
-      { item: "broccoli", amount: "1 head", category: "produce" },
-      { item: "carrots", amount: "2", category: "produce" },
-      { item: "garlic", amount: "3 cloves", category: "produce" },
-      { item: "tamari", amount: "3 tbsp", category: "pantry" },
-      { item: "sesame oil", amount: "1 tbsp", category: "pantry" },
-      { item: "brown rice", amount: "1 cup dry", category: "pantry" },
+      { item: "selected dinner ingredients", amount: "depends on selected recipe", category: "pantry" },
     ],
   },
   {
-    id: "day-4-breakfast",
+    id: "day-4-lunch",
     day: "Day 4",
-    mealType: "Breakfast",
-    title: "Morning Movement Smoothie with egg bites",
+    mealType: "Lunch",
+    title: "Another weekday lunch slot",
     description:
-      "A lighter breakfast balanced with a ready-made protein side so it still lands as a full meal.",
+      "A second lunch slot reserved for a practical lunch option from the NYT Healthy Weekday Lunches collection.",
     serves: 2,
-    prepTime: "10 min",
-    sourceName: "Wild Rose",
-    sourceUrl: "https://wildrose.ca/blogs/recipes/morning-movement-smoothie",
-    main: "Morning Movement Smoothie",
-    side: "Leftover veggie egg bites",
-    highlights: ["quick", "balanced breakfast", "mobile morning friendly"],
+    prepTime: "TBD",
+    sourceName: lunchSource.name,
+    sourceUrl: lunchSource.url,
+    main: "Pick another lunch from the weekday lunch pool",
+    side: "Optional fresh side",
+    highlights: ["lunch", "planner slot", "nyt cooking"],
     ingredients: [
-      { item: "frozen berries", amount: "2 cups", category: "frozen" },
-      { item: "banana", amount: "1", category: "produce" },
-      { item: "almond milk", amount: "2 cups", category: "fridge" },
-      { item: "chia seeds", amount: "2 tbsp", category: "pantry" },
-      { item: "ginger", amount: "1 tsp", category: "produce" },
-      { item: "eggs", amount: "4", category: "fridge" },
-      { item: "spinach", amount: "1 cup", category: "produce" },
+      { item: "selected lunch ingredients", amount: "depends on selected recipe", category: "pantry" },
     ],
   },
   {
-    id: "day-5-snack",
+    id: "day-5-dinner",
     day: "Day 5",
-    mealType: "Snack",
-    title: "Simple reset snack box",
+    mealType: "Dinner",
+    title: "Bonus dinner slot from the same pool",
     description:
-      "An optional in-between meal snack to keep energy up without turning into dessert.",
+      "A fifth planning slot keeps the 5-day structure while staying centered on NYT Cooking dinner and lunch collections.",
     serves: 2,
-    prepTime: "5 min",
-    sourceName: "Wild Rose",
-    sourceUrl: "https://wildrose.ca/blogs/recipes",
-    main: "Apple slices with walnuts",
-    snackNote: "Optional afternoon snack",
-    highlights: ["optional snack", "not sweet-heavy", "quick assemble"],
+    prepTime: "TBD",
+    sourceName: dinnerSource.name,
+    sourceUrl: dinnerSource.url,
+    main: "Choose another top-rated dinner recipe",
+    side: "Optional household favourite side",
+    highlights: ["5 day planning", "dinner", "nyt cooking"],
     ingredients: [
-      { item: "apples", amount: "2", category: "produce" },
-      { item: "walnuts", amount: "1/2 cup", category: "pantry" },
-      { item: "pumpkin seeds", amount: "1/4 cup", category: "pantry" },
+      { item: "selected recipe ingredients", amount: "depends on selected recipe", category: "pantry" },
     ],
   },
 ];
 
-const importedRecipeMeta: Record<
-  string,
-  Partial<{ category: RecipeCategory; favourite: boolean; tags: string[] }>
-> = {
-  "veggie-egg-bites": { category: "Main", favourite: true, tags: ["breakfast"] },
-  "turmeric-chicken-soup": { category: "Main", favourite: true, tags: ["soup"] },
-  "tofu-veggie-stir-fry": { category: "Main", favourite: false, tags: ["dinner"] },
-  "morning-movement-smoothie": { category: "Snack", favourite: false, tags: ["breakfast", "drink"] },
-  "berry-popsicles": { category: "Snack", favourite: true, tags: ["cool"] },
-  "quinoa-salad": { category: "Side", favourite: false, tags: ["salad"] },
-  "peach-arugula-salad": { category: "Side", favourite: false, tags: ["salad"] },
-  "curried-spinach-soup": { category: "Main", favourite: false, tags: ["soup"] },
-  falafel: { category: "Main", favourite: true, tags: ["protein"] },
-  "coconut-chicken-with-spinach": { category: "Main", favourite: true, tags: ["dinner"] },
-  "caesar-salad-dressing": { category: "Side", favourite: false, tags: ["dressings"] },
-  "rice-pilaf": { category: "Side", favourite: true, tags: ["grain"] },
-  "lentil-dhal": { category: "Main", favourite: true, tags: ["comfort"] },
-  "strawberry-lemonade-slushy": { category: "Snack", favourite: false, tags: ["drink"] },
-  "rustic-buckwheat-bread": { category: "Side", favourite: false, tags: ["bread"] },
-  "sweet-bell-pepper-and-fresh-herb-fritatta": {
-    category: "Main",
+export const recipeLibrary: RecipeLibraryEntry[] = [
+  {
+    id: "nyt-healthy-weeknight-dinners",
+    title: "Healthy Weeknight Dinners",
+    category: "Dinner",
+    sourceName: dinnerSource.name,
+    sourceUrl: dinnerSource.url,
+    imageUrl: "/princess-planner-logo.jpg",
+    description:
+      "Primary dinner source for the planner. This pool should drive dinner selection, with emphasis on the strongest-rated recipes.",
     favourite: true,
-    tags: ["breakfast"],
+    tags: ["dinner", "weeknight", "top rated"],
+    plannedDays: ["Today", "Day 3", "Day 5"],
   },
-  "savoury-almond-biscuits": { category: "Snack", favourite: false, tags: ["baked"] },
-  "almond-milk": { category: "Snack", favourite: false, tags: ["drink"] },
-  "almond-butter-on-celery": { category: "Snack", favourite: true, tags: ["quick"] },
-  "coconut-milk": { category: "Snack", favourite: false, tags: ["drink"] },
-  "veggie-juice": { category: "Snack", favourite: false, tags: ["drink"] },
-  "green-drink": { category: "Snack", favourite: false, tags: ["drink"] },
-  "chocolate-avocado-smoothie": { category: "Snack", favourite: true, tags: ["drink"] },
-  "rosemary-zucchini-soup": { category: "Main", favourite: false, tags: ["soup"] },
-  "tomato-zucchini-soup": { category: "Main", favourite: false, tags: ["soup"] },
-  "vegetable-stock": { category: "Side", favourite: false, tags: ["basics"] },
-  "vegetable-rice-soup": { category: "Main", favourite: false, tags: ["soup"] },
-  "vegetable-chowder": { category: "Main", favourite: false, tags: ["soup"] },
-  "fresh-beet-borscht": { category: "Main", favourite: false, tags: ["soup"] },
-  kitcheri: { category: "Main", favourite: true, tags: ["comfort"] },
-  "moroccan-chickpea-and-millet-soup": { category: "Main", favourite: false, tags: ["soup"] },
-  "warm-sesame-cucumber-rice-salad": { category: "Side", favourite: false, tags: ["salad"] },
-  "salmon-seaweed-salad": { category: "Main", favourite: true, tags: ["salad", "protein"] },
-  "kale-corn-and-beet-salad": { category: "Side", favourite: false, tags: ["salad"] },
-};
-
-const sideKeywords = [
-  "salad",
-  "rice",
-  "pilaf",
-  "bread",
-  "stock",
-  "dressing",
-  "slaw",
-  "sauce",
+  {
+    id: "nyt-healthy-weekday-lunches",
+    title: "Healthy Weekday Lunches",
+    category: "Lunch",
+    sourceName: lunchSource.name,
+    sourceUrl: lunchSource.url,
+    imageUrl: "/princess-planner-logo.jpg",
+    description:
+      "Primary lunch source for the planner. This pool should drive weekday lunch selection.",
+    favourite: true,
+    tags: ["lunch", "weekday", "planning"],
+    plannedDays: ["Tomorrow", "Day 4"],
+  },
+  {
+    id: "nyt-top-50-reader-favorites",
+    title: "Top 50 Reader Favorites",
+    category: "Bonus",
+    sourceName: bonusSource.name,
+    sourceUrl: bonusSource.url,
+    imageUrl: "/princess-planner-logo.jpg",
+    description:
+      "Bonus browse-only section. This is a listing source for inspiration, not part of the active planner pool.",
+    favourite: false,
+    tags: ["bonus", "browse", "popular"],
+    plannedDays: [],
+  },
 ];
-const snackKeywords = [
-  "smoothie",
-  "juice",
-  "drink",
-  "slushy",
-  "slushie",
-  "popsicle",
-  "popsicles",
-  "milk",
-  "biscuit",
-  "bites",
-  "crumble",
-  "apple",
-  "snack",
-];
-
-function inferRecipeCategory(id: string, title: string): RecipeCategory {
-  const value = `${id} ${title}`.toLowerCase();
-
-  if (sideKeywords.some((keyword) => value.includes(keyword))) {
-    return "Side";
-  }
-
-  if (snackKeywords.some((keyword) => value.includes(keyword))) {
-    return "Snack";
-  }
-
-  return "Main";
-}
-
-function inferTags(title: string, category: RecipeCategory) {
-  const value = title.toLowerCase();
-  const tags = new Set<string>();
-
-  if (value.includes("soup")) tags.add("soup");
-  if (value.includes("salad")) tags.add("salad");
-  if (value.includes("smoothie") || value.includes("juice") || value.includes("drink")) {
-    tags.add("drink");
-  }
-  if (value.includes("breakfast") || value.includes("egg") || value.includes("fritatta")) {
-    tags.add("breakfast");
-  }
-  if (category === "Main" && !tags.size) tags.add("meal");
-  if (category === "Side" && !tags.size) tags.add("side");
-  if (category === "Snack" && !tags.size) tags.add("snack");
-
-  return Array.from(tags);
-}
-
-const importedOverrides = new Map(wildRoseImports.map((recipe) => [recipe.id, recipe]));
-
-const mergedWildRoseImports = generatedWildRoseImports.map((generatedRecipe) => {
-  const override = importedOverrides.get(generatedRecipe.id);
-
-  return {
-    id: generatedRecipe.id,
-    title: override?.title || generatedRecipe.title || generatedRecipe.id,
-    sourceUrl: override?.sourceUrl || generatedRecipe.sourceUrl,
-    imageUrl: override?.imageUrl || generatedRecipe.imageUrl || "",
-    description: override?.description || generatedRecipe.description || "",
-  };
-});
-
-function buildImportedDescription(title: string, category: RecipeCategory) {
-  if (category === "Main") {
-    return `${title} is a Wild Rose main recipe that can anchor a full meal in the planner.`;
-  }
-
-  if (category === "Side") {
-    return `${title} is a Wild Rose side recipe that can round out lunches and dinners.`;
-  }
-
-  return `${title} is a Wild Rose snack or drink option for lighter moments between meals.`;
-}
-
-const plannedRecipeDays = new Map<string, string[]>();
-
-for (const entry of mealPlan) {
-  const recipeId = entry.sourceUrl.split("/").filter(Boolean).pop();
-  if (!recipeId) continue;
-
-  const days = plannedRecipeDays.get(recipeId) ?? [];
-  days.push(entry.day);
-  plannedRecipeDays.set(recipeId, days);
-}
-
-const importedRecipes: RecipeLibraryEntry[] = mergedWildRoseImports.map((recipe) => {
-  const meta = importedRecipeMeta[recipe.id];
-  const category = meta?.category ?? inferRecipeCategory(recipe.id, recipe.title);
-  const plannedDays = plannedRecipeDays.get(recipe.id) ?? [];
-  const tags = Array.from(
-    new Set([...(meta?.tags ?? []), ...inferTags(recipe.title, category), ...(plannedDays.length ? ["planned"] : [])]),
-  );
-
-  return {
-    id: recipe.id,
-    title: recipe.title,
-    category,
-    sourceName: "Wild Rose",
-    sourceUrl: recipe.sourceUrl,
-    imageUrl: recipe.imageUrl,
-    description: recipe.description || buildImportedDescription(recipe.title, category),
-    favourite: meta?.favourite ?? false,
-    tags,
-    plannedDays,
-  };
-});
-
-export const recipeLibrary: RecipeLibraryEntry[] = importedRecipes.sort((a, b) =>
-  a.title.localeCompare(b.title),
-);
