@@ -36,154 +36,242 @@ export type RecipeLibraryEntry = {
   plannedDays: string[];
 };
 
-const dinnerSource = {
-  name: "NYT Cooking · Healthy Weeknight Dinners",
-  url: "https://cooking.nytimes.com/68861692-nyt-cooking/2110373-healthy-weeknight-dinners",
-};
+const dinnerSourceName = "NYT Cooking · Healthy Weeknight Dinners";
+const lunchSourceName = "NYT Cooking · Healthy Weekday Lunches";
+const bonusSourceName = "NYT Cooking · Top 50 Reader Favorites";
 
-const lunchSource = {
-  name: "NYT Cooking · Healthy Weekday Lunches",
-  url: "https://cooking.nytimes.com/68861692-nyt-cooking/2110355-healthy-weekday-lunches",
-};
+const dinnerRecipes: RecipeLibraryEntry[] = [
+  {
+    id: "sheet-pan-feta-with-chickpeas-and-tomatoes",
+    title: "Sheet-Pan Feta With Chickpeas and Tomatoes",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1021953-sheet-pan-feta-with-chickpeas-and-tomatoes",
+    imageUrl: "/princess-planner-logo.jpg",
+    description: "A strong weeknight dinner anchor with pantry-friendly ingredients and minimal cleanup.",
+    favourite: true,
+    tags: ["dinner", "sheet pan", "vegetarian", "weeknight"],
+    plannedDays: ["Today"],
+  },
+  {
+    id: "gochujang-buttered-noodles",
+    title: "Gochujang Buttered Noodles",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1020979-gochujang-buttered-noodles",
+    imageUrl: "/princess-planner-logo.jpg",
+    description: "Fast, pantry-led dinner energy for nights that need something comforting and easy.",
+    favourite: true,
+    tags: ["dinner", "noodles", "quick", "weeknight"],
+    plannedDays: ["Day 3"],
+  },
+  {
+    id: "miso-salmon-with-greens-and-scallions",
+    title: "Miso Salmon With Greens and Scallions",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1020330-miso-salmon-with-greens-and-scallions",
+    imageUrl: "/princess-planner-logo.jpg",
+    description: "A lighter dinner choice with protein and greens built into the main plate.",
+    favourite: false,
+    tags: ["dinner", "salmon", "healthy", "greens"],
+    plannedDays: ["Day 5"],
+  },
+  {
+    id: "crispy-gnocchi-with-burst-tomatoes-and-mozzarella",
+    title: "Crispy Gnocchi With Burst Tomatoes and Mozzarella",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1021174-crispy-gnocchi-with-burst-tomatoes-and-mozzarella",
+    imageUrl: "/princess-planner-logo.jpg",
+    description: "A crowd-pleasing weeknight dinner that still feels simple enough for a normal evening.",
+    favourite: false,
+    tags: ["dinner", "vegetarian", "gnocchi", "comfort"],
+    plannedDays: [],
+  },
+];
 
-const bonusSource = {
-  name: "NYT Cooking · Top 50 Reader Favorites",
-  url: "https://cooking.nytimes.com/68861692-nyt-cooking/13395693-our-50-most-popular-recipes-of-all-time-so-far",
-};
+const lunchRecipes: RecipeLibraryEntry[] = [
+  {
+    id: "chickpea-salad-sandwich",
+    title: "Chickpea Salad Sandwich",
+    category: "Lunch",
+    sourceName: lunchSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1023207-chickpea-salad-sandwich",
+    imageUrl: "/princess-planner-logo.jpg",
+    description: "A reliable weekday lunch that is practical, filling, and easy to repeat.",
+    favourite: true,
+    tags: ["lunch", "sandwich", "weekday", "vegetarian"],
+    plannedDays: ["Tomorrow"],
+  },
+  {
+    id: "turmeric-black-pepper-chicken-with-asparagus",
+    title: "Turmeric-Black Pepper Chicken With Asparagus",
+    category: "Lunch",
+    sourceName: lunchSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1022086-turmeric-black-pepper-chicken-with-asparagus",
+    imageUrl: "/princess-planner-logo.jpg",
+    description: "A lunch option with strong protein and vegetables that can also handle leftovers well.",
+    favourite: false,
+    tags: ["lunch", "chicken", "healthy", "meal prep"],
+    plannedDays: ["Day 4"],
+  },
+  {
+    id: "tofu-and-herb-salad",
+    title: "Tofu and Herb Salad",
+    category: "Lunch",
+    sourceName: lunchSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1020223-tofu-and-herb-salad",
+    imageUrl: "/princess-planner-logo.jpg",
+    description: "A lighter lunch built around herbs, texture, and a clean protein base.",
+    favourite: false,
+    tags: ["lunch", "tofu", "salad", "light"],
+    plannedDays: [],
+  },
+];
+
+const bonusRecipes: RecipeLibraryEntry[] = [
+  {
+    id: "top-50-reader-favorites",
+    title: "Top 50 Reader Favorites",
+    category: "Bonus",
+    sourceName: bonusSourceName,
+    sourceUrl: "https://cooking.nytimes.com/68861692-nyt-cooking/13395693-our-50-most-popular-recipes-of-all-time-so-far",
+    imageUrl: "/princess-planner-logo.jpg",
+    description: "A browse-only list of beloved NYT Cooking recipes for inspiration outside the core planner flow.",
+    favourite: false,
+    tags: ["bonus", "popular", "browse"],
+    plannedDays: [],
+  },
+];
+
+export const recipeLibrary: RecipeLibraryEntry[] = [
+  ...dinnerRecipes,
+  ...lunchRecipes,
+  ...bonusRecipes,
+].sort((a, b) => a.title.localeCompare(b.title));
+
+const recipeById = new Map(recipeLibrary.map((recipe) => [recipe.id, recipe]));
+
+function getRecipe(id: string) {
+  const recipe = recipeById.get(id);
+  if (!recipe) {
+    throw new Error(`Missing recipe for meal plan entry: ${id}`);
+  }
+  return recipe;
+}
 
 export const mealPlan: MealPlanEntry[] = [
   {
     id: "today-dinner",
     day: "Today",
     mealType: "Dinner",
-    title: "Dinner pick from Healthy Weeknight Dinners",
+    title: getRecipe("sheet-pan-feta-with-chickpeas-and-tomatoes").title,
     description:
-      "Dinner planning now pulls from the NYT Cooking Healthy Weeknight Dinners collection, with priority on strong ratings and weeknight-friendly meals.",
-    serves: 2,
-    prepTime: "TBD",
-    sourceName: dinnerSource.name,
-    sourceUrl: dinnerSource.url,
-    main: "Choose from the top-rated Healthy Weeknight Dinners list",
-    side: "Optional simple vegetable or grain side",
-    highlights: ["nyt cooking", "weeknight dinner", "top rated pool"],
+      "A simple dinner pick with strong weeknight energy, anchored by feta, chickpeas, and burst tomatoes.",
+    serves: 4,
+    prepTime: "35 min",
+    sourceName: getRecipe("sheet-pan-feta-with-chickpeas-and-tomatoes").sourceName,
+    sourceUrl: getRecipe("sheet-pan-feta-with-chickpeas-and-tomatoes").sourceUrl,
+    main: "Sheet-Pan Feta With Chickpeas and Tomatoes",
+    side: "Simple greens or crusty bread",
+    highlights: ["dinner", "weeknight", "top pick"],
     ingredients: [
-      { item: "dinner recipe ingredients", amount: "depends on selected recipe", category: "pantry" },
-      { item: "vegetable side ingredients", amount: "optional", category: "produce" },
+      { item: "feta", amount: "1 block", category: "fridge" },
+      { item: "chickpeas", amount: "2 cans", category: "pantry" },
+      { item: "cherry tomatoes", amount: "2 pints", category: "produce" },
+      { item: "olive oil", amount: "3 tbsp", category: "pantry" },
+      { item: "garlic", amount: "3 cloves", category: "produce" },
+      { item: "greens", amount: "1 box", category: "produce" },
     ],
   },
   {
     id: "tomorrow-lunch",
     day: "Tomorrow",
     mealType: "Lunch",
-    title: "Lunch pick from Healthy Weekday Lunches",
+    title: getRecipe("chickpea-salad-sandwich").title,
     description:
-      "Lunch planning now pulls from the NYT Cooking Healthy Weekday Lunches collection so lunches stay lighter, practical, and weekday-friendly.",
-    serves: 2,
-    prepTime: "TBD",
-    sourceName: lunchSource.name,
-    sourceUrl: lunchSource.url,
-    main: "Choose from the Healthy Weekday Lunches list",
-    side: "Optional fruit, soup, or salad add-on",
-    highlights: ["nyt cooking", "weekday lunch", "lighter meal"],
+      "A practical weekday lunch pick that is easy to prep, easy to eat, and good for repeat use.",
+    serves: 4,
+    prepTime: "20 min",
+    sourceName: getRecipe("chickpea-salad-sandwich").sourceName,
+    sourceUrl: getRecipe("chickpea-salad-sandwich").sourceUrl,
+    main: "Chickpea Salad Sandwich",
+    side: "Fruit or a simple soup",
+    highlights: ["lunch", "weekday", "easy repeat"],
     ingredients: [
-      { item: "lunch recipe ingredients", amount: "depends on selected recipe", category: "pantry" },
-      { item: "simple lunch add-on", amount: "optional", category: "produce" },
+      { item: "chickpeas", amount: "2 cans", category: "pantry" },
+      { item: "celery", amount: "2 stalks", category: "produce" },
+      { item: "red onion", amount: "1/2", category: "produce" },
+      { item: "mayonnaise", amount: "1/3 cup", category: "fridge" },
+      { item: "bread", amount: "8 slices", category: "pantry" },
+      { item: "apples", amount: "2", category: "produce" },
     ],
   },
   {
     id: "day-3-dinner",
     day: "Day 3",
     mealType: "Dinner",
-    title: "Another top-rated NYT dinner slot",
+    title: getRecipe("gochujang-buttered-noodles").title,
     description:
-      "A second dinner slot reserved for another highly rated dinner from the NYT Healthy Weeknight Dinners collection.",
-    serves: 2,
-    prepTime: "TBD",
-    sourceName: dinnerSource.name,
-    sourceUrl: dinnerSource.url,
-    main: "Pick another dinner from the top-rated dinner pool",
-    side: "Optional easy side",
-    highlights: ["dinner", "planner slot", "nyt cooking"],
+      "A fast comfort dinner that keeps the planning week from getting too heavy or too complicated.",
+    serves: 4,
+    prepTime: "20 min",
+    sourceName: getRecipe("gochujang-buttered-noodles").sourceName,
+    sourceUrl: getRecipe("gochujang-buttered-noodles").sourceUrl,
+    main: "Gochujang Buttered Noodles",
+    side: "Cucumber salad or steamed broccoli",
+    highlights: ["dinner", "quick", "comfort"],
     ingredients: [
-      { item: "selected dinner ingredients", amount: "depends on selected recipe", category: "pantry" },
+      { item: "noodles", amount: "12 oz", category: "pantry" },
+      { item: "butter", amount: "4 tbsp", category: "fridge" },
+      { item: "gochujang", amount: "2 tbsp", category: "pantry" },
+      { item: "parmesan", amount: "1/2 cup", category: "fridge" },
+      { item: "cucumber", amount: "1", category: "produce" },
     ],
   },
   {
     id: "day-4-lunch",
     day: "Day 4",
     mealType: "Lunch",
-    title: "Another weekday lunch slot",
+    title: getRecipe("turmeric-black-pepper-chicken-with-asparagus").title,
     description:
-      "A second lunch slot reserved for a practical lunch option from the NYT Healthy Weekday Lunches collection.",
-    serves: 2,
-    prepTime: "TBD",
-    sourceName: lunchSource.name,
-    sourceUrl: lunchSource.url,
-    main: "Pick another lunch from the weekday lunch pool",
-    side: "Optional fresh side",
-    highlights: ["lunch", "planner slot", "nyt cooking"],
+      "A stronger protein lunch slot that still keeps the weekday plan feeling healthy and straightforward.",
+    serves: 4,
+    prepTime: "30 min",
+    sourceName: getRecipe("turmeric-black-pepper-chicken-with-asparagus").sourceName,
+    sourceUrl: getRecipe("turmeric-black-pepper-chicken-with-asparagus").sourceUrl,
+    main: "Turmeric-Black Pepper Chicken With Asparagus",
+    side: "Rice or leftover grains",
+    highlights: ["lunch", "protein", "meal prep"],
     ingredients: [
-      { item: "selected lunch ingredients", amount: "depends on selected recipe", category: "pantry" },
+      { item: "chicken thighs", amount: "1 1/2 lb", category: "protein" },
+      { item: "asparagus", amount: "1 bunch", category: "produce" },
+      { item: "turmeric", amount: "2 tsp", category: "pantry" },
+      { item: "black pepper", amount: "1 tsp", category: "pantry" },
+      { item: "rice", amount: "2 cups cooked", category: "pantry" },
     ],
   },
   {
     id: "day-5-dinner",
     day: "Day 5",
     mealType: "Dinner",
-    title: "Bonus dinner slot from the same pool",
+    title: getRecipe("miso-salmon-with-greens-and-scallions").title,
     description:
-      "A fifth planning slot keeps the 5-day structure while staying centered on NYT Cooking dinner and lunch collections.",
-    serves: 2,
-    prepTime: "TBD",
-    sourceName: dinnerSource.name,
-    sourceUrl: dinnerSource.url,
-    main: "Choose another top-rated dinner recipe",
-    side: "Optional household favourite side",
-    highlights: ["5 day planning", "dinner", "nyt cooking"],
+      "A lighter dinner to round out the 5-day block with protein, greens, and clean flavors.",
+    serves: 4,
+    prepTime: "25 min",
+    sourceName: getRecipe("miso-salmon-with-greens-and-scallions").sourceName,
+    sourceUrl: getRecipe("miso-salmon-with-greens-and-scallions").sourceUrl,
+    main: "Miso Salmon With Greens and Scallions",
+    side: "Rice or roasted vegetables",
+    highlights: ["dinner", "salmon", "lighter finish"],
     ingredients: [
-      { item: "selected recipe ingredients", amount: "depends on selected recipe", category: "pantry" },
+      { item: "salmon", amount: "4 fillets", category: "protein" },
+      { item: "miso", amount: "2 tbsp", category: "fridge" },
+      { item: "scallions", amount: "1 bunch", category: "produce" },
+      { item: "greens", amount: "1 large bunch", category: "produce" },
+      { item: "rice", amount: "2 cups cooked", category: "pantry" },
     ],
-  },
-];
-
-export const recipeLibrary: RecipeLibraryEntry[] = [
-  {
-    id: "nyt-healthy-weeknight-dinners",
-    title: "Healthy Weeknight Dinners",
-    category: "Dinner",
-    sourceName: dinnerSource.name,
-    sourceUrl: dinnerSource.url,
-    imageUrl: "/princess-planner-logo.jpg",
-    description:
-      "Primary dinner source for the planner. This pool should drive dinner selection, with emphasis on the strongest-rated recipes.",
-    favourite: true,
-    tags: ["dinner", "weeknight", "top rated"],
-    plannedDays: ["Today", "Day 3", "Day 5"],
-  },
-  {
-    id: "nyt-healthy-weekday-lunches",
-    title: "Healthy Weekday Lunches",
-    category: "Lunch",
-    sourceName: lunchSource.name,
-    sourceUrl: lunchSource.url,
-    imageUrl: "/princess-planner-logo.jpg",
-    description:
-      "Primary lunch source for the planner. This pool should drive weekday lunch selection.",
-    favourite: true,
-    tags: ["lunch", "weekday", "planning"],
-    plannedDays: ["Tomorrow", "Day 4"],
-  },
-  {
-    id: "nyt-top-50-reader-favorites",
-    title: "Top 50 Reader Favorites",
-    category: "Bonus",
-    sourceName: bonusSource.name,
-    sourceUrl: bonusSource.url,
-    imageUrl: "/princess-planner-logo.jpg",
-    description:
-      "Bonus browse-only section. This is a listing source for inspiration, not part of the active planner pool.",
-    favourite: false,
-    tags: ["bonus", "browse", "popular"],
-    plannedDays: [],
   },
 ];
