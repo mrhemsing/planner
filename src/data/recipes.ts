@@ -5830,6 +5830,136 @@ const recipeDetailsMap: Record<string, RecipeDetailsEntry> = {
       "Cook the shallots in the same pan, add brandy, red wine, and stock, reduce into a sauce, then whisk in butter and chives before spooning it over the steaks.",
     ],
   },
+  "salty-sweet-bbq-salmon-and-broccoli": {
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: ingredientMap["salty-sweet-bbq-salmon-and-broccoli"],
+    instructions: [
+      "Roast the broccoli, scallions, and ginger on a sheet pan until they begin to soften and color.",
+      "Simmer the onion, garlic, tomato paste, sugar, oyster sauce, vinegar, and soy sauce into a thick barbecue glaze.",
+      "Set the salmon over the broccoli, brush it generously with the glaze, and roast until the fish is cooked through, serving extra sauce at the table.",
+    ],
+  },
+  "skillet-orzo-with-chorizo-and-dates": {
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: ingredientMap["skillet-orzo-with-chorizo-and-dates"],
+    instructions: [
+      "Cook the chorizo until it renders some fat, then soften the onion and garlic in the same skillet.",
+      "Toast the orzo briefly, add the chopped dates and water, and simmer covered until the pasta is tender and the liquid absorbed.",
+      "Crumble the goat cheese over the orzo, stir gently until it starts to melt, and finish with mint if you want extra freshness.",
+    ],
+  },
+  "salmon-with-bbq-sauce-and-hot-peppers": {
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: ingredientMap["salmon-with-bbq-sauce-and-hot-peppers"],
+    instructions: [
+      "Arrange the salmon on a sheet pan or baking dish and season it lightly.",
+      "Brush the fish with barbecue sauce and scatter sliced hot peppers around and over the salmon.",
+      "Roast until the salmon is just cooked through and the sauce turns glossy and sticky, then finish with lime or herbs if you like.",
+    ],
+  },
+  "seared-bone-in-rib-eye-steaks": {
+    prepTime: "45 min plus salting",
+    serves: 8,
+    ingredients: ingredientMap["seared-bone-in-rib-eye-steaks"],
+    instructions: [
+      "Salt the rib-eyes well in advance and let them come toward room temperature before cooking.",
+      "Sear each steak hard in a very hot skillet, including the fat cap, then transfer the steaks to a sheet pan.",
+      "Finish them in the oven until done to your liking, then rest before slicing and serving with the scallion-chile herb sauce if using.",
+    ],
+  },
+  "skillet-chicken-thighs-with-broccoli-and-orzo": {
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: ingredientMap["skillet-chicken-thighs-with-broccoli-and-orzo"],
+    instructions: [
+      "Brown the chicken thighs in olive oil until golden on both sides, then set them aside.",
+      "Cook the lemon slices in butter, then toast the broccoli, orzo, thyme, and garlic in the skillet.",
+      "Deglaze with white wine, add broth and the chicken back in, cover, and cook until the orzo is tender and the chicken is cooked through.",
+    ],
+  },
+  "lemony-white-bean-soup-with-turkey-and-greens": {
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: ingredientMap["lemony-white-bean-soup-with-turkey-and-greens"],
+    instructions: [
+      "Cook the onion and carrot in olive oil until very soft and browned at the edges.",
+      "Add tomato paste, cumin, chile flakes, turkey, garlic, and ginger, then cook until the turkey browns in spots.",
+      "Simmer with stock and white beans until flavorful, stir in the greens until tender, and finish the soup with plenty of lemon juice and fresh herbs.",
+    ],
+  },
+  "salmon-gyro-bowls": {
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: ingredientMap["salmon-gyro-bowls"],
+    instructions: [
+      "Marinate the salmon in olive oil, lemon juice, garlic, cilantro, cumin, paprika, oregano, and chile flakes.",
+      "Roast the tomatoes and onions first, then roast the salmon on a second sheet pan until just cooked through.",
+      "Stir together the yogurt-feta sauce, toss the cucumber salad, and build bowls with rice, roasted vegetables, salmon, and the creamy sauce.",
+    ],
+  },
+  "spinach-artichoke-pasta": {
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: ingredientMap["spinach-artichoke-pasta"],
+    instructions: [
+      "Boil the pasta until just shy of al dente while you warm olive oil with garlic and red-pepper flakes in a skillet.",
+      "Wilt the spinach, stir in the chopped artichokes and cream, then melt in the Parmesan before folding in the pasta.",
+      "Transfer to a baking dish, top with mozzarella, and bake until bubbling and browned in spots.",
+    ],
+  },
+  "chicken-thighs-with-coconut-creamed-corn": {
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: ingredientMap["chicken-thighs-with-coconut-creamed-corn"],
+    instructions: [
+      "Brown the chicken thighs skin-side down until deeply golden, then set them aside and keep the rendered fat in the skillet.",
+      "Cook the corn with scallions, ginger, garlic, and chile until it starts to color, then stir in the coconut milk.",
+      "Nestle the chicken back over the corn mixture and simmer until the thighs are cooked through and the coconut corn turns lightly creamy, then finish with lime.",
+    ],
+  },
+  "roasted-fish-with-ginger-scallions-and-soy": {
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: ingredientMap["roasted-fish-with-ginger-scallions-and-soy"],
+    instructions: [
+      "Heat the oven with a sheet pan inside so the fish starts roasting on a hot surface.",
+      "Roast the fish until nearly cooked through, then spoon over the ginger, scallion, soy, and oil mixture.",
+      "Return the pan to the oven briefly so the sauce warms and the fish finishes cooking, then serve right away.",
+    ],
+  },
+  "one-pot-ginger-salmon-and-rice": {
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: ingredientMap["one-pot-ginger-salmon-and-rice"],
+    instructions: [
+      "Simmer the rice with water, nori, soy sauce, and salt until it is tender.",
+      "Season the salmon with ginger, lemon zest, and salt while the rice cooks.",
+      "Fold asparagus into the rice, lay the salmon on top, cover, and cook gently until the fish is just done, then finish with lemon and optional herbs.",
+    ],
+  },
+  "ginger-scallion-steamed-fish": {
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: ingredientMap["ginger-scallion-steamed-fish"],
+    instructions: [
+      "Briefly brine the fish in salted water so it stays tender.",
+      "Simmer scallion segments, ginger, soy sauce, sugar, and water until the liquid reduces slightly.",
+      "Add the fish, cover, and steam-poach until cooked through, then spoon the gingery sauce over it and top with sliced scallion greens.",
+    ],
+  },
+  "pasta-e-ceci-italian-pasta-and-chickpea-stew": {
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: ingredientMap["pasta-e-ceci-italian-pasta-and-chickpea-stew"],
+    instructions: [
+      "Soften the onion in olive oil, then cook the garlic, rosemary, and red-pepper flakes until fragrant.",
+      "Add tomatoes and chickpeas, crushing some of the beans, then pour in water and simmer with the pasta until tender.",
+      "Stir in the escarole or kale until wilted, then serve with pecorino and a drizzle of olive oil.",
+    ],
+  },
   "braised-chicken-with-tomatoes-olives-and-capers": {
     prepTime: "50 min",
     serves: 4,
