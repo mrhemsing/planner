@@ -1,0 +1,123 @@
+# NYT URL corrections from Matt
+
+Track title/URL fixes discovered during manual image collection.
+
+## Confirmed corrections
+
+- Sheet-Pan Feta With Chickpeas and Tomatoes
+  - old: https://cooking.nytimes.com/recipes/1021953-sheet-pan-feta-with-chickpeas-and-tomatoes
+  - new: https://cooking.nytimes.com/recipes/1023371-sheet-pan-feta-with-chickpeas-and-tomatoes
+- Miso Salmon With Greens and Scallions
+  - old: https://cooking.nytimes.com/recipes/1020330-miso-salmon-with-greens-and-scallions
+  - new: https://cooking.nytimes.com/recipes/1019857-maple-and-miso-sheet-pan-salmon-with-green-beans
+- One-Pot Chicken and Rice With Caramelized Lemon
+  - old: https://cooking.nytimes.com/recipes/1020038-one-pot-chicken-and-rice-with-caramelized-lemon
+  - new: https://cooking.nytimes.com/recipes/1025436-one-pot-chicken-and-rice-with-caramelized-lemon
+- Cauliflower Piccata
+  - old: https://cooking.nytimes.com/recipes/1023020-cauliflower-piccata
+  - new: https://cooking.nytimes.com/recipes/1022614-cauliflower-piccata
+- Brothy Thai Curry With Silken Tofu and Herbs
+  - old: https://cooking.nytimes.com/recipes/1023042-brothy-thai-curry-with-silken-tofu-and-herbs
+  - new: https://cooking.nytimes.com/recipes/1022862-brothy-thai-curry-with-silken-tofu-and-herbs
+- Skillet Chicken With Mushrooms and Caramelized Onions
+  - old: https://cooking.nytimes.com/recipes/1020639-skillet-chicken-with-mushrooms-and-caramelized-onions
+  - new: https://cooking.nytimes.com/recipes/1022068-skillet-chicken-with-mushrooms-and-caramelized-onions
+- Roasted Salmon With Miso Rice and Ginger-Scallion Vinaigrette
+  - old: https://cooking.nytimes.com/recipes/1023593-roasted-salmon-with-miso-rice-and-ginger-scallion-vinaigrette
+  - new: https://cooking.nytimes.com/recipes/1021142-roasted-salmon-with-miso-rice-and-ginger-scallion-vinaigrette
+- Coconut Fish and Tomato Bake
+  - old: https://cooking.nytimes.com/recipes/1021887-coconut-fish-and-tomato-bake
+  - new: https://cooking.nytimes.com/recipes/1022129-coconut-fish-and-tomato-bake
+- One-Pan Orzo With Spinach and Feta
+  - old: https://cooking.nytimes.com/recipes/1021003-one-pan-orzo-with-spinach-and-feta
+  - new: https://cooking.nytimes.com/recipes/1021485-one-pan-orzo-with-spinach-and-feta
+- Tofu With Coconut Sauce
+  - old: https://cooking.nytimes.com/recipes/1020048-tofu-with-coconut-sauce
+  - new: https://cooking.nytimes.com/recipes/1020530-baked-tofu-with-peanut-sauce-and-coconut-lime-rice
+- Roasted Gochujang Chicken
+  - old: https://cooking.nytimes.com/recipes/1020035-roasted-gochujang-chicken
+  - new: https://cooking.nytimes.com/recipes/1020829-sheet-pan-gochujang-chicken-and-roasted-vegetables
+- Braised Chicken With Tomatoes and Olives
+  - old: https://cooking.nytimes.com/recipes/1025653-braised-chicken-with-tomatoes-and-olives
+  - new: https://cooking.nytimes.com/recipes/1014718-braised-chicken-with-tomatoes-olives-and-capers
+- Saucy Skillet Mushroom Chicken
+  - old: https://cooking.nytimes.com/recipes/1025654-saucy-skillet-mushroom-chicken
+  - new: https://cooking.nytimes.com/recipes/1022068-skillet-chicken-with-mushrooms-and-caramelized-onions
+- Sheet-Pan Sausages With Caramelized Shallots and Apples
+  - old: https://cooking.nytimes.com/recipes/1023624-sheet-pan-sausages-with-caramelized-shallots-and-apples
+  - new: https://cooking.nytimes.com/recipes/1021698-sheet-pan-sausages-with-caramelized-shallots-and-apples
+- Baked Fish and Chips
+  - old: https://cooking.nytimes.com/recipes/1021732-baked-fish-and-chips
+  - new: https://cooking.nytimes.com/recipes/1018023-baked-fish-and-chips
+- Spinach Artichoke Pasta
+  - old: https://cooking.nytimes.com/recipes/1022647-spinach-artichoke-pasta
+  - new: https://cooking.nytimes.com/recipes/1020080-baked-spinach-artichoke-pasta
+- Sheet-Pan Chicken With Jammy Tomatoes and Pancetta
+  - old: https://cooking.nytimes.com/recipes/1023380-sheet-pan-chicken-with-jammy-tomatoes-and-pancetta
+  - new: https://cooking.nytimes.com/recipes/1021014-sheet-pan-chicken-with-jammy-tomatoes-and-pancetta
+- Sticky Coconut Chicken and Rice
+  - old: https://cooking.nytimes.com/recipes/1025790-sticky-coconut-chicken-and-rice
+  - new: https://cooking.nytimes.com/recipes/1023047-sticky-coconut-chicken-and-rice
+- Baked Farro With Lentils, Tomato and Feta
+  - old: https://cooking.nytimes.com/recipes/1020385-baked-farro-with-lentils-tomato-and-feta
+  - new: https://cooking.nytimes.com/recipes/1020809-baked-farro-with-lentils-tomato-and-feta
+- Roasted Sausages With Grapes and Onions
+  - old: https://cooking.nytimes.com/recipes/1020664-roasted-sausages-with-grapes-and-onions
+  - new: https://cooking.nytimes.com/recipes/1020536-roasted-sausages-with-grapes-and-onions
+- Sheet-Pan Salmon and Broccoli With Sesame and Ginger
+  - old: https://cooking.nytimes.com/recipes/1021821-sheet-pan-salmon-and-broccoli-with-sesame-and-ginger
+  - new: https://cooking.nytimes.com/recipes/1020765-sheet-pan-salmon-and-broccoli-with-sesame-and-ginger
+- Crispy Tofu With Cashews and Blistered Snap Peas
+  - old: https://cooking.nytimes.com/recipes/1023146-crispy-tofu-with-cashews-and-blistered-snap-peas
+  - new: https://cooking.nytimes.com/recipes/1021200-crispy-tofu-with-cashews-and-blistered-snap-peas
+- Cheesy Baked Pasta With Sausage and Ricotta
+  - old: https://cooking.nytimes.com/recipes/1022705-cheesy-baked-pasta-with-sausage-and-ricotta
+  - new: https://cooking.nytimes.com/recipes/1020811-cheesy-baked-pasta-with-sausage-and-ricotta
+- Sheet-Pan Chicken With Artichokes and Herbs
+  - old: https://cooking.nytimes.com/recipes/1020928-sheet-pan-chicken-with-artichokes-and-herbs
+  - new: https://cooking.nytimes.com/recipes/1022113-sheet-pan-chicken-with-artichokes-and-herbs
+- Skillet Meatballs With Peaches, Basil and Lime
+  - old: https://cooking.nytimes.com/recipes/1025772-skillet-meatballs-with-peaches-basil-and-lime
+  - new: https://cooking.nytimes.com/recipes/1021402-skillet-meatballs-with-peaches-basil-and-lime
+- Chicken Thighs With Coconut-Creamed Corn
+  - old: https://cooking.nytimes.com/recipes/1023326-chicken-thighs-with-coconut-creamed-corn
+  - new: https://cooking.nytimes.com/recipes/1021157-one-pan-chicken-thighs-with-coconut-creamed-corn
+- Tofu and Herb Salad
+  - old: https://cooking.nytimes.com/recipes/1020223-tofu-and-herb-salad
+  - new: https://cooking.nytimes.com/recipes/1020751-tofu-and-herb-salad-with-sesame
+- White Bean and Tuna Salad
+  - old: https://cooking.nytimes.com/recipes/1020166-white-bean-and-tuna-salad
+  - new: https://cooking.nytimes.com/recipes/767637776-white-bean-tuna-and-kale-salad
+- Peanut Butter and Pickle Sandwich
+  - old: https://cooking.nytimes.com/recipes/1020991-peanut-butter-and-pickle-sandwich
+  - new: https://cooking.nytimes.com/recipes/12887-peanut-butter-and-pickle-sandwich
+- Beet and Lentil Salad With Cheddar
+  - old: https://cooking.nytimes.com/recipes/1025787-beet-and-lentil-salad-with-cheddar
+  - new: https://cooking.nytimes.com/recipes/1022120-beet-and-lentil-salad-with-cheddar
+- Kimchi Grilled Cheese
+  - old: https://cooking.nytimes.com/recipes/1021675-kimchi-grilled-cheese
+  - new: https://cooking.nytimes.com/recipes/1019879-kimchi-grilled-cheese
+- Chopped Salad With Chickpeas, Feta and Avocado
+  - old: https://cooking.nytimes.com/recipes/1022867-chopped-salad-with-chickpeas-feta-and-avocado
+  - new: https://cooking.nytimes.com/recipes/1021454-chopped-salad-with-chickpeas-feta-and-avocado
+- Tuna Mayo Rice Bowl
+  - old: https://cooking.nytimes.com/recipes/1027166-tuna-mayo-rice-bowl
+  - new: https://cooking.nytimes.com/recipes/1023224-tuna-mayo-rice-bowl
+- Tomato White Bean Soup With Lots of Garlic
+  - old: https://cooking.nytimes.com/recipes/1023003-tomato-white-bean-soup-with-lots-of-garlic
+  - new: https://cooking.nytimes.com/recipes/1020733-tomato-and-white-bean-soup-with-lots-of-garlic
+- Chickpea Tuna Salad
+  - old: https://cooking.nytimes.com/recipes/1025492-chickpea-tuna-salad
+  - new: https://cooking.nytimes.com/recipes/12272-tuna-chickpeas-and-broccoli-salad
+- Crisp Gnocchi With Brussels Sprouts and Brown Butter
+  - old: https://cooking.nytimes.com/recipes/1023589-crisp-gnocchi-with-brussels-sprouts-and-brown-butter
+  - new: https://cooking.nytimes.com/recipes/1020453-crisp-gnocchi-with-brussels-sprouts-and-brown-butter
+- Loaded Sweet Potatoes With Black Beans and Cheddar
+  - old: https://cooking.nytimes.com/recipes/1024855-loaded-sweet-potatoes-with-black-beans-and-cheddar
+  - new: https://cooking.nytimes.com/recipes/1019600-loaded-sweet-potatoes-with-black-beans-and-cheddar
+- Kale Caesar Pasta Salad
+  - old: https://cooking.nytimes.com/recipes/1025539-kale-caesar-pasta-salad
+  - new: https://cooking.nytimes.com/recipes/1027092-kale-caesar-pasta-salad
+- Cold Tofu With Tomatoes and Peaches
+  - old: https://cooking.nytimes.com/recipes/1024471-cold-tofu-with-tomatoes-and-peaches
+  - new: https://cooking.nytimes.com/recipes/1022319-cold-tofu-salad-with-tomatoes-and-peaches

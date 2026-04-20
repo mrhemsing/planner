@@ -1,0 +1,29 @@
+NYT placeholder-image recipes with non-redirecting live URLs: 27
+
+1. sheet-pan-feta-with-chickpeas-and-tomatoes | Sheet-Pan Feta With Chickpeas and Tomatoes | https://cooking.nytimes.com/recipes/1021953-sheet-pan-feta-with-chickpeas-and-tomatoes
+2. skillet-chicken-with-mushrooms-and-caramelized-onions | Skillet Chicken With Mushrooms and Caramelized Onions | https://cooking.nytimes.com/recipes/1020639-skillet-chicken-with-mushrooms-and-caramelized-onions
+3. roasted-salmon-with-miso-rice-and-ginger-scallion-vinaigrette | Roasted Salmon With Miso Rice and Ginger-Scallion Vinaigrette | https://cooking.nytimes.com/recipes/1023593-roasted-salmon-with-miso-rice-and-ginger-scallion-vinaigrette
+4. coconut-fish-and-tomato-bake | Coconut Fish and Tomato Bake | https://cooking.nytimes.com/recipes/1021887-coconut-fish-and-tomato-bake
+5. one-pan-orzo-with-spinach-and-feta | One-Pan Orzo With Spinach and Feta | https://cooking.nytimes.com/recipes/1021003-one-pan-orzo-with-spinach-and-feta
+6. rice-cooker-spanish-chickpeas-and-rice | Rice Cooker Spanish Chickpeas and Rice | https://cooking.nytimes.com/recipes/1024704-rice-cooker-spanish-chickpeas-and-rice
+7. gingery-shrimp-and-noodles | Gingery Shrimp and Noodles | https://cooking.nytimes.com/recipes/1021113-gingery-shrimp-and-noodles
+8. caramelized-sheet-pan-fish-tacos | Caramelized Sheet-Pan Fish Tacos | https://cooking.nytimes.com/recipes/1021880-caramelized-sheet-pan-fish-tacos
+9. sticky-coconut-chicken-and-rice | Sticky Coconut Chicken and Rice | https://cooking.nytimes.com/recipes/1025790-sticky-coconut-chicken-and-rice
+10. one-pot-salmon-and-shiitake-rice | One-Pot Salmon and Shiitake Rice | https://cooking.nytimes.com/recipes/1025097-one-pot-salmon-and-shiitake-rice
+11. spicy-lime-salmon-with-wakame-kale-and-avocado | Spicy Lime Salmon With Wakame, Kale and Avocado | https://cooking.nytimes.com/recipes/1027181-spicy-lime-salmon-with-wakame-kale-and-avocado
+12. sheet-pan-salmon-and-broccoli-with-sesame-and-ginger | Sheet-Pan Salmon and Broccoli With Sesame and Ginger | https://cooking.nytimes.com/recipes/1021821-sheet-pan-salmon-and-broccoli-with-sesame-and-ginger
+13. crispy-beans-and-greens-with-fried-eggs | Crispy Beans and Greens With Fried Eggs | https://cooking.nytimes.com/recipes/1027029-crispy-beans-and-greens-with-fried-eggs
+14. chicken-thighs-with-coconut-creamed-corn | Chicken Thighs With Coconut-Creamed Corn | https://cooking.nytimes.com/recipes/1023326-chicken-thighs-with-coconut-creamed-corn
+15. sambal-salmon-bowls | Sambal Salmon Bowls | https://cooking.nytimes.com/recipes/1026196-sambal-salmon-bowls
+16. sheet-pan-chicken-with-cauliflower-and-arugula | Sheet-Pan Chicken With Cauliflower and Arugula | https://cooking.nytimes.com/recipes/1021671-sheet-pan-chicken-with-cauliflower-and-arugula
+17. coconut-curry-salmon-with-green-beans | Coconut Curry Salmon With Green Beans | https://cooking.nytimes.com/recipes/1025174-coconut-curry-salmon-with-green-beans
+18. beet-and-lentil-salad-with-cheddar | Beet and Lentil Salad With Cheddar | https://cooking.nytimes.com/recipes/1025787-beet-and-lentil-salad-with-cheddar
+19. smashed-cucumber-and-egg-salad | Smashed Cucumber and Egg Salad | https://cooking.nytimes.com/recipes/1026840-smashed-cucumber-and-egg-salad
+20. smashed-edamame-toast | Smashed Edamame Toast | https://cooking.nytimes.com/recipes/1026967-smashed-edamame-toast
+21. broccoli-and-egg-fried-rice | Broccoli and Egg Fried Rice | https://cooking.nytimes.com/recipes/1023654-broccoli-and-egg-fried-rice
+22. cheesy-beans-on-toast | Cheesy Beans on Toast | https://cooking.nytimes.com/recipes/1027139-cheesy-beans-on-toast
+23. broccoli-cheddar-frittata | Broccoli Cheddar Frittata | https://cooking.nytimes.com/recipes/1025072-broccoli-cheddar-frittata
+24. tofu-salad-sandwich | Tofu Salad Sandwich | https://cooking.nytimes.com/recipes/1027215-tofu-salad-sandwich
+25. tinned-fish-and-cucumber-salad | Tinned Fish and Cucumber Salad | https://cooking.nytimes.com/recipes/1027242-tinned-fish-and-cucumber-salad
+26. spicy-salmon-rice-bowl | Spicy Salmon Rice Bowl | https://cooking.nytimes.com/recipes/1026988-spicy-salmon-rice-bowl
+27. tomato-turmeric-soup | Tomato Turmeric Soup | https://cooking.nytimes.com/recipes/1022868-tomato-turmeric-soup

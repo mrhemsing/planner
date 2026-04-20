@@ -1,0 +1,290 @@
+Redirecting NYT recipe URLs: 72
+
+1. miso-salmon-with-greens-and-scallions
+   source: https://cooking.nytimes.com/recipes/1020330-miso-salmon-with-greens-and-scallions
+   live:   https://cooking.nytimes.com/recipes/1020330-shrimp-scampi-with-orzo
+   final slug: 1020330-shrimp-scampi-with-orzo
+2. one-pot-chicken-and-rice-with-caramelized-lemon
+   source: https://cooking.nytimes.com/recipes/1020038-one-pot-chicken-and-rice-with-caramelized-lemon
+   live:   https://cooking.nytimes.com/recipes/1020038-beignets
+   final slug: 1020038-beignets
+3. turmeric-chicken-soup
+   source: https://cooking.nytimes.com/recipes/1020733-baked-mustard-lime-chicken
+   live:   https://cooking.nytimes.com/recipes/1020733-tomato-and-white-bean-soup-with-lots-of-garlic
+   final slug: 1020733-tomato-and-white-bean-soup-with-lots-of-garlic
+4. cauliflower-piccata
+   source: https://cooking.nytimes.com/recipes/1023020-cauliflower-piccata
+   live:   https://cooking.nytimes.com/recipes/1023020-sabzi-spinach-and-lamb-stew
+   final slug: 1023020-sabzi-spinach-and-lamb-stew
+5. brothy-thai-curry-with-silken-tofu-and-herbs
+   source: https://cooking.nytimes.com/recipes/1023042-brothy-thai-curry-with-silken-tofu-and-herbs
+   live:   https://cooking.nytimes.com/recipes/1023042-pad-thai
+   final slug: 1023042-pad-thai
+6. garlicky-salmon-and-broccoli
+   source: https://cooking.nytimes.com/recipes/1021874-garlicky-salmon-and-broccoli
+   live:   https://cooking.nytimes.com/recipes/1021874-birria-tacos
+   final slug: 1021874-birria-tacos
+7. saucy-braised-chicken-with-lemon-and-olives
+   source: https://cooking.nytimes.com/recipes/1019404-saucy-braised-chicken-with-lemon-and-olives
+   live:   https://cooking.nytimes.com/recipes/1019404-chicken-braised-in-two-vinegars
+   final slug: 1019404-chicken-braised-in-two-vinegars
+8. tofu-with-coconut-sauce
+   source: https://cooking.nytimes.com/recipes/1020048-tofu-with-coconut-sauce
+   live:   https://cooking.nytimes.com/recipes/1020048-zuni-cafes-hamburger
+   final slug: 1020048-zuni-cafes-hamburger
+9. roasted-gochujang-chicken
+   source: https://cooking.nytimes.com/recipes/1020035-roasted-gochujang-chicken
+   live:   https://cooking.nytimes.com/recipes/1020035-beef-tenderloin-with-red-wine-anchovies-garlic-and-thyme
+   final slug: 1020035-beef-tenderloin-with-red-wine-anchovies-garlic-and-thyme
+10. creamy-one-pot-pasta-with-ricotta-and-lemon
+   source: https://cooking.nytimes.com/recipes/1020736-creamy-one-pot-pasta-with-ricotta-and-lemon
+   live:   https://cooking.nytimes.com/recipes/1020736-ozoni-mochi-soup
+   final slug: 1020736-ozoni-mochi-soup
+11. one-pan-tofu-with-broccoli-and-sesame
+   source: https://cooking.nytimes.com/recipes/1022637-one-pan-tofu-with-broccoli-and-sesame
+   live:   https://cooking.nytimes.com/recipes/1022637-crispy-sheet-pan-noodles-with-glazed-tofu
+   final slug: 1022637-crispy-sheet-pan-noodles-with-glazed-tofu
+12. braised-chicken-with-tomatoes-and-olives
+   source: https://cooking.nytimes.com/recipes/1025653-braised-chicken-with-tomatoes-and-olives
+   live:   https://cooking.nytimes.com/recipes/1025653-smores-tart
+   final slug: 1025653-smores-tart
+13. crispy-rice-bowl-with-spring-vegetables-and-fried-eggs
+   source: https://cooking.nytimes.com/recipes/1025427-crispy-rice-bowl-with-spring-vegetables-and-fried-eggs
+   live:   https://cooking.nytimes.com/recipes/1025427-hamburger-soup
+   final slug: 1025427-hamburger-soup
+14. saucy-skillet-mushroom-chicken
+   source: https://cooking.nytimes.com/recipes/1025654-saucy-skillet-mushroom-chicken
+   live:   https://cooking.nytimes.com/recipes/1025654-ice-cream-with-olive-oil-and-dates
+   final slug: 1025654-ice-cream-with-olive-oil-and-dates
+15. sheet-pan-sausages-with-caramelized-shallots-and-apples
+   source: https://cooking.nytimes.com/recipes/1023624-sheet-pan-sausages-with-caramelized-shallots-and-apples
+   live:   https://cooking.nytimes.com/recipes/1023624-pecan-tarts
+   final slug: 1023624-pecan-tarts
+16. salsa-verde-pepper-and-onion-frittata
+   source: https://cooking.nytimes.com/recipes/1025205-salsa-verde-pepper-and-onion-frittata
+   live:   https://cooking.nytimes.com/recipes/1025205-lemon-bars-with-pecan-crust
+   final slug: 1025205-lemon-bars-with-pecan-crust
+17. chicken-meatballs-with-ginger-and-cabbage
+   source: https://cooking.nytimes.com/recipes/1020707-chicken-meatballs-with-ginger-and-cabbage
+   live:   https://cooking.nytimes.com/recipes/1020707-flaky-folded-biscuits
+   final slug: 1020707-flaky-folded-biscuits
+18. one-pot-spiced-shrimp-and-rice
+   source: https://cooking.nytimes.com/recipes/1025896-one-pot-spiced-shrimp-and-rice
+   live:   https://cooking.nytimes.com/recipes/1025896-roasted-cod-with-burst-tomatoes-and-olives
+   final slug: 1025896-roasted-cod-with-burst-tomatoes-and-olives
+19. baked-fish-and-chips
+   source: https://cooking.nytimes.com/recipes/1021732-baked-fish-and-chips
+   live:   https://cooking.nytimes.com/recipes/1021732-carne-con-chile-rojo-chuck-braised-in-chile
+   final slug: 1021732-carne-con-chile-rojo-chuck-braised-in-chile
+20. spinach-artichoke-pasta
+   source: https://cooking.nytimes.com/recipes/1022647-spinach-artichoke-pasta
+   live:   https://cooking.nytimes.com/recipes/1022647-porchetta-spiced-roasted-potatoes
+   final slug: 1022647-porchetta-spiced-roasted-potatoes
+21. sheet-pan-chicken-with-jammy-tomatoes-and-pancetta
+   source: https://cooking.nytimes.com/recipes/1023380-sheet-pan-chicken-with-jammy-tomatoes-and-pancetta
+   live:   https://cooking.nytimes.com/recipes/1023380-basil-and-tomato-fried-rice
+   final slug: 1023380-basil-and-tomato-fried-rice
+22. peanut-braised-chicken
+   source: https://cooking.nytimes.com/recipes/1027148-peanut-braised-chicken
+   live:   https://cooking.nytimes.com/recipes/1027148-tomato-salad-with-dates
+   final slug: 1027148-tomato-salad-with-dates
+23. baked-spinach-artichoke-chicken
+   source: https://cooking.nytimes.com/recipes/1025650-baked-spinach-artichoke-chicken
+   live:   https://cooking.nytimes.com/recipes/1025650-mouhalabieh-milk-pudding
+   final slug: 1025650-mouhalabieh-milk-pudding
+24. kimchi-udon-with-scallions
+   source: https://cooking.nytimes.com/recipes/1025342-kimchi-udon-with-scallions
+   live:   https://cooking.nytimes.com/recipes/1025342-one-pot-chicken-meatballs-with-greens
+   final slug: 1025342-one-pot-chicken-meatballs-with-greens
+25. one-pot-turmeric-coconut-rice-with-chickpeas
+   source: https://cooking.nytimes.com/recipes/1023043-one-pot-turmeric-coconut-rice-with-chickpeas
+   live:   https://cooking.nytimes.com/recipes/1023043-pad-see-ew
+   final slug: 1023043-pad-see-ew
+26. baked-farro-with-lentils-tomato-and-feta
+   source: https://cooking.nytimes.com/recipes/1020385-baked-farro-with-lentils-tomato-and-feta
+   live:   https://cooking.nytimes.com/recipes/1020385-pickle-brined-fried-chicken-sandwich
+   final slug: 1020385-pickle-brined-fried-chicken-sandwich
+27. roasted-sausages-with-grapes-and-onions
+   source: https://cooking.nytimes.com/recipes/1020664-roasted-sausages-with-grapes-and-onions
+   live:   https://cooking.nytimes.com/recipes/1020664-no-bake-cheesecake-with-caramelized-pineapple-and-coconut
+   final slug: 1020664-no-bake-cheesecake-with-caramelized-pineapple-and-coconut
+28. chicken-and-coconut-rice-noodle-soup
+   source: https://cooking.nytimes.com/recipes/1023176-chicken-and-coconut-rice-noodle-soup
+   live:   https://cooking.nytimes.com/recipes/1023176-reverse-seared-steak
+   final slug: 1023176-reverse-seared-steak
+29. crispy-tofu-with-cashews-and-blistered-snap-peas
+   source: https://cooking.nytimes.com/recipes/1023146-crispy-tofu-with-cashews-and-blistered-snap-peas
+   live:   https://cooking.nytimes.com/recipes/1023146-papadzules-eggs-and-asparagus-in-tortillas-with-pepita-sauce
+   final slug: 1023146-papadzules-eggs-and-asparagus-in-tortillas-with-pepita-sauce
+30. cheesy-baked-pasta-with-sausage-and-ricotta
+   source: https://cooking.nytimes.com/recipes/1022705-cheesy-baked-pasta-with-sausage-and-ricotta
+   live:   https://cooking.nytimes.com/recipes/1022705-garlic-braised-chicken
+   final slug: 1022705-garlic-braised-chicken
+31. sheet-pan-chicken-with-artichokes-and-herbs
+   source: https://cooking.nytimes.com/recipes/1020928-sheet-pan-chicken-with-artichokes-and-herbs
+   live:   https://cooking.nytimes.com/recipes/1020928-potato-gratin-with-swiss-chard-and-sumac-onions
+   final slug: 1020928-potato-gratin-with-swiss-chard-and-sumac-onions
+32. gochujang-salmon-with-sesame-bok-choy
+   source: https://cooking.nytimes.com/recipes/1023678-gochujang-salmon-with-sesame-bok-choy
+   live:   https://cooking.nytimes.com/recipes/1023678-chocolate-hazelnut-cookies
+   final slug: 1023678-chocolate-hazelnut-cookies
+33. skillet-meatballs-with-peaches-basil-and-lime
+   source: https://cooking.nytimes.com/recipes/1025772-skillet-meatballs-with-peaches-basil-and-lime
+   live:   https://cooking.nytimes.com/recipes/1025772-cream-cheese-brownies
+   final slug: 1025772-cream-cheese-brownies
+34. crispy-fish-with-brown-butter-sauce-and-kale
+   source: https://cooking.nytimes.com/recipes/1023344-crispy-fish-with-brown-butter-sauce-and-kale
+   live:   https://cooking.nytimes.com/recipes/1023344-broiled-turmeric-salmon-with-corn-and-green-beans
+   final slug: 1023344-broiled-turmeric-salmon-with-corn-and-green-beans
+35. cheesy-skillet-broccoli-orzo
+   source: https://cooking.nytimes.com/recipes/1026999-cheesy-skillet-broccoli-orzo
+   live:   https://cooking.nytimes.com/recipes/1026999-bacon-ranch-potato-salad
+   final slug: 1026999-bacon-ranch-potato-salad
+36. veggie-egg-bites
+   source: https://cooking.nytimes.com/recipes/1020223-tofu-and-herb-salad
+   live:   https://cooking.nytimes.com/recipes/1020223-via-carotas-insalata-verde
+   final slug: 1020223-via-carotas-insalata-verde
+37. cucumber-avocado-sandwich
+   source: https://cooking.nytimes.com/recipes/1021118-cucumber-avocado-sandwich
+   live:   https://cooking.nytimes.com/recipes/1021118-savory-babka-with-ricotta-and-herbs
+   final slug: 1021118-savory-babka-with-ricotta-and-herbs
+38. white-bean-and-tuna-salad
+   source: https://cooking.nytimes.com/recipes/1020166-white-bean-and-tuna-salad
+   live:   https://cooking.nytimes.com/recipes/1020166-roasted-almond-butter
+   final slug: 1020166-roasted-almond-butter
+39. broccoli-melt
+   source: https://cooking.nytimes.com/recipes/1023047-broccoli-melt
+   live:   https://cooking.nytimes.com/recipes/1023047-sticky-coconut-chicken-and-rice
+   final slug: 1023047-sticky-coconut-chicken-and-rice
+40. peanut-butter-and-pickle-sandwich
+   source: https://cooking.nytimes.com/recipes/1020991-peanut-butter-and-pickle-sandwich
+   live:   https://cooking.nytimes.com/recipes/1020991-yaki-onigiri-grilled-japanese-rice-balls-with-pickled-shiitakes
+   final slug: 1020991-yaki-onigiri-grilled-japanese-rice-balls-with-pickled-shiitakes
+41. egg-roll-bowl
+   source: https://cooking.nytimes.com/recipes/1023861-egg-roll-bowl
+   live:   https://cooking.nytimes.com/recipes/1023861-butternut-squash-and-goat-cheese-galette
+   final slug: 1023861-butternut-squash-and-goat-cheese-galette
+42. smashed-chickpea-salad
+   source: https://cooking.nytimes.com/recipes/1023208-smashed-chickpea-salad
+   live:   https://cooking.nytimes.com/recipes/1023208-strawberry-galette
+   final slug: 1023208-strawberry-galette
+43. green-goddess-white-bean-salad
+   source: https://cooking.nytimes.com/recipes/1024075-green-goddess-white-bean-salad
+   live:   https://cooking.nytimes.com/recipes/1024075-dumpling-tomato-salad-with-chile-crisp-vinaigrette
+   final slug: 1024075-dumpling-tomato-salad-with-chile-crisp-vinaigrette
+44. anything-goes-donabe
+   source: https://cooking.nytimes.com/recipes/1024992-anything-goes-donabe
+   live:   https://cooking.nytimes.com/recipes/1024992-pistachio-chocolate-bark
+   final slug: 1024992-pistachio-chocolate-bark
+45. crispy-rice-salad-with-half-boiled-eggs
+   source: https://cooking.nytimes.com/recipes/1025493-crispy-rice-salad-with-half-boiled-eggs
+   live:   https://cooking.nytimes.com/recipes/1025493-pakora
+   final slug: 1025493-pakora
+46. black-bean-and-sweet-potato-quesadillas
+   source: https://cooking.nytimes.com/recipes/1021708-black-bean-and-sweet-potato-quesadillas
+   live:   https://cooking.nytimes.com/recipes/1021708-mini-gingerbread-houses
+   final slug: 1021708-mini-gingerbread-houses
+47. kimchi-grilled-cheese
+   source: https://cooking.nytimes.com/recipes/1021675-kimchi-grilled-cheese
+   live:   https://cooking.nytimes.com/recipes/1021675-stuffed-acorn-squash-with-sausage-and-kale
+   final slug: 1021675-stuffed-acorn-squash-with-sausage-and-kale
+48. chopped-salad-with-chickpeas-feta-and-avocado
+   source: https://cooking.nytimes.com/recipes/1022867-chopped-salad-with-chickpeas-feta-and-avocado
+   live:   https://cooking.nytimes.com/recipes/1022867-one-pot-turkey-chili-and-biscuits
+   final slug: 1022867-one-pot-turkey-chili-and-biscuits
+49. turkey-zucchini-and-carrot-burgers
+   source: https://cooking.nytimes.com/recipes/1020443-turkey-zucchini-and-carrot-burgers
+   live:   https://cooking.nytimes.com/recipes/1020443-pistachio-and-cherry-bombe
+   final slug: 1020443-pistachio-and-cherry-bombe
+50. tuna-mayo-rice-bowl
+   source: https://cooking.nytimes.com/recipes/1027166-tuna-mayo-rice-bowl
+   live:   https://cooking.nytimes.com/recipes/1027166-chicken-soup-with-corn-and-spinners
+   final slug: 1027166-chicken-soup-with-corn-and-spinners
+51. pan-bagnat-salad
+   source: https://cooking.nytimes.com/recipes/1025538-pan-bagnat-salad
+   live:   https://cooking.nytimes.com/recipes/1025538-idli-fermented-rice-cake
+   final slug: 1025538-idli-fermented-rice-cake
+52. halloumi-salad-with-peaches-and-tomatoes
+   source: https://cooking.nytimes.com/recipes/1023387-halloumi-salad-with-peaches-and-tomatoes
+   live:   https://cooking.nytimes.com/recipes/1023387-creamy-collard-greens-dip-with-shito
+   final slug: 1023387-creamy-collard-greens-dip-with-shito
+53. sesame-noodles-with-crisp-vegetables
+   source: https://cooking.nytimes.com/recipes/1025220-sesame-noodles-with-crisp-vegetables
+   live:   https://cooking.nytimes.com/recipes/1025220-everyday-dal
+   final slug: 1025220-everyday-dal
+54. tomato-white-bean-soup-with-lots-of-garlic
+   source: https://cooking.nytimes.com/recipes/1023003-tomato-white-bean-soup-with-lots-of-garlic
+   live:   https://cooking.nytimes.com/recipes/1023003-soy-glazed-salmon-hand-rolls
+   final slug: 1023003-soy-glazed-salmon-hand-rolls
+55. avocado-kimchi-rice-bowl
+   source: https://cooking.nytimes.com/recipes/1024419-avocado-kimchi-rice-bowl
+   live:   https://cooking.nytimes.com/recipes/1024419-espresso-martini
+   final slug: 1024419-espresso-martini
+56. chickpea-tuna-salad
+   source: https://cooking.nytimes.com/recipes/1025492-chickpea-tuna-salad
+   live:   https://cooking.nytimes.com/recipes/1025492-rice-pilaf
+   final slug: 1025492-rice-pilaf
+57. mushroom-and-kale-toaster-quesadillas
+   source: https://cooking.nytimes.com/recipes/1024841-mushroom-and-kale-toaster-quesadillas
+   live:   https://cooking.nytimes.com/recipes/1024841-tonkatsu
+   final slug: 1024841-tonkatsu
+58. green-goddess-wrap
+   source: https://cooking.nytimes.com/recipes/1027067-green-goddess-wrap
+   live:   https://cooking.nytimes.com/recipes/1027067-coconut-lime-wedge-salad
+   final slug: 1027067-coconut-lime-wedge-salad
+59. crisp-gnocchi-with-brussels-sprouts-and-brown-butter
+   source: https://cooking.nytimes.com/recipes/1023589-crisp-gnocchi-with-brussels-sprouts-and-brown-butter
+   live:   https://cooking.nytimes.com/recipes/1023589-pork-chops-with-kale-and-dates
+   final slug: 1023589-pork-chops-with-kale-and-dates
+60. creamy-gochujang-white-beans
+   source: https://cooking.nytimes.com/recipes/1025129-creamy-gochujang-white-beans
+   live:   https://cooking.nytimes.com/recipes/1025129-spicy-tomato-white-bean-stew
+   final slug: 1025129-spicy-tomato-white-bean-stew
+61. loaded-sweet-potatoes-with-black-beans-and-cheddar
+   source: https://cooking.nytimes.com/recipes/1024855-loaded-sweet-potatoes-with-black-beans-and-cheddar
+   live:   https://cooking.nytimes.com/recipes/1024855-philly-cheesesteak
+   final slug: 1024855-philly-cheesesteak
+62. coconut-braised-chickpeas-with-sweet-potatoes-and-greens
+   source: https://cooking.nytimes.com/recipes/1025034-coconut-braised-chickpeas-with-sweet-potatoes-and-greens
+   live:   https://cooking.nytimes.com/recipes/1025034-parmesan-braised-beans-with-olives
+   final slug: 1025034-parmesan-braised-beans-with-olives
+63. crunchy-rice-salad-with-tomatoes-and-cucumbers
+   source: https://cooking.nytimes.com/recipes/1025494-crunchy-rice-salad-with-tomatoes-and-cucumbers
+   live:   https://cooking.nytimes.com/recipes/1025494-salt-and-pepper-shrimp
+   final slug: 1025494-salt-and-pepper-shrimp
+64. pickle-bean-salad
+   source: https://cooking.nytimes.com/recipes/1027100-pickle-bean-salad
+   live:   https://cooking.nytimes.com/recipes/1027100-diner-burgers
+   final slug: 1027100-diner-burgers
+65. roasted-cauliflower-and-paneer-wraps
+   source: https://cooking.nytimes.com/recipes/1025061-roasted-cauliflower-and-paneer-wraps
+   live:   https://cooking.nytimes.com/recipes/1025061-mussels-in-spicy-green-broth
+   final slug: 1025061-mussels-in-spicy-green-broth
+66. kale-caesar-pasta-salad
+   source: https://cooking.nytimes.com/recipes/1025539-kale-caesar-pasta-salad
+   live:   https://cooking.nytimes.com/recipes/1025539-chirashi-sushi
+   final slug: 1025539-chirashi-sushi
+67. crispy-mushroom-wraps
+   source: https://cooking.nytimes.com/recipes/1026148-crispy-mushroom-wraps
+   live:   https://cooking.nytimes.com/recipes/1026148-creamy-tortellini-soup
+   final slug: 1026148-creamy-tortellini-soup
+68. eggplant-salad-toast
+   source: https://cooking.nytimes.com/recipes/1027236-eggplant-salad-toast
+   live:   https://cooking.nytimes.com/recipes/1027236-vegetarian-tomato-mapo-tofu
+   final slug: 1027236-vegetarian-tomato-mapo-tofu
+69. cheesy-corn-and-white-bean-bake
+   source: https://cooking.nytimes.com/recipes/1027228-cheesy-corn-and-white-bean-bake
+   live:   https://cooking.nytimes.com/recipes/1027228-lemon-pepper-zucchini-pasta-with-dill
+   final slug: 1027228-lemon-pepper-zucchini-pasta-with-dill
+70. smashed-broccoli-melt
+   source: https://cooking.nytimes.com/recipes/1027208-smashed-broccoli-melt
+   live:   https://cooking.nytimes.com/recipes/1027208-honey-lemon-chicken-meatballs
+   final slug: 1027208-honey-lemon-chicken-meatballs
+71. cold-tofu-with-tomatoes-and-peaches
+   source: https://cooking.nytimes.com/recipes/1024471-cold-tofu-with-tomatoes-and-peaches
+   live:   https://cooking.nytimes.com/recipes/1024471-spicy-tuna-salad-with-crispy-rice
+   final slug: 1024471-spicy-tuna-salad-with-crispy-rice
+72. roasted-sweet-potato-and-farro-salad
+   source: https://cooking.nytimes.com/recipes/1025208-roasted-sweet-potato-and-farro-salad
+   live:   https://cooking.nytimes.com/recipes/1025208-chew-bread
+   final slug: 1025208-chew-bread

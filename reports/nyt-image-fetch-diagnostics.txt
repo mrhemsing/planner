@@ -1,0 +1,58 @@
+NYT image fetch diagnostics
+Generated: 2026-04-17
+
+Context
+- Command run: python planner/scripts/fill-nyt-images.py 98
+- Goal: replace placeholder images on NYT recipe cards with real images when the live recipe page still resolves to the expected recipe.
+
+Summary
+- Placeholder recipes checked: 98
+- Updated with new images: 0
+- Hard 404 responses: 27
+- Redirected or mismatched recipe pages: 71
+
+What changed this cycle
+- fill-nyt-images.py now emits per-recipe progress, request failures, and a final summary instead of silently hanging.
+- fill-nyt-images.py now applies a default socket timeout so NYT fetch attempts fail fast.
+- fill-nyt-images.py limit handling now caps attempted recipes, not only successful updates.
+
+404 responses (27)
+- sheet-pan-feta-with-chickpeas-and-tomatoes
+- skillet-chicken-with-mushrooms-and-caramelized-onions
+- roasted-salmon-with-miso-rice-and-ginger-scallion-vinaigrette
+- coconut-fish-and-tomato-bake
+- one-pan-orzo-with-spinach-and-feta
+- rice-cooker-spanish-chickpeas-and-rice
+- gingery-shrimp-and-noodles
+- caramelized-sheet-pan-fish-tacos
+- sticky-coconut-chicken-and-rice
+- one-pot-salmon-and-shiitake-rice
+- spicy-lime-salmon-with-wakame-kale-and-avocado
+- sheet-pan-salmon-and-broccoli-with-sesame-and-ginger
+- crispy-beans-and-greens-with-fried-eggs
+- chicken-thighs-with-coconut-creamed-corn
+- sambal-salmon-bowls
+- sheet-pan-chicken-with-cauliflower-and-arugula
+- coconut-curry-salmon-with-green-beans
+- beet-and-lentil-salad-with-cheddar
+- smashed-cucumber-and-egg-salad
+- smashed-edamame-toast
+- broccoli-and-egg-fried-rice
+- cheesy-beans-on-toast
+- broccoli-cheddar-frittata
+- tofu-salad-sandwich
+- tinned-fish-and-cucumber-salad
+- spicy-salmon-rice-bowl
+- tomato-turmeric-soup
+
+Representative redirects and mismatches
+- miso-salmon-with-greens-and-scallions -> shrimp-scampi-with-orzo
+- kimchi-udon-with-scallions -> one-pot-chicken-meatballs-with-greens
+- broccoli-melt -> sticky-coconut-chicken-and-rice
+- tofu-and-herb-salad -> via-carotas-insalata-verde
+- creamy-gochujang-white-beans -> spicy-tomato-white-bean-stew
+- cold-tofu-with-tomatoes-and-peaches -> spicy-tuna-salad-with-crispy-rice
+
+Decision
+- Direct NYT page scraping is currently not a reliable way to backfill placeholder images for this dataset.
+- Next image-replacement work should use a curated external-image workflow or a maintained mapping file for known-good recipe/image pairs rather than blind live-page fetches.

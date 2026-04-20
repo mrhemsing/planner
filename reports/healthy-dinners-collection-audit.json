@@ -1,0 +1,696 @@
+{
+  "pageCounts": [
+    {
+      "page": "https://cooking.nytimes.com/68861692-nyt-cooking/2110373-healthy-weeknight-dinners",
+      "count": 48
+    },
+    {
+      "page": "https://cooking.nytimes.com/68861692-nyt-cooking/2110373-healthy-weeknight-dinners?page=2",
+      "count": 48
+    },
+    {
+      "page": "https://cooking.nytimes.com/68861692-nyt-cooking/2110373-healthy-weeknight-dinners?page=3",
+      "count": 23
+    }
+  ],
+  "collectionCount": 119,
+  "plannerDinnerCount": 231,
+  "matchedCount": 119,
+  "missingFromPlannerCount": 0,
+  "extraInPlannerCount": 112,
+  "missingFromPlanner": [],
+  "extraInPlanner": [
+    {
+      "id": "sheet-pan-feta-with-chickpeas-and-tomatoes",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023371-sheet-pan-feta-with-chickpeas-and-tomatoes",
+      "sourceId": "1023371",
+      "sourceSlug": "sheet-pan-feta-with-chickpeas-and-tomatoes"
+    },
+    {
+      "id": "gochujang-buttered-noodles",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024066-gochujang-buttered-noodles",
+      "sourceId": "1024066",
+      "sourceSlug": "gochujang-buttered-noodles"
+    },
+    {
+      "id": "maple-and-miso-sheet-pan-salmon-with-green-beans",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019857-maple-and-miso-sheet-pan-salmon-with-green-beans",
+      "sourceId": "1019857",
+      "sourceSlug": "maple-and-miso-sheet-pan-salmon-with-green-beans"
+    },
+    {
+      "id": "crispy-gnocchi-with-burst-tomatoes-and-mozzarella",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022024-crispy-gnocchi-with-burst-tomatoes-and-mozzarella",
+      "sourceId": "1022024",
+      "sourceSlug": "crispy-gnocchi-with-burst-tomatoes-and-mozzarella"
+    },
+    {
+      "id": "one-pot-chicken-and-rice-with-caramelized-lemon",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025436-one-pot-chicken-and-rice-with-caramelized-lemon",
+      "sourceId": "1025436",
+      "sourceSlug": "one-pot-chicken-and-rice-with-caramelized-lemon"
+    },
+    {
+      "id": "turmeric-black-pepper-chicken-with-asparagus",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020970-turmeric-black-pepper-chicken-with-asparagus",
+      "sourceId": "1020970",
+      "sourceSlug": "turmeric-black-pepper-chicken-with-asparagus"
+    },
+    {
+      "id": "cauliflower-piccata",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022614-cauliflower-piccata",
+      "sourceId": "1022614",
+      "sourceSlug": "cauliflower-piccata"
+    },
+    {
+      "id": "brothy-thai-curry-with-silken-tofu-and-herbs",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022862-brothy-thai-curry-with-silken-tofu-and-herbs",
+      "sourceId": "1022862",
+      "sourceSlug": "brothy-thai-curry-with-silken-tofu-and-herbs"
+    },
+    {
+      "id": "skillet-chicken-with-mushrooms-and-caramelized-onions",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022068-skillet-chicken-with-mushrooms-and-caramelized-onions",
+      "sourceId": "1022068",
+      "sourceSlug": "skillet-chicken-with-mushrooms-and-caramelized-onions"
+    },
+    {
+      "id": "roasted-salmon-with-miso-rice-and-ginger-scallion-vinaigrette",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021142-roasted-salmon-with-miso-rice-and-ginger-scallion-vinaigrette",
+      "sourceId": "1021142",
+      "sourceSlug": "roasted-salmon-with-miso-rice-and-ginger-scallion-vinaigrette"
+    },
+    {
+      "id": "cheesy-white-bean-tomato-bake",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019681-cheesy-white-bean-tomato-bake",
+      "sourceId": "1019681",
+      "sourceSlug": "cheesy-white-bean-tomato-bake"
+    },
+    {
+      "id": "one-pan-orzo-with-spinach-and-feta",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021485-one-pan-orzo-with-spinach-and-feta",
+      "sourceId": "1021485",
+      "sourceSlug": "one-pan-orzo-with-spinach-and-feta"
+    },
+    {
+      "id": "baked-tofu-with-peanut-sauce-and-coconut-lime-rice",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020530-baked-tofu-with-peanut-sauce-and-coconut-lime-rice",
+      "sourceId": "1020530",
+      "sourceSlug": "baked-tofu-with-peanut-sauce-and-coconut-lime-rice"
+    },
+    {
+      "id": "spiced-chickpea-stew-with-coconut-and-turmeric",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019772-spiced-chickpea-stew-with-coconut-and-turmeric",
+      "sourceId": "1019772",
+      "sourceSlug": "spiced-chickpea-stew-with-coconut-and-turmeric"
+    },
+    {
+      "id": "creamy-one-pot-pasta-with-ricotta-and-lemon",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020736-creamy-one-pot-pasta-with-ricotta-and-lemon",
+      "sourceId": "1020736",
+      "sourceSlug": "creamy-one-pot-pasta-with-ricotta-and-lemon"
+    },
+    {
+      "id": "one-pan-tofu-with-broccoli-and-sesame",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022637-one-pan-tofu-with-broccoli-and-sesame",
+      "sourceId": "1022637",
+      "sourceSlug": "one-pan-tofu-with-broccoli-and-sesame"
+    },
+    {
+      "id": "caramelized-sheet-pan-fish-tacos",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021880-caramelized-sheet-pan-fish-tacos",
+      "sourceId": "1021880",
+      "sourceSlug": "caramelized-sheet-pan-fish-tacos"
+    },
+    {
+      "id": "braised-chicken-with-tomatoes-olives-and-capers",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1014718-braised-chicken-with-tomatoes-olives-and-capers",
+      "sourceId": "1014718",
+      "sourceSlug": "braised-chicken-with-tomatoes-olives-and-capers"
+    },
+    {
+      "id": "crispy-rice-bowl-with-spring-vegetables-and-fried-eggs",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025427-crispy-rice-bowl-with-spring-vegetables-and-fried-eggs",
+      "sourceId": "1025427",
+      "sourceSlug": "crispy-rice-bowl-with-spring-vegetables-and-fried-eggs"
+    },
+    {
+      "id": "sheet-pan-sausages-with-caramelized-shallots-and-apples",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021698-sheet-pan-sausages-with-caramelized-shallots-and-apples",
+      "sourceId": "1021698",
+      "sourceSlug": "sheet-pan-sausages-with-caramelized-shallots-and-apples"
+    },
+    {
+      "id": "caramelized-zucchini-pasta",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022458-caramelized-zucchini-pasta",
+      "sourceId": "1022458",
+      "sourceSlug": "caramelized-zucchini-pasta"
+    },
+    {
+      "id": "salsa-verde-pepper-and-onion-frittata",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025205-salsa-verde-pepper-and-onion-frittata",
+      "sourceId": "1025205",
+      "sourceSlug": "salsa-verde-pepper-and-onion-frittata"
+    },
+    {
+      "id": "chicken-meatballs-with-ginger-and-cabbage",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020707-chicken-meatballs-with-ginger-and-cabbage",
+      "sourceId": "1020707",
+      "sourceSlug": "chicken-meatballs-with-ginger-and-cabbage"
+    },
+    {
+      "id": "baked-fish-and-chips",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1018023-baked-fish-and-chips",
+      "sourceId": "1018023",
+      "sourceSlug": "baked-fish-and-chips"
+    },
+    {
+      "id": "spinach-artichoke-pasta",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020080-baked-spinach-artichoke-pasta",
+      "sourceId": "1020080",
+      "sourceSlug": "baked-spinach-artichoke-pasta"
+    },
+    {
+      "id": "sheet-pan-chicken-with-jammy-tomatoes-and-pancetta",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021014-sheet-pan-chicken-with-jammy-tomatoes-and-pancetta",
+      "sourceId": "1021014",
+      "sourceSlug": "sheet-pan-chicken-with-jammy-tomatoes-and-pancetta"
+    },
+    {
+      "id": "sticky-coconut-chicken-and-rice",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023047-sticky-coconut-chicken-and-rice",
+      "sourceId": "1023047",
+      "sourceSlug": "sticky-coconut-chicken-and-rice"
+    },
+    {
+      "id": "peanut-braised-chicken",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027148-peanut-braised-chicken",
+      "sourceId": "1027148",
+      "sourceSlug": "peanut-braised-chicken"
+    },
+    {
+      "id": "one-pot-salmon-and-shiitake-rice",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025097-one-pot-salmon-and-shiitake-rice",
+      "sourceId": "1025097",
+      "sourceSlug": "one-pot-salmon-and-shiitake-rice"
+    },
+    {
+      "id": "one-pot-chicken-meatballs-with-greens",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025342-one-pot-chicken-meatballs-with-greens",
+      "sourceId": "1025342",
+      "sourceSlug": "one-pot-chicken-meatballs-with-greens"
+    },
+    {
+      "id": "pad-see-ew",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023043-pad-see-ew",
+      "sourceId": "1023043",
+      "sourceSlug": "pad-see-ew"
+    },
+    {
+      "id": "spicy-lime-salmon-with-wakame-kale-and-avocado",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027181-spicy-lime-salmon-with-wakame-kale-and-avocado",
+      "sourceId": "1027181",
+      "sourceSlug": "spicy-lime-salmon-with-wakame-kale-and-avocado"
+    },
+    {
+      "id": "baked-farro-with-lentils-tomato-and-feta",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020809-baked-farro-with-lentils-tomato-and-feta",
+      "sourceId": "1020809",
+      "sourceSlug": "baked-farro-with-lentils-tomato-and-feta"
+    },
+    {
+      "id": "roasted-sausages-with-grapes-and-onions",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020536-roasted-sausages-with-grapes-and-onions",
+      "sourceId": "1020536",
+      "sourceSlug": "roasted-sausages-with-grapes-and-onions"
+    },
+    {
+      "id": "sheet-pan-salmon-and-broccoli-with-sesame-and-ginger",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020765-sheet-pan-salmon-and-broccoli-with-sesame-and-ginger",
+      "sourceId": "1020765",
+      "sourceSlug": "sheet-pan-salmon-and-broccoli-with-sesame-and-ginger"
+    },
+    {
+      "id": "reverse-seared-steak",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023176-reverse-seared-steak",
+      "sourceId": "1023176",
+      "sourceSlug": "reverse-seared-steak"
+    },
+    {
+      "id": "cheesy-baked-pasta-with-sausage-and-ricotta",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020811-cheesy-baked-pasta-with-sausage-and-ricotta",
+      "sourceId": "1020811",
+      "sourceSlug": "cheesy-baked-pasta-with-sausage-and-ricotta"
+    },
+    {
+      "id": "sheet-pan-chicken-with-artichokes-and-herbs",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022113-sheet-pan-chicken-with-artichokes-and-herbs",
+      "sourceId": "1022113",
+      "sourceSlug": "sheet-pan-chicken-with-artichokes-and-herbs"
+    },
+    {
+      "id": "crispy-beans-and-greens-with-fried-eggs",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027029-crispy-beans-and-greens-with-fried-eggs",
+      "sourceId": "1027029",
+      "sourceSlug": "crispy-beans-and-greens-with-fried-eggs"
+    },
+    {
+      "id": "gochujang-salmon-with-sesame-bok-choy",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023678-gochujang-salmon-with-sesame-bok-choy",
+      "sourceId": "1023678",
+      "sourceSlug": "gochujang-salmon-with-sesame-bok-choy"
+    },
+    {
+      "id": "skillet-meatballs-with-peaches-basil-and-lime",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021402-skillet-meatballs-with-peaches-basil-and-lime",
+      "sourceId": "1021402",
+      "sourceSlug": "skillet-meatballs-with-peaches-basil-and-lime"
+    },
+    {
+      "id": "chicken-thighs-with-coconut-creamed-corn",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021157-one-pan-chicken-thighs-with-coconut-creamed-corn",
+      "sourceId": "1021157",
+      "sourceSlug": "one-pan-chicken-thighs-with-coconut-creamed-corn"
+    },
+    {
+      "id": "crispy-fish-with-brown-butter-sauce-and-kale",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023344-crispy-fish-with-brown-butter-sauce-and-kale",
+      "sourceId": "1023344",
+      "sourceSlug": "crispy-fish-with-brown-butter-sauce-and-kale"
+    },
+    {
+      "id": "sambal-salmon-bowls",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026196-sambal-salmon-bowls",
+      "sourceId": "1026196",
+      "sourceSlug": "sambal-salmon-bowls"
+    },
+    {
+      "id": "sheet-pan-chicken-with-cauliflower-and-arugula",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021671-sheet-pan-chicken-with-cauliflower-and-arugula",
+      "sourceId": "1021671",
+      "sourceSlug": "sheet-pan-chicken-with-cauliflower-and-arugula"
+    },
+    {
+      "id": "coconut-curry-salmon-with-green-beans",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025174-coconut-curry-salmon-with-green-beans",
+      "sourceId": "1025174",
+      "sourceSlug": "coconut-curry-salmon-with-green-beans"
+    },
+    {
+      "id": "cheesy-skillet-broccoli-orzo",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026999-cheesy-skillet-broccoli-orzo",
+      "sourceId": "1026999",
+      "sourceSlug": "cheesy-skillet-broccoli-orzo"
+    },
+    {
+      "id": "roasted-fish-with-ginger-scallions-and-soy",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020020-roasted-fish-with-ginger-scallions-and-soy",
+      "sourceId": "1020020",
+      "sourceSlug": "roasted-fish-with-ginger-scallions-and-soy"
+    },
+    {
+      "id": "one-pot-ginger-salmon-and-rice",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024085-one-pot-ginger-salmon-and-rice",
+      "sourceId": "1024085",
+      "sourceSlug": "one-pot-ginger-salmon-and-rice"
+    },
+    {
+      "id": "ginger-scallion-steamed-fish",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024123-ginger-scallion-steamed-fish",
+      "sourceId": "1024123",
+      "sourceSlug": "ginger-scallion-steamed-fish"
+    },
+    {
+      "id": "gochugaru-salmon-with-crispy-rice",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022132-gochugaru-salmon-with-crispy-rice",
+      "sourceId": "1022132",
+      "sourceSlug": "gochugaru-salmon-with-crispy-rice"
+    },
+    {
+      "id": "caramelized-shallot-pasta",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020830-caramelized-shallot-pasta",
+      "sourceId": "1020830",
+      "sourceSlug": "caramelized-shallot-pasta"
+    },
+    {
+      "id": "pasta-e-ceci-italian-pasta-and-chickpea-stew",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020860-pasta-e-ceci-italian-pasta-and-chickpea-stew",
+      "sourceId": "1020860",
+      "sourceSlug": "pasta-e-ceci-italian-pasta-and-chickpea-stew"
+    },
+    {
+      "id": "one-pan-feta-pasta-with-cherry-tomatoes",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022087-one-pan-feta-pasta-with-cherry-tomatoes",
+      "sourceId": "1022087",
+      "sourceSlug": "one-pan-feta-pasta-with-cherry-tomatoes"
+    },
+    {
+      "id": "cantonese-style-steamed-fish",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024660-cantonese-style-steamed-fish",
+      "sourceId": "1024660",
+      "sourceSlug": "cantonese-style-steamed-fish"
+    },
+    {
+      "id": "roasted-gochujang-salmon",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024116-roasted-gochujang-salmon",
+      "sourceId": "1024116",
+      "sourceSlug": "roasted-gochujang-salmon"
+    },
+    {
+      "id": "one-pan-crispy-chicken-and-chickpeas",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023862-one-pan-crispy-chicken-and-chickpeas",
+      "sourceId": "1023862",
+      "sourceSlug": "one-pan-crispy-chicken-and-chickpeas"
+    },
+    {
+      "id": "miso-roasted-salmon",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025204-miso-roasted-salmon",
+      "sourceId": "1025204",
+      "sourceSlug": "miso-roasted-salmon"
+    },
+    {
+      "id": "lemony-chicken-thighs-with-chickpeas-and-dates",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025885-lemony-chicken-thighs-with-chickpeas-and-dates",
+      "sourceId": "1025885",
+      "sourceSlug": "lemony-chicken-thighs-with-chickpeas-and-dates"
+    },
+    {
+      "id": "chicken-and-chickpea-tray-bake",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026583-chicken-and-chickpea-tray-bake",
+      "sourceId": "1026583",
+      "sourceSlug": "chicken-and-chickpea-tray-bake"
+    },
+    {
+      "id": "sheet-pan-chicken-with-chickpeas-cumin-and-turmeric",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1018910-sheet-pan-chicken-with-chickpeas-cumin-and-turmeric",
+      "sourceId": "1018910",
+      "sourceSlug": "sheet-pan-chicken-with-chickpeas-cumin-and-turmeric"
+    },
+    {
+      "id": "sheet-pan-turmeric-chicken-and-crispy-rice",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025011-sheet-pan-turmeric-chicken-and-crispy-rice",
+      "sourceId": "1025011",
+      "sourceSlug": "sheet-pan-turmeric-chicken-and-crispy-rice"
+    },
+    {
+      "id": "sheet-pan-lemon-turmeric-chicken",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/762284605-sheet-pan-lemon-turmeric-chicken",
+      "sourceId": "762284605",
+      "sourceSlug": "sheet-pan-lemon-turmeric-chicken"
+    },
+    {
+      "id": "murgh-chole",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/765569780-murgh-chole",
+      "sourceId": "765569780",
+      "sourceSlug": "murgh-chole"
+    },
+    {
+      "id": "chicken-and-chickpea-tagine",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/7794-chicken-and-chickpea-tagine",
+      "sourceId": "7794",
+      "sourceSlug": "chicken-and-chickpea-tagine"
+    },
+    {
+      "id": "braised-chicken-with-rosemary-chickpeas-and-salted-lemon",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020549-braised-chicken-with-rosemary-chickpeas-and-salted-lemon",
+      "sourceId": "1020549",
+      "sourceSlug": "braised-chicken-with-rosemary-chickpeas-and-salted-lemon"
+    },
+    {
+      "id": "chicken-tagine-with-olives-and-preserved-lemons",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/6555-chicken-tagine-with-olives-and-preserved-lemons",
+      "sourceId": "6555",
+      "sourceSlug": "chicken-tagine-with-olives-and-preserved-lemons"
+    },
+    {
+      "id": "garlicky-chicken-with-lemon-anchovy-sauce",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1015290-garlicky-chicken-with-lemon-anchovy-sauce",
+      "sourceId": "1015290",
+      "sourceSlug": "garlicky-chicken-with-lemon-anchovy-sauce"
+    },
+    {
+      "id": "skillet-braised-chicken-with-greens-and-olives",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025981-skillet-braised-chicken-with-greens-and-olives",
+      "sourceId": "1025981",
+      "sourceSlug": "skillet-braised-chicken-with-greens-and-olives"
+    },
+    {
+      "id": "lemony-chicken-with-potatoes-and-oregano",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023229-lemony-chicken-with-potatoes-and-oregano",
+      "sourceId": "1023229",
+      "sourceSlug": "lemony-chicken-with-potatoes-and-oregano"
+    },
+    {
+      "id": "roast-chicken-with-apricots-and-olives",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021962-roast-chicken-with-apricots-and-olives",
+      "sourceId": "1021962",
+      "sourceSlug": "roast-chicken-with-apricots-and-olives"
+    },
+    {
+      "id": "lemon-garlic-roast-chicken-with-squash",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027348-lemon-garlic-roast-chicken-with-squash",
+      "sourceId": "1027348",
+      "sourceSlug": "lemon-garlic-roast-chicken-with-squash"
+    },
+    {
+      "id": "sheet-pan-chicken-and-potatoes-with-feta-lemon-and-dill",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020726-sheet-pan-chicken-and-potatoes-with-feta-lemon-and-dill",
+      "sourceId": "1020726",
+      "sourceSlug": "sheet-pan-chicken-and-potatoes-with-feta-lemon-and-dill"
+    },
+    {
+      "id": "sheet-pan-roast-chicken-with-tangy-greens",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024205-sheet-pan-roast-chicken-with-tangy-greens",
+      "sourceId": "1024205",
+      "sourceSlug": "sheet-pan-roast-chicken-with-tangy-greens"
+    },
+    {
+      "id": "braised-chicken-thighs-with-greens-and-olives",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019405-braised-chicken-thighs-with-greens-and-olives",
+      "sourceId": "1019405",
+      "sourceSlug": "braised-chicken-thighs-with-greens-and-olives"
+    },
+    {
+      "id": "salt-and-pepper-roast-chicken",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1017715-salt-and-pepper-roast-chicken",
+      "sourceId": "1017715",
+      "sourceSlug": "salt-and-pepper-roast-chicken"
+    },
+    {
+      "id": "herby-skillet-chicken-with-greens",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025170-herby-skillet-chicken-with-greens",
+      "sourceId": "1025170",
+      "sourceSlug": "herby-skillet-chicken-with-greens"
+    },
+    {
+      "id": "sheet-pan-roasted-chicken-with-greens",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023814-sheet-pan-roasted-chicken-with-greens",
+      "sourceId": "1023814",
+      "sourceSlug": "sheet-pan-roasted-chicken-with-greens"
+    },
+    {
+      "id": "simple-roast-chicken-with-greens-and-bonus-stock",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021455-simple-roast-chicken-with-greens-and-bonus-stock",
+      "sourceId": "1021455",
+      "sourceSlug": "simple-roast-chicken-with-greens-and-bonus-stock"
+    },
+    {
+      "id": "sheet-pan-chicken-with-potatoes-arugula-and-garlic-yogurt",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1017359-sheet-pan-chicken-with-potatoes-arugula-and-garlic-yogurt",
+      "sourceId": "1017359",
+      "sourceSlug": "sheet-pan-chicken-with-potatoes-arugula-and-garlic-yogurt"
+    },
+    {
+      "id": "green-goddess-roasted-chicken",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1015232-green-goddess-roasted-chicken",
+      "sourceId": "1015232",
+      "sourceSlug": "green-goddess-roasted-chicken"
+    },
+    {
+      "id": "sheet-pan-gochujang-chicken-and-roasted-vegetables",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020829-sheet-pan-gochujang-chicken-and-roasted-vegetables",
+      "sourceId": "1020829",
+      "sourceSlug": "sheet-pan-gochujang-chicken-and-roasted-vegetables"
+    },
+    {
+      "id": "easy-sheet-pan-chicken",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1016067-easy-sheet-pan-chicken",
+      "sourceId": "1016067",
+      "sourceSlug": "easy-sheet-pan-chicken"
+    },
+    {
+      "id": "sheet-pan-malai-chicken-and-potatoes",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026512-sheet-pan-malai-chicken-and-potatoes",
+      "sourceId": "1026512",
+      "sourceSlug": "sheet-pan-malai-chicken-and-potatoes"
+    },
+    {
+      "id": "sheet-pan-chicken-with-black-beans-and-squash",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/771531010-sheet-pan-chicken-with-black-beans-and-squash",
+      "sourceId": "771531010",
+      "sourceSlug": "sheet-pan-chicken-with-black-beans-and-squash"
+    },
+    {
+      "id": "paprika-chicken-and-potatoes",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025628-paprika-chicken-and-potatoes",
+      "sourceId": "1025628",
+      "sourceSlug": "paprika-chicken-and-potatoes"
+    },
+    {
+      "id": "one-pan-chicken-with-golden-potatoes",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/761249285-one-pan-chicken-with-golden-potatoes",
+      "sourceId": "761249285",
+      "sourceSlug": "one-pan-chicken-with-golden-potatoes"
+    },
+    {
+      "id": "crispy-chicken-with-lime-butter",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026790-crispy-chicken-with-lime-butter",
+      "sourceId": "1026790",
+      "sourceSlug": "crispy-chicken-with-lime-butter"
+    },
+    {
+      "id": "ina-gartens-perfect-roast-chicken",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026751-ina-gartens-perfect-roast-chicken",
+      "sourceId": "1026751",
+      "sourceSlug": "ina-gartens-perfect-roast-chicken"
+    },
+    {
+      "id": "one-pot-whole-roasted-chicken-and-rice",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024109-one-pot-whole-roasted-chicken-and-rice",
+      "sourceId": "1024109",
+      "sourceSlug": "one-pot-whole-roasted-chicken-and-rice"
+    },
+    {
+      "id": "sheet-pan-chicken-tikka-thighs",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025554-sheet-pan-chicken-tikka-thighs",
+      "sourceId": "1025554",
+      "sourceSlug": "sheet-pan-chicken-tikka-thighs"
+    },
+    {
+      "id": "spicy-sheet-pan-chicken-with-sweet-potatoes-and-kale",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021735-spicy-sheet-pan-chicken-with-sweet-potatoes-and-kale",
+      "sourceId": "1021735",
+      "sourceSlug": "spicy-sheet-pan-chicken-with-sweet-potatoes-and-kale"
+    },
+    {
+      "id": "sheet-pan-chicken-with-potatoes-scallions-and-capers",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020456-sheet-pan-chicken-with-potatoes-scallions-and-capers",
+      "sourceId": "1020456",
+      "sourceSlug": "sheet-pan-chicken-with-potatoes-scallions-and-capers"
+    },
+    {
+      "id": "sheet-pan-chicken-with-squash-and-dates",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021781-sheet-pan-chicken-with-squash-and-dates",
+      "sourceId": "1021781",
+      "sourceSlug": "sheet-pan-chicken-with-squash-and-dates"
+    },
+    {
+      "id": "skillet-chicken-with-white-beans-and-caramelized-lemon",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019382-skillet-chicken-with-white-beans-and-caramelized-lemon",
+      "sourceId": "1019382",
+      "sourceSlug": "skillet-chicken-with-white-beans-and-caramelized-lemon"
+    },
+    {
+      "id": "rotisserie-chicken-and-greens-pasta",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023870-rotisserie-chicken-and-greens-pasta",
+      "sourceId": "1023870",
+      "sourceSlug": "rotisserie-chicken-and-greens-pasta"
+    },
+    {
+      "id": "roasted-free-range-chicken-with-swiss-chard-and-marrow-gratin",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/9105-roasted-free-range-chicken-with-swiss-chard-and-marrow-gratin",
+      "sourceId": "9105",
+      "sourceSlug": "roasted-free-range-chicken-with-swiss-chard-and-marrow-gratin"
+    },
+    {
+      "id": "grilled-roast-chicken-with-spinach-ricotta-crostini",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1018118-grilled-roast-chicken-with-spinach-ricotta-crostini",
+      "sourceId": "1018118",
+      "sourceSlug": "grilled-roast-chicken-with-spinach-ricotta-crostini"
+    },
+    {
+      "id": "roasted-chicken-provencal",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1017327-roasted-chicken-provencal",
+      "sourceId": "1017327",
+      "sourceSlug": "roasted-chicken-provencal"
+    },
+    {
+      "id": "sesame-salmon-bowls",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1022255-sesame-salmon-bowls",
+      "sourceId": "1022255",
+      "sourceSlug": "sesame-salmon-bowls"
+    },
+    {
+      "id": "chicken-pad-see-ew",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027548-chicken-pad-see-ew",
+      "sourceId": "1027548",
+      "sourceSlug": "chicken-pad-see-ew"
+    },
+    {
+      "id": "potato-and-white-bean-puttanesca-soup",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021712-potato-and-white-bean-puttanesca-soup",
+      "sourceId": "1021712",
+      "sourceSlug": "potato-and-white-bean-puttanesca-soup"
+    },
+    {
+      "id": "skillet-chicken-thighs-with-broccoli-and-orzo",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021521-skillet-chicken-thighs-with-broccoli-and-orzo",
+      "sourceId": "1021521",
+      "sourceSlug": "skillet-chicken-thighs-with-broccoli-and-orzo"
+    },
+    {
+      "id": "lemony-white-bean-soup-with-turkey-and-greens",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021776-lemony-white-bean-soup-with-turkey-and-greens",
+      "sourceId": "1021776",
+      "sourceSlug": "lemony-white-bean-soup-with-turkey-and-greens"
+    },
+    {
+      "id": "salty-sweet-bbq-salmon-and-broccoli",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021782-salty-sweet-bbq-salmon-and-broccoli",
+      "sourceId": "1021782",
+      "sourceSlug": "salty-sweet-bbq-salmon-and-broccoli"
+    },
+    {
+      "id": "salmon-gyro-bowls",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/770864189-salmon-gyro-bowls",
+      "sourceId": "770864189",
+      "sourceSlug": "salmon-gyro-bowls"
+    },
+    {
+      "id": "sesame-salmon-noodle-bowls-with-ponzu",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/759780099-sesame-salmon-noodle-bowls-with-ponzu",
+      "sourceId": "759780099",
+      "sourceSlug": "sesame-salmon-noodle-bowls-with-ponzu"
+    },
+    {
+      "id": "sheet-pan-trout-with-garlicky-broccolini",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019381-sheet-pan-trout-with-garlicky-broccolini",
+      "sourceId": "1019381",
+      "sourceSlug": "sheet-pan-trout-with-garlicky-broccolini"
+    },
+    {
+      "id": "pan-seared-steak-with-red-wine-sauce",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1018530-pan-seared-steak-with-red-wine-sauce",
+      "sourceId": "1018530",
+      "sourceSlug": "pan-seared-steak-with-red-wine-sauce"
+    },
+    {
+      "id": "skillet-orzo-with-chorizo-and-dates",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026994-skillet-orzo-with-chorizo-and-dates",
+      "sourceId": "1026994",
+      "sourceSlug": "skillet-orzo-with-chorizo-and-dates"
+    },
+    {
+      "id": "salmon-with-bbq-sauce-and-hot-peppers",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019990-salmon-with-bbq-sauce-and-hot-peppers",
+      "sourceId": "1019990",
+      "sourceSlug": "salmon-with-bbq-sauce-and-hot-peppers"
+    },
+    {
+      "id": "seared-bone-in-rib-eye-steaks",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024915-seared-bone-in-rib-eye-steaks",
+      "sourceId": "1024915",
+      "sourceSlug": "seared-bone-in-rib-eye-steaks"
+    }
+  ]
+}

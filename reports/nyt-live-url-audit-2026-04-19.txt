@@ -1,0 +1,93 @@
+{
+  "checked": 209,
+  "offset": 0,
+  "limit": 300,
+  "concurrency": 8,
+  "redirected": 37,
+  "slugMismatches": 42,
+  "titleMismatches": 0,
+  "errors": 0
+}
+
+Redirected URLs:
+- garlicky-salmon-and-broccoli: https://cooking.nytimes.com/recipes/1021874-garlicky-salmon-and-broccoli -> https://cooking.nytimes.com/recipes/1021874-birria-tacos
+- saucy-braised-chicken-with-lemon-and-olives: https://cooking.nytimes.com/recipes/1019404-saucy-braised-chicken-with-lemon-and-olives -> https://cooking.nytimes.com/recipes/1019404-chicken-braised-in-two-vinegars
+- creamy-one-pot-pasta-with-ricotta-and-lemon: https://cooking.nytimes.com/recipes/1020736-creamy-one-pot-pasta-with-ricotta-and-lemon -> https://cooking.nytimes.com/recipes/1020736-ozoni-mochi-soup
+- one-pan-tofu-with-broccoli-and-sesame: https://cooking.nytimes.com/recipes/1022637-one-pan-tofu-with-broccoli-and-sesame -> https://cooking.nytimes.com/recipes/1022637-crispy-sheet-pan-noodles-with-glazed-tofu
+- crispy-rice-bowl-with-spring-vegetables-and-fried-eggs: https://cooking.nytimes.com/recipes/1025427-crispy-rice-bowl-with-spring-vegetables-and-fried-eggs -> https://cooking.nytimes.com/recipes/1025427-hamburger-soup
+- salsa-verde-pepper-and-onion-frittata: https://cooking.nytimes.com/recipes/1025205-salsa-verde-pepper-and-onion-frittata -> https://cooking.nytimes.com/recipes/1025205-lemon-bars-with-pecan-crust
+- chicken-meatballs-with-ginger-and-cabbage: https://cooking.nytimes.com/recipes/1020707-chicken-meatballs-with-ginger-and-cabbage -> https://cooking.nytimes.com/recipes/1020707-flaky-folded-biscuits
+- peanut-braised-chicken: https://cooking.nytimes.com/recipes/1027148-peanut-braised-chicken -> https://cooking.nytimes.com/recipes/1027148-tomato-salad-with-dates
+- baked-spinach-artichoke-chicken: https://cooking.nytimes.com/recipes/1025650-baked-spinach-artichoke-chicken -> https://cooking.nytimes.com/recipes/1025650-mouhalabieh-milk-pudding
+- gochujang-salmon-with-sesame-bok-choy: https://cooking.nytimes.com/recipes/1023678-gochujang-salmon-with-sesame-bok-choy -> https://cooking.nytimes.com/recipes/1023678-chocolate-hazelnut-cookies
+- crispy-fish-with-brown-butter-sauce-and-kale: https://cooking.nytimes.com/recipes/1023344-crispy-fish-with-brown-butter-sauce-and-kale -> https://cooking.nytimes.com/recipes/1023344-broiled-turmeric-salmon-with-corn-and-green-beans
+- cheesy-skillet-broccoli-orzo: https://cooking.nytimes.com/recipes/1026999-cheesy-skillet-broccoli-orzo -> https://cooking.nytimes.com/recipes/1026999-bacon-ranch-potato-salad
+- cucumber-avocado-sandwich: https://cooking.nytimes.com/recipes/1021118-cucumber-avocado-sandwich -> https://cooking.nytimes.com/recipes/1021118-savory-babka-with-ricotta-and-herbs
+- broccoli-melt: https://cooking.nytimes.com/recipes/1023047-broccoli-melt -> https://cooking.nytimes.com/recipes/1023047-sticky-coconut-chicken-and-rice
+- egg-roll-bowl: https://cooking.nytimes.com/recipes/1023861-egg-roll-bowl -> https://cooking.nytimes.com/recipes/1023861-butternut-squash-and-goat-cheese-galette
+- smashed-chickpea-salad: https://cooking.nytimes.com/recipes/1023208-smashed-chickpea-salad -> https://cooking.nytimes.com/recipes/1023208-strawberry-galette
+- green-goddess-white-bean-salad: https://cooking.nytimes.com/recipes/1024075-green-goddess-white-bean-salad -> https://cooking.nytimes.com/recipes/1024075-dumpling-tomato-salad-with-chile-crisp-vinaigrette
+- anything-goes-donabe: https://cooking.nytimes.com/recipes/1024992-anything-goes-donabe -> https://cooking.nytimes.com/recipes/1024992-pistachio-chocolate-bark
+- crispy-rice-salad-with-half-boiled-eggs: https://cooking.nytimes.com/recipes/1025493-crispy-rice-salad-with-half-boiled-eggs -> https://cooking.nytimes.com/recipes/1025493-pakora
+- black-bean-and-sweet-potato-quesadillas: https://cooking.nytimes.com/recipes/1021708-black-bean-and-sweet-potato-quesadillas -> https://cooking.nytimes.com/recipes/1021708-mini-gingerbread-houses
+- turkey-zucchini-and-carrot-burgers: https://cooking.nytimes.com/recipes/1020443-turkey-zucchini-and-carrot-burgers -> https://cooking.nytimes.com/recipes/1020443-pistachio-and-cherry-bombe
+- pan-bagnat-salad: https://cooking.nytimes.com/recipes/1025538-pan-bagnat-salad -> https://cooking.nytimes.com/recipes/1025538-idli-fermented-rice-cake
+- halloumi-salad-with-peaches-and-tomatoes: https://cooking.nytimes.com/recipes/1023387-halloumi-salad-with-peaches-and-tomatoes -> https://cooking.nytimes.com/recipes/1023387-creamy-collard-greens-dip-with-shito
+- sesame-noodles-with-crisp-vegetables: https://cooking.nytimes.com/recipes/1025220-sesame-noodles-with-crisp-vegetables -> https://cooking.nytimes.com/recipes/1025220-everyday-dal
+- avocado-kimchi-rice-bowl: https://cooking.nytimes.com/recipes/1024419-avocado-kimchi-rice-bowl -> https://cooking.nytimes.com/recipes/1024419-espresso-martini
+- mushroom-and-kale-toaster-quesadillas: https://cooking.nytimes.com/recipes/1024841-mushroom-and-kale-toaster-quesadillas -> https://cooking.nytimes.com/recipes/1024841-tonkatsu
+- green-goddess-wrap: https://cooking.nytimes.com/recipes/1027067-green-goddess-wrap -> https://cooking.nytimes.com/recipes/1027067-coconut-lime-wedge-salad
+- creamy-gochujang-white-beans: https://cooking.nytimes.com/recipes/1025129-creamy-gochujang-white-beans -> https://cooking.nytimes.com/recipes/1025129-spicy-tomato-white-bean-stew
+- coconut-braised-chickpeas-with-sweet-potatoes-and-greens: https://cooking.nytimes.com/recipes/1025034-coconut-braised-chickpeas-with-sweet-potatoes-and-greens -> https://cooking.nytimes.com/recipes/1025034-parmesan-braised-beans-with-olives
+- crunchy-rice-salad-with-tomatoes-and-cucumbers: https://cooking.nytimes.com/recipes/1025494-crunchy-rice-salad-with-tomatoes-and-cucumbers -> https://cooking.nytimes.com/recipes/1025494-salt-and-pepper-shrimp
+- pickle-bean-salad: https://cooking.nytimes.com/recipes/1027100-pickle-bean-salad -> https://cooking.nytimes.com/recipes/1027100-diner-burgers
+- roasted-cauliflower-and-paneer-wraps: https://cooking.nytimes.com/recipes/1025061-roasted-cauliflower-and-paneer-wraps -> https://cooking.nytimes.com/recipes/1025061-mussels-in-spicy-green-broth
+- crispy-mushroom-wraps: https://cooking.nytimes.com/recipes/1026148-crispy-mushroom-wraps -> https://cooking.nytimes.com/recipes/1026148-creamy-tortellini-soup
+- eggplant-salad-toast: https://cooking.nytimes.com/recipes/1027236-eggplant-salad-toast -> https://cooking.nytimes.com/recipes/1027236-vegetarian-tomato-mapo-tofu
+- cheesy-corn-and-white-bean-bake: https://cooking.nytimes.com/recipes/1027228-cheesy-corn-and-white-bean-bake -> https://cooking.nytimes.com/recipes/1027228-lemon-pepper-zucchini-pasta-with-dill
+- smashed-broccoli-melt: https://cooking.nytimes.com/recipes/1027208-smashed-broccoli-melt -> https://cooking.nytimes.com/recipes/1027208-honey-lemon-chicken-meatballs
+- roasted-sweet-potato-and-farro-salad: https://cooking.nytimes.com/recipes/1025208-roasted-sweet-potato-and-farro-salad -> https://cooking.nytimes.com/recipes/1025208-chew-bread
+
+Slug mismatches:
+- garlicky-salmon-and-broccoli: final slug 1021874-birria-tacos
+- saucy-braised-chicken-with-lemon-and-olives: final slug 1019404-chicken-braised-in-two-vinegars
+- creamy-one-pot-pasta-with-ricotta-and-lemon: final slug 1020736-ozoni-mochi-soup
+- one-pan-tofu-with-broccoli-and-sesame: final slug 1022637-crispy-sheet-pan-noodles-with-glazed-tofu
+- crispy-rice-bowl-with-spring-vegetables-and-fried-eggs: final slug 1025427-hamburger-soup
+- salsa-verde-pepper-and-onion-frittata: final slug 1025205-lemon-bars-with-pecan-crust
+- chicken-meatballs-with-ginger-and-cabbage: final slug 1020707-flaky-folded-biscuits
+- spinach-artichoke-pasta: final slug 1020080-baked-spinach-artichoke-pasta
+- peanut-braised-chicken: final slug 1027148-tomato-salad-with-dates
+- baked-spinach-artichoke-chicken: final slug 1025650-mouhalabieh-milk-pudding
+- gochujang-salmon-with-sesame-bok-choy: final slug 1023678-chocolate-hazelnut-cookies
+- chicken-thighs-with-coconut-creamed-corn: final slug 1021157-one-pan-chicken-thighs-with-coconut-creamed-corn
+- crispy-fish-with-brown-butter-sauce-and-kale: final slug 1023344-broiled-turmeric-salmon-with-corn-and-green-beans
+- cheesy-skillet-broccoli-orzo: final slug 1026999-bacon-ranch-potato-salad
+- tofu-and-herb-salad: final slug 1020751-tofu-and-herb-salad-with-sesame
+- cucumber-avocado-sandwich: final slug 1021118-savory-babka-with-ricotta-and-herbs
+- broccoli-melt: final slug 1023047-sticky-coconut-chicken-and-rice
+- egg-roll-bowl: final slug 1023861-butternut-squash-and-goat-cheese-galette
+- smashed-chickpea-salad: final slug 1023208-strawberry-galette
+- green-goddess-white-bean-salad: final slug 1024075-dumpling-tomato-salad-with-chile-crisp-vinaigrette
+- anything-goes-donabe: final slug 1024992-pistachio-chocolate-bark
+- crispy-rice-salad-with-half-boiled-eggs: final slug 1025493-pakora
+- black-bean-and-sweet-potato-quesadillas: final slug 1021708-mini-gingerbread-houses
+- turkey-zucchini-and-carrot-burgers: final slug 1020443-pistachio-and-cherry-bombe
+- pan-bagnat-salad: final slug 1025538-idli-fermented-rice-cake
+- halloumi-salad-with-peaches-and-tomatoes: final slug 1023387-creamy-collard-greens-dip-with-shito
+- sesame-noodles-with-crisp-vegetables: final slug 1025220-everyday-dal
+- tomato-white-bean-soup-with-lots-of-garlic: final slug 1020733-tomato-and-white-bean-soup-with-lots-of-garlic
+- avocado-kimchi-rice-bowl: final slug 1024419-espresso-martini
+- mushroom-and-kale-toaster-quesadillas: final slug 1024841-tonkatsu
+- green-goddess-wrap: final slug 1027067-coconut-lime-wedge-salad
+- creamy-gochujang-white-beans: final slug 1025129-spicy-tomato-white-bean-stew
+- coconut-braised-chickpeas-with-sweet-potatoes-and-greens: final slug 1025034-parmesan-braised-beans-with-olives
+- crunchy-rice-salad-with-tomatoes-and-cucumbers: final slug 1025494-salt-and-pepper-shrimp
+- pickle-bean-salad: final slug 1027100-diner-burgers
+- roasted-cauliflower-and-paneer-wraps: final slug 1025061-mussels-in-spicy-green-broth
+- crispy-mushroom-wraps: final slug 1026148-creamy-tortellini-soup
+- eggplant-salad-toast: final slug 1027236-vegetarian-tomato-mapo-tofu
+- cheesy-corn-and-white-bean-bake: final slug 1027228-lemon-pepper-zucchini-pasta-with-dill
+- smashed-broccoli-melt: final slug 1027208-honey-lemon-chicken-meatballs
+- cold-tofu-with-tomatoes-and-peaches: final slug 1022319-cold-tofu-salad-with-tomatoes-and-peaches
+- roasted-sweet-potato-and-farro-salad: final slug 1025208-chew-bread
