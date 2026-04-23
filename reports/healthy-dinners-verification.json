@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "targetCount": 119,
+    "matchedCount": 119,
+    "fullDataCount": 119,
+    "missing": [],
+    "incomplete": [],
+    "fallbackMatches": [
+      {
+        "position": 60,
+        "targetSlug": "al-Salmon-and-Cherry-Tomato-Curry",
+        "matchedRecipeId": "salmon-and-cherry-tomato-curry",
+        "matchMode": "sourceId"
+      }
+    ]
+  }
+}
