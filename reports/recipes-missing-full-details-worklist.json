@@ -1,0 +1,483 @@
+{
+  "totalRecipes": 295,
+  "missingCount": 53,
+  "missing": [
+    {
+      "id": "buttered-cabbage-and-eggs",
+      "title": "Buttered Cabbage and Eggs",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/775157090-buttered-cabbage-and-eggs",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "charred-broccoli-and-white-bean-stew",
+      "title": "Charred Broccoli and White Bean Stew",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/773075066-charred-broccoli-and-white-bean-stew",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "chicken-and-herb-salad-with-date-lime-dressing",
+      "title": "Chicken and Herb Salad With Date-Lime Dressing",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027635-chicken-and-herb-salad-with-date-lime-dressing",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "chickpea-salad-with-fresh-herbs-and-scallions",
+      "title": "Chickpea Salad With Fresh Herbs and Scallions",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020335-chickpea-salad-with-fresh-herbs-and-scallions",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "chickpea-spinach-salad-with-curry-yogurt-dressing",
+      "title": "Chickpea Spinach Salad With Curry Yogurt Dressing",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027097-chickpea-spinach-salad-with-curry-yogurt-dressing",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "chickpea-chicken-salad-with-green-harissa-dressing",
+      "title": "Chickpea-Chicken Salad With Green Harissa Dressing",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024989-chickpea-chicken-salad-with-green-harissa-dressing",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "chilled-sesame-soba-and-tofu",
+      "title": "Chilled Sesame Soba and Tofu",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/771435439-chilled-sesame-soba-and-tofu",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "citrus-rice-salad-with-parmesan",
+      "title": "Citrus Rice Salad With Parmesan",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1017656-citrus-rice-salad-with-parmesan",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "classic-tuna-salad-sandwich",
+      "title": "Classic Tuna Salad Sandwich",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1017337-classic-tuna-salad-sandwich",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "cold-sesame-noodles-with-crunchy-vegetables",
+      "title": "Cold Sesame Noodles With Crunchy Vegetables",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1015003-cold-sesame-noodles-with-crunchy-vegetables",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "crisp-gnocchi-with-brussels-sprouts-and-brown-butter",
+      "title": "Crisp Gnocchi With Brussels Sprouts and Brown Butter",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020453-crisp-gnocchi-with-brussels-sprouts-and-brown-butter",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "crispy-chickpea-stew-with-greens-and-lemon",
+      "title": "Crispy Chickpea Stew With Greens and Lemon",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023467-crispy-chickpea-stew-with-greens-and-lemon",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "crispy-coconut-asparagus-and-green-bean-salad",
+      "title": "Crispy Coconut, Asparagus and Green Bean Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1024083-crispy-coconut-asparagus-and-green-bean-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "crunchy-veggie-wraps-with-kabocha-squash",
+      "title": "Crunchy Veggie Wraps With Kabocha Squash",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025979-crunchy-veggie-wraps-with-kabocha-squash",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "curried-chickpea-salad",
+      "title": "Curried Chickpea Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1015479-curried-chickpea-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "curried-egg-salad",
+      "title": "Curried Egg Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1014530-curried-egg-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "curried-red-bean-soup-with-kale",
+      "title": "Curried Red Bean Soup With Kale",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026459-curried-red-bean-soup-with-kale",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "curry-shrimp-and-sweet-potato",
+      "title": "Curry Shrimp and Sweet Potato",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026450-curry-shrimp-and-sweet-potato",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "dan-dan-noodle-salad",
+      "title": "Dan Dan Noodle Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027352-dan-dan-noodle-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "doenjang-salmon-rice-bowl",
+      "title": "Doenjang Salmon Rice Bowl",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023197-doenjang-salmon-rice-bowl",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "easy-chicken-salad",
+      "title": "Easy Chicken Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025482-easy-chicken-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "easy-chickpea-salad",
+      "title": "Easy Chickpea Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026898-easy-chickpea-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "easy-tomato-and-stars-soup",
+      "title": "Easy Tomato and Stars Soup",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/771009089-easy-tomato-and-stars-soup",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "egg-and-cheese-quesadilla",
+      "title": "Egg and Cheese Quesadilla",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/774974663-egg-and-cheese-quesadilla",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "egg-salad-and-greens-wrap",
+      "title": "Egg Salad and Greens Wrap",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/12273-egg-salad-and-greens-wrap",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "fried-egg-quesadilla",
+      "title": "Fried Egg Quesadilla",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020001-fried-egg-quesadilla",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "grain-bowl-with-sardines-and-sauce-moyo",
+      "title": "Grain Bowl With Sardines and Sauce Moyo",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025601-grain-bowl-with-sardines-and-sauce-moyo",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "greek-scrambled-eggs",
+      "title": "Greek Scrambled Eggs",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1015963-greek-scrambled-eggs",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "green-curry-salmon-with-coconut-rice",
+      "title": "Green Curry Salmon With Coconut Rice",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023826-green-curry-salmon-with-coconut-rice",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "lemony-hummus-pasta",
+      "title": "Lemony Hummus Pasta",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026281-lemony-hummus-pasta",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "loaded-sweet-potatoes-with-black-beans-and-cheddar",
+      "title": "Loaded Sweet Potatoes With Black Beans and Cheddar",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019600-loaded-sweet-potatoes-with-black-beans-and-cheddar",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "marinated-tofu-sandwich-with-greens",
+      "title": "Marinated Tofu Sandwich With Greens",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1013789-marinated-tofu-sandwich-with-greens",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "olive-oil-and-chile-fried-eggs",
+      "title": "Olive Oil and Chile-Fried Eggs",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027281-olive-oil-and-chile-fried-eggs",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "one-pot-zaatar-chicken-and-rice",
+      "title": "One Pot ZaGÇÖatar Chicken and Rice",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026774-one-pot-zaatar-chicken-and-rice",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "one-pan-chicken-thighs-with-coconut-creamed-corn",
+      "title": "One-Pan Chicken Thighs With Coconut-Creamed Corn",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021157-one-pan-chicken-thighs-with-coconut-creamed-corn",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "peanut-butter-and-pickle-sandwich",
+      "title": "Peanut Butter and Pickle Sandwich",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/12887-peanut-butter-and-pickle-sandwich",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "puttanesca-chickpea-tomato-salad",
+      "title": "Puttanesca Chickpea-Tomato Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023396-puttanesca-chickpea-tomato-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "quinoa-and-broccoli-spoon-salad",
+      "title": "Quinoa and Broccoli Spoon Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1023843-quinoa-and-broccoli-spoon-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "roasted-chicken-thighs-with-cauliflower-and-herby-yogurt",
+      "title": "Roasted Chicken Thighs With Cauliflower and Herby Yogurt",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1021945-roasted-chicken-thighs-with-cauliflower-and-herby-yogurt",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "roasted-salmon-with-jalapeno-honey-and-lime",
+      "title": "Roasted Salmon With Jalape+¦o, Honey and Lime",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020713-roasted-salmon-with-jalapeno-honey-and-lime",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "salmon-and-kimchi-skillet",
+      "title": "Salmon and Kimchi Skillet",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025962-salmon-and-kimchi-skillet",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "sesame-crusted-fish-with-butter-and-ginger-sauce",
+      "title": "Sesame-Crusted Fish With Butter and Ginger Sauce",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/8695-sesame-crusted-fish-with-butter-and-ginger-sauce",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "sheet-pan-chicken-and-cheesy-broccoli",
+      "title": "Sheet-Pan Chicken and Cheesy Broccoli",
+      "category": "Dinner",
+      "sourceName": "NYT Cooking -+ Healthy Weeknight Dinners",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026149-sheet-pan-chicken-and-cheesy-broccoli",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "spiced-chickpea-and-lentil-salad",
+      "title": "Spiced Chickpea and Lentil Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1027341-spiced-chickpea-and-lentil-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "spinach-and-feta-lentil-bowls",
+      "title": "Spinach and Feta Lentil Bowls",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026699-spinach-and-feta-lentil-bowls",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "tinned-fish-hand-rolls",
+      "title": "Tinned Fish Hand Rolls",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026700-tinned-fish-hand-rolls",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "tortellini-pasta-salad",
+      "title": "Tortellini Pasta Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1026701-tortellini-pasta-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "tuna-and-bean-salad",
+      "title": "Tuna and Bean Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1016427-tuna-and-bean-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "tuna-chickpeas-and-broccoli-salad",
+      "title": "Tuna, Chickpeas and Broccoli Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/12272-tuna-chickpeas-and-broccoli-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "turkey-and-apple-sandwiches-with-maple-mayonnaise",
+      "title": "Turkey and Apple Sandwiches With Maple Mayonnaise",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/12141-turkey-and-apple-sandwiches-with-maple-mayonnaise",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "turkey-zucchini-and-carrot-burgers",
+      "title": "Turkey, Zucchini and Carrot Burgers",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1020443-turkey-zucchini-and-carrot-burgers",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "turkish-eggs-with-olives-feta-and-tomatoes-menemen",
+      "title": "Turkish Eggs With Olives, Feta and Tomatoes (Menemen)",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1019940-turkish-eggs-with-olives-feta-and-tomatoes-menemen",
+      "hasIngredients": false,
+      "hasInstructions": false
+    },
+    {
+      "id": "tzatziki-chickpea-salad",
+      "title": "Tzatziki Chickpea Salad",
+      "category": "Lunch",
+      "sourceName": "NYT Cooking -+ Healthy Weekday Lunches",
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1025698-tzatziki-chickpea-salad",
+      "hasIngredients": false,
+      "hasInstructions": false
+    }
+  ]
+}

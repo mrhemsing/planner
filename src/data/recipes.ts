@@ -1,4 +1,5 @@
 import healthyDinnerDetails from "./healthy-dinner-details.generated.ts";
+import missingFullDetails from "./missing-full-details.generated.ts";
 
 export type Ingredient = {
   item: string;
@@ -10976,12 +10977,14 @@ const recipeDetailsMap: Record<string, RecipeDetailsEntry> = {
 };
 
 const generatedHealthyDinnerDetails = healthyDinnerDetails as Record<string, RecipeDetailsEntry>;
+const generatedMissingFullDetails = missingFullDetails as Record<string, RecipeDetailsEntry>;
 
 export const recipeLibrary: RecipeLibraryEntry[] = [...dinnerRecipes, ...lunchRecipes]
   .map((recipe) => ({
     ...recipe,
     ...recipeDetailsMap[recipe.id],
     ...generatedHealthyDinnerDetails[recipe.id],
+    ...generatedMissingFullDetails[recipe.id],
   }))
   .sort((a, b) => a.title.localeCompare(b.title));
 
