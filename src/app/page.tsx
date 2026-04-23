@@ -1,7 +1,24 @@
 import { RecipeBrowser } from "@/components/recipe-browser";
 import { recipeLibrary } from "@/lib/planner";
+import healthyDinnerTargets from "../../reports/healthy-dinners-target-list.json";
 
-const healthyDinners = recipeLibrary.filter((recipe) => recipe.category === "Dinner");
+const recipesByUrl = new Map(recipeLibrary.map((recipe) => [recipe.sourceUrl.toLowerCase(), recipe]));
+const recipesById = new Map(recipeLibrary.map((recipe) => [recipe.id.toLowerCase(), recipe]));
+const recipesBySourceId = new Map(
+  recipeLibrary.map((recipe) => {
+    const match = recipe.sourceUrl.match(/\/recipes\/(\d+)/i);
+    return [match?.[1] ?? recipe.id, recipe] as const;
+  }),
+);
+const healthyDinners = healthyDinnerTargets.items
+  .map(
+    (item) =>
+      recipesByUrl.get(item.url.toLowerCase()) ??
+      recipesById.get(item.recipeId.toLowerCase()) ??
+      recipesById.get(item.slug.toLowerCase()) ??
+      recipesBySourceId.get(item.id),
+  )
+  .filter((recipe, index, array): recipe is NonNullable<(typeof recipeLibrary)[number]> => Boolean(recipe) && array.indexOf(recipe) === index);
 
 export default function Home() {
   return (
@@ -12,7 +29,7 @@ export default function Home() {
             {
               id: "healthy-meals",
               title: "Healthy Meals",
-              description: "A healthy meal section for weeknight planning and browsing.",
+              description: "The full 119-recipe Healthy Weeknight Dinners collection with ingredients and instructions.",
               recipes: healthyDinners,
             },
           ]}

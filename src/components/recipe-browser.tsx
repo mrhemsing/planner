@@ -15,7 +15,7 @@ type RecipeSection = {
 
 export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [favourites, setFavourites] = useState<Record<string, boolean>>({});
-  const [activeSectionId, setActiveSectionId] = useState<string>(sections[0]?.id ?? "");
+  const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(sections[0]?.recipes[0]?.id ?? "");
   const [hydrated, setHydrated] = useState(false);
 
@@ -44,10 +44,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const activeSection = sections.find((section) => section.id === activeSectionId) ?? sections[0];
   const selectedRecipe =
     activeSection?.recipes.find((recipe) => recipe.id === selectedRecipeId) ?? activeSection?.recipes[0] ?? null;
-  const hasFullInstructions = Boolean(
-    selectedRecipe?.instructions?.length &&
-      selectedRecipe.instructions.some((step) => step.length > 220 || /\bdegrees\b|\brefrigerator\b|\bminutes?\b/i.test(step)),
-  );
+  const recipeCount = activeSection?.recipes.length ?? allRecipes.length;
+  const hasFullInstructions = Boolean(selectedRecipe?.instructions?.length);
 
   const toggleFavourite = (id: string) => {
     setFavourites((current) => ({
@@ -62,7 +60,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">Healthy Weeknight Dinners</h1>
-            <span className="rounded-full bg-rose-50 px-3 py-1 text-sm font-semibold text-rose-700">119</span>
+            <span className="rounded-full bg-rose-50 px-3 py-1 text-sm font-semibold text-rose-700">{recipeCount}</span>
           </div>
           <button
             type="button"
@@ -114,13 +112,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       key={`${activeSection.id}-jump-${recipe.id}`}
                       type="button"
                       onClick={() => setSelectedRecipeId(recipe.id)}
-                      className={`block w-full rounded-[18px] px-4 py-3 text-left text-base font-medium transition ${
-                        isSelected ? "bg-rose-500 text-white" : "bg-white text-stone-800 hover:bg-rose-100"
+                      className={`block w-full rounded-[18px] border px-4 py-3 text-left text-base font-medium transition ${
+                        isSelected ? "border-rose-600 bg-rose-500 text-white" : "border-transparent bg-white text-stone-800 hover:bg-rose-100"
                       }`}
                     >
                       <div className="flex items-start justify-between gap-3">
                         <span className="block text-left leading-6">{recipe.title}</span>
-                        {isFavourite ? <span className="text-sm">♥</span> : null}
+                        <div className="flex items-center gap-2">{isFavourite ? <span className="text-sm">♥</span> : null}</div>
                       </div>
                     </button>
                   );
@@ -178,12 +176,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               {selectedRecipe.ingredients?.length ? (
                 <div className="mt-5 rounded-[18px] border border-rose-100 bg-rose-50/60 p-4">
                   <p className="text-sm font-semibold uppercase tracking-[0.16em] text-rose-600">
-                    Ingredient snapshot
+                    Ingredients
                   </p>
                   <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-                    {selectedRecipe.ingredients.slice(0, 8).map((ingredient) => (
+                    {selectedRecipe.ingredients.map((ingredient, index) => (
                       <li
-                        key={`${selectedRecipe.id}-${ingredient.item}`}
+                        key={`${selectedRecipe.id}-${ingredient.item}-${index}`}
                         className="flex items-center gap-3 rounded-[14px] bg-white px-3 py-2 text-sm text-stone-800"
                       >
                         <span className="font-medium text-stone-600">{ingredient.amount}</span>
@@ -207,11 +205,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   >
                     {hasFullInstructions ? "Instructions" : "Planner notes"}
                   </p>
-                  {!hasFullInstructions ? (
-                    <p className="mt-2 text-sm leading-6 text-amber-900">
-                      These are short planning notes, not full cooking instructions. Use the source link for the complete recipe method.
-                    </p>
-                  ) : null}
                   <ol className="mt-3 space-y-3 text-base leading-7 text-stone-700">
                     {selectedRecipe.instructions.map((step, index) => (
                       <li key={`${selectedRecipe.id}-step-${index}`} className="flex gap-3">
@@ -236,7 +229,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   rel="noopener noreferrer"
                   className="inline-flex min-h-12 items-center rounded-full bg-rose-500 px-5 text-base font-semibold text-white transition hover:bg-rose-600"
                 >
-                  Open full recipe on NYT Cooking
+                  Open recipe on NYT Cooking
                 </a>
               </div>
             </article>
@@ -248,18 +241,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 }
 
 function FilterChip({ label }: { label: string }) {
-  return (
-    <span className="rounded-full bg-white px-3 py-2 text-base font-medium text-stone-800">
-      {label}
-    </span>
-  );
+  return <span className="rounded-full bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
 }
 
-function OverviewCard({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-[20px] border border-rose-100 bg-rose-50/60 p-4">
-      <p className="text-sm uppercase tracking-[0.16em] text-rose-500">{label}</p>
-      <p className="mt-2 text-2xl font-semibold text-stone-900 sm:text-3xl">{value}</p>
-    </div>
-  );
-}
