@@ -1,17 +1,25 @@
 {
-  "summary": {
-    "targetCount": 119,
-    "matchedCount": 119,
-    "fullDataCount": 119,
-    "missing": [],
-    "incomplete": [],
-    "fallbackMatches": [
-      {
-        "position": 60,
-        "targetSlug": "al-Salmon-and-Cherry-Tomato-Curry",
-        "matchedRecipeId": "salmon-and-cherry-tomato-curry",
-        "matchMode": "sourceId"
-      }
-    ]
-  }
+  "targetCount": 119,
+  "matchedCount": 119,
+  "fullIngredientsCount": 119,
+  "instructionCount": 119,
+  "incomplete": [],
+  "notes": [
+    "Healthy Weeknight Dinners now prefer generated NYT full-detail data for the 119 collection targets.",
+    "Duplicate URL collisions are resolved in favor of the Dinner record."
+  ],
+  "spotChecks": [
+    {
+      "position": 1,
+      "recipeId": "ginger-chicken-and-rice-soup-with-zucchini",
+      "ingredients": 10,
+      "instructions": 5
+    },
+    {
+      "position": 20,
+      "recipeId": "white-bean-tuna-and-kale-salad-dinner",
+      "ingredients": 7,
+      "instructions": 1
+    }
+  ]
 }

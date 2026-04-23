@@ -2,14 +2,29 @@ import { RecipeBrowser } from "@/components/recipe-browser";
 import { recipeLibrary } from "@/lib/planner";
 import healthyDinnerTargets from "../../reports/healthy-dinners-target-list.json";
 
-const recipesByUrl = new Map(recipeLibrary.map((recipe) => [recipe.sourceUrl.toLowerCase(), recipe]));
-const recipesById = new Map(recipeLibrary.map((recipe) => [recipe.id.toLowerCase(), recipe]));
-const recipesBySourceId = new Map(
-  recipeLibrary.map((recipe) => {
-    const match = recipe.sourceUrl.match(/\/recipes\/(\d+)/i);
-    return [match?.[1] ?? recipe.id, recipe] as const;
-  }),
-);
+function preferDinner(current: (typeof recipeLibrary)[number] | undefined, candidate: (typeof recipeLibrary)[number]) {
+  if (!current) return candidate;
+  if (current.category === "Dinner") return current;
+  if (candidate.category === "Dinner") return candidate;
+  return current;
+}
+
+const recipesByUrl = new Map<string, (typeof recipeLibrary)[number]>();
+const recipesById = new Map<string, (typeof recipeLibrary)[number]>();
+const recipesBySourceId = new Map<string, (typeof recipeLibrary)[number]>();
+
+for (const recipe of recipeLibrary) {
+  const urlKey = recipe.sourceUrl.toLowerCase();
+  recipesByUrl.set(urlKey, preferDinner(recipesByUrl.get(urlKey), recipe));
+
+  const idKey = recipe.id.toLowerCase();
+  recipesById.set(idKey, preferDinner(recipesById.get(idKey), recipe));
+
+  const match = recipe.sourceUrl.match(/\/recipes\/(\d+)/i);
+  const sourceIdKey = match?.[1] ?? recipe.id;
+  recipesBySourceId.set(sourceIdKey, preferDinner(recipesBySourceId.get(sourceIdKey), recipe));
+}
+
 const healthyDinners = healthyDinnerTargets.items
   .map(
     (item) =>
