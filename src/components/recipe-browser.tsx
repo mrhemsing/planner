@@ -45,7 +45,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const selectedRecipe =
     activeSection?.recipes.find((recipe) => recipe.id === selectedRecipeId) ?? activeSection?.recipes[0] ?? null;
   const recipeCount = activeSection?.recipes.length ?? allRecipes.length;
-  const hasFullInstructions = Boolean(selectedRecipe?.instructions?.length);
 
   const toggleFavourite = (id: string) => {
     setFavourites((current) => ({
@@ -193,26 +192,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               ) : null}
 
               {selectedRecipe.instructions?.length ? (
-                <div
-                  className={`mt-5 rounded-[18px] p-4 ${
-                    hasFullInstructions ? "border border-stone-200 bg-white" : "border border-amber-200 bg-amber-50/80"
-                  }`}
-                >
-                  <p
-                    className={`text-sm font-semibold uppercase tracking-[0.16em] ${
-                      hasFullInstructions ? "text-stone-700" : "text-amber-800"
-                    }`}
-                  >
-                    {hasFullInstructions ? "Instructions" : "Planner notes"}
-                  </p>
+                <div className="mt-5 rounded-[18px] border border-stone-200 bg-white p-4">
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-stone-700">Instructions</p>
                   <ol className="mt-3 space-y-3 text-base leading-7 text-stone-700">
                     {selectedRecipe.instructions.map((step, index) => (
                       <li key={`${selectedRecipe.id}-step-${index}`} className="flex gap-3">
-                        <span
-                          className={`mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full text-sm font-semibold ${
-                            hasFullInstructions ? "bg-rose-50 text-rose-600" : "bg-white text-amber-700"
-                          }`}
-                        >
+                        <span className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-rose-50 text-sm font-semibold text-rose-600">
                           {index + 1}
                         </span>
                         <span>{step}</span>
