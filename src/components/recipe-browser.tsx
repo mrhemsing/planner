@@ -287,7 +287,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       href={selectedRecipe.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-12 items-center rounded-full bg-black px-5 text-base font-semibold text-white transition hover:bg-stone-800"
+                      className="inline-flex min-h-12 items-center rounded-full bg-black px-5 text-base font-semibold !text-white transition hover:bg-stone-800"
                     >
                       Open recipe on NYT Cooking
                     </a>
