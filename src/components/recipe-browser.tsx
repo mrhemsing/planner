@@ -95,7 +95,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">Healthy Weeknight Dinners</h1>
+              <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Healthy Weeknight Dinners</h1>
               <span className="rounded-full bg-rose-50 px-3 py-1 text-sm font-semibold text-rose-700">{recipeCount}</span>
             </div>
           </div>
