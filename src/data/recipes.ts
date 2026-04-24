@@ -1275,7 +1275,7 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
     category: "Dinner",
     sourceName: dinnerSourceName,
     sourceUrl: "https://cooking.nytimes.com/recipes/1021200-crispy-tofu-with-cashews-and-blistered-snap-peas",
-    imageUrl: "https://static01.nyt.com/images/2020/07/01/dining/26tofurex1/26tofurex1-mediumThreeByTwo440-v3.jpg",
+    imageUrl: "/recipe-images/crispy-tofu-with-cashews-and-blistered-snap-peas.jpg",
     description: "A crisp tofu dinner with cashews and blistered snap peas that delivers crunch, heat, and strong weeknight energy.",
     favourite: false,
     tags: ["dinner", "tofu", "cashews", "snap peas", "crispy", "stir fry", "vegetarian", "protein", "weeknight"],

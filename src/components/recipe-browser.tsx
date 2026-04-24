@@ -72,7 +72,11 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         return Number.isFinite(minutes) && minutes <= 30;
       });
     }
-    return sortedRecipes.filter((recipe) => recipe.tags.includes(activeFilter));
+    if (activeFilter.startsWith("tag:")) {
+      const tag = activeFilter.slice(4);
+      return sortedRecipes.filter((recipe) => recipe.tags.includes(tag));
+    }
+    return sortedRecipes;
   }, [activeFilter, favourites, sortedRecipes]);
 
   useEffect(() => {
@@ -94,7 +98,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       return Number.isFinite(minutes) && minutes <= 30;
     }).length})` },
     ...tagFilters.map((tag) => ({
-      id: tag,
+      id: `tag:${tag}`,
       label: `${toTitleCase(tag)} (${sortedRecipes.filter((recipe) => recipe.tags.includes(tag)).length})`,
     })),
   ];
