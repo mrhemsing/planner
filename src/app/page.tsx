@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { RecipeBrowser } from "@/components/recipe-browser";
 import { recipeLibrary } from "@/lib/planner";
 import healthyDinnerTargets from "../../reports/healthy-dinners-target-list.json";
@@ -37,8 +38,21 @@ const healthyDinners = healthyDinnerTargets.items
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,#fff6fa_0%,#fff9fc_34%,#ffffff_100%)] px-4 py-5 text-stone-900 sm:px-6 sm:py-8 lg:px-10">
-      <div className="mx-auto w-full max-w-6xl">
+    <main className="min-h-screen bg-[#F1331E] px-4 py-5 text-stone-900 sm:px-6 sm:py-8 lg:px-10">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6">
+        <section className="overflow-hidden rounded-[34px] border border-black/10 bg-[#F1331E] shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
+          <div className="relative aspect-[16/7] w-full min-h-[220px]">
+            <Image
+              src="/recipe-images/header-illustration.jpg"
+              alt="Illustrated cooking header"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 1200px"
+            />
+          </div>
+        </section>
+
         <RecipeBrowser
           sections={[
             {
