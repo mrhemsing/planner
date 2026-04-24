@@ -42,10 +42,10 @@ export default function Home() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-100"
         style={{
-          backgroundImage: "url('/recipe-images/scattered-kitchen-shapes.png')",
+          backgroundImage: "url('/recipe-images/top-background.jpg')",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "min(1800px, 140vw) auto",
+          backgroundSize: "min(1400px, 100vw) auto",
         }}
       />
 
