@@ -17,6 +17,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [favourites, setFavourites] = useState<Record<string, boolean>>({});
   const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(sections[0]?.recipes[0]?.id ?? "");
+  const [activeFilter, setActiveFilter] = useState<string>("all");
   const [hydrated, setHydrated] = useState(false);
 
   const allRecipes = useMemo(() => sections.flatMap((section) => section.recipes), [sections]);
@@ -42,9 +43,61 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, [favourites, hydrated]);
 
   const activeSection = sections.find((section) => section.id === activeSectionId) ?? sections[0];
+  const sortedRecipes = useMemo(
+    () => [...(activeSection?.recipes ?? [])].sort((a, b) => a.title.localeCompare(b.title)),
+    [activeSection],
+  );
+
+  const tagFilters = useMemo(() => {
+    const excluded = new Set(["dinner", "healthy dinners", "nyt", "lunch"]);
+    const counts = new Map<string, number>();
+    for (const recipe of sortedRecipes) {
+      for (const tag of recipe.tags) {
+        if (excluded.has(tag)) continue;
+        counts.set(tag, (counts.get(tag) ?? 0) + 1);
+      }
+    }
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .slice(0, 6)
+      .map(([tag]) => tag);
+  }, [sortedRecipes]);
+
+  const filteredRecipes = useMemo(() => {
+    if (activeFilter === "all") return sortedRecipes;
+    if (activeFilter === "favourites") return sortedRecipes.filter((recipe) => favourites[recipe.id]);
+    if (activeFilter === "quick") {
+      return sortedRecipes.filter((recipe) => {
+        const minutes = Number(recipe.prepTime?.match(/\d+/)?.[0] ?? NaN);
+        return Number.isFinite(minutes) && minutes <= 30;
+      });
+    }
+    return sortedRecipes.filter((recipe) => recipe.tags.includes(activeFilter));
+  }, [activeFilter, favourites, sortedRecipes]);
+
+  useEffect(() => {
+    if (!filteredRecipes.length) return;
+    if (!filteredRecipes.some((recipe) => recipe.id === selectedRecipeId)) {
+      setSelectedRecipeId(filteredRecipes[0].id);
+    }
+  }, [filteredRecipes, selectedRecipeId]);
+
   const selectedRecipe =
-    activeSection?.recipes.find((recipe) => recipe.id === selectedRecipeId) ?? activeSection?.recipes[0] ?? null;
-  const recipeCount = activeSection?.recipes.length ?? allRecipes.length;
+    filteredRecipes.find((recipe) => recipe.id === selectedRecipeId) ?? filteredRecipes[0] ?? null;
+  const recipeCount = filteredRecipes.length;
+
+  const filters = [
+    { id: "all", label: `All (${sortedRecipes.length})` },
+    { id: "favourites", label: `Favourites (${sortedRecipes.filter((recipe) => favourites[recipe.id]).length})` },
+    { id: "quick", label: `Quick (${sortedRecipes.filter((recipe) => {
+      const minutes = Number(recipe.prepTime?.match(/\d+/)?.[0] ?? NaN);
+      return Number.isFinite(minutes) && minutes <= 30;
+    }).length})` },
+    ...tagFilters.map((tag) => ({
+      id: tag,
+      label: `${toTitleCase(tag)} (${sortedRecipes.filter((recipe) => recipe.tags.includes(tag)).length})`,
+    })),
+  ];
 
   const toggleFavourite = (id: string) => {
     setFavourites((current) => ({
@@ -56,21 +109,42 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   return (
     <section className="grid gap-6">
       <div className="px-1 py-1 sm:px-2">
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">Healthy Weeknight Dinners</h1>
-            <span className="rounded-full bg-rose-50 px-3 py-1 text-sm font-semibold text-rose-700">{recipeCount}</span>
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">Healthy Weeknight Dinners</h1>
+              <span className="rounded-full bg-rose-50 px-3 py-1 text-sm font-semibold text-rose-700">{recipeCount}</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setActiveFilter("favourites")}
+              className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
+            >
+              My Favourites
+            </button>
           </div>
-          <button
-            type="button"
-            className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
-          >
-            My Favourites
-          </button>
+
+          <div className="flex flex-wrap gap-2">
+            {filters.map((filter) => {
+              const isActive = filter.id === activeFilter;
+              return (
+                <button
+                  key={filter.id}
+                  type="button"
+                  onClick={() => setActiveFilter(filter.id)}
+                  className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                    isActive ? "bg-rose-500 text-white" : "bg-white text-rose-700 hover:bg-rose-50"
+                  }`}
+                >
+                  {filter.label}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 
-      {activeSection && selectedRecipe ? (
+      {activeSection ? (
         <section
           key={activeSection.id}
           id={activeSection.id}
@@ -84,11 +158,11 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                     Recipe menu
                   </span>
                   <select
-                    value={selectedRecipe.id}
+                    value={selectedRecipe?.id ?? ""}
                     onChange={(event) => setSelectedRecipeId(event.target.value)}
                     className="min-h-12 w-full rounded-[18px] border border-rose-300 bg-white px-4 text-base font-medium text-stone-900 outline-none focus:border-rose-500"
                   >
-                    {activeSection.recipes.map((recipe) => (
+                    {filteredRecipes.map((recipe) => (
                       <option key={`${activeSection.id}-option-${recipe.id}`} value={recipe.id}>
                         {recipe.title}
                       </option>
@@ -102,7 +176,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </p>
 
               <div className="mt-3 hidden flex-col gap-2 lg:flex">
-                {activeSection.recipes.map((recipe) => {
+                {filteredRecipes.map((recipe) => {
                   const isSelected = selectedRecipe.id === recipe.id;
                   const isFavourite = Boolean(favourites[recipe.id]);
 
@@ -126,97 +200,105 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             </div>
 
             <article className="rounded-[24px] border border-stone-200 bg-stone-50/70 p-4 sm:p-5">
-              <div className="relative h-56 w-full overflow-hidden rounded-[20px] bg-rose-50 sm:h-72">
-                <Image
-                  src={selectedRecipe.imageUrl}
-                  alt={selectedRecipe.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 700px"
-                />
-              </div>
-
-              <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                <div>
-                  <h3 className="text-3xl font-semibold text-stone-900 sm:text-4xl">{selectedRecipe.title}</h3>
-                  <p className="mt-3 text-lg leading-8 text-stone-700 sm:text-xl sm:leading-9">
-                    {selectedRecipe.description}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <FilterChip label={selectedRecipe.category} />
-                    <FilterChip label={selectedRecipe.sourceName} />
-                    {selectedRecipe.prepTime ? <FilterChip label={`Prep ${selectedRecipe.prepTime}`} /> : null}
-                    {selectedRecipe.serves ? <FilterChip label={`Serves ${selectedRecipe.serves}`} /> : null}
+              {!selectedRecipe ? (
+                <div className="rounded-[18px] border border-dashed border-rose-200 bg-white p-6 text-stone-600">
+                  No recipes match that filter yet.
+                </div>
+              ) : (
+                <>
+                  <div className="relative h-56 w-full overflow-hidden rounded-[20px] bg-rose-50 sm:h-72">
+                    <Image
+                      src={selectedRecipe.imageUrl}
+                      alt={selectedRecipe.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 700px"
+                    />
                   </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => toggleFavourite(selectedRecipe.id)}
-                  className={`inline-flex min-h-12 items-center whitespace-nowrap rounded-full px-5 text-base font-semibold transition ${
-                    favourites[selectedRecipe.id] ? "bg-rose-100 text-rose-700" : "bg-white text-stone-600"
-                  }`}
-                  aria-pressed={Boolean(favourites[selectedRecipe.id])}
-                >
-                  {favourites[selectedRecipe.id] ? "★ Favourite" : "☆ Favourite"}
-                </button>
-              </div>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {selectedRecipe.tags.map((tag) => (
-                  <span
-                    key={`${selectedRecipe.id}-${tag}`}
-                    className="rounded-full bg-rose-50 px-3 py-1 text-sm font-medium text-rose-700"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+                  <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                    <div>
+                      <h3 className="text-3xl font-semibold text-stone-900 sm:text-4xl">{selectedRecipe.title}</h3>
+                      <p className="mt-3 text-lg leading-8 text-stone-700 sm:text-xl sm:leading-9">
+                        {selectedRecipe.description}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <FilterChip label={selectedRecipe.category} />
+                        <FilterChip label={selectedRecipe.sourceName} />
+                        {selectedRecipe.prepTime ? <FilterChip label={`Prep ${selectedRecipe.prepTime}`} /> : null}
+                        {selectedRecipe.serves ? <FilterChip label={`Serves ${selectedRecipe.serves}`} /> : null}
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => toggleFavourite(selectedRecipe.id)}
+                      className={`inline-flex min-h-12 items-center whitespace-nowrap rounded-full px-5 text-base font-semibold transition ${
+                        favourites[selectedRecipe.id] ? "bg-rose-100 text-rose-700" : "bg-white text-stone-600"
+                      }`}
+                      aria-pressed={Boolean(favourites[selectedRecipe.id])}
+                    >
+                      {favourites[selectedRecipe.id] ? "★ Favourite" : "☆ Favourite"}
+                    </button>
+                  </div>
 
-              {selectedRecipe.ingredients?.length ? (
-                <div className="mt-5 rounded-[18px] border border-rose-100 bg-rose-50/60 p-4">
-                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-rose-600">
-                    Ingredients
-                  </p>
-                  <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-                    {selectedRecipe.ingredients.map((ingredient, index) => (
-                      <li
-                        key={`${selectedRecipe.id}-${ingredient.item}-${index}`}
-                        className="flex items-center gap-3 rounded-[14px] bg-white px-3 py-2 text-sm text-stone-800"
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {selectedRecipe.tags.map((tag) => (
+                      <span
+                        key={`${selectedRecipe.id}-${tag}`}
+                        className="rounded-full bg-rose-50 px-3 py-1 text-sm font-medium text-rose-700"
                       >
-                        <span className="font-medium text-stone-600">{ingredient.amount}</span>
-                        <span>{ingredient.item}</span>
-                      </li>
+                        {tag}
+                      </span>
                     ))}
-                  </ul>
-                </div>
-              ) : null}
+                  </div>
 
-              {selectedRecipe.instructions?.length ? (
-                <div className="mt-5 rounded-[18px] border border-stone-200 bg-white p-4">
-                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-stone-700">Instructions</p>
-                  <ol className="mt-3 space-y-3 text-base leading-7 text-stone-700">
-                    {selectedRecipe.instructions.map((step, index) => (
-                      <li key={`${selectedRecipe.id}-step-${index}`} className="flex gap-3">
-                        <span className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-rose-50 text-sm font-semibold text-rose-600">
-                          {index + 1}
-                        </span>
-                        <span>{step}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-              ) : null}
+                  {selectedRecipe.ingredients?.length ? (
+                    <div className="mt-5 rounded-[18px] border border-rose-100 bg-rose-50/60 p-4">
+                      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-rose-600">
+                        Ingredients
+                      </p>
+                      <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                        {selectedRecipe.ingredients.map((ingredient, index) => (
+                          <li
+                            key={`${selectedRecipe.id}-${ingredient.item}-${index}`}
+                            className="flex items-center gap-3 rounded-[14px] bg-white px-3 py-2 text-sm text-stone-800"
+                          >
+                            <span className="font-medium text-stone-600">{ingredient.amount}</span>
+                            <span>{ingredient.item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
 
-              <div className="mt-5 flex flex-wrap gap-3">
-                <a
-                  href={selectedRecipe.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-12 items-center rounded-full bg-rose-500 px-5 text-base font-semibold text-white transition hover:bg-rose-600"
-                >
-                  Open recipe on NYT Cooking
-                </a>
-              </div>
+                  {selectedRecipe.instructions?.length ? (
+                    <div className="mt-5 rounded-[18px] border border-stone-200 bg-white p-4">
+                      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-stone-700">Instructions</p>
+                      <ol className="mt-3 space-y-3 text-base leading-7 text-stone-700">
+                        {selectedRecipe.instructions.map((step, index) => (
+                          <li key={`${selectedRecipe.id}-step-${index}`} className="flex gap-3">
+                            <span className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-rose-50 text-sm font-semibold text-rose-600">
+                              {index + 1}
+                            </span>
+                            <span>{step}</span>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  ) : null}
+
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <a
+                      href={selectedRecipe.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-12 items-center rounded-full bg-rose-500 px-5 text-base font-semibold text-white transition hover:bg-rose-600"
+                    >
+                      Open recipe on NYT Cooking
+                    </a>
+                  </div>
+                </>
+              )}
             </article>
           </div>
         </section>
@@ -227,5 +309,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
 function FilterChip({ label }: { label: string }) {
   return <span className="rounded-full bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
+}
+
+function toTitleCase(value: string) {
+  return value
+    .split(/[-\s]+/)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }
 
