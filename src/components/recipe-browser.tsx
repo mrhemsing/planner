@@ -91,7 +91,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   return (
     <section className="grid gap-6">
-      <div className="px-1 py-1 sm:px-2">
+      <div className="mt-[30px] px-1 py-1 sm:px-2">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
