@@ -40,7 +40,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden bg-[#F1331E] px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-30"
+        className="pointer-events-none absolute inset-0 opacity-100"
         style={{
           backgroundImage: "url('/recipe-images/repeating-background.jpg')",
           backgroundPosition: "center top",
