@@ -18,6 +18,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(sections[0]?.recipes[0]?.id ?? "");
   const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [searchQuery, setSearchQuery] = useState("");
   const [hydrated, setHydrated] = useState(false);
 
   const allRecipes = useMemo(() => sections.flatMap((section) => section.recipes), [sections]);
@@ -48,36 +49,20 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     [activeSection],
   );
 
-  const tagFilters = useMemo(() => {
-    const excluded = new Set(["dinner", "healthy dinners", "nyt", "lunch"]);
-    const counts = new Map<string, number>();
-    for (const recipe of sortedRecipes) {
-      for (const tag of recipe.tags) {
-        if (excluded.has(tag)) continue;
-        counts.set(tag, (counts.get(tag) ?? 0) + 1);
-      }
-    }
-    return [...counts.entries()]
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-      .slice(0, 6)
-      .map(([tag]) => tag);
-  }, [sortedRecipes]);
-
   const filteredRecipes = useMemo(() => {
-    if (activeFilter === "all") return sortedRecipes;
-    if (activeFilter === "favourites") return sortedRecipes.filter((recipe) => favourites[recipe.id]);
-    if (activeFilter === "quick") {
-      return sortedRecipes.filter((recipe) => {
-        const minutes = Number(recipe.prepTime?.match(/\d+/)?.[0] ?? NaN);
-        return Number.isFinite(minutes) && minutes <= 30;
-      });
-    }
-    if (activeFilter.startsWith("tag:")) {
-      const tag = activeFilter.slice(4);
-      return sortedRecipes.filter((recipe) => recipe.tags.includes(tag));
-    }
-    return sortedRecipes;
-  }, [activeFilter, favourites, sortedRecipes]);
+    const query = searchQuery.trim().toLowerCase();
+
+    return sortedRecipes.filter((recipe) => {
+      if (activeFilter !== "all" && getRecipeCategory(recipe) !== activeFilter) {
+        return false;
+      }
+
+      if (!query) return true;
+
+      const haystack = [recipe.title, recipe.description, recipe.tags.join(" ")].join(" ").toLowerCase();
+      return haystack.includes(query);
+    });
+  }, [activeFilter, searchQuery, sortedRecipes]);
 
   useEffect(() => {
     if (!filteredRecipes.length) return;
@@ -92,15 +77,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   const filters = [
     { id: "all", label: `All (${sortedRecipes.length})` },
-    { id: "favourites", label: `Favourites (${sortedRecipes.filter((recipe) => favourites[recipe.id]).length})` },
-    { id: "quick", label: `Quick (${sortedRecipes.filter((recipe) => {
-      const minutes = Number(recipe.prepTime?.match(/\d+/)?.[0] ?? NaN);
-      return Number.isFinite(minutes) && minutes <= 30;
-    }).length})` },
-    ...tagFilters.map((tag) => ({
-      id: `tag:${tag}`,
-      label: `${toTitleCase(tag)} (${sortedRecipes.filter((recipe) => recipe.tags.includes(tag)).length})`,
-    })),
+    { id: "meat", label: `Meat (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "meat").length})` },
+    { id: "fish", label: `Fish (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "fish").length})` },
+    { id: "vegetarian", label: `Vegetarian (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "vegetarian").length})` },
   ];
 
   const toggleFavourite = (id: string) => {
@@ -119,31 +98,37 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">Healthy Weeknight Dinners</h1>
               <span className="rounded-full bg-rose-50 px-3 py-1 text-sm font-semibold text-rose-700">{recipeCount}</span>
             </div>
-            <button
-              type="button"
-              onClick={() => setActiveFilter("favourites")}
-              className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
-            >
-              My Favourites
-            </button>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {filters.map((filter) => {
-              const isActive = filter.id === activeFilter;
-              return (
-                <button
-                  key={filter.id}
-                  type="button"
-                  onClick={() => setActiveFilter(filter.id)}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                    isActive ? "bg-rose-500 text-white" : "bg-white text-rose-700 hover:bg-rose-50"
-                  }`}
-                >
-                  {filter.label}
-                </button>
-              );
-            })}
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap gap-2">
+              {filters.map((filter) => {
+                const isActive = filter.id === activeFilter;
+                return (
+                  <button
+                    key={filter.id}
+                    type="button"
+                    onClick={() => setActiveFilter(filter.id)}
+                    className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                      isActive ? "bg-rose-500 text-white" : "bg-white text-rose-700 hover:bg-rose-50"
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                );
+              })}
+            </div>
+
+            <label className="block sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
+              <span className="sr-only">Search recipes</span>
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="Search recipes..."
+                className="min-h-11 w-full rounded-full border border-black/10 bg-white px-4 text-sm text-stone-900 outline-none placeholder:text-stone-400 focus:border-rose-500"
+              />
+            </label>
           </div>
         </div>
       </div>
@@ -315,10 +300,17 @@ function FilterChip({ label }: { label: string }) {
   return <span className="rounded-full bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
 }
 
-function toTitleCase(value: string) {
-  return value
-    .split(/[-\s]+/)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
+function getRecipeCategory(recipe: RecipeLibraryEntry) {
+  const text = [recipe.title, recipe.description, recipe.tags.join(" ")].join(" ").toLowerCase();
+
+  if (/(salmon|shrimp|cod|halibut|tuna|sardine|sardines|fish|swordfish|seafood)/.test(text)) {
+    return "fish";
+  }
+
+  if (/(chicken|pork|beef|turkey|meatball|meatballs|sausage|ham|bacon)/.test(text)) {
+    return "meat";
+  }
+
+  return "vegetarian";
 }
 
