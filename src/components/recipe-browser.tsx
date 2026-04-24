@@ -147,7 +147,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           className="rounded-[30px] border border-amber-200 bg-white p-5 shadow-sm shadow-amber-100/40 sm:p-6"
         >
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div className="rounded-[24px] border border-amber-100 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+            <div className="rounded-[24px] border border-stone-300 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="lg:hidden">
                 <label className="block">
                   <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
@@ -195,7 +195,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
             </div>
 
-            <article className="rounded-[24px] border border-stone-200 bg-white p-4 sm:p-5">
+            <article className="rounded-[24px] border border-stone-300 bg-white p-4 sm:p-5">
               {!selectedRecipe ? (
                 <div className="rounded-[18px] border border-dashed border-amber-200 bg-white p-6 text-stone-600">
                   No recipes match that filter yet.
@@ -249,7 +249,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   </div>
 
                   {selectedRecipe.ingredients?.length ? (
-                    <div className="mt-5 rounded-[18px] border border-amber-100 bg-amber-50/60 p-4">
+                    <div className="mt-5 rounded-[18px] border border-stone-300 bg-amber-50/60 p-4">
                       <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
                         Ingredients
                       </p>
@@ -268,7 +268,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   ) : null}
 
                   {selectedRecipe.instructions?.length ? (
-                    <div className="mt-5 rounded-[18px] border border-stone-200 bg-white p-4">
+                    <div className="mt-5 rounded-[18px] border border-stone-300 bg-white p-4">
                       <p className="text-sm font-semibold uppercase tracking-[0.16em] text-stone-700">Instructions</p>
                       <ol className="mt-3 space-y-3 text-base leading-7 text-stone-700">
                         {selectedRecipe.instructions.map((step, index) => (
