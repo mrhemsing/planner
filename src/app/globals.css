@@ -46,11 +46,11 @@ input {
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
-  outline: 4px solid #ec4899;
+  outline: 4px solid #f59e0b;
   outline-offset: 4px;
 }
 
 ::selection {
-  background: #fbcfe8;
+  background: #fde68a;
   color: #431407;
 }

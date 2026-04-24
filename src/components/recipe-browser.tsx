@@ -96,7 +96,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Healthy Weeknight Dinners</h1>
-              <span className="rounded-full bg-rose-50 px-3 py-1 text-sm font-semibold text-rose-700">{recipeCount}</span>
+              <span className="rounded-full bg-amber-50 px-3 py-1 text-sm font-semibold text-amber-800">{recipeCount}</span>
             </div>
           </div>
 
@@ -110,7 +110,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                     type="button"
                     onClick={() => setActiveFilter(filter.id)}
                     className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                      isActive ? "bg-rose-500 text-white" : "bg-white text-rose-700 hover:bg-rose-50"
+                      isActive ? "bg-amber-500 text-white" : "bg-white text-amber-800 hover:bg-amber-50"
                     }`}
                   >
                     {filter.label}
@@ -126,7 +126,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 value={searchQuery}
                 onChange={(event) => setSearchQuery(event.target.value)}
                 placeholder="Search recipes..."
-                className="min-h-11 w-full rounded-full border border-black/10 bg-white px-4 text-sm text-stone-900 outline-none placeholder:text-stone-400 focus:border-rose-500"
+                className="min-h-11 w-full rounded-full border border-black/10 bg-white px-4 text-sm text-stone-900 outline-none placeholder:text-stone-400 focus:border-amber-500"
               />
             </label>
           </div>
@@ -137,19 +137,19 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         <section
           key={activeSection.id}
           id={activeSection.id}
-          className="rounded-[30px] border border-rose-200 bg-white p-5 shadow-sm shadow-rose-100/40 sm:p-6"
+          className="rounded-[30px] border border-amber-200 bg-white p-5 shadow-sm shadow-amber-100/40 sm:p-6"
         >
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div className="rounded-[24px] border border-rose-100 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+            <div className="rounded-[24px] border border-amber-100 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="lg:hidden">
                 <label className="block">
-                  <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.16em] text-rose-600">
+                  <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
                     Recipe menu
                   </span>
                   <select
                     value={selectedRecipe?.id ?? ""}
                     onChange={(event) => setSelectedRecipeId(event.target.value)}
-                    className="min-h-12 w-full rounded-[18px] border border-rose-300 bg-white px-4 text-base font-medium text-stone-900 outline-none focus:border-rose-500"
+                    className="min-h-12 w-full rounded-[18px] border border-amber-300 bg-white px-4 text-base font-medium text-stone-900 outline-none focus:border-amber-500"
                   >
                     {filteredRecipes.map((recipe) => (
                       <option key={`${activeSection.id}-option-${recipe.id}`} value={recipe.id}>
@@ -160,7 +160,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 </label>
               </div>
 
-              <p className="hidden text-sm font-semibold uppercase tracking-[0.16em] text-rose-600 lg:block">
+              <p className="hidden text-sm font-semibold uppercase tracking-[0.16em] text-amber-700 lg:block">
                 Recipe list
               </p>
 
@@ -175,7 +175,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       type="button"
                       onClick={() => setSelectedRecipeId(recipe.id)}
                       className={`block w-full rounded-[18px] border px-4 py-3 text-left text-base font-medium transition ${
-                        isSelected ? "border-rose-600 bg-rose-500 text-white" : "border-transparent bg-white text-stone-800 hover:bg-rose-100"
+                        isSelected ? "border-amber-600 bg-amber-500 text-white" : "border-transparent bg-white text-stone-800 hover:bg-amber-100"
                       }`}
                     >
                       <div className="flex items-start justify-between gap-3">
@@ -190,12 +190,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
             <article className="rounded-[24px] border border-stone-200 bg-white p-4 sm:p-5">
               {!selectedRecipe ? (
-                <div className="rounded-[18px] border border-dashed border-rose-200 bg-white p-6 text-stone-600">
+                <div className="rounded-[18px] border border-dashed border-amber-200 bg-white p-6 text-stone-600">
                   No recipes match that filter yet.
                 </div>
               ) : (
                 <>
-                  <div className="relative h-56 w-full overflow-hidden rounded-[20px] bg-rose-50 sm:h-72">
+                  <div className="relative h-56 w-full overflow-hidden rounded-[20px] bg-amber-50 sm:h-72">
                     <Image
                       src={selectedRecipe.imageUrl}
                       alt={selectedRecipe.title}
@@ -222,7 +222,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       type="button"
                       onClick={() => toggleFavourite(selectedRecipe.id)}
                       className={`inline-flex min-h-12 items-center whitespace-nowrap rounded-full px-5 text-base font-semibold transition ${
-                        favourites[selectedRecipe.id] ? "bg-rose-100 text-rose-700" : "bg-white text-stone-600"
+                        favourites[selectedRecipe.id] ? "bg-amber-100 text-amber-800" : "bg-white text-stone-600"
                       }`}
                       aria-pressed={Boolean(favourites[selectedRecipe.id])}
                     >
@@ -234,7 +234,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                     {selectedRecipe.tags.map((tag) => (
                       <span
                         key={`${selectedRecipe.id}-${tag}`}
-                        className="rounded-full bg-rose-50 px-3 py-1 text-sm font-medium text-rose-700"
+                        className="rounded-full bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800"
                       >
                         {tag}
                       </span>
@@ -242,8 +242,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   </div>
 
                   {selectedRecipe.ingredients?.length ? (
-                    <div className="mt-5 rounded-[18px] border border-rose-100 bg-rose-50/60 p-4">
-                      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-rose-600">
+                    <div className="mt-5 rounded-[18px] border border-amber-100 bg-amber-50/60 p-4">
+                      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
                         Ingredients
                       </p>
                       <ul className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -266,7 +266,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       <ol className="mt-3 space-y-3 text-base leading-7 text-stone-700">
                         {selectedRecipe.instructions.map((step, index) => (
                           <li key={`${selectedRecipe.id}-step-${index}`} className="flex gap-3">
-                            <span className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-rose-50 text-sm font-semibold text-rose-600">
+                            <span className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-amber-50 text-sm font-semibold text-amber-700">
                               {index + 1}
                             </span>
                             <span>{step}</span>
