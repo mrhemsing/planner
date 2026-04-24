@@ -100,7 +100,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 alt="Planner logo"
                 width={62}
                 height={62}
-                className="h-[62px] w-[62px] object-cover"
+                className="h-[62px] w-[62px] object-cover mix-blend-multiply"
               />
               <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Healthy Weeknight Dinners</h1>
               <span className="rounded-full bg-amber-50 px-3 py-1 text-sm font-semibold text-amber-800">{recipeCount}</span>
