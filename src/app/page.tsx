@@ -37,19 +37,8 @@ const healthyDinners = healthyDinnerTargets.items
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#F1331E] px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-100"
-        style={{
-          backgroundImage: "url('/recipe-images/repeating-background.jpg')",
-          backgroundPosition: "center top",
-          backgroundRepeat: "repeat",
-          backgroundSize: "540px auto",
-        }}
-      />
-
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
+    <main className="min-h-screen overflow-x-hidden bg-[#F1331E] px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
         <RecipeBrowser
           sections={[
             {
