@@ -37,7 +37,7 @@ const healthyDinners = healthyDinnerTargets.items
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#F1331E] px-4 py-5 text-stone-900 sm:px-6 sm:py-8 lg:px-10">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#F1331E] px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-30"
@@ -49,7 +49,7 @@ export default function Home() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-6 sm:pt-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
         <RecipeBrowser
           sections={[
             {
