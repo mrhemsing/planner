@@ -137,7 +137,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         <section
           key={activeSection.id}
           id={activeSection.id}
-          className="rounded-[30px] border border-rose-200 bg-white p-5 shadow-sm shadow-rose-100/40 sm:p-6"
+          className="rounded-[30px] border border-rose-200 bg-[#F1331E] p-5 shadow-sm shadow-rose-100/40 sm:p-6"
+          style={{
+            backgroundImage: "url('/recipe-images/repeating-background.jpg')",
+            backgroundRepeat: "repeat",
+            backgroundPosition: "center top",
+            backgroundSize: "540px auto",
+          }}
         >
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div className="rounded-[24px] border border-rose-100 bg-rose-50/60 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
@@ -188,7 +194,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
             </div>
 
-            <article className="rounded-[24px] border border-stone-200 bg-stone-50/70 p-4 sm:p-5">
+            <article className="rounded-[24px] border border-stone-200 bg-white p-4 sm:p-5">
               {!selectedRecipe ? (
                 <div className="rounded-[18px] border border-dashed border-rose-200 bg-white p-6 text-stone-600">
                   No recipes match that filter yet.
