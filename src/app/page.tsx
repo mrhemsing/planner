@@ -37,7 +37,7 @@ const healthyDinners = healthyDinnerTargets.items
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
+    <main className="min-h-screen overflow-x-hidden bg-[#F1331E] px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
         <RecipeBrowser
           sections={[
