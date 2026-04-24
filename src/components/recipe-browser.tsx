@@ -55,7 +55,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   return (
     <section className="grid gap-6">
-      <div className="rounded-[30px] border border-rose-200 bg-white px-5 py-4 shadow-sm shadow-rose-100/40 sm:px-6">
+      <div className="px-1 py-1 sm:px-2">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">Healthy Weeknight Dinners</h1>
