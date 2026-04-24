@@ -95,6 +95,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
+              <Image
+                src="/recipe-images/site-logo.jpg"
+                alt="Planner logo"
+                width={56}
+                height={56}
+                className="h-14 w-14 rounded-[18px] object-cover"
+              />
               <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Healthy Weeknight Dinners</h1>
               <span className="rounded-full bg-amber-50 px-3 py-1 text-sm font-semibold text-amber-800">{recipeCount}</span>
             </div>
