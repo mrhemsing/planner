@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { RecipeBrowser } from "@/components/recipe-browser";
 import { recipeLibrary } from "@/lib/planner";
 import healthyDinnerTargets from "../../reports/healthy-dinners-target-list.json";
@@ -38,21 +37,19 @@ const healthyDinners = healthyDinnerTargets.items
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#F1331E] px-4 py-5 text-stone-900 sm:px-6 sm:py-8 lg:px-10">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6">
-        <section className="-mt-[50px] overflow-hidden bg-transparent shadow-none">
-          <div className="relative aspect-[16/7] w-full min-h-[220px]">
-            <Image
-              src="/recipe-images/header-illustration.jpg"
-              alt="Illustrated cooking header"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1280px) 100vw, 1200px"
-            />
-          </div>
-        </section>
+    <main className="relative min-h-screen overflow-x-hidden bg-[#F1331E] px-4 py-5 text-stone-900 sm:px-6 sm:py-8 lg:px-10">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-100"
+        style={{
+          backgroundImage: "url('/recipe-images/scattered-kitchen-shapes.png')",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "min(1800px, 140vw) auto",
+        }}
+      />
 
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-6 sm:pt-10">
         <RecipeBrowser
           sections={[
             {
