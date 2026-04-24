@@ -146,7 +146,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           }}
         >
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div className="rounded-[24px] border border-rose-100 bg-rose-50/60 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+            <div className="rounded-[24px] border border-rose-100 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="lg:hidden">
                 <label className="block">
                   <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.16em] text-rose-600">
