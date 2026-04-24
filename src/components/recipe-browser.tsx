@@ -98,9 +98,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               <Image
                 src="/recipe-images/site-logo.jpg"
                 alt="Planner logo"
-                width={56}
-                height={56}
-                className="h-14 w-14 rounded-[18px] object-cover"
+                width={62}
+                height={62}
+                className="h-[62px] w-[62px] rounded-[18px] object-cover"
               />
               <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Healthy Weeknight Dinners</h1>
               <span className="rounded-full bg-amber-50 px-3 py-1 text-sm font-semibold text-amber-800">{recipeCount}</span>
