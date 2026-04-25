@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "NYT Cooking Healthy Dinners",
   description:
-    "Five-day meal planning with Wild Rose recipes, quick-glance recipe cards, and checkable ingredient shopping lists.",
+    "A curated NYT Cooking healthy dinner picker with daily recipe recommendations, category filters, ingredients, and step-by-step instructions.",
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
