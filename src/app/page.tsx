@@ -35,6 +35,8 @@ const healthyDinners = healthyDinnerTargets.items
   )
   .filter((recipe, index, array): recipe is NonNullable<(typeof recipeLibrary)[number]> => Boolean(recipe) && array.indexOf(recipe) === index);
 
+const currentYear = new Date().getFullYear();
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#e23628] px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
@@ -49,14 +51,17 @@ export default function Home() {
             },
           ]}
         />
-        <a
-          href="https://b-average.com"
-          target="_blank"
-          rel="noreferrer"
-          className="self-start bg-white px-[6px] pb-1 pl-[6px] pr-[5px] pt-1 font-sans text-[11px] font-semibold uppercase leading-none tracking-[2.16px] text-black no-underline transition-colors duration-150 hover:bg-black hover:text-white"
-        >
-          B AVERAGE
-        </a>
+        <div className="flex items-center gap-2 self-start">
+          <span className="text-xs font-semibold text-white/90">© {currentYear}</span>
+          <a
+            href="https://b-average.com"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-white px-[6px] pb-1 pl-[6px] pr-[5px] pt-1 font-sans text-[11px] font-semibold uppercase leading-none tracking-[2.16px] text-black no-underline transition-colors duration-150 hover:bg-black hover:text-white"
+          >
+            B AVERAGE
+          </a>
+        </div>
       </div>
     </main>
   );
