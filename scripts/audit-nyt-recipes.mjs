@@ -16,13 +16,14 @@ const recipeEntries = [...text.matchAll(recipeEntryPattern)].map((match) => {
   return {
     id,
     title: stringValue(block, "title"),
+    category: stringValue(block, "category"),
     sourceUrl: stringValue(block, "sourceUrl"),
     imageUrl: /imageUrl:\s*placeholderImage,/.test(block) ? null : stringValue(block, "imageUrl"),
   };
 }).filter(Boolean);
 
 const ids = [...text.matchAll(/id: "([^"]+)"/g)].map((match) => match[1]);
-const titles = [...text.matchAll(/title: "([^"]+)"/g)].map((match) => match[1]);
+const titleCategoryPairs = recipeEntries.map((entry) => `${entry.category ?? "unknown"}::${entry.title}`);
 const urls = [...text.matchAll(/sourceUrl: "([^"]+)"/g)].map((match) => match[1]);
 const images = recipeEntries.map((entry) => entry.imageUrl).filter(Boolean);
 const nytUrls = urls.filter((url) => url.includes("cooking.nytimes.com"));
@@ -38,7 +39,10 @@ function duplicates(values) {
 }
 
 const duplicateIds = duplicates(ids);
-const duplicateTitles = duplicates(titles);
+const duplicateTitles = duplicates(titleCategoryPairs).map(([value, count]) => {
+  const [category, title] = value.split("::");
+  return [`${title} [${category}]`, count];
+});
 
 const slugMismatchMap = new Map();
 for (const [index, url] of urls.entries()) {
@@ -62,13 +66,20 @@ const invalidNytUrls = nytUrls.filter(
 
 const nonRecipeUrls = urls.filter((url) => !url.includes("/recipes/") && !url.includes("/blogs/recipes/"));
 
+const normalizePlannerIdForSlug = (id) => id.replace(/-(dinner|lunch)$/, "");
+
 const slugCoreMismatches = slugMismatches.filter((entry) => {
   const normalizedSlug = entry.slug.replace(/^\d+-/, "");
-  return entry.id !== normalizedSlug;
+  return normalizePlannerIdForSlug(entry.id) !== normalizedSlug;
 });
 const placeholderImageReferences = recipeEntries.filter((entry) => !entry.imageUrl).length;
 const recipesMissingImageField = ids.length - recipeEntries.length;
+const defaultOgImages = images.filter((url) => url === "https://cooking.nytimes.com/assets/defaultOg.png").length;
 const literalPlaceholderImages = images.filter((url) => url === "/princess-planner-logo.jpg").length;
+const recipesWithRealImages = images.filter(
+  (url) => url !== "https://cooking.nytimes.com/assets/defaultOg.png" && url !== "/princess-planner-logo.jpg",
+).length;
+const recipesWithoutRealImages = recipesMissingImageField + placeholderImageReferences + defaultOgImages + literalPlaceholderImages;
 const detailedRecipeCount = (text.match(/instructions:\s*\[/g) ?? []).length;
 const ingredientCoverageCount = (text.match(/ingredients:\s*ingredientMap\[/g) ?? []).length;
 const dinnerCount = (text.match(/category: "Dinner"/g) ?? []).length;
@@ -94,8 +105,10 @@ const summary = {
   nonRecipeUrls: nonRecipeUrls.length,
   placeholderImageReferences,
   recipesMissingImageField,
+  defaultOgImages,
   literalPlaceholderImages,
-  recipesWithRealImages: images.length,
+  recipesWithoutRealImages,
+  recipesWithRealImages,
 };
 
 console.log(JSON.stringify(summary, null, 2));

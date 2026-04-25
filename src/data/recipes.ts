@@ -1,5 +1,5 @@
-import healthyDinnerDetails from "./healthy-dinner-details.generated.ts";
-import missingFullDetails from "./missing-full-details.generated.ts";
+import healthyDinnerDetails from "./healthy-dinner-details.generated";
+import missingFullDetails from "./missing-full-details.generated";
 
 export type Ingredient = {
   item: string;
@@ -8705,6 +8705,8 @@ const recipeDetailsMap: Record<string, RecipeDetailsEntry> = {
     ],
     instructions: [
       "Bring a large pot of salted water to a boil. When boiling, add the pasta and cook until al dente. Drain and shake dry.",
+      "Meanwhile, into a large bowl, finely grate the garlic and the zest of the lemons. Juice the lemons into the bowl, then drain the oil from the sardine tins into the bowl while holding back the sardines. Add the crushed red pepper and stir to combine.",
+      "Add the hot pasta to the bowl and toss to coat. Gently stir in the arugula, sardines and Parmesan. Season to taste with salt and crushed red pepper. If the pasta or arugula seems dry, drizzle with olive oil and toss again.",
     ],
   },
   "sheet-pan-mushroom-parmigiana": {

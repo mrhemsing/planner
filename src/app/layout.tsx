@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NYT Cooking Planner",
+  title: "NYT Cooking Healthy Dinners",
   description:
     "Five-day meal planning with Wild Rose recipes, quick-glance recipe cards, and checkable ingredient shopping lists.",
   icons: {
@@ -33,7 +33,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#F1331E] text-stone-900">
+      <body className="min-h-full flex flex-col bg-[#cd2f12] text-stone-900">
         {children}
       </body>
     </html>

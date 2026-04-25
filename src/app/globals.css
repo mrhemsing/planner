@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f1331e;
+  --background: #cd2f12;
   --foreground: #1c1917;
 }
 
@@ -53,4 +53,158 @@ input:focus-visible {
 ::selection {
   background: #fde68a;
   color: #431407;
+}
+
+.category-chip {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(120, 53, 15, 0.08);
+  transform: translateZ(0);
+  transition:
+    color 220ms ease,
+    box-shadow 220ms ease,
+    transform 180ms ease;
+}
+
+.category-chip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  opacity: 0;
+  transform: translateX(-110%) scaleX(0.55);
+  transform-origin: left center;
+  transition:
+    opacity 260ms ease,
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category-chip-active {
+  box-shadow: 0 12px 28px rgba(217, 119, 6, 0.26);
+}
+
+.category-chip-active::before {
+  opacity: 1;
+  transform: translateX(0) scaleX(1);
+}
+
+.category-chip > span {
+  position: relative;
+  z-index: 1;
+}
+
+.recipe-tap-card {
+  transform: translateZ(0);
+  transition:
+    transform 160ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+.recipe-tap-card:active {
+  transform: scale(0.985) translateY(1px);
+}
+
+.bottom-sheet-backdrop {
+  animation: sheet-backdrop-fade 180ms ease-out both;
+}
+
+.bottom-sheet-panel {
+  animation: sheet-spring-up 520ms cubic-bezier(0.18, 0.98, 0.32, 1.08) both;
+  will-change: transform;
+}
+
+@keyframes sheet-backdrop-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sheet-spring-up {
+  0% {
+    transform: translateY(104%);
+  }
+  72% {
+    transform: translateY(-1.6%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.hand-strike {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-repeat: no-repeat;
+  padding-inline: 0.04em;
+  text-decoration-line: line-through;
+  text-decoration-skip-ink: none;
+}
+
+.hand-strike-1 {
+  text-decoration-color: rgba(107, 63, 42, 0.72);
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  background-image:
+    linear-gradient(178deg, transparent 0 46%, rgba(107, 63, 42, 0.34) 46% 49%, transparent 49% 100%),
+    linear-gradient(182deg, transparent 0 50%, rgba(107, 63, 42, 0.28) 50% 53%, transparent 53% 100%);
+  background-position: -0.03em 0, 0.04em 0;
+  background-size: 106% 100%, 98% 100%;
+}
+
+.hand-strike-2 {
+  text-decoration-color: rgba(123, 74, 52, 0.7);
+  text-decoration-thickness: 2.25px;
+  text-decoration-style: solid;
+  background-image:
+    linear-gradient(181deg, transparent 0 45%, rgba(123, 74, 52, 0.34) 45% 49%, transparent 49% 100%),
+    linear-gradient(177deg, transparent 0 51%, rgba(123, 74, 52, 0.28) 51% 54%, transparent 54% 100%);
+  background-position: 0.02em 0, -0.02em 0;
+  background-size: 104% 100%, 101% 100%;
+}
+
+.hand-strike-3 {
+  text-decoration-color: rgba(95, 64, 51, 0.68);
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  background-image:
+    linear-gradient(176deg, transparent 0 46%, rgba(95, 64, 51, 0.32) 46% 50%, transparent 50% 100%),
+    linear-gradient(183deg, transparent 0 50%, rgba(95, 64, 51, 0.24) 50% 53%, transparent 53% 100%);
+  background-position: -0.02em 0, 0.05em 0;
+  background-size: 103% 100%, 95% 100%;
+}
+
+.hand-strike-4 {
+  text-decoration-color: rgba(112, 65, 47, 0.72);
+  text-decoration-thickness: 1.8px;
+  text-decoration-style: solid;
+  background-image:
+    linear-gradient(183deg, transparent 0 46%, rgba(112, 65, 47, 0.34) 46% 50%, transparent 50% 100%),
+    linear-gradient(179deg, transparent 0 50%, rgba(112, 65, 47, 0.26) 50% 53%, transparent 53% 100%);
+  background-position: 0 0, 0.03em 0;
+  background-size: 107% 100%, 97% 100%;
 }

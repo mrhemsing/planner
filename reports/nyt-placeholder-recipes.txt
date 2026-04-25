@@ -1,22 +1,2 @@
-NYT placeholder-image recipes: 20
+NYT recipes without real images: 0
 
-1. one-pan-tofu-with-broccoli-and-sesame | One-Pan Tofu With Broccoli and Sesame | https://cooking.nytimes.com/recipes/1022637-one-pan-tofu-with-broccoli-and-sesame
-2. caramelized-sheet-pan-fish-tacos | Caramelized Sheet-Pan Fish Tacos | https://cooking.nytimes.com/recipes/1021880-caramelized-sheet-pan-fish-tacos
-3. crispy-rice-bowl-with-spring-vegetables-and-fried-eggs | Crispy Rice Bowl With Spring Vegetables and Fried Eggs | https://cooking.nytimes.com/recipes/1025427-crispy-rice-bowl-with-spring-vegetables-and-fried-eggs
-4. salsa-verde-pepper-and-onion-frittata | Salsa Verde Pepper and Onion Frittata | https://cooking.nytimes.com/recipes/1025205-salsa-verde-pepper-and-onion-frittata
-5. chicken-meatballs-with-ginger-and-cabbage | Chicken Meatballs With Ginger and Cabbage | https://cooking.nytimes.com/recipes/1020707-chicken-meatballs-with-ginger-and-cabbage
-6. peanut-braised-chicken | Peanut-Braised Chicken | https://cooking.nytimes.com/recipes/1027148-peanut-braised-chicken
-7. one-pot-salmon-and-shiitake-rice | One-Pot Salmon and Shiitake Rice | https://cooking.nytimes.com/recipes/1025097-one-pot-salmon-and-shiitake-rice
-8. spicy-lime-salmon-with-wakame-kale-and-avocado | Spicy Lime Salmon With Wakame, Kale and Avocado | https://cooking.nytimes.com/recipes/1027181-spicy-lime-salmon-with-wakame-kale-and-avocado
-9. crispy-beans-and-greens-with-fried-eggs | Crispy Beans and Greens With Fried Eggs | https://cooking.nytimes.com/recipes/1027029-crispy-beans-and-greens-with-fried-eggs
-10. gochujang-salmon-with-sesame-bok-choy | Gochujang Salmon With Sesame Bok Choy | https://cooking.nytimes.com/recipes/1023678-gochujang-salmon-with-sesame-bok-choy
-11. crispy-fish-with-brown-butter-sauce-and-kale | Crispy Fish With Brown Butter Sauce and Kale | https://cooking.nytimes.com/recipes/1023344-crispy-fish-with-brown-butter-sauce-and-kale
-12. sambal-salmon-bowls | Sambal Salmon Bowls | https://cooking.nytimes.com/recipes/1026196-sambal-salmon-bowls
-13. sheet-pan-chicken-with-cauliflower-and-arugula | Sheet-Pan Chicken With Cauliflower and Arugula | https://cooking.nytimes.com/recipes/1021671-sheet-pan-chicken-with-cauliflower-and-arugula
-14. coconut-curry-salmon-with-green-beans | Coconut Curry Salmon With Green Beans | https://cooking.nytimes.com/recipes/1025174-coconut-curry-salmon-with-green-beans
-15. cheesy-skillet-broccoli-orzo | Cheesy Skillet Broccoli Orzo | https://cooking.nytimes.com/recipes/1026999-cheesy-skillet-broccoli-orzo
-16. turkey-zucchini-and-carrot-burgers | Turkey, Zucchini and Carrot Burgers | https://cooking.nytimes.com/recipes/1020443-turkey-zucchini-and-carrot-burgers
-17. tofu-salad-sandwich | Tofu Salad Sandwich | https://cooking.nytimes.com/recipes/1027215-tofu-salad-sandwich
-18. tinned-fish-and-cucumber-salad | Tinned Fish and Cucumber Salad | https://cooking.nytimes.com/recipes/1027242-tinned-fish-and-cucumber-salad
-19. spicy-salmon-rice-bowl | Spicy Salmon Rice Bowl | https://cooking.nytimes.com/recipes/1026988-spicy-salmon-rice-bowl
-20. tomato-turmeric-soup | Tomato Turmeric Soup | https://cooking.nytimes.com/recipes/1022868-tomato-turmeric-soup

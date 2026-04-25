@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "audit:recipes": "node scripts/audit-nyt-recipes.mjs",
+    "audit:recipes-live": "node scripts/audit-nyt-recipes-live.mjs",
     "import:wildrose": "node scripts/fetch-wildrose-metadata.mjs"
   },
   "dependencies": {

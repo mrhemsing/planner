@@ -5,6 +5,13 @@ import { useEffect, useMemo, useState } from "react";
 import type { RecipeLibraryEntry } from "@/data/recipes";
 
 const STORAGE_KEY = "princess-planner-favourites";
+const INGREDIENTS_STORAGE_KEY = "princess-planner-ingredient-checks";
+const INGREDIENT_STRIKE_CLASSES = [
+  "hand-strike hand-strike-1",
+  "hand-strike hand-strike-2",
+  "hand-strike hand-strike-3",
+  "hand-strike hand-strike-4",
+];
 
 type RecipeSection = {
   id: string;
@@ -14,14 +21,20 @@ type RecipeSection = {
 };
 
 export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
-  const [favourites, setFavourites] = useState<Record<string, boolean>>({});
-  const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
-  const [selectedRecipeId, setSelectedRecipeId] = useState<string>(sections[0]?.recipes[0]?.id ?? "");
-  const [activeFilter, setActiveFilter] = useState<string>("all");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [hydrated, setHydrated] = useState(false);
-
   const allRecipes = useMemo(() => sections.flatMap((section) => section.recipes), [sections]);
+  const defaultFavourites = useMemo(
+    () => Object.fromEntries(allRecipes.map((recipe) => [recipe.id, recipe.favourite])),
+    [allRecipes],
+  );
+
+  const [favourites, setFavourites] = useState<Record<string, boolean>>(defaultFavourites);
+  const [ingredientChecks, setIngredientChecks] = useState<Record<string, boolean>>({});
+  const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
+  const dailyDinnerPickId = useMemo(() => getDailyDinnerPickId(sections[0]?.recipes ?? []), [sections]);
+  const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
+  const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [hydrated, setHydrated] = useState(false);
+  const [isRecipeSheetOpen, setRecipeSheetOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -29,19 +42,51 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       if (stored) {
         setFavourites(JSON.parse(stored) as Record<string, boolean>);
       } else {
-        setFavourites(Object.fromEntries(allRecipes.map((recipe) => [recipe.id, recipe.favourite])));
+        setFavourites(defaultFavourites);
       }
     } catch {
-      setFavourites(Object.fromEntries(allRecipes.map((recipe) => [recipe.id, recipe.favourite])));
+      setFavourites(defaultFavourites);
     } finally {
       setHydrated(true);
     }
-  }, [allRecipes]);
+  }, [defaultFavourites]);
+
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(INGREDIENTS_STORAGE_KEY);
+      if (stored) {
+        setIngredientChecks(JSON.parse(stored) as Record<string, boolean>);
+      }
+    } catch {
+      setIngredientChecks({});
+    }
+  }, []);
 
   useEffect(() => {
     if (!hydrated) return;
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(favourites));
   }, [favourites, hydrated]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    window.localStorage.setItem(INGREDIENTS_STORAGE_KEY, JSON.stringify(ingredientChecks));
+  }, [ingredientChecks, hydrated]);
+
+  useEffect(() => {
+    const syncFromUrl = () => {
+      const recipeIdFromUrl = new URLSearchParams(window.location.search).get("recipe");
+      if (!recipeIdFromUrl) return;
+
+      const matchingRecipe = allRecipes.find((recipe) => recipe.id === recipeIdFromUrl);
+      if (matchingRecipe) {
+        setSelectedRecipeId(matchingRecipe.id);
+      }
+    };
+
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, [allRecipes]);
 
   const activeSection = sections.find((section) => section.id === activeSectionId) ?? sections[0];
   const sortedRecipes = useMemo(
@@ -50,37 +95,105 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   );
 
   const filteredRecipes = useMemo(() => {
-    const query = searchQuery.trim().toLowerCase();
-
     return sortedRecipes.filter((recipe) => {
-      if (activeFilter !== "all" && getRecipeCategory(recipe) !== activeFilter) {
+      if (activeFilter === "favourites") {
+        if (!favourites[recipe.id]) {
+          return false;
+        }
+      } else if (activeFilter === "quick") {
+        if (!isQuickPrepRecipe(recipe)) {
+          return false;
+        }
+      } else if (activeFilter !== "all" && getRecipeCategory(recipe) !== activeFilter) {
         return false;
       }
 
-      if (!query) return true;
-
-      const haystack = [recipe.title, recipe.description, recipe.tags.join(" ")].join(" ").toLowerCase();
-      return haystack.includes(query);
+      return true;
     });
-  }, [activeFilter, searchQuery, sortedRecipes]);
+  }, [activeFilter, favourites, sortedRecipes]);
+
+  const dailyFilteredPickId = useMemo(() => getDailyDinnerPickId(filteredRecipes), [filteredRecipes]);
 
   useEffect(() => {
-    if (!filteredRecipes.length) return;
-    if (!filteredRecipes.some((recipe) => recipe.id === selectedRecipeId)) {
-      setSelectedRecipeId(filteredRecipes[0].id);
-    }
-  }, [filteredRecipes, selectedRecipeId]);
+    if (!dailyFilteredPickId) return;
+    setSelectedRecipeId(dailyFilteredPickId);
+  }, [activeFilter, dailyFilteredPickId]);
+
+  useEffect(() => {
+    if (!selectedRecipeId) return;
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("recipe") === selectedRecipeId) return;
+
+    params.set("recipe", selectedRecipeId);
+    const query = params.toString();
+    const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+    window.history.replaceState(null, "", nextUrl);
+  }, [selectedRecipeId]);
 
   const selectedRecipe =
-    filteredRecipes.find((recipe) => recipe.id === selectedRecipeId) ?? filteredRecipes[0] ?? null;
-  const recipeCount = filteredRecipes.length;
+    filteredRecipes.find((recipe) => recipe.id === selectedRecipeId) ??
+    filteredRecipes.find((recipe) => recipe.id === dailyFilteredPickId) ??
+    filteredRecipes[0] ??
+    null;
+  const favouriteCount = sortedRecipes.filter((recipe) => favourites[recipe.id]).length;
+  const showFavouritesFilter = hydrated && favouriteCount > 0;
 
   const filters = [
-    { id: "all", label: `All (${sortedRecipes.length})` },
-    { id: "meat", label: `Meat (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "meat").length})` },
-    { id: "fish", label: `Fish (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "fish").length})` },
-    { id: "vegetarian", label: `Vegetarian (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "vegetarian").length})` },
+    {
+      id: "all",
+      label: `All (${sortedRecipes.length})`,
+      mobileLabel: `🍽️ ${sortedRecipes.length}`,
+      ariaLabel: "All recipes",
+      browseLabel: "Browse all recipes",
+    },
+    ...(showFavouritesFilter
+      ? [
+          {
+            id: "favourites",
+            label: `Favourites (${favouriteCount})`,
+            mobileLabel: `❤️ ${favouriteCount}`,
+            ariaLabel: "Favourite recipes",
+            browseLabel: "Browse all favourite recipes",
+          },
+        ]
+      : []),
+    {
+      id: "quick",
+      label: `⚡ 30 min or less (${sortedRecipes.filter(isQuickPrepRecipe).length})`,
+      mobileLabel: `⚡ ${sortedRecipes.filter(isQuickPrepRecipe).length}`,
+      ariaLabel: "30 minutes or less prep",
+      browseLabel: "Browse all 30 min recipes",
+    },
+    {
+      id: "meat",
+      label: `🥩 Meat (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "meat").length})`,
+      mobileLabel: `🥩 ${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "meat").length}`,
+      ariaLabel: "Meat recipes",
+      browseLabel: "Browse all meat recipes",
+    },
+    {
+      id: "fish",
+      label: `🐟 Fish (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "fish").length})`,
+      mobileLabel: `🐟 ${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "fish").length}`,
+      ariaLabel: "Fish recipes",
+      browseLabel: "Browse all fish recipes",
+    },
+    {
+      id: "vegetarian",
+      label: `🥦 Vegetarian (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "vegetarian").length})`,
+      mobileLabel: `🥦 ${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "vegetarian").length}`,
+      ariaLabel: "Vegetarian recipes",
+      browseLabel: "Browse all vegetarian recipes",
+    },
   ];
+  const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
+
+  useEffect(() => {
+    if (activeFilter === "favourites" && !showFavouritesFilter) {
+      setActiveFilter("all");
+    }
+  }, [activeFilter, showFavouritesFilter]);
 
   const toggleFavourite = (id: string) => {
     setFavourites((current) => ({
@@ -89,53 +202,83 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     }));
   };
 
+  const toggleIngredientCheck = (key: string) => {
+    setIngredientChecks((current) => ({
+      ...current,
+      [key]: !current[key],
+    }));
+  };
+
+  const selectRecipe = (id: string) => {
+    setSelectedRecipeId(id);
+    setRecipeSheetOpen(false);
+  };
+
+  const returnHome = () => {
+    setActiveFilter("all");
+    setSelectedRecipeId(dailyDinnerPickId);
+    setRecipeSheetOpen(false);
+    window.history.replaceState(null, "", window.location.pathname);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const renderFilterButton = (filter: (typeof filters)[number]) => {
+    const isActive = filter.id === activeFilter;
+
+    return (
+      <button
+        key={filter.id}
+        type="button"
+        onClick={() => setActiveFilter(filter.id)}
+        aria-label={filter.ariaLabel}
+        title={filter.ariaLabel}
+        className={`category-chip rounded-2xl bg-white px-3 py-2 text-sm font-semibold sm:px-4 ${
+          isActive ? "category-chip-active text-white" : "text-amber-800 hover:text-amber-900"
+        }`}
+      >
+        <span className="sm:hidden">{filter.mobileLabel}</span>
+        <span className="hidden sm:inline">{filter.label}</span>
+      </button>
+    );
+  };
+
   return (
     <section className="grid gap-6">
-      <div className="mt-[30px] px-1 py-1 sm:px-2">
-        <div className="flex flex-col gap-4">
+      <div className="mt-4 px-1 py-1 sm:mt-[30px] sm:px-2">
+        <div className="flex flex-col gap-5 sm:gap-4">
           <div className="flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
+            <button type="button" onClick={returnHome} className="recipe-tap-card flex items-center gap-3 text-left" aria-label="Return to homepage">
               <Image
-                src="/recipe-images/site-logo.jpg"
+                src="/recipe-images/site-logo-v2.jpg"
                 alt="Planner logo"
-                width={62}
-                height={62}
-                className="h-[62px] w-[62px] object-cover mix-blend-multiply"
+                width={75}
+                height={75}
+                className="h-[75px] w-[75px] object-contain lg:h-[83px] lg:w-[83px]"
               />
-              <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Healthy Weeknight Dinners</h1>
-              <span className="rounded-full bg-amber-50 px-3 py-1 text-sm font-semibold text-amber-800">{recipeCount}</span>
-            </div>
+              <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-3xl">NYT Cooking Healthy Dinners</h1>
+            </button>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-wrap gap-2">
-              {filters.map((filter) => {
-                const isActive = filter.id === activeFilter;
-                return (
-                  <button
-                    key={filter.id}
-                    type="button"
-                    onClick={() => setActiveFilter(filter.id)}
-                    className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                      isActive ? "bg-amber-500 text-white" : "bg-white text-amber-800 hover:bg-amber-50"
-                    }`}
-                  >
-                    {filter.label}
-                  </button>
-                );
-              })}
+            <div className="flex flex-nowrap gap-2 overflow-x-auto pb-1 sm:hidden">
+              {filters.map(renderFilterButton)}
+            </div>
+            <div className="hidden flex-wrap gap-2 sm:flex">
+              {filters.map(renderFilterButton)}
             </div>
 
-            <label className="block sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
-              <span className="sr-only">Search recipes</span>
-              <input
-                type="search"
-                value={searchQuery}
-                onChange={(event) => setSearchQuery(event.target.value)}
-                placeholder="Search recipes..."
-                className="min-h-11 w-full rounded-full border border-black/10 bg-white px-4 text-sm text-stone-900 outline-none placeholder:text-stone-400 focus:border-amber-500"
-              />
-            </label>
+            <button
+              type="button"
+              onClick={() => setRecipeSheetOpen(true)}
+              className="recipe-tap-card flex min-h-11 w-full items-center justify-between rounded-2xl border border-black/10 bg-white px-4 text-left text-sm font-semibold text-stone-900 outline-none transition hover:bg-amber-50 focus:border-amber-500 sm:hidden"
+            >
+              <span>{activeFilterDetails.browseLabel}</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+
+            <div className="hidden min-h-11 items-center rounded-2xl border border-black/10 bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
+              Today&rsquo;s Dinner Pick
+            </div>
           </div>
         </div>
       </div>
@@ -144,27 +287,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         <section
           key={activeSection.id}
           id={activeSection.id}
-          className="rounded-[30px] border border-amber-200 bg-white p-5 shadow-sm shadow-amber-100/40 sm:p-6"
+          className="rounded-[24px] border border-amber-200 bg-white p-5 shadow-sm shadow-amber-100/40 sm:p-6"
         >
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div className="rounded-[24px] border border-stone-300 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+            <div className="rounded-[20px] border border-stone-300 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="lg:hidden">
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
-                    Recipe menu
-                  </span>
-                  <select
-                    value={selectedRecipe?.id ?? ""}
-                    onChange={(event) => setSelectedRecipeId(event.target.value)}
-                    className="min-h-12 w-full rounded-[18px] border border-amber-300 bg-white px-4 text-base font-medium text-stone-900 outline-none focus:border-amber-500"
-                  >
-                    {filteredRecipes.map((recipe) => (
-                      <option key={`${activeSection.id}-option-${recipe.id}`} value={recipe.id}>
-                        {recipe.title}
-                      </option>
-                    ))}
-                  </select>
-                </label>
+                <p className="rounded-[16px] border border-amber-300 bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
+                  Today&rsquo;s Dinner Pick
+                </p>
               </div>
 
               <p className="hidden text-sm font-semibold uppercase tracking-[0.16em] text-amber-700 lg:block">
@@ -172,22 +302,26 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </p>
 
               <div className="mt-3 hidden flex-col gap-2 lg:flex">
-                {filteredRecipes.map((recipe) => {
+                {filteredRecipes.map((recipe, index) => {
                   const isSelected = selectedRecipe.id === recipe.id;
-                  const isFavourite = Boolean(favourites[recipe.id]);
+                  const altRowClass = index % 2 === 0 ? "bg-stone-50" : "bg-amber-50/40";
 
                   return (
                     <button
                       key={`${activeSection.id}-jump-${recipe.id}`}
                       type="button"
                       onClick={() => setSelectedRecipeId(recipe.id)}
-                      className={`block w-full rounded-[18px] border px-4 py-3 text-left text-base font-medium transition ${
-                        isSelected ? "border-amber-600 bg-amber-500 text-white" : "border-transparent bg-white text-stone-800 hover:bg-amber-100"
+                      className={`recipe-tap-card block w-full rounded-[16px] border px-4 py-3 text-left text-base font-medium ${
+                        isSelected
+                          ? "border-amber-600 bg-amber-500 text-white shadow-[0_10px_24px_rgba(217,119,6,0.22)]"
+                          : `border-transparent ${altRowClass} text-stone-800 hover:bg-amber-100`
                       }`}
                     >
                       <div className="flex items-start justify-between gap-3">
                         <span className="block text-left leading-6">{recipe.title}</span>
-                        <div className="flex items-center gap-2">{isFavourite ? <span className="text-sm">♥</span> : null}</div>
+                        <div className="flex items-center gap-2">
+                          {isSelected ? <span className="h-8 w-1 rounded-full bg-white/85" aria-hidden="true" /> : null}
+                        </div>
                       </div>
                     </button>
                   );
@@ -195,14 +329,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
             </div>
 
-            <article className="rounded-[24px] border border-stone-300 bg-white p-4 sm:p-5">
+            <article className="rounded-[20px] border border-stone-300 bg-white p-4 sm:p-5">
               {!selectedRecipe ? (
-                <div className="rounded-[18px] border border-dashed border-amber-200 bg-white p-6 text-stone-600">
+                <div className="rounded-[16px] border border-dashed border-amber-200 bg-white p-6 text-stone-600">
                   No recipes match that filter yet.
                 </div>
               ) : (
                 <>
-                  <div className="relative h-56 w-full overflow-hidden rounded-[20px] bg-amber-50 sm:h-72">
+                  <div className="relative h-56 w-full overflow-hidden rounded-[16px] bg-amber-50 sm:h-72">
                     <Image
                       src={selectedRecipe.imageUrl}
                       alt={selectedRecipe.title}
@@ -218,9 +352,27 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       <p className="mt-3 text-lg leading-8 text-stone-700 sm:text-xl sm:leading-9">
                         {selectedRecipe.description}
                       </p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        <FilterChip label={selectedRecipe.category} />
-                        <FilterChip label={selectedRecipe.sourceName} />
+                      <div className="mt-5 sm:hidden">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex flex-col items-start gap-[4px] text-base text-stone-800">
+                            {selectedRecipe.prepTime ? <span className="block m-0 p-0 leading-[1.1]">{`Prep ${selectedRecipe.prepTime}`}</span> : null}
+                            {selectedRecipe.serves ? <span className="block m-0 p-0 leading-[1.1]">{`Serves ${selectedRecipe.serves}`}</span> : null}
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => toggleFavourite(selectedRecipe.id)}
+                            className={`inline-flex min-h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-2xl border px-4 shadow-sm transition active:scale-[0.98] ${
+                              favourites[selectedRecipe.id]
+                                ? "border-amber-200 bg-amber-100 text-amber-800"
+                                : "border-stone-300 bg-white text-stone-700"
+                            }`}
+                            aria-pressed={Boolean(favourites[selectedRecipe.id])}
+                          >
+                            {favourites[selectedRecipe.id] ? "Added ⭐" : "Add ⭐"}
+                          </button>
+                        </div>
+                      </div>
+                      <div className="mt-4 hidden flex-wrap gap-2 sm:flex">
                         {selectedRecipe.prepTime ? <FilterChip label={`Prep ${selectedRecipe.prepTime}`} /> : null}
                         {selectedRecipe.serves ? <FilterChip label={`Serves ${selectedRecipe.serves}`} /> : null}
                       </div>
@@ -228,7 +380,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                     <button
                       type="button"
                       onClick={() => toggleFavourite(selectedRecipe.id)}
-                      className={`inline-flex min-h-12 items-center whitespace-nowrap rounded-full px-5 text-base font-semibold transition ${
+                      className={`hidden min-h-12 items-center whitespace-nowrap rounded-2xl px-5 text-base font-semibold transition sm:inline-flex ${
                         favourites[selectedRecipe.id] ? "bg-amber-100 text-amber-800" : "bg-white text-stone-600"
                       }`}
                       aria-pressed={Boolean(favourites[selectedRecipe.id])}
@@ -237,43 +389,55 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                     </button>
                   </div>
 
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {selectedRecipe.tags.map((tag) => (
-                      <span
-                        key={`${selectedRecipe.id}-${tag}`}
-                        className="rounded-full bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
                   {selectedRecipe.ingredients?.length ? (
-                    <div className="mt-5 rounded-[18px] border border-stone-300 bg-amber-50/60 p-4">
+                    <div className="mt-5 rounded-[16px] border border-stone-300 bg-amber-50/60 p-4">
                       <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
                         Ingredients
                       </p>
                       <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-                        {selectedRecipe.ingredients.map((ingredient, index) => (
-                          <li
-                            key={`${selectedRecipe.id}-${ingredient.item}-${index}`}
-                            className="flex items-center gap-3 rounded-[14px] bg-white px-3 py-2 text-sm text-stone-800"
-                          >
-                            <span className="font-medium text-stone-600">{ingredient.amount}</span>
-                            <span>{ingredient.item}</span>
-                          </li>
-                        ))}
+                        {selectedRecipe.ingredients.map((ingredient, index) => {
+                          const ingredientKey = `${selectedRecipe.id}-${index}-${ingredient.item}`;
+                          const isChecked = Boolean(ingredientChecks[ingredientKey]);
+                          const hasQuantity = hasIngredientQuantity(ingredient.amount);
+                          const ingredientText = hasQuantity
+                            ? ingredient.item
+                            : `${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim();
+                          const strikeClass = INGREDIENT_STRIKE_CLASSES[index % INGREDIENT_STRIKE_CLASSES.length];
+
+                          return (
+                            <li key={`${selectedRecipe.id}-${ingredient.item}-${index}`}>
+                              <label className="flex cursor-pointer items-start gap-3 rounded-[12px] bg-white px-3 py-2 text-sm text-stone-800">
+                                <input
+                                  type="checkbox"
+                                  checked={isChecked}
+                                  onChange={() => toggleIngredientCheck(ingredientKey)}
+                                  className="mt-0.5 h-4 w-4 shrink-0 rounded border-stone-300 text-amber-600 focus:ring-amber-500 sm:hidden"
+                                />
+                                {hasQuantity ? (
+                                  <span
+                                    className={`font-medium text-stone-600 ${isChecked ? `opacity-60 ${strikeClass}` : ""}`}
+                                  >
+                                    {ingredient.amount}
+                                  </span>
+                                ) : null}
+                                <span className={isChecked ? `opacity-60 ${strikeClass}` : ""}>
+                                  {ingredientText}
+                                </span>
+                              </label>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   ) : null}
 
                   {selectedRecipe.instructions?.length ? (
-                    <div className="mt-5 rounded-[18px] border border-stone-300 bg-white p-4">
+                    <div className="mt-5 rounded-[16px] border border-stone-300 bg-white p-4">
                       <p className="text-sm font-semibold uppercase tracking-[0.16em] text-stone-700">Instructions</p>
                       <ol className="mt-3 space-y-3 text-base leading-7 text-stone-700">
                         {selectedRecipe.instructions.map((step, index) => (
                           <li key={`${selectedRecipe.id}-step-${index}`} className="flex gap-3">
-                            <span className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-amber-50 text-sm font-semibold text-amber-700">
+                            <span className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-xl bg-amber-50 text-sm font-semibold text-amber-700">
                               {index + 1}
                             </span>
                             <span>{step}</span>
@@ -288,7 +452,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       href={selectedRecipe.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-12 items-center rounded-full bg-black px-5 text-base font-semibold !text-white transition hover:bg-stone-800"
+                      className="inline-flex min-h-12 items-center rounded-2xl bg-black px-5 text-base font-semibold !text-white transition hover:bg-stone-800"
                     >
                       Open recipe on NYT Cooking
                     </a>
@@ -299,12 +463,68 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           </div>
         </section>
       ) : null}
+
+      {isRecipeSheetOpen ? (
+        <div className="bottom-sheet-backdrop fixed inset-0 z-50 bg-black/35 sm:hidden" role="dialog" aria-modal="true" aria-label={activeFilterDetails.browseLabel}>
+          <div className="bottom-sheet-panel absolute inset-x-0 bottom-0 flex h-[94dvh] flex-col rounded-t-[28px] bg-white shadow-[0_-18px_60px_rgba(0,0,0,0.24)]">
+            <div className="sticky top-0 z-10 border-b border-stone-200 bg-white px-5 py-4">
+              <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-stone-300" aria-hidden="true" />
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">{activeFilterDetails.browseLabel}</p>
+                  <p className="mt-1 text-sm text-stone-500">{filteredRecipes.length} recipes</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setRecipeSheetOpen(false)}
+                  className="recipe-tap-card rounded-2xl border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+              <div className="grid gap-3 pb-8">
+                {filteredRecipes.map((recipe) => {
+                  const isSelected = recipe.id === selectedRecipeId;
+
+                  return (
+                    <button
+                      key={`${activeSection?.id ?? "recipes"}-sheet-${recipe.id}`}
+                      type="button"
+                      onClick={() => selectRecipe(recipe.id)}
+                      className={`recipe-tap-card grid grid-cols-[72px_1fr] gap-3 rounded-[18px] border p-2 text-left ${
+                        isSelected ? "border-amber-500 bg-amber-50" : "border-stone-200 bg-white"
+                      }`}
+                    >
+                      <div className="relative h-[72px] w-[72px] overflow-hidden rounded-[14px] bg-amber-50">
+                        <Image src={recipe.imageUrl} alt="" fill className="object-cover" sizes="72px" />
+                      </div>
+                      <div className="min-w-0 py-1">
+                        <p className="line-clamp-2 text-base font-semibold leading-snug text-stone-900">{recipe.title}</p>
+                        <p className="mt-1 text-sm text-stone-500">
+                          {[recipe.prepTime ? `Prep ${recipe.prepTime}` : null, recipe.serves ? `Serves ${recipe.serves}` : null].filter(Boolean).join(" · ")}
+                        </p>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }
 
 function FilterChip({ label }: { label: string }) {
-  return <span className="rounded-full bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
+  return <span className="rounded-2xl bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
+}
+
+function hasIngredientQuantity(amount: string) {
+  return /[\d¼½¾⅓⅔⅛⅜⅝⅞]/.test(amount);
 }
 
 function getRecipeCategory(recipe: RecipeLibraryEntry) {
@@ -321,3 +541,45 @@ function getRecipeCategory(recipe: RecipeLibraryEntry) {
   return "vegetarian";
 }
 
+function isQuickPrepRecipe(recipe: RecipeLibraryEntry) {
+  if (!recipe.prepTime) return false;
+
+  const lowerPrepTime = recipe.prepTime.toLowerCase();
+  const hourMatch = lowerPrepTime.match(/(\d+(?:\.\d+)?)\s*(?:hour|hr)/);
+  const minuteMatch = lowerPrepTime.match(/(\d+)\s*(?:minute|min)/);
+  const totalMinutes = (hourMatch ? Number(hourMatch[1]) * 60 : 0) + (minuteMatch ? Number(minuteMatch[1]) : 0);
+
+  return totalMinutes > 0 && totalMinutes <= 30;
+}
+
+function getDailyDinnerPickId(recipes: RecipeLibraryEntry[]) {
+  if (!recipes.length) return "";
+
+  const sortedIds = [...recipes].map((recipe) => recipe.id).sort();
+  const dateKey = getPacificDateKey();
+  const hash = hashString(`${dateKey}:${sortedIds.join("|")}`);
+  return sortedIds[hash % sortedIds.length];
+}
+
+function getPacificDateKey() {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Los_Angeles",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const valueFor = (type: string) => parts.find((part) => part.type === type)?.value ?? "";
+
+  return `${valueFor("year")}-${valueFor("month")}-${valueFor("day")}`;
+}
+
+function hashString(value: string) {
+  let hash = 2166136261;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return hash >>> 0;
+}
