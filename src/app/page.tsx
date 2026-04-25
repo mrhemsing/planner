@@ -38,14 +38,6 @@ const healthyDinners = healthyDinnerTargets.items
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#cd2f12] px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
-      <a
-        href="https://b-average.com"
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-3 left-3 z-40 bg-white px-[6px] pb-1 pl-[6px] pr-[5px] pt-1 font-sans text-[11px] font-semibold uppercase leading-none tracking-[2.16px] text-black no-underline transition-colors duration-150 hover:bg-black hover:text-white sm:bottom-4 sm:left-4"
-      >
-        B AVERAGE
-      </a>
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
         <RecipeBrowser
           sections={[
@@ -57,6 +49,14 @@ export default function Home() {
             },
           ]}
         />
+        <a
+          href="https://b-average.com"
+          target="_blank"
+          rel="noreferrer"
+          className="self-start bg-white px-[6px] pb-1 pl-[6px] pr-[5px] pt-1 font-sans text-[11px] font-semibold uppercase leading-none tracking-[2.16px] text-black no-underline transition-colors duration-150 hover:bg-black hover:text-white"
+        >
+          B AVERAGE
+        </a>
       </div>
     </main>
   );
