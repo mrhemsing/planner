@@ -355,7 +355,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       <div className="mt-5 sm:hidden">
                         <div className="flex items-start justify-between gap-3">
                           <div className="flex flex-col items-start gap-[4px] text-base text-stone-800">
-                            {selectedRecipe.prepTime ? <span className="block m-0 p-0 leading-[1.1]">{`Prep ${selectedRecipe.prepTime}`}</span> : null}
+                            {selectedRecipe.prepTime ? <span className="mt-1 block p-0 leading-[1.1]">{`Prep ${selectedRecipe.prepTime}`}</span> : null}
                             {selectedRecipe.serves ? <span className="block m-0 p-0 leading-[1.1]">{`Serves ${selectedRecipe.serves}`}</span> : null}
                           </div>
                           <button
