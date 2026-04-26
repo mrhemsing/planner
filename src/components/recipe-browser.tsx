@@ -12,7 +12,7 @@ const INGREDIENT_STRIKE_CLASSES = [
   "hand-strike hand-strike-3",
   "hand-strike hand-strike-4",
 ];
-const DAILY_PICK_REFRESH_SALT = "2026-04-26-refresh-1";
+const DAILY_PICK_REFRESH_SALT = "2026-04-26-refresh-2";
 
 type RecipeSection = {
   id: string;
