@@ -279,7 +279,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             </button>
 
             <div className="hidden min-h-11 items-center rounded-2xl border border-black/10 bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
-              Today&rsquo;s Dinner Pick
+              TODAY&rsquo;S DINNER PICK
             </div>
           </div>
         </div>
@@ -295,7 +295,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             <div className="rounded-[20px] border border-stone-300 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="lg:hidden">
                 <p className="rounded-[16px] border border-amber-300 bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
-                  Today&rsquo;s Dinner Pick
+                  TODAY&rsquo;S DINNER PICK
                 </p>
               </div>
 
@@ -589,3 +589,4 @@ function hashString(value: string) {
 
   return hash >>> 0;
 }
+
