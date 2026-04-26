@@ -14,7 +14,10 @@ const INGREDIENT_STRIKE_CLASSES = [
   "hand-strike hand-strike-4",
 ];
 const DAILY_PICK_REFRESH_SALT = "2026-04-26-refresh-3";
-const VEGETARIAN_CATEGORY_OVERRIDES = new Set(["i-cant-believe-its-not-chicken-super-savory-grated-tofu"]);
+const VEGETARIAN_CATEGORY_OVERRIDES = new Set([
+  "chickpea-noodle-soup",
+  "i-cant-believe-its-not-chicken-super-savory-grated-tofu",
+]);
 
 type RecipeSection = {
   id: string;

@@ -4115,7 +4115,7 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
     imageUrl: "https://static01.nyt.com/images/2025/04/24/multimedia/AS-Chickpea-noodle-soup-ljvq/AS-Chickpea-noodle-soup-ljvq-threeByTwoMediumAt2X.jpg",
     description: "With a golden broth, creamy chickpeas and bouncy angel hair noodles, this quick vegan soup will remind you of chicken noodle soup. To create a savory broth, sizzle carrots, cele...",
     favourite: false,
-    tags: ["dinner", "healthy dinners", "nyt"],
+    tags: ["dinner", "healthy dinners", "nyt", "vegetarian", "vegan", "chickpeas", "soup", "noodles", "quick"],
     plannedDays: [],
   },
   {
