@@ -46,7 +46,7 @@ export default function Home() {
             {
               id: "healthy-meals",
               title: "Healthy Meals",
-              description: "The full 119-recipe Healthy Weeknight Dinners collection with ingredients and instructions.",
+              description: `The full ${healthyDinners.length}-recipe Healthy Weeknight Dinners collection with ingredients and instructions.`,
               recipes: healthyDinners,
             },
           ]}

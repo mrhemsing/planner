@@ -1,5 +1,5 @@
 {
-  "count": 119,
+  "count": 133,
   "items": [
     {
       "position": 1,
@@ -833,6 +833,104 @@
       "id": "1023307",
       "slug": "herb-marinated-swordfish",
       "recipeId": "herb-marinated-swordfish"
+    },
+    {
+      "position": 120,
+      "url": "https://cooking.nytimes.com/recipes/1012645-beet-and-radicchio-salad-with-goat-cheese-and-pistachios",
+      "id": "1012645",
+      "slug": "beet-and-radicchio-salad-with-goat-cheese-and-pistachios",
+      "recipeId": "beet-and-radicchio-salad-with-goat-cheese-and-pistachios"
+    },
+    {
+      "position": 121,
+      "url": "https://cooking.nytimes.com/recipes/12900-roasted-beet-and-winter-squash-salad-with-walnuts",
+      "id": "12900",
+      "slug": "roasted-beet-and-winter-squash-salad-with-walnuts",
+      "recipeId": "roasted-beet-and-winter-squash-salad-with-walnuts"
+    },
+    {
+      "position": 122,
+      "url": "https://cooking.nytimes.com/recipes/1025740-miso-parmesan-noodle-soup-for-one",
+      "id": "1025740",
+      "slug": "miso-parmesan-noodle-soup-for-one",
+      "recipeId": "miso-parmesan-noodle-soup-for-one"
+    },
+    {
+      "position": 123,
+      "url": "https://cooking.nytimes.com/recipes/1023920-citrusy-lentil-and-sweet-potato-soup",
+      "id": "1023920",
+      "slug": "citrusy-lentil-and-sweet-potato-soup",
+      "recipeId": "citrusy-lentil-and-sweet-potato-soup"
+    },
+    {
+      "position": 124,
+      "url": "https://cooking.nytimes.com/recipes/1026693-chile-crisp-and-honey-roasted-salmon",
+      "id": "1026693",
+      "slug": "chile-crisp-and-honey-roasted-salmon",
+      "recipeId": "chile-crisp-and-honey-roasted-salmon"
+    },
+    {
+      "position": 125,
+      "url": "https://cooking.nytimes.com/recipes/1019772-spiced-chickpea-stew-with-coconut-and-turmeric",
+      "id": "1019772",
+      "slug": "spiced-chickpea-stew-with-coconut-and-turmeric",
+      "recipeId": "spiced-chickpea-stew-with-coconut-and-turmeric"
+    },
+    {
+      "position": 126,
+      "url": "https://cooking.nytimes.com/recipes/4735-old-fashioned-beef-stew",
+      "id": "4735",
+      "slug": "old-fashioned-beef-stew",
+      "recipeId": "old-fashioned-beef-stew"
+    },
+    {
+      "position": 127,
+      "url": "https://cooking.nytimes.com/recipes/1020631-thai-inspired-chicken-meatball-soup",
+      "id": "1020631",
+      "slug": "thai-inspired-chicken-meatball-soup",
+      "recipeId": "thai-inspired-chicken-meatball-soup"
+    },
+    {
+      "position": 128,
+      "url": "https://cooking.nytimes.com/recipes/1020747-sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard",
+      "id": "1020747",
+      "slug": "sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard",
+      "recipeId": "sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard"
+    },
+    {
+      "position": 129,
+      "url": "https://cooking.nytimes.com/recipes/1023206-ginger-garlic-shrimp-with-coconut-milk",
+      "id": "1023206",
+      "slug": "ginger-garlic-shrimp-with-coconut-milk",
+      "recipeId": "ginger-garlic-shrimp-with-coconut-milk"
+    },
+    {
+      "position": 130,
+      "url": "https://cooking.nytimes.com/recipes/1021511-brown-butter-lentil-and-sweet-potato-salad",
+      "id": "1021511",
+      "slug": "brown-butter-lentil-and-sweet-potato-salad",
+      "recipeId": "brown-butter-lentil-and-sweet-potato-salad"
+    },
+    {
+      "position": 131,
+      "url": "https://cooking.nytimes.com/recipes/1026609-chicken-stew",
+      "id": "1026609",
+      "slug": "chicken-stew",
+      "recipeId": "chicken-stew"
+    },
+    {
+      "position": 132,
+      "url": "https://cooking.nytimes.com/recipes/1019218-sesame-chicken-with-cashews-and-dates",
+      "id": "1019218",
+      "slug": "sesame-chicken-with-cashews-and-dates",
+      "recipeId": "sesame-chicken-with-cashews-and-dates"
+    },
+    {
+      "position": 133,
+      "url": "https://cooking.nytimes.com/recipes/1022833-honey-glazed-mushrooms-with-udon",
+      "id": "1022833",
+      "slug": "honey-glazed-mushrooms-with-udon",
+      "recipeId": "honey-glazed-mushrooms-with-udon"
     }
   ]
 }
