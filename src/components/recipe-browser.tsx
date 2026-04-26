@@ -193,6 +193,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     },
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
+  const dailyPickTitle = getDailyPickTitle(activeFilter);
   const mobileTopFilters = filters.filter((filter) => filter.id !== "favourites");
 
   const moveActiveFilter = (direction: 1 | -1) => {
@@ -338,7 +339,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
             {isShowingDailyPick ? (
               <div className="hidden min-h-11 items-center rounded-2xl border border-black/10 bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
-                TODAY&rsquo;S DINNER PICK
+                {dailyPickTitle}
               </div>
             ) : null}
           </div>
@@ -356,7 +357,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               {isShowingDailyPick ? (
                 <div className="lg:hidden">
                   <p className="rounded-[16px] border border-amber-300 bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
-                    TODAY&rsquo;S DINNER PICK
+                    {dailyPickTitle}
                   </p>
                 </div>
               ) : null}
@@ -585,6 +586,16 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
 function FilterChip({ label }: { label: string }) {
   return <span className="rounded-2xl bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
+}
+
+function getDailyPickTitle(activeFilter: string) {
+  if (activeFilter === "quick") return "TODAY’S QUICK DINNER PICK";
+  if (activeFilter === "meat") return "TODAY’S MEAT DINNER PICK";
+  if (activeFilter === "fish") return "TODAY’S FISH DINNER PICK";
+  if (activeFilter === "vegetarian") return "TODAY’S VEGETARIAN DINNER PICK";
+  if (activeFilter === "favourites") return "TODAY’S FAVOURITE DINNER PICK";
+
+  return "TODAY’S DINNER PICK";
 }
 
 function hasIngredientQuantity(amount: string) {
