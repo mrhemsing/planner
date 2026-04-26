@@ -589,13 +589,13 @@ function FilterChip({ label }: { label: string }) {
 }
 
 function getDailyPickTitle(activeFilter: string) {
-  if (activeFilter === "quick") return "TODAY’S QUICK DINNER PICK";
-  if (activeFilter === "meat") return "TODAY’S MEAT DINNER PICK";
-  if (activeFilter === "fish") return "TODAY’S FISH DINNER PICK";
-  if (activeFilter === "vegetarian") return "TODAY’S VEG DINNER PICK";
-  if (activeFilter === "favourites") return "TODAY’S FAVOURITE DINNER PICK";
+  if (activeFilter === "quick") return "TONIGHT’S QUICK DINNER PICK";
+  if (activeFilter === "meat") return "TONIGHT’S MEAT DINNER PICK";
+  if (activeFilter === "fish") return "TONIGHT’S FISH DINNER PICK";
+  if (activeFilter === "vegetarian") return "TONIGHT’S VEG DINNER PICK";
+  if (activeFilter === "favourites") return "TONIGHT’S FAVOURITE DINNER PICK";
 
-  return "TODAY’S DINNER PICK";
+  return "TONIGHT’S DINNER PICK";
 }
 
 function hasIngredientQuantity(amount: string) {
@@ -662,4 +662,5 @@ function hashString(value: string) {
 
   return hash >>> 0;
 }
+
 
