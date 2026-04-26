@@ -592,7 +592,7 @@ function getDailyPickTitle(activeFilter: string) {
   if (activeFilter === "quick") return "TODAY’S QUICK DINNER PICK";
   if (activeFilter === "meat") return "TODAY’S MEAT DINNER PICK";
   if (activeFilter === "fish") return "TODAY’S FISH DINNER PICK";
-  if (activeFilter === "vegetarian") return "TODAY’S VEGETARIAN DINNER PICK";
+  if (activeFilter === "vegetarian") return "TODAY’S VEG DINNER PICK";
   if (activeFilter === "favourites") return "TODAY’S FAVOURITE DINNER PICK";
 
   return "TODAY’S DINNER PICK";
