@@ -12,6 +12,7 @@ const INGREDIENT_STRIKE_CLASSES = [
   "hand-strike hand-strike-3",
   "hand-strike hand-strike-4",
 ];
+const DAILY_PICK_REFRESH_SALT = "2026-04-26-refresh-1";
 
 type RecipeSection = {
   id: string;
@@ -557,7 +558,7 @@ function getDailyDinnerPickId(recipes: RecipeLibraryEntry[]) {
 
   const sortedIds = [...recipes].map((recipe) => recipe.id).sort();
   const dateKey = getPacificDateKey();
-  const hash = hashString(`${dateKey}:${sortedIds.join("|")}`);
+  const hash = hashString(`${dateKey}:${DAILY_PICK_REFRESH_SALT}:${sortedIds.join("|")}`);
   return sortedIds[hash % sortedIds.length];
 }
 
