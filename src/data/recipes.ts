@@ -3488,7 +3488,7 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
     category: "Dinner",
     sourceName: dinnerSourceName,
     sourceUrl: "https://cooking.nytimes.com/recipes/1027635-chicken-and-herb-salad-with-date-lime-dressing",
-    imageUrl: "/media/inbound/file_44---4ee621ad-9bf2-4dbc-8572-9b1a61d91341.jpg",
+    imageUrl: "https://static01.nyt.com/images/2026/01/16/multimedia/19FD-DIET-RESET-3REX-PW-Chicken-and-Herb-Salad-With-Date-Lime-Dressing-hfcp/19FD-DIET-RESET-3REX-PW-Chicken-and-Herb-Salad-With-Date-Lime-Dressing-hfcp-videoSixteenByNineJumbo1600.jpg",
     description: "A bright chicken and herb salad with date-lime dressing that gives dinner a fresher, lighter planner option.",
     favourite: false,
     tags: ["dinner", "chicken", "salad", "herbs", "dates", "lime", "light", "fresh"],
@@ -5281,7 +5281,7 @@ const lunchRecipes: RecipeLibraryEntry[] = [
     category: "Lunch",
     sourceName: lunchSourceName,
     sourceUrl: "https://cooking.nytimes.com/recipes/1027635-chicken-and-herb-salad-with-date-lime-dressing",
-    imageUrl: "/media/inbound/file_44---4ee621ad-9bf2-4dbc-8572-9b1a61d91341.jpg",
+    imageUrl: "https://static01.nyt.com/images/2026/01/16/multimedia/19FD-DIET-RESET-3REX-PW-Chicken-and-Herb-Salad-With-Date-Lime-Dressing-hfcp/19FD-DIET-RESET-3REX-PW-Chicken-and-Herb-Salad-With-Date-Lime-Dressing-hfcp-videoSixteenByNineJumbo1600.jpg",
     description: "A bright chicken salad lunch with lots of herbs and a sweet-tart date-lime dressing that keeps it fresh and meal-prep friendly.",
     favourite: false,
     tags: ["lunch", "chicken", "salad", "herbs", "lime", "meal prep", "healthy", "weekday"],
@@ -11072,3 +11072,4 @@ export const recipeCounts = {
   dinners: dinnerRecipes.length,
   lunches: lunchRecipes.length,
 };
+
