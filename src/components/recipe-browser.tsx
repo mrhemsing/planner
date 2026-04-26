@@ -192,16 +192,18 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     },
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
+  const mobileTopFilters = filters.filter((filter) => filter.id !== "favourites");
 
   const moveActiveFilter = (direction: 1 | -1) => {
-    if (!filters.length) return;
+    const filterOrder = mobileTopFilters.length ? mobileTopFilters : filters;
+    if (!filterOrder.length) return;
 
     const currentIndex = Math.max(
       0,
-      filters.findIndex((filter) => filter.id === activeFilter),
+      filterOrder.findIndex((filter) => filter.id === activeFilter),
     );
-    const nextIndex = (currentIndex + direction + filters.length) % filters.length;
-    setActiveFilter(filters[nextIndex].id);
+    const nextIndex = (currentIndex + direction + filterOrder.length) % filterOrder.length;
+    setActiveFilter(filterOrder[nextIndex].id);
   };
 
   const handleFilterSwipeStart = (event: TouchEvent<HTMLElement>) => {
@@ -302,20 +304,36 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               onTouchStart={handleFilterSwipeStart}
               onTouchEnd={handleFilterSwipeEnd}
             >
-              {filters.map(renderFilterButton)}
+              {mobileTopFilters.map(renderFilterButton)}
             </div>
             <div className="hidden flex-wrap gap-2 sm:flex">
               {filters.map(renderFilterButton)}
             </div>
 
-            <button
-              type="button"
-              onClick={() => setRecipeSheetOpen(true)}
-              className="recipe-tap-card flex min-h-11 w-full items-center justify-between rounded-2xl border border-black/10 bg-white px-4 text-left text-sm font-semibold text-stone-900 outline-none transition hover:bg-amber-50 focus:border-amber-500 sm:hidden"
-            >
-              <span>{activeFilterDetails.browseLabel}</span>
-              <span aria-hidden="true">↗</span>
-            </button>
+            <div className="flex gap-2 sm:hidden">
+              {showFavouritesFilter ? (
+                <button
+                  type="button"
+                  onClick={() => setActiveFilter("favourites")}
+                  aria-label="Favourite recipes"
+                  title="Favourite recipes"
+                  className={`category-chip min-h-11 shrink-0 rounded-2xl bg-white px-4 py-2 text-sm font-semibold ${
+                    activeFilter === "favourites" ? "category-chip-active text-white" : "text-amber-800 hover:text-amber-900"
+                  }`}
+                >
+                  <span aria-hidden="true">❤️</span>
+                  <span className="ml-1">{favouriteCount}</span>
+                </button>
+              ) : null}
+              <button
+                type="button"
+                onClick={() => setRecipeSheetOpen(true)}
+                className="recipe-tap-card flex min-h-11 flex-1 items-center justify-between rounded-2xl border border-black/10 bg-white px-4 text-left text-sm font-semibold text-stone-900 outline-none transition hover:bg-amber-50 focus:border-amber-500"
+              >
+                <span>{activeFilterDetails.browseLabel}</span>
+                <span aria-hidden="true">↗</span>
+              </button>
+            </div>
 
             <div className="hidden min-h-11 items-center rounded-2xl border border-black/10 bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
               TODAY&rsquo;S DINNER PICK
