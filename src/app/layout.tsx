@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   description:
     "A curated NYT Cooking healthy dinner picker with daily recipe recommendations, category filters, ingredients, and step-by-step instructions.",
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
 

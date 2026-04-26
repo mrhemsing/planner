@@ -249,7 +249,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           <div className="flex items-center justify-between gap-4">
             <button type="button" onClick={returnHome} className="recipe-tap-card flex items-center gap-3 text-left" aria-label="Return to homepage">
               <Image
-                src="/recipe-images/site-logo-v2.jpg"
+                src="/recipe-images/planner-logo-20260426.png"
                 alt="Planner logo"
                 width={75}
                 height={75}
