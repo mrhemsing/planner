@@ -140,6 +140,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     filteredRecipes.find((recipe) => recipe.id === dailyFilteredPickId) ??
     filteredRecipes[0] ??
     null;
+  const isShowingDailyPick = Boolean(selectedRecipe && selectedRecipe.id === dailyFilteredPickId);
   const favouriteCount = sortedRecipes.filter((recipe) => favourites[recipe.id]).length;
   const showFavouritesFilter = hydrated && favouriteCount > 0;
 
@@ -335,9 +336,11 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </button>
             </div>
 
-            <div className="hidden min-h-11 items-center rounded-2xl border border-black/10 bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
-              TODAY&rsquo;S DINNER PICK
-            </div>
+            {isShowingDailyPick ? (
+              <div className="hidden min-h-11 items-center rounded-2xl border border-black/10 bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
+                TODAY&rsquo;S DINNER PICK
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
@@ -349,12 +352,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           className="rounded-[24px] border border-amber-200 bg-white p-5 shadow-sm shadow-amber-100/40 sm:p-6"
         >
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div className="rounded-[20px] border border-stone-300 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
-              <div className="lg:hidden">
-                <p className="rounded-[16px] border border-amber-300 bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
-                  TODAY&rsquo;S DINNER PICK
-                </p>
-              </div>
+            <div className={`${isShowingDailyPick ? "" : "hidden lg:block"} rounded-[20px] border border-stone-300 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto`}>
+              {isShowingDailyPick ? (
+                <div className="lg:hidden">
+                  <p className="rounded-[16px] border border-amber-300 bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
+                    TODAY&rsquo;S DINNER PICK
+                  </p>
+                </div>
+              ) : null}
 
               <p className="hidden text-sm font-semibold uppercase tracking-[0.16em] text-amber-700 lg:block">
                 Recipe list
