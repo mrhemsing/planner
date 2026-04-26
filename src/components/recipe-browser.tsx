@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { TouchEvent } from "react";
 import type { RecipeLibraryEntry } from "@/data/recipes";
 
 const STORAGE_KEY = "princess-planner-favourites";
@@ -35,6 +36,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const dailyDinnerPickId = useMemo(() => getDailyDinnerPickId(sections[0]?.recipes ?? []), [sections]);
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
   const [activeFilter, setActiveFilter] = useState<string>("all");
+  const filterSwipeStartRef = useRef<{ x: number; y: number } | null>(null);
   const [hydrated, setHydrated] = useState(false);
   const [isRecipeSheetOpen, setRecipeSheetOpen] = useState(false);
 
@@ -191,6 +193,39 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
 
+  const moveActiveFilter = (direction: 1 | -1) => {
+    if (!filters.length) return;
+
+    const currentIndex = Math.max(
+      0,
+      filters.findIndex((filter) => filter.id === activeFilter),
+    );
+    const nextIndex = (currentIndex + direction + filters.length) % filters.length;
+    setActiveFilter(filters[nextIndex].id);
+  };
+
+  const handleFilterSwipeStart = (event: TouchEvent<HTMLElement>) => {
+    if (window.innerWidth >= 640 || isRecipeSheetOpen) return;
+
+    const touch = event.touches[0];
+    filterSwipeStartRef.current = { x: touch.clientX, y: touch.clientY };
+  };
+
+  const handleFilterSwipeEnd = (event: TouchEvent<HTMLElement>) => {
+    if (window.innerWidth >= 640 || isRecipeSheetOpen) return;
+
+    const start = filterSwipeStartRef.current;
+    filterSwipeStartRef.current = null;
+    const touch = event.changedTouches[0];
+    if (!start || !touch) return;
+
+    const deltaX = touch.clientX - start.x;
+    const deltaY = touch.clientY - start.y;
+    if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY) * 1.3) return;
+
+    moveActiveFilter(deltaX < 0 ? 1 : -1);
+  };
+
   useEffect(() => {
     if (activeFilter === "favourites" && !showFavouritesFilter) {
       setActiveFilter("all");
@@ -262,7 +297,11 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-nowrap gap-2 overflow-x-auto pb-1 sm:hidden">
+            <div
+              className="flex flex-nowrap gap-2 overflow-x-auto pb-1 sm:hidden"
+              onTouchStart={handleFilterSwipeStart}
+              onTouchEnd={handleFilterSwipeEnd}
+            >
               {filters.map(renderFilterButton)}
             </div>
             <div className="hidden flex-wrap gap-2 sm:flex">
