@@ -13,6 +13,7 @@ const INGREDIENT_STRIKE_CLASSES = [
   "hand-strike hand-strike-4",
 ];
 const DAILY_PICK_REFRESH_SALT = "2026-04-26-refresh-2";
+const VEGETARIAN_CATEGORY_OVERRIDES = new Set(["i-cant-believe-its-not-chicken-super-savory-grated-tofu"]);
 
 type RecipeSection = {
   id: string;
@@ -529,6 +530,10 @@ function hasIngredientQuantity(amount: string) {
 }
 
 function getRecipeCategory(recipe: RecipeLibraryEntry) {
+  if (VEGETARIAN_CATEGORY_OVERRIDES.has(recipe.id)) {
+    return "vegetarian";
+  }
+
   const text = [recipe.title, recipe.description, recipe.tags.join(" ")].join(" ").toLowerCase();
 
   if (/(salmon|shrimp|cod|halibut|tuna|sardine|sardines|fish|swordfish|seafood)/.test(text)) {

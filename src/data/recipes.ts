@@ -3719,7 +3719,7 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
     imageUrl: "https://static01.nyt.com/images/2025/08/21/multimedia/nv-i-cant-believe-its-not-chicken-pkzw/nv-i-cant-believe-its-not-chicken-pkzw-videoSixteenByNineJumbo1600.jpg",
     description: "Grating super-firm tofu is one of the best party tricks in the kitchen. It makes tofu not only quicker to prepare (no pressing required!) but also deceptively meaty. In this rec...",
     favourite: false,
-    tags: ["dinner", "healthy dinners", "nyt"],
+    tags: ["dinner", "healthy dinners", "nyt", "vegetarian", "tofu"],
     plannedDays: [],
   },
   {
