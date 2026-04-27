@@ -42,6 +42,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const filterSwipeStartRef = useRef<{ x: number; y: number } | null>(null);
   const [hydrated, setHydrated] = useState(false);
   const [isRecipeSheetOpen, setRecipeSheetOpen] = useState(false);
+  const [recipeSearchQuery, setRecipeSearchQuery] = useState("");
 
   useEffect(() => {
     try {
@@ -118,6 +119,20 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       return true;
     });
   }, [activeFilter, favourites, sortedRecipes]);
+
+  const recipeSheetRecipes = useMemo(() => {
+    const normalizedQuery = recipeSearchQuery.trim().toLowerCase();
+    if (!normalizedQuery) return filteredRecipes;
+
+    return filteredRecipes.filter((recipe) => {
+      const haystack = [recipe.title, recipe.description, recipe.prepTime, recipe.serves]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+
+      return haystack.includes(normalizedQuery);
+    });
+  }, [filteredRecipes, recipeSearchQuery]);
 
   const dailyFilteredPickId = useMemo(() => getDailyDinnerPickId(filteredRecipes), [filteredRecipes]);
 
@@ -239,6 +254,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     }
   }, [activeFilter, showFavouritesFilter]);
 
+  useEffect(() => {
+    setRecipeSearchQuery("");
+  }, [activeFilter]);
+
   const toggleFavourite = (id: string) => {
     setFavourites((current) => ({
       ...current,
@@ -255,12 +274,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   const selectRecipe = (id: string) => {
     setSelectedRecipeId(id);
+    setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
   };
 
   const returnHome = () => {
     setActiveFilter("all");
     setSelectedRecipeId(dailyDinnerPickId);
+    setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
     window.history.replaceState(null, "", window.location.pathname);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -543,21 +564,38 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">{activeFilterDetails.browseLabel}</p>
-                  <p className="mt-1 text-sm text-stone-500">{filteredRecipes.length} recipes</p>
+                  <p className="mt-1 text-sm text-stone-500">{recipeSheetRecipes.length} of {filteredRecipes.length} recipes</p>
                 </div>
                 <button
                   type="button"
-                  onClick={() => setRecipeSheetOpen(false)}
+                  onClick={() => {
+                    setRecipeSearchQuery("");
+                    setRecipeSheetOpen(false);
+                  }}
                   className="recipe-tap-card rounded-2xl border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm"
                 >
                   Close
                 </button>
               </div>
+              <div className="mt-4">
+                <label className="sr-only" htmlFor="recipe-sheet-search">
+                  Search recipes
+                </label>
+                <input
+                  id="recipe-sheet-search"
+                  type="text"
+                  value={recipeSearchQuery}
+                  onChange={(event) => setRecipeSearchQuery(event.target.value)}
+                  placeholder="Search recipes"
+                  autoComplete="off"
+                  className="w-full rounded-2xl border border-stone-300 bg-stone-50 px-4 py-3 text-base text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-amber-500 focus:bg-white"
+                />
+              </div>
             </div>
 
             <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
               <div className="grid gap-3 pb-8">
-                {filteredRecipes.map((recipe) => {
+                {recipeSheetRecipes.map((recipe) => {
                   const isSelected = recipe.id === selectedRecipeId;
 
                   return (
@@ -581,6 +619,11 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                     </button>
                   );
                 })}
+                {!recipeSheetRecipes.length ? (
+                  <div className="rounded-[18px] border border-dashed border-stone-300 bg-stone-50 px-4 py-5 text-sm text-stone-600">
+                    No recipes match “{recipeSearchQuery.trim()}”.
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
