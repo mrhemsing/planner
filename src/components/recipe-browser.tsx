@@ -465,7 +465,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                             }`}
                             aria-pressed={Boolean(favourites[selectedRecipe.id])}
                           >
-                            {favourites[selectedRecipe.id] ? "Added ⭐" : "Add ⭐"}
+                            {favourites[selectedRecipe.id] ? "Added ❤️" : "Add ❤️"}
                           </button>
                         </div>
                       </div>
