@@ -336,10 +336,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               <button
                 type="button"
                 onClick={() => setRecipeSheetOpen(true)}
-                className="recipe-tap-card flex min-h-11 flex-1 items-center justify-between rounded-2xl border border-black/10 bg-white px-4 text-left text-sm font-semibold text-stone-900 outline-none transition hover:bg-amber-50 focus:border-amber-500"
+                className="recipe-tap-card flex min-h-11 flex-1 items-center justify-center gap-2 rounded-2xl border border-amber-700 bg-amber-500 px-4 text-center text-sm font-bold uppercase tracking-[0.08em] text-white shadow-[0_8px_18px_rgba(146,64,14,0.22)] outline-none transition hover:bg-amber-600 focus:border-amber-900 active:scale-[0.98]"
               >
                 <span>{activeFilterDetails.browseLabel}</span>
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true">＋</span>
               </button>
             </div>
 
