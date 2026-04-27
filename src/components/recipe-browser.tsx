@@ -40,6 +40,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const filterSwipeStartRef = useRef<{ x: number; y: number } | null>(null);
+  const recipeSheetScrollRef = useRef<HTMLDivElement | null>(null);
+  const recipeSheetScrollPositionsRef = useRef<Record<string, number>>({});
   const [hydrated, setHydrated] = useState(false);
   const [isRecipeSheetOpen, setRecipeSheetOpen] = useState(false);
   const [recipeSearchQuery, setRecipeSearchQuery] = useState("");
@@ -254,6 +256,19 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       setActiveFilter("all");
     }
   }, [activeFilter, showFavouritesFilter]);
+
+  useEffect(() => {
+    if (!isRecipeSheetOpen) return;
+
+    const frame = window.requestAnimationFrame(() => {
+      const sheet = recipeSheetScrollRef.current;
+      if (!sheet) return;
+
+      sheet.scrollTop = recipeSheetScrollPositionsRef.current[activeFilter] ?? 0;
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [activeFilter, isRecipeSheetOpen]);
 
   useEffect(() => {
     setRecipeSearchQuery("");
@@ -591,7 +606,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
             </div>
 
-            <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+            <div
+              ref={recipeSheetScrollRef}
+              onScroll={(event) => {
+                recipeSheetScrollPositionsRef.current[activeFilter] = event.currentTarget.scrollTop;
+              }}
+              className="min-h-0 flex-1 overflow-y-auto px-4 py-4"
+            >
               <div className="grid gap-3 pb-8">
                 {recipeSheetRecipes.map((recipe) => {
                   const isSelected = recipe.id === selectedRecipeId;
