@@ -365,8 +365,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             </div>
 
             {isShowingDailyPick ? (
-              <div className="hidden min-h-11 items-center rounded-2xl border border-black/10 bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
-                {dailyPickTitle}
+              <div className="hidden min-h-11 items-center gap-2 rounded-2xl border border-white bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
+                <span aria-hidden="true">🏅</span>
+                <span>{dailyPickTitle}</span>
               </div>
             ) : null}
           </div>
@@ -383,8 +384,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             <div className={`${isShowingDailyPick ? "" : "hidden lg:block"} lg:rounded-[20px] lg:border lg:border-stone-300 lg:bg-white lg:p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto`}>
               {isShowingDailyPick ? (
                 <div className="lg:hidden">
-                  <p className="rounded-[16px] border border-amber-300 bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
-                    {dailyPickTitle}
+                  <p className="flex items-center gap-2 rounded-[16px] border border-white bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
+                    <span aria-hidden="true">🏅</span>
+                    <span>{dailyPickTitle}</span>
                   </p>
                 </div>
               ) : null}
