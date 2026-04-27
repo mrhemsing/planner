@@ -183,7 +183,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       : []),
     {
       id: "quick",
-      label: `⚡ 30 min or less (${sortedRecipes.filter(isQuickPrepRecipe).length})`,
+      label: `⚡ 30 min (${sortedRecipes.filter(isQuickPrepRecipe).length})`,
       mobileLabel: `⚡ ${sortedRecipes.filter(isQuickPrepRecipe).length}`,
       ariaLabel: "30 minutes or less prep",
       browseLabel: "Browse all 30 min recipes",
