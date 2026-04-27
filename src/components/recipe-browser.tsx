@@ -331,7 +331,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   />
                   <span>COOKING..</span>
                 </span>
-                <span className="mt-0.5 block sm:inline lg:block">Healthy Dinners</span>
+                <span className="mt-0.5 block [font-family:Georgia,serif] sm:inline lg:block">Healthy Dinners</span>
               </h1>
             </button>
           </div>
