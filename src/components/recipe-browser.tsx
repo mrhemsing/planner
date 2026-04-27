@@ -38,6 +38,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
   const dailyDinnerPickId = useMemo(() => getDailyDinnerPickId(sections[0]?.recipes ?? []), [sections]);
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
+  const [hasSyncedRecipeFromUrl, setHasSyncedRecipeFromUrl] = useState(false);
   const [selectedRecipeFromUrl, setSelectedRecipeFromUrl] = useState(false);
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const filterSwipeStartRef = useRef<{ x: number; y: number } | null>(null);
@@ -93,6 +94,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         setSelectedRecipeId(matchingRecipe.id);
         setSelectedRecipeFromUrl(true);
       }
+
+      setHasSyncedRecipeFromUrl(true);
     };
 
     syncFromUrl();
@@ -144,6 +147,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   );
 
   useEffect(() => {
+    if (!hasSyncedRecipeFromUrl) return;
+
     if (selectedRecipeFromUrl && filteredRecipes.some((recipe) => recipe.id === selectedRecipeId)) {
       return;
     }
@@ -155,7 +160,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
     if (!dailyFilteredPickId) return;
     setSelectedRecipeId(dailyFilteredPickId);
-  }, [activeFilter, dailyFilteredPickId, filteredRecipes, selectedRecipeFromUrl, selectedRecipeId]);
+  }, [activeFilter, dailyFilteredPickId, filteredRecipes, hasSyncedRecipeFromUrl, selectedRecipeFromUrl, selectedRecipeId]);
 
   useEffect(() => {
     if (!selectedRecipeId) return;
