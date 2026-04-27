@@ -486,15 +486,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
                         Ingredients
                       </p>
-                      <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                      <ul className="mt-3 grid gap-2">
                         {selectedRecipe.ingredients.map((ingredient, index) => {
                           const ingredientKey = `${selectedRecipe.id}-${index}-${ingredient.item}`;
                           const isChecked = Boolean(ingredientChecks[ingredientKey]);
-                          const hasQuantity = hasIngredientQuantity(ingredient.amount);
-                          const ingredientAmount = abbreviateIngredientUnits(ingredient.amount);
-                          const ingredientText = hasQuantity
-                            ? abbreviateIngredientUnits(ingredient.item)
-                            : abbreviateIngredientUnits(`${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim());
+                          const ingredientText = abbreviateIngredientUnits(
+                            `${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim(),
+                          );
                           const strikeClass = INGREDIENT_STRIKE_CLASSES[index % INGREDIENT_STRIKE_CLASSES.length];
 
                           return (
@@ -506,13 +504,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                                   onChange={() => toggleIngredientCheck(ingredientKey)}
                                   className="mt-0.5 h-4 w-4 shrink-0 rounded border-stone-300 text-amber-600 focus:ring-amber-500 sm:hidden"
                                 />
-                                {hasQuantity ? (
-                                  <span
-                                    className={`font-medium text-stone-600 ${isChecked ? `opacity-60 ${strikeClass}` : ""}`}
-                                  >
-                                    {ingredientAmount}
-                                  </span>
-                                ) : null}
                                 <span className={isChecked ? `opacity-60 ${strikeClass}` : ""}>
                                   {ingredientText}
                                 </span>
@@ -646,10 +637,6 @@ function getDailyPickTitle(activeFilter: string) {
   if (activeFilter === "favourites") return "TODAY’S FAVOURITE DINNER PICK";
 
   return "TODAY’S DINNER PICK";
-}
-
-function hasIngredientQuantity(amount: string) {
-  return /[\d¼½¾⅓⅔⅛⅜⅝⅞]/.test(amount);
 }
 
 function abbreviateIngredientUnits(text: string) {
