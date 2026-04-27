@@ -177,7 +177,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             label: `Favourites (${favouriteCount})`,
             mobileLabel: `❤️ ${favouriteCount}`,
             ariaLabel: "Favourite recipes",
-            browseLabel: "Browse all favourite recipes",
+            browseLabel: "Browse all fav recipes",
           },
         ]
       : []),
