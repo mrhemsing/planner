@@ -314,8 +314,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           <div className="flex items-center justify-between gap-4">
             <button type="button" onClick={returnHome} className="recipe-tap-card flex items-center gap-3 text-left" aria-label="Return to homepage">
               <Image
-                src="/recipe-images/planner-logo-20260426.png"
-                alt="Planner logo"
+                src="/recipe-images/nyt-logo.svg"
+                alt="NYT logo"
                 width={75}
                 height={75}
                 className="h-[75px] w-[75px] object-contain lg:h-[83px] lg:w-[83px]"
