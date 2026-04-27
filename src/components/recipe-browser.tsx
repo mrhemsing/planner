@@ -38,6 +38,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
   const dailyDinnerPickId = useMemo(() => getDailyDinnerPickId(sections[0]?.recipes ?? []), [sections]);
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
+  const [selectedRecipeFromUrl, setSelectedRecipeFromUrl] = useState(false);
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const filterSwipeStartRef = useRef<{ x: number; y: number } | null>(null);
   const recipeSheetScrollRef = useRef<HTMLDivElement | null>(null);
@@ -90,6 +91,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       const matchingRecipe = allRecipes.find((recipe) => recipe.id === recipeIdFromUrl);
       if (matchingRecipe) {
         setSelectedRecipeId(matchingRecipe.id);
+        setSelectedRecipeFromUrl(true);
       }
     };
 
@@ -142,6 +144,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   );
 
   useEffect(() => {
+    if (selectedRecipeFromUrl && filteredRecipes.some((recipe) => recipe.id === selectedRecipeId)) {
+      return;
+    }
+
     if (activeFilter === "favourites") {
       setSelectedRecipeId(filteredRecipes[0]?.id ?? "");
       return;
@@ -149,7 +155,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
     if (!dailyFilteredPickId) return;
     setSelectedRecipeId(dailyFilteredPickId);
-  }, [activeFilter, dailyFilteredPickId, filteredRecipes]);
+  }, [activeFilter, dailyFilteredPickId, filteredRecipes, selectedRecipeFromUrl, selectedRecipeId]);
 
   useEffect(() => {
     if (!selectedRecipeId) return;
@@ -234,6 +240,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       filterOrder.findIndex((filter) => filter.id === activeFilter),
     );
     const nextIndex = (currentIndex + direction + filterOrder.length) % filterOrder.length;
+    setSelectedRecipeFromUrl(false);
     setActiveFilter(filterOrder[nextIndex].id);
   };
 
@@ -297,12 +304,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   };
 
   const selectRecipe = (id: string) => {
+    setSelectedRecipeFromUrl(false);
     setSelectedRecipeId(id);
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
   };
 
   const returnHome = () => {
+    setSelectedRecipeFromUrl(false);
     setActiveFilter("all");
     setSelectedRecipeId(dailyDinnerPickId);
     setRecipeSearchQuery("");
@@ -318,7 +327,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       <button
         key={filter.id}
         type="button"
-        onClick={() => setActiveFilter(filter.id)}
+        onClick={() => {
+          setSelectedRecipeFromUrl(false);
+          setActiveFilter(filter.id);
+        }}
         aria-label={filter.ariaLabel}
         title={filter.ariaLabel}
         className={`category-chip rounded-2xl border bg-white px-3 py-2 text-sm font-semibold sm:px-4 ${
@@ -367,7 +379,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               {showFavouritesFilter ? (
                 <button
                   type="button"
-                  onClick={() => setActiveFilter("favourites")}
+                  onClick={() => {
+                    setSelectedRecipeFromUrl(false);
+                    setActiveFilter("favourites");
+                  }}
                   aria-label="Favourite recipes"
                   title="Favourite recipes"
                   className={`category-chip min-h-11 shrink-0 rounded-2xl border bg-white px-4 py-2 text-sm font-semibold ${
