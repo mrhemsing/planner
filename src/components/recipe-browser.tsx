@@ -409,12 +409,26 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 </div>
               ) : null}
 
-              <p className="hidden text-sm font-semibold uppercase tracking-[0.16em] text-amber-700 lg:block">
-                Recipe list
-              </p>
+              <div className="hidden lg:block">
+                <label className="sr-only" htmlFor="desktop-recipe-search">
+                  Search recipes
+                </label>
+                <input
+                  id="desktop-recipe-search"
+                  type="text"
+                  value={recipeSearchQuery}
+                  onChange={(event) => setRecipeSearchQuery(event.target.value)}
+                  placeholder="Search recipes"
+                  autoComplete="off"
+                  className="w-full rounded-2xl border border-stone-300 bg-stone-50 px-4 py-3 text-base text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-amber-500 focus:bg-white"
+                />
+                <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
+                  Recipe list
+                </p>
+              </div>
 
               <div className="mt-3 hidden flex-col gap-2 lg:flex">
-                {filteredRecipes.map((recipe, index) => {
+                {recipeSheetRecipes.map((recipe, index) => {
                   const isSelected = selectedRecipe.id === recipe.id;
                   const altRowClass = index % 2 === 0 ? "bg-stone-50" : "bg-amber-50/40";
 
@@ -438,6 +452,11 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                     </button>
                   );
                 })}
+                {!recipeSheetRecipes.length ? (
+                  <div className="rounded-[16px] border border-dashed border-stone-300 bg-stone-50 px-4 py-5 text-sm text-stone-600">
+                    No recipes match “{recipeSearchQuery.trim()}”.
+                  </div>
+                ) : null}
               </div>
             </div>
 
