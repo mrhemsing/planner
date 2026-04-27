@@ -314,24 +314,15 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           <div className="flex items-center justify-between gap-4">
             <button type="button" onClick={returnHome} className="recipe-tap-card flex items-center gap-3 text-left" aria-label="Return to homepage">
               <Image
-                src="/recipe-images/nyt-logo.svg"
-                alt="NYT logo"
+                src="/recipe-images/planner-logo-20260426.png"
+                alt="Planner logo"
                 width={75}
                 height={75}
                 className="h-[75px] w-[75px] object-contain lg:h-[83px] lg:w-[83px]"
               />
-              <h1 className="text-3xl font-semibold leading-[1.08] tracking-tight text-white sm:text-3xl">
-                <span className="flex items-center gap-1.5 uppercase sm:inline-flex lg:flex">
-                  <Image
-                    src="/recipe-images/nyt-logo.svg"
-                    alt="NYT"
-                    width={30}
-                    height={30}
-                    className="h-[1em] w-[1em] object-contain"
-                  />
-                  <span>COOKING..</span>
-                </span>
-                <span className="mt-0.5 block [font-family:Georgia,serif] sm:inline lg:block">Healthy Dinners</span>
+              <h1 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
+                <span className="block sm:inline lg:block">NYT Cooking</span>
+                <span className="block sm:inline lg:block">Healthy Dinners</span>
               </h1>
             </button>
           </div>
