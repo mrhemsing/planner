@@ -8279,6 +8279,1420 @@ const missingFullDetailsGenerated: Record<string, RecipeDetailsEntry> = {
       "Season eggs with salt, pepper and pimentón. Pour into pan and cook, stirring with a wooden spoon, just until soft and creamy, 2 to 3 minutes. Add parsley and serve immediately, topped with the fried bread cubes."
     ]
   },
+  "apricot-thyme-chicken-and-chickpeas": {
+    "prepTime": "60 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "2 ½",
+        "item": "to 3 pounds bone-in, skin-on chicken thighs (about 7 chicken thighs)",
+        "category": "protein"
+      },
+      {
+        "amount": "Fine",
+        "item": "sea salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "½",
+        "item": "cup vegetable or chicken stock",
+        "category": "protein"
+      },
+      {
+        "amount": "6",
+        "item": "tablespoons apricot jam",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1 ½",
+        "item": "tablespoons soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons chopped thyme, plus more for garnish if desired",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "garlic cloves, minced or pressed",
+        "category": "produce"
+      },
+      {
+        "amount": "1 ½",
+        "item": "teaspoons ground turmeric",
+        "category": "pantry"
+      },
+      {
+        "amount": "1 ½",
+        "item": "teaspoons ground ginger",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "large onions, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(15-ounce) can chickpeas, rinsed",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "cup pitted green olives (such as Castelvetrano)",
+        "category": "pantry"
+      },
+      {
+        "amount": "Couscous,",
+        "item": "rice or flatbread, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 400 degrees. Add the chicken thighs to a large bowl and season them on both sides with ¾ teaspoon salt.",
+      "Make the marinade: In a medium bowl, combine the vegetable stock, apricot jam, olive oil, soy sauce, thyme, garlic, turmeric, ginger and ¾ teaspoon salt. Pour about half of the marinade over the chicken and turn to coat.",
+      "On a sheet pan, combine the onions, chickpeas and remaining marinade and toss to coat. Arrange the onions and chickpeas in a single layer and place the chicken on top, skin side up. Roast for 30 minutes, until the chicken starts to brown.",
+      "Remove the pan from the oven, scatter the olives around the chicken and roast for 10 to 15 minutes more, until the chicken is cooked through and golden, and the onions are soft and caramelized.",
+      "Garnish with thyme if desired and serve immediately."
+    ]
+  },
+  "spring-cleaning-ribollita": {
+    "prepTime": "40 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1/4",
+        "item": "cup extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "medium leek, white and light green parts only, thinly sliced crosswise",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "large carrot, peeled and diced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound Swiss chard, stems thinly sliced and leaves coarsely chopped (stems and leaves kept separated)",
+        "category": "protein"
+      },
+      {
+        "amount": "Salt",
+        "item": "and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "garlic cloves, minced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(14-ounce) can whole tomatoes",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "large zucchini, ends trimmed, quartered lengthwise and thinly sliced crosswise",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "basil sprigs, plus ¼ cup chopped basil",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "thyme sprigs",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup peas (fresh or frozen)",
+        "category": "frozen"
+      },
+      {
+        "amount": "1",
+        "item": "(14-ounce) can butter beans, rinsed",
+        "category": "protein"
+      },
+      {
+        "amount": "4",
+        "item": "ounces day-old ciabatta or country bread, crust removed and bread cut into 1-inch cubes (see Tip)",
+        "category": "pantry"
+      },
+      {
+        "amount": "Freshly",
+        "item": "grated Parmigiano-Reggiano, for serving (optional)",
+        "category": "protein"
+      }
+    ],
+    "instructions": [
+      "In a large Dutch oven, heat 2 tablespoons of the oil over medium. Add leek and cook, stirring occasionally, until softened, 3 minutes. Add carrot, Swiss chard stems and the remaining 2 tablespoons of oil. Season with salt and pepper, and cook, stirring occasionally, until softened, about 5 minutes. Add garlic and stir until fragrant, about 30 seconds. Crush the tomatoes over the pot with your hands, stir them in with their juice and cook, stirring occasionally, until all of the liquid is reduced and the mixture is thick, about 5 minutes. Add zucchini, basil sprigs, thyme sprigs, Swiss chard leaves and 8 cups of water, and season with salt and pepper.",
+      "Bring to a boil over high heat, then reduce to medium-high and cook, stirring occasionally, until vegetables are tender, about 10 minutes. Stir in peas, beans and bread, and cook, stirring and mashing up the bread, until most of the bread dissolves and soup thickens, about 10 minutes. Discard basil and thyme sprigs, and season with salt and pepper to taste.",
+      "Divide soup among bowls and finish with the chopped basil. Garnish with cheese, if desired."
+    ]
+  },
+  "sheet-pan-scallion-chicken-with-bok-choy": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "4",
+        "item": "scallions, trimmed and finely chopped (about 1/2 cup), plus more for garnish",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons Dijon mustard",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons minced fresh ginger (from one 3-inch piece)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons minced garlic",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon white miso paste",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons turbinado or brown sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt and freshly ground black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup safflower or canola oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "pounds baby bok choy, halved lengthwise, or large broccoli florets",
+        "category": "produce"
+      },
+      {
+        "amount": "8",
+        "item": "bone-in, skin-on chicken thighs (about 3 pounds), skins removed",
+        "category": "protein"
+      },
+      {
+        "amount": "Steamed",
+        "item": "rice or mashed potatoes, for serving",
+        "category": "produce"
+      },
+      {
+        "amount": "Lemon",
+        "item": "wedges, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat oven to 450 degrees. In a small bowl, combine scallions, mustard, ginger, garlic, miso, sugar, 1 teaspoon salt, 1/2 teaspoon pepper and 6 tablespoons of the oil. Mix well.",
+      "On a rimmed baking sheet, toss bok choy with the remaining 2 tablespoons oil and season with salt and pepper, then spread in an even layer. Season chicken with salt and pepper, arrange on top of bok choy and rub chicken all over with the scallion-mustard marinade.",
+      "Roast until chicken is cooked through and vegetables are tender, about 30 minutes.",
+      "Serve chicken and vegetables over rice or mashed potatoes. Spoon pan juices over the chicken and garnish with scallions. Serve with lemon wedges."
+    ]
+  },
+  "smashed-chicken-meatballs-with-suya-and-charred-corn": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "½",
+        "item": "cup unsweetened creamy peanut butter",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons suya spice (see Tips), plus more for sprinkling",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons white or red miso, divided",
+        "category": "pantry"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon honey",
+        "category": "pantry"
+      },
+      {
+        "amount": "Zest",
+        "item": "and juice of 1 lime, plus lime wedges for serving",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound ground chicken or turkey",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "(10-ounce) package chopped frozen spinach, defrosted and excess liquid squeezed out",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "Scotch bonnet or habanero chile, seeded for mild if desired, chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "(1-inch) piece ginger, finely grated&nbsp;",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves, finely grated",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "tablespoons vegetable oil, divided",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "cups fresh corn kernels (cut from 2 to 3 ears) or thawed frozen kernels&nbsp;",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(5-ounce) box baby kale",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "cup fresh cilantro and mint leaves, chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "Rice,",
+        "item": "for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "In a small bowl, whisk the peanut butter, 1 tablespoon suya spice, 1 teaspoon miso and ½ cup water until smooth; taste and season with salt if necessary. Transfer 2 tablespoons to a medium bowl. To the sauce remaining in the small bowl, add the honey and the lime zest and juice; whisk until smooth. The finished sauce should run easily off a spoon. Add 1 to 2 tablespoons water if needed and season to taste with salt.",
+      "To the medium bowl, add the chicken, spinach, chile, ginger, garlic, remaining 2 tablespoons suya spice, remaining 1 teaspoon miso and 1 teaspoon salt. Using your hands, mix well to combine.",
+      "Heat 2 tablespoons oil in a large, well-seasoned cast-iron skillet (or other large heavy-bottomed pan) over medium-high. Once the oil is very hot, add the meat in heaping irregular chunks by scooping it with a large spoon or your hands and carefully dropping it into the skillet. Cook, undisturbed, until dark brown underneath and crisp around the edges, about 5 minutes.",
+      "Flip the meatballs and use a wooden spoon to smash the meat, breaking up any very large pieces. Move the meatballs to one side of the skillet, and add the remaining 2 tablespoons oil then the corn to the other side. Cook without stirring until corn is light brown in spots and meat is fully cooked, about 3 minutes. Taste and season with salt if necessary.",
+      "Spread the greens on a large serving platter and top with the crispy meat and corn. Sprinkle generously with more suya spice. Drizzle with the peanut sauce and top with herbs. Serve immediately with lime wedges and rice."
+    ]
+  },
+  "ginger-salmon-lettuce-wraps": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "4",
+        "item": "(4-ounce) skinless center-cut salmon fillets (see Tip)",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "(2-inch) piece fresh ginger, peeled",
+        "category": "produce"
+      },
+      {
+        "amount": "¼",
+        "item": "cup rice vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "¼",
+        "item": "cup fish sauce",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons lime juice (from 1 lime)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves, smashed and minced, or grated",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "serrano chile, stem and seeds removed, finely diced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon vegetable oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "heads butter or romaine lettuce or 4 heads Little Gem lettuce",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "bunch fresh cilantro or mint, or a combination",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "cups sliced raw vegetables, such as cucumbers, radishes, carrots, or halved small tomatoes, or a combination",
+        "category": "produce"
+      },
+      {
+        "amount": "Warm",
+        "item": "cooked short-grain rice, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 425 degrees.",
+      "Meanwhile, cut each salmon fillet into 4 equal-sized chunks, place them in a medium bowl and finely grate the ginger over.",
+      "In a small bowl, combine the vinegar, fish sauce, sugar, lime juice, garlic and chile and mix to combine. Pour ¼ cup of this mixture over the salmon along with the oil and rub it into the fish. Add 3 tablespoons of water to the remaining mixture in the small bowl, mix well to make a dipping sauce and set aside.",
+      "Place salmon on a parchment paper-lined sheet pan and roast until salmon is cooked through and opaque, about 8 minutes. Remove from the oven and allow to cool.",
+      "While the salmon roasts, prepare your vegetable platter. Place the small bowl of dipping sauce in the middle of a serving platter. Cut the root end off of the lettuces and pull apart the whole leaves. Wash and shake them dry and arrange them around the dipping sauce on the serving platter. Wash and shake the cilantro and mint dry and arrange the leaves and tender stems on the serving platter next to the lettuce. Arrange the cut vegetables on the platter.",
+      "To serve, place one lettuce leaf each on the bottom of four bowls or plates (it catches the juices and makes a great final bite) and scoop about ½ cup of rice on top of each. Divide the fish chunks among the bowls then pour a little bit of the dipping sauce over the fish. Each diner can make lettuce bites with the lettuce leaves and herbs on the platter, topping as desired and dipping them into the sauce."
+    ]
+  },
+  "chicken-manchurian": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "egg",
+        "category": "protein"
+      },
+      {
+        "amount": "4",
+        "item": "tablespoons plus 1 teaspoon cornstarch",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon garlic paste or freshly grated garlic",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "Fine",
+        "item": "sea salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "pounds boneless, skinless chicken breast, cut into 3/4-inch cubes",
+        "category": "protein"
+      },
+      {
+        "amount": "1/3",
+        "item": "cup vegetable oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "whole dried dundicut chiles or bird’s-eye chiles",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup ketchup",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup chile-garlic sauce",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons light soy sauce (or regular soy sauce)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "cup chicken stock (optional)",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "bell pepper, halved, seeded and cut into 3/4-inch pieces",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "spring onions or 1 medium scallion, trimmed and thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "Cooked",
+        "item": "white rice or fried rice, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Velvet the chicken: In a medium bowl, whisk the egg. Continue whisking and gradually add 4 tablespoons of cornstarch until there are no lumps. Stir in garlic, black pepper and 1/2 teaspoon salt. Add the chicken pieces and stir until well coated. Cover and set aside for 30 minutes.",
+      "In a large wok or deep, high-sided skillet, heat oil on medium for 45 seconds. Add chicken (in batches, if necessary to avoid crowding) and cook until it starts turning white, 1 to 2 minutes. Flip the pieces and continue cooking until the chicken starts to turn golden, 2 to 3 minutes. Using a slotted spoon, remove chicken and set aside.",
+      "Add dried chiles and cook on medium for about 1 minute, stirring occasionally.",
+      "Meanwhile, in a small bowl, stir together ketchup, chile-garlic sauce, soy sauce, ½ teaspoon salt and, if using, chicken stock (if not using chicken stock, stir in 1 cup water). Add to mixture in pan along with bell pepper and stir to combine.",
+      "Separately, mix the remaining 1 teaspoon cornstarch with 1/4 cup water until smooth. Stir it into the wok and simmer until the sauce thickens and starts to turn glossy, 3 to 4 minutes. Add chicken and stir to combine. Top with spring onions. Serve with rice."
+    ]
+  },
+  "charred-broccoli-and-salmon-noodle-salad": {
+    "prepTime": "25 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "3",
+        "item": "tablespoons white miso, divided",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon plus 2 teaspoons soy sauce, divided",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons olive oil, divided, plus more as needed for drizzling",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(12-ounce) salmon fillet, skin on or off",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "head of broccoli, florets cut into bite-size pieces",
+        "category": "produce"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(8-ounce) package buckwheat soba noodles",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons smooth peanut butter",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "packed tablespoons torn fresh cilantro leaves and tender stems",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 400 degrees. In a large serving bowl, mix together 2 tablespoons miso, 2 teaspoons soy sauce and 1 tablespoon olive oil.",
+      "Drizzle and rub a little oil in the center of the pan. Place the salmon on the oil, skin side down; spoon the miso-soy mixture on top and on the sides, rubbing it in. Add the broccoli to the bowl with the excess marinade and toss with the remaining olive oil and season lightly with salt. Scatter around the salmon. Transfer to the oven and cook until the salmon is light pink inside and just cooked through, 15 to 18 minutes, depending on the thickness.",
+      "As the salmon cooks, bring a medium saucepan of water to a boil. Add the soba noodles and cook until tender, about 5 minutes or according to the package instructions. Drain and rinse with cold water until they no longer feel sticky.",
+      "While the noodles are cooking, in the same serving bowl, mix together the remaining 1 tablespoon miso, 1 tablespoon soy sauce, the peanut butter and 2 tablespoons room temperature water until smooth. Toss the rinsed noodles with the dressing.",
+      "Mix in the broccoli; then flake the salmon with a fork, adding it on top. Taste for seasoning, adding more salt if desired. Finish with the cilantro and serve."
+    ]
+  },
+  "beef-fried-rice": {
+    "prepTime": "50 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "4",
+        "item": "tablespoons neutral oil, plus more if needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons low-sodium soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon cornstarch",
+        "category": "produce"
+      },
+      {
+        "amount": "12",
+        "item": "ounces skirt or sirloin beef, sliced ¼-inch-thick then cut into bite-size pieces (about 1 inch)",
+        "category": "protein"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup finely chopped yellow onion",
+        "category": "protein"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup finely chopped carrot",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "garlic cloves, minced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon minced fresh ginger",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "cups day-old cooked rice (preferably jasmine)",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "large eggs, beaten",
+        "category": "protein"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup frozen peas",
+        "category": "frozen"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup sliced scallions, plus more for garnish",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon toasted sesame oil",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "In a medium bowl, combine 1 tablespoon of the oil, 1 tablespoon of the soy sauce and the cornstarch and whisk until smooth. Add beef, season with salt and pepper, and toss to evenly coat. Let stand for 15 minutes, or even 30 minutes if time allows.",
+      "In a 12-inch nonstick skillet, heat 2 tablespoons of oil over medium-high. Add half of the beef and cook, stirring occasionally, just until browned, about 2 minutes. Using tongs, transfer beef to a plate and repeat with the remaining beef. You should have at least 2 tablespoons of fat remaining in the skillet (amount will vary depending on the beef); if necessary, add more oil to reach 2 tablespoons.",
+      "Add onion and carrot to the skillet and season with salt and pepper. Cook, stirring occasionally, until softened, 3 minutes. Add garlic and ginger and stir until fragrant, 30 seconds.",
+      "Add rice, season with salt and pepper and cook, stirring, until well incorporated and warmed through, 2 minutes.",
+      "Push the rice to one side of the skillet and add the remaining 1 tablespoon oil to the empty side. Add eggs and stir until scrambled, then mix the eggs into the rice mixture. Add beef (and any accumulated juices), peas, scallions, sesame oil and the remaining 1 tablespoon soy sauce, and cook, stirring until mixture is well blended, 1 to 2 minutes longer. Season with salt and pepper.",
+      "Divide fried rice among bowls and top with more scallions. Serve warm."
+    ]
+  },
+  "chicken-allarrabbiata": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "pounds bone-in, skin-on chicken thighs ( 4 to 6 thighs)",
+        "category": "protein"
+      },
+      {
+        "amount": "Salt",
+        "item": "and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "medium shallot minced",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "garlic cloves, minced",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon crushed red pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup chopped jarred Calabrian chiles or hot cherry peppers",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon tomato paste",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(28-ounce) can crushed or diced tomatoes",
+        "category": "produce"
+      },
+      {
+        "amount": "Polenta,",
+        "item": "for serving",
+        "category": "pantry"
+      },
+      {
+        "amount": "Fresh",
+        "item": "parsley, for serving",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Heat oven to 400 degrees.",
+      "On a plate, pat chicken thighs with a paper towel until the skin is dry, then sprinkle generously with salt and pepper all over. Set an oven-proof skillet or pan over medium heat and add olive oil. When oil is hot, add chicken thighs skin-side down and cook, untouched, for 9 minutes. When the skin is crisped and releases from the pan, return thighs to the same plate and set aside. (The chicken will not be cooked through at this point.)",
+      "Add shallot, garlic, crushed red pepper, chopped chiles and a pinch of salt to the pan. Cook until the shallot is softened and the garlic is fragrant, about 2 minutes. Add tomato paste, stirring until the paste darkens, about 2 minutes. Add the tomatoes, their juices and a big pinch each of salt and pepper and bring to a gentle simmer. Cook, scraping the bottom of the pan to loosen any browned bits, for about 5 minutes.",
+      "Remove the pan from the heat. Tuck the chicken thighs into the pan, skin-side up, ensuring they are covered in tomato sauce. Bake in the oven until the chicken is cooked through, about 20 minutes.",
+      "Taste the sauce and adjust seasoning and spice level as necessary. Serve warm, over polenta, and garnish with fresh parsley."
+    ]
+  },
+  "sheet-pan-shrimp-with-tomatoes-feta-and-oregano": {
+    "prepTime": "10 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "garlic clove",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon chopped fresh oregano",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon lemon juice",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "Black",
+        "item": "pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "pounds peeled shrimp",
+        "category": "protein"
+      },
+      {
+        "amount": "Chopped",
+        "item": "tomatoes, for serving",
+        "category": "produce"
+      },
+      {
+        "amount": "Crumbled",
+        "item": "feta, for serving",
+        "category": "protein"
+      }
+    ],
+    "instructions": [
+      "Turn on the broiler, and position the oven rack close to the heat.",
+      "Mash garlic clove with salt until it forms a paste. Add chopped oregano, lemon juice, olive oil and lots of black pepper. Rub paste all over 1 1/2 pounds peeled shrimp.",
+      "Spread shrimp out on a pan and broil, 2 to 3 minutes per side. Served topped with chopped tomatoes and crumbled feta."
+    ]
+  },
+  "quick-fish-chowder-with-hot-butter-crackers": {
+    "prepTime": "25 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "4",
+        "item": "tablespoons unsalted butter",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "large fennel bulb with some green stems (about 12 ounces), trimmed and sliced (about 4 cups)",
+        "category": "produce"
+      },
+      {
+        "amount": "12",
+        "item": "ounces Yukon Gold potatoes (2 to 3), thinly sliced into rounds",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "large shallot (4 ounces), thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "large garlic cloves, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt and freshly ground black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(8-ounce) bottle clam juice",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "pound boneless, skinless cod fillet (or flounder or halibut), cut into 1-inch pieces",
+        "category": "protein"
+      },
+      {
+        "amount": "¼",
+        "item": "cup half-and-half",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons unsalted butter",
+        "category": "protein"
+      },
+      {
+        "amount": "1 ½",
+        "item": "teaspoons hot or smoked paprika",
+        "category": "pantry"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "12",
+        "item": "to 15 saltine crackers",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Prepare the chowder: Melt 4 tablespoons butter in a large pot over medium-high heat. Once the butter is foamy, add the fennel, potatoes, shallot and garlic. Season with salt and pepper and cook, stirring occasionally, until the fennel and shallots are slightly translucent and softened, 4 to 5 minutes.",
+      "Add the clam juice and 2 cups water and bring to a boil over high heat. Cover the pot with a lid, adjust the heat to low and simmer until the potatoes are tender, about 10 minutes.",
+      "While the soup is simmering, prepare the crackers: Melt 2 tablespoons of butter in a small saucepan over medium heat. Swirl in the paprika and turn off the heat. Lightly crush the saltines into the saucepan in small bite-size pieces and toss to coat in the seasoned butter. Season with salt and set aside.",
+      "Once the potatoes are tender, stir in the cod and half-and-half, raise the heat to medium, cover and simmer until the cod is cooked through, 3 to 4 minutes. Season generously with salt and pepper.",
+      "Divide the chowder among bowls and top with the seasoned crackers."
+    ]
+  },
+  "honey-habanero-pork-chops-with-carrots": {
+    "prepTime": "25 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "4",
+        "item": "thin (½-inch) boneless pork chops (about 1½ pounds total)",
+        "category": "protein"
+      },
+      {
+        "amount": "1½",
+        "item": "teaspoons paprika",
+        "category": "pantry"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup neutral oil, such as grapeseed",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "medium carrots, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "lime",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "habanero chiles, halved and seeded",
+        "category": "produce"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup honey",
+        "category": "pantry"
+      },
+      {
+        "amount": "Chopped",
+        "item": "cilantro, for serving",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Pat the pork dry and season all over with the paprika and a big pinch of salt. Set aside.",
+      "Heat 2 tablespoons oil in a large cast-iron skillet over medium-high. Add the carrots, season with salt and stir occasionally until crisp-tender and charred in spots, 3 to 5 minutes. Turn off the heat. Scrape the carrots onto a plate and zest the lime over the top. Cut the lime in half.",
+      "Heat the remaining 2 tablespoons oil in the skillet over medium-high. Add the pork and the chiles. Cook, pressing the meat with tongs to prevent buckling, until browned, 3 to 4 minutes. Flip and cook until firm to the touch, 1 to 3 minutes. Transfer the pork to the plate (leave the chiles in the skillet).",
+      "Reduce the heat to medium-low and add the honey and juice from half the lime. Stir constantly until thickened and dark like maple syrup, 1 to 3 minutes. Turn off the heat, add the pork, carrots and any resting juices back to the skillet. Turn to coat in the glaze. Serve sprinkled with the cilantro."
+    ]
+  },
+  "seared-orange-chicken-and-broccoli": {
+    "prepTime": "35 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "3",
+        "item": "to 5 tangerines or clementines, halved",
+        "category": "pantry"
+      },
+      {
+        "amount": "¼",
+        "item": "cup low-sodium soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "¼",
+        "item": "cup distilled white vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons toasted sesame oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(1-inch) piece fresh ginger, finely chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "serrano or jalapeño, halved, seeds removed if desired, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "¼",
+        "item": "cup avocado or another neutral oil, divided, plus more as needed",
+        "category": "produce"
+      },
+      {
+        "amount": "1½",
+        "item": "to 2 pounds boneless, skinless chicken breasts or thighs, patted dry, pounded to ½-inch-thick",
+        "category": "protein"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "pound broccoli (1 large head), cut into florets",
+        "category": "produce"
+      },
+      {
+        "amount": "Cilantro",
+        "item": "and toasted sesame seeds, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Squeeze ⅓ cup juice from the tangerines into a large, wide rimmed dish (like a 9-by-13-inch dish) or shallow bowl. Add the squeezed fruit peels, soy sauce, vinegar, sesame oil, ginger and serrano.",
+      "In a large skillet, heat 2 tablespoons avocado oil over medium-high. Season the chicken with salt, then add to the skillet and cook until golden brown underneath, about 5 minutes. Flip and cook until cooked through, 2 to 5 minutes. Transfer to the sauce and turn to coat.",
+      "Wipe out the skillet to remove any crusty bits that may burn. Add the remaining 2 tablespoons avocado oil to the skillet, still over medium-high. Add the broccoli, season with salt, and cook until browned underneath, 3 to 5 minutes. (If at any point the skillet looks dry and the broccoli is burning, add more oil.) Stir and cook until bright-green, another 3 to 5 minutes. (Err on the crisp side of crisp-tender because the broccoli will soften in the sauce.) Transfer the broccoli to the sauce and stir to coat.",
+      "Thinly slice the chicken, then serve with the broccoli topped with cilantro, sesame seeds and plenty of sauce. (Feel free to discard or leave the squeezed citrus to continue to perfume the sauce; it is not especially enjoyable to eat, however.)"
+    ]
+  },
+  "roasted-eggplant-noodles-with-cashew-sauce": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1 ½",
+        "item": "pounds Italian eggplant, diced into 1-inch pieces (8 cups)",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "(14-ounce) can chickpeas, rinsed",
+        "category": "produce"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons toasted sesame oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "½",
+        "item": "cup thinly sliced scallions, plus more for garnish",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "ounces vermicelli rice noodles",
+        "category": "pantry"
+      },
+      {
+        "amount": "⅓",
+        "item": "cup roasted cashew butter",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons ponzu",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons toasted sesame seeds, plus more for garnish",
+        "category": "pantry"
+      },
+      {
+        "amount": "Hot",
+        "item": "sauce (optional), for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat oven to 425 degrees. On a large rimmed sheet pan, combine eggplant and chickpeas and season with salt and pepper. Drizzle over olive oil and sesame oil and toss to evenly coat. Roast until eggplant is tender and caramelized and chickpeas are golden, 30 to 35 minutes, stirring halfway through. Add scallions and mix well.",
+      "Meanwhile, in a large bowl, combine noodles and enough boiling water to completely cover them. Let stand until softened, about 5 minutes. Rinse under cold water to stop the cooking, then drain well.",
+      "In a medium bowl, combine cashew butter, ponzu, sesame seeds and ⅓ cup of water; season with salt and pepper and whisk until smooth.",
+      "Divide noodles among 4 shallow bowls, then divide the eggplant mixture on top. Spoon over some of the creamy cashew sauce and top with more sesame seeds and scallions. Serve with hot sauce, if desired."
+    ]
+  },
+  "brothy-tomato-rice-soup": {
+    "prepTime": "30 min",
+    "serves": 2,
+    "ingredients": [
+      {
+        "amount": "Extra-virgin",
+        "item": "olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "ounce guanciale or bacon, diced",
+        "category": "protein"
+      },
+      {
+        "amount": "1/2",
+        "item": "medium yellow onion, diced",
+        "category": "produce"
+      },
+      {
+        "amount": "Pinch",
+        "item": "of crushed red pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon dried oregano",
+        "category": "pantry"
+      },
+      {
+        "amount": "12",
+        "item": "ounces grape or cherry tomatoes, preferably on the vine",
+        "category": "produce"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup jasmine rice",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "cups chicken stock, bone broth or dashi, preferably homemade",
+        "category": "protein"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "Fresh",
+        "item": "basil and toasted sesame oil, for serving (optional)",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat a medium saucepan over medium, then add enough oil to lightly coat the bottom. Stir-fry the guanciale and onion until both start to brown at the edges, about 5 minutes, then scooch them to the side of the pan.",
+      "To the empty side of the pan, add a little more oil if dry, then stir in the crushed red pepper and oregano. Reduce the heat if the spices start to burn. Nestle in the tomatoes (with their vines still on) and cook them until fragrant, about 1 minute.",
+      "Add the rice and stock and bring to a boil over high, then reduce the heat to medium-low. Simmer, stirring occasionally, until the rice is tender, 15 to 20 minutes. Taste and season with salt. If your tomatoes had stems and vines, remove and discard them.",
+      "Serve immediately with a topping of fresh basil and a dribble of sesame oil, if using."
+    ]
+  },
+  "scallops-with-bread-crumb-salsa-verde": {
+    "prepTime": "30 min",
+    "serves": 2,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "tablespoons finely chopped shallot (about 1 large shallot)",
+        "category": "protein"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon red or white wine vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "6",
+        "item": "tablespoons extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/3",
+        "item": "cup coarse bread crumbs, such as panko",
+        "category": "pantry"
+      },
+      {
+        "amount": "8",
+        "item": "to 10 ounces fresh sea scallops, patted dry",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon canola oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/3",
+        "item": "cup chopped tender herbs, such as parsley and dill, plus whole leaves for serving",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon capers, chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "Finely",
+        "item": "grated zest from 1 lemon or orange, optional",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Add the shallots to a small bowl and season with salt and pepper. Stir in the vinegar and set aside.",
+      "Heat a medium skillet (preferably not non-stick) over medium. Add 1 tablespoon olive oil and tilt the pan so the oil coats the bottom. Once shimmering, add the bread crumbs. Cook, stirring often, until golden brown and toasty, about 5 minutes. Transfer to a plate and wipe the pan clean.",
+      "Toss the scallops with the canola oil in a bowl and season with salt and pepper. Heat the same skillet over high. When the skillet is thoroughly heated, place the scallops in the pan, spacing them apart. Sear, undisturbed, until golden brown on the bottom, 3 to 4 minutes. Flip and repeat on the second side. Transfer to a serving platter.",
+      "Finish the salsa: To the bowl with the shallots, add herbs, capers, the remaining 5 tablespoons olive oil and the lemon zest, if using, and stir to combine. Stir in the bread crumbs and season with salt and pepper to taste.",
+      "To serve, spoon the salsa on and around the scallops; top with herb leaves."
+    ]
+  },
+  "jalapeno-orange-pork-tenderloin-with-snap-peas": {
+    "prepTime": "60 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "3",
+        "item": "tablespoons brown sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "5",
+        "item": "garlic cloves, finely chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "jalapeños, finely chopped (seeds removed, if desired)",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "large orange",
+        "category": "produce"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt (such as Diamond Crystal) and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "pork tenderloins (2 to 2 1/2 pounds total), silver skin removed (see Tip), patted dry",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "lime",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup chopped cilantro leaves and stems",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "pound snap peas",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Arrange a rack in the bottom third of the oven and heat to 400 degrees. In a medium bowl, stir together the sugar, garlic, jalapeño and the zest of the orange. Season with salt and pepper.",
+      "Place the pork tenderloins on a parchment-lined sheet pan and season generously with salt (about 2 ½ teaspoons) and pepper. Rub the pork all over with about three-quarters of the jalapeño mixture; reserve the rest. Roast until a thermometer inserted into the thickest part of the pork registers 140 degrees, 20 to 25 minutes. (The pork will continue to cook as it rests.)",
+      "Meanwhile, cut off the top and bottom of the orange and set down on one of the cut sides. Follow the curve of the fruit to cut away the peel and pith. Squeeze the peels into the remaining jalapeño mixture to get out any juice. Thinly slice the orange into bite-size pieces. Transfer the fruit and any juice on the cutting board to the bowl. Zest and juice the lime into the jalapeño-orange mixture, stir in the cilantro leaves and stems and 1 tablespoon olive oil, and season to taste with salt and pepper.",
+      "Transfer the pork to a cutting board to rest for at least 5 minutes. Add the snap peas and remaining 1 tablespoon oil to the sheet pan, season with salt and toss to coat. (Don’t worry about any burnt bits on the parchment.) Roast until bright green and plump, 5 to 7 minutes.",
+      "Thinly slice the pork and serve with the snap peas topped with the oranges and plenty of the sauce from the bowl."
+    ]
+  },
+  "ssamjang-pork-meatballs": {
+    "prepTime": "30 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "pound ground pork",
+        "category": "protein"
+      },
+      {
+        "amount": "1/3",
+        "item": "cup ssamjang, store bought or homemade",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup/20 grams panko bread crumbs",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "scallions, minced, plus more for serving",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons minced ginger (from one 2-inch piece, no need to peel)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon minced garlic (from 2 to 3 large cloves)",
+        "category": "produce"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "Lettuce,",
+        "item": "for serving",
+        "category": "pantry"
+      },
+      {
+        "amount": "Cooked",
+        "item": "rice, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat oven to 425 degrees. In a large bowl, combine the pork, ssamjang, panko, scallions, ginger, garlic and 1/2 teaspoon salt and use your hands to gently mix.",
+      "Shape the meat into 16 balls (about 1 1/2 inches in diameter) and arrange on a parchment or foil-lined, rimmed baking sheet.",
+      "Bake until golden and cooked through, about 15 minutes. Serve warm, sprinkled with scallions, in lettuce cups with rice if desired."
+    ]
+  },
+  "lomo-saltado-tomato-beef-stir-fry": {
+    "prepTime": "40 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1 1/4",
+        "item": "pounds skirt or flank steak or beef tenderloin, cut against grain into ½-by-2-inch slices",
+        "category": "protein"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound frozen French fries",
+        "category": "frozen"
+      },
+      {
+        "amount": "4",
+        "item": "tablespoons avocado, grapeseed or canola oil",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "medium red onion, cut into 1/2-inch wedges (about 1 cup)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "red, yellow or orange bell pepper, cut into 1/2-inch slices",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "Roma tomatoes, cut into 1/2-inch wedges",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "large garlic cloves, finely chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup fresh lime juice",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons aji amarillo chile paste (see Tip) or 1 serrano chile, seeded and finely chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "Cilantro",
+        "item": "leaves and tender stems, for serving",
+        "category": "pantry"
+      },
+      {
+        "amount": "Warm",
+        "item": "jasmine rice, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Season steak with salt and pepper. (If you have time, spread steak out on a plate, uncovered, and refrigerate for at least 30 minutes and up to 4 hours.) Cook fries per package directions, season with salt and pepper and keep warm.",
+      "Heat a large skillet (preferably cast-iron) or wok over high, add 2 tablespoons oil and when it starts to smoke, sear the beef in three batches, until deeply caramelized, about 1 minute per side. Transfer seared steak to a large rimmed plate or sheet pan.",
+      "Add 1 tablespoon oil to the hot skillet; add onion and cook, undisturbed, until golden around the edges, about 1 minute, then stir and sauté until just cooked through but still a bit crisp, 1 to 2 minutes. Transfer to plate with steak. Add the remaining 1 tablespoon oil and cook the bell pepper the same way; transfer to the plate.",
+      "Turn heat down to low and add tomatoes, garlic, soy sauce, lime juice and chile paste. Cook, stirring occasionally, until the tomatoes have softened, about 2 minutes. Return the steak, onion and pepper to the skillet, toss gently to combine and turn off heat.",
+      "To serve, transfer the fries to a rimmed serving platter or individual plates. Top with the stir-fried beef and vegetables and spoon the sauce over. Top with cilantro and more black pepper, if desired. Serve with rice."
+    ]
+  },
+  "sheet-pan-sausages-sweet-potatoes-and-balsamic-kale": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "pound hot or sweet Italian sausages",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "medium sweet potatoes (about 1 1/2 pounds), cut into 1-inch pieces",
+        "category": "produce"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup sage leaves",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "tablespoons extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "Salt",
+        "item": "and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup dried cranberries or cherries",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "shallot, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons balsamic vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "teaspoons honey",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "bunch kale",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 425 degrees. Score the sausages in a few places. Toss the sausages, sweet potatoes and sage on a sheet pan with 3 tablespoons olive oil, salt and pepper until well coated. Spread in an even layer and roast until golden brown and cooked through, 25 to 30 minutes.",
+      "Meanwhile, in a large bowl, stir together the cranberries, shallot, vinegar, honey and remaining tablespoon oil. Strip the kale leaves of their stems, then rip the leaves into bite-size pieces and add to the bowl. Sprinkle with salt and pepper and toss until coated and slightly wilted.",
+      "Transfer the cooked sausages and sweet potatoes to plates. Add the kale and balsamic mixture to the sheet pan and toss until the kale is warm. Serve with the sausages and sweet potatoes."
+    ]
+  },
 };
 
 export default missingFullDetailsGenerated;
