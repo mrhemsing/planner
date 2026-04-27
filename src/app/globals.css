@@ -70,8 +70,10 @@ input:focus-visible {
 
 .category-chip-active {
   border-color: #92400e;
+  border-top-color: #000;
   box-shadow:
     0 0 0 2px #92400e,
+    0 -2px 0 #000,
     0 9px 20px rgba(120, 53, 15, 0.18);
   color: #92400e;
   transform: translateY(-1px);
