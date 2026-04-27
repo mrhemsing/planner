@@ -364,12 +364,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </button>
             </div>
 
-            {isShowingDailyPick ? (
-              <div className="hidden min-h-11 items-center gap-2 rounded-2xl border border-white bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm sm:flex sm:min-w-[260px] sm:flex-1 sm:max-w-sm">
-                <span aria-hidden="true">🏅</span>
-                <span>{dailyPickTitle}</span>
-              </div>
-            ) : null}
           </div>
         </div>
       </div>
@@ -423,13 +417,21 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
             </div>
 
-            <article className="rounded-[20px] border border-stone-300 bg-white p-4 sm:p-5">
-              {!selectedRecipe ? (
-                <div className="rounded-[16px] border border-dashed border-amber-200 bg-white p-6 text-stone-600">
-                  No recipes match that filter yet.
+            <div className="grid gap-3">
+              {isShowingDailyPick ? (
+                <div className="hidden min-h-11 items-center gap-2 rounded-2xl border border-white bg-white px-4 text-sm font-semibold text-stone-900 shadow-sm lg:flex">
+                  <span aria-hidden="true">🏅</span>
+                  <span>{dailyPickTitle}</span>
                 </div>
-              ) : (
-                <>
+              ) : null}
+
+              <article className="rounded-[20px] border border-stone-300 bg-white p-4 sm:p-5">
+                {!selectedRecipe ? (
+                  <div className="rounded-[16px] border border-dashed border-amber-200 bg-white p-6 text-stone-600">
+                    No recipes match that filter yet.
+                  </div>
+                ) : (
+                  <>
                   <div className="relative h-56 w-full overflow-hidden rounded-[16px] bg-amber-50 sm:h-72">
                     <Image
                       src={selectedRecipe.imageUrl}
@@ -543,9 +545,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       Open recipe on NYT Cooking
                     </a>
                   </div>
-                </>
-              )}
-            </article>
+                  </>
+                )}
+              </article>
+            </div>
           </div>
         </section>
       ) : null}
