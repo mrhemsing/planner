@@ -321,7 +321,16 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 className="h-[75px] w-[75px] object-contain lg:h-[83px] lg:w-[83px]"
               />
               <h1 className="text-3xl font-semibold leading-[1.08] tracking-tight text-white sm:text-3xl">
-                <span className="block uppercase sm:inline lg:block">NYT COOKING..</span>
+                <span className="flex items-center gap-1.5 uppercase sm:inline-flex lg:flex">
+                  <Image
+                    src="/recipe-images/nyt-logo.svg"
+                    alt="NYT"
+                    width={30}
+                    height={30}
+                    className="h-[1em] w-[1em] object-contain"
+                  />
+                  <span>COOKING..</span>
+                </span>
                 <span className="mt-0.5 block sm:inline lg:block">Healthy Dinners</span>
               </h1>
             </button>
