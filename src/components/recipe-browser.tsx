@@ -438,6 +438,20 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   type="text"
                   value={recipeSearchQuery}
                   onChange={(event) => setRecipeSearchQuery(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+                    if (!recipeSheetRecipes.length) return;
+
+                    event.preventDefault();
+                    const currentIndex = Math.max(
+                      0,
+                      recipeSheetRecipes.findIndex((recipe) => recipe.id === selectedRecipeId),
+                    );
+                    const direction = event.key === "ArrowDown" ? 1 : -1;
+                    const nextIndex = (currentIndex + direction + recipeSheetRecipes.length) % recipeSheetRecipes.length;
+                    setSelectedRecipeFromUrl(false);
+                    setSelectedRecipeId(recipeSheetRecipes[nextIndex].id);
+                  }}
                   placeholder="Search recipes"
                   autoComplete="off"
                   className="mb-[18px] w-full rounded-2xl border border-stone-300 bg-stone-50 px-4 py-3 text-base text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-amber-500 focus:bg-white"
