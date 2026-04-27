@@ -478,7 +478,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                         desktopRecipeListButtonRefs.current[recipe.id] = element;
                       }}
                       type="button"
-                      onClick={() => setSelectedRecipeId(recipe.id)}
+                      onClick={() => {
+                        setSelectedRecipeFromUrl(false);
+                        setSelectedRecipeId(recipe.id);
+                      }}
                       onKeyDown={(event) => {
                         if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
 
