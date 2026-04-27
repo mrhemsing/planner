@@ -7950,6 +7950,335 @@ const missingFullDetailsGenerated: Record<string, RecipeDetailsEntry> = {
       "Turn off the heat, add the pork chops and their juices back to the skillet and turn to coat in the caramel. Serve the pork chops with a spoonful of the apples and caramel."
     ]
   },
+  "papadzules-eggs-and-asparagus-in-tortillas-with-pepita-sauce": {
+    "prepTime": "50 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "",
+        "item": "Ice",
+        "category": "pantry"
+      },
+      {
+        "amount": "10",
+        "item": "large eggs",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "pound asparagus, woody ends trimmed, cut into 1-inch pieces",
+        "category": "produce"
+      },
+      {
+        "amount": "8",
+        "item": "corn tortillas, preferably blue corn",
+        "category": "produce"
+      },
+      {
+        "amount": "1 3/4",
+        "item": "cups pepitas (raw pumpkin seeds)",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "scallions, root ends trimmed, chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves, peeled and lightly crushed",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "jalapeños, stemmed and roughly chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "1/3",
+        "item": "cup cilantro leaves and tender stems",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon fresh lime juice, plus more to taste",
+        "category": "produce"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Fill a large bowl with ice and water. Bring a large saucepan of water to a boil over medium-high heat. Using a slotted spoon, carefully lower the eggs into the water. Cook, adjusting the heat to maintain a gentle boil, for 6½ minutes for jammy eggs with a soft and runny yolk (or longer for medium- or hard-boiled eggs). Transfer the eggs to the bowl of ice water and chill until just slightly warm, about 2 minutes. (Keep the water boiling.) Gently crack the eggs all over and peel, starting from the wider end, which contains the air pocket. That gap between egg and shell makes peeling easier. Cut the eggs into quarters. Set 8 quarters aside for serving.",
+      "Add the asparagus to the same pot of boiling water and cook until bright green and crisp-tender, 2 to 3 minutes. Drain, transfer to a medium bowl and let sit until ready to assemble.",
+      "Heat a tortilla in a small skillet over medium heat, turning once, until warm, about 1 minute. Wrap in a clean kitchen towel or foil. Repeat with the remaining tortillas, stacking and wrapping them in the towel.",
+      "Reserve ¼ cup pepitas and ¼ cup scallions for garnish. Combine remaining pepitas, remaining scallions, the garlic, jalapeños, cilantro, lime juice, 3 cups water and salt (1 teaspoon coarse kosher salt or 2 teaspoons Diamond Crystal) in the jar of a blender. Purée until smooth and the consistency of heavy cream. Taste and season with salt and lime juice if necessary. Transfer to a medium bowl.",
+      "Working one at a time and using tongs, dip a tortilla into the purée, turning to completely coat in sauce. Transfer to a baking sheet as you go.",
+      "Arrange 4 egg quarters and a few pieces of asparagus down the center of each tortilla. Fold one side over, then roll up the tortilla. Place seam-side down on a plate. Repeat with the remaining tortillas, dividing among plates and spooning the remaining pepita purée over. Top with the reserved pepitas, scallions, egg quarters and any remaining asparagus."
+    ]
+  },
+  "egg-in-a-hole-with-asparagus": {
+    "prepTime": "30 min",
+    "serves": 2,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "tablespoons unsalted butter, melted and cooled",
+        "category": "protein"
+      },
+      {
+        "amount": "5",
+        "item": "large eggs",
+        "category": "protein"
+      },
+      {
+        "amount": "1/3",
+        "item": "cup whole milk",
+        "category": "protein"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup plus 2 tablespoons grated Parmesan",
+        "category": "protein"
+      },
+      {
+        "amount": "Salt",
+        "item": "and freshly ground black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "wide slices sturdy country white bread, such as sourdough or peasant bread (preferably from the middle of the loaf)",
+        "category": "pantry"
+      },
+      {
+        "amount": "8",
+        "item": "ounces asparagus, trimmed",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "scallions, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "fresh thyme sprigs",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon extra-virgin olive oil",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat oven to 425 degrees. Grease a rimmed sheet pan with 1 tablespoon melted butter.",
+      "In a large, shallow dish, whisk together 1 egg, milk, 1/4 cup Parmesan, a large pinch of salt and pepper, and the remaining tablespoon melted butter. Add bread and let soak for about 2 minutes per side. The bread should be soft and soaked through, but not falling apart.",
+      "Arrange soaked bread on one side of the prepared sheet pan. Pour any remaining soaking mixture from bowl onto the bread slices. Using a cookie cutter or a knife, carefully cut 2 (2 1/2-inch) holes in each slice of soaked bread, making 4 holes in total. Place the cut-out rounds alongside the bread slices on the pan.",
+      "On the other side of the sheet pan, add the asparagus, half of the scallions (save the rest for garnish), thyme and a large pinch of salt and pepper. Drizzle asparagus with olive oil, tossing well, and spread into an even single layer.",
+      "Bake until bread is golden on top, 10 minutes. If the asparagus is tender and browned after 10 minutes, use tongs to transfer the stalks to a plate and tent with foil to keep warm. Thick asparagus may need more time, in which case leave it in the pan for the next step.",
+      "Using a spatula, flip the bread slices and cut-outs. Crack the remaining 4 eggs into the holes (the eggs may overflow a bit, and that is OK). Season eggs lightly with salt and pepper. Sprinkle remaining 2 tablespoons Parmesan on top of eggs and bread.",
+      "Return pan to the oven and bake until eggs are barely set, about 5 to 7 minutes. The yolks and even some of the whites should jiggle slightly. (Note that the eggs will continue to cook on the sheet pan once out of the oven, so if you like runny yolks, err on the side of early removal.) However, if the egg whites are still translucent, bake for another minute or two.",
+      "To serve, place egg toasts on plates, top each toast with half the asparagus (discarding the thyme sprigs) and garnish with reserved scallions."
+    ]
+  },
+  "herby-asparagus-salad-with-beets-and-prosciutto": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "tablespoons lemon juice",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon white wine vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon Dijon mustard",
+        "category": "pantry"
+      },
+      {
+        "amount": "Salt",
+        "item": "and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "bunch medium asparagus (about 16 to 20 spears)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "medium red beet, raw, peeled and julienned",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons tarragon leaves (from 3 sprigs)",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons dill sprigs (from 3 stems)",
+        "category": "produce"
+      },
+      {
+        "amount": "About 3",
+        "item": "tablespoons parsley leaves (from 6 or so stems)",
+        "category": "produce"
+      },
+      {
+        "amount": "About 3",
+        "item": "tablespoons mint leaves (from 1 to 2 large sprigs)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "(8-minute) boiled eggs, peeled and roughly chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "8",
+        "item": "thin slices of prosciutto",
+        "category": "protein"
+      }
+    ],
+    "instructions": [
+      "Make the vinaigrette: Put lemon juice and vinegar in a small bowl. Stir in mustard to dissolve. Add a good pinch of salt and some freshly ground pepper. Slowly whisk in the olive oil.",
+      "Prepare the salad: Snap off the tough ends of the asparagus. In a large pot, bring abundantly salted water to a low boil. Add asparagus and cook until just tender, 2 to 4 minutes, depending on their width. Remove and spread out on a kitchen towel to cool. Set aside.",
+      "Divide cooked asparagus spears among 4 plates. Put beets in a small bowl, season with a pinch of salt and 1 tablespoon vinaigrette. Top asparagus with dressed beet. Scatter herbs over each plate, then sprinkle with chopped egg. Drizzle vinaigrette over everything.",
+      "Tear prosciutto into wide ribbons; drape ribbons over each plate. Serve."
+    ]
+  },
+  "spring-barley-soup": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "tablespoon toasted sesame oil, coconut oil or olive oil",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "garlic cloves, coarsely chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "3/4",
+        "item": "cup pearled barley",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon soy sauce, plus more to taste",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "bunch asparagus (about 1 pound), tough ends trimmed, stalks thinly sliced 1/4-inch thick, tips left whole",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "cup fresh or frozen shelled peas, edamame or fava beans",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons yellow or white miso",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon unseasoned rice vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(1-inch) piece fresh ginger, peeled and finely grated (about 1 tablespoon)",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "In a large pot or Dutch oven, add the oil and garlic, and heat over medium. Cook, stirring, until fragrant and softened but not browned, 2 to 4 minutes. Add 6 cups of water, the barley and 2 teaspoons soy sauce. Bring to a boil over high, then reduce heat to medium and simmer until the barley is tender, 25 to 30 minutes.",
+      "Add the asparagus and peas, and cook until bright green and crisp-tender, 3 to 4 minutes. Remove pot from heat.",
+      "In a small bowl or liquid measuring cup, stir a spoonful of the soup into the miso until dissolved. Pour into the pot, along with the rice vinegar, ginger and remaining 1 teaspoon soy sauce; stir to combine. Taste for salt level and adjust with more soy sauce. (Leftovers will keep for up to 2 days; rewarm over low heat, thin with water, and add vinegar and soy sauce to taste.)"
+    ]
+  },
+  "spanish-asparagus-revuelto": {
+    "prepTime": "30 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "Olive",
+        "item": "oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "peeled garlic cloves, plus 1/2 teaspoon minced garlic",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "cups bread cubes, made with day-old bread, cut in 1/2-inch cubes",
+        "category": "pantry"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "ounces diced Spanish chorizo",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "bunch thin asparagus, about 1 1/2 pounds, cut in 1- to 2-inch lengths",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "bunch green onions, chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "8",
+        "item": "large eggs, beaten",
+        "category": "protein"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon pimentón",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons roughly chopped Italian parsley",
+        "category": "protein"
+      }
+    ],
+    "instructions": [
+      "Put 3 tablespoons olive oil in a cast-iron skillet over medium-high heat. Add peeled garlic cloves and let them sizzle until lightly browned, then remove. Add bread cubes, season with salt and pepper, lower heat to medium and gently fry until lightly browned and crisp, about 2 minutes. Remove bread and set aside to cool.",
+      "Add chorizo and fry lightly. Add asparagus, season with salt and pepper, and stir-fry until cooked through but firm, 3 to 4 minutes. Add green onions and minced garlic and cook 1 minute more.",
+      "Season eggs with salt, pepper and pimentón. Pour into pan and cook, stirring with a wooden spoon, just until soft and creamy, 2 to 3 minutes. Add parsley and serve immediately, topped with the fried bread cubes."
+    ]
+  },
 };
 
 export default missingFullDetailsGenerated;

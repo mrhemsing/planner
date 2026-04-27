@@ -662,7 +662,7 @@ function getRecipeCategory(recipe: RecipeLibraryEntry) {
     return "fish";
   }
 
-  if (/(chicken|pork|beef|turkey|meatball|meatballs|sausage|ham|bacon)/.test(text)) {
+  if (/(chicken|pork|beef|turkey|meatball|meatballs|sausage|ham|bacon|prosciutto)/.test(text)) {
     return "meat";
   }
 
