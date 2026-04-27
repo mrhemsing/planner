@@ -310,7 +310,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   };
 
   const selectRecipe = (id: string) => {
-    setSelectedRecipeFromUrl(false);
+    setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(id);
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
@@ -320,7 +320,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     const recipe = recipeSheetRecipes[index];
     if (!recipe) return;
 
-    setSelectedRecipeFromUrl(false);
+    setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(recipe.id);
     window.requestAnimationFrame(() => {
       desktopRecipeListButtonRefs.current[recipe.id]?.focus();
@@ -479,7 +479,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       }}
                       type="button"
                       onClick={() => {
-                        setSelectedRecipeFromUrl(false);
+                        setSelectedRecipeFromUrl(true);
                         setSelectedRecipeId(recipe.id);
                       }}
                       onKeyDown={(event) => {
