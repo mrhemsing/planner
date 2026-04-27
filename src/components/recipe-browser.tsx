@@ -207,7 +207,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       label: `🥦 Vegetarian (${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "vegetarian").length})`,
       mobileLabel: `🥦 ${sortedRecipes.filter((recipe) => getRecipeCategory(recipe) === "vegetarian").length}`,
       ariaLabel: "Vegetarian recipes",
-      browseLabel: "Browse all vegetarian recipes",
+      browseLabel: "Browse all veg recipes",
     },
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
