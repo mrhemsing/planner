@@ -380,7 +380,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           className="rounded-[24px] border border-amber-200 bg-white p-5 shadow-sm shadow-amber-100/40 sm:p-6"
         >
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div className={`${isShowingDailyPick ? "" : "hidden lg:block"} rounded-[20px] border border-stone-300 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto`}>
+            <div className={`${isShowingDailyPick ? "" : "hidden lg:block"} lg:rounded-[20px] lg:border lg:border-stone-300 lg:bg-white lg:p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto`}>
               {isShowingDailyPick ? (
                 <div className="lg:hidden">
                   <p className="rounded-[16px] border border-amber-300 bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
