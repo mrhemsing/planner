@@ -375,7 +375,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               />
               <h1 className="mt-0.5 text-3xl font-semibold leading-[1.24] tracking-tight text-white sm:text-3xl">
                 <span className="block uppercase text-black sm:inline lg:block">NYT COOKING..</span>
-                <span className="block font-bold [font-family:Georgia,serif] sm:inline lg:block">Healthy Dinners</span>
+                <span className="block font-bold text-stone-200 [font-family:Georgia,serif] sm:inline lg:block">Healthy Dinners</span>
               </h1>
             </button>
           </div>
