@@ -1,5 +1,5 @@
 {
-  "count": 168,
+  "count": 177,
   "items": [
     {
       "position": 1,
@@ -1176,6 +1176,69 @@
       "id": "1024528",
       "slug": "green-goddess-chicken-salad-sandwiches",
       "recipeId": "green-goddess-chicken-salad-sandwiches"
+    },
+    {
+      "position": 169,
+      "url": "https://cooking.nytimes.com/recipes/12214-garlicky-beef-tenderloin-with-orange-horseradish-sauce",
+      "id": "12214",
+      "slug": "garlicky-beef-tenderloin-with-orange-horseradish-sauce",
+      "recipeId": "garlicky-beef-tenderloin-with-orange-horseradish-sauce"
+    },
+    {
+      "position": 170,
+      "url": "https://cooking.nytimes.com/recipes/1019262-beef-and-broccoli",
+      "id": "1019262",
+      "slug": "beef-and-broccoli",
+      "recipeId": "beef-and-broccoli"
+    },
+    {
+      "position": 171,
+      "url": "https://cooking.nytimes.com/recipes/1023569-niku-udon-japanese-beef-noodle-soup",
+      "id": "1023569",
+      "slug": "niku-udon-japanese-beef-noodle-soup",
+      "recipeId": "niku-udon-japanese-beef-noodle-soup"
+    },
+    {
+      "position": 172,
+      "url": "https://cooking.nytimes.com/recipes/1019156-beer-braised-beef-and-onions",
+      "id": "1019156",
+      "slug": "beer-braised-beef-and-onions",
+      "recipeId": "beer-braised-beef-and-onions"
+    },
+    {
+      "position": 173,
+      "url": "https://cooking.nytimes.com/recipes/1019891-bo-kho-vietnamese-braised-beef-stew",
+      "id": "1019891",
+      "slug": "bo-kho-vietnamese-braised-beef-stew",
+      "recipeId": "bo-kho-vietnamese-braised-beef-stew"
+    },
+    {
+      "position": 174,
+      "url": "https://cooking.nytimes.com/recipes/1024511-mongolian-beef",
+      "id": "1024511",
+      "slug": "mongolian-beef",
+      "recipeId": "mongolian-beef"
+    },
+    {
+      "position": 175,
+      "url": "https://cooking.nytimes.com/recipes/1017398-japanese-style-beef-stew",
+      "id": "1017398",
+      "slug": "japanese-style-beef-stew",
+      "recipeId": "japanese-style-beef-stew"
+    },
+    {
+      "position": 176,
+      "url": "https://cooking.nytimes.com/recipes/6961-bo-luc-l-c-shaking-beef",
+      "id": "6961",
+      "slug": "bo-luc-l-c-shaking-beef",
+      "recipeId": "bo-luc-l-c-shaking-beef"
+    },
+    {
+      "position": 177,
+      "url": "https://cooking.nytimes.com/recipes/9257-hunan-beef-with-cumin",
+      "id": "9257",
+      "slug": "hunan-beef-with-cumin",
+      "recipeId": "hunan-beef-with-cumin"
     }
   ]
 }

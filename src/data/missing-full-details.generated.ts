@@ -6917,7 +6917,740 @@ const missingFullDetailsGenerated: Record<string, RecipeDetailsEntry> = {
       "Add the avocado, lemon juice, vinegar and olive oil. Season with salt and a few grinds of black pepper. Process until smooth, thick and creamy. Taste for seasonings and add more salt and pepper to taste.",
       "Place the chicken in a large bowl. Add about 1 cup of the dressing and toss well, adding more to taste. Serve immediately, sandwiched between slices of toast, with the rest of the dressing on the side, or cover, placing plastic wrap directly on the surface of the chicken salad to prevent browning, and refrigerate for up to 2 days before serving."
     ]
-  }
+  },
+  "garlicky-beef-tenderloin-with-orange-horseradish-sauce": {
+    "prepTime": "40 min",
+    "serves": 8,
+    "ingredients": [
+      {
+        "amount": "(4-pound)",
+        "item": "beef tenderloin, trimmed and tied",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon kosher salt, more to taste",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon black pepper, more to taste",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon chopped fresh rosemary",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "fat garlic clove, coarsely chopped",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "cups crème fraîche",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup white horseradish",
+        "category": "produce"
+      },
+      {
+        "amount": "Grated",
+        "item": "zest of half an orange",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Season the tenderloin all over with the salt, pepper, rosemary and garlic. Cover the meat and refrigerate for at least two hours and preferably overnight. Let it come to room temperature for 1 hour before roasting.",
+      "Heat oven to 450 degrees. Wipe off as much garlic as possible. (It tends to burn.)",
+      "In a large, ovenproof skillet over high heat, heat the oil. Add the meat and thoroughly brown all over, 4 to 5 minutes per side. (If your skillet isn’t large enough, cut the meat in half.)",
+      "Place the skillet on the oven’s middle rack and roast until an instant-read thermometer shows 120 degrees (for rare), 10 to 20 minutes. Let the meat rest for 10 minutes before carving.",
+      "In a small bowl, whisk the crème fraîche, horseradish and orange zest. Season to taste with salt and pepper and serve alongside the tenderloin."
+    ]
+  },
+  "beef-and-broccoli": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1/3",
+        "item": "cup Shaoxing rice wine, dry sherry or sake",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons plus 2 teaspoons soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon cornstarch",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound beef — chuck or rib steak — sliced thin against the grain",
+        "category": "protein"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup oyster sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "tablespoon chile-garlic sauce, or to taste",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup plus 1 tablespoon neutral oil, like canola, grapeseed or peanut",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound broccoli, the head cut into florets and the stems peeled and cut into planks",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons unsalted butter",
+        "category": "protein"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, whisk together the wine, 2 tablespoons of the soy sauce and the cornstarch. Add the beef to the bowl, and toss to combine, then cover the bowl, and set aside for 20 minutes or so.",
+      "To make the sauce, combine in a small bowl the remaining soy sauce, the oyster sauce and the chile-garlic sauce, and mix to combine, then add a tablespoon of water and mix again. Set aside.",
+      "Heat the 1/2 cup of oil in a wok set over high heat. When the oil is hot and shimmering, add about half the beef to the wok, and stir-fry until it is browned and crisp and barely cooked through, about 2 minutes. Transfer to a bowl or plate, and set aside. Then repeat with remaining beef.",
+      "Pour off the oil in the wok, wipe it out with a towel and return it to the stove over high heat. Add the remaining tablespoon oil, and swirl it around and heat it until it is smoking. Add the broccoli and cook, tossing and stirring frequently, until lightly charred in spots, about 2 minutes.",
+      "Add 2 tablespoons water to the wok, and toss and stir the broccoli in the steam for an additional 2 minutes, then return beef to the wok, followed by the sauce. Cook, stirring and tossing frequently, for 30 seconds or so, then add the butter, and stir and toss again for 30 seconds more. Serve immediately, with rice."
+    ]
+  },
+  "niku-udon-japanese-beef-noodle-soup": {
+    "prepTime": "30 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "20",
+        "item": "grams/about 2 (4-inch) squares kombu",
+        "category": "pantry"
+      },
+      {
+        "amount": "20",
+        "item": "grams/about 2 cups loosely packed katsuobushi (dried bonito flakes)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "pound thinly shaved beef (see Tips)",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "small yellow onion, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "bunch scallions, white parts cut into 2-inch segments and halved lengthwise, light green parts thinly sliced at a sharp angle",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon granulated sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup sake",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons mirin",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons soy sauce, plus more as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons mirin, plus more as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "pound fresh or frozen udon noodles",
+        "category": "frozen"
+      },
+      {
+        "amount": "Shichimi",
+        "item": "or nanami togarashi, or use your favorite chile powder (optional)",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Make the dashi: Combine 2 quarts cold water and the kombu in a medium saucepan, and place over medium heat. As soon as the water boils, remove from heat and add the katsuobushi, pushing it gently into the water to submerge (don’t stir vigorously). Steep for 5 to 10 minutes. Strain and discard the kombu and katsuobushi (or reserve to make another batch of weaker dashi) and return the dashi to the saucepan. Keep warm, but don’t let it boil.",
+      "Cook the beef: Combine the shaved beef, onion, scallion whites, sugar, sake, soy sauce, mirin and 1 cup of the finished dashi in a large skillet or sauté pan. Bring to a simmer over high heat, stirring. Continue cooking over high heat, stirring frequently, until the beef and onions are tender and the mixture is still moist but not soupy, 10 to 15 minutes.",
+      "As beef cooks, bring a pot of unsalted water to a boil — udon noodles are typically made with plenty of salt in the dough — and cook the udon noodles according to package directions.",
+      "To serve, add the soy sauce and mirin to the reserved dashi and stir. Taste and adjust seasoning to taste with more soy sauce or mirin. (The broth should have a balanced savory-sweet flavor.)",
+      "Divide the cooked noodles across 4 large serving bowls. Ladle the broth on top of the noodles. Divide the beef and onion mixture evenly across the noodles, including any liquid in the pan. Top each bowl with sliced scallion greens. (You may have extra.) Serve immediately with shichimi togarashi to taste."
+    ]
+  },
+  "beer-braised-beef-and-onions": {
+    "prepTime": "210 min",
+    "serves": 8,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "tablespoon kosher salt, more as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon black pepper, more for garnish",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "bay leaves",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons sweet paprika, more for garnish",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "pounds boneless beef stew meat, cut into 1 1/2-inch chunks",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon unsalted butter",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon extra-virgin olive oil, more as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "Spanish or very large yellow onions, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "sprigs fresh thyme",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "sprigs fresh parsley, plus chopped parsley, for garnish",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon tomato paste",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon ground coriander",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "teaspoon ground cinnamon",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon all-purpose flour",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "cups beef or chicken stock, preferably homemade",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "cup beer, preferably Belgian-style or brown ale",
+        "category": "pantry"
+      },
+      {
+        "amount": "Flaky",
+        "item": "sea salt, for garnish",
+        "category": "pantry"
+      },
+      {
+        "amount": "Dijon-style",
+        "item": "mustard, preferably extra-hot, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, combine salt, pepper, bay leaves and paprika. Toss meat to coat, then cover, refrigerate and marinate at least 2 hours or overnight.",
+      "Heat oven to 325 degrees. In a large (8-quart) Dutch oven or other heavy pot, heat butter and oil over medium-high until shimmering. Working in batches, brown beef on two sides until dark and crusty, transferring to a bowl when browned (reserve bay leaves). As you cook, add more oil and adjust heat if necessary to prevent burning.",
+      "When all the meat is browned, add onions to the empty pot and return the heat to medium-high if you lowered it. Cook, stirring and scraping up the brown coating on the bottom of the pan as the onions release their liquid.",
+      "Continue cooking until onions are deeply golden brown and soft, 20 to 30 minutes, stirring occasionally.",
+      "Meanwhile, make a bouquet garni by tying thyme, parsley and reserved bay leaves together with kitchen string (or just throw them in the pot and warn your guests not to eat them).",
+      "Push the onions to the sides, then add tomato paste, coriander and cinnamon to the bottom of the pan. Cook, stirring, 1 minute, until paste is darkened and fragrant. Stir in flour, cook another minute, then add stock, beer, 1 cup water and bouquet garni. Return beef and any juices in the bowl to the pot, bring to a simmer, then cover and transfer to oven. Cook until beef is tender, about 2 1/2 to 3 hours, turning it over halfway through.",
+      "If the sauce seems thin, remove the meat with a slotted spoon; cover with foil to keep warm. Return pot with liquid to stove and simmer until thickened to taste, 5 to 10 minutes. Return the meat to pot and stir to heat through. Serve from the pot or a platter. Garnish with chopped parsley, flaky sea salt, pepper and paprika. Serve with mustard on the side."
+    ]
+  },
+  "bo-kho-vietnamese-braised-beef-stew": {
+    "prepTime": "90 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "tablespoons Vietnamese fish sauce, such as Red Boat",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon brown sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons grated fresh ginger",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons Chinese 5-spice powder",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "pounds beef chuck, cut into 1-inch cubes",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons vegetable oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "6",
+        "item": "large shallots or 1 medium red onion, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "cup chopped tomato, fresh or canned",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons grated fresh ginger (from a 2-inch piece)",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "garlic cloves, minced",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons finely chopped lemongrass, tender center only",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon kosher salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon annatto powder (optional)",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "star anise pods",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(2-inch) cinnamon stick, or substitute cassia bark",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "or 2 Serrano or Thai chiles, stem on, split lengthwise",
+        "category": "produce"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "pounds medium carrots, peeled, cut into 2-inch chunks",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup thinly sliced scallions",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "cup cilantro sprigs, for garnish",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup mint leaves, for garnish",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup small basil leaves, preferably Thai, for garnish",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Make the marinade: Stir together fish sauce, sugar, ginger, 5-spice powder and pepper.",
+      "Put beef in a large bowl, add marinade and massage into meat. Let marinate for at least 15 minutes, or longer if time permits (may be wrapped and refrigerated overnight if desired).",
+      "Put oil in a Dutch oven or heavy-bottomed pot over medium-high heat. When oil is hot, fry the beef cubes in small batches, taking care not to crowd them, until nicely browned. When all beef is browned, return chunks to pot. Add shallots, stir to combine and continue cooking for 4 to 5 minutes, or until softened.",
+      "Add tomato, ginger, garlic, lemongrass, salt and annatto, if using, and stir well to coat, then add star anise, cinnamon and chile. Cover with 4 cups water and bring to a boil.",
+      "Reduce heat to a simmer, cover with lid ajar and cook for about 1 hour 15 minutes, or until fork-tender.",
+      "Add carrots to pot and cook 15 minutes more. Skim fat from surface of broth as necessary (or refrigerate overnight and remove congealed fat before reheating).",
+      "To serve, ladle into individual bowls. Garnish with scallions, cilantro, mint and basil."
+    ]
+  },
+  "mongolian-beef": {
+    "prepTime": "30 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "pound flank steak",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons toasted sesame oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons light or dark brown sugar, packed",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon mirin",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "teaspoon ground white pepper (optional)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons cornstarch",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons vegetable oil, plus more as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(1-inch) piece ginger, peeled and thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "medium cloves garlic, peeled and chopped",
+        "category": "produce"
+      },
+      {
+        "amount": "8",
+        "item": "to 10 whole dried red chiles, such as Tianjin or chile de árbol, or 1/2 to 3/4 teaspoon crushed red pepper, to taste",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "scallions, trimmed and sliced into 2-inch pieces",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons Shaoxing wine or dry sherry",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "cups steamed jasmine rice",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Using a sharp knife, slice the flank steak in half lengthwise, then slice each piece crosswise against the grain into 1/4-inch-thick pieces. Place in a medium bowl and add 2 teaspoons soy sauce and the sesame oil; toss until coated. Let marinate for 5 minutes.",
+      "Meanwhile, in a medium bowl, whisk together 2 tablespoons water, brown sugar, mirin, white pepper, if using, and remaining 4 teaspoons soy sauce. Set aside.",
+      "Sprinkle the cornstarch over the beef and toss, making sure each slice is completely coated but there are no large clumps.",
+      "Heat 2 tablespoons of the oil in a wok or large (12-inch) well-seasoned cast-iron skillet over high heat. Once the oil is shimmering, add the beef in an even layer. (This might need to be done in 2 batches.) Do not touch the beef until the edges become slightly crispy and brown, 30 to 60 seconds. Using a wooden spoon or spatula, flip the beef and cook until the other side is brown, another 30 to 60 seconds. The beef should not be sticking to the wok or skillet; if it is, leave it alone for 20 to 30 seconds more. Transfer the beef to a medium bowl, trying your best to leave as much oil as possible in the wok. If cooking a second batch, repeat browning, adding another 1 tablespoon of oil if necessary.",
+      "Reduce heat to medium-low and add the remaining 1 tablespoon of oil, ginger, garlic and chiles. Use a wooden spoon or spatula to move everything around until the ginger is slightly cooked, about 1 minute, being mindful that nothing burns. Add the scallions and the cooked beef, plus any collected juices, to the wok; mix well.",
+      "Pour in the Shaoxing wine and use a wooden spoon to scrape up any brown bits from the bottom of the pan. Cook until mostly evaporated, about 30 seconds. Give the reserved soy-mirin mixture a good whisk, then add it to the wok. Toss with the wooden spoon until everything is well combined and the sauce has thickened, about 2 minutes. Transfer to a platter and serve alongside steamed rice."
+    ]
+  },
+  "japanese-style-beef-stew": {
+    "prepTime": "60 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1 1/2",
+        "item": "to 2 pounds boneless chuck in 1-inch to 1 1/2-inch chunks",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "cups chicken stock, water or dashi (",
+        "category": "protein"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup mirin, honey or sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "10",
+        "item": "nickel-size slices of ginger",
+        "category": "produce"
+      },
+      {
+        "amount": "Black",
+        "item": "pepper to taste",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "lemon",
+        "category": "produce"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "pounds peeled butternut, pumpkin or other winter squash or sweet potatoes in 1-inch chunks",
+        "category": "protein"
+      },
+      {
+        "amount": "Salt",
+        "item": "to taste",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "In a large nonstick skillet over medium-high heat, sear meat until nicely browned on one side, about 5 minutes. Transfer chunks to a medium-size casserole.",
+      "Add stock to the skillet, and cook over high heat, stirring and scraping until all the solids are integrated into the liquid. Pour into the casserole with soy sauce, mirin, ginger and a couple of grindings of pepper. Peel lemon, and add peel to the mixture. Juice lemon.",
+      "Cover, and cook on top of stove (or in a 350-degree oven), maintaining a steady simmer. Stir after 30 minutes. Then check meat every 15 minutes.",
+      "When meat is nearly tender, about 45 minutes, stir in squash and continue to cook until squash is tender but not mushy, about 15 to 20 minutes. Add salt if necessary, then stir in lemon juice. Serve."
+    ]
+  },
+  "bo-luc-l-c-shaking-beef": {
+    "prepTime": "20 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1 1/2",
+        "item": "to 2 pounds beef tenderloin (filet mignon), trimmed of excess fat and cut into 1-inch cubes",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons chopped garlic",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "5",
+        "item": "tablespoons neutral oil, like corn or canola",
+        "category": "produce"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup rice-wine vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup rice or white wine",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon fish sauce",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "red onion, peeled and sliced thin",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "scallions, trimmed and cut in 1-inch lengths",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons butter",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "bunches watercress, washed and dried, or 1 head red leaf lettuce, washed, dried and separated into leaves",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "limes, cut into wedges",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Marinate meat with garlic, half the sugar, 1 teaspoon salt, 1/4 teaspoon pepper and 1 tablespoon oil for about 2 hours. (Refrigerate if your kitchen is very warm.) Meanwhile, combine vinegar, remaining sugar, wine, soy sauce and fish sauce. Taste, and add salt and pepper if necessary. Mix about 1 tablespoon salt and 1 teaspoon pepper in a small bowl.",
+      "Divide the meat into 2 portions, and do the same with the onion and scallions. Put a wok or a large skillet over maximum heat, and add about 2 tablespoons oil. When the oil smokes, add the meat in one layer. Let it sit until a brown crust forms, and turn to brown the other side. Browning should take less than 5 minutes. Add half the onion and half the scallions, and cook, stirring, about 30 seconds. Add about half the vinegar mixture, and shake pan to release the beef, stirring if necessary. Add half the butter, and shake pan until butter melts. Remove meat, and repeat.",
+      "Serve beef over watercress or lettuce leaves, passing salt and pepper mixture and lime wedges at the table."
+    ]
+  },
+  "hunan-beef-with-cumin": {
+    "prepTime": "25 min",
+    "serves": 2,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "tablespoon Shaoxing wine or good medium-dry sherry",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon light soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon dark soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon potato starch or flour",
+        "category": "produce"
+      },
+      {
+        "amount": "12",
+        "item": "ounces boneless short rib or other beef steak",
+        "category": "protein"
+      },
+      {
+        "amount": "1 3/4",
+        "item": "cups peanut oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons minced ginger",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon finely chopped garlic",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "fresh red chilies (tien tsin or Thai red chiles), seeded and finely chopped",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "to 4 teaspoons dried chili flakes",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons ground cumin",
+        "category": "pantry"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "scallions, green parts only, finely sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon sesame oil",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "In a bowl, mix the wine, salt, soy sauces, potato starch or flour and one tablespoon water. Cut the beef across the grain into thin slices and add to marinade.",
+      "In a wok, heat peanut oil to about 275 degrees. Add beef and stir gently for two to three minutes, then remove from oil with a slotted spoon and drain well.",
+      "Pour off all but 3 tablespoons of oil in wok. Over a high flame, add the ginger, garlic, fresh chilies, chili flakes and cumin and stir-fry briefly, until they are fragrant. Return beef to the wok and stir well, seasoning with salt to taste.",
+      "When beef is sizzling and fragrant,add scallion greens and toss briefly. Remove from heat and stir in sesame oil."
+    ]
+  },
 };
 
 export default missingFullDetailsGenerated;
