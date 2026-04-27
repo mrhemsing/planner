@@ -446,7 +446,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div>
                       <h3 className="text-3xl font-semibold text-stone-900 sm:text-4xl">{selectedRecipe.title}</h3>
-                      <p className="mt-3 text-lg leading-8 text-stone-700 sm:text-xl sm:leading-9">
+                      <p className="mt-3 line-clamp-5 text-lg leading-8 text-stone-700 sm:line-clamp-none sm:text-xl sm:leading-9">
                         {selectedRecipe.description}
                       </p>
                       <div className="mt-5 sm:hidden">
