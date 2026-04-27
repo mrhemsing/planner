@@ -491,9 +491,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                           const ingredientKey = `${selectedRecipe.id}-${index}-${ingredient.item}`;
                           const isChecked = Boolean(ingredientChecks[ingredientKey]);
                           const hasQuantity = hasIngredientQuantity(ingredient.amount);
+                          const ingredientAmount = abbreviateIngredientTablespoons(ingredient.amount);
                           const ingredientText = hasQuantity
-                            ? ingredient.item
-                            : `${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim();
+                            ? abbreviateIngredientTablespoons(ingredient.item)
+                            : abbreviateIngredientTablespoons(`${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim());
                           const strikeClass = INGREDIENT_STRIKE_CLASSES[index % INGREDIENT_STRIKE_CLASSES.length];
 
                           return (
@@ -509,7 +510,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                                   <span
                                     className={`font-medium text-stone-600 ${isChecked ? `opacity-60 ${strikeClass}` : ""}`}
                                   >
-                                    {ingredient.amount}
+                                    {ingredientAmount}
                                   </span>
                                 ) : null}
                                 <span className={isChecked ? `opacity-60 ${strikeClass}` : ""}>
@@ -649,6 +650,10 @@ function getDailyPickTitle(activeFilter: string) {
 
 function hasIngredientQuantity(amount: string) {
   return /[\d¼½¾⅓⅔⅛⅜⅝⅞]/.test(amount);
+}
+
+function abbreviateIngredientTablespoons(text: string) {
+  return text.replace(/\btablespoons?\b/gi, "tbsp");
 }
 
 function getRecipeCategory(recipe: RecipeLibraryEntry) {
