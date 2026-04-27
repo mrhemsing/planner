@@ -435,9 +435,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   onChange={(event) => setRecipeSearchQuery(event.target.value)}
                   placeholder="Search recipes"
                   autoComplete="off"
-                  className="w-full rounded-2xl border border-stone-300 bg-stone-50 px-4 py-3 text-base text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-amber-500 focus:bg-white"
+                  className="mb-[10px] w-full rounded-2xl border border-stone-300 bg-stone-50 px-4 py-3 text-base text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-amber-500 focus:bg-white"
                 />
-                <p className="mt-[10px] text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
                   Recipe list
                 </p>
               </div>
