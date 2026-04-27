@@ -35,6 +35,18 @@ const healthyDinners = healthyDinnerTargets.items
   )
   .filter((recipe, index, array): recipe is NonNullable<(typeof recipeLibrary)[number]> => Boolean(recipe) && array.indexOf(recipe) === index);
 
+const healthyDinnersMissingDetails = healthyDinners.filter(
+  (recipe) => !recipe.ingredients?.length || !recipe.instructions?.length,
+);
+
+if (healthyDinnersMissingDetails.length) {
+  throw new Error(
+    `Healthy dinner recipes missing ingredients or instructions: ${healthyDinnersMissingDetails
+      .map((recipe) => recipe.id)
+      .join(", ")}`,
+  );
+}
+
 const currentYear = new Date().getFullYear();
 
 export default function Home() {
