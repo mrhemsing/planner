@@ -491,10 +491,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                           const ingredientKey = `${selectedRecipe.id}-${index}-${ingredient.item}`;
                           const isChecked = Boolean(ingredientChecks[ingredientKey]);
                           const hasQuantity = hasIngredientQuantity(ingredient.amount);
-                          const ingredientAmount = abbreviateIngredientTablespoons(ingredient.amount);
+                          const ingredientAmount = abbreviateIngredientUnits(ingredient.amount);
                           const ingredientText = hasQuantity
-                            ? abbreviateIngredientTablespoons(ingredient.item)
-                            : abbreviateIngredientTablespoons(`${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim());
+                            ? abbreviateIngredientUnits(ingredient.item)
+                            : abbreviateIngredientUnits(`${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim());
                           const strikeClass = INGREDIENT_STRIKE_CLASSES[index % INGREDIENT_STRIKE_CLASSES.length];
 
                           return (
@@ -652,8 +652,10 @@ function hasIngredientQuantity(amount: string) {
   return /[\d¼½¾⅓⅔⅛⅜⅝⅞]/.test(amount);
 }
 
-function abbreviateIngredientTablespoons(text: string) {
-  return text.replace(/\btablespoons?\b/gi, "tbsp");
+function abbreviateIngredientUnits(text: string) {
+  return text
+    .replace(/\btablespoons?\b/gi, "tbsp")
+    .replace(/\bteaspoons?\b/gi, "tsp");
 }
 
 function getRecipeCategory(recipe: RecipeLibraryEntry) {
