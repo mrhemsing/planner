@@ -276,8 +276,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         onClick={() => setActiveFilter(filter.id)}
         aria-label={filter.ariaLabel}
         title={filter.ariaLabel}
-        className={`category-chip rounded-2xl bg-white px-3 py-2 text-sm font-semibold sm:px-4 ${
-          isActive ? "category-chip-active text-white" : "text-amber-800 hover:text-amber-900"
+        className={`category-chip rounded-2xl border bg-white px-3 py-2 text-sm font-semibold sm:px-4 ${
+          isActive ? "category-chip-active" : "border-transparent text-amber-800 hover:text-amber-900"
         }`}
       >
         <span className="sm:hidden">{filter.mobileLabel}</span>
@@ -325,8 +325,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   onClick={() => setActiveFilter("favourites")}
                   aria-label="Favourite recipes"
                   title="Favourite recipes"
-                  className={`category-chip min-h-11 shrink-0 rounded-2xl bg-white px-4 py-2 text-sm font-semibold ${
-                    activeFilter === "favourites" ? "category-chip-active text-white" : "text-amber-800 hover:text-amber-900"
+                  className={`category-chip min-h-11 shrink-0 rounded-2xl border bg-white px-4 py-2 text-sm font-semibold ${
+                    activeFilter === "favourites" ? "category-chip-active" : "border-transparent text-amber-800 hover:text-amber-900"
                   }`}
                 >
                   <span aria-hidden="true">❤️</span>
