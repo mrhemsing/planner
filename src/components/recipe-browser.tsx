@@ -276,7 +276,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         onClick={() => setActiveFilter(filter.id)}
         aria-label={filter.ariaLabel}
         title={filter.ariaLabel}
-        className={`category-chip rounded-2xl border bg-white px-3 py-2 text-sm font-semibold sm:px-4 ${
+        className={`category-chip min-w-[5.65rem] rounded-2xl border bg-white px-3 py-2 text-center text-sm font-semibold sm:min-w-[9.6rem] sm:px-4 ${
           isActive ? "category-chip-active" : "border-transparent text-amber-800 hover:text-amber-900"
         }`}
       >
