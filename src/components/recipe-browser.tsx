@@ -136,12 +136,20 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     });
   }, [filteredRecipes, recipeSearchQuery]);
 
-  const dailyFilteredPickId = useMemo(() => getDailyDinnerPickId(filteredRecipes), [filteredRecipes]);
+  const dailyFilteredPickId = useMemo(
+    () => (activeFilter === "favourites" ? "" : getDailyDinnerPickId(filteredRecipes)),
+    [activeFilter, filteredRecipes],
+  );
 
   useEffect(() => {
+    if (activeFilter === "favourites") {
+      setSelectedRecipeId(filteredRecipes[0]?.id ?? "");
+      return;
+    }
+
     if (!dailyFilteredPickId) return;
     setSelectedRecipeId(dailyFilteredPickId);
-  }, [activeFilter, dailyFilteredPickId]);
+  }, [activeFilter, dailyFilteredPickId, filteredRecipes]);
 
   useEffect(() => {
     if (!selectedRecipeId) return;
