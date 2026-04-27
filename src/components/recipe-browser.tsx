@@ -42,6 +42,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [selectedRecipeFromUrl, setSelectedRecipeFromUrl] = useState(false);
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const filterSwipeStartRef = useRef<{ x: number; y: number } | null>(null);
+  const desktopRecipeListButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const recipeSheetScrollRef = useRef<HTMLDivElement | null>(null);
   const recipeSheetScrollPositionsRef = useRef<Record<string, number>>({});
   const [hydrated, setHydrated] = useState(false);
@@ -315,6 +316,17 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     setRecipeSheetOpen(false);
   };
 
+  const focusDesktopRecipeResult = (index: number) => {
+    const recipe = recipeSheetRecipes[index];
+    if (!recipe) return;
+
+    setSelectedRecipeFromUrl(false);
+    setSelectedRecipeId(recipe.id);
+    window.requestAnimationFrame(() => {
+      desktopRecipeListButtonRefs.current[recipe.id]?.focus();
+    });
+  };
+
   const returnHome = () => {
     setSelectedRecipeFromUrl(false);
     setActiveFilter("all");
@@ -443,14 +455,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                     if (!recipeSheetRecipes.length) return;
 
                     event.preventDefault();
-                    const currentIndex = Math.max(
-                      0,
-                      recipeSheetRecipes.findIndex((recipe) => recipe.id === selectedRecipeId),
-                    );
-                    const direction = event.key === "ArrowDown" ? 1 : -1;
-                    const nextIndex = (currentIndex + direction + recipeSheetRecipes.length) % recipeSheetRecipes.length;
-                    setSelectedRecipeFromUrl(false);
-                    setSelectedRecipeId(recipeSheetRecipes[nextIndex].id);
+                    focusDesktopRecipeResult(event.key === "ArrowDown" ? 0 : recipeSheetRecipes.length - 1);
                   }}
                   placeholder="Search recipes"
                   autoComplete="off"
@@ -469,8 +474,19 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   return (
                     <button
                       key={`${activeSection.id}-jump-${recipe.id}`}
+                      ref={(element) => {
+                        desktopRecipeListButtonRefs.current[recipe.id] = element;
+                      }}
                       type="button"
                       onClick={() => setSelectedRecipeId(recipe.id)}
+                      onKeyDown={(event) => {
+                        if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+
+                        event.preventDefault();
+                        const direction = event.key === "ArrowDown" ? 1 : -1;
+                        const nextIndex = (index + direction + recipeSheetRecipes.length) % recipeSheetRecipes.length;
+                        focusDesktopRecipeResult(nextIndex);
+                      }}
                       className={`recipe-tap-card block w-full rounded-[16px] border px-4 py-3 text-left text-base font-medium ${
                         isSelected
                           ? "border-amber-600 bg-amber-500 text-white shadow-[0_10px_24px_rgba(217,119,6,0.22)]"
