@@ -212,6 +212,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
   const dailyPickTitle = getDailyPickTitle(activeFilter);
+  const mobileDailyPickTitle = activeFilter === "vegetarian" ? "TODAY'S VEG PICK" : dailyPickTitle;
   const mobileTopFilters = filters.filter((filter) => filter.id !== "favourites");
 
   const moveActiveFilter = (direction: 1 | -1) => {
@@ -380,7 +381,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 <div className="lg:hidden">
                   <p className="flex items-center gap-2 rounded-[16px] border border-white bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
                     <span aria-hidden="true">🏅</span>
-                    <span>{dailyPickTitle}</span>
+                    <span>{mobileDailyPickTitle}</span>
                   </p>
                 </div>
               ) : null}
