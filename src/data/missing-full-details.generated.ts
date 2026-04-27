@@ -7651,6 +7651,305 @@ const missingFullDetailsGenerated: Record<string, RecipeDetailsEntry> = {
       "When beef is sizzling and fragrant,add scallion greens and toss briefly. Remove from heat and stir in sesame oil."
     ]
   },
+  "pork-chops-in-lemon-caper-sauce": {
+    "prepTime": "35 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "4",
+        "item": "bone-in pork chops (about 8 ounces each)",
+        "category": "protein"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt and freshly cracked black pepper, to taste",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon dried thyme leaves",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "tablespoons unsalted butter",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "very small shallot, minced (about 1 tablespoon)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves, minced (about 1 teaspoon)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons all-purpose flour",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "cup dry white wine",
+        "category": "pantry"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "cups chicken stock, homemade or low-sodium, if store-bought",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons drained capers",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons minced fresh parsley, plus more for garnish",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon freshly grated lemon zest, plus 2 tablespoons juice",
+        "category": "produce"
+      },
+      {
+        "amount": "Hot",
+        "item": "sauce (optional)",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Dry the chops with paper towels, and season aggressively with salt, pepper and the thyme. Swirl the olive oil into a large skillet, and heat over medium until the oil begins to shimmer. Add chops, and cook until well browned on each side and cooked through, about 5 minutes per side. Transfer chops to a plate, and cover to keep warm.",
+      "Drain the fat from the skillet, then melt 2 tablespoons of butter in it over medium heat until sizzling. Add the shallot and garlic, and sauté until the aromatics soften, reducing the heat if necessary, about 1 minute. Sprinkle in the flour, and cook, stirring, for 2 minutes. Whisk in the wine and chicken stock, raise heat to high and bring the liquid to a boil, scraping up the browned bits on the bottom of the pan. Reduce heat to medium-high and cook, uncovered, until the liquid is reduced by half, 7 to 10 minutes.",
+      "Stir in the capers, parsley, lemon zest and juice and hot sauce to taste (if you’re using it), and simmer for 1 to 2 minutes. Stir in the remaining 2 tablespoons of butter until it’s melted and the sauce looks smooth. Nestle the pork chops into the sauce, and allow them to warm up for a couple of minutes, then serve, pouring sauce over each pork chop to taste. Garnish with more fresh parsley."
+    ]
+  },
+  "honey-soy-braised-pork-with-lime-and-ginger": {
+    "prepTime": "240 min",
+    "serves": 6,
+    "ingredients": [
+      {
+        "amount": "3",
+        "item": "to 4 pounds boneless, skinless pork shoulder, trimmed of big hunks of fat and cut into 2 pieces",
+        "category": "protein"
+      },
+      {
+        "amount": "8",
+        "item": "large garlic cloves, smashed and finely chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons minced fresh ginger (from one 3-inch piece)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon red-pepper flakes, plus more to taste",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons finely grated lime zest and 2 tablespoons juice (from 1 lime), plus more lime wedges for serving",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "cup tamari or low-sodium soy sauce (see Tip)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "cup honey",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon toasted sesame oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "Cooked",
+        "item": "rice, noodles or lettuce cups, for serving",
+        "category": "produce"
+      },
+      {
+        "amount": "Toasted",
+        "item": "sesame seeds, sliced scallions and chopped cilantro, for topping",
+        "category": "protein"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 325 degrees. Place the pork in a large Dutch oven that has a lid. Scatter the garlic, ginger, red-pepper flakes and lime zest over the top. In a measuring cup, whisk together the tamari, honey and sesame oil, then pour it over the pork. Using tongs, turn to coat all sides of the pork in the sauce, and spoon some over the top so that some of the garlic and ginger is on top of the pork. Cover, transfer to the oven and cook for 2 hours.",
+      "Uncover the pot and flip both chunks of pork. Cover the pot and braise until the pork shreds easily with a fork, about 1 more hour. Transfer to the stovetop.",
+      "Using tongs, transfer the pork to a serving platter or a large shallow serving bowl. Using a ladle, skim and discard the excess fat off the surface of the cooking liquid remaining in the Dutch oven, if desired. Bring the sauce to a boil over medium-high heat and let it simmer until reduced and slightly syrupy, about 8 minutes.",
+      "While the sauce simmers, coarsely shred the pork using two forks. Sprinkle the lime juice over the top of the meat. Drizzle about half the sauce over the top of the shredded meat, then toss to combine. Serve over rice or noodles or in lettuce cups. Top with sesame seeds, scallions and cilantro. Pass the remaining sauce at the table, if desired, as well as extra lime wedges and red-pepper flakes."
+    ]
+  },
+  "momofukus-bo-ssam": {
+    "prepTime": "780 min",
+    "serves": 6,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "whole bone-in pork butt or picnic ham (8 to 10 pounds)",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "cup white sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "cup plus 1 tablespoon kosher salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "7",
+        "item": "tablespoons brown sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "2 1/2",
+        "item": "cups thinly sliced scallions, both green and white parts",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup peeled, minced fresh ginger",
+        "category": "produce"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup neutral oil (like grapeseed)",
+        "category": "produce"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "teaspoons light soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "scant teaspoon sherry vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon kosher salt, or to taste",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons fermented bean-and-chili paste (ssamjang, available in many Asian markets, and online)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon chili paste (kochujang, available in many Asian markets, and online)",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup sherry vinegar",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup neutral oil (like grapeseed)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "cups plain white rice, cooked",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "heads bibb lettuce, leaves separated, washed and dried",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "dozen or more fresh oysters (optional)",
+        "category": "pantry"
+      },
+      {
+        "amount": "Kimchi",
+        "item": "(available in many Asian markets, and online)",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Place the pork in a large, shallow bowl. Mix the white sugar and 1 cup of the salt together in another bowl, then rub the mixture all over the meat. Cover it with plastic wrap and place in the refrigerator for at least 6 hours, or overnight.",
+      "When you’re ready to cook, heat oven to 300. Remove pork from refrigerator, brush any excess sugar mixture off the fat cap and discard any juices. Place the pork in a roasting pan and set in the oven and cook for approximately 6 hours, or until it collapses, yielding easily to the tines of a fork. (After the first hour, baste hourly with pan juices.) At this point, you may remove the meat from the oven and allow it to rest for up to an hour.",
+      "Meanwhile, make the ginger-scallion sauce. In a large bowl, combine the scallions with the rest of the ingredients. Mix well and taste, adding salt if needed.",
+      "Make the ssam sauce. In a medium bowl, combine the chili pastes with the vinegar and oil, and mix well.",
+      "Prepare rice, wash lettuce and, if using, shuck the oysters. Put kimchi and sauces into serving bowls.",
+      "When your accompaniments are prepared and you are ready to serve the food, turn oven to 500. In a small bowl, stir together the remaining tablespoon of salt with the brown sugar. Rub this mixture all over the cooked pork. Place in oven for approximately 10 to 15 minutes, or until a dark caramel crust has developed on the meat. Serve hot, with the accompaniments."
+    ]
+  },
+  "skillet-pork-chops-and-apples-with-miso-caramel": {
+    "prepTime": "30 min",
+    "serves": 2,
+    "ingredients": [
+      {
+        "amount": "3",
+        "item": "tablespoons light brown sugar",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons apple cider vinegar",
+        "category": "produce"
+      },
+      {
+        "amount": "1 1/2",
+        "item": "tablespoons white miso",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "(1- to 1 1/2-inch-thick) bone-in pork chops, patted very dry",
+        "category": "protein"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon neutral oil (such as grapeseed or canola)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "small or 1 large Granny Smith or other tart-crisp apples, cored then sliced 1/4 inch thick",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "In a liquid measuring cup or small bowl, combine 3 tablespoons water with the brown sugar, vinegar and miso; stir with a fork until smooth. Season the pork chops all over with salt, then the pepper. (Don’t skimp on the pepper; it’s an important element to balance the caramel.)",
+      "Heat a large skillet over medium. Add the oil and the pork chops to the skillet. Cook, flipping every 2 minutes, until browned on the outside and the internal temperature in the thickest part is around 135 degrees, 10 to 15 minutes depending on thickness of pork chops. If your chops have a fat cap, using tongs, stack both chops on top of each other, then grab both chops together and hold upright to sear the fat caps until crisp, about 1 minute. Transfer to a plate to rest for 5 minutes. Pour off all but 1 tablespoon of the fat.",
+      "Add the apples to the skillet in a single layer and heat over medium. (Snack on any that don’t fit.) Cook without touching until browned underneath, 2 to 4 minutes. If the pan is smoking at any point, reduce heat. Pour in the brown sugar mixture and cook, scraping up browned bits and stirring, until thick enough to coat the back of the spoon, 1 to 3 minutes. (Keep your eye on the sauce toward the end so it doesn’t burn.)",
+      "Turn off the heat, add the pork chops and their juices back to the skillet and turn to coat in the caramel. Serve the pork chops with a spoonful of the apples and caramel."
+    ]
+  },
 };
 
 export default missingFullDetailsGenerated;
