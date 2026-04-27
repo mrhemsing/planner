@@ -9693,6 +9693,950 @@ const missingFullDetailsGenerated: Record<string, RecipeDetailsEntry> = {
       "Transfer the cooked sausages and sweet potatoes to plates. Add the kale and balsamic mixture to the sheet pan and toss until the kale is warm. Serve with the sausages and sweet potatoes."
     ]
   },
+  "sheet-pan-steak-and-pepper-tacos": {
+    "prepTime": "45 min",
+    "serves": 8,
+    "ingredients": [
+      {
+        "amount": "4",
+        "item": "slices bacon, diced (4 ounces) or use 2 tablespoons vegetable oil",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon Worcestershire sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves, smashed and sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "limes",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound flank or skirt steak",
+        "category": "protein"
+      },
+      {
+        "amount": "½",
+        "item": "white onion (about 5 ounces)",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "ounces mushrooms, such as shitake or cremini",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "large green pepper or 2 medium poblano peppers (about 9 ounces)",
+        "category": "produce"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt (such as Diamond Crystal) and freshly ground black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "slices Muenster cheese, 4 to 5 ounces",
+        "category": "protein"
+      },
+      {
+        "amount": "8",
+        "item": "corn tortillas",
+        "category": "produce"
+      },
+      {
+        "amount": "Your",
+        "item": "favorite salsa, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Line a sheet pan with aluminum foil. If using, spread the diced bacon evenly in the pan. Arrange a rack in the top third of your oven, place the sheet pan (with or without the bacon) in the cold oven and set the temperature to 425 degrees.",
+      "In a large bowl, combine the soy sauce, Worcestershire sauce and garlic. Juice the limes into the bowl and stir to combine. Dice the steak into ¾-inch pieces, add to the bowl and mix well to coat. Set aside to marinate.",
+      "While the meat marinates, prep the remaining vegetables: Thinly slice the onion and mushrooms, trimming away any tough stem ends (reserve for stock if desired). Cut the pepper into ¾-inch dice. Add the vegetables to the bowl on top of the meat, but don’t mix them in. Sprinkle ½ teaspoon salt and 1 teaspoon pepper into the bowl.",
+      "When the oven reaches temperature, about 15 minutes, carefully remove the hot sheet pan (the bacon fat will be hot), and pour the bacon and drippings into the bowl with the vegetables and stir to combine (the bacon won’t be crispy at this stage). If not using bacon, add 2 tablespoons oil to the bowl instead and toss to combine. Arrange the contents of the bowl in one layer on the hot sheet pan, place back in the oven, adjust the heat to 450 degrees and roast until meat is charred in spots and vegetables have begun to caramelize, about 20 minutes.",
+      "Toss the meat and vegetables in the sheet pan to coat with the juices, arrange in one layer again, and top with the cheese slices. Return to the oven until cheese is completely melted, 1 to 2 minutes.",
+      "While the meat and vegetables roast, heat a cast-iron skillet over medium-high. Warm your tortillas in it, about 2 minutes per side, then transfer them to a clean dishtowel to stay warm. Keep the skillet on the heat over medium.",
+      "To serve, scrape the cheesy meat and vegetable mixture directly into the hot skillet. Bring it to the table along with the warm tortillas and salsa so everyone can build their own tacos."
+    ]
+  },
+  "japanese-ground-beef-curry": {
+    "prepTime": "50 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "tablespoons sunflower, safflower or canola oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "pound ground beef",
+        "category": "protein"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "large yellow onion, chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "large garlic clove, minced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(1-inch) piece fresh ginger, peeled and minced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "large carrot, peeled and chopped into ⅓-inch pieces",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "large russet potato, peeled and chopped into ½-inch pieces",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "(3.2-ounce) package Japanese curry roux bricks (preferably medium-hot S&B Golden Curry)",
+        "category": "pantry"
+      },
+      {
+        "amount": "¾",
+        "item": "cup frozen peas",
+        "category": "frozen"
+      },
+      {
+        "amount": "Cooked",
+        "item": "rice, udon or lo mein noodles, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat a large skillet over medium-high. Add the oil and when it shimmers, add the ground beef, a generous pinch of salt and a couple pinches of ground pepper. Using a spatula, break up the beef and spread it into one layer on the skillet. Let cook undisturbed, until browned on the bottom, about 3 minutes.",
+      "Stir and push the beef to one side of the skillet, add the onion to the other side and season the onion lightly with salt. Let cook, stirring occasionally, about 2 minutes. Add the garlic and ginger, stir all the ingredients to combine and continue to cook, about 3 minutes more.",
+      "Stir in the carrots and potato and cook until the edges begin to soften, about 4 minutes.",
+      "Add the roux bricks and 2 cups of water and stir, breaking up the bricks until they melt into a sauce and start bubbling. Cover, lower heat to low and let simmer, stirring occasionally until the liquid has reduced into a rich, viscous sauce, about 15 minutes. If the sauce has reduced to the point of drying at the bottom of the skillet, gradually add up to ½ cup water, a few tablespoons at a time, to reach the desired consistency. (Sauce should be glossy and saucy, not gloopy or congealed.)",
+      "Add peas and cook until bright green, 3 to 5 minutes.",
+      "Serve over cooked rice, udon or lo mein noodles. Any curry leftovers will keep, refrigerated, for up to 3 days."
+    ]
+  },
+  "glazed-chile-garlic-meatballs": {
+    "prepTime": "45 min",
+    "serves": 24,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "pound ground beef (or ground chicken or ground turkey)",
+        "category": "protein"
+      },
+      {
+        "amount": "½",
+        "item": "cup finely minced white onion",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "cup panko bread crumbs",
+        "category": "pantry"
+      },
+      {
+        "amount": "⅓",
+        "item": "cup milk",
+        "category": "protein"
+      },
+      {
+        "amount": "¼",
+        "item": "cup finely chopped cilantro leaves",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "large eggs",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "garlic cloves, minced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon grated Parmesan",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon fine sea salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "Any",
+        "item": "combination of cucumber salad, cooked vegetables and rice, for serving",
+        "category": "produce"
+      },
+      {
+        "amount": "¾",
+        "item": "cup soy sauce",
+        "category": "pantry"
+      },
+      {
+        "amount": "6",
+        "item": "tablespoons maple syrup",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons chile-garlic sauce (preferably Huy Fong)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon toasted sesame oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "garlic cloves, finely grated",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "teaspoon finely grated fresh ginger (optional)",
+        "category": "produce"
+      },
+      {
+        "amount": "Ground",
+        "item": "black pepper, to taste",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 400 degrees. Line a large sheet pan with parchment paper.",
+      "In a large bowl, combine all the meatball ingredients. With damp hands, shape into 24 balls (each about 1 ½ inches wide), then arrange them on the sheet pan, making sure to space them out evenly.",
+      "Bake the meatballs for 20 minutes, until browned on both sides, making sure to flip halfway through.",
+      "While the meatballs bake, add all the sauce ingredients to a medium skillet and cook down the sauce over medium until it has thickened slightly, about 5 minutes. Once it thickens, take the sauce off the heat and set aside. Add the meatballs and stir until coated.",
+      "Plate the meatballs and lightly drizzle with any remaining chile-garlic sauce. Serve right away or store the meatballs in an airtight container in the fridge for 2 to 3 days. If saving the meatballs to cook on a later date, store them in a freezer-safe bag for up to 3 months."
+    ]
+  },
+  "chicken-piccata-meatballs": {
+    "prepTime": "45 min",
+    "serves": 12,
+    "ingredients": [
+      {
+        "amount": "¾",
+        "item": "cup panko bread crumbs",
+        "category": "pantry"
+      },
+      {
+        "amount": "½",
+        "item": "cup whole milk",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "large egg",
+        "category": "protein"
+      },
+      {
+        "amount": "¼",
+        "item": "cup finely grated Parmesan",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons chopped capers",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "garlic clove, minced",
+        "category": "produce"
+      },
+      {
+        "amount": "¼",
+        "item": "teaspoon dried oregano",
+        "category": "pantry"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound ground chicken (preferably dark meat)",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "cup low-sodium chicken broth",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons unsalted butter",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon lemon juice, plus wedges for serving (optional)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons chopped parsley",
+        "category": "protein"
+      },
+      {
+        "amount": "Egg",
+        "item": "noodles, pasta or rice, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat oven to 425 degrees. In a medium bowl, combine panko and milk and mix well; let stand until the milk is absorbed, about 3 minutes. Add egg, cheese, capers, garlic, oregano, ½ teaspoon of salt and ¼ teaspoon of pepper and mix until well blended.",
+      "Add chicken to the panko mixture and gently mix just until well incorporated. Using moistened hands, form mixture into 12 equal meatballs. (The uncooked meatballs are very soft, but they can be placed in the freezer for about 10 minutes to firm up and hold their shape better during cooking. The meatball mixture can also be made a few hours ahead and chilled in the refrigerator, which makes the meatballs easier to form. Roll the balls again just before cooking to reshape.)",
+      "In a large cast-iron or other heavy skillet, heat oil over medium. Add meatballs and cook, turning occasionally, until mostly lightly golden all over (they will continue to brown in the oven), about 5 minutes. Transfer to the oven and roast, turning meatballs halfway through, until tender and cooked through, about 10 minutes.",
+      "Divide meatballs among 4 plates.",
+      "Place the skillet over medium-high heat and add the broth. Bring to a boil, stirring to lift up any browned bits on the bottom of the skillet. Cook until slightly reduced, about 3 minutes. Add butter, lemon juice and parsley and stir until well combined. Season to taste with salt and pepper.",
+      "Spoon the pan sauce over the meatballs. Serve warm with noodles or rice and lemon wedges on the side, if desired."
+    ]
+  },
+  "aloo-gobi": {
+    "prepTime": "70 min",
+    "serves": 6,
+    "ingredients": [
+      {
+        "amount": "1/4",
+        "item": "cup grapeseed or vegetable oil, plus more as needed",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "large Yukon gold potatoes (about 1 pound), peeled and cut into 1-inch cubes",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "small cauliflower (about 1 1/2 pounds), cut into 1-inch florets",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon cumin seeds",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "medium yellow onion, finely chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "green chile pepper, such as serrano or Thai bird’s eye, slit in the middle",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "large garlic clove, grated",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(1-inch) piece ginger, peeled and grated",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon ground turmeric",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "medium tomatoes, chopped",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon garam masala, plus more to taste",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon ground coriander",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon ground cumin",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon Kashmiri red chile powder (see Tip)",
+        "category": "produce"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt (such as Diamond Crystal)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/2",
+        "item": "teaspoon amchur (dried mango powder), or 1 tablespoon lemon juice",
+        "category": "produce"
+      },
+      {
+        "amount": "Cilantro",
+        "item": "leaves, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "In a large, deep skillet with a lid, heat the oil over medium-high. Add the potatoes, reduce heat to medium-low and cook, stirring frequently, until the potatoes are par-cooked and a little golden, 8 to 10 minutes. Using a slotted spoon, transfer the potatoes to a medium bowl. Add a little more oil to the skillet, if necessary, add the cauliflower and cook, stirring occasionally, until starting to soften on the outsides, about 5 minutes. Transfer the cauliflower to the bowl with the potatoes.",
+      "Stir the cumin seeds into the pan and toast until they crackle and are fragrant, about 30 seconds. Add the onion and green chile; cook, stirring occasionally, scraping up any browned bits from the bottom of the pan, until the onion is soft and golden, about 8 minutes. Add the garlic and ginger; cook, stirring frequently, until fragrant, about 1 minute. Sprinkle on a little salt and the turmeric; stir, until fragrant, about 30 seconds.",
+      "Return the potatoes and cauliflower to the pan, then stir in the tomatoes, garam masala, coriander, ground cumin and Kashmiri chile powder. Stir and cook until fragrant, about 2 minutes. Drizzle 3 tablespoons of water around the sides of the pan, stir, scraping up any browned bits. Cover, then reduce heat to medium-low and cook, stirring occasionally to make sure nothing sticks, until the potatoes are almost fork-tender, 20 to 25 minutes. (The vegetables will release liquid as they cook; drizzle on more water to help steam the potatoes, if necessary.)",
+      "Season with salt. Re-cover and cook until the potatoes are fork-tender and not mushy, and the cauliflower is tender but still has a bite, about 5 minutes. Taste and season with more salt, if needed. Add more garam masala, if you like. Sprinkle with amchur and top with cilantro."
+    ]
+  },
+  "broccoli-rice-with-eggs": {
+    "prepTime": "40 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1 ½",
+        "item": "cups white rice, preferably short-grain (see Tip)",
+        "category": "pantry"
+      },
+      {
+        "amount": "4",
+        "item": "tablespoons vegetable oil, divided",
+        "category": "pantry"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "small heads broccoli (1 pound)",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "eggs",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon soy sauce",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Place the rice in a medium Dutch oven or similar heavy pot. Wash the rice, swirling it around with your fingers, and then carefully pour out the starchy water. Repeat this two more times, until the water runs clear. Add 2 ¼ cups of water, 2 tablespoons of oil and 2 teaspoons of salt and stir to combine. Place on medium-high heat and when it comes to a rolling boil, cover, reduce heat to low and cook for 14 minutes.",
+      "Meanwhile, separate the broccoli head from the stem and then slice or peel off the woody exterior from the stem. Finely chop the florets and the stem. (You can use a food processor to do this, pulsing a few times until the broccoli is finely chopped. Remove any larger pieces and chop by hand to prevent overprocessing.)",
+      "After 14 minutes, add the broccoli to the top of the rice, sprinkle with ½ teaspoon of salt and then cover again with a lid. Cook until the rice is tender and the broccoli has softened and is bright green, 8 to 10 minutes. (The prescribed cooking time yields broccoli that is crisp tender but if you prefer a softer bite, add it to the rice 2 or 3 minutes earlier.)",
+      "While the rice finishes cooking, heat a wok or large well-seasoned cast-iron or nonstick skillet over medium-high. When hot, add a drizzle of oil and crack in the eggs, adding however many will comfortably fit in your pan; you may need to work in batches.",
+      "Reduce the heat to medium and fry until the edges are frizzled, the whites are set and the yolk is cooked to your liking. Season with a pinch of salt. Remove and repeat with the remaining eggs. Set aside.",
+      "In a small bowl, combine the remaining 2 tablespoons of oil and the soy sauce. (It won’t emulsify, and that is OK.)",
+      "When the rice and broccoli are ready, turn off the heat and stir to combine. Taste and season with more salt, if needed.",
+      "Divide among bowls and top each with a fried egg. Give the oil and soy sauce a quick stir and drizzle a little over each egg. Serve immediately."
+    ]
+  },
+  "burrito-bowls": {
+    "prepTime": "35 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "¼",
+        "item": "cup avocado or other neutral-tasting oil",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "medium red onion, coarsely chopped, divided",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "jalapeño, seeds removed if desired, coarsely chopped, divided",
+        "category": "protein"
+      },
+      {
+        "amount": "½",
+        "item": "teaspoon ground cumin",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "cup long-grain white rice",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(15-ounce) can black or pinto beans",
+        "category": "produce"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "cups corn kernels (from 3 cobs, or two drained 15-ounce cans, or frozen corn, thawed and shaken dry)",
+        "category": "produce"
+      },
+      {
+        "amount": "¼",
+        "item": "cup chopped cilantro, plus more leaves for garnish",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "lime",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "ounces grated Monterey Jack cheese (1 cup)",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "large avocado",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "In a large skillet or Dutch oven with a lid, heat 2 tablespoons oil over medium. Add half the red onion and half the jalapeño, along with the cumin, and cook until fragrant and softened, 3 to 5 minutes. Add the rice and beans (including the bean liquid). Fill the can with water and add that, too (1¾ cups). Season with 1 teaspoon salt. When boiling, cover, reduce heat to low and cook undisturbed until the rice is tender, 18 to 20 minutes.",
+      "Meanwhile, in a medium bowl, stir together the remaining half red onion, half jalapeño and 2 tablespoons oil; the corn; cilantro; and juice from the lime. Season to taste with salt.",
+      "When the rice is ready, turn off the heat and sprinkle with cheese. Cover and let rest for 4 minutes. Spoon the rice and beans into bowls. Quarter the avocado and add a piece to each bowl, then top with the corn salsa and a few leaves of cilantro."
+    ]
+  },
+  "cabbage-parm": {
+    "prepTime": "50 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "7",
+        "item": "tablespoons extra-virgin olive oil, plus more for serving",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "medium green cabbage (about 2 1/2 pounds), cut into 2-inch wedges",
+        "category": "produce"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "pound bread, such as sourdough or ciabatta, torn into1-inch chunks",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "garlic clove, grated",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "cups/24 ounces store-bought or homemade tomato sauce",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "cups/8 ounces grated low-moisture mozzarella",
+        "category": "protein"
+      },
+      {
+        "amount": "Basil",
+        "item": "leaves, for topping",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 450 degrees and arrange racks in the middle and bottom of the oven.",
+      "Drizzle a sheet pan with 2 tablespoons olive oil and then arrange the cabbage wedges on the pan, setting each one flat. Drizzle the top and sides of the cabbage with 3 tablespoons olive oil and season with salt and pepper. Place onto the middle rack of the oven and roast until tender and golden, 25 to 35 minutes.",
+      "Place the bread on another sheet pan. Add the garlic, drizzle with the remaining 2 tablespoons olive oil, season with salt and pepper and toss well to coat evenly. Place on the bottom rack of the oven and cook for 5 minutes. Remove from the oven, toss the croutons and return to the oven until golden and crispy, 8 to 10 minutes.",
+      "Remove the cabbage from the oven and spoon the tomato sauce on top. Top with the mozzarella and return to the oven until the cheese is melted and golden, 10 to 15 minutes.",
+      "To serve, scatter croutons and basil leaves on top and drizzle with more olive oil. Serve immediately."
+    ]
+  },
+  "avgolemono-chicken-soup-with-gnocchi": {
+    "prepTime": "20 min",
+    "serves": 6,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "quarts chicken stock (preferably homemade)",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "cups torn rotisserie chicken (or other cooked chicken)",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "medium lemons",
+        "category": "produce"
+      },
+      {
+        "amount": "Salt",
+        "item": "and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound shelf-stable or refrigerated gnocchi",
+        "category": "pantry"
+      },
+      {
+        "amount": "5",
+        "item": "egg yolks (see Tip to save the egg whites)",
+        "category": "protein"
+      },
+      {
+        "amount": "4",
+        "item": "garlic cloves, grated",
+        "category": "produce"
+      },
+      {
+        "amount": "Fresh",
+        "item": "dill (optional), for garnish",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "To a large pot over high, add the chicken stock, torn chicken and 2 teaspoons grated lemon zest (from about 1 lemon). Add a hefty pinch of salt (remember, you are seasoning a lot of liquid!) and a few cracks of black pepper and bring to a boil over high. Reduce the heat to medium and simmer for 2 minutes.",
+      "Add the gnocchi to the soup and continue simmering for 3 minutes.",
+      "Meanwhile, squeeze enough lemon juice into a heatproof liquid measuring cup to get 1/2 cup juice. Add the yolks and the garlic to the juice and whisk to combine.",
+      "While constantly whisking, slowly stream 2 cups of the simmering chicken stock into the egg yolk mixture to temper the eggs. Add the tempered yolk mixture to the pot all at once and stir to combine. Turn the heat off right after incorporating the eggs. Taste and season with more salt as needed.",
+      "Serve with additional lemon zest on top, freshly cracked black pepper and dill, if using."
+    ]
+  },
+  "crispy-gnocchi-with-sausage-and-broccoli": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "(12- to 18-ounce) package shelf-stable potato gnocchi",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "large head broccoli (about 1 pound), florets cut into 1½- to 2-inch pieces, stems thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "¼",
+        "item": "cup extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves, finely grated",
+        "category": "produce"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "Crushed",
+        "item": "red pepper (optional)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "pound hot or sweet Italian sausage, casings removed",
+        "category": "protein"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup grated Parmesan, plus more for serving",
+        "category": "protein"
+      },
+      {
+        "amount": "½",
+        "item": "lemon",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 425 degrees. On a sheet pan, toss together the gnocchi, broccoli, olive oil and garlic until well coated. Season with salt and crushed red pepper, if using. Spread into an even layer. Pinch off pieces of the sausage that are roughly the size of the gnocchi and place them on top of the gnocchi and vegetables. Roast until the sausage and broccoli are golden and crisp, 20 to 25 minutes.",
+      "Squeeze the lemon half over the top (about 1½ tablespoons juice) and sprinkle with the Parmesan. Stir until the cheese has melted. Serve topped with more Parmesan and crushed red pepper as you like."
+    ]
+  },
+  "berbere-meatballs": {
+    "prepTime": "25 min",
+    "serves": 24,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "pound ground beef",
+        "category": "protein"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup finely diced white onion",
+        "category": "produce"
+      },
+      {
+        "amount": "5",
+        "item": "garlic cloves, minced",
+        "category": "produce"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup panko bread crumbs",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/3",
+        "item": "cup milk",
+        "category": "protein"
+      },
+      {
+        "amount": "1/4",
+        "item": "cup finely chopped cilantro leaves",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "large eggs",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons grated Parmesan",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon berbere spice mix (see Tip)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon fine sea salt",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 400 degrees and line a sheet pan with parchment paper. In a large bowl, combine all the ingredients and shape into 24 meatballs, arranging them on the sheet pan. (Meatballs can be frozen raw and kept in the freezer for several months. If cooking frozen meatballs, bake from frozen for about 20 minutes, until cooked through.)",
+      "Once the oven has preheated, bake the meatballs for 15 minutes, until the meatballs are cooked through and browned on both sides, flipping the meatballs after the first 10 minutes. Serve with rice or salad, or in flatbread as a wrap."
+    ]
+  },
+  "green-curry-beans-and-greens": {
+    "prepTime": "30 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "or 2 serrano chiles, stem removed",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(2-inch) piece fresh ginger, peeled",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons vegetable oil, such as avocado",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "cup green curry paste (4 ounces)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(15-ounce) can full-fat coconut milk, preferably gum-free",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "(15-ounce) cans white beans, such as butter or cannellini, drained",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "bunch basil (preferably Thai, if available; about 4 ounces)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(5-ounce) container baby spinach",
+        "category": "produce"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "Cooked",
+        "item": "white rice or flour tortillas, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat a deep 12-inch cast iron skillet or Dutch oven over medium while you mince the serrano chile (seeds included), garlic and ginger together to make a chunky paste.",
+      "Add the oil to the skillet along with the serrano, garlic and ginger and the curry paste. Cook, stirring occasionally, until the paste is very fragrant, about 5 minutes.",
+      "Stir in the coconut milk, then fill the coconut milk can with water and pour it into the skillet. Add the beans and turn the heat to medium-high and bring to a simmer. Adjust the heat to maintain a gentle simmer, mash half of the beans and simmer, stirring occasionally, until the curry thickens slightly, about 15 minutes.",
+      "Meanwhile, pluck the basil leaves off of the stems. Stack half of the leaves and thinly slice into ribbons, leaving the rest whole.",
+      "Stir the spinach and whole basil leaves into the skillet and simmer until wilted, 1 to 2 minutes. Taste for salt.",
+      "Ladle into bowls over rice or on a flour tortilla like a burrito, and serve topped with basil ribbons."
+    ]
+  },
+  "bavette-steak-with-tahini-vegetable-salad": {
+    "prepTime": "25 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1 1/2",
+        "item": "pounds bavette steak (sometimes called flap meat or sirloin tip) or flank steak, preferably grass-fed and finished",
+        "category": "protein"
+      },
+      {
+        "amount": "Flaky",
+        "item": "sea salt, as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons ghee, tallow or neutral oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons tahini, preferably raw",
+        "category": "pantry"
+      },
+      {
+        "amount": "Finely",
+        "item": "grated zest of 1/2 lime plus juice of 2 limes",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon cold water",
+        "category": "pantry"
+      },
+      {
+        "amount": "1/4",
+        "item": "teaspoon fine sea salt, plus more as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "10",
+        "item": "to 12 medium-firm strawberries, thinly sliced (about 2 cups)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1 1/4",
+        "item": "cups thinly sliced rhubarb (about 1 stalk) or peeled carrots",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "medium cucumber, thinly sliced into rounds (about 1 1/2 cups)",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "hakurei or other small sweet turnips, thinly sliced into rounds (about 3/4 cup)",
+        "category": "pantry"
+      },
+      {
+        "amount": "3",
+        "item": "medium radishes, thinly sliced into rounds (about 3/4 cup)",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "quart mixed tender greens",
+        "category": "produce"
+      },
+      {
+        "amount": "2/3",
+        "item": "cup packed coarsely chopped mint",
+        "category": "protein"
+      },
+      {
+        "amount": "1/2",
+        "item": "cup packed chopped basil",
+        "category": "protein"
+      }
+    ],
+    "instructions": [
+      "Pull the steak out of the fridge 1 hour before cooking to come to room temperature. About 5 minutes before cooking, generously season steak all over with flaky sea salt (this helps the salt retain some crunch).",
+      "Heat a cast-iron or other heavy-duty skillet over medium-high until hot enough that a drop of water will sizzle on contact. Add ghee to the skillet and let it melt.",
+      "Add bavette steak and cook, flipping every 2 minutes, until medium-rare, about 8 minutes total, or until medium, about 10 minutes total. (Bavette steak has a tendency to puff up as it cooks, taking longer than the average steak to reach medium-rare. You’ll want to reduce the cooking time if using flank steak.) Transfer steak to a cutting board and let rest for 5 minutes.",
+      "Meanwhile, make the salad: In a small bowl, whisk together tahini, lime zest and juice, olive oil, cold water and 1/4 teaspoon fine sea salt until smooth. Taste and season with more salt, if needed.",
+      "In a large bowl, toss together strawberries, rhubarb, cucumber, turnips and radishes. Add just enough dressing to coat, then taste and add more salt, if needed. Add the greens, mint and basil to the bowl and toss gently, adding more dressing and salt, if needed.",
+      "Slice steak against the grain and serve with salad."
+    ]
+  },
 };
 
 export default missingFullDetailsGenerated;
