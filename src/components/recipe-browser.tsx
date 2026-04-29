@@ -36,7 +36,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [favourites, setFavourites] = useState<Record<string, boolean>>(defaultFavourites);
   const [ingredientChecks, setIngredientChecks] = useState<Record<string, boolean>>({});
   const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
-  const dailyDinnerPickId = useMemo(() => getDailyDinnerPickId(sections[0]?.recipes ?? []), [sections]);
+  const [dailyDateKey, setDailyDateKey] = useState(() => getPacificDateKey());
+  const previousDailyDateKeyRef = useRef(dailyDateKey);
+  const dailyDinnerPickId = useMemo(() => getDailyDinnerPickId(sections[0]?.recipes ?? [], dailyDateKey), [dailyDateKey, sections]);
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
   const [hasSyncedRecipeFromUrl, setHasSyncedRecipeFromUrl] = useState(false);
   const [selectedRecipeFromUrl, setSelectedRecipeFromUrl] = useState(false);
@@ -86,9 +88,48 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, [ingredientChecks, hydrated]);
 
   useEffect(() => {
+    const refreshDailyDateKey = () => setDailyDateKey(getPacificDateKey());
+
+    refreshDailyDateKey();
+    const refreshInterval = window.setInterval(refreshDailyDateKey, 60 * 1000);
+    window.addEventListener("focus", refreshDailyDateKey);
+    window.addEventListener("pageshow", refreshDailyDateKey);
+    document.addEventListener("visibilitychange", refreshDailyDateKey);
+
+    return () => {
+      window.clearInterval(refreshInterval);
+      window.removeEventListener("focus", refreshDailyDateKey);
+      window.removeEventListener("pageshow", refreshDailyDateKey);
+      document.removeEventListener("visibilitychange", refreshDailyDateKey);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (previousDailyDateKeyRef.current === dailyDateKey) return;
+
+    previousDailyDateKeyRef.current = dailyDateKey;
+    setSelectedRecipeFromUrl(false);
+  }, [dailyDateKey]);
+
+  useEffect(() => {
     const syncFromUrl = () => {
-      const recipeIdFromUrl = new URLSearchParams(window.location.search).get("recipe");
-      if (!recipeIdFromUrl) return;
+      const params = new URLSearchParams(window.location.search);
+      const recipeIdFromUrl = params.get("recipe");
+      if (!recipeIdFromUrl) {
+        setHasSyncedRecipeFromUrl(true);
+        return;
+      }
+
+      if (params.get("pickedOn") !== dailyDateKey) {
+        params.delete("recipe");
+        params.delete("pickedOn");
+        const query = params.toString();
+        const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+        window.history.replaceState(null, "", nextUrl);
+        setSelectedRecipeFromUrl(false);
+        setHasSyncedRecipeFromUrl(true);
+        return;
+      }
 
       const matchingRecipe = allRecipes.find((recipe) => recipe.id === recipeIdFromUrl);
       if (matchingRecipe) {
@@ -102,7 +143,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     syncFromUrl();
     window.addEventListener("popstate", syncFromUrl);
     return () => window.removeEventListener("popstate", syncFromUrl);
-  }, [allRecipes]);
+  }, [allRecipes, dailyDateKey]);
 
   const activeSection = sections.find((section) => section.id === activeSectionId) ?? sections[0];
   const sortedRecipes = useMemo(
@@ -143,8 +184,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, [filteredRecipes, recipeSearchQuery]);
 
   const dailyFilteredPickId = useMemo(
-    () => (activeFilter === "favourites" ? "" : getDailyDinnerPickId(filteredRecipes)),
-    [activeFilter, filteredRecipes],
+    () => (activeFilter === "favourites" ? "" : getDailyDinnerPickId(filteredRecipes, dailyDateKey)),
+    [activeFilter, dailyDateKey, filteredRecipes],
   );
 
   useEffect(() => {
@@ -164,16 +205,27 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, [activeFilter, dailyFilteredPickId, filteredRecipes, hasSyncedRecipeFromUrl, selectedRecipeFromUrl, selectedRecipeId]);
 
   useEffect(() => {
-    if (!selectedRecipeId) return;
-
     const params = new URLSearchParams(window.location.search);
-    if (params.get("recipe") === selectedRecipeId) return;
+
+    if (!selectedRecipeId || !selectedRecipeFromUrl) {
+      if (!params.has("recipe") && !params.has("pickedOn")) return;
+
+      params.delete("recipe");
+      params.delete("pickedOn");
+      const query = params.toString();
+      const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+      window.history.replaceState(null, "", nextUrl);
+      return;
+    }
+
+    if (params.get("recipe") === selectedRecipeId && params.get("pickedOn") === dailyDateKey) return;
 
     params.set("recipe", selectedRecipeId);
+    params.set("pickedOn", dailyDateKey);
     const query = params.toString();
     const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
     window.history.replaceState(null, "", nextUrl);
-  }, [selectedRecipeId]);
+  }, [dailyDateKey, selectedRecipeFromUrl, selectedRecipeId]);
 
   const selectedRecipe =
     filteredRecipes.find((recipe) => recipe.id === selectedRecipeId) ??
@@ -785,11 +837,10 @@ function isQuickPrepRecipe(recipe: RecipeLibraryEntry) {
   return totalMinutes > 0 && totalMinutes <= 30;
 }
 
-function getDailyDinnerPickId(recipes: RecipeLibraryEntry[]) {
+function getDailyDinnerPickId(recipes: RecipeLibraryEntry[], dateKey: string) {
   if (!recipes.length) return "";
 
   const sortedIds = [...recipes].map((recipe) => recipe.id).sort();
-  const dateKey = getPacificDateKey();
   const hash = hashString(`${dateKey}:${DAILY_PICK_REFRESH_SALT}:${sortedIds.join("|")}`);
   return sortedIds[hash % sortedIds.length];
 }
