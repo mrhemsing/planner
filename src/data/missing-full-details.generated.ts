@@ -10637,6 +10637,799 @@ const missingFullDetailsGenerated: Record<string, RecipeDetailsEntry> = {
       "Slice steak against the grain and serve with salad."
     ]
   },
+  "ukun-iyo-mallaay-egg-and-tuna-scramble": {
+    "prepTime": "20 min",
+    "serves": 2,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "tablespoon oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "½",
+        "item": "red onion, halved and sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(5-ounce) can yellowfin tuna in olive oil",
+        "category": "protein"
+      },
+      {
+        "amount": "6",
+        "item": "large eggs",
+        "category": "protein"
+      },
+      {
+        "amount": "¾",
+        "item": "teaspoon salt, or to taste",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "In a skillet, heat the oil over medium-high. When the oil is shimmering, after about 1 minute, add the onion. Cook, stirring occasionally, until the onion softens, 5 to 6 minutes.",
+      "Stir in the tuna with its oil and cover the pan; cook over medium heat for 5 minutes. Meanwhile, beat the eggs and salt together in a medium bowl. Uncover the pan and pour in the beaten eggs evenly over the tuna.",
+      "Don’t stir the eggs; cover the pan and let them settle into the tuna for 15 or 20 seconds. Uncover the pan and gently stir for about 2 minutes, until a cohesive scramble forms. Transfer to plates and serve immediately."
+    ]
+  },
+  "mushroom-pozole-rojo": {
+    "prepTime": "100 min",
+    "serves": 6,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "ounce dried red guajillo chiles (4 to 5 large chiles)",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "ounce ancho chiles (2 to 3 medium chiles)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "medium tomato (about 8 ounces)",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "medium white onion, plus ½ cup finely chopped (for garnish)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "large garlic cloves, peeled",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "pounds white button or cremini mushrooms, tough stems removed, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "1½",
+        "item": "teaspoons dried Mexican oregano, plus more dried oregano for garnish",
+        "category": "pantry"
+      },
+      {
+        "amount": "Salt",
+        "item": "and freshly ground pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "quart low-sodium vegetable broth",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "bay leaf",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(29-ounce) can cooked hominy, drained and rinsed",
+        "category": "pantry"
+      },
+      {
+        "amount": "Lime",
+        "item": "wedges, for serving",
+        "category": "pantry"
+      },
+      {
+        "amount": "Thinly",
+        "item": "sliced iceberg lettuce, for garnish",
+        "category": "produce"
+      },
+      {
+        "amount": "Thinly",
+        "item": "sliced radishes, for garnish",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "In a dry medium cast-iron skillet or comal over medium-high heat, lightly toast the dried chiles, turning them often with tongs so they don't burn, until fragrant and blackened in spots, 3 to 5 minutes. Wearing gloves, cut chiles lengthwise with kitchen shears or a paring knife. Remove and discard stems and seeds.",
+      "In a medium saucepan, combine the chiles with the tomato, onion half and garlic, and fill the pot with water to cover. Bring to a boil on high, then turn off heat and cover the pot. Let stand until chiles are softened and pulpy, 5 to 10 minutes. Using a slotted spoon, transfer the solids to a blender (discard soaking liquid). Add 2 cups water to the blender and purée to a smooth paste. Set chile paste aside.",
+      "In a large Dutch oven or other heavy-bottomed pot, heat oil over medium-high. Add mushrooms and oregano, and cook, stirring occasionally, until softened and all the liquid has evaporated, 10 minutes. Season with salt and pepper. Continue to cook, stirring occasionally, until mushrooms are lightly browned, 5 more minutes. Add the broth, 4 cups water and the bay leaf. Bring to a boil, stirring to scrape any browned bits from the bottom of the pot. Cover, reduce the heat to low, and cook, stirring occasionally, 10 minutes.",
+      "Uncover the pot and remove the bay leaf. Stir the reserved chile purée through a fine-mesh sieve into the pot, pressing down with a spoon (discard solids). Add hominy to the pot and adjust the heat to a simmer to allow the flavors to come together, 10 minutes. Taste and adjust seasoning. Let pozole stand for 10 minutes before serving.",
+      "To serve, ladle pozole into wide bowls. Serve alongside bowls of chopped onion, lime wedges, lettuce, radishes and dried oregano for garnishing as you please. (Pozole can be cooled completely and reheated later. Refrigerate for up to 3 days.)"
+    ]
+  },
+  "lemony-miso-cabbage": {
+    "prepTime": "15 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "tablespoon white miso",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons unsalted butter",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "pound green cabbage, chopped into 1-inch pieces and layers separated (about 6 cups)",
+        "category": "produce"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon lemon juice",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons chopped fresh dill",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "In a small bowl, whisk miso with ¼ cup of water until well blended, mashing the miso until it dissolves.",
+      "In a 12-inch nonstick skillet with a lid, melt butter over medium-high heat. Add cabbage, season with salt and pepper and cook, stirring to evenly coat the cabbage in the butter, 1 minute. Drizzle the miso mixture on top and stir until well incorporated. Cover and cook until cabbage is just softened, 2 minutes.",
+      "Uncover and mix well, then spread the cabbage in an even layer. Cook, undisturbed, until all of the liquid is absorbed and the cabbage is lightly golden underneath, 2 minutes.",
+      "Turn off the heat, add lemon juice and dill, and mix until well blended, stirring up any browned bits on the bottom of the pan. Season with salt and pepper.",
+      "Transfer cabbage to a shallow bowl and serve warm or at room temperature."
+    ]
+  },
+  "rosemary-fennel-chickpeas-with-fried-eggs": {
+    "prepTime": "20 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "¼",
+        "item": "cup olive oil, plus more for the eggs",
+        "category": "protein"
+      },
+      {
+        "amount": "3",
+        "item": "(15-ounce) cans chickpeas, drained",
+        "category": "produce"
+      },
+      {
+        "amount": "8",
+        "item": "garlic cloves, smashed and chopped",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "lemon, zested and juiced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon chopped fresh rosemary or 1½ teaspoons dried rosemary",
+        "category": "pantry"
+      },
+      {
+        "amount": "1½",
+        "item": "teaspoons fennel seeds",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "teaspoon crushed red pepper, plus more for seasoning",
+        "category": "produce"
+      },
+      {
+        "amount": "Salt",
+        "item": "and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "large eggs",
+        "category": "protein"
+      }
+    ],
+    "instructions": [
+      "Warm the olive oil in a large skillet over high heat. Add about half of the chickpeas and coarsely mash them with a potato masher or a fork. Spread them out into an even layer and let them cook undisturbed (they will pop and sizzle) until deeply browned, 5 to 7 minutes.",
+      "Stir in the garlic, lemon zest, rosemary, fennel, crushed red pepper, a small pinch of salt and several generous grinds of black pepper. Cook, stirring, until the garlic is softened and fragrant, about 3 minutes.",
+      "Stir in the remaining chickpeas and let them warm through for a couple minutes, then add ¼ cup water. Stir until the skillet is dry again, which should happen almost immediately.",
+      "Push all the chickpeas to the perimeter of the pan. Drizzle a little more oil into the center and then crack the eggs into the oil. Season them with salt, black pepper and crushed red pepper. Cook until the eggs are done to your liking, 3 to 4 minutes uncovered for a runny yolk or covered for a firmer yolk. Squeeze the lemon juice to taste over the chickpeas. Taste and add more salt or pepper if necessary. Serve."
+    ]
+  },
+  "salmon-tostadas-with-citrus-salsa": {
+    "prepTime": "30 min",
+    "serves": 6,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "tablespoons canola oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "to 2 fresh habaneros, stems removed",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "medium white onion, quartered, divided",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "garlic cloves, peeled, divided",
+        "category": "produce"
+      },
+      {
+        "amount": "¼",
+        "item": "cup fresh orange juice (from 1 orange)",
+        "category": "produce"
+      },
+      {
+        "amount": "¼",
+        "item": "cup fresh lime juice (from 2 limes)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "bunch cilantro, stems and leaves separated",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(1½-pound) skinless salmon fillet, cut into 2-inch pieces",
+        "category": "protein"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "6",
+        "item": "tostadas",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "avocado, sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "small red onion, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "Lime",
+        "item": "wedges, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Make the salsa: In a large, high-sided skillet, heat oil over medium-high and open the window. Once shimmering, add the habaneros, one white onion quarter and 2 garlic cloves. Cook, undisturbed, until they develop a deep char, about 3 minutes (if you’d rather not char the salsa ingredients, transfer them directly to the blender). Remove from the heat and transfer charred ingredients to the blender. Add orange and lime juice and blend until smooth. Set aside.",
+      "Return skillet to medium-low heat. Add 4 cups water and scrape with a spatula to deglaze any charred bits in the pan. Add cilantro stems along with remaining onion and garlic. Once water begins to gently simmer, arrange salmon chunks in a single layer. Poach until just cooked through, 5 to 7 minutes, gently turning the fish occasionally to ensure the fish is cooked evenly.",
+      "Using tongs or a spider, transfer salmon to a large bowl (discard the aromatics in the pan). Gently flake the fish apart with the back of a fork. Add ½ cup salsa and gently toss to coat. Salt to taste.",
+      "Divide the salmon across the tostadas. Serve with avocado, thinly sliced red onion, remaining salsa and lime wedges."
+    ]
+  },
+  "roasted-cauliflower-and-lentil-salad": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "large red or yellow onion, halved and sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "medium head cauliflower (about 2 pounds), cut into bite-size florets",
+        "category": "produce"
+      },
+      {
+        "amount": "5",
+        "item": "tablespoons extra-virgin olive oil, divided",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons ground cumin",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon ground coriander",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon smoked paprika",
+        "category": "pantry"
+      },
+      {
+        "amount": "Salt",
+        "item": "and pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "cup green or brown lentils",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "garlic clove, crushed",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "cup plain Greek yogurt",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "cups baby spinach (2 ounces)",
+        "category": "produce"
+      },
+      {
+        "amount": "Handful",
+        "item": "of fresh cilantro or mint leaves",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "cup sliced or slivered toasted almonds (2 ounces)",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 425 degrees.",
+      "Place the onion and cauliflower onto a large sheet pan. Drizzle with 4 tablespoons of olive oil and sprinkle with the cumin, coriander and smoked paprika; season generously with salt and pepper. Toss to coat and arrange into a single layer on the sheet pan. Roast, tossing once halfway through cooking, until the cauliflower is tender and the onions are caramelized, 25 to 30 minutes.",
+      "Meanwhile, cook the lentils: Add the lentils and garlic to a large pot and cover with about 6 cups water. Salt the water generously and bring to a boil over high. Reduce heat to medium and cook, uncovered, until the lentils are just tender, 15 to 20 minutes. Drain the lentils and give them a quick toss in the colander to encourage the garlic to break apart. (It will be hot, so you can also use the back of the spoon to mash the garlic clove.)",
+      "In a large bowl that’s big enough to fit the whole salad, add the yogurt, along with the remaining 1 tablespoon of olive oil plus a pinch of salt. Stir well to loosen it up. Add the cauliflower, lentils, spinach and herbs and toss to coat. Taste and season with more salt and pepper if needed.",
+      "Top with almonds and serve warm or at room temperature. This salad keeps well, stored in an airtight container in the fridge, for up to 3 days."
+    ]
+  },
+  "crispy-salmon-with-lentil-salsa-verde": {
+    "prepTime": "25 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "4",
+        "item": "(6-ounce) skin-on salmon fillets or 1 (1½-pound) fillet , patted dry",
+        "category": "protein"
+      },
+      {
+        "amount": "½",
+        "item": "cup extra-virgin olive oil, plus more for drizzling",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "small shallot",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "anchovy fillet",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "(15-ounce) can lentils, rinsed and shaken very dry",
+        "category": "pantry"
+      },
+      {
+        "amount": "½",
+        "item": "teaspoon crushed red pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "packed cup finely chopped parsley leaves and stems",
+        "category": "produce"
+      },
+      {
+        "amount": "¼",
+        "item": "packed cup finely chopped dill fronds and stems",
+        "category": "produce"
+      },
+      {
+        "amount": "Juice",
+        "item": "of 1 lemon (3 tablespoons)",
+        "category": "produce"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "In a regular or toaster oven, place a rack about 5 inches from the broiler and heat to high. On a foil-lined sheet pan or baking dish, coat the salmon lightly with olive oil. Arrange skin-side up. Broil until the skin is crisp and the flesh flakes easily with a fork, 6 to 10 minutes. Halfway through, check on the fish: If the skin is burning, move the rack to the center of the oven and continue cooking.",
+      "Meanwhile, finely chop the shallot. Add the anchovy to the shallot and chop until homogenous. Transfer to a medium bowl along with ½ cup oil, the lentils, crushed red pepper, parsley, dill and lemon juice. Stir to combine and set aside. (Because the anchovy and lentils are plenty salty, you probably won’t need additional salt, so taste first, then add salt accordingly.)",
+      "To serve, divide the lentils and salsa verde onto plates, then top with the salmon, skin-side-up."
+    ]
+  },
+  "roasted-cauliflower-chickpeas-and-dates": {
+    "prepTime": "45 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "large cauliflower (or 1½ pounds medium-sized cauliflower florets)",
+        "category": "produce"
+      },
+      {
+        "amount": "7",
+        "item": "fat garlic cloves",
+        "category": "produce"
+      },
+      {
+        "amount": "4½",
+        "item": "tablespoons extra-virgin olive oil, divided, plus more for the dates",
+        "category": "produce"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt (such as Diamond Crystal) and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "(15-ounce) cans chickpeas, drained and rinsed",
+        "category": "produce"
+      },
+      {
+        "amount": "6",
+        "item": "Medjool dates",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "cup tahini, well-stirred",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons freshly squeezed lemon juice, plus more to taste",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "teaspoon ground cumin",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "to 2 teaspoons Aleppo pepper (or ¼ teaspoon crushed red pepper)",
+        "category": "produce"
+      },
+      {
+        "amount": "4",
+        "item": "tablespoons ice cold water, plus more as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "big handful flat-leaf parsley, chopped",
+        "category": "produce"
+      },
+      {
+        "amount": "Warm",
+        "item": "pita, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Arrange racks in the top third and in the bottom third of the oven. Heat the oven to 425 degrees.",
+      "Prep the cauliflower: Cut out the core from the cauliflower, then cut into medium florets, ideally cutting in half through the stem so you end up with a flat surface on one side. Smash down on 6 of the garlic cloves with the back of a chef’s knife to remove the peels and lightly flatten.",
+      "Transfer florets and smashed garlic to a large bowl. Drizzle with 3 tablespoons of olive oil, rubbing it into the florets’ nooks and crannies. Season with 1 teaspoon salt and several grinds of pepper until well seasoned. Spread out on a rimmed sheet pan, flat sides facing down.",
+      "Prep the chickpeas: Pat the chickpeas dry with a towel, then transfer to the large bowl and toss with the remaining 1½ tablespoons olive oil, 1¼ teaspoons salt, and lots of black pepper. Spread out on a second rimmed sheet pan in a single layer. Save the bowl for the dates.",
+      "Roast the chickpeas on the top rack of the oven and the cauliflower on the bottom for 20 minutes, until the bottoms of the florets and garlic are nicely browned (if your oven runs hot, check the cauliflower at 15 minutes).",
+      "Meanwhile, tear the dates into pieces (not too small) and discard the pits. Add to the large bowl, toss the dates with just enough oil to lightly coat, then sprinkle with a pinch of salt.",
+      "After 20 minutes, remove both pans. Shake the pan of chickpeas around. Toss the cauliflower and flip the garlic pieces (if the garlic is soft and golden brown on both sides, remove and set aside). Scatter the dates across the pan of cauliflower.",
+      "Return to the oven, but switch the pans’ locations (i.e., cauliflower goes on the top rack). Roast for 7 to 10 minutes, until the cauliflower is tender and nicely browned, the dates are browned in spots and even a little charred, and the chickpeas are crisp and golden (if you want the chickpeas to be really crunchy, roast them for 5 to 10 minutes longer).",
+      "While everything roasts, make the tahini whip: Finely grate the remaining clove of garlic into a medium bowl. Add the tahini, lemon juice, cumin, Aleppo pepper, ¼ teaspoon salt and 4 tablespoons ice water. Stir with a fork until thick and very creamy yet spreadable (see Tip). Taste, adding more lemon juice for brightness or salt to taste.",
+      "Assemble: Spread the tahini whip onto the bottom of a serving platter (or 4 shallow plates). Top with the roasted cauliflower, dates and chickpeas. Scatter the parsley on top and serve with warm pita."
+    ]
+  },
+  "crispy-curried-tofu-and-carrots": {
+    "prepTime": "55 min",
+    "serves": 3,
+    "ingredients": [
+      {
+        "amount": "1",
+        "item": "(14-ounce) block extra-firm tofu, drained",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "to 1¼ pounds carrots, scrubbed but not peeled",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "medium red onion, sliced into 1-inch wedges",
+        "category": "produce"
+      },
+      {
+        "amount": "3",
+        "item": "tablespoons extra-virgin olive oil, divided",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons potato starch or arrowroot powder",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "teaspoons Madras curry powder",
+        "category": "pantry"
+      },
+      {
+        "amount": "Kosher",
+        "item": "salt (such as Diamond Crystal) and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves, peeled",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "(1-inch) piece fresh ginger",
+        "category": "produce"
+      },
+      {
+        "amount": "8",
+        "item": "ounces (about 1 cup) plain, unsweetened creamy coconut yogurt (",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "tablespoon freshly squeezed lemon juice, plus more to finish",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "teaspoon garam masala",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "serrano chile or jalapeño, thinly sliced (remove membranes for less heat)",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "handful fresh cilantro leaves and tender stems, chopped",
+        "category": "produce"
+      },
+      {
+        "amount": "Cooked",
+        "item": "white rice, for serving",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Arrange racks in the upper and lower thirds of the oven. Heat to 425 degrees. Grab two rimmed sheet pans and line one with parchment paper.",
+      "Slice the tofu into four slabs, then place on top of a few paper towels or a dish towel. Cover the tofu with a few paper towels or a dish towel and weigh down with a heavy cookbook. Set aside to press while you prep the carrots, or for up to 10 minutes.",
+      "Prep the carrots: If the carrots are medium-width, slice in half lengthwise; if fat, slice lengthwise into quarters; if skinny, leave whole. Cut the carrots crosswise into 2-inch pieces at a sharp angle. In a large bowl, toss the carrots and onion wedges with 1½ tablespoons olive oil (a drizzle more if using the larger amount of carrots). Season with ¾ to 1 teaspoon salt and black pepper to taste.",
+      "Transfer the carrots and onions to the unlined pan and spread out.",
+      "Crumble the pressed tofu into small pieces, about the size of a large blueberry. Add to the large bowl and use your hands or a silicone spatula to gently toss with the remaining 1½ tablespoons oil, the potato starch, curry powder, ¾ teaspoon kosher salt and pepper to taste until well coated. Don't worry if small pieces of tofu break off, as these pieces bake up extra crunchy. Spread the tofu out on the lined pan without touching.",
+      "Roast the tofu on the upper oven rack and the carrots on the lower one for 15 minutes. Remove both pans from the oven and toss the vegetables and tofu around. Roast until the carrots are tender and browned in spots, the onions are soft and browned and the tofu is golden and crisp, about 15 minutes more.",
+      "While everything roasts, make the yogurt sauce: Finely grate the garlic and ginger into a medium bowl. Whisk in the yogurt, lemon juice, garam masala, ½ teaspoon salt and black pepper to taste. Taste, adding more lemon juice, salt or garam masala as desired (see Tip).",
+      "Divide cooked rice among bowls. Top with the roasted carrots, onions and tofu. Spoon the yogurt sauce on top and top with the sliced chile and cilantro. Squeeze a bit of lemon juice on top before serving."
+    ]
+  },
+  "parchment-steamed-fish-with-buttered-radishes": {
+    "prepTime": "40 min",
+    "serves": 2,
+    "ingredients": [
+      {
+        "amount": "2",
+        "item": "(4-ounce) meaty white fish fillets, such as cod loin, halibut or haddock, 1 to 2 inches thick",
+        "category": "protein"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "scallions, trimmed, cut into 3-inch segments, then thinly sliced lengthwise",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "garlic cloves, thinly sliced",
+        "category": "produce"
+      },
+      {
+        "amount": "½",
+        "item": "to 1 small fresh red chile, such as Fresno, jalapeño or Korean gochu, thinly sliced into rings",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "bunch halved breakfast radishes or quartered red radishes, plus their green tops",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons unsalted butter",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons extra-virgin olive oil",
+        "category": "pantry"
+      },
+      {
+        "amount": "Flaky",
+        "item": "sea salt (optional)",
+        "category": "pantry"
+      }
+    ],
+    "instructions": [
+      "Lay two large rectangular sheets of parchment paper side by side on a large sheet pan. Place a fillet in the center of each sheet and gently season the fish with salt all over. Top with the scallions, garlic and chile. Arrange the radishes and their greens alongside or around the fish and dot the radishes with the butter. Drizzle the olive oil over the fish and radish greens. Season everything with salt or, if using, flaky sea salt.",
+      "Wrap the fillets: Bring the two long sides of each parchment sheet up to meet each other, then fold them at the top edge to create a seal. Twist the two ends to seal each parcel; they should look like wrapped candies. At this point, you can bake them or store them in the refrigerator for up to 24 hours.",
+      "Heat the oven to 350 degrees. Place the sheet pan with the two parcels on it in the oven and bake until the fish is flaky and opaque at the center and the radishes light pink and tender, 20 to 25 minutes.",
+      "Transfer the whole parcels, as they are, onto plates and have guests open them at the table. (Be sure to warn them about the hot steam.) If desired, let them sprinkle their fish with a little flaky sea salt before eating. Spoons are nice for this dish, so people can enjoy the buttery pink broth along with the fish, radishes and greens."
+    ]
+  },
+  "laksa-noodle-salad": {
+    "prepTime": "30 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "Sea",
+        "item": "salt and black pepper",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "large head broccoli (1 pound), cut into small florets, thick stems peeled and sliced into discs",
+        "category": "produce"
+      },
+      {
+        "amount": "10",
+        "item": "ounces rice noodles (pho style) or rice vermicelli",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "(14- to 16-ounce) block extra-firm tofu, drained, patted dry and sliced into ½-inch slices",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons extra-virgin olive oil, divided, plus more as needed",
+        "category": "pantry"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons red curry paste, or more to taste",
+        "category": "pantry"
+      },
+      {
+        "amount": "½",
+        "item": "cup coconut milk, stirred well",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "cups/5 ounces bean sprouts",
+        "category": "produce"
+      },
+      {
+        "amount": "Handful",
+        "item": "fresh cilantro, stems and leaves chopped",
+        "category": "produce"
+      },
+      {
+        "amount": "Handful",
+        "item": "store-bought crispy fried shallots or onions, for serving",
+        "category": "produce"
+      },
+      {
+        "amount": "1",
+        "item": "lime, quartered, for serving",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Bring a big pot of salted water to the boil. Add the broccoli and cook until bright green and crisp-tender, 2 to 3 minutes. Using a spider ladle or slotted spoon, remove the broccoli and transfer to a colander to drain. Refresh under cold water and drain again.",
+      "To the same pot of boiling water, add the rice noodles, stir gently (this helps to prevent sticking) and cook according to package instructions until tender but still firm. Drain, refresh under cold water and drain again.",
+      "Meanwhile, heat a medium skillet over medium-high until hot. (For nonstick, this takes 1 to 2 minutes, and 2 to 3 minutes for cast-iron or stainless steel.) Season the tofu with salt and pepper. When the skillet is hot, drizzle with 1 tablespoon of olive oil, add the tofu, and cook until golden, 3 to 4 minutes. Flip the tofu over and cook until golden, another 3 to 4 minutes (feel free to add more oil). Transfer to a cutting board and when cool enough to handle, slice into bite-size strips or triangles.",
+      "In a large bowl that’s big enough to hold the entire salad, make the dressing by whisking together the red curry paste and coconut milk until combined. Taste and if needed, season with salt and pepper.",
+      "To the dressing, add the noodles, broccoli, tofu, bean sprouts and cilantro; drizzle with 1 to 2 tablespoons of olive oil and toss well until well coated. Taste and season with salt and black pepper.",
+      "To serve, top with crispy fried shallots, with a lime wedge on the side."
+    ]
+  },
+  "preserved-lemon-chicken-with-radishes-and-peas": {
+    "prepTime": "55 min",
+    "serves": 4,
+    "ingredients": [
+      {
+        "amount": "3",
+        "item": "tablespoons unsalted butter, softened to room temperature",
+        "category": "protein"
+      },
+      {
+        "amount": "1",
+        "item": "small preserved lemon, halved, seeds removed, then peel and flesh finely chopped (about 3 tablespoons), or 1 fresh lemon (",
+        "category": "produce"
+      },
+      {
+        "amount": "2 ½",
+        "item": "to 3 pounds bone-in, skin-on chicken thighs (or preferred chicken parts)",
+        "category": "protein"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons olive oil, divided",
+        "category": "pantry"
+      },
+      {
+        "amount": "",
+        "item": "Salt",
+        "category": "pantry"
+      },
+      {
+        "amount": "1",
+        "item": "bunch trimmed radishes (about 10 ounces), large ones quartered and small ones halved",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "cups fresh peas or 1 (10-ounce) package frozen peas (no need to thaw)",
+        "category": "produce"
+      },
+      {
+        "amount": "2",
+        "item": "tablespoons packed cilantro or parsley leaves, torn or chopped, for serving",
+        "category": "produce"
+      }
+    ],
+    "instructions": [
+      "Heat the oven to 425 degrees. In a large bowl, use a fork to mash together the butter and preserved lemon. (It’s OK if the butter and lemon aren’t fully incorporated.)",
+      "Place the chicken on a large sheet pan. Rub all over with 1 tablespoon of olive oil and season with salt. Scoop out two thirds of the butter; use your index finger to gently pry the skin apart from the flesh of each thigh and place some butter and any stray lemon pieces under the skin, then smush some on top of each chicken piece.",
+      "Transfer the chicken to the oven to roast for 25 minutes.",
+      "Meanwhile, in the bowl with the remaining butter, mix together the radishes, peas and remaining 1 tablespoon olive oil. Season with salt.",
+      "Once the chicken has roasted for 25 minutes, add the radish mixture to the sheet pan surrounding the chicken and cook until the chicken is cooked through, the skin golden and the radishes a soft pink color, about 15 minutes more. Top with the herbs and serve."
+    ]
+  },
 };
 
 export default missingFullDetailsGenerated;
