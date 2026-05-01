@@ -431,7 +431,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     <section className="grid gap-6">
       <div className="mt-4 px-1 py-1 sm:mt-4 sm:px-2">
         <div className="flex flex-col gap-5 sm:gap-4">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex items-start justify-between gap-4">
             <button type="button" onClick={returnHome} className="recipe-tap-card flex items-center gap-3 text-left" aria-label="Return to homepage">
               <Image
                 src="/recipe-images/planner-logo-20260426.png"
@@ -449,6 +449,20 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 <span className="mt-1 block font-normal text-white [font-family:Georgia,serif] sm:inline lg:mt-1.5 lg:block lg:text-[1.18em]">Healthy Dinners</span>
               </h1>
             </button>
+            {showFavouritesFilter ? (
+              <button
+                type="button"
+                onClick={() => showRecipeForFilter("favourites")}
+                aria-label="Favourite recipes"
+                title="Favourite recipes"
+                className={`category-chip mt-1 min-h-11 shrink-0 rounded-2xl border bg-white px-4 py-2 text-sm font-semibold sm:hidden ${
+                  activeFilter === "favourites" ? "category-chip-active" : "border-transparent text-amber-800 hover:text-amber-900"
+                }`}
+              >
+                <span aria-hidden="true">❤️</span>
+                <span className="ml-1">{favouriteCount}</span>
+              </button>
+            ) : null}
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -464,20 +478,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             </div>
 
             <div className="flex gap-2 sm:hidden">
-              {showFavouritesFilter ? (
-                <button
-                  type="button"
-                  onClick={() => showRecipeForFilter("favourites")}
-                  aria-label="Favourite recipes"
-                  title="Favourite recipes"
-                  className={`category-chip min-h-11 shrink-0 rounded-2xl border bg-white px-4 py-2 text-sm font-semibold ${
-                    activeFilter === "favourites" ? "category-chip-active" : "border-transparent text-amber-800 hover:text-amber-900"
-                  }`}
-                >
-                  <span aria-hidden="true">❤️</span>
-                  <span className="ml-1">{favouriteCount}</span>
-                </button>
-              ) : null}
               <button
                 type="button"
                 onClick={() => setRecipeSheetOpen(true)}
