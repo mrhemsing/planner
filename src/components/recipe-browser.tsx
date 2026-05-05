@@ -38,7 +38,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
   const [dailyDateKey, setDailyDateKey] = useState(() => getPacificDateKey());
   const previousDailyDateKeyRef = useRef(dailyDateKey);
-  const dailyDinnerPickId = useMemo(() => getDailyDinnerPickId(sections[0]?.recipes ?? [], dailyDateKey), [dailyDateKey, sections]);
+  const dailyDinnerPickId = useMemo(() => getUniqueDailyPickIdForFilter("all", sections[0]?.recipes ?? [], dailyDateKey, defaultFavourites), [dailyDateKey, defaultFavourites, sections]);
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
   const [hasSyncedRecipeFromUrl, setHasSyncedRecipeFromUrl] = useState(false);
   const [selectedRecipeFromUrl, setSelectedRecipeFromUrl] = useState(false);
@@ -153,21 +153,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   const getRecipesForFilter = useCallback(
     (filterId: string) => {
-      return sortedRecipes.filter((recipe) => {
-        if (filterId === "favourites") {
-          if (!favourites[recipe.id]) {
-            return false;
-          }
-        } else if (filterId === "quick") {
-          if (!isQuickPrepRecipe(recipe)) {
-            return false;
-          }
-        } else if (filterId !== "all" && getRecipeCategory(recipe) !== filterId) {
-          return false;
-        }
-
-        return true;
-      });
+      return sortedRecipes.filter((recipe) => recipeMatchesFilter(recipe, filterId, favourites));
     },
     [favourites, sortedRecipes],
   );
@@ -189,8 +175,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, [filteredRecipes, recipeSearchQuery]);
 
   const dailyFilteredPickId = useMemo(
-    () => (activeFilter === "favourites" ? "" : getDailyDinnerPickId(filteredRecipes, dailyDateKey)),
-    [activeFilter, dailyDateKey, filteredRecipes],
+    () => getUniqueDailyPickIdForFilter(activeFilter, sortedRecipes, dailyDateKey, favourites),
+    [activeFilter, dailyDateKey, favourites, sortedRecipes],
   );
 
   useEffect(() => {
@@ -298,14 +284,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const showRecipeForFilter = useCallback(
     (filterId: string) => {
       const nextFilteredRecipes = getRecipesForFilter(filterId);
-      const nextDailyPickId = filterId === "favourites" ? "" : getDailyDinnerPickId(nextFilteredRecipes, dailyDateKey);
+      const nextDailyPickId = getUniqueDailyPickIdForFilter(filterId, sortedRecipes, dailyDateKey, favourites);
       const nextRecipeId = nextDailyPickId || nextFilteredRecipes[0]?.id || "";
 
       setSelectedRecipeFromUrl(Boolean(nextRecipeId));
       setSelectedRecipeId(nextRecipeId);
       setActiveFilter(filterId);
     },
-    [dailyDateKey, getRecipesForFilter],
+    [dailyDateKey, favourites, getRecipesForFilter, sortedRecipes],
   );
 
   const moveActiveFilter = (direction: 1 | -1) => {
@@ -849,12 +835,47 @@ function isQuickPrepRecipe(recipe: RecipeLibraryEntry) {
   return totalMinutes > 0 && totalMinutes <= 30;
 }
 
-function getDailyDinnerPickId(recipes: RecipeLibraryEntry[], dateKey: string) {
+const UNIQUE_DAILY_PICK_FILTER_ORDER = ["all", "quick", "meat", "fish", "vegetarian"];
+
+function recipeMatchesFilter(recipe: RecipeLibraryEntry, filterId: string, favourites: Record<string, boolean>) {
+  if (filterId === "favourites") return Boolean(favourites[recipe.id]);
+  if (filterId === "quick") return isQuickPrepRecipe(recipe);
+  if (filterId === "all") return true;
+
+  return getRecipeCategory(recipe) === filterId;
+}
+
+function getUniqueDailyPickIdForFilter(
+  filterId: string,
+  recipes: RecipeLibraryEntry[],
+  dateKey: string,
+  favourites: Record<string, boolean>,
+) {
+  if (filterId === "favourites") return "";
+
+  const reservedPickIds = new Set<string>();
+
+  for (const orderedFilterId of UNIQUE_DAILY_PICK_FILTER_ORDER) {
+    const candidates = recipes.filter((recipe) => recipeMatchesFilter(recipe, orderedFilterId, favourites));
+    const pickId = getDailyDinnerPickId(candidates, dateKey, reservedPickIds);
+
+    if (orderedFilterId === filterId) return pickId;
+    if (pickId) reservedPickIds.add(pickId);
+  }
+
+  const fallbackCandidates = recipes.filter((recipe) => recipeMatchesFilter(recipe, filterId, favourites));
+  return getDailyDinnerPickId(fallbackCandidates, dateKey, reservedPickIds);
+}
+
+function getDailyDinnerPickId(recipes: RecipeLibraryEntry[], dateKey: string, reservedPickIds = new Set<string>()) {
   if (!recipes.length) return "";
 
   const sortedIds = [...recipes].map((recipe) => recipe.id).sort();
+  const availableIds = sortedIds.filter((id) => !reservedPickIds.has(id));
+  const pickableIds = availableIds.length ? availableIds : sortedIds;
   const hash = hashString(`${dateKey}:${DAILY_PICK_REFRESH_SALT}:${sortedIds.join("|")}`);
-  return sortedIds[hash % sortedIds.length];
+
+  return pickableIds[hash % pickableIds.length];
 }
 
 function getPacificDateKey() {
