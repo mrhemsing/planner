@@ -7653,6 +7653,1206 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
           "To assemble the salad, spread the noodles on a large platter. Top with the dressed cucumbers and clams, and pile on the lettuce. Drizzle the lettuce with the remaining ½ teaspoon sesame oil, and lightly season with salt and a squeeze of fresh lemon juice. Garnish with sesame seeds and serve immediately."
     ],
   },
+  {
+    id: "caramelized-carrot-and-halloumi-salad",
+    title: "Caramelized Carrot and Halloumi Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026895-caramelized-carrot-and-halloumi-salad",
+    imageUrl: "https://static01.nyt.com/images/2025/05/22/multimedia/sp-fattoush-tlzk/sp-fattoush-tlzk-videoSixteenByNineJumbo1600.jpg",
+    description: "Salty bites of crisp, golden-brown halloumi play well with sweet and tender caramelized carrots and red onion in this warm salad that takes inspiration from fattoush. Here, kale and crunchy toasted pita add enough bulk to ensure this dish is satisfying enough for dinner. It’s all tied together with a simple vinaigrette that’s both earthy and herbaceous, thanks to the blend of herbs, sesame and sumac found in za’atar. If you’d like to make this salad vegan, feel free to skip the cheese.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 1/2 pounds carrots, peeled and cut into 2-inch pieces (halved lengthwise if large)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 medium red onion, halved crosswise and cut into 1/2-inch wedges",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "8 ounces halloumi cheese, patted dry and torn into bite-size pieces",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "8 tablespoons extra-virgin olive oil, divided",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 tablespoons red or white wine vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon za’atar, store-bought or homemade, plus more for serving",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 teaspoon honey",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 medium bunch (about 8 ounces) lacinato (Tuscan) kale (see Tip), ribs removed, leaves torn or coarsely chopped",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 (6-inch) pita breads, torn into bite-size pieces",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Heat oven to 425 degrees. Line a rimmed sheet pan with parchment paper. Place the carrots, red onion and halloumi on the prepared pan. Drizzle with 3 tablespoons olive oil, season with salt and pepper and toss to coat. Spread the mixture in an even layer. Roast for 20 minutes.",
+          "Meanwhile, in a large bowl, whisk 4 tablespoons olive oil with the vinegar, za’atar, honey and a pinch of salt until combined and emulsified. Add the kale and toss well to coat.",
+          "Remove the sheet pan from the oven. Toss the vegetables and move them to one side of the pan. Add the pita to the now-empty side of the pan, drizzle with the remaining 1 tablespoon olive oil, sprinkle with salt, and use tongs to toss and coat in the oil. Spread the pita out into an even layer (it’s OK if the pieces overlap) and continue to roast until vegetables are tender and caramelized, the halloumi is golden and crisp and the pita is toasted, 7 to 10 minutes more. (If you’d like to make this salad ahead, see Tip.)",
+          "Transfer the mixture to the bowl of dressed kale and toss well to combine. Taste and season with additional salt and pepper as needed. Divide among individual shallow bowls and garnish with a generous sprinkle of za’atar."
+    ],
+  },
+  {
+    id: "kale-couscous-and-tofu-salad-with-carrot-ginger-dressing",
+    title: "Kale, Couscous and Tofu Salad With Carrot-Ginger Dressing",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026709-kale-couscous-and-tofu-salad-with-carrot-ginger-dressing",
+    imageUrl: "https://static01.nyt.com/images/2025/05/09/multimedia/hm-kale-quinoa-and-tofu-salad-cwmk/hm-kale-quinoa-and-tofu-salad-cwmk-videoSixteenByNineJumbo1600.jpg",
+    description: "This satisfying no-cook salad demonstrates that taking cooking shortcuts need not come with any compromise when it comes to taste. Shortcut number one: You can skip massaging the kale; tearing it vigorously softens the leaves sufficiently. Shortcut number two: Save time with store-bought baked tofu, as it has been pre-cooked, which results in a firmer texture that stands up well in salads. And, lastly, shortcut three: Rather than actively monitoring couscous on the stovetop, you can simply season it and rehydrate in boiling water (or even hot vegetable stock, for even more flavor). The punchy, golden-hued carrot and ginger dressing takes cues from the simple salads served at Japanese American restaurants. This version adds miso, which softens the heat of the ginger.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 cup couscous",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Extra-virgin olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 cup boiling water",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/2 small bunch kale leaves, tough stems discarded",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 (7- to 8-ounce) package baked tofu, sliced or cut into 1-inch cubes",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Big handful cilantro leaves",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 cup extra-virgin olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 medium carrot, coarsely grated",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 tablespoons rice vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 heaped tablespoon white (shiro) miso paste",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "1 (1-inch) piece fresh ginger, peeled and coarsely grated",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 garlic clove, coarsely grated",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 teaspoon sugar",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Prepare the couscous: Place the couscous into a large heatproof serving bowl, add 1 tablespoon of olive oil and 1/2 teaspoon of salt. Stir to coat the grains. Pour over the boiling water, immediately cover the bowl and let stand for 10 minutes while you prepare the other ingredients.",
+          "Make the dressing: Place the olive oil, carrot, rice vinegar, miso, ginger, garlic, sugar and 2 tablespoons of water into a small blender or food processor. Purée until the mixture is completely smooth. If it looks too chunky, add a little bit more water and blend again. Taste and season with salt and pepper.",
+          "Finish the salad: Fluff the couscous with a fork to separate the grains. Tear the kale vigorously into small pieces and scatter on top. Drizzle the kale with a little olive oil, season the leaves with salt and pepper and then toss the kale and couscous together. Add the tofu and half of the dressing and toss until well combined. Taste and season with salt and pepper.",
+          "To serve, dollop the remaining dressing on top, and scatter over the cilantro leaves. Finish with a final drizzle of oil."
+    ],
+  },
+  {
+    id: "beet-salad-with-celery-and-pomegranate",
+    title: "Beet Salad With Celery and Pomegranate",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026489-beet-salad-with-celery-and-pomegranate",
+    imageUrl: "https://static01.nyt.com/images/2025/01/08/multimedia/DT-Roasted-Beet-Salad-Celery-Feta-gfcl/DT-Roasted-Beet-Salad-Celery-Feta-gfcl-videoSixteenByNineJumbo1600.jpg",
+    description: "It’s nice to make this beet salad in winter when pomegranates are available. For the best result, cook your own beets — simply boil or roast them any time you have a free moment, even a day or two ahead. Then, slip off the skins while the beets are still slightly warm. Slice them just before you make the salad. Sumac, available in Middle Eastern grocery shops, adds tartness, as would a spoonful of pomegranate molasses. To serve, toss with chopped celery and mint, then garnish with pomegranate seeds. It’s a feast for the eyes.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "75 min",
+    serves: 6,
+    ingredients: [
+          {
+                "item": "6 medium beets (about 2 pounds), roasted and peeled (see Tip)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 cup chopped celery hearts and leaves",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 tablespoons extra-virgin olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "3 tablespoons lemon juice",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Zest and juice from ½ orange",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 teaspoons ground sumac (optional)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/2 cup pomegranate seeds",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 tablespoons chopped mint",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "A handful of arugula leaves",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Cut beets into ¼-inch-thick slices. (Alternatively, dice, julienne or grate the beets.) Place in a salad bowl and season with salt and pepper.",
+          "Add celery to the bowl, but wait to toss.",
+          "Make the dressing: Whisk together olive oil, lemon juice, orange juice and zest. Season with salt and pepper.",
+          "To serve, sprinkle beets and celery with sumac, if using, then add pomegranate seeds and mint. Toss gently, then add dressing and toss to coat. Taste and adjust seasoning.",
+          "Divide among individual salad plates or pile onto a platter. Surround with arugula leaves."
+    ],
+  },
+  {
+    id: "roasted-squash-and-bacon-salad",
+    title: "Roasted Squash and Bacon Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025741-roasted-squash-and-bacon-salad",
+    imageUrl: "https://static01.nyt.com/images/2024/12/02/dining/AS-squash-salad-with-bacon-vinaigrette/AS-squash-salad-with-bacon-vinaigrette-videoSixteenByNineJumbo1600.jpg",
+    description: "This sweet and savory sheet-pan recipe has everything you want in a full-meal salad: caramelized winter squash, crisp bacon, mustard-dressed kale, maple-toasted pecans and piquant blue cheese. By using one sheet pan for all the cooking, the bacon’s smoky drippings coat the squash for added flavor, and clean-up is a breeze. This salad can be eaten right when it’s made, warm or at room temperature — leftovers are great for lunch the next day. If you have them, feel free to add fresh apples or grapes, dried dates or cherries or another bitter green like radicchio or frisée.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","protein","vegetarian"],
+    plannedDays: [],
+    prepTime: "60 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 ½ pounds butternut squash, cut into 3/4-inch pieces (about 6 cups, no need to peel)",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "3 thick-cut bacon strips, cut into 1-inch pieces",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "3 tablespoons extra-virgin olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/3 cup pecans",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons maple syrup",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "3 tablespoons red wine vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 ½ tablespoons Dijon mustard",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 large bunch Tuscan kale (about 1 pound)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 scallions, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 cup crumbled blue cheese",
+                "amount": "",
+                "category": "fridge"
+          }
+    ],
+    instructions: [
+          "Heat the oven to 400 degrees. On a sheet pan, toss the squash and bacon with 1 tablespoon olive oil and a sprinkle of salt and pepper. Spread into an even layer. Roast for 25 minutes.",
+          "Meanwhile, in a small bowl, toss the pecans with ½ tablespoon maple syrup and season with salt and pepper. When the squash has roasted for 25 minutes, top with the pecans and roast until the squash is golden and tender and the bacon is crisp, another 5 to 10 minutes. Set aside to cool slightly.",
+          "While the squash is roasting, in a large bowl, stir together the vinegar, mustard, remaining 1½ tablespoons maple syrup and remaining 2 tablespoons oil. Strip the kale leaves from their stems, then rip the leaves into bite-size pieces and add to the bowl of dressing. (Compost the stems.) Toss with your hands until well coated in dressing. Set aside.",
+          "Once the squash has cooled slightly, scrape everything from the sheet pan, including some of the bacon fat, into the large bowl. Toss gently to combine, then top with the scallions and blue cheese. Season to taste with salt and pepper."
+    ],
+  },
+  {
+    id: "herby-farro-salad-with-stone-fruit-and-burrata",
+    title: "Herby Farro Salad With Stone Fruit and Burrata",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025866-herby-farro-salad-with-stone-fruit-and-burrata",
+    imageUrl: "https://static01.nyt.com/images/2024/08/28/multimedia/MC-Farro-Basil-Nectarine-Burrata-Saladrex-lgkf/MC-Farro-Basil-Nectarine-Burrata-Saladrex-lgkf-videoSixteenByNineJumbo1600.jpg",
+    description: "Grain salads always hold up well, so they’re perfect for picnics, potlucks and making ahead for lunch the next day. This one stars chewy farro, enhanced with red onion, arugula and slices of ripe stone fruit, whatever kind you have (red plums are especially pretty added to the mix). The tangy grains are then spooned around a ball of burrata, which adds a mild, creamy contrast. Serve this as a meatless main course or a hearty, colorful side dish.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 teaspoon fine sea salt, plus more for the pot",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/2 cup farro",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 1/2 cups thinly sliced stone fruit, such as nectarines, plums, apricots or peaches (about 1 pound whole fruit)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 lemons, halved",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Pinch of granulated sugar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons olive oil, more for drizzling",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/4 cup thinly sliced red onion",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 cup chopped basil or mint, or a combination",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 cup arugula",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 (4- to 8-ounce) ball burrata",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Flaky salt, for topping",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Red-pepper flakes, for topping",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Bring a pot of salted water to boil. Add the farro and reduce heat to a simmer. Cook for 20 to 25 minutes, or until the farro is al dente.",
+          "While the farro simmers, add the sliced fruit to a small bowl. Toss with the juice of 1 lemon, the pinch of sugar and ½ teaspoon salt. Let sit for at least 10 minutes or up to 30 minutes.",
+          "Drain farro and add to a medium bowl. Immediately add the remaining ½ teaspoon salt, the juice of ½ lemon and olive oil. Taste for seasoning, adding more lemon juice and salt as needed.",
+          "Using a slotted spoon or fork, transfer fruit to the bowl with the farro, reserving any juices for finishing. Add the red onion, herbs and arugula to the farro. Toss gently to combine. Taste and add more salt and lemon juice if needed.",
+          "Place the burrata in the middle of a platter. Scoop the farro mixture around and drizzle the burrata with the reserved fruit juices. Drizzle the platter with olive oil and sprinkle with flaky salt and red-pepper flakes."
+    ],
+  },
+  {
+    id: "chopped-salad-with-everything-bagel-croutons",
+    title: "Chopped Salad With Everything Bagel Croutons",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025840-chopped-salad-with-everything-bagel-croutons",
+    imageUrl: "https://static01.nyt.com/images/2024/08/13/multimedia/18EATrex-fvqj/18EATrex-fvqj-videoSixteenByNineJumbo1600.jpg",
+    description: "This salad is somewhat of a New York style fattoush. Bagel pieces are tossed with olive oil, nuts and everything seasoning, then toasted in the oven to make supersavory, crunchy croutons. These are tossed through a green chopped salad with crispy lettuce, green bell pepper, scallions, cucumber, herbs and a zingy lemon dressing. The salad is rounded off with a base of tahini yogurt, adding a creamy, tangy finish that ties everything together. Perfect as a light lunch or a unique side dish, this salad is both wholesome and indulgent, offering layers of textures and flavors in every bite. Whether you’re a fan of bagels or crisp, textural salads, this recipe is sure to become a new favorite.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "50 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 plain bagel",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "3 tablespoons olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Heaping ¼ cup whole, skin-on almonds, roughly chopped",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons pine nuts",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons everything bagel seasoning (or make your own)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Fine sea salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 scant cup Greek yogurt",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "1 lemon (1 teaspoon zest plus 2 ½ tablespoons juice)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1½ tablespoons tahini",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 romaine lettuce heart, outer leaves discarded, sliced lengthwise through the core, cut crosswise into ¼-inch strips",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 green bell pepper, stemmed, deseeded and diced into ¼-inch pieces",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 scallions, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 cucumber, halved, deseeded and diced into ¼-inch pieces",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 cup roughly torn mint leaves, plus a few extra to serve",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 cup roughly torn basil leaves, plus a few extra to serve",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Heat the oven to 350 degrees. Tear the bagel into roughly 20 bite-size pieces and transfer to a large bowl. Mix in 2 tablespoons oil, the almonds, pine nuts, everything seasoning and ¼ teaspoon salt. Once the bagel pieces are well coated with oil, transfer to a lined baking sheet and bake for 20 to 25 minutes, until the bagel croutons are golden and crispy.",
+          "In a separate bowl, whisk the yogurt with the lemon zest, ½ tablespoon lemon juice, the tahini, ½ tablespoon water and ⅛ teaspoon salt.",
+          "To the large bowl add the lettuce, bell pepper, scallions, cucumber, mint, basil, the remaining 2 tablespoons lemon juice and 1 tablespoon olive oil, plus ½ teaspoon salt and a good grind of pepper; mix well.",
+          "To serve, spread the yogurt mixture over the base of a large serving platter. Toss the bagel mixture into the salad and place on top of the yogurt. Scatter the extra herbs on top and serve immediately."
+    ],
+  },
+  {
+    id: "prosciutto-and-melon-salad",
+    title: "Prosciutto and Melon Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025351-prosciutto-and-melon-salad",
+    imageUrl: "https://static01.nyt.com/images/2024/08/06/multimedia/Prosciutto-and-melon-saladrex-btzh/Prosciutto-and-melon-saladrex-btzh-videoSixteenByNineJumbo1600.jpg",
+    description: "On a hot, sticky summer day, this colorful, no-cook salad of prosciutto, melon, mozzarella and arugula belongs at the center of your table. Eating salty prosciutto with sweet melon is so classic, the combination of cured meats and fruit dates back to ancient Rome. Wrapping slivers of melon in prosciutto is still a go-to antipasto throughout Italy, but this rendition adds peppery arugula and creamy mozzarella to make it more of a salad. Make it a meal alongside braised beans and focaccia, or whatever’s coming off the grill.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","protein"],
+    plannedDays: [],
+    prepTime: "15 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1/2 lemon",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 cups bite-size pieces of cantaloupe, honeydew and/or another melon (about ½ small melon)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "5 ounces arugula",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "15 small basil leaves",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Kosher salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 tablespoons extra-virgin olive oil, plus more for drizzling",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "4 ounces small mozzarella balls, halved and at room temperature (or use fresh mozzarella torn into bite-size pieces)",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "8 slices prosciutto (3 ounces), cut in half",
+                "amount": "",
+                "category": "protein"
+          }
+    ],
+    instructions: [
+          "Finely grate the zest of the lemon half over the melon pieces.",
+          "Place the arugula and basil in a large bowl or on a large platter. Season with salt and pepper, then drizzle with 1 tablespoon oil. Squeeze the lemon over. Toss gently with your hands until coated. Place the melon, mozzarella and prosciutto on top. Season with salt and pepper and drizzle with the remaining 1 tablespoon oil. Taste. If the salad is too sharp, add another drop of oil. If the salad is dull, add a sprinkle of salt. Serve right away."
+    ],
+  },
+  {
+    id: "peach-cucumber-and-mozzarella-salad-with-gochujang-vinaigrette",
+    title: "Peach, Cucumber and Mozzarella Salad With Gochujang Vinaigrette",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025673-peach-cucumber-and-mozzarella-salad-with-gochujang-vinaigrette",
+    imageUrl: "https://static01.nyt.com/images/2024/07/18/multimedia/HLM-Peach-Cucumber-and-Mozzarella-Salad-With-Gochujang-Dressin-czkp/HLM-Peach-Cucumber-and-Mozzarella-Salad-With-Gochujang-Dressin-czkp-videoSixteenByNineJumbo1600.jpg",
+    description: "The theory that opposites attract is confirmed in this unlikely pairing of peach and gochujang. The sweet and spicy notes of gochujang dance with the fresh fruitiness of peach, enhancing its sweetness and elevating its floral notes. Crunchy, juicy cucumbers and creamy mozzarella provide a welcome counterpoint to the boldness of the vinaigrette. Keep this game-changing salad dressing in your back pocket for any time you are looking to liven up a dish; it would work well drizzled over grilled or roasted veggies or even pan-fried tofu. The peaches can be swapped for any summer stone fruit; try nectarines, plums or apricots. If you’d like to add some greens, opt for baby spinach or arugula.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "2 tablespoons gochujang",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons rice vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/4 cup extra-virgin olive oil, plus more for serving",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 teaspoons maple syrup",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 garlic clove, finely grated",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Salt and pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "4 ripe peaches, halved, pitted and sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "4 Persian cucumbers, sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "8 ounces fresh mozzarella, torn",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "1 big handful basil leaves",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "To make the vinaigrette, place the gochujang, rice vinegar, olive oil, maple syrup and garlic in a small bowl and whisk to combine. Season with salt and pepper.",
+          "Arrange the peaches and cucumbers on a large serving plate or platter. Evenly distribute the mozzarella on top and then drizzle the vinaigrette over everything. Season with salt and pepper and drizzle lightly with olive oil. Scatter the basil leaves on top and serve."
+    ],
+  },
+  {
+    id: "miso-shrimp-and-corn-couscous-salad",
+    title: "Miso Shrimp and Corn Couscous Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025627-miso-shrimp-and-corn-couscous-salad",
+    imageUrl: "https://static01.nyt.com/images/2024/07/17/multimedia/yf-miso-shrimp-and-corn-couscous-saladrex-hgzb/yf-miso-shrimp-and-corn-couscous-saladrex-hgzb-videoSixteenByNineJumbo1600.jpg",
+    description: "A delightful blend of bright, sunny colors and flavors shine in this summery salad. A lemony dressing coats the tender, slightly chewy, pearled couscous, which helps to cut the richness of the miso-butter mixture that coats the shrimp and charred corn. While this salad is best with fresh corn — at its sweetest scraped straight off the cob — frozen corn makes an excellent substitute any time of year, even though it won’t char quite as visibly. Serve at room temperature or warm for a picnic or outdoor dinner, pairing it with an herby green salad or grilled broccoli.&nbsp;",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","fish","vegetarian"],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1/4 packed cup chopped cilantro leaves and tender stems",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 large lemon, juiced (about 3 tablespoons)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "5 tablespoons olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Salt and freshly cracked black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 1/2 cups pearl couscous",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 cups corn kernels, removed from the cob (from 2 to 3 fresh ears of corn)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 pound peeled and deveined shrimp, patted dry",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "4 scallions, light green and white parts thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon white miso paste",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "1 tablespoon unsalted butter",
+                "amount": "",
+                "category": "fridge"
+          }
+    ],
+    instructions: [
+          "In a large serving bowl, mix together half the cilantro with the lemon juice and 2 tablespoons olive oil until combined. Season with salt and a few grinds of pepper.",
+          "In a saucepan over medium-high, toast the couscous, stirring occasionally, until lightly browned and fragrant, 3 or 4 minutes. Add 3 cups of water and 1 teaspoon salt, then bring to a boil. Adjust the heat to maintain an active simmer and cook until tender, 7 to 8 minutes. Drain and let cool slightly; then transfer to the bowl and toss with the dressing.",
+          "Meanwhile, heat 2 tablespoons of oil in a heavy, 12-inch skillet over medium-high until shimmering. Add the corn kernels, season lightly with salt and let cook, mostly undisturbed, until charred in spots, 7 to 9 minutes. Stirring once or twice as the kernels brown, or as needed if they start to pop.",
+          "Push the corn to the sides of the pan to create an open space in the middle. Add the remaining 1 tablespoon olive oil, then the shrimp and scallions; season lightly with salt and cook for 2 minutes. Stir everything together and cook until the shrimp are cooked through, 1 to 2 minutes more, depending on the size of the shrimp.",
+          "Remove from the heat and stir in the miso and butter until evenly dispersed, scraping up anything on the bottom of the pan, about 1 minute more.",
+          "Transfer everything in the pan to the serving bowl and toss with the couscous. Garnish with the remaining cilantro and serve."
+    ],
+  },
+  {
+    id: "coconut-miso-salmon-curry",
+    title: "Coconut-Miso Salmon Curry",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1020045-coconut-miso-salmon-curry",
+    imageUrl: "https://static01.nyt.com/images/2021/03/28/dining/kc-miso-salmon-coconut-curry-copy/kc-miso-salmon-coconut-curry-videoSixteenByNineJumbo1600.jpg",
+    description: "This light, delicate weeknight curry comes together in less than 30 minutes and is defined by its deep miso flavor. Miso is typically whisked into soups toward the end of the recipe, but sweating it directly in the pot with ginger, garlic and a little oil early on helps the paste caramelize, intensifying its earthy sweetness. Adding coconut milk creates a rich broth that works with a wide range of seafood. Salmon is used here, but flaky white fish, shrimp or scallops would all benefit from this quick poaching method. A squeeze of lime and a flurry of fresh herbs keep this curry bright and citrusy. For a hit of heat, garnish with sliced fresh jalapeño or serrano chile peppers.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","fish"],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "2 tablespoons safflower or canola oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 medium red onion, halved and sliced 1/2-inch thick (about 2 cups)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 (1-inch) piece fresh ginger, minced (about 2 tablespoons)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 garlic cloves, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Kosher salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 cup white miso",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "1/2 cup unsweetened, full-fat canned coconut milk",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "1 (1 1/2-pound) salmon fillet, cut into 2-inch pieces",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "5 ounces baby spinach (about 5 packed cups)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon fresh lime juice, plus lime wedges for serving",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Steamed rice, such as jasmine or basmati, for serving",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/4 cup chopped fresh basil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/4 cup chopped fresh cilantro",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "In a large pot, heat 2 tablespoons oil over medium. Add onion, ginger and garlic, and season with salt and pepper. Cook, stirring occasionally, until softened, about 3 minutes. Add miso and cook, stirring frequently, until miso is lightly caramelized, about 2 minutes.",
+          "Add coconut milk and 3 cups water, and bring to a boil over high heat. Cook until liquid is slightly reduced, about 5 minutes.",
+          "Stir in salmon, reduce the heat to medium-low and simmer gently until just cooked through, about 5 minutes. Turn off heat and stir in spinach and lime juice.",
+          "Divide rice among bowls. Top with salmon curry, basil and cilantro. Serve with lime wedges for squeezing on top."
+    ],
+  },
+  {
+    id: "chan-chan-yaki-miso-butter-salmon",
+    title: "Chan Chan Yaki (Miso Butter Salmon)",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025677-chan-chan-yaki-miso-butter-salmon",
+    imageUrl: "https://static01.nyt.com/images/2024/07/18/multimedia/ML-Miso-Butter-Salmonrex-lpth/ML-Miso-Butter-Salmonrex-lpth-videoSixteenByNineJumbo1600.jpg",
+    description: "Chan chan yaki, or miso butter salmon, is a classic dish from Hokkaido, Japan, a place known for its excellent salmon. The fish-and-vegetable dish is frequently made on a teppan (a large grill), with everything chopped and mixed with two metal spatulas that make the onomatopoetic “chan chan” sound. (Other possible “chan chan” derivations include “cha cha,” used to describe something that’s quick, and “otō-chan,” meaning “dad,” since it’s often prepared by patriarchs.) This clever version from Marc Matsumoto, the Tokyo-based blogger behind No Recipes, streamlines the dish for home cooking, calling for a lidded skillet and keeping the salmon in one large piece for easier preparation and presentation. You can replicate the chan chan action in your own bowl or plate, composing perfect bites of salmon, veggies and the miso butter sauce. And the vegetables are flexible: Shimeji mushrooms, bell peppers, corn or negi (long green onions) would all be delicious.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","fish"],
+    plannedDays: [],
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 (1 1/4-pound) piece skin-on salmon fillet",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "1/2 small head green cabbage, trimmed and cored",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 large carrots",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 medium yellow onion",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 1/2 ounces enoki mushrooms (optional)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/3 cup shiro (white) or tanshoku (yellow) miso",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "3 tablespoons unsalted butter, at room temperature",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "3 to 4 teaspoons sugar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon neutral oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Salt and pepper, to taste",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/3 cup dry (junmai) sake",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 scallions, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Steamed rice, for serving",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Remove the salmon from the fridge while you prep the vegetables: Chop the cabbage into 2-inch pieces (about 6 cups). Peel and cut the carrots on the diagonal into 1/2-inch coins (about 2 cups). Halve the onion and slice into 1/2-inch half moons (about 1 1/2 cups). If using enoki mushrooms, trim the root end and separate them into large clusters.",
+          "Make the miso butter: Combine miso, butter and sugar in a small bowl and stir until smooth and homogenous. (Miso butter can be made at least 3 days ahead and kept in the refrigerator; bring to room temperature before using.)",
+          "Place the salmon on a plate, skin side down, and spread the miso butter in a thin layer on top, holding back about 2 tablespoons of miso butter for the vegetables.",
+          "Heat a large, deep (lidded) skillet over medium-high. Add the oil and the cabbage, carrot, onion and enoki mushrooms (if using). Season the vegetables with salt and pepper (go lightly on the salt, since the miso butter is salty!) and cook, stirring frequently, until they begin to wilt but are still quite crisp, 5 to 8 minutes.",
+          "Flatten the vegetables and place the salmon on top of them, miso side up. Dot the reserved miso butter on the vegetables (you may not need all of it) and pour the sake over the vegetables. Place the lid on the pan, lower the heat to medium to maintain a strong simmer and cook for 7 to 10 minutes, until flaky and just cooked through in the center. (Exact time depends on the thickness of the salmon fillet and preferred level of doneness.)",
+          "When the salmon has finished cooking, remove the lid and stir the vegetables around the salmon to mix them with the melted miso butter. Scatter the salmon with the chopped scallions and serve with rice."
+    ],
+  },
+  {
+    id: "asparagus-and-tofu-with-black-bean-sauce",
+    title: "Asparagus and Tofu With Black Bean Sauce",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026925-asparagus-and-tofu-with-black-bean-sauce",
+    imageUrl: "https://static01.nyt.com/images/2025/06/13/multimedia/hm-asparagus-and-tofu-cfkq/hm-asparagus-and-tofu-cfkq-videoSixteenByNineJumbo1600.jpg",
+    description: "While asparagus shines with light spring-like flavors, it also carries bigger and bolder seasonings extremely well. Here, tender asparagus is quickly seared to unlock its juiciness and then tossed with a salty, spicy and funky Chinese black bean sauce. Known as dou si (Cantonese) or dou chi (Mandarin), fermented black soy beans are made by inoculating cooked black soy beans with a mold similar to koji (which is used to make miso paste), followed by salting and drying them. While they look like wrinkled and shriveled watermelon seeds, they are intensely savory, with multidimensional umami that also hints at sweetness and bitterness. While store-bought black bean sauce is an easy convenience, making your own at home using fermented black beans allows more control over salt and spice levels (see Tip). This sauce will quickly become a weeknight workhorse, a quick way to inject a savory kick to vegetable or meat stir-fries, stews like mapo tofu and even salad dressings.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","vegetarian"],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1/4 cup fermented black soy beans (see Tip)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon Shaoxing wine or dry sherry",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 garlic clove, finely chopped",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 to 1/2 teaspoon crushed red pepper (to your liking)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 teaspoon soy sauce",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 teaspoon sugar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons canola or vegetable oil",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 teaspoon toasted sesame oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 pound asparagus, woody ends removed, stalks cut into 2-inch pieces",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Salt and pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 (7- to 8-ounce) packages baked tofu, sliced into 2-inch-long pieces",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Toasted white sesame seeds, for serving",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 scallions, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Cooked rice, to serve",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Place the black soy beans into a colander and give them a quick rinse. Transfer them to a small bowl and, using the back of a fork, mash them into a rough, chunky paste. Add the Shaoxing wine, garlic, red pepper, soy sauce and sugar; stir to combine.",
+          "Heat a large skillet over medium-high for 2 minutes. Drizzle with canola oil and add the sesame oil and asparagus. Season lightly with salt and pepper and toss until the asparagus are bright green and crisp-tender, 2 to 3 minutes.",
+          "Add the black bean sauce and tofu and toss until the tofu is warmed through and it smells highly fragrant, 1 to 2 minutes. Taste and season with salt and pepper, if needed.",
+          "Transfer to a plate and top with sesame seeds and scallions. Serve with rice."
+    ],
+  },
+  {
+    id: "shrimp-in-purgatory",
+    title: "Shrimp in Purgatory",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1022266-shrimp-in-purgatory",
+    imageUrl: "https://static01.nyt.com/images/2021/05/25/dining/sd-shrimp-in-purgatory2/sd-shrimp-in-purgatory2-videoSixteenByNineJumbo1600.jpg",
+    description: "This one-skillet shrimp dish is inspired by the bright flavors of eggs in purgatory, the classic Southern Italian dish in which eggs simmer in a spicy tomato sauce. The exact origins of the name are uncertain, but many say the sauce is meant to represent purgatory, and the eggs, souls. Here, shrimp stand in for the eggs, and the tomato sauce is rich and tangy, with roasted red peppers and capers. You can use frozen shrimp; just defrost them first. Serve the shrimp in shallow bowls, with crusty bread, or over orzo, couscous or polenta. Find a slow cooker version of this dish here.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","fish"],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "3 tablespoons olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 yellow or red onion, minced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Kosher salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "8 garlic cloves, minced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 teaspoon dried oregano",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/2 to 1 teaspoon red-pepper flakes, plus more for serving",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 teaspoon fennel seeds",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons minced jarred Calabrian chiles or minced jarred cherry peppers, stems removed, or cherry pepper relish",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "8 ounces roasted red peppers, drained and chopped (about 1 cup)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 (14-ounce) can whole or crushed tomatoes",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 to 1 1/2 pounds peeled, deveined shrimp",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "2 scallions, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon capers, drained",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/2 cup grated Parmesan, plus more for serving",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Warm the olive oil in a 12-inch skillet over medium-high. Add the onion, season generously with salt, and cook, stirring, until the onion is translucent, soft and starting to turn golden, 7 or 8 minutes. If necessary, decrease the heat to medium to prevent scorching.",
+          "Add the garlic and cook until fragrant and softened, about 2 minutes. Stir in the oregano, red-pepper flakes and fennel seeds, then the Calabrian chiles, roasted red peppers and tomatoes. (Crush the tomatoes by hand, if using whole.) Season with salt and pepper. Bring to a simmer, adjust the heat to maintain a simmer, and cook for about 5 minutes to slightly reduce the sauce and blend the flavors.",
+          "Add the shrimp, scallions and capers, and cook until the shrimp are curled, pink and opaque, 3 to 7 minutes, depending on size and quantity. Turn off the heat and taste the sauce. Add more red-pepper flakes, salt and pepper, if you like. Sprinkle the cheese over the top and serve, passing more Parmesan and red-pepper flakes at the table."
+    ],
+  },
+  {
+    id: "camarones-al-ajillo-shrimp-in-garlic-and-guajillo-sauce",
+    title: "Camarones al Ajillo (Shrimp in Garlic and Guajillo Sauce)",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025907-camarones-al-ajillo-shrimp-in-garlic-and-guajillo-sauce",
+    imageUrl: "https://static01.nyt.com/images/2025/01/17/multimedia/PBG-Camarones-al-Ajillo-chlt/PBG-Camarones-al-Ajillo-chlt-videoSixteenByNineJumbo1600.jpg",
+    description: "A classic from the Pacific Mexican coast, ajillo is the combination of the words ajo and guajillo — garlic and guajillo chile. This dish makes cooking with dried chiles easy: There is no toasting or soaking, and the chiles go from dry to softened in garlicky oil in just one minute. Guajillo chiles are barely spicy, which makes them a great entry-level option for the hesitant but chile-curious. The fresh lime juice and butter at the end makes a silky and punchy sauce that goes perfectly with arroz rojo, but is also good enough for dipping. Usually, this dish is served with crackers for swiping through the sauce.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","fish"],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "2 pounds large or extra-large shrimp, peeled and deveined, tails kept on",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 cup avocado or vegetable oil",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 large garlic cloves, minced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 to 3 large dried guajillo chiles, stemmed and seeded, thinly sliced crosswise (about ¼ cup)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons unsalted butter",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "1/4 cup fresh lime juice (from 2 to 3 limes)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Saltines or cooked rice, for serving (optional)",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Season shrimp with salt and lots of black pepper.",
+          "Heat a large deep skillet over medium-low heat. Add oil and garlic and cook, stirring frequently with a wooden spoon, until the garlic is light golden brown, 4 to 6 minutes. Add chiles and cook until the oil turns a light ruby red but the chiles remain pliable, just 1 minute.",
+          "Add the shrimp in a single layer, turn the heat to medium, and cook undisturbed for 2 minutes. Stir the shrimp until they start to curl, 4 to 6 minutes more.",
+          "Add the butter and lime juice, stirring until the butter melts and coats the shrimp, about 2 minutes. Turn off the heat and taste, seasoning with more salt if needed. Serve with saltines or rice on the side."
+    ],
+  },
+  {
+    id: "creamy-coconut-lime-rice-with-peanuts",
+    title: "Creamy Coconut-Lime Rice With Peanuts",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025612-creamy-coconut-lime-rice-with-peanuts",
+    imageUrl: "https://static01.nyt.com/images/2024/06/21/multimedia/cr-Creamy-Coconut-Rice-With-Tomatoesrex-cfgt/cr-Creamy-Coconut-Rice-With-Tomatoesrex-cfgt-videoSixteenByNineJumbo1600.jpg",
+    description: "Coconut milk does double duty here in this light yet hearty rice dish that straddles the line between side salad and pilaf-like main. First the rice is simmered in creamy coconut milk, then the remaining milk is used to make a soothing dressing spiked with lime juice, peanut butter, toasted peanuts and garlic, with a little added heat from chile sauce. Fresh cherry tomatoes and chopped herbs turn it all into a rice salad that can be a flavorful side for grilled chicken or the base for fried eggs.&nbsp;",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","vegetarian"],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 cup uncooked jasmine rice, rinsed",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 (13- to 14-ounce) can coconut milk",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "Salt and pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 (1 1/2-inch) piece ginger",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 large garlic cloves",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 limes",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 cup roasted and salted peanuts, crushed",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons peanut butter",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "2 teaspoons granulated sugar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 teaspoons sambal oelek",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 cups ripe cherry tomatoes, halved (about 10 ounces)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 cup roughly chopped mixed herbs (such as dill, cilantro or mint)",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Cook the rice according to the packaging instructions until tender, replacing 1 1/4 cups of the cooking water with 1 1/4 cups of the coconut milk. Fluff the cooked rice with a fork, transfer to a serving bowl and season with salt and pepper — it should taste well-seasoned and almost buttery — and let cool.",
+          "While the rice is cooking, add 1/4 cup coconut milk to another bowl. Finely grate the ginger and garlic into the bowl, followed by the zest of 1 lime. Then, juice both limes into the bowl. Whisk in 1/4 cup of the peanuts, the peanut butter, sugar and sambal and season with salt.",
+          "When ready to serve, add the tomatoes and 3/4 cup of the herbs to the bowl with the rice. Pour in the coconut dressing, toss well to coat, season with pepper and top with remaining 1/4 cup crushed peanuts and 1/4 cup herbs. For the best flavor, serve at room temperature the day it’s made."
+    ],
+  },
 ];
 
 const lunchRecipes: RecipeLibraryEntry[] = [
