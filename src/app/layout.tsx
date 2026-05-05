@@ -12,15 +12,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteDescription =
+  "Five-day healthy dinner planning with NYT Cooking recipes, quick-glance recipe cards, checkable ingredients, and step-by-step instructions.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://soma2.b-average.com"),
+  metadataBase: new URL("https://cook.b-average.com"),
   title: "NYT Cooking Healthy Dinners",
-  description:
-    "A curated NYT Cooking healthy dinner picker with daily recipe recommendations, category filters, ingredients, and step-by-step instructions.",
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "NYT Cooking Healthy Dinners",
-    description:
-      "A curated NYT Cooking healthy dinner picker with daily recipe recommendations, category filters, ingredients, and step-by-step instructions.",
+    description: siteDescription,
     images: [
       {
         url: "/meta-image.jpg",
@@ -33,8 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NYT Cooking Healthy Dinners",
-    description:
-      "A curated NYT Cooking healthy dinner picker with daily recipe recommendations, category filters, ingredients, and step-by-step instructions.",
+    description: siteDescription,
     images: ["/meta-image.jpg"],
   },
   icons: {
