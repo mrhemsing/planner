@@ -1,5 +1,5 @@
 {
-  "count": 231,
+  "count": 232,
   "items": [
     {
       "position": 1,
@@ -1617,6 +1617,13 @@
       "id": "776353366",
       "slug": "preserved-lemon-chicken-with-radishes-and-peas",
       "recipeId": "preserved-lemon-chicken-with-radishes-and-peas"
+    },
+    {
+      "position": 232,
+      "url": "https://cooking.nytimes.com/recipes/1027665-spinach-endive-salad-with-miso-dressing",
+      "id": "1027665",
+      "slug": "spinach-endive-salad-with-miso-dressing",
+      "recipeId": "spinach-endive-salad-with-miso-dressing"
     }
   ]
 }

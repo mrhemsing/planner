@@ -6090,6 +6090,38 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
     plannedDays: [],
     prepTime: "55 min",
   },
+  {
+    id: "spinach-endive-salad-with-miso-dressing",
+    title: "Spinach-Endive Salad With Miso Dressing",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027665-spinach-endive-salad-with-miso-dressing",
+    imageUrl: "https://static01.nyt.com/images/2026/02/04/multimedia/04FD-TANISREX1-DT-Spinach-salad-with-avocado-egg-and-furikake-pvck/04FD-TANISREX1-DT-Spinach-salad-with-avocado-egg-and-furikake-pvck-threeByTwoMediumAt2X.jpg",
+    description: "A bright spinach and endive salad with avocado, soft-cooked eggs, furikake and a tangy white miso dressing.",
+    favourite: false,
+    tags: ["dinner", "healthy dinners", "nyt", "vegetarian", "salad", "miso", "quick"],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: [
+      { item: "lime juice", amount: "2 tbsp", category: "produce" },
+      { item: "rice vinegar", amount: "2 tbsp", category: "pantry" },
+      { item: "mustard powder", amount: "1/2 tsp", category: "pantry" },
+      { item: "white miso", amount: "2 tbsp", category: "fridge" },
+      { item: "avocado oil, peanut oil or vegetable oil", amount: "3 tbsp", category: "pantry" },
+      { item: "large spinach leaves", amount: "4 cups", category: "produce" },
+      { item: "Belgian endives", amount: "2 or 3", category: "produce" },
+      { item: "firm-ripe avocados", amount: "1 or 2", category: "produce" },
+      { item: "large eggs", amount: "3", category: "protein" },
+      { item: "salt", amount: "to taste", category: "pantry" },
+      { item: "furikake", amount: "2 tbsp", category: "pantry" },
+    ],
+    instructions: [
+      "Make the dressing: In a small bowl, mix together lime juice, rice vinegar and mustard powder. Stir in the miso to dissolve, then whisk in the oil.",
+      "Just before serving, place spinach leaves and endives in a salad bowl. Add about half the dressing and toss to coat.",
+      "Garnish with avocado and soft-cooked egg. Salt lightly, drizzle with a little more dressing, and sprinkle generously with furikake.",
+    ],
+  },
 ];
 
 const lunchRecipes: RecipeLibraryEntry[] = [
