@@ -6122,6 +6122,1537 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
       "Garnish with avocado and soft-cooked egg. Salt lightly, drizzle with a little more dressing, and sprinkle generously with furikake.",
     ],
   },
+  {
+    id: "toasted-coconut-rice-salad",
+    title: "Toasted Coconut Rice Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/769183554-toasted-coconut-rice-salad",
+    imageUrl: "https://static01.nyt.com/images/2026/01/23/multimedia/KH-Gingery-crispy-coconut-rice-salad-fvbl/KH-Gingery-crispy-coconut-rice-salad-fvbl-videoSixteenByNineJumbo1600.jpg",
+    description: "Fluffy toasted rice meets crunchy slaw in this gingery, tofu-topped salad. Jasmine rice gets toasted until fragrant and lightly golden, then it’s cooked with coconut milk to yield a supremely nutty base for the salad. Lacing the rice with fresh ginger ensures that gingery warmth is carried through each bite. Toasting the rice deepens the flavor and helps the grains stay separate once cooked. The toasted grains also absorb the punchy dressing while maintaining their texture, meaning no soggy salad here. Crunchy cabbage and a hefty helping of scallions, cilantro and buttery cashews bring welcome texture while quickly seared tofu transforms the salad into a full meal.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 (14- to 16-ounce) block extra-firm tofu, drained",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "2 tablespoons canola or vegetable oil, divided",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 cup jasmine rice, rinsed and drained",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons grated fresh ginger, from a 2- to 3-inch piece, divided",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Kosher salt, such as Diamond Crystal",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "¾ cup plus 2 tablespoons full-fat coconut milk, divided",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "⅓ cup plus 2 tablespoons ponzu, divided",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon honey",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 to 3 teaspoons Sriracha",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 teaspoon grated garlic, from 1 large clove",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 ½ cups thinly sliced or shredded purple cabbage (about 7 ½ ounces)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 scallions, thinly sliced (about ½ cup)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "⅔ cup tightly packed cilantro leaves, chopped",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "⅔ cup roasted cashews (optional)",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Cut the drained tofu into 1-inch cubes and arrange in an even layer over a clean kitchen towel or paper towel. Set aside.",
+          "Heat 1 tablespoon oil in a large nonstick skillet with a lid over medium-high until hot, about 30 seconds. Add the rice and stir to coat in the oil. Toast the rice, stirring occasionally, until dry, fragrant and light golden (some golden brown spots are OK), about 5 minutes. Stir in 1 tablespoon ginger and ½ teaspoon salt.",
+          "Carefully pour ¾ cup coconut milk and 1¼ cups water down the side of the skillet and give the pan a shake to submerge the rice. If not already boiling, bring to a boil. Cover the skillet, turn the heat down to low, and cook until the liquid is absorbed and the rice tender, 10 to 15 minutes. Turn off the heat and let steam, covered, 5 minutes more. Transfer the rice to a large bowl.",
+          "While the rice cooks, in a medium bowl, toss the tofu with 2 tablespoons ponzu.",
+          "In the same skillet, heat the remaining tablespoon oil over medium-high until shimmering, about 1 minute. Add the tofu in an even layer and cook until golden brown on the top and bottom, flipping halfway through, 3 to 4 minutes total. Add to the bowl with the rice.",
+          "In the bowl that you used to toss the tofu, stir together the honey, Sriracha, grated garlic and the remaining tablespoon ginger, 2 tablespoons coconut milk and ⅓ cup ponzu.",
+          "Add the dressing, cabbage and half of the scallions, cilantro and cashews (if using) to the bowl with the rice and toss until everything is well coated in the dressing. Top with the remaining scallions, cilantro and cashews."
+    ],
+  },
+  {
+    id: "roasted-cabbage-salad-with-spicy-lime-dressing",
+    title: "Roasted Cabbage Salad With Spicy Lime Dressing",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/771361952-roasted-cabbage-salad-with-spicy-lime-dressing",
+    imageUrl: "https://static01.nyt.com/images/2026/02/17/multimedia/KF-Tempeh-and-Cabbage-Salad-with-Tangy-Lime-Dressing-cpkt/KF-Tempeh-and-Cabbage-Salad-with-Tangy-Lime-Dressing-cpkt-videoSixteenByNineJumbo1600.jpg",
+    description: "This winter cabbage salad takes a cue from a classic Vietnamese cabbage and chicken salad and has plenty of kick from lime juice, serrano chiles and fish sauce. Tempeh and peanuts are roasted with the cabbage for varied texture and a hit of protein. Add more vegetables if you like: try halved cherry tomatoes, cucumber or charred green beans. The fish sauce and lime juice are your flavor makers, so don't be afraid to add more of either to suit your taste. The cabbage salad keeps for up to 5 days in the refrigerator and is great at room temperature, perfect for a quick lunch.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 small green cabbage, about 1 ½ pounds",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Kosher salt (such as Diamond Crystal)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 bunch scallions",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 serrano chiles",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 garlic cloves",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "6 tablespoons lime juice, plus more to taste (from 3 limes)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon fish sauce, plus more to taste",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "2 medium carrots",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "One (8-ounce) package soy tempeh",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "¾ cup roasted unsalted peanuts, roughly chopped",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons avocado or olive oil",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Freshly cooked long-grain white rice, such as jasmine, for serving",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 bunch cilantro or mint leaves (or a combination)",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Heat your oven to 400 degrees. If you have a convection function, turn it on.",
+          "While your oven heats, quarter the cabbage through the core, cut away and discard the core, then slice the cabbage into shreds. Place on a sheet pan and sprinkle with 2 teaspoons salt. Squeeze the salt into the cabbage and arrange in one layer. Allow the cabbage to sit while you prep the remaining ingredients.",
+          "Trim the scallions, then cut off the scallion whites and cut them in half lengthwise. Place on top of the cabbage. Chop the scallion greens and place them in a large bowl.",
+          "Cut the stems of the chiles off and discard, then quarter them lengthwise. If desired, remove the seeds, then dice the serranos and place them in the bowl with the scallion greens. Mince the garlic cloves, then toss them into the bowl. Add the lime juice, fish sauce and 1 teaspoon salt. Grate the carrots into the bowl, mix and allow to sit while the cabbage roasts.",
+          "Transfer the sheet pan with the cabbage to the oven and roast for 10 minutes. Remove from the oven and crumble the tempeh on top, then add the peanuts and oil and, using tongs, toss to combine. Return to the oven and roast, tossing once halfway through, until edges of cabbage and scallions are browned and peanuts and tempeh are golden, 15 to 20 minutes.",
+          "To serve, transfer the contents of the sheet pan to the bowl with the dressing, and toss to coat. Taste for fish sauce and lime juice. Scoop a generous amount of rice into bowls and top with a very generous serving of salad. Top with cilantro or mint leaves. The salad keeps for up to 5 days in the refrigerator and is great at room temperature."
+    ],
+  },
+  {
+    id: "farro-salad-with-smoked-trout-and-kale",
+    title: "Farro Salad With Smoked Trout and Kale",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/768248686-farro-salad-with-smoked-trout-and-kale",
+    imageUrl: "https://static01.nyt.com/images/2026/01/13/multimedia/CT-Farro-Salad-With-Smoked-Trout-and-Kale-gkvh/CT-Farro-Salad-With-Smoked-Trout-and-Kale-gkvh-videoSixteenByNineJumbo1600.jpg",
+    description: "Chewy, nutty farro absorbs an unexpectedly bold dressing made from olive brine and apple cider vinegar in this substantial grain salad. Raisins plump and pickle in the mixture, while toasted pistachios add crunch and tender greens provide freshness. Flaked smoked trout transforms it into a complete meal, but hot-smoked salmon, torn rotisserie chicken or fresh mozzarella would make welcome no-cook substitutes.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","fish","vegetarian"],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "Salt",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 cup quick-cooking farro or regular farro (see Tip)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "½ cup pitted green olives, roughly chopped, plus ¼ cup olive brine",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "¼ cup raisins",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "¼ cup apple cider vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Crushed red pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "¼ cup extra-virgin olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "¼ cup roasted, salted pistachios, roughly chopped",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 small bunch dill, chopped",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "4 to 5 ounces smoked trout fillets (drained, if canned)",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "2 large handfuls baby kale (about 2 ounces)",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Bring a medium pot of generously salted water to a boil. Add farro and cook until tender (10 to 30 minutes depending on the brand), then drain well.",
+          "[object Object]",
+          "[object Object]",
+          "[object Object]"
+    ],
+  },
+  {
+    id: "warm-rice-salad-with-salmon-and-arugula",
+    title: "Warm Rice Salad With Salmon and Arugula",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/765904862-warm-rice-salad-with-salmon-and-arugula",
+    imageUrl: "https://static01.nyt.com/images/2025/12/19/multimedia/al-mustard-salmon-rice-and-arugula-salad-bwtg/al-mustard-salmon-rice-and-arugula-salad-bwtg-videoSixteenByNineJumbo1600.jpg",
+    description: "Each new day presents a new opportunity to eat rice — and this recipe makes a case for rice salad. Tender jasmine rice steams with Dijon mustard-streaked salmon to create a strong foundation. Once cooked, the warm salmon and rice meet the arugula leaves, which bow to the heat and soften slightly. The dressing leans French, with its combination of lemon, shallot and dill, punctuated by briny capers. Serve this salmon and rice salad warm, at room temperature or even chilled; there's no wrong answer.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","fish","vegetarian"],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 ½ cups white jasmine rice&nbsp;",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "¼ cup extra-virgin olive oil, divided",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Kosher salt (such as Diamond Crystal) and freshly ground black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 (¾-pound) salmon fillet, skin removed",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "2 tablespoons Dijon mustard, divided",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "¼ cup chopped dill",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "3 tablespoons fresh lemon juice",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 tablespoons capers, chopped",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 small shallot, minced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "5 ounces baby arugula",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Rinse the rice until the water runs clear. In a wide, lidded pot or Dutch oven, bring the rice, 2 ¼ cups of water and 2 tablespoons of olive oil to a boil. Season with 1 teaspoon of salt, cover and simmer for 5 minutes over medium-low.",
+          "Brush salmon with 1 tablespoon of mustard and season with salt and pepper on all sides.",
+          "Gently lay the salmon on top of the rice. Cover and simmer on low heat for an additional 10 minutes, until all liquid is absorbed and the salmon is just cooked through. Remove from heat and allow to steam for an additional 5 minutes without lifting the cover.",
+          "While the salmon and rice cook, make the dressing: In a small bowl, whisk together the remaining 1 tablespoon mustard with the dill, lemon juice, capers and shallot. Stream in the remaining 2 tablespoons olive oil while continuously whisking. Taste and adjust seasoning with any of the dressing elements if needed.",
+          "Fluff the rice with a fork, break up the salmon into bite-size pieces, and drizzle in the dressing and gently fold in the arugula, which will wilt slightly from the heat. A final taste and seasoning adjustment, if needed, completes the meal. Serve warm or at room temperature."
+    ],
+  },
+  {
+    id: "roasted-butternut-squash-salad-with-spicy-scallion-dressing",
+    title: "Roasted Butternut Squash Salad With Spicy Scallion Dressing",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/761873488-roasted-butternut-squash-salad-with-spicy-scallion-dressing",
+    imageUrl: "https://static01.nyt.com/images/2025/11/07/multimedia/AL-Roasted-Butternut-Squash-Salad-With-Spicy-Scallion-Dressing-tzjl/AL-Roasted-Butternut-Squash-Salad-With-Spicy-Scallion-Dressing-tzjl-videoSixteenByNineJumbo1600.jpg",
+    description: "This warm winter squash salad forgoes classically sweet preparations like candying or glazing and instead doubles down on savory notes. While the squash softens and its edges darken in a hot oven, two dressings are prepared: The first, a quick simmer of ginger, fennel seeds and vinegar, adds a bright, pickled flavor. The second, built off a couple spoonfuls of the first, adds heat and freshness from a trio of jalapeño, cilantro and scallions. Any winter squash can be used in place of butternut squash, and the herbs are flexible as well. The salad improves as it sits and can be served at room temperature, making it a great candidate for holiday entertaining.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "50 min",
+    serves: 6,
+    ingredients: [
+          {
+                "item": "1 medium butternut squash (about 2 ½ pounds), or other winter squash",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "5 tablespoons extra-virgin olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Kosher salt (such as Diamond Crystal)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "¼ cup plus 2 tablespoons white wine vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon honey",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 (1-inch) piece fresh ginger, peeled and cut into matchsticks",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 teaspoon fennel seeds, lightly crushed",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 navel orange, or other preferred variety",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 small bunch cilantro, thick stems removed, finely chopped",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 scallions, trimmed and thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 jalapeño, minced (seeded, if desired)",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Heat oven to 425 degrees. Line a large baking sheet with parchment paper.",
+          "Using a sharp knife, cut the squash in half lengthwise and scoop out the seeds (set them aside for another use, if you like). Cut the squash crosswise into ½-inch slices, leaving the skin on.",
+          "On the lined baking sheet, toss the squash with 3 tablespoons olive oil and a sprinkle of salt. Arrange the slices in an even layer and roast for about 30 minutes, flipping the slices and rotating halfway through for even cooking, until very tender and caramelized at the edges.",
+          "In a small saucepan, combine the vinegar, honey, ginger and fennel seeds.",
+          "Cut the orange in half crosswise. Cut 2 very thin slices of orange from each half — a sharp knife helps! — then cut the orange slices in half, making 8 half-moons. Add the slices to the saucepan. Juice the remaining orange pieces into the saucepan and discard the remains. Season the mixture with ½ teaspoon salt. Bring to a boil over high heat, cover and reduce to a simmer. Simmer for 5 minutes over medium-low for the flavors to merge and the orange to soften.",
+          "Transfer the squash to a platter. Add 2 tablespoons of the vinegar mixture to a medium bowl. Pour the rest over the warm squash, including the softened orange slices. To the medium bowl, add the cilantro, scallions, jalapeño and remaining 2 tablespoons olive oil. Stir to combine and season with salt to taste. Serve the squash warm or at room temperature, with the green sauce spooned over top."
+    ],
+  },
+  {
+    id: "wild-greens-salad-with-persimmons-and-hickory-nuts",
+    title: "Wild Greens Salad With Persimmons and Hickory Nuts",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027494-wild-greens-salad-with-persimmons-and-hickory-nuts",
+    imageUrl: "https://static01.nyt.com/images/2025/11/12/multimedia/12FD-SHERMANREX-Wild-Green-Salad-With-Persimmons-gwtz/07FD-SHERMANREX-Wild-Green-Salad-With-Persimmons-gwtz-videoSixteenByNineJumbo1600.jpg",
+    description: "Tender greens make up the base of this bright, simple yet texturally complex salad adapted from “Turtle Island” (Clarkson Potter, 2025) by Sean Sherman. The chef created it to highlight seasonal foraging in North America. While wild dandelion greens or chickweed provide the full effect, mixed greens or even arugula also work, providing a peppery bite against the honeyed persimmon fruit. Great on its own, this salad can also be served alongside a hearty, braised main dish like Mr. Sherman’s bison pot roast with hominy.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "15 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "½ cup hickory nut or pecan pieces",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Sea salt",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Ground sumac",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "½ cup diced fresh persimmon or 2 ounces dried persimmons (preferably the North American variety, which come into season in the late fall)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon cider vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 teaspoon maple syrup",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "8 cups/about 4 ounces loosely packed wild greens (see Tip for more options)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "¼ cup (or more, to taste) mountain mint or any tender, bright green mint, leaves torn",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 tablespoons thinly sliced white parts of ramps, wild onion or scallion",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 tablespoons sunflower oil or other neutral oil",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Spread the nuts in a large skillet in a single layer. Toast over medium heat for 3 to 5 minutes, stirring frequently, until fragrant. Transfer to a plate and season with salt and sumac.",
+          "If you’re using dried persimmons, bring a small saucepan of water to a boil. Add the persimmons and remove the pot from the heat. Let persimmons stand for about 10 minutes to rehydrate, then drain before cutting them into bite-size pieces.",
+          "In a large bowl, whisk together the vinegar and maple syrup. Add the wild greens, mint and ramps. Drizzle in the oil while tossing to coat the greens evenly, then add the nuts and persimmons and toss again. Taste and season with salt. Serve right away."
+    ],
+  },
+  {
+    id: "persimmon-salad-with-glazed-walnuts-and-feta",
+    title: "Persimmon Salad With Glazed Walnuts and Feta",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027347-persimmon-salad-with-glazed-walnuts-and-feta",
+    imageUrl: "https://static01.nyt.com/images/2025/10/03/multimedia/03FD-TANISREX-DT-Persimmon-Salad-With-Goat-Cheese-kpzc/03FD-TANISREX-DT-Persimmon-Salad-With-Goat-Cheese-kpzc-videoSixteenByNineJumbo1600.jpg",
+    description: "Here, firm Fuyu persimmons are used in a most satisfying seasonal salad that’s fairly easy to put together. First, you mix up a simple vinaigrette that gets a touch of sweetness from balsamic vinegar (a drop or two of honey wouldn’t be out of place). Then, it’s all tossed with chicories, like radicchio, curly endive or escarole, and homemade glazed walnuts and the result really feels like and looks like fall. Similar salads sometimes add blue cheese, but feta suits this one beautifully. And, if you can’t get persimmons, use pears.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 small shallot, chopped",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon red wine vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon balsamic vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon lemon juice",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Salt and pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon walnut oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon extra-virgin olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons salted butter",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "2 tablespoons sugar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 1/2 cups walnut halves",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Salt",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Pinch of cayenne",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "4 medium Fuyu persimmons, peeled and cut in 1/8-inch slices",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 medium head radicchio, leaves torn into 1-inch-wide strips",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 small head escarole or Castelfranco chicory, leaves torn into 1-inch-wide strips",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 ounces feta (about 1/2 cup)",
+                "amount": "",
+                "category": "fridge"
+          }
+    ],
+    instructions: [
+          "Make the dressing: Put chopped shallot in a small bowl. Add red wine vinegar, balsamic vinegar and lemon juice. Let marinate for 10 minutes. Add a pinch of salt and pepper. Whisk in walnut oil and olive oil.",
+          "Make the glazed walnuts: Heat butter in a small skillet over medium-high. When butter sizzles, add sugar and walnuts. Cook, stirring, until sugar creates a caramelized coating and the walnuts smell toasty, about 5 minutes. Sprinkle lightly with salt and add the pinch of cayenne. Toss well and leave to cool.",
+          "Build the salad: Put persimmon slices in a salad bowl. Add dressing and toss. Add radicchio and chicory, and toss lightly. Top with crumbled feta and glazed walnuts."
+    ],
+  },
+  {
+    id: "miso-eggplant-salad-with-chickpeas",
+    title: "Miso Eggplant Salad With Chickpeas",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/758116681-miso-eggplant-salad-with-chickpeas",
+    imageUrl: "https://static01.nyt.com/images/2025/09/17/multimedia/hlm-miso-eggplant-salad-with-chickpeas-zkbw/hlm-miso-eggplant-salad-with-chickpeas-zkbw-videoSixteenByNineJumbo1600.jpg",
+    description: "The flawless flavor pairing found in the popular Japanese dish miso-glazed eggplant serves as inspiration for this bold and textural salad. For high-temperature roasting, cutting the eggplant into chunky pieces optimizes golden, crisp edges with a buttery and silky interior. The vinaigrette is a standout, punchy from the ginger, intensely savory from the miso, with a sweet hum from the mirin. The simplicity of a salad founded on just eggplant and chickpeas makes this an excellent weeknight option, but there are also many ways to add more heft: Incorporate a few handfuls of spinach, add some pan-fried or baked tofu, or toss with some cold soba noodles.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "2 tablespoons vegetable oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon toasted sesame oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 pounds eggplant (about 3 small or 2 medium), trimmed and cut into 1-inch chunks",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Salt and pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 (15-ounce) cans chickpeas, rinsed",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 scallions, sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Toasted white sesame seeds",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons white (shiro) miso paste",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "2 tablespoons mirin",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons toasted sesame oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon rice vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 garlic clove, finely grated",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 (1-inch) piece fresh ginger, peeled and grated",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 teaspoon sugar",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Heat the oven to 425 degrees.",
+          "Prepare the eggplant salad: In a small bowl, mix together the vegetable oil and sesame oil. Place the eggplant on a rimmed sheet pan and drizzle with the oil mixture. Season with salt and pepper and toss well to coat. Place in the oven and roast until the eggplant is tender, with golden edges, 20 to 25 minutes.",
+          "Meanwhile, make the dressing: Place the miso, mirin, sesame oil, vinegar, garlic, ginger and sugar in a large bowl and whisk to combine.",
+          "Add the eggplant to the bowl with the dressing, along with the chickpeas and scallions; toss to combine. Taste and season with salt and pepper. Top with sesame seeds and serve."
+    ],
+  },
+  {
+    id: "chicken-cucumber-and-nectarine-salad",
+    title: "Chicken, Cucumber and Nectarine Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027273-chicken-cucumber-and-nectarine-salad",
+    imageUrl: "https://static01.nyt.com/images/2025/08/29/multimedia/lh-chicken-cucumber-and-nectarine-salad-ghpj/lh-chicken-cucumber-and-nectarine-salad-ghpj-videoSixteenByNineJumbo1600.jpg",
+    description: "This light yet satisfying summery salad is meant to be flexible and adaptable, the kind of easy weekday recipe that helps you turn the odds and ends in your fridge into a quick and healthy meal. Consider swapping in torn mozzarella or goat cheese for the feta, using basil instead of mint, or using any roasted nuts you’ve got on hand. If you can’t find a ripe nectarine, a peach, a plum or a handful of juicy berries would work great, too. The key is to keep the ingredients fresh and bright, and to dress the salad just before eating it so everything stays crisp. Serve with a cold glass of white wine and a nice hunk of bread on the side.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","protein"],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "2 tablespoons Champagne or white wine vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 teaspoon honey",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/2 teaspoon Dijon mustard",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Kosher salt (such as Diamond Crystal) and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 cup extra-virgin olive oil",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "5 ounces Little Gem, butter or romaine lettuce, any large pieces torn in half",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "1 large, ripe nectarine, halved and pitted",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1½ cups shredded cooked chicken, from a rotisserie chicken or homemade",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "1 cup ½-inch-diced English cucumber",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 cup roasted salted cashews, coarsely chopped",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/3 cup crumbled feta (about 2 ounces)",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "1/3 cup fresh mint leaves, torn",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 large or 2 small scallions, white and green parts chopped",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Make the dressing: In a large serving bowl, combine the vinegar, honey, mustard, ½ teaspoon salt and ¼ teaspoon black pepper. Gradually whisk in the olive oil.",
+          "Add the lettuce and toss gently but thoroughly with tongs or your hands.",
+          "Cut nectarine into ½-inch thick slices, then stack the slices and cut them in half crosswise. Add to the bowl, along with the chicken, cucumber, cashews, feta, mint and scallions. Toss gently. Season to taste with more salt and pepper and serve immediately."
+    ],
+  },
+  {
+    id: "seared-scallops-with-tomato-salad",
+    title: "Seared Scallops With Tomato Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026889-seared-scallops-with-tomato-salad",
+    imageUrl: "https://static01.nyt.com/images/2025/08/27/multimedia/27FD-SCALLOPSREX-EK-Seared-Scallops-With-Garden-Succotash-jgvc/27FD-SCALLOPSREX-EK-Seared-Scallops-With-Garden-Succotash-jgvc-videoSixteenByNineJumbo1600.jpg",
+    description: "A perfectly seared scallop needs little more to taste complete. A squeeze of lemon is sufficient, but if you want a stellar partner to balance the sweet saline bite of caramelized sea scallops, make this tomato salad of tomato salads dressed with an acidic, savory vinaigrette inspired by mignonette, the classic accompaniment to raw oysters. It’s dotted with minced shallot to carry tomatoes and earthy spring mix — and scallops, of course — to umami heights.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","fish"],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 2,
+    ingredients: [
+          {
+                "item": "2 ripe Roma tomatoes, quartered and thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Salt",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons red wine vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon finely minced shallots",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon finely minced jalapeño",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/2 teaspoon soy sauce",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Mild oil, such as canola, vegetable or grapeseed",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/2 pound large dry sea scallops, tough side muscles removed",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "4 cups loosely packed spring mix or arugula",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "In a colander or sieve placed over a mixing bowl, toss the tomatoes with a pinch of salt and set aside to drain, about 30 minutes. Discard the liquid. Or, keep it and add a splash of it to a martini later.",
+          "To a small jar with a lid, add the vinegar, shallots, jalapeño, soy sauce and a pinch of salt. Set aside to mellow out, at least 10 minutes and up to 30 minutes. Add 2 tablespoons of oil, seal the jar and shake well to combine. Set aside until ready to dress the salad.",
+          "Pat the scallops dry and season with salt. Heat a large skillet over medium-high until hot. Add enough oil to lightly coat the bottom. When a wisp of smoke rises, place the scallops where the oil has pooled. Cook, without touching, until deeply golden brown on the bottoms, 2 to 3 minutes. Reduce the heat if needed. Flip and cook the second sides briefly until lightly golden, 30 seconds to 1 minute. Transfer the scallops to a plate and drizzle with some of the vinaigrette.",
+          "In a mixing bowl, toss the tomatoes and spring mix with 1 tablespoon of the reserved vinaigrette. Taste and add more salt and vinaigrette as desired. Divide the salad among serving plates, piled high, and top with the scallops. Any leftover vinaigrette keeps in the refrigerator for up to a week."
+    ],
+  },
+  {
+    id: "crispy-fish-salad-with-parsley-and-ciabatta-croutons",
+    title: "Crispy Fish Salad With Parsley and Ciabatta Croutons",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027275-crispy-fish-salad-with-parsley-and-ciabatta-croutons",
+    imageUrl: "https://static01.nyt.com/images/2025/08/26/multimedia/31EATrex-crispy-fish-salad-blvf/31EATrex-crispy-fish-salad-blvf-videoSixteenByNineJumbo1600.jpg",
+    description: "Inspired by the legendary Zuni Café chicken salad, this version swaps poultry for crisp-skinned white fish, pairing it with a lively mix of textures and bold, sweet-sour flavors. Torn ciabatta croutons soak up a sherry vinegar dressing, punctuated by capers, pine nuts and raisins for sharpness, crunch and sweetness. Softened shallots and garlic add depth, while parsley keeps everything fresh. It’s a dish that feels both effortless and layered, a bright, satisfying lunch or a starter that’s sure to impress.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","fish"],
+    plannedDays: [],
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "8 tablespoons extra-virgin olive oil, divided",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "4 (3- to 4-ounce) skin-on sea bass, branzino or other flaky white fish fillets (12 to 16 ounces total), halved crosswise",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Fine sea salt and black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "4 ounces ciabatta (or similar), torn into 3/4-inch pieces",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "3 large shallots, thinly sliced into rounds",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 1/2 tablespoons small capers, strained and patted dry",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/3 cup pine nuts",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/3 cup raisins",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "6 garlic cloves, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 cup sherry vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 (packed) cups parsley leaves",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Add 2 tablespoons oil to a large, nonstick skillet on medium-high heat. Season the fish on both sides with ½ teaspoon salt and place half the fish in the pan, skin side down, to fry for 4 minutes, carefully swirling the pan occasionally, until nearly cooked through. Flip the fish — you should have a golden crispy skin — and cook for another 10 seconds, then transfer to a plate. Repeat with 2 more tablespoons oil and the remaining fish. Keep the oil in the pan.",
+          "Add the bread and ¼ teaspoon salt and cook for 3 minutes, stirring often, until golden on the outside but still soft. Transfer the croutons to a large mixing bowl, along with half the shallots.",
+          "Wipe out the pan and reduce the heat to medium. Add the remaining 4 tablespoons oil and heat for 30 seconds, then add the capers and cook for 1 minute, until they stop spitting and the edges have started to crisp. Add the pine nuts and fry for 1 minute, stirring often, just until lightly golden. Use a slotted spoon to transfer the pine nuts and capers to the bowl with the bread mixture, leaving as much oil in the pan as possible.",
+          "Add the remaining shallots, plus the raisins, garlic, ⅛ teaspoon salt and a good grind of pepper to the pan. Increase the heat to medium-high and cook for 3 to 5 minutes, stirring frequently, until the shallots have softened but have not taken on color. Add the vinegar and cook for another 2 minutes, until reduced by half, then transfer everything to the bowl along with the parsley and mix to combine.",
+          "Transfer most of the bread crumb mixture to a large plate and top with the fish, then sprinkle any remaining mixture from the bowl over the top."
+    ],
+  },
+  {
+    id: "grilled-shrimp-ceviche-with-corn-and-coconut",
+    title: "Grilled Shrimp Ceviche With Corn and Coconut",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027265-grilled-shrimp-ceviche-with-corn-and-coconut",
+    imageUrl: "https://static01.nyt.com/images/2025/08/22/multimedia/pa-corn-and-shrimp-ceviche-pmtc/pa-corn-and-shrimp-ceviche-pmtc-videoSixteenByNineJumbo1600.jpg",
+    description: "Though technically not a ceviche, as the shrimp are grilled first, this dish is deeply inspired by the ceviche variations that span across Latin America, the Caribbean and the South Pacific Islands. Marinated in rich limey coconut milk, this lively, refreshing dish feels quintessentially summery — perfect for outdoor dining — while grilled corn and shrimp add depth and a subtle smokiness. Serve as a salad or with tortillas, plantain chips or saltines. It’s best to not overcook the shrimp on the grill and let it continue to “cook” in the marinade.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","fish"],
+    plannedDays: [],
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 pound peeled, deveined extra-large shrimp",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Olive oil, for brushing and garnish",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Metal or wooden skewers (optional)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 small ears of corn",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 cup coconut milk, preferably full-fat",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "3 large limes, 1 zested and all 3 juiced (about 3/4 cup juice)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Kosher salt, such as Diamond Crystal",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 cup cherry tomatoes, halved",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 red onion, thinly sliced, plus more for garnish",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 serrano chile, seeded and thinly sliced",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/4 cup chopped cilantro, plus whole leaves for garnish",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Flaky salt, to garnish",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Prepare a grill for direct high-heat cooking. In a bowl, toss the shrimp with 2 tablespoons olive oil and thread onto skewers if desired. Lightly brush the corn with olive oil as well.",
+          "Grill the shrimp on one side until charred on the underside and the top side is just starting to turn pink, 2 to 3 minutes. Remove and transfer to a mixing bowl.",
+          "Grill the corn, turning often until lightly charred on all sides, 5 to 6 minutes. Remove and allow to cool slightly before removing kernels from the cob.",
+          "In a small bowl, whisk together the coconut milk, lime zest, lime juice and 1 teaspoon kosher salt.",
+          "To a mixing bowl, add the shrimp, corn, tomatoes, red onion, serrano chile and chopped cilantro. Pour over the seasoned coconut milk and let sit in the fridge for at least 10 minutes (or up to 1 day).",
+          "To serve, transfer to a shallow bowl and garnish with more red onion, cilantro leaves, olive oil and flaky salt."
+    ],
+  },
+  {
+    id: "tajin-mango-cucumber-salad",
+    title: "Tajín Mango Cucumber Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027098-tajin-mango-cucumber-salad",
+    imageUrl: "https://static01.nyt.com/images/2025/08/06/multimedia/cr-mango-cucumber-salad-plwc/cr-mango-cucumber-salad-plwc-videoSixteenByNineJumbo1600.jpg",
+    description: "Vibrant, refreshing, juicy and crisp, this salad is perfect for warmer days or any day when you need just a little pick-me-up. Coming together quickly, the combination of mango, cucumber and romaine is simply dressed with fresh lime and cilantro. Tajín, a popular Mexican seasoning made with chiles, lime and salt, adds a tangy and mildly spicy flavor, contrasting nicely with the sweetness of mango.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 large lime",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/3 cup chopped cilantro",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon Tajín",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 ripe mangoes, peeled and cut into ¼- to ½-inch pieces (or 12 to 16 ounces pre-cut mango; see Tip)",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 Persian or mini cucumbers, cut into small (¼- to ½-inch) pieces",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 head romaine lettuce (about 6 ounces), chopped into ½-inch pieces",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Finely grate the zest from the lime into a large bowl, then cut the lime in half and squeeze in juice. Add the cilantro and Tajín.",
+          "Add the mango, cucumbers and romaine to the bowl and toss very well to coat. Serve immediately or keep covered and chilled in the refrigerator until ready to serve, up to about 4 hours."
+    ],
+  },
+  {
+    id: "shira-ae-smashed-tofu-salad-with-green-beans",
+    title: "Shira-ae (Smashed Tofu Salad With Green Beans)",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/761873282-shira-ae-smashed-tofu-salad-with-green-beans",
+    imageUrl: "https://static01.nyt.com/images/2025/11/06/multimedia/06FD-HM-Shira-ae-Smashed-Tofu-Salad-With-Green-Beans-tvcj/06FD-HM-Shira-ae-Smashed-Tofu-Salad-With-Green-Beans-tvcj-videoSixteenByNineJumbo1600.jpg",
+    description: "Shira-ae is a Japanese side dish of creamy mashed tofu mixed with an umami-rich sesame sauce. The tofu shines in this dish: It’s heavily seasoned with sesame seeds, miso, soy sauce and mirin, then crushed into a creamy, chunky coating that clings to the blanched green beans. Traditionally, toasted sesame seeds are pounded using a Japanese-style mortar and pestle, but you can use any mortar and pestle — or even opt for sesame paste or tahini as a shortcut. The type of tofu matters: Soft (not silken) or medium-firm tofu will give you the creamiest results, but if you can only get firm or extra-firm, you can boil the tofu in water for three minutes, which softens it and delivers a bouncier texture. Make sure to drain the tofu well and pat it dry so it doesn’t make a wet mash. This dish can be prepared 24 hours ahead, stored in the fridge, and is best served cold.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "Salt",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 pound green beans, trimmed and cut into 1-inch pieces",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "¼ cup toasted white sesame seeds (or sesame paste or tahini)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons white (shiro) miso",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "2 tablespoons soy sauce (or shoyu)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons mirin",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 (14- to 16-ounce) block soft or medium-firm tofu, drained and patted dry",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Toasted white sesame seeds, for topping",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "Bring a pot of salted water to the boil. Add the green beans and blanch until just tender and bright green, 3 to 4 minutes. Drain, refresh under cold water and drain again. When cool, pat the beans dry.",
+          "If using sesame seeds, place them in a mortar or spice grinder and grind until powdery. (If you are using sesame paste, you can skip this step.)",
+          "Place the ground sesame seeds into a large bowl and add the miso, soy sauce and mirin, and stir, mashing the miso to combine with the rest of the ingredients. Break up the tofu and add to the sesame mixture, and mash until the tofu is creamy.",
+          "Add the beans to the tofu and toss to coat. Top with sesame seeds.",
+          "Eat immediately or chill for 30 minutes, stirring before serving."
+    ],
+  },
+  {
+    id: "wild-rice-salad-with-frizzled-leeks-and-peppers",
+    title: "Wild Rice Salad With Frizzled Leeks and Peppers",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/763764896-wild-rice-salad-with-frizzled-leeks-and-peppers",
+    imageUrl: "https://static01.nyt.com/images/2025/11/20/multimedia/PBG-Wild-Rice-Salad-with-Frizzled-Chiles-and-Leeks-hvkw/PBG-Wild-Rice-Salad-with-Frizzled-Chiles-and-Leeks-hvkw-videoSixteenByNineJumbo1600.jpg",
+    description: "Nutty wild rice, a sacred staple for Native Americans, is the star in this satisfying and festive salad. Simmered until it splits slightly, the rice turns earthy and tender. Leeks, frizzled golden in olive oil, and sliced peppers — think chiles güeros, Hungarian peppers or Fresnos — bring delicate and peppery punches of flavor. For less heat, feel free to swap in a milder pepper, like sweet mini peppers or cubanelles. A bright lemon dressing generously coats every single grain, with Parmesan shavings making this salad burst with texture and brightness.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "85 min",
+    serves: 6,
+    ingredients: [
+          {
+                "item": "6 cups vegetable or chicken broth, or water",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "1 ½ cups long-grain wild rice, rinsed",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Sea salt and freshly ground pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 lemon",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1½ teaspoons sugar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "½ cup extra-virgin olive oil, divided",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 leek, white and pale green parts only",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "10 ounces chiles güeros, Hungarian or Fresno peppers, stems removed, cut lengthwise and seeds removed",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 medium garlic cloves, finely minced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "½ cup parsley leaves",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "⅓ cup toasted, roughly chopped walnuts (see Tip)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "3 ounces shaved Parmesan",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Freshly ground pepper to taste",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "[object Object]",
+          "[object Object]",
+          "[object Object]",
+          "[object Object]",
+          "[object Object]",
+          "[object Object]"
+    ],
+  },
+  {
+    id: "coconut-lime-wedge-salad",
+    title: "Coconut-Lime Wedge Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027067-coconut-lime-wedge-salad",
+    imageUrl: "https://static01.nyt.com/images/2025/07/18/multimedia/sl-coconut-lime-wedge-salad-wkbq/sl-coconut-lime-wedge-salad-wkbq-videoSixteenByNineJumbo1600.jpg",
+    description: "This recipe provides the essential texture found in a classic wedge salad, but updates the flavors for summer, with a coconut vinaigrette and crunchy, sweet-savory coconut crumbles. Sweetened with agave or maple syrup and baked until crisped, the coconut flakes serve as a plant-based alternative to the usual bacon found in the wedge. The crumble can be prepared in advance, and can even be eaten as a snack on its own or put on top of a scoop of cottage cheese. The coconut-lime dressing is a little nutty and tangy, and makes this cooling salad very refreshing on hotter days and beyond.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "1 cup unsweetened coconut flakes",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon agave or maple syrup",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Kosher salt and freshly ground black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 tablespoon nutritional yeast",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/4 cup coconut milk",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "3 tablespoons lime juice",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 small shallot, finely chopped",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 garlic clove, finely grated",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 small head iceberg lettuce, cut into 8 wedges",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 Persian cucumbers, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "4 radishes, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 red onion, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 cups mixed tender herbs, like basil, mint or cilantro",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Heat oven to 350 degrees. In a medium bowl, toss coconut flakes, maple syrup, 1/2 teaspoon salt and 1/4 teaspoon black pepper. Use your hands to rub the seasoning onto the coconut flakes, and spread the mixture onto a parchment-lined baking sheet in a single layer. Bake until the coconut flakes are golden on the edges, 8 to 12 minutes, rotating once. Remove from the oven and sprinkle nutritional yeast all over the toasted flakes while they are warm; set aside to cool.",
+          "In a small bowl, whisk together coconut milk, lime juice, shallot, garlic and 1 teaspoon salt.",
+          "Arrange the iceberg wedges on a serving platter and scatter the cucumber slices, radish slices and red onion on top. Drizzle the coconut dressing all over the wedges and sprinkle with the coconut flakes. Top with herbs and serve immediately."
+    ],
+  },
+  {
+    id: "tomato-olive-and-feta-salad-with-tinned-fish",
+    title: "Tomato, Olive and Feta Salad with Tinned Fish",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027078-tomato-olive-and-feta-salad-with-tinned-fish",
+    imageUrl: "https://static01.nyt.com/images/2025/07/17/multimedia/yf-tinned-fish-salad-vfmg/yf-tinned-fish-salad-vfmg-videoSixteenByNineJumbo1600.jpg",
+    description: "Simple, no-cook dishes are ideal for hot summer days when you want something filling but not too heavy. Inspired by both a Greek salad and one typical throughout Spain, with tomatoes, tuna and onions, this salad hits all the marks: Tangy and creamy from a touch of feta, acidic and refreshing from the tomatoes, with a bite from the onions and added brine from the olives. The tinned fish you use, be it tuna, salmon, trout or sardines, can be swapped, depending on your pantry and preferences. Play with the olives, too: Ones soaking in a spicy brine add a kick, while lemon-garlic ones add brightness. Serve with bread or potato chips.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","fish"],
+    plannedDays: [],
+    prepTime: "15 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "2 tablespoons sherry or red wine vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1/4 teaspoon dried oregano",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "2 tablespoons olive oil, plus more as needed",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "Salt and fresh black pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 small white or red onion, thinly sliced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 large tomatoes, cut into wedges",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/2 cup pitted green or Kalamata olives, halved",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "4 ounces of feta, loosely crumbled",
+                "amount": "",
+                "category": "fridge"
+          },
+          {
+                "item": "5 to 7 ounces oil-packed tinned fish, such as tuna, sardines, trout or salmon, drained",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "Torn crusty bread or chips, for serving",
+                "amount": "",
+                "category": "pantry"
+          }
+    ],
+    instructions: [
+          "In a shallow serving bowl or large platter, combine the vinegar, oregano and olive oil, whisking until combined. Season lightly with salt and pepper.",
+          "Add the onion, tomatoes and olives and toss with the dressing.",
+          "Scatter the feta on top of the salad. Break up or lay the tinned fish over everything. Season with pepper. Serve with crusty bread or chips."
+    ],
+  },
+  {
+    id: "grilled-tofu-salad-with-honey-chile-dressing",
+    title: "Grilled Tofu Salad With Honey Chile Dressing",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027026-grilled-tofu-salad-with-honey-chile-dressing",
+    imageUrl: "https://static01.nyt.com/images/2025/06/27/multimedia/kc-grilled-tofu-salad-jwkc/kc-grilled-tofu-salad-jwkc-videoSixteenByNineJumbo1600.jpg",
+    description: "This vibrant salad features a beautiful platter of tofu and bountiful summer vegetables that are kissed on the grill just until lightly charred and smoky. It’s equally delicious warm or at room temperature and can be prepared a few hours ahead (cover and keep at room temperature until ready to serve). A spicy vinaigrette with tart lime juice, briny fish sauce and hot chiles, inspired by nước chấm, is balanced by sweet honey and brightens the grilled vegetables. Cherry tomatoes add pops of natural sweetness that balance the dressing. Roasted peanuts (or even roasted almonds) are a nice addition, too, for crunchy texture and nutty flavor.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","vegetarian"],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "6 tablespoons neutral oil, plus more for greasing pan or grill",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 pound firm tofu, sliced crosswise into 1/4-inch-thick slices and patted dry",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "1 pound zucchini or summer squash, sliced lengthwise into 1/4-inch-thick slices",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "8 ounces green beans, trimmed",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Salt and pepper",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 cup fresh lime juice",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1/4 cup thinly sliced scallions",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 tablespoons fish sauce",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "2 tablespoons honey",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 garlic clove, minced",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "1 to 2 bird’s-eye chiles, minced",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "4 ounces cherry tomatoes, halved",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Cilantro, small basil leaves and chopped roasted peanuts, for garnish",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "Heat a grill pan over medium heat and lightly grease the pan; or heat a grill to medium and lightly oil the grates.",
+          "Spread tofu, zucchini and green beans in an even layer on a large rimmed baking sheet, season with salt and pepper and drizzle with 2 tablespoons of the oil. Turn to evenly coat in the oil. Grill tofu and vegetables in batches, turning occasionally, until tofu is nicely charred and vegetables are tender. This will take about 5 minutes for the tofu and green beans, and about 8 minutes for the zucchini; transfer to a large serving platter as they finish cooking.",
+          "In a small bowl, combine lime juice, scallions, fish sauce, honey, garlic and chiles. While whisking constantly, slowly drizzle in the remaining 1/4 cup of oil until well blended; season with salt and pepper.",
+          "Scatter the tomatoes around the grilled vegetables. Drizzle with about half of the dressing and top with cilantro, basil and peanuts. Serve with the remaining dressing on the side. Enjoy warm or at room temperature."
+    ],
+  },
+  {
+    id: "spicy-cucumber-noodle-salad-with-clams",
+    title: "Spicy Cucumber Noodle Salad With Clams",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026806-spicy-cucumber-noodle-salad-with-clams",
+    imageUrl: "https://static01.nyt.com/images/2025/06/03/multimedia/EK-Korean-Cold-Noodle-Salad-With-Clams-bmpf/EK-Korean-Cold-Noodle-Salad-With-Clams-bmpf-videoSixteenByNineJumbo1600.jpg",
+    description: "Based on the classic Korean banquet dish, golbaengi muchim (sea snail or whelk salad), this refreshing noodle salad makes use of lovely canned clams in place of the snails. When paired with chile, lemon and umami, the seafood in this recipe recalls shrimp cocktail at the Grand Central Oyster Bar and eating local conch in the Bahamas. In other words, it’s a party. The key to this recipe is using the liquid from the canned clams to both season and thin out the dressing so it can really coat the luscious, bouncy noodles. If you have fresh herbs like perilla or mint lying around, use them here with great abandon.",
+    favourite: false,
+    tags: ["dinner","healthy dinners","nyt","salad","fish"],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+          {
+                "item": "4 mini cucumbers, halved lengthwise and cut into thick slices at an angle",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "Kosher salt (such as Diamond Crystal)",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "6 1/2 ounces somen or other thin wheat noodle",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 teaspoon toasted sesame oil, divided",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 lemon",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "3 large garlic cloves, finely grated",
+                "amount": "",
+                "category": "produce"
+          },
+          {
+                "item": "2 tablespoons distilled white vinegar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon gochugaru, plus more to taste",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon toasted sesame seeds, plus more for garnish",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon sugar",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 tablespoon gochujang",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 teaspoon soy sauce",
+                "amount": "",
+                "category": "pantry"
+          },
+          {
+                "item": "1 (6 1/2-ounce) can whole clams with liquid",
+                "amount": "",
+                "category": "protein"
+          },
+          {
+                "item": "2 loosely packed cups tender lettuces, such as spring mix or baby arugula",
+                "amount": "",
+                "category": "produce"
+          }
+    ],
+    instructions: [
+          "In a colander, toss the cucumbers with ½ teaspoon salt and set aside to sweat until you’re ready to serve.",
+          "Bring a medium pot of water to a boil. Cook the noodles according to package instructions, drain, rinse well under cold water and return to the empty pot. Toss with ½ teaspoon sesame oil.",
+          "While the noodles are cooking, make the dressing: Squeeze 1 tablespoon juice from the lemon into a large mixing bowl. Add the garlic, vinegar, gochugaru, sesame seeds, sugar, gochujang, soy sauce, 2 tablespoons of liquid from the clams and 1 teaspoon salt. Stir to combine. Taste and add more salt, lemon juice and gochugaru until saucy and assertively seasoned to your liking.",
+          "Drain the clams and add to the dressing. Pat the cucumbers dry with a clean towel and add to the dressing. Toss to combine.",
+          "To assemble the salad, spread the noodles on a large platter. Top with the dressed cucumbers and clams, and pile on the lettuce. Drizzle the lettuce with the remaining ½ teaspoon sesame oil, and lightly season with salt and a squeeze of fresh lemon juice. Garnish with sesame seeds and serve immediately."
+    ],
+  },
 ];
 
 const lunchRecipes: RecipeLibraryEntry[] = [
