@@ -47,8 +47,6 @@ export type RecipeDetailsEntry = Pick<RecipeLibraryEntry, "prepTime" | "serves" 
 
 const dinnerSourceName = "NYT Cooking · Healthy Weeknight Dinners";
 const lunchSourceName = "NYT Cooking · Healthy Weekday Lunches";
-const wildroseSourceName = "Wild Rose";
-const placeholderImage = "/princess-planner-logo.jpg";
 
 const dinnerRecipes: RecipeLibraryEntry[] = [
   {
