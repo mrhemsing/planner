@@ -1,5 +1,5 @@
 {
-  "count": 308,
+  "count": 311,
   "items": [
     {
       "position": 1,
@@ -2156,6 +2156,27 @@
       "id": "1025007",
       "slug": "chimichurri-meatballs",
       "recipeId": "chimichurri-meatballs"
+    },
+    {
+      "position": 309,
+      "url": "https://cooking.nytimes.com/recipes/778774372-fish-and-lentils-with-sauce-rof",
+      "id": "778774372",
+      "slug": "fish-and-lentils-with-sauce-rof",
+      "recipeId": "fish-and-lentils-with-sauce-rof"
+    },
+    {
+      "position": 310,
+      "url": "https://cooking.nytimes.com/recipes/778170186-garlicky-shrimp-with-summer-squash-and-beans",
+      "id": "778170186",
+      "slug": "garlicky-shrimp-with-summer-squash-and-beans",
+      "recipeId": "garlicky-shrimp-with-summer-squash-and-beans"
+    },
+    {
+      "position": 311,
+      "url": "https://cooking.nytimes.com/recipes/778503009-beef-asparagus-and-tofu-stir-fry",
+      "id": "778503009",
+      "slug": "beef-asparagus-and-tofu-stir-fry",
+      "recipeId": "beef-asparagus-and-tofu-stir-fry"
     }
   ]
 }
