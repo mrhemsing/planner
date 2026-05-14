@@ -7,7 +7,6 @@ import type { RecipeLibraryEntry } from "@/data/recipes";
 
 const STORAGE_KEY = "princess-planner-favourites";
 const INGREDIENTS_STORAGE_KEY = "princess-planner-ingredient-checks";
-const DAILY_PICK_HISTORY_STORAGE_KEY = "princess-planner-daily-pick-history";
 const INGREDIENT_STRIKE_CLASSES = [
   "hand-strike hand-strike-1",
   "hand-strike hand-strike-2",
@@ -17,7 +16,6 @@ const INGREDIENT_STRIKE_CLASSES = [
 const DAILY_PICK_REFRESH_SALT = "2026-05-01-refresh-1";
 const DAILY_PICK_ROTATION_ANCHOR_DATE = "2026-05-01";
 const DAILY_PICK_RECENT_HISTORY_DAYS = 21;
-const DAILY_PICK_HISTORY_RETENTION_DAYS = 90;
 const VEGETARIAN_CATEGORY_OVERRIDES = new Set([
   "chickpea-noodle-soup",
   "i-cant-believe-its-not-chicken-super-savory-grated-tofu",
@@ -30,13 +28,6 @@ type RecipeSection = {
   recipes: RecipeLibraryEntry[];
 };
 
-type DailyPickHistoryEntry = {
-  dateKey: string;
-  recipeId: string;
-};
-
-type DailyPickHistory = Record<string, DailyPickHistoryEntry[]>;
-
 export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const allRecipes = useMemo(() => sections.flatMap((section) => section.recipes), [sections]);
   const defaultFavourites = useMemo(
@@ -46,14 +37,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   const [favourites, setFavourites] = useState<Record<string, boolean>>(defaultFavourites);
   const [ingredientChecks, setIngredientChecks] = useState<Record<string, boolean>>({});
-  const [dailyPickHistory, setDailyPickHistory] = useState<DailyPickHistory>({});
-  const [dailyPickHistoryHydrated, setDailyPickHistoryHydrated] = useState(false);
   const [activeSectionId] = useState<string>(sections[0]?.id ?? "");
   const [dailyDateKey, setDailyDateKey] = useState(() => getPacificDateKey());
   const previousDailyDateKeyRef = useRef(dailyDateKey);
   const dailyDinnerPickId = useMemo(
-    () => getUniqueDailyPickIdForFilter("all", sections[0]?.recipes ?? [], dailyDateKey, defaultFavourites, dailyPickHistory),
-    [dailyDateKey, dailyPickHistory, defaultFavourites, sections],
+    () => getUniqueDailyPickIdForFilter("all", sections[0]?.recipes ?? [], dailyDateKey, defaultFavourites),
+    [dailyDateKey, defaultFavourites, sections],
   );
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
   const [hasSyncedRecipeFromUrl, setHasSyncedRecipeFromUrl] = useState(false);
@@ -94,19 +83,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, []);
 
   useEffect(() => {
-    try {
-      const stored = window.localStorage.getItem(DAILY_PICK_HISTORY_STORAGE_KEY);
-      if (stored) {
-        setDailyPickHistory(JSON.parse(stored) as DailyPickHistory);
-      }
-    } catch {
-      setDailyPickHistory({});
-    } finally {
-      setDailyPickHistoryHydrated(true);
-    }
-  }, []);
-
-  useEffect(() => {
     if (!hydrated) return;
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(favourites));
   }, [favourites, hydrated]);
@@ -115,11 +91,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     if (!hydrated) return;
     window.localStorage.setItem(INGREDIENTS_STORAGE_KEY, JSON.stringify(ingredientChecks));
   }, [ingredientChecks, hydrated]);
-
-  useEffect(() => {
-    if (!dailyPickHistoryHydrated) return;
-    window.localStorage.setItem(DAILY_PICK_HISTORY_STORAGE_KEY, JSON.stringify(dailyPickHistory));
-  }, [dailyPickHistory, dailyPickHistoryHydrated]);
 
   useEffect(() => {
     const refreshDailyDateKey = () => setDailyDateKey(getPacificDateKey());
@@ -209,35 +180,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, [filteredRecipes, recipeSearchQuery]);
 
   const dailyFilteredPickId = useMemo(
-    () => getUniqueDailyPickIdForFilter(activeFilter, sortedRecipes, dailyDateKey, favourites, dailyPickHistory),
-    [activeFilter, dailyDateKey, dailyPickHistory, favourites, sortedRecipes],
+    () => getUniqueDailyPickIdForFilter(activeFilter, sortedRecipes, dailyDateKey, favourites),
+    [activeFilter, dailyDateKey, favourites, sortedRecipes],
   );
-
-  useEffect(() => {
-    if (!dailyPickHistoryHydrated) return;
-
-    setDailyPickHistory((currentHistory) => {
-      let nextHistory = currentHistory;
-      let changed = false;
-
-      for (const filterId of UNIQUE_DAILY_PICK_FILTER_ORDER) {
-        const pickId = getUniqueDailyPickIdForFilter(filterId, sortedRecipes, dailyDateKey, favourites, nextHistory);
-        if (!pickId) continue;
-
-        const retainedEntries = (nextHistory[filterId] ?? []).filter(
-          (entry) => entry.dateKey !== dailyDateKey && getDateDistanceInDays(entry.dateKey, dailyDateKey) <= DAILY_PICK_HISTORY_RETENTION_DAYS,
-        );
-        const nextEntries = [...retainedEntries, { dateKey: dailyDateKey, recipeId: pickId }];
-
-        if (!areDailyPickHistoryEntriesEqual(nextHistory[filterId] ?? [], nextEntries)) {
-          nextHistory = { ...nextHistory, [filterId]: nextEntries };
-          changed = true;
-        }
-      }
-
-      return changed ? nextHistory : currentHistory;
-    });
-  }, [dailyDateKey, dailyPickHistoryHydrated, favourites, sortedRecipes]);
 
   useEffect(() => {
     if (!hasSyncedRecipeFromUrl) return;
@@ -344,14 +289,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const showRecipeForFilter = useCallback(
     (filterId: string) => {
       const nextFilteredRecipes = getRecipesForFilter(filterId);
-      const nextDailyPickId = getUniqueDailyPickIdForFilter(filterId, sortedRecipes, dailyDateKey, favourites, dailyPickHistory);
+      const nextDailyPickId = getUniqueDailyPickIdForFilter(filterId, sortedRecipes, dailyDateKey, favourites);
       const nextRecipeId = nextDailyPickId || nextFilteredRecipes[0]?.id || "";
 
       setSelectedRecipeFromUrl(Boolean(nextRecipeId));
       setSelectedRecipeId(nextRecipeId);
       setActiveFilter(filterId);
     },
-    [dailyDateKey, dailyPickHistory, favourites, getRecipesForFilter, sortedRecipes],
+    [dailyDateKey, favourites, getRecipesForFilter, sortedRecipes],
   );
 
   const moveActiveFilter = (direction: 1 | -1) => {
@@ -905,36 +850,24 @@ function recipeMatchesFilter(recipe: RecipeLibraryEntry, filterId: string, favou
   return getRecipeCategory(recipe) === filterId;
 }
 
-function getUniqueDailyPickIdForFilter(
-  filterId: string,
-  recipes: RecipeLibraryEntry[],
-  dateKey: string,
-  favourites: Record<string, boolean>,
-  dailyPickHistory: DailyPickHistory,
-) {
+function getUniqueDailyPickIdForFilter(filterId: string, recipes: RecipeLibraryEntry[], dateKey: string, favourites: Record<string, boolean>) {
   if (filterId === "favourites") return "";
 
   const reservedPickIds = new Set<string>();
 
   for (const orderedFilterId of UNIQUE_DAILY_PICK_FILTER_ORDER) {
     const candidates = recipes.filter((recipe) => recipeMatchesFilter(recipe, orderedFilterId, favourites));
-    const pickId = getDailyDinnerPickId(candidates, dateKey, orderedFilterId, dailyPickHistory, reservedPickIds);
+    const pickId = getDailyDinnerPickId(candidates, dateKey, orderedFilterId, reservedPickIds);
 
     if (orderedFilterId === filterId) return pickId;
     if (pickId) reservedPickIds.add(pickId);
   }
 
   const fallbackCandidates = recipes.filter((recipe) => recipeMatchesFilter(recipe, filterId, favourites));
-  return getDailyDinnerPickId(fallbackCandidates, dateKey, filterId, dailyPickHistory, reservedPickIds);
+  return getDailyDinnerPickId(fallbackCandidates, dateKey, filterId, reservedPickIds);
 }
 
-function getDailyDinnerPickId(
-  recipes: RecipeLibraryEntry[],
-  dateKey: string,
-  filterId: string,
-  dailyPickHistory: DailyPickHistory,
-  reservedPickIds = new Set<string>(),
-) {
+function getDailyDinnerPickId(recipes: RecipeLibraryEntry[], dateKey: string, filterId: string, reservedPickIds = new Set<string>()) {
   if (!recipes.length) return "";
 
   const rotationIds = [...recipes]
@@ -946,7 +879,7 @@ function getDailyDinnerPickId(
       return a.localeCompare(b);
     });
   const startIndex = getDateRotationIndex(dateKey, rotationIds.length);
-  const recentlyPickedIds = getRecentlyPickedIds(filterId, dateKey, dailyPickHistory);
+  const recentlyPickedIds = getDeterministicRecentlyPickedIds(dateKey, rotationIds);
 
   for (let offset = 0; offset < rotationIds.length; offset += 1) {
     const candidateId = rotationIds[(startIndex + offset) % rotationIds.length];
@@ -972,31 +905,25 @@ function getDateRotationIndex(dateKey: string, rotationLength: number) {
   return ((daysSinceAnchor % rotationLength) + rotationLength) % rotationLength;
 }
 
-function getRecentlyPickedIds(filterId: string, dateKey: string, dailyPickHistory: DailyPickHistory) {
+function getDeterministicRecentlyPickedIds(dateKey: string, rotationIds: string[]) {
   const recentIds = new Set<string>();
+  const daysToTrack = Math.min(DAILY_PICK_RECENT_HISTORY_DAYS, Math.max(0, rotationIds.length - 1));
 
-  for (const entry of dailyPickHistory[filterId] ?? []) {
-    const dayDistance = getDateDistanceInDays(entry.dateKey, dateKey);
-    if (dayDistance > 0 && dayDistance <= DAILY_PICK_RECENT_HISTORY_DAYS) {
-      recentIds.add(entry.recipeId);
-    }
+  for (let dayOffset = 1; dayOffset <= daysToTrack; dayOffset += 1) {
+    const previousDateKey = getDateKeyOffset(dateKey, -dayOffset);
+    const previousIndex = getDateRotationIndex(previousDateKey, rotationIds.length);
+    const previousId = rotationIds[previousIndex];
+    if (previousId) recentIds.add(previousId);
   }
 
   return recentIds;
 }
 
-function getDateDistanceInDays(fromDateKey: string, toDateKey: string) {
-  const fromTime = Date.parse(`${fromDateKey}T00:00:00Z`);
-  const toTime = Date.parse(`${toDateKey}T00:00:00Z`);
-  if (!Number.isFinite(fromTime) || !Number.isFinite(toTime)) return Number.POSITIVE_INFINITY;
+function getDateKeyOffset(dateKey: string, dayOffset: number) {
+  const dateTime = Date.parse(`${dateKey}T00:00:00Z`);
+  if (!Number.isFinite(dateTime)) return dateKey;
 
-  return Math.floor((toTime - fromTime) / 86_400_000);
-}
-
-function areDailyPickHistoryEntriesEqual(left: DailyPickHistoryEntry[], right: DailyPickHistoryEntry[]) {
-  if (left.length !== right.length) return false;
-
-  return left.every((entry, index) => entry.dateKey === right[index]?.dateKey && entry.recipeId === right[index]?.recipeId);
+  return new Date(dateTime + dayOffset * 86_400_000).toISOString().slice(0, 10);
 }
 
 function getPacificDateKey() {
