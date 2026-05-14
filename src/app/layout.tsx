@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: "/meta-image.jpg",
-        width: 1280,
-        height: 488,
+        url: "/meta-image.png",
+        width: 631,
+        height: 238,
         alt: "NYT Cooking Healthy Dinners",
       },
     ],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NYT Cooking Healthy Dinners",
     description: siteDescription,
-    images: ["/meta-image.jpg"],
+    images: ["/meta-image.png"],
   },
   icons: {
     icon: "/icon.png",
