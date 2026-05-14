@@ -61,6 +61,12 @@ body {
   background: linear-gradient(180deg, rgba(226, 54, 40, 0) 0, rgba(226, 54, 40, 0.16) 220px, rgba(226, 54, 40, 0.46) 400px, #e23628 540px, #d92f25 74%, #b92322 100%);
 }
 
+@media (max-width: 640px) {
+  .red-texture-background:before {
+    opacity: 0.8;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
