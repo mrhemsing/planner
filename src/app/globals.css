@@ -58,7 +58,7 @@ body {
 
 .red-texture-background:after {
   z-index: 1;
-  background: linear-gradient(180deg, rgba(226, 54, 40, 0) 0, rgba(226, 54, 40, 0.22) 160px, rgba(226, 54, 40, 0.58) 320px, #e23628 430px, #d92f25 70%, #b92322 100%);
+  background: linear-gradient(180deg, rgba(226, 54, 40, 0) 0, rgba(226, 54, 40, 0.16) 220px, rgba(226, 54, 40, 0.46) 400px, #e23628 540px, #d92f25 74%, #b92322 100%);
 }
 
 a {
