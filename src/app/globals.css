@@ -38,26 +38,26 @@ body {
   background: #e23628;
 }
 
-.red-texture-background::before,
-.red-texture-background::after {
+.red-texture-background:before,
+.red-texture-background:after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-.red-texture-background::before {
+.red-texture-background:before {
   z-index: 0;
+  opacity: 1;
+  mix-blend-mode: multiply;
   background-image: url("/recipe-images/cooking-bg-2.webp");
   background-repeat: repeat;
-  background-size: 420px auto;
-  opacity: 0.72;
-  mix-blend-mode: multiply;
+  background-size: 78%;
 }
 
-.red-texture-background::after {
+.red-texture-background:after {
   z-index: 1;
-  background: linear-gradient(160deg, rgba(226, 54, 40, 0.62) 0%, rgba(217, 47, 37, 0.66) 55%, rgba(185, 35, 34, 0.74) 100%);
+  background: linear-gradient(180deg, rgba(226, 54, 40, 0) 0, rgba(226, 54, 40, 0.52) 120px, #e23628 220px, #d92f25 62%, #b92322 100%);
 }
 
 a {
