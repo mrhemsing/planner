@@ -32,6 +32,34 @@ body {
   line-height: 1.5;
 }
 
+.red-texture-background {
+  position: relative;
+  isolation: isolate;
+  background: #e23628;
+}
+
+.red-texture-background::before,
+.red-texture-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.red-texture-background::before {
+  z-index: 0;
+  background-image: url("/recipe-images/red-repeating-texture.jpg");
+  background-repeat: repeat;
+  background-size: 360px auto;
+  opacity: 0.28;
+  mix-blend-mode: multiply;
+}
+
+.red-texture-background::after {
+  z-index: 1;
+  background: linear-gradient(160deg, rgba(226, 54, 40, 0.88) 0%, rgba(217, 47, 37, 0.9) 55%, rgba(185, 35, 34, 0.94) 100%);
+}
+
 a {
   color: inherit;
   text-decoration: none;

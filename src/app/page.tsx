@@ -51,8 +51,8 @@ const currentYear = new Date().getFullYear();
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(160deg,#e23628_0%,#d92f25_55%,#b92322_100%)] px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
+    <main className="red-texture-background min-h-screen overflow-x-hidden px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
         <RecipeBrowser
           sections={[
             {
