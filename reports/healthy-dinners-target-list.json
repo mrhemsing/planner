@@ -1,5 +1,5 @@
 {
-  "count": 266,
+  "count": 308,
   "items": [
     {
       "position": 1,
@@ -1918,6 +1918,244 @@
       "id": "1021455",
       "slug": "simple-roast-chicken-with-greens-and-bonus-stock",
       "recipeId": "simple-roast-chicken-with-greens-and-bonus-stock"
+    },
+    {
+      "position": 275,
+      "url": "https://cooking.nytimes.com/recipes/777654017-chicken-and-kale-hatch-chile-bowl",
+      "id": "777654017",
+      "slug": "chicken-and-kale-hatch-chile-bowl",
+      "recipeId": "chicken-and-kale-hatch-chile-bowl"
+    },
+    {
+      "position": 276,
+      "url": "https://cooking.nytimes.com/recipes/777656134-roasted-sausages-with-chickpeas-and-spinach",
+      "id": "777656134",
+      "slug": "roasted-sausages-with-chickpeas-and-spinach",
+      "recipeId": "roasted-sausages-with-chickpeas-and-spinach"
+    },
+    {
+      "position": 277,
+      "url": "https://cooking.nytimes.com/recipes/1024075-dumpling-tomato-salad-with-chile-crisp-vinaigrette",
+      "id": "1024075",
+      "slug": "dumpling-tomato-salad-with-chile-crisp-vinaigrette",
+      "recipeId": "dumpling-tomato-salad-with-chile-crisp-vinaigrette"
+    },
+    {
+      "position": 278,
+      "url": "https://cooking.nytimes.com/recipes/777653357-halloumi-and-sweet-potato-tacos",
+      "id": "777653357",
+      "slug": "halloumi-and-sweet-potato-tacos",
+      "recipeId": "halloumi-and-sweet-potato-tacos"
+    },
+    {
+      "position": 279,
+      "url": "https://cooking.nytimes.com/recipes/1025578-everything-salmon-with-creamy-caper-sauce",
+      "id": "1025578",
+      "slug": "everything-salmon-with-creamy-caper-sauce",
+      "recipeId": "everything-salmon-with-creamy-caper-sauce"
+    },
+    {
+      "position": 280,
+      "url": "https://cooking.nytimes.com/recipes/1027090-mississippi-chicken",
+      "id": "1027090",
+      "slug": "mississippi-chicken",
+      "recipeId": "mississippi-chicken"
+    },
+    {
+      "position": 281,
+      "url": "https://cooking.nytimes.com/recipes/1025895-chicken-au-poivre",
+      "id": "1025895",
+      "slug": "chicken-au-poivre",
+      "recipeId": "chicken-au-poivre"
+    },
+    {
+      "position": 282,
+      "url": "https://cooking.nytimes.com/recipes/1025873-miso-maple-sheet-pan-chicken-with-brussels-sprouts",
+      "id": "1025873",
+      "slug": "miso-maple-sheet-pan-chicken-with-brussels-sprouts",
+      "recipeId": "miso-maple-sheet-pan-chicken-with-brussels-sprouts"
+    },
+    {
+      "position": 283,
+      "url": "https://cooking.nytimes.com/recipes/1020726-sheet-pan-chicken-and-potatoes-with-feta-lemon-and-dill",
+      "id": "1020726",
+      "slug": "sheet-pan-chicken-and-potatoes-with-feta-lemon-and-dill",
+      "recipeId": "sheet-pan-chicken-and-potatoes-with-feta-lemon-and-dill"
+    },
+    {
+      "position": 284,
+      "url": "https://cooking.nytimes.com/recipes/8752-the-silver-palates-chicken-marbella",
+      "id": "8752",
+      "slug": "the-silver-palates-chicken-marbella",
+      "recipeId": "the-silver-palates-chicken-marbella"
+    },
+    {
+      "position": 285,
+      "url": "https://cooking.nytimes.com/recipes/1023003-soy-glazed-salmon-hand-rolls",
+      "id": "1023003",
+      "slug": "soy-glazed-salmon-hand-rolls",
+      "recipeId": "soy-glazed-salmon-hand-rolls"
+    },
+    {
+      "position": 286,
+      "url": "https://cooking.nytimes.com/recipes/1015078-nicoise-salad-with-basil-and-anchovy-lemon-vinaigrette",
+      "id": "1015078",
+      "slug": "nicoise-salad-with-basil-and-anchovy-lemon-vinaigrette",
+      "recipeId": "nicoise-salad-with-basil-and-anchovy-lemon-vinaigrette"
+    },
+    {
+      "position": 287,
+      "url": "https://cooking.nytimes.com/recipes/1016052-ribollita",
+      "id": "1016052",
+      "slug": "ribollita",
+      "recipeId": "ribollita"
+    },
+    {
+      "position": 288,
+      "url": "https://cooking.nytimes.com/recipes/773766928-chicken-and-pesto-rice-with-peas",
+      "id": "773766928",
+      "slug": "chicken-and-pesto-rice-with-peas",
+      "recipeId": "chicken-and-pesto-rice-with-peas"
+    },
+    {
+      "position": 289,
+      "url": "https://cooking.nytimes.com/recipes/1017456-three-cup-chicken",
+      "id": "1017456",
+      "slug": "three-cup-chicken",
+      "recipeId": "three-cup-chicken"
+    },
+    {
+      "position": 290,
+      "url": "https://cooking.nytimes.com/recipes/762961332-cheeseburger-soup",
+      "id": "762961332",
+      "slug": "cheeseburger-soup",
+      "recipeId": "cheeseburger-soup"
+    },
+    {
+      "position": 291,
+      "url": "https://cooking.nytimes.com/recipes/1020044-vegetable-paella-with-chorizo",
+      "id": "1020044",
+      "slug": "vegetable-paella-with-chorizo",
+      "recipeId": "vegetable-paella-with-chorizo"
+    },
+    {
+      "position": 292,
+      "url": "https://cooking.nytimes.com/recipes/1012384-indonesian-chicken-soup-with-noodles-turmeric-and-ginger-soto-ayam",
+      "id": "1012384",
+      "slug": "indonesian-chicken-soup-with-noodles-turmeric-and-ginger-soto-ayam",
+      "recipeId": "indonesian-chicken-soup-with-noodles-turmeric-and-ginger-soto-ayam"
+    },
+    {
+      "position": 293,
+      "url": "https://cooking.nytimes.com/recipes/1021895-epis-braised-beef-short-ribs",
+      "id": "1021895",
+      "slug": "epis-braised-beef-short-ribs",
+      "recipeId": "epis-braised-beef-short-ribs"
+    },
+    {
+      "position": 294,
+      "url": "https://cooking.nytimes.com/recipes/1026951-miso-grilled-shrimp-with-corn-and-shishito-peppers",
+      "id": "1026951",
+      "slug": "miso-grilled-shrimp-with-corn-and-shishito-peppers",
+      "recipeId": "miso-grilled-shrimp-with-corn-and-shishito-peppers"
+    },
+    {
+      "position": 295,
+      "url": "https://cooking.nytimes.com/recipes/1026952-grilled-steak-with-tomato-tartare",
+      "id": "1026952",
+      "slug": "grilled-steak-with-tomato-tartare",
+      "recipeId": "grilled-steak-with-tomato-tartare"
+    },
+    {
+      "position": 296,
+      "url": "https://cooking.nytimes.com/recipes/1026943-slow-cooker-gochujang-chicken-and-tomatoes",
+      "id": "1026943",
+      "slug": "slow-cooker-gochujang-chicken-and-tomatoes",
+      "recipeId": "slow-cooker-gochujang-chicken-and-tomatoes"
+    },
+    {
+      "position": 297,
+      "url": "https://cooking.nytimes.com/recipes/1026700-tinned-fish-hand-rolls",
+      "id": "1026700",
+      "slug": "tinned-fish-hand-rolls",
+      "recipeId": "tinned-fish-hand-rolls"
+    },
+    {
+      "position": 298,
+      "url": "https://cooking.nytimes.com/recipes/1026699-spinach-and-feta-lentil-bowls",
+      "id": "1026699",
+      "slug": "spinach-and-feta-lentil-bowls",
+      "recipeId": "spinach-and-feta-lentil-bowls"
+    },
+    {
+      "position": 299,
+      "url": "https://cooking.nytimes.com/recipes/1025744-orange-ginger-brussels-sprouts",
+      "id": "1025744",
+      "slug": "orange-ginger-brussels-sprouts",
+      "recipeId": "orange-ginger-brussels-sprouts"
+    },
+    {
+      "position": 300,
+      "url": "https://cooking.nytimes.com/recipes/1025784-mushroom-and-egg-donburi",
+      "id": "1025784",
+      "slug": "mushroom-and-egg-donburi",
+      "recipeId": "mushroom-and-egg-donburi"
+    },
+    {
+      "position": 301,
+      "url": "https://cooking.nytimes.com/recipes/1026229-hoisin-peanut-shrimp-and-slaw",
+      "id": "1026229",
+      "slug": "hoisin-peanut-shrimp-and-slaw",
+      "recipeId": "hoisin-peanut-shrimp-and-slaw"
+    },
+    {
+      "position": 302,
+      "url": "https://cooking.nytimes.com/recipes/1026228-spicy-black-bean-soup",
+      "id": "1026228",
+      "slug": "spicy-black-bean-soup",
+      "recipeId": "spicy-black-bean-soup"
+    },
+    {
+      "position": 303,
+      "url": "https://cooking.nytimes.com/recipes/1025358-sheet-pan-chicken-and-tomatoes-with-balsamic-tahini",
+      "id": "1025358",
+      "slug": "sheet-pan-chicken-and-tomatoes-with-balsamic-tahini",
+      "recipeId": "sheet-pan-chicken-and-tomatoes-with-balsamic-tahini"
+    },
+    {
+      "position": 304,
+      "url": "https://cooking.nytimes.com/recipes/1025859-bistec-a-la-yucateca-tacos-yucatan-steak-tacos",
+      "id": "1025859",
+      "slug": "bistec-a-la-yucateca-tacos-yucatan-steak-tacos",
+      "recipeId": "bistec-a-la-yucateca-tacos-yucatan-steak-tacos"
+    },
+    {
+      "position": 305,
+      "url": "https://cooking.nytimes.com/recipes/1025237-quick-lamb-ragu-with-artichokes",
+      "id": "1025237",
+      "slug": "quick-lamb-ragu-with-artichokes",
+      "recipeId": "quick-lamb-ragu-with-artichokes"
+    },
+    {
+      "position": 306,
+      "url": "https://cooking.nytimes.com/recipes/1025168-yogurt-marinated-roast-chicken",
+      "id": "1025168",
+      "slug": "yogurt-marinated-roast-chicken",
+      "recipeId": "yogurt-marinated-roast-chicken"
+    },
+    {
+      "position": 307,
+      "url": "https://cooking.nytimes.com/recipes/1025144-kielbasa-barley-soup",
+      "id": "1025144",
+      "slug": "kielbasa-barley-soup",
+      "recipeId": "kielbasa-barley-soup"
+    },
+    {
+      "position": 308,
+      "url": "https://cooking.nytimes.com/recipes/1025007-chimichurri-meatballs",
+      "id": "1025007",
+      "slug": "chimichurri-meatballs",
+      "recipeId": "chimichurri-meatballs"
     }
   ]
 }
