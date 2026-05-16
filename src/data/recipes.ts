@@ -9578,9 +9578,117 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
     prepTime: "30 min",
     serves: 4,
   },
+  {
+    id: "salmon-with-lemon-herb-marinade",
+    title: "Salmon",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/5824-salmon-with-lemon-herb-marinade",
+    imageUrl: "https://static01.nyt.com/images/2024/11/24/multimedia/Salmon-With-Lemon-Herb-Marinaderex-zcfp/Salmon-With-Lemon-Herb-Marinaderex-zcfp-videoSixteenByNineJumbo1600-v2.jpg",
+    description: "Here's one of the easiest ways to entertain: broil or grill a large salmon fillet, then adorn it with lemon wedges and rosemary sprigs. This recipe marinates the rich salmon in...",
+    favourite: false,
+    tags: ["dinner","nyt","salmon"],
+    plannedDays: [],
+  },
+  {
+    id: "coconut-dill-salmon-with-green-beans-and-corn",
+    title: "Coconut-Dill Salmon With Green Beans and Corn",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1024460-coconut-dill-salmon-with-green-beans-and-corn",
+    imageUrl: "https://static01.nyt.com/images/2026/05/13/multimedia/YK-Coconut-dill-Salmon-with-Green-Beans-and-Corn-tqjh/YK-Coconut-dill-Salmon-with-Green-Beans-and-Corn-tqjh-videoSixteenByNineJumbo1600.jpg",
+    description: "A fillet of salmon, bathed in a fragrant mixture of coconut cream, lemon and dill, is foil-wrapped and set on a hot grill to steam in its own juices. The fish is accompanied by...",
+    favourite: false,
+    tags: ["dinner","nyt","salmon"],
+    plannedDays: [],
+  },
+  {
+    id: "crispy-baked-tomato-oregano-chicken",
+    title: "Crispy Baked Tomato-Oregano Chicken",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/759520285-crispy-baked-tomato-oregano-chicken",
+    imageUrl: "https://static01.nyt.com/images/2025/10/10/multimedia/yf-crispy-baked-tomato-oregano-chicken-thwp/yf-crispy-baked-tomato-oregano-chicken-thwp-videoSixteenByNineJumbo1600.jpg",
+    description: "Baked in the oven and sealed with a layer of tomato paste and yogurt, this chicken — your choice: breasts or thighs — stays juicy as it cooks on top of a bed of tomatoes. The to...",
+    favourite: false,
+    tags: ["dinner","nyt","chicken"],
+    plannedDays: [],
+  },
+  {
+    id: "green-shakshuka-with-avocado-and-lime",
+    title: "Green Shakshuka With Avocado and Lime",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1019468-green-shakshuka-with-avocado-and-lime",
+    imageUrl: "https://static01.nyt.com/images/2019/08/01/dining/sc-green-shakshuka/sc-green-shakshuka-videoSixteenByNineJumbo1600.jpg",
+    description: "This easy twist on classic North African shakshuka (traditionally eggs baked in tomato-pepper sauce, with cumin, paprika and cayenne) starts with an onion-garlic-chard sautéed u...",
+    favourite: false,
+    tags: ["dinner","nyt","vegetarian"],
+    plannedDays: [],
+  },
+  {
+    id: "scallion-chicken-and-rice-for-two",
+    title: "Scallion Chicken and Rice for Two",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/777998043-scallion-chicken-and-rice-for-two",
+    imageUrl: "https://static01.nyt.com/images/2026/05/06/multimedia/NB-Scallion-Chicken-and-Rice-for-Two-mlwh/NB-Scallion-Chicken-and-Rice-for-Two-mlwh-videoSixteenByNineJumbo1600.jpg",
+    description: "This one-pan recipe delivers a chicken dinner for two that’s built on three main ingredients: scallions, chicken and rice. The scallions are used in two ways, cooked down until...",
+    favourite: false,
+    tags: ["dinner","nyt","chicken","rice"],
+    plannedDays: [],
+  },
+  {
+    id: "crispy-chicken-thighs-with-melty-leeks-and-peas",
+    title: "Crispy Chicken Thighs With Melty Leeks and Peas",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/778706490-crispy-chicken-thighs-with-melty-leeks-and-peas",
+    imageUrl: "https://static01.nyt.com/images/2026/05/15/multimedia/AB-Crispy-Chicken-Thighs-with-Peas-and-Leeks-vkgl/AB-Crispy-Chicken-Thighs-with-Peas-and-Leeks-vkgl-videoSixteenByNineJumbo1600.jpg",
+    description: "This is the kind of chicken dish you make when all the pretty greens finally show up at the market and you want something light but still deeply satisfying. You want to cook the...",
+    favourite: false,
+    tags: ["dinner","nyt","chicken"],
+    plannedDays: [],
+  },
 ];
 
 const lunchRecipes: RecipeLibraryEntry[] = [
+  {
+    id: "red-lentil-soup",
+    title: "Red Lentil Soup",
+    category: "Lunch",
+    sourceName: lunchSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1016062-red-lentil-soup",
+    imageUrl: "https://static01.nyt.com/images/2019/01/17/dining/mc-red-lentil-soup/merlin_146234352_d7bc8486-b067-4cff-a4c0-7741f166fb60-videoSixteenByNineJumbo1600.jpg",
+    description: "This is a lentil soup that defies expectations of what lentil soup can be. Based on a Turkish lentil soup, mercimek corbasi, it is light, spicy and a bold red color (no murky br...",
+    favourite: false,
+    tags: ["lunch","nyt","soup","vegetarian"],
+    plannedDays: [],
+  },
+  {
+    id: "borani-banjan-afghan-style-eggplant-in-yogurt",
+    title: "Borani Banjan (Afghan-style Eggplant in Yogurt)",
+    category: "Lunch",
+    sourceName: lunchSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/1025516-borani-banjan-afghan-style-eggplant-in-yogurt",
+    imageUrl: "https://static01.nyt.com/images/2024/06/13/multimedia/zs-borani-banjan-pbhk/zs-borani-banjan-pbhk-videoSixteenByNineJumbo1600.jpg",
+    description: "Traditionally in Afghan-style borani banjan, an appetizer or vegetable side, eggplant slices are soaked in salted water for 20 to 30 minutes, drained and dried, then simmered in...",
+    favourite: false,
+    tags: ["lunch","nyt","vegetarian"],
+    plannedDays: [],
+  },
+  {
+    id: "sikil-pak-pumpkin-seed-dip",
+    title: "Sikil Pak (Pumpkin Seed Dip)",
+    category: "Lunch",
+    sourceName: lunchSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/778703584-sikil-pak-pumpkin-seed-dip",
+    imageUrl: "https://static01.nyt.com/images/2026/05/15/multimedia/OP-Sikil-Pak-cmwg/OP-Sikil-Pak-cmwg-videoSixteenByNineJumbo1600.jpg",
+    description: "Sikil pak is often referred to as Mayan hummus due to its creamy texture. Sikil pak is traditionally made by crushing pepitas in a molcajete, so it has more of a coarse mouthfee...",
+    favourite: false,
+    tags: ["lunch","nyt","vegetarian","dip"],
+    plannedDays: [],
+  },
   {
     id: "chickpea-salad-sandwich",
     title: "Chickpea Salad Sandwich",
@@ -16637,6 +16745,616 @@ const recipeDetailsMap: Record<string, RecipeDetailsEntry> = {
     ],
   },
 
+  "red-lentil-soup": {
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [    
+          {    
+                "item": "tablespoons olive oil, plus more for drizzling",    
+                "amount": "3",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "large onion, chopped",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "garlic cloves, minced",    
+                "amount": "2",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoon tomato paste",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "teaspoon ground cumin",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "and black pepper",    
+                "amount": "Salt",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "of chili powder or ground cayenne, plus more to taste",    
+                "amount": "Pinch",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "quart chicken or vegetable broth",    
+                "amount": "1",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "cup red lentils",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "large carrot, peeled and diced",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "of ½ lemon, more to taste",    
+                "amount": "Juice",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoons chopped fresh cilantro",    
+                "amount": "3",    
+                "category": "produce"    
+          }    
+    ],
+    instructions: [    
+          "In a large pot, heat 3 tablespoons oil over high until hot and shimmering. Add onion and garlic, and sauté until golden, about 4 minutes.",    
+          "Stir in tomato paste, cumin, 1/4 teaspoons each salt and black pepper and the chili powder, and sauté for 2 minutes longer.",    
+          "Add broth, 2 cups water, lentils and carrot. Bring to a simmer, then partly cover pot and turn heat to medium-low. Simmer until lentils are soft, about 30 minutes. Taste and add salt if necessary.",    
+          "Using an immersion or regular blender or a food processor, purée half the soup, then add it back to pot. The soup should be somewhat chunky.",    
+          "Reheat soup if necessary, then stir in lemon juice and cilantro. Serve soup drizzled with good olive oil and dusted lightly with chili powder, if desired."    
+    ],
+  },
+  "salmon-with-lemon-herb-marinade": {
+    prepTime: "80 min",
+    serves: 6,
+    ingredients: [    
+          {    
+                "item": "salmon fillet, in one piece",    
+                "amount": "1 3-pound",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "clove garlic, minced",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoons dark brown sugar",    
+                "amount": "2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "tablespoons soy sauce",    
+                "amount": "2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "tablespoon grated lemon peel",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoons parsley, chopped fine",    
+                "amount": "2",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoons fresh thyme leaves",    
+                "amount": "2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "tablespoon fresh rosemary leaves",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "of 1/2 lemon",    
+                "amount": "Juice",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoons sesame oil",    
+                "amount": "2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "cup extra-virgin olive oil",    
+                "amount": "1/4",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "salt and freshly ground pepper to taste",    
+                "amount": "Coarse",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "lemon, cut into 6 wedges",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "of rosemary, for garnish",    
+                "amount": "Sprigs",    
+                "category": "pantry"    
+          }    
+    ],
+    instructions: [    
+          "Wipe salmon fillet dry with paper towels. Combine remaining ingredients (except lemon wedges and rosemary sprigs) in small bowl and mix well. Pour mixture over salmon, making sure it is coated on both sides. Marinate for at least an hour before cooking.",    
+          "Preheat broiler or grill. Cook salmon, turning once — five to six minutes each side for medium rare.",    
+          "Place salmon on serving platter and garnish with lemon wedges and sprigs of rosemary."    
+    ],
+  },
+  "coconut-dill-salmon-with-green-beans-and-corn": {
+    prepTime: "40 min",
+    serves: 6,
+    ingredients: [    
+          {    
+                "item": "(2-pound) salmon fillet (skin on or off)",    
+                "amount": "1",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "tablespoons plus 1 teaspoon olive oil",    
+                "amount": "2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "kosher salt (such as Morton) and black pepper",    
+                "amount": "Coarse",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "cup unsweetened coconut cream or coconut milk",    
+                "amount": "1",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "tablespoons dark brown sugar",    
+                "amount": "2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "tablespoon sherry vinegar",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "teaspoon Dijon mustard",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "lemon",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "cup chopped fresh dill",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "ounces green beans, trimmed and halved crosswise",    
+                "amount": "8",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "cup fresh corn kernels (from 1 to 2 ears corn)",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "pint cherry tomatoes, lightly crushed open or sliced into halves",    
+                "amount": "1",    
+                "category": "produce"    
+          }    
+    ],
+    instructions: [    
+          "Heat an outdoor grill to high (see Tip). Pat the fish dry with paper towels and place on a large strip of heavy-duty aluminum foil (or 2 stacked sheets of regular foil) on a sheet pan. Drizzle with 1 tablespoon oil and sprinkle lightly with salt.",    
+          "In a small bowl, combine the coconut cream, brown sugar, vinegar, mustard, 1 tablespoon oil, 1 teaspoon salt and ½ teaspoon pepper. Zest the lemon right into the bowl and squeeze in 2 tablespoons juice. Stir in ½ cup dill. Pour half of the dressing over the fish and set the other half aside. Wrap the fish in the foil by turning up the sides and crimping them together to form a packet. Use another strip of foil if necessary to make a tight seal.",    
+          "On another large strip of foil, toss the green beans with the remaining teaspoon of oil and a pinch each of salt and pepper. Wrap the beans in the foil to form a packet.",    
+          "Place both the salmon and green bean packets on the grill and cover if using a gas grill. Grill until the green beans and salmon are cooked through, about 10 minutes. To test the fish for doneness, remove the packet from heat, cut a slit in the top with a knife and slide the knife into the fish. It should be tender. Using two tongs or wearing oven mitts, carefully transfer the fish packet to a large serving platter and open the top.",    
+          "Open the green bean packet, transfer the beans to a large bowl and add the corn, tomatoes, remaining ½ cup dill, half of the reserved dressing and a pinch of salt. Toss to coat.",    
+          "To serve, top the fish with some of the vegetables and remaining dressing. Serve immediately with the remaining vegetables and dressing or refrigerate until ready to serve."    
+    ],
+  },
+  "crispy-baked-tomato-oregano-chicken": {
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: [    
+          {    
+                "item": "tablespoons full-fat yogurt",    
+                "amount": "2",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "tablespoon tomato paste",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoon soy sauce",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "tablespoon plus 1 teaspoon dried oregano, divided",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "pounds boneless, skinless chicken thighs, cut into 2-inch pieces, or breasts cut horizontally to form cutlets",    
+                "amount": "2",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "Salt",    
+                "amount": "",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "pints cherry or grape tomatoes, halved",    
+                "amount": "2",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoons olive oil",    
+                "amount": "2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "cup grated Parmesan",    
+                "amount": "¾",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "cup panko bread crumbs",    
+                "amount": "¾",    
+                "category": "pantry"    
+          }    
+    ],
+    instructions: [    
+          "Heat the oven to 425 degrees. In a large bowl, combine the yogurt, tomato paste, soy sauce and 1 tablespoon oregano. Add the chicken; season lightly with salt and toss to coat.",    
+          "Add the halved tomatoes to a 9-by-13-inch glass baking dish, season with salt and the olive oil, and spread out into an even layer. Nestle the chicken on top of the tomatoes. Sprinkle the Parmesan and remaining 1 teaspoon oregano over everything. Cover with a layer of panko.",    
+          "Bake in the oven until the top crisps and the tomatoes collapse and get saucy, 20 to 25 minutes for breasts and 22 to 25 for thighs, depending on the thickness."    
+    ],
+  },
+  "green-shakshuka-with-avocado-and-lime": {
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: [    
+          {    
+                "item": "tablespoons olive oil",    
+                "amount": "3",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "yellow onion, peeled and thinly sliced",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "garlic cloves, thinly sliced",    
+                "amount": "2",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "large bunch/1 1/2 pounds Swiss chard, stems and leaves separated and chopped (about 9 cups)",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "teaspoon salt, plus more as needed",    
+                "amount": "1/2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "cup half-and-half or heavy cream",    
+                "amount": "1/3",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "large eggs",    
+                "amount": "8",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "teaspoon black pepper, plus more as needed",    
+                "amount": "1/4",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "ounces Cotija cheese or queso fresco, crumbled (about 3/4 cup)",    
+                "amount": "3",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "avocado, sliced, for serving",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "small jalapeño, thinly sliced, for serving",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "cilantro, for serving",    
+                "amount": "Chopped",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "hot sauce, for serving",    
+                "amount": "Smoked",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "tortillas, toasted, for serving",    
+                "amount": "Corn",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "lime, cut into wedges, for serving",    
+                "amount": "1",    
+                "category": "produce"    
+          }    
+    ],
+    instructions: [    
+          "Heat oil in a large cast-iron skillet over medium-low heat. Add onion and cook until softening, 5 minutes. Add the garlic and cook until fragrant, 5 minutes more.",    
+          "Raise the heat to medium-high, add the chard stems, and cook to release some liquid, 5 minutes. Add the chard leaves, in batches, adding more as they wilt, and continue cooking, stirring occasionally, until completely wilted, 3 to 5 minutes more. Season with 1/2 teaspoon salt, pour in the half-and-half and stir loosely together.",    
+          "Make eight small hollows in the cooked chard with the back of a spoon. Gently crack an egg into each hollow. Cover with a lid or foil and cook on medium-low until the eggs are just set, but still soft, about 7 to 9 minutes. Remove the lid, sprinkle with salt, pepper, Cotija, avocado, jalapeño and cilantro. Serve with smoked hot sauce, toasted tortillas and lime wedges."    
+    ],
+  },
+  "borani-banjan-afghan-style-eggplant-in-yogurt": {
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: [    
+          {    
+                "item": "cup full-fat Greek or Indian yogurt",    
+                "amount": "1",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "garlic clove, grated",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "Salt",    
+                "amount": "",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "to 1 cup vegetable oil",    
+                "amount": "1/2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "Japanese or Indian eggplants (see Tips), or 1 globe eggplant, cut into 1/4-inch-thick rounds",    
+                "amount": "4",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "plum tomatoes, chopped",    
+                "amount": "3",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "teaspoon Kashmiri or other red chile powder (optional)",    
+                "amount": "1/2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "tablespoons pomegranate seeds",    
+                "amount": "2",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "to 6 small mint leaves",    
+                "amount": "4",    
+                "category": "produce"    
+          }    
+    ],
+    instructions: [    
+          "In a bowl, mix the yogurt, garlic, 1/2 teaspoon salt and 2 tablespoons water. Place in the fridge to chill and develop garlicky flavor.",    
+          "Line a tray or large plate with paper towels. In a large frying pan, heat 1/3 cup oil on high. (The eggplant slices should be submerged about halfway in the oil while frying.) When the oil is heated, about 1 minute, add the eggplant slices in a single layer, and fry 1 to 2 minutes on each side, working in batches to avoid overcrowding and adding oil between batches as necessary. When the eggplant starts to caramelize and turn brown, transfer to the prepared tray or plate. Pat dry with a paper towel or clean kitchen towel to remove any excess oil and to preserve the eggplant’s crisp texture. Season with salt as desired.",    
+          "To the same pan, add tomatoes, 1/2 teaspoon salt, 2 tablespoons water and chile powder, if using. Cook on high until the tomatoes start to break down, about 5 minutes.",    
+          "To serve, spread the yogurt in a single layer in a large shallow dish. Add the eggplant in a single layer on top, and then scatter the tomato over the eggplant (see Tips). Finish with pomegranate seeds and mint."    
+    ],
+  },
+  "scallion-chicken-and-rice-for-two": {
+    prepTime: "45 min",
+    serves: 1,
+    ingredients: [    
+          {    
+                "item": "tablespoon olive oil",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "pound bone-in, skin-on chicken thighs (2 large or 3 medium)",    
+                "amount": "1",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "Salt",    
+                "amount": "",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "small yellow onion, sliced",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "garlic cloves, minced or pressed",    
+                "amount": "2",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "pepper",    
+                "amount": "Black",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "scallions, thinly sliced",    
+                "amount": "4",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "cup basmati rice, rinsed until water runs clear",    
+                "amount": "½",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "cup chicken broth or water",    
+                "amount": "1",    
+                "category": "protein"    
+          }    
+    ],
+    instructions: [    
+          "Heat the olive oil in a small (8-inch) deep skillet over medium-high heat. Pat the chicken thighs dry and season lightly with salt on both sides."    
+    ],
+  },
+  "sikil-pak-pumpkin-seed-dip": {
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: [    
+          {    
+                "item": "cup raw hulled pumpkin seeds (pepitas), plus more for topping",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoon canola oil",    
+                "amount": "1",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "cherry tomatoes",    
+                "amount": "6",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "to 2 habanero chiles (depending on heat tolerance), stemmed",    
+                "amount": "½",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "small white onion, split into layers",    
+                "amount": "¼",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "garlic cloves, peeled",    
+                "amount": "2",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "cup fresh lime juice",    
+                "amount": "¼",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "cup fresh grapefruit or orange juice",    
+                "amount": "¼",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "salt",    
+                "amount": "Kosher",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "leaves, for topping",    
+                "amount": "Cilantro",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "or thick tortilla chips, for serving",    
+                "amount": "Tostadas",    
+                "category": "pantry"    
+          }    
+    ],
+    instructions: [    
+          "In a dry medium skillet (not nonstick) over medium-low heat, toast pepitas, stirring frequently, until they begin to brown, turn shiny and have a nutty aroma, about 3 minutes. Immediately transfer to a food processor and pulse into a fine powder.",    
+          "Add oil to the skillet and set over medium-high heat. Once shimmering, add tomatoes, habaneros, garlic and onion. Cook, stirring frequently, until charred in spots, about 3 minutes. Transfer to the food processor. Pulse until evenly blended with the ground pepitas.",    
+          "With the machine running, slowly drizzle in the lime and grapefruit juice and blend until the mixture is smooth, scraping down the sides as necessary. Season with salt to taste. Transfer to a serving bowl and garnish with cilantro leaves and more pepitas. Serve with tostadas or tortilla chips, if you like."    
+    ],
+  },
+  "crispy-chicken-thighs-with-melty-leeks-and-peas": {
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [    
+          {    
+                "item": "pounds bone-in, skin-on chicken thighs",    
+                "amount": "2 ½",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "and freshly ground black pepper",    
+                "amount": "Salt",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "tablespoons extra-virgin olive oil",    
+                "amount": "3",    
+                "category": "pantry"    
+          },    
+          {    
+                "item": "medium leeks, trimmed, halved lengthwise, thinly sliced crosswise then rinsed",    
+                "amount": "2",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "garlic cloves, thinly sliced",    
+                "amount": "6",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "lemon",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "cup low-sodium chicken broth or water",    
+                "amount": "1",    
+                "category": "protein"    
+          },    
+          {    
+                "item": "cup fresh or frozen peas",    
+                "amount": "1",    
+                "category": "produce"    
+          },    
+          {    
+                "item": "cup fresh dill or mint leaves, torn if large",    
+                "amount": "1",    
+                "category": "produce"    
+          }    
+    ],
+    instructions: [    
+          "Pat the chicken dry and season all over with salt and pepper. Set aside at room temperature for 10 minutes or up to 30 minutes if you have time.",    
+          "Heat the oil in a large cast-iron or other heavy skillet over medium. Using tongs, add the chicken to the skillet, skin side down. Cook, using the tongs to really press down on the chicken so the skin gets in contact with the bottom of the pan, until the edges are deeply golden brown, the skin easily releases from the pan and the chicken has rendered a pool of delicious fat, 20 to 25 minutes. Flip and cook on the other side until the chicken is cooked through, about 5 minutes. Transfer the chicken to a plate, skin side up, and set aside.",    
+          "Add the leeks and garlic to the pan and season with salt. Cook, stirring occasionally, until the mixture is totally soft but hasn’t taken on too much color, 5 to 7 minutes.",    
+          "Using a vegetable peeler, remove three 2-inch strips of lemon peel and add them to the skillet along with the stock. Bring to a simmer, then reduce the heat to medium-low. Return the chicken to the pan, skin side up, and simmer gently so the flavors can come together, 3 to 5 minutes. Add the peas and continue to cook until they are tender, 2 to 3 minutes (about 1 minute if using frozen).",    
+          "Serve straight from the skillet or transfer to a platter. Scatter the dill over the chicken, then cut the lemon into wedges for squeezing over the top."    
+    ],
+  },
 };
 
 const generatedHealthyDinnerDetails = healthyDinnerDetails as Record<string, RecipeDetailsEntry>;

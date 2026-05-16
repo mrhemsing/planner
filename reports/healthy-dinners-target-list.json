@@ -1,5 +1,5 @@
 {
-  "count": 311,
+  "count": 321,
   "items": [
     {
       "position": 1,
@@ -2177,6 +2177,76 @@
       "id": "778503009",
       "slug": "beef-asparagus-and-tofu-stir-fry",
       "recipeId": "beef-asparagus-and-tofu-stir-fry"
+    },
+    {
+      "position": 312,
+      "url": "https://cooking.nytimes.com/recipes/1016062-red-lentil-soup",
+      "id": "1016062",
+      "slug": "red-lentil-soup",
+      "recipeId": "red-lentil-soup"
+    },
+    {
+      "position": 313,
+      "url": "https://cooking.nytimes.com/recipes/1025482-easy-chicken-salad",
+      "id": "1025482",
+      "slug": "easy-chicken-salad",
+      "recipeId": "easy-chicken-salad"
+    },
+    {
+      "position": 314,
+      "url": "https://cooking.nytimes.com/recipes/5824-salmon-with-lemon-herb-marinade",
+      "id": "5824",
+      "slug": "salmon-with-lemon-herb-marinade",
+      "recipeId": "salmon-with-lemon-herb-marinade"
+    },
+    {
+      "position": 315,
+      "url": "https://cooking.nytimes.com/recipes/1024460-coconut-dill-salmon-with-green-beans-and-corn",
+      "id": "1024460",
+      "slug": "coconut-dill-salmon-with-green-beans-and-corn",
+      "recipeId": "coconut-dill-salmon-with-green-beans-and-corn"
+    },
+    {
+      "position": 316,
+      "url": "https://cooking.nytimes.com/recipes/759520285-crispy-baked-tomato-oregano-chicken",
+      "id": "759520285",
+      "slug": "crispy-baked-tomato-oregano-chicken",
+      "recipeId": "crispy-baked-tomato-oregano-chicken"
+    },
+    {
+      "position": 317,
+      "url": "https://cooking.nytimes.com/recipes/1019468-green-shakshuka-with-avocado-and-lime",
+      "id": "1019468",
+      "slug": "green-shakshuka-with-avocado-and-lime",
+      "recipeId": "green-shakshuka-with-avocado-and-lime"
+    },
+    {
+      "position": 318,
+      "url": "https://cooking.nytimes.com/recipes/1025516-borani-banjan-afghan-style-eggplant-in-yogurt",
+      "id": "1025516",
+      "slug": "borani-banjan-afghan-style-eggplant-in-yogurt",
+      "recipeId": "borani-banjan-afghan-style-eggplant-in-yogurt"
+    },
+    {
+      "position": 319,
+      "url": "https://cooking.nytimes.com/recipes/777998043-scallion-chicken-and-rice-for-two",
+      "id": "777998043",
+      "slug": "scallion-chicken-and-rice-for-two",
+      "recipeId": "scallion-chicken-and-rice-for-two"
+    },
+    {
+      "position": 320,
+      "url": "https://cooking.nytimes.com/recipes/778703584-sikil-pak-pumpkin-seed-dip",
+      "id": "778703584",
+      "slug": "sikil-pak-pumpkin-seed-dip",
+      "recipeId": "sikil-pak-pumpkin-seed-dip"
+    },
+    {
+      "position": 321,
+      "url": "https://cooking.nytimes.com/recipes/778706490-crispy-chicken-thighs-with-melty-leeks-and-peas",
+      "id": "778706490",
+      "slug": "crispy-chicken-thighs-with-melty-leeks-and-peas",
+      "recipeId": "crispy-chicken-thighs-with-melty-leeks-and-peas"
     }
   ]
 }
