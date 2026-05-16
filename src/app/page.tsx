@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import { RecipeBrowser } from "@/components/recipe-browser";
 import { recipeLibrary } from "@/lib/planner";
 import healthyDinnerTargets from "../../reports/healthy-dinners-target-list.json";
+
+const siteUrl = "https://cook.b-average.com";
+const defaultTitle = "NYT Cooking Healthy Dinners";
+const defaultDescription =
+  "Five-day healthy dinner planning with NYT Cooking recipes, quick-glance recipe cards, checkable ingredients, and step-by-step instructions.";
+
+type PageSearchParams = Promise<Record<string, string | string[] | undefined>>;
 
 function preferDinner(current: (typeof recipeLibrary)[number] | undefined, candidate: (typeof recipeLibrary)[number]) {
   if (!current) return candidate;
@@ -48,6 +56,67 @@ if (healthyDinnersMissingDetails.length) {
 }
 
 const currentYear = new Date().getFullYear();
+
+function firstSearchParam(value: string | string[] | undefined) {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+function absoluteImageUrl(imageUrl: string) {
+  return new URL(imageUrl, siteUrl).toString();
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: PageSearchParams;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const recipeId = firstSearchParam(params.recipe)?.toLowerCase();
+  const recipe = recipeId ? recipesById.get(recipeId) : undefined;
+
+  if (!recipe) {
+    return {
+      title: defaultTitle,
+      description: defaultDescription,
+    };
+  }
+
+  const pickedOn = firstSearchParam(params.pickedOn);
+  const pageUrl = new URL(siteUrl);
+  pageUrl.searchParams.set("recipe", recipe.id);
+
+  if (pickedOn) {
+    pageUrl.searchParams.set("pickedOn", pickedOn);
+  }
+
+  const description = `${recipe.title}: ${recipe.description}`;
+  const imageUrl = absoluteImageUrl(recipe.imageUrl);
+
+  return {
+    title: recipe.title,
+    description,
+    alternates: {
+      canonical: pageUrl.toString(),
+    },
+    openGraph: {
+      title: recipe.title,
+      description,
+      url: pageUrl.toString(),
+      images: [
+        {
+          url: imageUrl,
+          alt: recipe.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: recipe.title,
+      description,
+      images: [imageUrl],
+    },
+  };
+}
 
 export default function Home() {
   return (
