@@ -656,10 +656,15 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                               aria-label={favourites[selectedRecipe.id] ? "Remove from favourites" : "Add to favourites"}
                             >
                               <span
-                                className={favourites[selectedRecipe.id] ? "text-xl leading-none" : "text-2xl font-bold leading-none text-stone-400"}
+                                className={favourites[selectedRecipe.id] ? "text-2xl leading-none text-rose-600" : "text-2xl leading-none text-transparent"}
+                                style={
+                                  favourites[selectedRecipe.id]
+                                    ? undefined
+                                    : { WebkitTextStroke: "1.8px #a8a29e" }
+                                }
                                 aria-hidden="true"
                               >
-                                {favourites[selectedRecipe.id] ? "❤️" : "♡"}
+                                ❤
                               </span>
                             </button>
                           </div>
