@@ -841,10 +841,11 @@ function FavouriteHeartIcon({ filled }: { filled: boolean }) {
       fill={filled ? "currentColor" : "white"}
       stroke="currentColor"
       strokeWidth="2.2"
+      strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <path d="M12 21.1 10.6 19.8C5.6 15.3 2.3 12.3 2.3 8.6 2.3 5.6 4.7 3.3 7.7 3.3c1.7 0 3.3.8 4.3 2.1 1-1.3 2.6-2.1 4.3-2.1 3 0 5.4 2.3 5.4 5.3 0 3.7-3.3 6.7-8.3 11.2L12 21.1Z" />
+      <path d="M12 8c0 0 0 0 0.76-1 0.88-1.16 2.18-2 3.74-2 2.49 0 4.5 2.01 4.5 4.5 0 0.93-0.28 1.79-0.76 2.5-0.81 1.21-8.24 9-8.24 9s-7.43-7.79-8.24-9C3.28 11.29 3 10.43 3 9.5 3 7.01 5.01 5 7.5 5c1.56 0 2.86 0.84 3.74 2C12 8 12 8 12 8Z" />
     </svg>
   );
 }
