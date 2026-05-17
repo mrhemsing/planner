@@ -655,17 +655,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                               aria-pressed={Boolean(favourites[selectedRecipe.id])}
                               aria-label={favourites[selectedRecipe.id] ? "Remove from favourites" : "Add to favourites"}
                             >
-                              <span
-                                className={favourites[selectedRecipe.id] ? "text-2xl leading-none text-rose-600" : "text-2xl leading-none text-transparent"}
-                                style={
-                                  favourites[selectedRecipe.id]
-                                    ? undefined
-                                    : { WebkitTextStroke: "1.8px #a8a29e" }
-                                }
-                                aria-hidden="true"
-                              >
-                                ❤
-                              </span>
+                              <FavouriteHeartIcon filled={Boolean(favourites[selectedRecipe.id])} />
                             </button>
                           </div>
                         </div>
@@ -841,6 +831,22 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
 function FilterChip({ label }: { label: string }) {
   return <span className="rounded-2xl bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
+}
+
+function FavouriteHeartIcon({ filled }: { filled: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={["h-6 w-6", filled ? "text-rose-600" : "text-stone-400"].join(" ")}
+      fill={filled ? "currentColor" : "white"}
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M12 21.1 10.6 19.8C5.6 15.3 2.3 12.3 2.3 8.6 2.3 5.6 4.7 3.3 7.7 3.3c1.7 0 3.3.8 4.3 2.1 1-1.3 2.6-2.1 4.3-2.1 3 0 5.4 2.3 5.4 5.3 0 3.7-3.3 6.7-8.3 11.2L12 21.1Z" />
+    </svg>
+  );
 }
 
 function buildRecipeShareUrl(recipeId: string, dateKey: string) {
