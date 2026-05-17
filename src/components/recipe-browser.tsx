@@ -466,12 +466,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 onClick={() => showRecipeForFilter("favourites")}
                 aria-label="Favourite recipes"
                 title="Favourite recipes"
-                className={`category-chip mt-1 shrink-0 rounded-2xl border bg-white px-3 py-2 text-sm font-semibold sm:hidden ${
+                className={`category-chip mt-1 inline-flex shrink-0 items-center justify-center gap-1 rounded-2xl border bg-white px-3 py-2 text-sm font-semibold sm:hidden ${
                   activeFilter === "favourites" ? "category-chip-active" : "border-transparent text-amber-800 hover:text-amber-900"
                 }`}
               >
                 <FavouriteHeartIcon filled className="h-5 w-5" />
-                <span className="ml-1">{favouriteCount}</span>
+                <span>{favouriteCount}</span>
               </button>
             ) : null}
           </div>
