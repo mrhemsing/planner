@@ -56,6 +56,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [isRecipeSheetOpen, setRecipeSheetOpen] = useState(false);
   const [recipeSearchQuery, setRecipeSearchQuery] = useState("");
   const [shareCopyStatus, setShareCopyStatus] = useState("");
+  const shareCopyStatusTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
     try {
@@ -92,6 +93,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     if (!hydrated) return;
     window.localStorage.setItem(INGREDIENTS_STORAGE_KEY, JSON.stringify(ingredientChecks));
   }, [ingredientChecks, hydrated]);
+
+  useEffect(() => {
+    return () => {
+      if (shareCopyStatusTimeoutRef.current) {
+        window.clearTimeout(shareCopyStatusTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const refreshDailyDateKey = () => setDailyDateKey(getPacificDateKey());
@@ -384,6 +393,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     try {
       await window.navigator.clipboard.writeText(shareUrl);
       setShareCopyStatus("Copied");
+      if (shareCopyStatusTimeoutRef.current) {
+        window.clearTimeout(shareCopyStatusTimeoutRef.current);
+      }
+      shareCopyStatusTimeoutRef.current = window.setTimeout(() => {
+        setShareCopyStatus("");
+        shareCopyStatusTimeoutRef.current = null;
+      }, 1800);
     } catch {
       setShareCopyStatus("Copy failed");
     }
@@ -395,6 +411,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
     setShareCopyStatus("");
+    if (shareCopyStatusTimeoutRef.current) {
+      window.clearTimeout(shareCopyStatusTimeoutRef.current);
+      shareCopyStatusTimeoutRef.current = null;
+    }
   };
 
   const focusDesktopRecipeResult = (index: number) => {
@@ -630,6 +650,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                             {selectedRecipe.serves ? <span className="block m-0 p-0 leading-[1.1]">{`Serves ${selectedRecipe.serves}`}</span> : null}
                           </div>
                           <div className="flex shrink-0 items-center gap-2">
+                            <div className="relative">
                             <button
                               type="button"
                               onClick={copySelectedRecipeLink}
@@ -644,6 +665,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                                 "🔗"
                               )}
                             </button>
+                              {shareCopyStatus === "Copied" ? (
+                                <span className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-full bg-stone-900 px-3 py-1.5 text-xs font-semibold text-white shadow-lg">
+                                  Link copied
+                                </span>
+                              ) : null}
+                            </div>
                             <button
                               type="button"
                               onClick={() => toggleFavourite(selectedRecipe.id)}
