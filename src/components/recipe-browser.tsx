@@ -55,6 +55,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [hydrated, setHydrated] = useState(false);
   const [isRecipeSheetOpen, setRecipeSheetOpen] = useState(false);
   const [recipeSearchQuery, setRecipeSearchQuery] = useState("");
+  const [isShareSheetOpen, setShareSheetOpen] = useState(false);
+  const [shareCopyStatus, setShareCopyStatus] = useState("");
 
   useEffect(() => {
     try {
@@ -370,11 +372,60 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     }));
   };
 
+  const getSelectedRecipeShareUrl = () => {
+    if (!selectedRecipe) return "";
+
+    return buildRecipeShareUrl(selectedRecipe.id, dailyDateKey);
+  };
+
+  const copySelectedRecipeLink = async () => {
+    const shareUrl = getSelectedRecipeShareUrl();
+    if (!shareUrl) return;
+
+    try {
+      await window.navigator.clipboard.writeText(shareUrl);
+      setShareCopyStatus("Copied");
+    } catch {
+      setShareCopyStatus("Copy failed");
+    }
+  };
+
+  const shareSelectedRecipeWithNativeSheet = async () => {
+    if (!selectedRecipe) return;
+
+    const shareUrl = getSelectedRecipeShareUrl();
+    if (!shareUrl) return;
+
+    if (window.navigator.share) {
+      try {
+        await window.navigator.share({
+          title: selectedRecipe.title,
+          text: selectedRecipe.description,
+          url: shareUrl,
+        });
+        return;
+      } catch {
+        return;
+      }
+    }
+
+    await copySelectedRecipeLink();
+  };
+
+  const selectedRecipeShareUrl = isShareSheetOpen ? getSelectedRecipeShareUrl() : "";
+  const selectedRecipeShareText = selectedRecipe
+    ? `${selectedRecipe.title} - ${selectedRecipeShareUrl}`
+    : selectedRecipeShareUrl;
+  const encodedShareUrl = encodeURIComponent(selectedRecipeShareUrl);
+  const encodedShareTitle = encodeURIComponent(selectedRecipe?.title ?? "Dinner recipe");
+  const encodedShareText = encodeURIComponent(selectedRecipeShareText);
+
   const selectRecipe = (id: string) => {
     setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(id);
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
+    setShareSheetOpen(false);
   };
 
   const focusDesktopRecipeResult = (index: number) => {
@@ -609,18 +660,32 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                             {selectedRecipe.prepTime ? <span className="mt-1 block p-0 leading-[1.1]">{`Prep ${selectedRecipe.prepTime}`}</span> : null}
                             {selectedRecipe.serves ? <span className="block m-0 p-0 leading-[1.1]">{`Serves ${selectedRecipe.serves}`}</span> : null}
                           </div>
-                          <button
-                            type="button"
-                            onClick={() => toggleFavourite(selectedRecipe.id)}
-                            className={`inline-flex min-h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-2xl border px-4 shadow-sm transition active:scale-[0.98] ${
-                              favourites[selectedRecipe.id]
-                                ? "border-amber-200 bg-amber-100 text-amber-800"
-                                : "border-stone-300 bg-white text-stone-700"
-                            }`}
-                            aria-pressed={Boolean(favourites[selectedRecipe.id])}
-                          >
-                            {favourites[selectedRecipe.id] ? "Added ❤️" : "Add ❤️"}
-                          </button>
+                          <div className="flex shrink-0 items-center gap-2">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setShareCopyStatus("");
+                                setShareSheetOpen(true);
+                              }}
+                              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-stone-300 bg-white px-0 text-xl leading-none text-stone-700 shadow-sm transition active:scale-[0.98]"
+                              aria-label="Share recipe"
+                            >
+                              ↗
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => toggleFavourite(selectedRecipe.id)}
+                              className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border px-0 text-xl leading-none shadow-sm transition active:scale-[0.98] ${
+                                favourites[selectedRecipe.id]
+                                  ? "border-amber-200 bg-amber-100 text-amber-800"
+                                  : "border-stone-300 bg-white text-stone-700"
+                              }`}
+                              aria-pressed={Boolean(favourites[selectedRecipe.id])}
+                              aria-label={favourites[selectedRecipe.id] ? "Remove from favourites" : "Add to favourites"}
+                            >
+                              {favourites[selectedRecipe.id] ? "❤️" : "♡"}
+                            </button>
+                          </div>
                         </div>
                       </div>
                       <div className="mt-4 hidden flex-wrap gap-2 sm:flex">
@@ -787,12 +852,98 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           </div>
         </div>
       ) : null}
+
+      {isShareSheetOpen && selectedRecipe ? (
+        <div
+          className="bottom-sheet-backdrop fixed inset-0 z-[60] bg-black/35 sm:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Share recipe"
+        >
+          <button
+            type="button"
+            className="absolute inset-0 h-full w-full cursor-default"
+            aria-label="Close share sheet"
+            onClick={() => setShareSheetOpen(false)}
+          />
+          <div className="bottom-sheet-panel absolute inset-x-0 bottom-0 rounded-t-[28px] bg-white px-5 pb-[calc(env(safe-area-inset-bottom)+24px)] pt-4 shadow-[0_-18px_60px_rgba(0,0,0,0.24)]">
+            <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-stone-300" aria-hidden="true" />
+            <div className="flex items-start justify-between gap-4">
+              <div className="min-w-0">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">Share recipe</p>
+                <p className="mt-1 line-clamp-2 text-lg font-semibold leading-tight text-stone-900">{selectedRecipe.title}</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShareSheetOpen(false)}
+                className="recipe-tap-card shrink-0 rounded-2xl border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm"
+              >
+                Close
+              </button>
+            </div>
+
+            <div className="mt-5 grid grid-cols-4 gap-3">
+              <ShareAction label="Messages" icon="💬" href={`sms:?&body=${encodedShareText}`} />
+              <ShareAction label="Mail" icon="✉️" href={`mailto:?subject=${encodedShareTitle}&body=${encodedShareText}`} />
+              <ShareAction label="WhatsApp" icon="🟢" href={`https://wa.me/?text=${encodedShareText}`} />
+              <ShareAction label="Facebook" icon="f" href={`https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`} />
+              <ShareAction label="Messenger" icon="↗" href={`fb-messenger://share?link=${encodedShareUrl}`} />
+              <ShareAction label="Pinterest" icon="P" href={`https://pinterest.com/pin/create/button/?url=${encodedShareUrl}&description=${encodedShareTitle}`} />
+              <ShareAction label="X" icon="𝕏" href={`https://twitter.com/intent/tweet?text=${encodedShareTitle}&url=${encodedShareUrl}`} />
+              <button
+                type="button"
+                onClick={copySelectedRecipeLink}
+                className="recipe-tap-card flex min-h-[86px] flex-col items-center justify-center gap-2 rounded-[18px] border border-stone-200 bg-stone-50 px-2 py-3 text-center text-xs font-semibold text-stone-700"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-sm" aria-hidden="true">
+                  🔗
+                </span>
+                <span>{shareCopyStatus || "Copy"}</span>
+              </button>
+            </div>
+
+            <button
+              type="button"
+              onClick={shareSelectedRecipeWithNativeSheet}
+              className="recipe-tap-card mt-4 flex w-full items-center justify-center rounded-2xl bg-stone-900 px-4 py-3 text-sm font-semibold text-white shadow-sm"
+            >
+              More share options
+            </button>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }
 
 function FilterChip({ label }: { label: string }) {
   return <span className="rounded-2xl bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
+}
+
+function ShareAction({ label, icon, href }: { label: string; icon: string; href: string }) {
+  return (
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      className="recipe-tap-card flex min-h-[86px] flex-col items-center justify-center gap-2 rounded-[18px] border border-stone-200 bg-stone-50 px-2 py-3 text-center text-xs font-semibold text-stone-700"
+    >
+      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl shadow-sm" aria-hidden="true">
+        {icon}
+      </span>
+      <span>{label}</span>
+    </a>
+  );
+}
+
+function buildRecipeShareUrl(recipeId: string, dateKey: string) {
+  if (typeof window === "undefined") return "";
+
+  const url = new URL(window.location.href);
+  url.searchParams.set("recipe", recipeId);
+  url.searchParams.set("pickedOn", dateKey);
+  url.hash = "";
+  return url.toString();
 }
 
 function getDailyPickTitle(activeFilter: string) {
