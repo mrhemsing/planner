@@ -655,7 +655,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                               aria-pressed={Boolean(favourites[selectedRecipe.id])}
                               aria-label={favourites[selectedRecipe.id] ? "Remove from favourites" : "Add to favourites"}
                             >
-                              <HeartIcon filled={Boolean(favourites[selectedRecipe.id])} />
+                              <span
+                                className={favourites[selectedRecipe.id] ? "text-xl leading-none" : "text-2xl font-bold leading-none text-stone-400"}
+                                aria-hidden="true"
+                              >
+                                {favourites[selectedRecipe.id] ? "❤️" : "♡"}
+                              </span>
                             </button>
                           </div>
                         </div>
@@ -831,23 +836,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
 function FilterChip({ label }: { label: string }) {
   return <span className="rounded-2xl bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
-}
-
-function HeartIcon({ filled }: { filled: boolean }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className={["h-6 w-6", filled ? "text-rose-600" : "text-stone-700"].join(" ")}
-      fill={filled ? "currentColor" : "none"}
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M20.8 4.6c-1.9-1.7-4.8-1.5-6.5.5L12 7.7 9.7 5.1C8 3.1 5.1 2.9 3.2 4.6 1.1 6.5 1 9.8 3 11.9l9 8.7 9-8.7c2-2.1 1.9-5.4-.2-7.3Z" />
-    </svg>
-  );
 }
 
 function buildRecipeShareUrl(recipeId: string, dateKey: string) {
