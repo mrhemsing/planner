@@ -470,7 +470,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   activeFilter === "favourites" ? "category-chip-active" : "border-transparent text-amber-800 hover:text-amber-900"
                 }`}
               >
-                <span aria-hidden="true">❤️</span>
+                <FavouriteHeartIcon filled className="h-5 w-5" />
                 <span className="ml-1">{favouriteCount}</span>
               </button>
             ) : null}
@@ -833,11 +833,11 @@ function FilterChip({ label }: { label: string }) {
   return <span className="rounded-2xl bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
 }
 
-function FavouriteHeartIcon({ filled }: { filled: boolean }) {
+function FavouriteHeartIcon({ filled, className = "h-6 w-6" }: { filled: boolean; className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className={["h-6 w-6", filled ? "text-rose-600" : "text-stone-400"].join(" ")}
+      className={[className, filled ? "text-rose-600" : "text-stone-400"].join(" ")}
       fill={filled ? "currentColor" : "white"}
       stroke="currentColor"
       strokeWidth="2.2"
