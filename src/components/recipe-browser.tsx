@@ -636,7 +636,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                               className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-stone-300 bg-white px-0 text-xl leading-none text-stone-700 shadow-sm transition active:scale-[0.98]"
                               aria-label={shareCopyStatus === "Copied" ? "Recipe link copied" : "Copy recipe link"}
                             >
-                              {shareCopyStatus === "Copied" ? "✓" : "🔗"}
+                              {shareCopyStatus === "Copied" ? (
+                                <span className="text-2xl font-black text-emerald-700" aria-hidden="true">
+                                  ✔
+                                </span>
+                              ) : (
+                                "🔗"
+                              )}
                             </button>
                             <button
                               type="button"
@@ -649,7 +655,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                               aria-pressed={Boolean(favourites[selectedRecipe.id])}
                               aria-label={favourites[selectedRecipe.id] ? "Remove from favourites" : "Add to favourites"}
                             >
-                              {favourites[selectedRecipe.id] ? "❤️" : "♡"}
+                              <HeartIcon filled={Boolean(favourites[selectedRecipe.id])} />
                             </button>
                           </div>
                         </div>
@@ -825,6 +831,23 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
 function FilterChip({ label }: { label: string }) {
   return <span className="rounded-2xl bg-white px-3 py-2 text-base font-medium text-stone-800">{label}</span>;
+}
+
+function HeartIcon({ filled }: { filled: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={["h-6 w-6", filled ? "text-rose-600" : "text-stone-700"].join(" ")}
+      fill={filled ? "currentColor" : "none"}
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M20.8 4.6c-1.9-1.7-4.8-1.5-6.5.5L12 7.7 9.7 5.1C8 3.1 5.1 2.9 3.2 4.6 1.1 6.5 1 9.8 3 11.9l9 8.7 9-8.7c2-2.1 1.9-5.4-.2-7.3Z" />
+    </svg>
+  );
 }
 
 function buildRecipeShareUrl(recipeId: string, dateKey: string) {
