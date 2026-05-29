@@ -129,6 +129,7 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
   const [cookOpen, setCookOpen] = useState(false);
   const [favourites, setFavourites] = useState<Record<string, boolean>>({});
   const [favouritesHydrated, setFavouritesHydrated] = useState(false);
+  const [showWeekFavouriteRecipes, setShowWeekFavouriteRecipes] = useState(false);
   const featureLayoverHistoryActiveRef = useRef(false);
   const hasFeatureLayoverOpenRef = useRef(false);
 
@@ -137,6 +138,8 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
     [search, sortedRecipes],
   );
   const groceryList = useMemo(() => buildGroceryList(plan), [plan]);
+  const favouriteCount = useMemo(() => Object.values(favourites).filter(Boolean).length, [favourites]);
+  const isWeekFavouriteFilterActive = showWeekFavouriteRecipes && favouriteCount > 0;
 
   useEffect(() => {
     try {
@@ -229,8 +232,22 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
 
   return (
     <main className="red-texture-background texture-soft min-h-screen overflow-x-hidden px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
+      {activeTab === "week" && favouritesHydrated ? (
+        <button
+          type="button"
+          onClick={() => setShowWeekFavouriteRecipes((current) => (favouriteCount > 0 ? !current : false))}
+          aria-label={isWeekFavouriteFilterActive ? "Show all recipes" : `${favouriteCount} favourite recipes`}
+          aria-pressed={isWeekFavouriteFilterActive}
+          className={`absolute right-4 top-4 z-40 inline-flex h-8 shrink-0 items-center gap-0.5 rounded-full border px-2 text-sm font-black shadow-sm transition sm:hidden ${
+            isWeekFavouriteFilterActive ? "border-amber-500 bg-amber-100 text-amber-950" : "border-stone-200 bg-white text-red-800 hover:text-amber-950"
+          }`}
+        >
+          <StarIcon filled={isWeekFavouriteFilterActive} className="h-5 w-5" />
+          <span>{favouriteCount}</span>
+        </button>
+      ) : null}
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
-        <header className="mt-4 px-1 py-1 sm:mt-4 sm:px-2">
+        <header className="mt-7 px-1 py-1 sm:mt-4 sm:px-2">
           <div className="flex flex-col gap-5 sm:gap-4">
             <Link href="/" className="recipe-tap-card flex items-center gap-3 text-left" aria-label="Return to recipes">
               <Image
@@ -321,7 +338,7 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
             setDayRecipe={setDayRecipe}
             onView={setDetailRecipe}
             favourites={favourites}
-            favouritesHydrated={favouritesHydrated}
+            showFavouriteRecipes={showWeekFavouriteRecipes}
           />
         ) : null}
 
@@ -401,7 +418,7 @@ function WeeklyPlanner({
   setDayRecipe,
   onView,
   favourites,
-  favouritesHydrated,
+  showFavouriteRecipes,
 }: {
   recipes: RecipeLibraryEntry[];
   plan: Plan;
@@ -411,13 +428,12 @@ function WeeklyPlanner({
   setDayRecipe: (day: Day, recipe: RecipeLibraryEntry | null) => void;
   onView: (recipe: RecipeLibraryEntry) => void;
   favourites: Record<string, boolean>;
-  favouritesHydrated: boolean;
+  showFavouriteRecipes: boolean;
 }) {
   const [recipeToPlace, setRecipeToPlace] = useState<RecipeLibraryEntry | null>(null);
   const [isDesktopDragEnabled, setDesktopDragEnabled] = useState(false);
   const [draggingRecipe, setDraggingRecipe] = useState<RecipeLibraryEntry | null>(null);
   const [dragOverDay, setDragOverDay] = useState<Day | null>(null);
-  const [showFavouriteRecipes, setShowFavouriteRecipes] = useState(false);
   const draggingRecipeRef = useRef<RecipeLibraryEntry | null>(null);
   const favouriteCount = useMemo(() => Object.values(favourites).filter(Boolean).length, [favourites]);
   const isFavouriteFilterActive = showFavouriteRecipes && favouriteCount > 0;
@@ -499,20 +515,6 @@ function WeeklyPlanner({
               <span className="sm:hidden">Use Add, then tap a day.</span>
             </p>
           </div>
-          {favouritesHydrated ? (
-            <button
-              type="button"
-              onClick={() => setShowFavouriteRecipes((current) => (favouriteCount > 0 ? !current : false))}
-              aria-label={isFavouriteFilterActive ? "Show all recipes" : `${favouriteCount} favourite recipes`}
-              aria-pressed={isFavouriteFilterActive}
-              className={`inline-flex h-10 shrink-0 items-center gap-1.5 rounded-full border px-3 text-sm font-black shadow-sm transition sm:hidden ${
-                isFavouriteFilterActive ? "border-amber-500 bg-amber-100 text-amber-950" : "border-stone-200 bg-white text-red-800 hover:text-amber-950"
-              }`}
-            >
-              <StarIcon filled={isFavouriteFilterActive} className="h-5 w-5" />
-              <span>{favouriteCount}</span>
-            </button>
-          ) : null}
         </div>
 
         {recipeToPlace ? (

@@ -618,7 +618,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           onClick={() => showRecipeForFilter(activeFilter === "favourites" ? "all" : "favourites")}
           aria-label={activeFilter === "favourites" ? "Show all recipes" : `${favouriteCount} favourite recipes`}
           aria-pressed={activeFilter === "favourites"}
-          className={`recipe-tap-card fixed right-3 top-3 z-40 flex min-h-10 min-w-16 items-center justify-center gap-1.5 rounded-2xl border px-3 text-sm font-black text-amber-900 shadow-[0_8px_18px_rgba(146,64,14,0.18)] sm:hidden ${
+          className={`recipe-tap-card absolute right-3 top-3 z-40 flex min-h-9 min-w-14 items-center justify-center gap-1 rounded-2xl border px-2.5 text-sm font-black text-amber-900 shadow-[0_8px_18px_rgba(146,64,14,0.18)] sm:hidden ${
             activeFilter === "favourites" ? "border-amber-500 bg-amber-100" : "border-transparent bg-white hover:text-amber-950"
           }`}
         >
@@ -627,7 +627,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         </button>
       ) : null}
 
-      <div className="mt-4 px-1 py-1 sm:mt-4 sm:px-2">
+      <div className="mt-7 px-1 py-1 sm:mt-4 sm:px-2">
         <div className="flex flex-col gap-5 sm:gap-4">
           <div className="flex items-start justify-between gap-4">
             <button type="button" onClick={returnHome} className="recipe-tap-card flex items-center gap-3 text-left" aria-label="Return to homepage">
