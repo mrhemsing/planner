@@ -238,7 +238,7 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
           onClick={() => setShowWeekFavouriteRecipes((current) => (favouriteCount > 0 ? !current : false))}
           aria-label={isWeekFavouriteFilterActive ? "Show all recipes" : `${favouriteCount} favourite recipes`}
           aria-pressed={isWeekFavouriteFilterActive}
-          className={`absolute right-4 top-4 z-40 inline-flex h-8 shrink-0 items-center gap-0.5 rounded-full border px-2 text-sm font-black shadow-sm transition sm:hidden ${
+          className={`absolute right-4 top-4 z-40 inline-flex h-8 shrink-0 items-center gap-0.5 rounded-full border py-0 pl-2 pr-1 text-sm font-black shadow-sm transition sm:hidden ${
             isWeekFavouriteFilterActive ? "border-amber-500 bg-amber-100 text-amber-950" : "border-stone-200 bg-white text-red-800 hover:text-amber-950"
           }`}
         >
