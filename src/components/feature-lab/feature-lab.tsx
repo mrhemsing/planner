@@ -231,7 +231,7 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
   }
 
   return (
-    <main className="red-texture-background texture-soft min-h-screen overflow-x-hidden px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
+    <main className="red-texture-background texture-soft min-h-screen overflow-x-clip px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
       {activeTab === "week" && favouritesHydrated ? (
         <button
           type="button"
@@ -529,80 +529,81 @@ function WeeklyPlanner({
           </div>
         ) : null}
 
-        <div className="-mx-4 mt-3 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 pl-6 pr-4 pt-1 scroll-pl-6 sm:mx-0 sm:mt-4 sm:grid sm:grid-cols-5 sm:overflow-visible sm:px-0 sm:pb-0 sm:pt-0 sm:scroll-pl-0">
-          {days.map((day) => {
-            const slot = plan[day];
-            const plannedRecipe = slot?.recipe ?? null;
-            const isTapTarget = Boolean(recipeToPlace);
-            const isFilledSlot = Boolean(plannedRecipe && !isTapTarget);
+        <div className="sticky top-0 z-30 -mx-4 mt-3 bg-white pb-2 pt-1 shadow-sm shadow-stone-200/70 sm:static sm:mx-0 sm:mt-4 sm:bg-transparent sm:p-0 sm:shadow-none">
+          <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 pl-6 pr-4 scroll-pl-6 sm:grid sm:grid-cols-5 sm:overflow-visible sm:px-0 sm:pb-0 sm:scroll-pl-0">
+            {days.map((day) => {
+              const slot = plan[day];
+              const plannedRecipe = slot?.recipe ?? null;
+              const isTapTarget = Boolean(recipeToPlace);
+              const isFilledSlot = Boolean(plannedRecipe && !isTapTarget);
 
-            return (
-              <div
-                key={day}
-                role={isTapTarget || isFilledSlot ? "button" : undefined}
-                tabIndex={isTapTarget || isFilledSlot ? 0 : undefined}
-                onClick={() => {
-                  if (isTapTarget) {
-                    placeRecipe(day);
-                    return;
-                  }
-
-                  if (plannedRecipe) onView(plannedRecipe);
-                }}
-                onDragOver={(event) => dragRecipeOverDay(event, day)}
-                onDragLeave={() => setDragOverDay((current) => (current === day ? null : current))}
-                onDrop={(event) => dropRecipeOnDay(event, day)}
-                onKeyDown={(event) => {
-                  if (!isTapTarget && !plannedRecipe) return;
-                  if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
+              return (
+                <div
+                  key={day}
+                  role={isTapTarget || isFilledSlot ? "button" : undefined}
+                  tabIndex={isTapTarget || isFilledSlot ? 0 : undefined}
+                  onClick={() => {
                     if (isTapTarget) {
                       placeRecipe(day);
                       return;
                     }
 
                     if (plannedRecipe) onView(plannedRecipe);
-                  }
-                }}
-                className={`relative min-w-[calc((100%-1.5rem)/2.3)] snap-start rounded-[18px] border border-transparent p-3 transition sm:min-w-0 ${
-                  dragOverDay === day
-                    ? "min-h-28 bg-red-50 sm:min-h-20"
-                    : isTapTarget
-                    ? "min-h-28 cursor-pointer bg-red-50 sm:min-h-20"
-                    : plannedRecipe
-                      ? "min-h-28 cursor-pointer bg-amber-50/70 hover:bg-red-50/50 focus:outline-none focus:ring-2 focus:ring-red-800/25 sm:min-h-20"
-                      : "min-h-28 bg-amber-50/70 sm:min-h-20"
-                }`}
-                aria-label={plannedRecipe && !isTapTarget ? `View ${plannedRecipe.title}` : undefined}
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <p className="font-black text-red-900">{day}</p>
-                  {plannedRecipe && !isTapTarget ? (
-                    <button
-                      type="button"
-                      aria-label={`Clear ${day}`}
-                      onClick={(event) => {
-                        event.stopPropagation();
-                        setDayRecipe(day, null);
-                      }}
-                      className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-red-900/15 bg-white text-base font-black leading-none text-red-800 shadow-sm transition hover:border-red-800/40 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-800/25"
-                    >
-                      ×
-                    </button>
-                  ) : null}
-                </div>
-                {plannedRecipe ? (
-                  <MiniRecipe recipe={plannedRecipe} />
-                ) : (
-                  <p className={`mt-4 text-sm font-black ${isTapTarget ? "text-red-900" : "text-stone-400"}`}>
-                    {isTapTarget ? "Tap to add" : "+ Add recipe"}
-                  </p>
-                )}
-              </div>
-            );
-          })}
-        </div>
+                  }}
+                  onDragOver={(event) => dragRecipeOverDay(event, day)}
+                  onDragLeave={() => setDragOverDay((current) => (current === day ? null : current))}
+                  onDrop={(event) => dropRecipeOnDay(event, day)}
+                  onKeyDown={(event) => {
+                    if (!isTapTarget && !plannedRecipe) return;
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      if (isTapTarget) {
+                        placeRecipe(day);
+                        return;
+                      }
 
+                      if (plannedRecipe) onView(plannedRecipe);
+                    }
+                  }}
+                  className={`relative min-w-[calc((100%-1.5rem)/2.3)] snap-start rounded-[18px] border border-transparent p-3 transition sm:min-w-0 ${
+                    dragOverDay === day
+                      ? "min-h-28 bg-red-50 sm:min-h-20"
+                      : isTapTarget
+                      ? "min-h-28 cursor-pointer bg-red-50 sm:min-h-20"
+                      : plannedRecipe
+                        ? "min-h-28 cursor-pointer bg-amber-50/70 hover:bg-red-50/50 focus:outline-none focus:ring-2 focus:ring-red-800/25 sm:min-h-20"
+                        : "min-h-28 bg-amber-50/70 sm:min-h-20"
+                  }`}
+                  aria-label={plannedRecipe && !isTapTarget ? `View ${plannedRecipe.title}` : undefined}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="font-black text-red-900">{day}</p>
+                    {plannedRecipe && !isTapTarget ? (
+                      <button
+                        type="button"
+                        aria-label={`Clear ${day}`}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          setDayRecipe(day, null);
+                        }}
+                        className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-red-900/15 bg-white text-base font-black leading-none text-red-800 shadow-sm transition hover:border-red-800/40 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-800/25"
+                      >
+                        ×
+                      </button>
+                    ) : null}
+                  </div>
+                  {plannedRecipe ? (
+                    <MiniRecipe recipe={plannedRecipe} />
+                  ) : (
+                    <p className={`mt-4 text-sm font-black ${isTapTarget ? "text-red-900" : "text-stone-400"}`}>
+                      {isTapTarget ? "Tap to add" : "+ Add recipe"}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
         <div className="relative mt-4">
           <input
             value={search}
