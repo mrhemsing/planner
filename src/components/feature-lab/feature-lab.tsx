@@ -527,7 +527,7 @@ function WeeklyPlanner({
           </div>
         ) : null}
 
-        <div className="-mx-4 mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 pl-6 pr-4 scroll-pl-6 sm:mx-0 sm:grid sm:grid-cols-5 sm:overflow-visible sm:px-0 sm:pb-0 sm:scroll-pl-0">
+        <div className="-mx-4 mt-3 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 pl-6 pr-4 pt-1 scroll-pl-6 sm:mx-0 sm:mt-4 sm:grid sm:grid-cols-5 sm:overflow-visible sm:px-0 sm:pb-0 sm:pt-0 sm:scroll-pl-0">
           {days.map((day) => {
             const slot = plan[day];
             const plannedRecipe = slot?.recipe ?? null;
@@ -2013,12 +2013,8 @@ function StarIcon({ filled, className = "h-6 w-6" }: { filled: boolean; classNam
 
 function MiniRecipe({ recipe }: { recipe: RecipeLibraryEntry }) {
   return (
-    <div className="mt-3 grid grid-cols-[56px_minmax(0,1fr)] items-start gap-3 sm:block">
-      <Thumb recipe={recipe} variant="slot" />
-      <div className="min-w-0 sm:mt-2">
-        <p className="text-sm font-black leading-tight text-stone-950">{recipe.title}</p>
-        {recipe.serves ? <p className="mt-1 text-[0.65rem] font-black uppercase tracking-[0.12em] text-stone-500">Serves {recipe.serves}</p> : null}
-      </div>
+    <div className="mt-4 min-w-0">
+      <p className="text-sm font-black leading-tight text-stone-950">{recipe.title}</p>
     </div>
   );
 }
