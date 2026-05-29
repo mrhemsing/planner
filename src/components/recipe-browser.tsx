@@ -17,7 +17,7 @@ const INGREDIENT_STRIKE_CLASSES = [
   "hand-strike hand-strike-3",
   "hand-strike hand-strike-4",
 ];
-const DAILY_PICK_REFRESH_SALT = "2026-05-01-refresh-1";
+const DAILY_PICK_REFRESH_SALT = "2026-05-29-refresh-1";
 const DAILY_PICK_ROTATION_ANCHOR_DATE = "2026-05-01";
 const DAILY_PICK_RECENT_HISTORY_DAYS = 21;
 const VEGETARIAN_CATEGORY_OVERRIDES = new Set([
