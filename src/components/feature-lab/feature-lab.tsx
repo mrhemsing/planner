@@ -320,6 +320,8 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
             setSearch={setSearch}
             setDayRecipe={setDayRecipe}
             onView={setDetailRecipe}
+            favourites={favourites}
+            favouritesHydrated={favouritesHydrated}
           />
         ) : null}
 
@@ -398,6 +400,8 @@ function WeeklyPlanner({
   setSearch,
   setDayRecipe,
   onView,
+  favourites,
+  favouritesHydrated,
 }: {
   recipes: RecipeLibraryEntry[];
   plan: Plan;
@@ -406,12 +410,21 @@ function WeeklyPlanner({
   setSearch: (value: string) => void;
   setDayRecipe: (day: Day, recipe: RecipeLibraryEntry | null) => void;
   onView: (recipe: RecipeLibraryEntry) => void;
+  favourites: Record<string, boolean>;
+  favouritesHydrated: boolean;
 }) {
   const [recipeToPlace, setRecipeToPlace] = useState<RecipeLibraryEntry | null>(null);
   const [isDesktopDragEnabled, setDesktopDragEnabled] = useState(false);
   const [draggingRecipe, setDraggingRecipe] = useState<RecipeLibraryEntry | null>(null);
   const [dragOverDay, setDragOverDay] = useState<Day | null>(null);
+  const [showFavouriteRecipes, setShowFavouriteRecipes] = useState(false);
   const draggingRecipeRef = useRef<RecipeLibraryEntry | null>(null);
+  const favouriteCount = useMemo(() => Object.values(favourites).filter(Boolean).length, [favourites]);
+  const isFavouriteFilterActive = showFavouriteRecipes && favouriteCount > 0;
+  const visibleRecipes = useMemo(
+    () => (isFavouriteFilterActive ? recipes.filter((recipe) => favourites[recipe.id]) : recipes),
+    [favourites, isFavouriteFilterActive, recipes],
+  );
 
   useEffect(() => {
     const media = window.matchMedia("(pointer: fine)");
@@ -486,6 +499,20 @@ function WeeklyPlanner({
               <span className="sm:hidden">Use Add, then tap a day.</span>
             </p>
           </div>
+          {favouritesHydrated ? (
+            <button
+              type="button"
+              onClick={() => setShowFavouriteRecipes((current) => (favouriteCount > 0 ? !current : false))}
+              aria-label={isFavouriteFilterActive ? "Show all recipes" : `${favouriteCount} favourite recipes`}
+              aria-pressed={isFavouriteFilterActive}
+              className={`inline-flex h-10 shrink-0 items-center gap-1.5 rounded-full border px-3 text-sm font-black shadow-sm transition sm:hidden ${
+                isFavouriteFilterActive ? "border-amber-500 bg-amber-100 text-amber-950" : "border-stone-200 bg-white text-red-800 hover:text-amber-950"
+              }`}
+            >
+              <StarIcon filled={isFavouriteFilterActive} className="h-5 w-5" />
+              <span>{favouriteCount}</span>
+            </button>
+          ) : null}
         </div>
 
         {recipeToPlace ? (
@@ -593,7 +620,7 @@ function WeeklyPlanner({
           <SearchClearButton show={Boolean(search)} onClear={() => setSearch("")} />
         </div>
         <div className="mt-3 grid gap-2">
-          {recipes.map((recipe) => (
+          {visibleRecipes.map((recipe) => (
               <article
                 key={recipe.id}
                 className={`group mr-3 grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2 rounded-[16px] border p-2 text-left shadow-sm transition-colors lg:mr-4 lg:gap-3 ${

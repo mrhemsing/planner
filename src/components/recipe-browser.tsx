@@ -390,7 +390,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           {
             id: "favourites",
             label: `Favourites (${favouriteCount})`,
-            mobileLabel: `❤️ ${favouriteCount}`,
+            mobileLabel: `★ ${favouriteCount}`,
             ariaLabel: "Favourite recipes",
             browseLabel: "Browse all fav recipes",
           },
@@ -612,6 +612,21 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   return (
     <section className="grid gap-6">
+      {showFavouritesFilter ? (
+        <button
+          type="button"
+          onClick={() => showRecipeForFilter(activeFilter === "favourites" ? "all" : "favourites")}
+          aria-label={activeFilter === "favourites" ? "Show all recipes" : `${favouriteCount} favourite recipes`}
+          aria-pressed={activeFilter === "favourites"}
+          className={`recipe-tap-card fixed right-3 top-3 z-40 flex min-h-10 min-w-16 items-center justify-center gap-1.5 rounded-2xl border px-3 text-sm font-black text-amber-900 shadow-[0_8px_18px_rgba(146,64,14,0.18)] sm:hidden ${
+            activeFilter === "favourites" ? "border-amber-500 bg-amber-100" : "border-transparent bg-white hover:text-amber-950"
+          }`}
+        >
+          <FavouriteStarIcon filled={activeFilter === "favourites"} className="h-5 w-5" />
+          <span>{favouriteCount}</span>
+        </button>
+      ) : null}
+
       <div className="mt-4 px-1 py-1 sm:mt-4 sm:px-2">
         <div className="flex flex-col gap-5 sm:gap-4">
           <div className="flex items-start justify-between gap-4">
@@ -675,7 +690,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             onTouchStart={handleFilterSwipeStart}
             onTouchEnd={handleFilterSwipeEnd}
           >
-            {filters.map(renderFilterButton)}
+            {mobileTopFilters.map(renderFilterButton)}
           </div>
           <div className="hidden flex-col items-start gap-2 sm:flex">
             <div className="flex flex-wrap items-center justify-start gap-2">{filters.map(renderFilterButton)}</div>
