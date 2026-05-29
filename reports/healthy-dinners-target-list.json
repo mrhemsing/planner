@@ -2331,6 +2331,41 @@
       "id": "1025882",
       "slug": "pepper-steak-and-celery-stir-fry-with-lemon",
       "recipeId": "pepper-steak-and-celery-stir-fry-with-lemon"
+    },
+    {
+      "position": 334,
+      "url": "https://cooking.nytimes.com/recipes/779819310-salmon-tinga-with-cherry-tomatoes",
+      "id": "779819310",
+      "slug": "salmon-tinga-with-cherry-tomatoes",
+      "recipeId": "salmon-tinga-with-cherry-tomatoes"
+    },
+    {
+      "position": 335,
+      "url": "https://cooking.nytimes.com/recipes/779300654-roasted-eggplant-with-jammy-onions-and-ricotta",
+      "id": "779300654",
+      "slug": "roasted-eggplant-with-jammy-onions-and-ricotta",
+      "recipeId": "roasted-eggplant-with-jammy-onions-and-ricotta"
+    },
+    {
+      "position": 336,
+      "url": "https://cooking.nytimes.com/recipes/779127092-seared-zucchini-and-halloumi-in-red-wine-vinaigrette",
+      "id": "779127092",
+      "slug": "seared-zucchini-and-halloumi-in-red-wine-vinaigrette",
+      "recipeId": "seared-zucchini-and-halloumi-in-red-wine-vinaigrette"
+    },
+    {
+      "position": 337,
+      "url": "https://cooking.nytimes.com/recipes/779127920-chile-chicken-and-bean-guisado",
+      "id": "779127920",
+      "slug": "chile-chicken-and-bean-guisado",
+      "recipeId": "chile-chicken-and-bean-guisado"
+    },
+    {
+      "position": 338,
+      "url": "https://cooking.nytimes.com/recipes/779136732-spicy-tomato-and-pepper-curry",
+      "id": "779136732",
+      "slug": "spicy-tomato-and-pepper-curry",
+      "recipeId": "spicy-tomato-and-pepper-curry"
     }
   ]
 }

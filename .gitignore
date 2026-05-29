@@ -29,6 +29,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+.next-dev-*.log
+.next-smoke-*.log
+
+# local agent/runtime state
+.openclaw/
+.openclaw-logs/
+
+# scratch repair helpers
+/repair-recipes.js
+/scripts/tmp-*
 
 # env files (can opt-in for committing if needed)
 .env*

@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["soma2.b-average.com"],
+  allowedDevOrigins: ["soma.b-average.com", "soma2.b-average.com", "soma4.b-average.com"],
   async headers() {
     return [
       {
@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    qualities: [75, 92, 100],
     remotePatterns: [
       {
         protocol: "https",
