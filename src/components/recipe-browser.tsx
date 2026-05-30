@@ -94,9 +94,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const filterSwipeStartRef = useRef<{ x: number; y: number } | null>(null);
   const desktopRecipeListButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const recipeSheetScrollRef = useRef<HTMLDivElement | null>(null);
+  const desktopRecipeDialogScrollRef = useRef<HTMLDivElement | null>(null);
+  const desktopRecipeDialogScrollYRef = useRef(0);
   const recipeSheetScrollPositionsRef = useRef<Record<string, number>>({});
   const [hydrated, setHydrated] = useState(false);
   const [isRecipeSheetOpen, setRecipeSheetOpen] = useState(false);
+  const [isDesktopRecipeDialogOpen, setDesktopRecipeDialogOpen] = useState(false);
   const [recipeSearchQuery, setRecipeSearchQuery] = useState("");
   const [shareCopyStatus, setShareCopyStatus] = useState("");
   const [weekPlan, setWeekPlan] = useState<WeekPlan>(() => getEmptyWeekPlan());
@@ -526,6 +529,65 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, [activeFilter, isRecipeSheetOpen]);
 
   useEffect(() => {
+    if (!isDesktopRecipeDialogOpen) return;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousBodyPosition = document.body.style.position;
+    const previousBodyTop = document.body.style.top;
+    const previousBodyWidth = document.body.style.width;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    desktopRecipeDialogScrollYRef.current = window.scrollY;
+
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${desktopRecipeDialogScrollYRef.current}px`;
+    document.body.style.width = "100%";
+    document.documentElement.style.overflow = "hidden";
+    const frame = window.requestAnimationFrame(() => desktopRecipeDialogScrollRef.current?.focus());
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setDesktopRecipeDialogOpen(false);
+        return;
+      }
+
+      const scrollContainer = desktopRecipeDialogScrollRef.current;
+      if (!scrollContainer) return;
+
+      const scrollKeys = new Set(["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " "]);
+      if (!scrollKeys.has(event.key)) return;
+
+      event.preventDefault();
+
+      if (event.key === "Home") {
+        scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      if (event.key === "End") {
+        scrollContainer.scrollTo({ top: scrollContainer.scrollHeight, behavior: "smooth" });
+        return;
+      }
+
+      const direction = event.key === "ArrowUp" || event.key === "PageUp" || (event.key === " " && event.shiftKey) ? -1 : 1;
+      const amount = event.key.startsWith("Page") || event.key === " " ? scrollContainer.clientHeight * 0.85 : 56;
+      scrollContainer.scrollBy({ top: direction * amount, behavior: "smooth" });
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      document.body.style.overflow = previousBodyOverflow;
+      document.body.style.position = previousBodyPosition;
+      document.body.style.top = previousBodyTop;
+      document.body.style.width = previousBodyWidth;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      window.scrollTo(0, desktopRecipeDialogScrollYRef.current);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isDesktopRecipeDialogOpen]);
+
+  useEffect(() => {
     setRecipeSearchQuery("");
   }, [activeFilter]);
 
@@ -589,6 +651,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     setSelectedRecipeId(id);
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
+    if (window.innerWidth >= 1024) {
+      setDesktopRecipeDialogOpen(true);
+    }
     setShareCopyStatus("");
     setAddToWeekOpen(false);
     if (shareCopyStatusTimeoutRef.current) {
@@ -599,7 +664,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   useEffect(() => {
     function handleDesktopEnterSelect(event: KeyboardEvent) {
-      if (event.key !== "Enter" || window.innerWidth < 1024 || isRecipeSheetOpenRef.current || addToWeekOpenRef.current) return;
+      if (event.key !== "Enter" || window.innerWidth < 1024 || isRecipeSheetOpenRef.current || isDesktopRecipeDialogOpen || addToWeekOpenRef.current) return;
       if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
 
       const target = event.target;
@@ -635,7 +700,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
     window.addEventListener("keydown", handleDesktopEnterSelect);
     return () => window.removeEventListener("keydown", handleDesktopEnterSelect);
-  }, [recipeSheetRecipes, selectRecipe]);
+  }, [isDesktopRecipeDialogOpen, recipeSheetRecipes, selectRecipe]);
 
   const focusDesktopRecipeResult = (index: number) => {
     const recipe = recipeSheetRecipes[index];
@@ -654,6 +719,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     setSelectedRecipeId(dailyDinnerPickId);
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
+    setDesktopRecipeDialogOpen(false);
     window.history.replaceState(null, "", window.location.pathname);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -837,10 +903,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                         desktopRecipeListButtonRefs.current[recipe.id] = element;
                       }}
                       type="button"
-                      onClick={() => {
-                        setSelectedRecipeFromUrl(true);
-                        setSelectedRecipeId(recipe.id);
-                      }}
+                      onClick={() => selectRecipe(recipe.id)}
                       onKeyDown={(event) => {
                         if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
 
@@ -887,7 +950,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
             </div>
 
-            <div className="grid gap-3 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:self-start lg:overflow-y-auto lg:overscroll-contain lg:pr-2">
+            <div className="grid gap-3 lg:sticky lg:top-4 lg:self-start">
               {isShowingDailyPick ? (
                 <div className="hidden min-h-14 items-center gap-3 rounded-2xl border border-white bg-white px-5 text-lg font-black uppercase tracking-[0.08em] text-stone-900 shadow-sm lg:flex">
                   <span className="text-2xl leading-none" aria-hidden="true">🏅</span>
@@ -1130,6 +1193,176 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             </div>
           </div>
         </section>
+      ) : null}
+
+      {isDesktopRecipeDialogOpen && selectedRecipe ? (
+        <div
+          ref={desktopRecipeDialogScrollRef}
+          tabIndex={-1}
+          className="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-950/70 px-6 py-6 backdrop-blur-sm lg:block"
+          role="dialog"
+          aria-modal="true"
+          aria-label={selectedRecipe.title}
+          onClick={() => setDesktopRecipeDialogOpen(false)}
+        >
+          <article
+            className="mx-auto max-w-4xl rounded-[24px] border border-white/50 bg-white p-5 shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="sticky top-0 z-20 -mx-5 -mt-5 flex items-start justify-between gap-4 rounded-t-[24px] border-b border-stone-200 bg-white/96 px-5 py-4 backdrop-blur">
+              <div className="min-w-0">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-red-800">Full recipe</p>
+                <h2 className="mt-1 whitespace-normal break-words text-3xl font-black leading-tight text-stone-950">{selectedRecipe.title}</h2>
+              </div>
+              <button
+                type="button"
+                onClick={() => setDesktopRecipeDialogOpen(false)}
+                className="recipe-tap-card inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-stone-200 bg-stone-100 text-2xl font-black leading-none text-stone-700 shadow-sm transition hover:bg-stone-200 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+                aria-label="Close full recipe"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="relative mt-5 h-80 overflow-hidden rounded-[18px] bg-amber-100">
+              <Image
+                src={getRecipeImageSrc(selectedRecipe.imageUrl)}
+                alt={selectedRecipe.title}
+                fill
+                className="object-cover"
+                sizes="896px"
+                quality={92}
+              />
+              <button
+                type="button"
+                onClick={() => toggleFavourite(selectedRecipe.id)}
+                className={`absolute right-3 top-3 grid h-12 w-12 place-items-center rounded-full border shadow-lg backdrop-blur-sm transition ${
+                  favourites[selectedRecipe.id]
+                    ? "border-amber-200 bg-amber-100/95 text-amber-700"
+                    : "border-white/80 bg-white/90 text-stone-500 hover:text-amber-700"
+                }`}
+                aria-pressed={Boolean(favourites[selectedRecipe.id])}
+                aria-label={favourites[selectedRecipe.id] ? "Remove from favourites" : "Add to favourites"}
+              >
+                <FavouriteStarIcon filled={Boolean(favourites[selectedRecipe.id])} />
+              </button>
+            </div>
+
+            <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div className="min-w-0">
+                <p className="recipe-description-clamp text-lg font-semibold leading-8 text-stone-700">
+                  {cleanRecipeDescription(selectedRecipe.description)}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {selectedRecipe.prepTime ? <FilterChip label={`Prep ${selectedRecipe.prepTime}`} /> : null}
+                  {selectedRecipe.serves ? <FilterChip label={`Serves ${selectedRecipe.serves}`} /> : null}
+                </div>
+              </div>
+
+              <div className="relative shrink-0" data-add-week-menu>
+                <button
+                  type="button"
+                  onClick={() => setAddToWeekOpen((current) => !current)}
+                  className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
+                  aria-expanded={addToWeekOpen}
+                  aria-haspopup="menu"
+                >
+                  Add to Week
+                </button>
+                {addToWeekConfirmation ? (
+                  <p className="mt-2 rounded-full bg-emerald-50 px-3 py-1.5 text-center text-xs font-black uppercase tracking-[0.1em] text-emerald-800">
+                    Added to {addToWeekConfirmation}
+                  </p>
+                ) : null}
+                {addToWeekOpen ? (
+                  <div className="absolute right-0 top-full z-30 mt-2 w-80 overflow-hidden rounded-[18px] border border-stone-200 bg-white p-2 text-left shadow-2xl shadow-stone-950/20">
+                    <p className="px-3 py-2 text-[0.68rem] font-black uppercase tracking-[0.16em] text-red-800">Choose a day</p>
+                    <div className="grid gap-1">
+                      {WEEK_DAYS.map((day) => {
+                        const plannedRecipe = weekPlan[day]?.recipe ?? null;
+
+                        return (
+                          <button
+                            key={day}
+                            type="button"
+                            onClick={() => addSelectedRecipeToWeek(day)}
+                            className="grid grid-cols-[42px_minmax(0,1fr)] gap-3 rounded-[14px] px-3 py-2 text-left transition hover:bg-amber-50 focus:bg-amber-50 focus:outline-none"
+                            role="menuitem"
+                          >
+                            <span className="font-black text-red-900">{day}</span>
+                            <span className="min-w-0">
+                              <span className="block whitespace-normal break-words text-sm font-black leading-tight text-stone-950">{plannedRecipe?.title ?? "Empty"}</span>
+                              <span className="block text-xs font-semibold text-stone-500">{plannedRecipe ? "Swap this slot" : "Add here"}</span>
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            </div>
+
+            {selectedRecipe.ingredients?.length ? (
+              <section className="mt-5 rounded-[18px] border border-stone-200 bg-amber-50/70 p-4">
+                <h3 className="text-sm font-black uppercase tracking-[0.16em] text-red-800">Ingredients</h3>
+                <ul className="mt-3 grid gap-2 text-sm font-semibold text-stone-800 sm:grid-cols-2">
+                  {selectedRecipe.ingredients.map((ingredient, index) => {
+                    const ingredientKey = `${selectedRecipe.id}-${index}-${ingredient.item}`;
+                    const isChecked = Boolean(ingredientChecks[ingredientKey]);
+                    const ingredientText = abbreviateIngredientUnits(
+                      `${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim(),
+                    );
+                    const strikeClass = INGREDIENT_STRIKE_CLASSES[index % INGREDIENT_STRIKE_CLASSES.length];
+
+                    return (
+                      <li key={`${selectedRecipe.id}-dialog-ingredient-${index}`}>
+                        <label className="flex cursor-pointer items-start gap-3 rounded-[12px] bg-white px-3 py-2">
+                          <input
+                            type="checkbox"
+                            checked={isChecked}
+                            onChange={() => toggleIngredientCheck(ingredientKey)}
+                            className="mt-0.5 h-4 w-4 shrink-0 rounded border-stone-300 text-amber-600 focus:ring-amber-500"
+                          />
+                          <span className={isChecked ? `opacity-60 ${strikeClass}` : ""}>
+                            {ingredientText}
+                          </span>
+                        </label>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ) : null}
+
+            {selectedRecipe.instructions?.length ? (
+              <section className="mt-5 rounded-[18px] border border-stone-200 bg-white p-4">
+                <h3 className="text-sm font-black uppercase tracking-[0.16em] text-red-800">Instructions</h3>
+                <ol className="mt-3 grid gap-3 text-base leading-7 text-stone-700">
+                  {selectedRecipe.instructions.map((step, index) => (
+                    <li key={`${selectedRecipe.id}-dialog-step-${index}`} className="flex gap-3">
+                      <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-black text-amber-950">
+                        {index + 1}
+                      </span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ) : null}
+
+            <div className="mt-5 flex flex-wrap gap-3">
+              <a
+                href={selectedRecipe.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center border-b border-black text-sm font-normal text-black transition hover:border-black/70"
+              >
+                Open recipe on NYT Cooking
+              </a>
+            </div>
+          </article>
+        </div>
       ) : null}
 
       {isRecipeSheetOpen ? (
