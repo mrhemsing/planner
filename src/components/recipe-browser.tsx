@@ -887,7 +887,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
             </div>
 
-            <div className="grid gap-3 lg:sticky lg:top-4 lg:self-start">
+            <div className="grid gap-3 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:self-start lg:overflow-y-auto lg:overscroll-contain lg:pr-2">
               {isShowingDailyPick ? (
                 <div className="hidden min-h-14 items-center gap-3 rounded-2xl border border-white bg-white px-5 text-lg font-black uppercase tracking-[0.08em] text-stone-900 shadow-sm lg:flex">
                   <span className="text-2xl leading-none" aria-hidden="true">🏅</span>
