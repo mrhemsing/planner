@@ -1215,26 +1215,26 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             aria-label={selectedRecipe.title}
             onClick={(event) => event.stopPropagation()}
           >
+            <div className="recipe-drawer-header relative z-20 flex shrink-0 items-start justify-between gap-4 border-b border-stone-200 bg-white px-5 pb-4 pt-3">
+              <div className="min-w-0">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-red-800">Full recipe</p>
+                <h2 className="mt-1 whitespace-normal break-words text-3xl font-black leading-tight text-stone-950">{selectedRecipe.title}</h2>
+              </div>
+              <button
+                type="button"
+                onClick={() => setDesktopRecipeDialogOpen(false)}
+                className="recipe-tap-card inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-stone-200 bg-stone-100 text-2xl font-black leading-none text-stone-700 shadow-sm transition hover:bg-stone-200 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+                aria-label="Close full recipe"
+              >
+                ×
+              </button>
+            </div>
+
             <div
               ref={desktopRecipeDialogScrollRef}
               tabIndex={-1}
               className="recipe-drawer-scroll min-h-0 flex-1 overflow-y-auto outline-none"
             >
-              <div className="recipe-drawer-header sticky top-0 z-30 flex items-start justify-between gap-4 border-b border-stone-200 bg-white px-5 pb-4 pt-3">
-                <div className="min-w-0">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-red-800">Full recipe</p>
-                  <h2 className="mt-1 whitespace-normal break-words text-3xl font-black leading-tight text-stone-950">{selectedRecipe.title}</h2>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setDesktopRecipeDialogOpen(false)}
-                  className="recipe-tap-card inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-stone-200 bg-stone-100 text-2xl font-black leading-none text-stone-700 shadow-sm transition hover:bg-stone-200 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
-                  aria-label="Close full recipe"
-                >
-                  ×
-                </button>
-              </div>
-
               <div className="recipe-drawer-content px-5 pb-5 pt-5">
                 <div className="relative h-80 overflow-hidden rounded-[18px] bg-amber-100">
               <Image
