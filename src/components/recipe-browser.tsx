@@ -576,15 +576,22 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       const savedScrollY = desktopRecipeDialogScrollYRef.current;
+      const previousHtmlScrollBehavior = document.documentElement.style.scrollBehavior;
+      const previousBodyScrollBehavior = document.body.style.scrollBehavior;
+
       window.cancelAnimationFrame(frame);
+      document.documentElement.style.scrollBehavior = "auto";
+      document.body.style.scrollBehavior = "auto";
       document.body.style.overflow = previousBodyOverflow;
       document.body.style.position = previousBodyPosition;
       document.body.style.top = previousBodyTop;
       document.body.style.width = previousBodyWidth;
       document.documentElement.style.overflow = previousHtmlOverflow;
       window.scrollTo(0, savedScrollY);
-      window.requestAnimationFrame(() => window.scrollTo(0, savedScrollY));
-      window.setTimeout(() => window.scrollTo(0, savedScrollY), 0);
+      window.requestAnimationFrame(() => {
+        document.documentElement.style.scrollBehavior = previousHtmlScrollBehavior;
+        document.body.style.scrollBehavior = previousBodyScrollBehavior;
+      });
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isDesktopRecipeDialogOpen]);
