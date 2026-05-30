@@ -536,7 +536,6 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     const previousBodyTop = document.body.style.top;
     const previousBodyWidth = document.body.style.width;
     const previousHtmlOverflow = document.documentElement.style.overflow;
-    desktopRecipeDialogScrollYRef.current = window.scrollY;
 
     document.body.style.overflow = "hidden";
     document.body.style.position = "fixed";
@@ -576,13 +575,16 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => {
+      const savedScrollY = desktopRecipeDialogScrollYRef.current;
       window.cancelAnimationFrame(frame);
       document.body.style.overflow = previousBodyOverflow;
       document.body.style.position = previousBodyPosition;
       document.body.style.top = previousBodyTop;
       document.body.style.width = previousBodyWidth;
       document.documentElement.style.overflow = previousHtmlOverflow;
-      window.scrollTo(0, desktopRecipeDialogScrollYRef.current);
+      window.scrollTo(0, savedScrollY);
+      window.requestAnimationFrame(() => window.scrollTo(0, savedScrollY));
+      window.setTimeout(() => window.scrollTo(0, savedScrollY), 0);
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isDesktopRecipeDialogOpen]);
@@ -647,11 +649,16 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   };
 
   const selectRecipe = useCallback((id: string) => {
+    const shouldOpenDesktopDrawer = window.innerWidth >= 1024;
+    if (shouldOpenDesktopDrawer) {
+      desktopRecipeDialogScrollYRef.current = window.scrollY;
+    }
+
     setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(id);
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
-    if (window.innerWidth >= 1024) {
+    if (shouldOpenDesktopDrawer) {
       setDesktopRecipeDialogOpen(true);
     }
     setShareCopyStatus("");
@@ -950,7 +957,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
             </div>
 
-            <div className="grid gap-3 lg:sticky lg:top-4 lg:self-start">
+            <div className="grid gap-3 lg:self-start">
               {isShowingDailyPick ? (
                 <div className="hidden min-h-14 items-center gap-3 rounded-2xl border border-white bg-white px-5 text-lg font-black uppercase tracking-[0.08em] text-stone-900 shadow-sm lg:flex">
                   <span className="text-2xl leading-none" aria-hidden="true">🏅</span>
@@ -1197,19 +1204,19 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
       {isDesktopRecipeDialogOpen && selectedRecipe ? (
         <div
-          ref={desktopRecipeDialogScrollRef}
-          tabIndex={-1}
-          className="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-950/70 px-6 py-6 backdrop-blur-sm lg:block"
-          role="dialog"
-          aria-modal="true"
-          aria-label={selectedRecipe.title}
+          className="fixed inset-0 z-50 hidden bg-stone-950/55 backdrop-blur-sm lg:block"
           onClick={() => setDesktopRecipeDialogOpen(false)}
         >
-          <article
-            className="mx-auto max-w-4xl rounded-[24px] border border-white/50 bg-white p-5 shadow-2xl"
+          <div
+            ref={desktopRecipeDialogScrollRef}
+            tabIndex={-1}
+            className="ml-auto h-full w-[min(760px,calc(100vw-96px))] overflow-y-auto border-l border-white/60 bg-white p-5 shadow-2xl outline-none"
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedRecipe.title}
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="sticky top-0 z-20 -mx-5 -mt-5 flex items-start justify-between gap-4 rounded-t-[24px] border-b border-stone-200 bg-white/96 px-5 py-4 backdrop-blur">
+            <div className="sticky top-0 z-20 -mx-5 -mt-5 flex items-start justify-between gap-4 border-b border-stone-200 bg-white/96 px-5 py-4 backdrop-blur">
               <div className="min-w-0">
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-red-800">Full recipe</p>
                 <h2 className="mt-1 whitespace-normal break-words text-3xl font-black leading-tight text-stone-950">{selectedRecipe.title}</h2>
@@ -1361,7 +1368,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 Open recipe on NYT Cooking
               </a>
             </div>
-          </article>
+          </div>
         </div>
       ) : null}
 
