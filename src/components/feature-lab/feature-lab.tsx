@@ -30,6 +30,7 @@ const HAND_STRIKE_CLASSES = [
   "hand-strike hand-strike-2",
   "hand-strike hand-strike-4",
 ];
+const warmedThumbnailSrcs = new Set<string>();
 
 const days: Day[] = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 
@@ -339,6 +340,7 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
             onView={setDetailRecipe}
             favourites={favourites}
             showFavouriteRecipes={showWeekFavouriteRecipes}
+            setShowFavouriteRecipes={setShowWeekFavouriteRecipes}
           />
         ) : null}
 
@@ -419,6 +421,7 @@ function WeeklyPlanner({
   onView,
   favourites,
   showFavouriteRecipes,
+  setShowFavouriteRecipes,
 }: {
   recipes: RecipeLibraryEntry[];
   plan: Plan;
@@ -429,12 +432,14 @@ function WeeklyPlanner({
   onView: (recipe: RecipeLibraryEntry) => void;
   favourites: Record<string, boolean>;
   showFavouriteRecipes: boolean;
+  setShowFavouriteRecipes: (value: boolean | ((current: boolean) => boolean)) => void;
 }) {
   const [recipeToPlace, setRecipeToPlace] = useState<RecipeLibraryEntry | null>(null);
   const [isDesktopDragEnabled, setDesktopDragEnabled] = useState(false);
   const [draggingRecipe, setDraggingRecipe] = useState<RecipeLibraryEntry | null>(null);
   const [dragOverDay, setDragOverDay] = useState<Day | null>(null);
   const draggingRecipeRef = useRef<RecipeLibraryEntry | null>(null);
+  const dragPreviewRef = useRef<HTMLDivElement | null>(null);
   const favouriteCount = useMemo(() => Object.values(favourites).filter(Boolean).length, [favourites]);
   const isFavouriteFilterActive = showFavouriteRecipes && favouriteCount > 0;
   const visibleRecipes = useMemo(
@@ -452,6 +457,31 @@ function WeeklyPlanner({
     return () => media.removeEventListener("change", updateDesktopDrag);
   }, []);
 
+  useEffect(() => {
+    const thumbnailSrcs = visibleRecipes.map((recipe) => getRecipeImageSrc(recipe.imageUrl)).filter((src) => !warmedThumbnailSrcs.has(src));
+    if (!thumbnailSrcs.length) return;
+
+    let cancelled = false;
+    const warmThumbnailBatch = () => {
+      for (const src of thumbnailSrcs) {
+        if (cancelled) return;
+        warmedThumbnailSrcs.add(src);
+        const image = new window.Image();
+        image.decoding = "async";
+        image.src = src;
+      }
+    };
+
+    const idleCallback = "requestIdleCallback" in window ? window.requestIdleCallback(warmThumbnailBatch, { timeout: 1500 }) : null;
+    const timeout = idleCallback === null ? window.setTimeout(warmThumbnailBatch, 250) : null;
+
+    return () => {
+      cancelled = true;
+      if (idleCallback !== null) window.cancelIdleCallback(idleCallback);
+      if (timeout !== null) window.clearTimeout(timeout);
+    };
+  }, [visibleRecipes]);
+
   function placeRecipe(day: Day) {
     if (!recipeToPlace) return;
     setDayRecipe(day, recipeToPlace);
@@ -466,6 +496,30 @@ function WeeklyPlanner({
     onView(recipe);
   }
 
+  function removeDragPreview() {
+    dragPreviewRef.current?.remove();
+    dragPreviewRef.current = null;
+  }
+
+  function createDragPreview(recipe: RecipeLibraryEntry, loadedImageSrc?: string) {
+    removeDragPreview();
+
+    const preview = document.createElement("div");
+    preview.className = "pointer-events-none fixed -left-[9999px] -top-[9999px] h-[72px] w-[72px] overflow-hidden rounded-[14px] bg-amber-100 shadow-xl shadow-stone-950/25";
+
+    const image = document.createElement("img");
+    image.src = loadedImageSrc ?? getRecipeImageSrc(recipe.imageUrl);
+    image.alt = "";
+    image.className = "h-full w-full object-cover";
+    image.draggable = false;
+
+    preview.appendChild(image);
+    document.body.appendChild(preview);
+    dragPreviewRef.current = preview;
+
+    return preview;
+  }
+
   function startRecipeDrag(event: DragEvent<HTMLButtonElement>, recipe: RecipeLibraryEntry) {
     if (!isDesktopDragEnabled) {
       event.preventDefault();
@@ -476,6 +530,8 @@ function WeeklyPlanner({
     draggingRecipeRef.current = recipe;
     event.dataTransfer.effectAllowed = "copy";
     event.dataTransfer.setData("application/x-planner-recipe-id", recipe.id);
+    const loadedImage = event.currentTarget.querySelector("img");
+    event.dataTransfer.setDragImage(createDragPreview(recipe, loadedImage?.currentSrc || loadedImage?.src), 36, 36);
   }
 
   function dragRecipeOverDay(event: DragEvent<HTMLDivElement>, day: Day) {
@@ -501,6 +557,7 @@ function WeeklyPlanner({
     draggingRecipeRef.current = null;
     setDraggingRecipe(null);
     setDragOverDay(null);
+    removeDragPreview();
   }
 
   return (
@@ -529,7 +586,7 @@ function WeeklyPlanner({
           </div>
         ) : null}
 
-        <div className="sticky top-0 z-30 -mx-4 mt-3 bg-white pb-2 pt-1 shadow-sm shadow-stone-200/70 sm:static sm:mx-0 sm:mt-4 sm:bg-transparent sm:p-0 sm:shadow-none">
+        <div className="sticky top-0 z-30 -mx-4 mt-3 bg-white pb-2 pt-1 shadow-sm shadow-stone-200/70 sm:mx-0 sm:mt-3 sm:pb-3 sm:pt-3 lg:top-2 lg:z-40 lg:rounded-[22px] lg:border lg:border-amber-100/80 lg:bg-white/95 lg:px-3 lg:shadow-lg lg:shadow-red-950/10">
           <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 pl-6 pr-4 scroll-pl-6 sm:grid sm:grid-cols-5 sm:overflow-visible sm:px-0 sm:pb-0 sm:scroll-pl-0">
             {days.map((day) => {
               const slot = plan[day];
@@ -604,29 +661,45 @@ function WeeklyPlanner({
             })}
           </div>
         </div>
-        <div className="relative mt-4">
-          <input
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-            onDragOver={(event) => {
-              if (!draggingRecipeRef.current) return;
-              event.preventDefault();
-              event.dataTransfer.dropEffect = "none";
-            }}
-            onDrop={(event) => {
-              if (!draggingRecipeRef.current) return;
-              event.preventDefault();
-            }}
-            placeholder="Search recipes to add..."
-            className="w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 pr-12 text-base font-semibold outline-none focus:border-red-800"
-          />
-          <SearchClearButton show={Boolean(search)} onClear={() => setSearch("")} />
+        <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+          <div className="relative min-w-0 flex-1">
+            <input
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              onDragOver={(event) => {
+                if (!draggingRecipeRef.current) return;
+                event.preventDefault();
+                event.dataTransfer.dropEffect = "none";
+              }}
+              onDrop={(event) => {
+                if (!draggingRecipeRef.current) return;
+                event.preventDefault();
+              }}
+              placeholder="Search recipes to add..."
+              className="w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 pr-12 text-base font-semibold outline-none focus:border-red-800"
+            />
+            <SearchClearButton show={Boolean(search)} onClear={() => setSearch("")} />
+          </div>
+          {favouriteCount > 0 ? (
+            <button
+              type="button"
+              onClick={() => setShowFavouriteRecipes((current) => !current)}
+              aria-label={isFavouriteFilterActive ? "Show all recipes" : `${favouriteCount} favourite recipes`}
+              aria-pressed={isFavouriteFilterActive}
+              className={`hidden shrink-0 items-center justify-center gap-1.5 rounded-2xl border px-4 py-3 text-sm font-black shadow-sm transition sm:inline-flex ${
+                isFavouriteFilterActive ? "border-amber-500 bg-amber-100 text-amber-950" : "border-stone-200 bg-white text-amber-900 hover:text-amber-950"
+              }`}
+            >
+              <StarIcon filled={isFavouriteFilterActive} className="h-4 w-4" />
+              <span>Favourites ({favouriteCount})</span>
+            </button>
+          ) : null}
         </div>
         <div className="mt-3 grid gap-2">
           {visibleRecipes.map((recipe) => (
               <article
                 key={recipe.id}
-                className={`group mr-3 grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2 rounded-[16px] border p-2 text-left shadow-sm transition-colors lg:mr-4 lg:gap-3 ${
+                className={`group grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2 rounded-[16px] border p-2 text-left shadow-sm transition-colors lg:gap-3 ${
                 recipeToPlace?.id === recipe.id || draggingRecipe?.id === recipe.id ? "border-red-800 bg-red-50" : "border-stone-200 bg-white"
               }`}
               >
@@ -651,7 +724,7 @@ function WeeklyPlanner({
                       <circle cx="9" cy="16" r="1.4" />
                     </svg>
                   </span>
-                  <Thumb recipe={recipe} />
+                  <Thumb recipe={recipe} loading="eager" />
                   <span className="min-w-0 flex-1 py-0.5">
                     <span className="block whitespace-normal break-words text-sm font-black leading-snug text-stone-950 sm:text-base">{recipe.title}</span>
                     <span className="text-sm font-semibold text-stone-500">{recipe.prepTime ?? "Weeknight"} · {recipe.serves ? `Serves ${recipe.serves}` : "Dinner"}</span>
@@ -783,15 +856,9 @@ function SmartFilters({
     setShowHiddenRecipes(false);
   }
 
-  function applySuggestedFilters(nextFilters: Partial<SmartFilterSelections>, nextSearch = "") {
-    setActiveFilters({ ...getEmptySmartFilterSelections(), ...nextFilters });
-    setSearch(nextSearch);
-    setShowHiddenRecipes(false);
-  }
-
   return (
     <section className="grid gap-4 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-        <aside className="rounded-[20px] border border-white/55 bg-white/95 p-4 shadow-xl shadow-red-950/15 backdrop-blur">
+        <aside className="rounded-[20px] border border-white/55 bg-white p-4 shadow-xl shadow-red-950/15">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-red-800">Filters</p>
           <p className="mt-1 text-xs font-semibold leading-5 text-stone-500">Choose one or more inside a group. Groups stack together.</p>
 
@@ -896,34 +963,22 @@ function SmartFilters({
         </aside>
 
         <div className="min-w-0">
-          <div className="flex flex-col gap-3 rounded-[20px] border border-white/55 bg-white/95 p-4 shadow-xl shadow-red-950/15 backdrop-blur sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 rounded-[20px] border border-white/55 bg-white p-4 shadow-xl shadow-red-950/15 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
               <p className="text-sm font-black text-stone-950">
                 Showing {visibleRecipes.length} of {recipes.length} recipes
                 {showHiddenRecipes && hiddenRecipeCount ? <span className="text-stone-500"> · hidden recipes included</span> : null}
               </p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {selectedSummaries.map((label) => (
-                  <span key={label} className="rounded-full bg-red-50 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-red-800">{label}</span>
-                ))}
-                {hiddenIngredients.map((ingredient) => (
-                  <span key={`hide-${ingredient}`} className="rounded-full bg-stone-100 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-stone-700">Hiding: {labelizeIngredient(ingredient)}</span>
-                ))}
-                {!hasActiveFilters ? (
-                  <span className="flex flex-wrap items-center gap-2 text-sm font-semibold text-stone-500">
-                    <span>No active filters. Try:</span>
-                    <button type="button" onClick={() => applySuggestedFilters({ time: ["under30"], diet: ["vegetarian"] })} className="rounded-full bg-red-50 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-red-800">
-                      Quick vegetarian
-                    </button>
-                    <button type="button" onClick={() => applySuggestedFilters({ method: ["sheetPan"] })} className="rounded-full bg-red-50 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-red-800">
-                      Sheet-pan dinners
-                    </button>
-                    <button type="button" onClick={() => applySuggestedFilters({ time: ["under30"] })} className="rounded-full bg-red-50 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-red-800">
-                      Under 30 min
-                    </button>
-                  </span>
-                ) : null}
-              </div>
+              {selectedSummaries.length || hiddenIngredients.length ? (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {selectedSummaries.map((label) => (
+                    <span key={label} className="rounded-full bg-red-50 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-red-800">{label}</span>
+                  ))}
+                  {hiddenIngredients.map((ingredient) => (
+                    <span key={`hide-${ingredient}`} className="rounded-full bg-stone-100 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-stone-700">Hiding: {labelizeIngredient(ingredient)}</span>
+                  ))}
+                </div>
+              ) : null}
             </div>
             <div className="flex shrink-0 items-center gap-2">
               {hasActiveFilters ? (
@@ -964,7 +1019,7 @@ function SmartFilters({
               <button
                 type="button"
                 onClick={() => setVisibleCount((current) => current + 30)}
-                className="rounded-[16px] border border-white/55 bg-white/95 px-4 py-3 text-sm font-black uppercase tracking-[0.12em] text-red-800 shadow-lg shadow-red-950/10 hover:bg-red-50"
+                className="rounded-[16px] border border-white/55 bg-white px-4 py-3 text-sm font-black uppercase tracking-[0.12em] text-red-800 shadow-lg shadow-red-950/10 hover:bg-red-50"
               >
                 Show more recipes ({visibleRecipes.length - visibleCount} left)
               </button>
@@ -1426,17 +1481,57 @@ function RecipeDetail({
   onClose: () => void;
   onCook: (recipe: RecipeLibraryEntry) => void;
 }) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    requestAnimationFrame(() => scrollContainerRef.current?.focus());
+
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        onClose();
+        return;
+      }
+
+      const scrollContainer = scrollContainerRef.current;
+      if (!scrollContainer) return;
+
+      const scrollKeys = new Set(["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " "]);
+      if (!scrollKeys.has(event.key)) return;
+
+      event.preventDefault();
+
+      if (event.key === "Home") {
+        scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      if (event.key === "End") {
+        scrollContainer.scrollTo({ top: scrollContainer.scrollHeight, behavior: "smooth" });
+        return;
+      }
+
+      const direction = event.key === "ArrowUp" || event.key === "PageUp" || (event.key === " " && event.shiftKey) ? -1 : 1;
+      const amount = event.key.startsWith("Page") || event.key === " " ? scrollContainer.clientHeight * 0.85 : 56;
+      scrollContainer.scrollBy({ top: direction * amount, behavior: "smooth" });
     }
 
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [onClose]);
 
   return (
     <div
+      ref={scrollContainerRef}
+      tabIndex={-1}
       className="fixed inset-0 z-40 overflow-y-auto bg-stone-950/70 px-4 py-5 backdrop-blur-sm"
       role="dialog"
       aria-modal="true"
@@ -1685,13 +1780,27 @@ function GroceryList({ groceryList }: { groceryList: Record<GroceryGroup, string
   function printList() {
     if (!exportText) return;
 
-    const printWindow = window.open("", "_blank", "noopener,noreferrer");
-    if (!printWindow) {
-      setExportStatus("Print blocked");
+    const printFrame = document.createElement("iframe");
+    printFrame.setAttribute("aria-hidden", "true");
+    printFrame.style.position = "fixed";
+    printFrame.style.right = "0";
+    printFrame.style.bottom = "0";
+    printFrame.style.width = "1px";
+    printFrame.style.height = "1px";
+    printFrame.style.border = "0";
+    printFrame.style.opacity = "0";
+    printFrame.style.pointerEvents = "none";
+    document.body.appendChild(printFrame);
+
+    const printWindow = printFrame.contentWindow;
+    const printDocument = printWindow?.document;
+    if (!printWindow || !printDocument) {
+      printFrame.remove();
+      setExportStatus("Print failed");
       return;
     }
 
-    printWindow.document.write(`
+    printDocument.write(`
       <!doctype html>
       <html>
         <head>
@@ -1708,10 +1817,24 @@ function GroceryList({ groceryList }: { groceryList: Record<GroceryGroup, string
         </body>
       </html>
     `);
-    printWindow.document.close();
-    printWindow.focus();
-    printWindow.print();
-    setExportStatus("Print opened");
+    printDocument.close();
+
+    const cleanupPrintFrame = () => {
+      window.setTimeout(() => printFrame.remove(), 500);
+    };
+
+    printWindow.onafterprint = cleanupPrintFrame;
+    window.setTimeout(() => {
+      try {
+        printWindow.focus();
+        printWindow.print();
+        setExportStatus("Print opened");
+        window.setTimeout(() => printFrame.remove(), 60000);
+      } catch {
+        printFrame.remove();
+        setExportStatus("Print failed");
+      }
+    }, 100);
   }
 
   const header = (
@@ -1731,8 +1854,8 @@ function GroceryList({ groceryList }: { groceryList: Record<GroceryGroup, string
             </span>
           </div>
           {checkedCount ? (
-            <button type="button" onClick={clearChecks} className="text-xs font-black uppercase tracking-[0.12em] text-stone-500 underline-offset-4 hover:text-red-800 hover:underline">
-              Clear checks
+            <button type="button" onClick={clearChecks} className="text-xs font-black uppercase tracking-[0.12em] text-stone-500 underline-offset-4 hover:text-red-800 hover:underline sm:ml-3">
+              Clear checked items
             </button>
           ) : null}
         </div>
@@ -2022,7 +2145,7 @@ function MiniRecipe({ recipe }: { recipe: RecipeLibraryEntry }) {
   );
 }
 
-function Thumb({ recipe, variant = "result" }: { recipe: RecipeLibraryEntry; variant?: "result" | "slot" }) {
+function Thumb({ recipe, variant = "result", loading = "lazy" }: { recipe: RecipeLibraryEntry; variant?: "result" | "slot"; loading?: "eager" | "lazy" }) {
   const className =
     variant === "slot"
       ? "relative block h-14 w-14 shrink-0 overflow-hidden rounded-[12px] bg-amber-100 sm:h-16 sm:w-full"
@@ -2031,7 +2154,7 @@ function Thumb({ recipe, variant = "result" }: { recipe: RecipeLibraryEntry; var
 
   return (
     <span className={className}>
-      <Image src={getRecipeImageSrc(recipe.imageUrl)} alt="" fill className="object-cover" sizes={sizes} quality={92} />
+      <Image src={getRecipeImageSrc(recipe.imageUrl)} alt="" fill className="object-cover" sizes={sizes} quality={92} loading={loading} unoptimized />
     </span>
   );
 }

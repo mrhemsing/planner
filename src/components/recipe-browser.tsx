@@ -20,6 +20,7 @@ const INGREDIENT_STRIKE_CLASSES = [
 const DAILY_PICK_REFRESH_SALT = "2026-05-29-refresh-1";
 const DAILY_PICK_ROTATION_ANCHOR_DATE = "2026-05-01";
 const DAILY_PICK_RECENT_HISTORY_DAYS = 21;
+const warmedHomepageThumbnailSrcs = new Set<string>();
 const VEGETARIAN_CATEGORY_OVERRIDES = new Set([
   "chickpea-noodle-soup",
   "i-cant-believe-its-not-chicken-super-savory-grated-tofu",
@@ -323,6 +324,33 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     });
   }, [filteredRecipes, recipeSearchQuery]);
 
+  useEffect(() => {
+    const thumbnailSrcs = recipeSheetRecipes
+      .map((recipe) => getRecipeImageSrc(recipe.imageUrl))
+      .filter((src) => !warmedHomepageThumbnailSrcs.has(src));
+    if (!thumbnailSrcs.length) return;
+
+    let cancelled = false;
+    const warmThumbnailBatch = () => {
+      for (const src of thumbnailSrcs) {
+        if (cancelled) return;
+        warmedHomepageThumbnailSrcs.add(src);
+        const image = new window.Image();
+        image.decoding = "async";
+        image.src = src;
+      }
+    };
+
+    const idleCallback = "requestIdleCallback" in window ? window.requestIdleCallback(warmThumbnailBatch, { timeout: 1200 }) : null;
+    const timeout = idleCallback === null ? window.setTimeout(warmThumbnailBatch, 200) : null;
+
+    return () => {
+      cancelled = true;
+      if (idleCallback !== null) window.cancelIdleCallback(idleCallback);
+      if (timeout !== null) window.clearTimeout(timeout);
+    };
+  }, [recipeSheetRecipes]);
+
   const dailyFilteredPickId = useMemo(
     () => getUniqueDailyPickIdForFilter(activeFilter, sortedRecipes, dailyDateKey, favourites),
     [activeFilter, dailyDateKey, favourites, sortedRecipes],
@@ -556,7 +584,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     }
   };
 
-  const selectRecipe = (id: string) => {
+  const selectRecipe = useCallback((id: string) => {
     setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(id);
     setRecipeSearchQuery("");
@@ -567,7 +595,47 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       window.clearTimeout(shareCopyStatusTimeoutRef.current);
       shareCopyStatusTimeoutRef.current = null;
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    function handleDesktopEnterSelect(event: KeyboardEvent) {
+      if (event.key !== "Enter" || window.innerWidth < 1024 || isRecipeSheetOpenRef.current || addToWeekOpenRef.current) return;
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
+
+      const target = event.target;
+      if (target instanceof Element) {
+        const tagName = target.tagName.toLowerCase();
+        if (target.closest("button, a, input, textarea, select") || tagName === "summary" || target.getAttribute("contenteditable") === "true") {
+          return;
+        }
+      }
+
+      const viewportTarget = window.innerHeight / 2;
+      let closestRecipeId = "";
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      for (const recipe of recipeSheetRecipes) {
+        const row = desktopRecipeListButtonRefs.current[recipe.id];
+        if (!row) continue;
+
+        const rect = row.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) continue;
+
+        const distance = Math.abs(rect.top + rect.height / 2 - viewportTarget);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestRecipeId = recipe.id;
+        }
+      }
+
+      if (!closestRecipeId) return;
+      event.preventDefault();
+      selectRecipe(closestRecipeId);
+    }
+
+    window.addEventListener("keydown", handleDesktopEnterSelect);
+    return () => window.removeEventListener("keydown", handleDesktopEnterSelect);
+  }, [recipeSheetRecipes, selectRecipe]);
 
   const focusDesktopRecipeResult = (index: number) => {
     const recipe = recipeSheetRecipes[index];
@@ -605,7 +673,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         }`}
       >
         <span className="sm:hidden">{filter.mobileLabel}</span>
-        <span className="hidden sm:inline">{filter.label}</span>
+        <span className="hidden items-center gap-1.5 sm:inline-flex">
+          {filter.id === "favourites" ? <FavouriteStarIcon filled={isActive} className="h-4 w-4" /> : null}
+          <span>{filter.label}</span>
+        </span>
       </button>
     );
   };
@@ -716,7 +787,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           className="rounded-[24px] border border-amber-200 bg-white p-5 shadow-sm shadow-amber-100/40 sm:p-6"
         >
           <div className="grid gap-5 lg:grid-cols-[minmax(260px,35fr)_minmax(0,65fr)] lg:items-start">
-            <div className={`${isShowingDailyPick ? "" : "hidden lg:block"} lg:rounded-[20px] lg:border lg:border-stone-300 lg:bg-white lg:p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto`}>
+            <div className={`${isShowingDailyPick ? "" : "hidden lg:block"} lg:rounded-[20px] lg:border lg:border-stone-300 lg:bg-white lg:p-4`}>
               {isShowingDailyPick ? (
                 <div className="lg:hidden">
                   <p className="flex items-center gap-2 rounded-[16px] border border-white bg-white px-4 py-3 text-base font-semibold text-stone-900 shadow-sm">
@@ -793,6 +864,8 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                             className="object-cover"
                             sizes="144px"
                             quality={100}
+                            loading="eager"
+                            unoptimized
                           />
                         </div>
                         <span className="min-w-0">
