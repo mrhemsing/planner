@@ -1588,6 +1588,39 @@ input:focus-visible {
   line-height: 1;
 }
 
+.recipe-drawer-backdrop {
+  isolation: isolate;
+}
+
+.recipe-drawer-panel {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.recipe-drawer-scroll {
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+
+.recipe-drawer-header {
+  isolation: isolate;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: transform;
+  box-shadow: 0 1px 0 rgba(214, 211, 209, 0.9);
+}
+
+.recipe-drawer-content {
+  position: relative;
+  z-index: 0;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
 @media (min-width: 640px) {
   .royale-recipe-overlay {
     place-items: center;

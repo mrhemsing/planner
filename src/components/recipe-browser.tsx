@@ -1204,12 +1204,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
       {isDesktopRecipeDialogOpen && selectedRecipe ? (
         <div
-          className="fixed inset-0 z-50 hidden bg-stone-950/55 backdrop-blur-sm lg:block"
+          className="recipe-drawer-backdrop fixed inset-0 z-50 hidden bg-stone-950/55 lg:block"
           onClick={() => setDesktopRecipeDialogOpen(false)}
         >
           <div
             tabIndex={-1}
-            className="ml-auto flex h-full w-[min(760px,calc(100vw-96px))] flex-col overflow-hidden border-l border-white/60 bg-white shadow-2xl outline-none"
+            className="recipe-drawer-panel ml-auto flex h-full w-[min(760px,calc(100vw-96px))] flex-col overflow-hidden border-l border-white/60 bg-white shadow-2xl outline-none"
             role="dialog"
             aria-modal="true"
             aria-label={selectedRecipe.title}
@@ -1218,9 +1218,9 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             <div
               ref={desktopRecipeDialogScrollRef}
               tabIndex={-1}
-              className="min-h-0 flex-1 overflow-y-auto outline-none"
+              className="recipe-drawer-scroll min-h-0 flex-1 overflow-y-auto outline-none"
             >
-              <div className="sticky top-0 z-30 flex items-start justify-between gap-4 border-b border-stone-200 bg-white px-5 pb-4 pt-3 shadow-sm shadow-stone-200/50">
+              <div className="recipe-drawer-header sticky top-0 z-30 flex items-start justify-between gap-4 border-b border-stone-200 bg-white px-5 pb-4 pt-3">
                 <div className="min-w-0">
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-red-800">Full recipe</p>
                   <h2 className="mt-1 whitespace-normal break-words text-3xl font-black leading-tight text-stone-950">{selectedRecipe.title}</h2>
@@ -1235,7 +1235,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                 </button>
               </div>
 
-              <div className="px-5 pb-5 pt-5">
+              <div className="recipe-drawer-content px-5 pb-5 pt-5">
                 <div className="relative h-80 overflow-hidden rounded-[18px] bg-amber-100">
               <Image
                 src={getRecipeImageSrc(selectedRecipe.imageUrl)}
