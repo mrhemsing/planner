@@ -120,7 +120,7 @@ export async function generateMetadata({
 
 export default function Home() {
   return (
-    <main className="red-texture-background min-h-screen overflow-x-hidden px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
+    <main className="red-texture-background min-h-screen overflow-x-clip px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
         <RecipeBrowser
           sections={[
