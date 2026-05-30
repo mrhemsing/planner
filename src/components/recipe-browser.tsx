@@ -1208,15 +1208,14 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           onClick={() => setDesktopRecipeDialogOpen(false)}
         >
           <div
-            ref={desktopRecipeDialogScrollRef}
             tabIndex={-1}
-            className="ml-auto h-full w-[min(760px,calc(100vw-96px))] overflow-y-auto border-l border-white/60 bg-white p-5 shadow-2xl outline-none"
+            className="ml-auto flex h-full w-[min(760px,calc(100vw-96px))] flex-col overflow-hidden border-l border-white/60 bg-white shadow-2xl outline-none"
             role="dialog"
             aria-modal="true"
             aria-label={selectedRecipe.title}
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="sticky top-0 z-20 -mx-5 -mt-5 flex items-start justify-between gap-4 border-b border-stone-200 bg-white/96 px-5 py-4 backdrop-blur">
+            <div className="z-20 flex shrink-0 items-start justify-between gap-4 border-b border-stone-200 bg-white px-5 py-5">
               <div className="min-w-0">
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-red-800">Full recipe</p>
                 <h2 className="mt-1 whitespace-normal break-words text-3xl font-black leading-tight text-stone-950">{selectedRecipe.title}</h2>
@@ -1231,7 +1230,12 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </button>
             </div>
 
-            <div className="relative mt-5 h-80 overflow-hidden rounded-[18px] bg-amber-100">
+            <div
+              ref={desktopRecipeDialogScrollRef}
+              tabIndex={-1}
+              className="min-h-0 flex-1 overflow-y-auto px-5 pb-5 pt-5 outline-none"
+            >
+              <div className="relative h-80 overflow-hidden rounded-[18px] bg-amber-100">
               <Image
                 src={getRecipeImageSrc(selectedRecipe.imageUrl)}
                 alt={selectedRecipe.title}
@@ -1367,6 +1371,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               >
                 Open recipe on NYT Cooking
               </a>
+              </div>
             </div>
           </div>
         </div>
