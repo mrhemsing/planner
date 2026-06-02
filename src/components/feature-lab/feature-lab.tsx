@@ -25,6 +25,7 @@ const FRIDGE_WEEK_STORAGE_KEY = "five-day-feature-lab-fridge-week";
 const FRIDGE_RECENT_STORAGE_KEY = "five-day-feature-lab-fridge-recent";
 const WEEK_PLAN_STORAGE_KEY = "five-day-feature-lab-plan";
 const FAVOURITES_STORAGE_KEY = "princess-planner-favourites";
+const RECIPE_INGREDIENTS_STORAGE_KEY = "princess-planner-ingredient-checks";
 const HIDDEN_INGREDIENTS_STORAGE_KEY = "five-day-feature-lab-hidden-ingredients";
 const SMART_FILTER_SEARCH_PARAM = "search";
 const SMART_FILTER_HIDDEN_PARAM = "hide";
@@ -1586,6 +1587,8 @@ function RecipeDetail({
   onCook: (recipe: RecipeLibraryEntry) => void;
 }) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [ingredientChecks, setIngredientChecks] = useState<Record<string, boolean>>({});
+  const [ingredientChecksHydrated, setIngredientChecksHydrated] = useState(false);
 
   useEffect(() => {
     const previousBodyOverflow = document.body.style.overflow;
@@ -1631,6 +1634,31 @@ function RecipeDetail({
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [onClose]);
+
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(RECIPE_INGREDIENTS_STORAGE_KEY);
+      if (stored) {
+        setIngredientChecks(JSON.parse(stored) as Record<string, boolean>);
+      }
+    } catch {
+      setIngredientChecks({});
+    } finally {
+      setIngredientChecksHydrated(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!ingredientChecksHydrated) return;
+    window.localStorage.setItem(RECIPE_INGREDIENTS_STORAGE_KEY, JSON.stringify(ingredientChecks));
+  }, [ingredientChecks, ingredientChecksHydrated]);
+
+  const toggleIngredientCheck = (key: string) => {
+    setIngredientChecks((current) => ({
+      ...current,
+      [key]: !current[key],
+    }));
+  };
 
   return (
     <div
@@ -1690,11 +1718,25 @@ function RecipeDetail({
           <section className="mt-5 rounded-[18px] border border-stone-200 bg-amber-50/70 p-4">
             <h3 className="text-sm font-black uppercase tracking-[0.16em] text-red-800">Ingredients</h3>
             <ul className="mt-3 grid gap-2 text-sm font-semibold text-stone-800 sm:grid-cols-2">
-              {recipe.ingredients.map((ingredient, index) => (
-                <li key={`${recipe.id}-detail-ingredient-${index}`} className="rounded-[12px] bg-white px-3 py-2">
-                  {`${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim()}
-                </li>
-              ))}
+              {recipe.ingredients.map((ingredient, index) => {
+                const ingredientKey = `${recipe.id}-${index}-${ingredient.item}`;
+                const isChecked = Boolean(ingredientChecks[ingredientKey]);
+                const ingredientText = `${ingredient.amount} ${ingredient.item}`.replace(/\s+/g, " ").trim();
+                const strikeClass = HAND_STRIKE_CLASSES[index % HAND_STRIKE_CLASSES.length];
+
+                return (
+                  <li key={`${recipe.id}-detail-ingredient-${index}`}>
+                    <button
+                      type="button"
+                      onClick={() => toggleIngredientCheck(ingredientKey)}
+                      className="w-full rounded-[12px] bg-white px-3 py-2 text-left transition hover:bg-white/85 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-amber-500/25"
+                      aria-pressed={isChecked}
+                    >
+                      <span className={isChecked ? `opacity-60 ${strikeClass}` : ""}>{ingredientText}</span>
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         ) : null}

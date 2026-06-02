@@ -1157,17 +1157,16 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
                           return (
                             <li key={`${selectedRecipe.id}-${ingredient.item}-${index}`}>
-                              <label className="flex cursor-pointer items-start gap-3 rounded-[12px] bg-white px-3 py-2 text-sm text-stone-800">
-                                <input
-                                  type="checkbox"
-                                  checked={isChecked}
-                                  onChange={() => toggleIngredientCheck(ingredientKey)}
-                                  className="mt-0.5 h-4 w-4 shrink-0 rounded border-stone-300 text-amber-600 focus:ring-amber-500 sm:hidden"
-                                />
+                              <button
+                                type="button"
+                                onClick={() => toggleIngredientCheck(ingredientKey)}
+                                className="w-full cursor-pointer rounded-[12px] bg-white px-3 py-2 text-left text-sm font-semibold text-stone-800 transition active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-amber-500/25"
+                                aria-pressed={isChecked}
+                              >
                                 <span className={isChecked ? `opacity-60 ${strikeClass}` : ""}>
                                   {ingredientText}
                                 </span>
-                              </label>
+                              </button>
                             </li>
                           );
                         })}
@@ -1336,17 +1335,16 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
                     return (
                       <li key={`${selectedRecipe.id}-dialog-ingredient-${index}`}>
-                        <label className="flex cursor-pointer items-start gap-3 rounded-[12px] bg-white px-3 py-2">
-                          <input
-                            type="checkbox"
-                            checked={isChecked}
-                            onChange={() => toggleIngredientCheck(ingredientKey)}
-                            className="mt-0.5 h-4 w-4 shrink-0 rounded border-stone-300 text-amber-600 focus:ring-amber-500"
-                          />
+                        <button
+                          type="button"
+                          onClick={() => toggleIngredientCheck(ingredientKey)}
+                          className="w-full cursor-pointer rounded-[12px] bg-white px-3 py-2 text-left transition hover:bg-white/85 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-amber-500/25"
+                          aria-pressed={isChecked}
+                        >
                           <span className={isChecked ? `opacity-60 ${strikeClass}` : ""}>
                             {ingredientText}
                           </span>
-                        </label>
+                        </button>
                       </li>
                     );
                   })}
