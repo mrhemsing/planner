@@ -26,6 +26,10 @@ const FRIDGE_RECENT_STORAGE_KEY = "five-day-feature-lab-fridge-recent";
 const WEEK_PLAN_STORAGE_KEY = "five-day-feature-lab-plan";
 const FAVOURITES_STORAGE_KEY = "princess-planner-favourites";
 const HIDDEN_INGREDIENTS_STORAGE_KEY = "five-day-feature-lab-hidden-ingredients";
+const SMART_FILTER_SEARCH_PARAM = "search";
+const SMART_FILTER_HIDDEN_PARAM = "hide";
+const SMART_FILTER_SORT_PARAM = "sort";
+const SMART_FILTER_SHOW_HIDDEN_PARAM = "showHidden";
 const HAND_STRIKE_CLASSES = [
   "hand-strike hand-strike-2",
   "hand-strike hand-strike-4",
@@ -411,6 +415,89 @@ function getFeatureTitle(tab: FeatureTabId) {
   return labels[tab];
 }
 
+function getSmartFilterStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const hasUrlState =
+    params.has(SMART_FILTER_SEARCH_PARAM) ||
+    params.has(SMART_FILTER_HIDDEN_PARAM) ||
+    params.has(SMART_FILTER_SORT_PARAM) ||
+    params.has(SMART_FILTER_SHOW_HIDDEN_PARAM) ||
+    SMART_FILTER_GROUPS.some((group) => params.has(group.id));
+  const activeFilters = getEmptySmartFilterSelections();
+
+  for (const group of SMART_FILTER_GROUPS) {
+    const validOptionIds = new Set(group.options.map((option) => option.id));
+    activeFilters[group.id] = getUrlListParam(params, group.id).filter((value) => validOptionIds.has(value));
+  }
+
+  const hiddenIngredients = Array.from(
+    new Set(getUrlListParam(params, SMART_FILTER_HIDDEN_PARAM).map(normalizeIngredient).filter(Boolean)),
+  );
+
+  return {
+    activeFilters,
+    hasUrlState,
+    hiddenIngredients,
+    search: params.get(SMART_FILTER_SEARCH_PARAM) ?? "",
+    showHiddenRecipes: params.get(SMART_FILTER_SHOW_HIDDEN_PARAM) === "1",
+    sortKey: getSortKeyFromUrl(params.get(SMART_FILTER_SORT_PARAM)),
+  };
+}
+
+function writeSmartFilterStateToUrl({
+  activeFilters,
+  hiddenIngredients,
+  search,
+  showHiddenRecipes,
+  sortKey,
+}: {
+  activeFilters: SmartFilterSelections;
+  hiddenIngredients: string[];
+  search: string;
+  showHiddenRecipes: boolean;
+  sortKey: SortKey;
+}) {
+  const url = new URL(window.location.href);
+  const trimmedSearch = search.trim();
+
+  if (trimmedSearch) url.searchParams.set(SMART_FILTER_SEARCH_PARAM, trimmedSearch);
+  else url.searchParams.delete(SMART_FILTER_SEARCH_PARAM);
+
+  for (const group of SMART_FILTER_GROUPS) {
+    const values = activeFilters[group.id];
+    if (values.length) url.searchParams.set(group.id, values.join(","));
+    else url.searchParams.delete(group.id);
+  }
+
+  if (hiddenIngredients.length) url.searchParams.set(SMART_FILTER_HIDDEN_PARAM, hiddenIngredients.join(","));
+  else url.searchParams.delete(SMART_FILTER_HIDDEN_PARAM);
+
+  if (sortKey !== "prep") url.searchParams.set(SMART_FILTER_SORT_PARAM, sortKey);
+  else url.searchParams.delete(SMART_FILTER_SORT_PARAM);
+
+  if (showHiddenRecipes) url.searchParams.set(SMART_FILTER_SHOW_HIDDEN_PARAM, "1");
+  else url.searchParams.delete(SMART_FILTER_SHOW_HIDDEN_PARAM);
+
+  const nextUrl = `${url.pathname}${url.search}${url.hash}`;
+  const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  if (nextUrl !== currentUrl) {
+    window.history.replaceState(window.history.state, "", nextUrl);
+  }
+}
+
+function getUrlListParam(params: URLSearchParams, key: string) {
+  return params
+    .getAll(key)
+    .flatMap((value) => value.split(","))
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
+function getSortKeyFromUrl(value: string | null): SortKey {
+  return value === "alpha" || value === "recent" || value === "popular" ? value : "prep";
+}
+
 function WeeklyPlanner({
   recipes,
   plan,
@@ -772,6 +859,7 @@ function SmartFilters({
   const [openAddRecipeId, setOpenAddRecipeId] = useState<string | null>(null);
   const [addConfirmations, setAddConfirmations] = useState<Record<string, Day>>({});
   const [visibleCount, setVisibleCount] = useState(30);
+  const smartFilterUrlReadyRef = useRef(false);
   const hiddenTerms = useMemo(() => hiddenIngredients.map(normalizeIngredient).filter(Boolean), [hiddenIngredients]);
   const baseRecipes = useMemo(() => applySmartFilterSelections(recipes, activeFilters, search, []), [activeFilters, recipes, search]);
   const hiddenRecipeCount = useMemo(() => baseRecipes.filter((recipe) => recipeMatchesHiddenIngredients(recipe, hiddenTerms)).length, [baseRecipes, hiddenTerms]);
@@ -780,17 +868,27 @@ function SmartFilters({
     return sortSmartFilterRecipes(filtered, sortKey);
   }, [baseRecipes, hiddenTerms, showHiddenRecipes, sortKey]);
   const selectedSummaries = getSelectedSmartFilterLabels(activeFilters);
-  const hasActiveFilters = selectedSummaries.length > 0 || search.trim() || hiddenIngredients.length > 0;
+  const hasActiveFilters = selectedSummaries.length > 0 || search.trim() || hiddenIngredients.length > 0 || sortKey !== "prep";
   const visibleRecipeCards = visibleRecipes.slice(0, visibleCount);
 
   useEffect(() => {
     try {
-      const savedHiddenIngredients = window.localStorage.getItem(HIDDEN_INGREDIENTS_STORAGE_KEY);
+      const urlState = getSmartFilterStateFromUrl();
 
-      if (savedHiddenIngredients) setHiddenIngredients(JSON.parse(savedHiddenIngredients) as string[]);
+      if (urlState.hasUrlState) {
+        setSearch(urlState.search);
+        setActiveFilters(urlState.activeFilters);
+        setHiddenIngredients(urlState.hiddenIngredients);
+        setSortKey(urlState.sortKey);
+        setShowHiddenRecipes(urlState.showHiddenRecipes);
+      } else {
+        const savedHiddenIngredients = window.localStorage.getItem(HIDDEN_INGREDIENTS_STORAGE_KEY);
+        if (savedHiddenIngredients) setHiddenIngredients(JSON.parse(savedHiddenIngredients) as string[]);
+      }
     } catch {
       setHiddenIngredients([]);
     } finally {
+      smartFilterUrlReadyRef.current = true;
       setHydrated(true);
     }
   }, []);
@@ -799,6 +897,11 @@ function SmartFilters({
     if (!hydrated) return;
     window.localStorage.setItem(HIDDEN_INGREDIENTS_STORAGE_KEY, JSON.stringify(hiddenIngredients));
   }, [hiddenIngredients, hydrated]);
+
+  useEffect(() => {
+    if (!hydrated || !smartFilterUrlReadyRef.current) return;
+    writeSmartFilterStateToUrl({ activeFilters, hiddenIngredients, search, showHiddenRecipes, sortKey });
+  }, [activeFilters, hiddenIngredients, hydrated, search, showHiddenRecipes, sortKey]);
 
   useEffect(() => {
     if (!openAddRecipeId) return;
@@ -854,6 +957,7 @@ function SmartFilters({
     setHiddenIngredients([]);
     setHiddenDraft("");
     setShowHiddenRecipes(false);
+    setSortKey("prep");
   }
 
   return (
