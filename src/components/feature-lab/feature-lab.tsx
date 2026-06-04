@@ -1808,7 +1808,7 @@ function CookMode({ recipe, onClose }: { recipe: RecipeLibraryEntry; onClose: ()
         </div>
       </header>
       <main
-        className="flex min-h-0 flex-1 touch-pan-y flex-col justify-center overflow-y-auto p-6"
+        className="min-h-0 flex-1 touch-pan-y overflow-y-auto px-6 py-7"
         onTouchStart={(event) => {
           touchStartXRef.current = event.touches[0]?.clientX ?? null;
         }}
@@ -1826,8 +1826,10 @@ function CookMode({ recipe, onClose }: { recipe: RecipeLibraryEntry; onClose: ()
           }
         }}
       >
-        <p className="text-sm font-black uppercase tracking-[0.22em] text-amber-200">Step {stepIndex + 1} of {steps.length}</p>
-        <p className="mt-4 text-3xl font-black leading-tight sm:text-5xl">{steps[stepIndex]}</p>
+        <div className="flex min-h-full flex-col justify-center py-2">
+          <p className="text-sm font-black uppercase tracking-[0.22em] text-amber-200">Step {stepIndex + 1} of {steps.length}</p>
+          <p className="mt-4 text-3xl font-black leading-tight sm:text-5xl">{steps[stepIndex]}</p>
+        </div>
       </main>
       <footer className="grid shrink-0 grid-cols-2 gap-3 border-t border-white/10 bg-stone-950/95 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
         <button
