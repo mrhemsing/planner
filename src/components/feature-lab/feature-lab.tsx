@@ -1852,6 +1852,26 @@ function CookMode({ recipe, onClose }: { recipe: RecipeLibraryEntry; onClose: ()
     };
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!window.matchMedia("(min-width: 640px)").matches) return;
+      if (isTypingTarget(event.target)) return;
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        setStepIndex((current) => Math.max(0, current - 1));
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        setStepIndex((current) => Math.min(steps.length - 1, current + 1));
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [steps.length]);
+
   return (
     <div className="fixed inset-0 z-50 flex h-[100svh] flex-col bg-stone-950 text-white">
       <header className="shrink-0 border-b border-white/10 p-4">
@@ -3105,6 +3125,12 @@ function escapeHtml(value: string) {
 
     return entities[character];
   });
+}
+
+function isTypingTarget(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) return false;
+
+  return target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName);
 }
 
 function getPrepMinutes(prepTime?: string) {
