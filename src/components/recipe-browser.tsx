@@ -470,7 +470,7 @@ export function RecipeBrowser({
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
   const recentlyAddedCount = recentlyAddedRecipes.length;
-  const recentlyAddedTitle = "View recipes added in the last 30 days";
+  const recentlyAddedTitle = "Recently added recipes";
   const recentlyAddedLabel = `${recentlyAddedTitle} (${recentlyAddedCount})`;
   const browseLabel = activeFilter === "recent" ? recentlyAddedLabel : activeFilterDetails.browseLabel;
   const recipeSearchPlaceholder = `Search ${getSearchFilterName(activeFilter)} recipes`;
