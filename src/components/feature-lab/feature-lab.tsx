@@ -368,6 +368,8 @@ export function FeatureLab({ recipes, initialTab = "week" }: { recipes: RecipeLi
           onToggleFavourite={() => toggleFavourite(detailRecipe.id)}
           onClose={() => setDetailRecipe(null)}
           onCook={openCookMode}
+          plan={plan}
+          setDayRecipe={setDayRecipe}
         />
       ) : null}
       {cookOpen && cookRecipe ? <CookMode recipe={cookRecipe} onClose={() => setCookOpen(false)} /> : null}
@@ -1579,16 +1581,22 @@ function RecipeDetail({
   onToggleFavourite,
   onClose,
   onCook,
+  plan,
+  setDayRecipe,
 }: {
   recipe: RecipeLibraryEntry;
   isFavourite: boolean;
   onToggleFavourite: () => void;
   onClose: () => void;
   onCook: (recipe: RecipeLibraryEntry) => void;
+  plan: Plan;
+  setDayRecipe: (day: Day, recipe: RecipeLibraryEntry | null) => void;
 }) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [ingredientChecks, setIngredientChecks] = useState<Record<string, boolean>>({});
   const [ingredientChecksHydrated, setIngredientChecksHydrated] = useState(false);
+  const [addToWeekOpen, setAddToWeekOpen] = useState(false);
+  const [addToWeekConfirmation, setAddToWeekConfirmation] = useState<Day | null>(null);
 
   useEffect(() => {
     const previousBodyOverflow = document.body.style.overflow;
@@ -1660,6 +1668,12 @@ function RecipeDetail({
     }));
   };
 
+  const addRecipeToWeek = (day: Day) => {
+    setDayRecipe(day, recipe);
+    setAddToWeekOpen(false);
+    setAddToWeekConfirmation(day);
+  };
+
   return (
     <div
       ref={scrollContainerRef}
@@ -1706,13 +1720,57 @@ function RecipeDetail({
 
         {recipe.description ? <p className="recipe-description-clamp mt-4 text-base font-semibold leading-7 text-stone-700">{cleanRecipeDescription(recipe.description)}</p> : null}
 
-        <button
-          type="button"
-          onClick={() => onCook(recipe)}
-          className="mt-5 w-full rounded-2xl bg-red-800 px-5 py-4 text-sm font-black uppercase tracking-[0.14em] text-white sm:w-auto"
-        >
-          Cook mode
-        </button>
+        <div className="relative mt-5" data-add-week-menu>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              type="button"
+              onClick={() => onCook(recipe)}
+              className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-red-800 bg-red-800 px-4 text-sm font-black uppercase tracking-[0.12em] text-white shadow-sm transition active:scale-[0.98] sm:text-base"
+            >
+              Cook mode
+            </button>
+            <button
+              type="button"
+              onClick={() => setAddToWeekOpen((current) => !current)}
+              className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-red-800 bg-white px-4 text-sm font-black uppercase tracking-[0.08em] text-red-800 shadow-sm transition active:scale-[0.98] sm:text-base"
+              aria-expanded={addToWeekOpen}
+              aria-haspopup="menu"
+            >
+              Add to Week
+            </button>
+          </div>
+          {addToWeekConfirmation ? (
+            <p className="mt-2 rounded-full bg-emerald-50 px-3 py-1.5 text-center text-xs font-black uppercase tracking-[0.1em] text-emerald-800">
+              Added to {addToWeekConfirmation}
+            </p>
+          ) : null}
+          {addToWeekOpen ? (
+            <div className="mt-2 overflow-hidden rounded-[18px] border border-stone-200 bg-white p-2 text-left shadow-xl shadow-stone-950/10 sm:absolute sm:right-0 sm:top-full sm:z-30 sm:w-80 sm:shadow-2xl sm:shadow-stone-950/20">
+              <p className="px-3 py-2 text-[0.68rem] font-black uppercase tracking-[0.16em] text-red-800">Choose a day</p>
+              <div className="grid gap-1">
+                {days.map((day) => {
+                  const plannedRecipe = plan[day]?.recipe ?? null;
+
+                  return (
+                    <button
+                      key={`${recipe.id}-detail-add-${day}`}
+                      type="button"
+                      onClick={() => addRecipeToWeek(day)}
+                      className="grid w-full grid-cols-[42px_minmax(0,1fr)] gap-3 rounded-[14px] px-3 py-2 text-left transition hover:bg-amber-50 focus:bg-amber-50 focus:outline-none"
+                      role="menuitem"
+                    >
+                      <span className="font-black text-red-900">{day}</span>
+                      <span className="min-w-0">
+                        <span className="block whitespace-normal break-words text-sm font-black leading-tight text-stone-950">{plannedRecipe?.title ?? "Empty"}</span>
+                        <span className="block text-xs font-semibold text-stone-500">{plannedRecipe ? "Swap this slot" : "Add here"}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ) : null}
+        </div>
 
         {recipe.ingredients?.length ? (
           <section className="mt-5 rounded-[18px] border border-stone-200 bg-amber-50/70 p-4">
