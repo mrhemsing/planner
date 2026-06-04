@@ -918,7 +918,6 @@ export function RecipeBrowser({
               onClick={showRecentlyAddedRecipes}
               className="recipe-tap-card inline-flex items-center gap-1.5 px-1 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
             >
-              <SparklesIcon className="h-4 w-4" />
               <span>{recentlyAddedLabel}</span>
             </button>
           </div>
@@ -945,7 +944,6 @@ export function RecipeBrowser({
               onClick={showRecentlyAddedRecipes}
               className="recipe-tap-card inline-flex items-center gap-1.5 px-2 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
             >
-              <SparklesIcon className="h-4 w-4" />
               <span>{recentlyAddedLabel}</span>
             </button>
           </div>
@@ -1701,25 +1699,6 @@ function FavouriteStarIcon({ filled, className = "h-6 w-6" }: { filled: boolean;
       aria-hidden="true"
     >
       <path d="m12 3.25 2.66 5.39 5.95.87-4.3 4.2 1.01 5.92L12 16.83l-5.32 2.8 1.01-5.92-4.3-4.2 5.95-.87L12 3.25Z" />
-    </svg>
-  );
-}
-
-function SparklesIcon({ className = "h-4 w-4" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className={className}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M12 3l1.6 5.1L19 10l-5.4 1.9L12 17l-1.6-5.1L5 10l5.4-1.9L12 3Z" />
-      <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z" />
-      <path d="M5 14l.7 1.8L8 16.5l-2.3.7L5 19l-.7-1.8-2.3-.7 2.3-.7L5 14Z" />
     </svg>
   );
 }
