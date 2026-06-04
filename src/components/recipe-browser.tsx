@@ -946,7 +946,7 @@ export function RecipeBrowser({
 
       <section className="rounded-[24px] border border-white/50 bg-white/92 p-4 shadow-xl shadow-red-950/15 backdrop-blur sm:p-5">
         <p className="text-xs font-black uppercase tracking-[0.22em] text-red-800">Filter recipes</p>
-        <h2 className="mt-1 text-3xl font-black tracking-tight text-stone-950 sm:text-[1.9125rem]">
+        <h2 className="mt-1 text-[1.59375rem] font-black tracking-tight text-stone-950 sm:text-[1.9125rem]">
           <span className="sm:hidden">{dailyTaglines.mobile}</span>
           <span className="hidden sm:inline">{dailyTaglines.desktop}</span>
         </h2>
