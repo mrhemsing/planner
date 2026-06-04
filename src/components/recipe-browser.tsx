@@ -661,6 +661,18 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       desktopRecipeDialogScrollYRef.current = window.scrollY;
     }
 
+    if (isRecipeSheetOpenRef.current && mobileLayoverHistoryActiveRef.current) {
+      mobileLayoverHistoryActiveRef.current = false;
+      if (window.history.state?.plannerMobileLayover) {
+        const nextState =
+          window.history.state && typeof window.history.state === "object"
+            ? { ...window.history.state, plannerMobileLayover: undefined }
+            : null;
+
+        window.history.replaceState(nextState, "", buildRecipeShareUrl(id, dailyDateKey));
+      }
+    }
+
     setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(id);
     setRecipeSearchQuery("");
@@ -674,7 +686,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       window.clearTimeout(shareCopyStatusTimeoutRef.current);
       shareCopyStatusTimeoutRef.current = null;
     }
-  }, []);
+  }, [dailyDateKey]);
 
   useEffect(() => {
     function handleDesktopEnterSelect(event: KeyboardEvent) {
