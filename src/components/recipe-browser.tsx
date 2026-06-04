@@ -472,7 +472,7 @@ export function RecipeBrowser({
   const recentlyAddedCount = recentlyAddedRecipes.length;
   const recentlyAddedTitle = "Recently added recipes";
   const recentlyAddedLabel = `${recentlyAddedTitle} (${recentlyAddedCount})`;
-  const browseLabel = activeFilter === "recent" ? recentlyAddedLabel : activeFilterDetails.browseLabel;
+  const browseLabel = activeFilter === "recent" ? recentlyAddedTitle : activeFilterDetails.browseLabel;
   const recipeSearchPlaceholder = `Search ${getSearchFilterName(activeFilter)} recipes`;
   const dailyPickTitle = getDailyPickTitle(activeFilter);
   const mobileDailyPickTitle = activeFilter === "vegetarian" ? "TODAY'S VEG PICK" : dailyPickTitle;
