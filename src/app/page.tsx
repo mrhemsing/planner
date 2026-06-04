@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { RecipeBrowser } from "@/components/recipe-browser";
-import { recipeLibrary, recentlyAddedDinnerRecipes } from "@/lib/planner";
+import { recipeLibrary } from "@/lib/planner";
 import healthyDinnerTargets from "../../reports/healthy-dinners-target-list.json";
 
 const siteUrl = "https://cook.b-average.com";
@@ -42,6 +42,8 @@ const healthyDinners = healthyDinnerTargets.items
       recipesBySourceId.get(item.id),
   )
   .filter((recipe, index, array): recipe is NonNullable<(typeof recipeLibrary)[number]> => Boolean(recipe) && array.indexOf(recipe) === index);
+
+const recentlyAddedHealthyDinners = [...healthyDinners].reverse();
 
 const healthyDinnersMissingDetails = healthyDinners.filter(
   (recipe) => !recipe.ingredients?.length || !recipe.instructions?.length,
@@ -123,7 +125,7 @@ export default function Home() {
     <main className="red-texture-background min-h-screen overflow-x-clip px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
         <RecipeBrowser
-          recentlyAddedRecipes={recentlyAddedDinnerRecipes}
+          recentlyAddedRecipes={recentlyAddedHealthyDinners}
           sections={[
             {
               id: "healthy-meals",
