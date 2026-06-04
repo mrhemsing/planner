@@ -122,6 +122,7 @@ export function RecipeBrowser({
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
     setAddToWeekOpen(false);
+    setActiveFilter((currentFilter) => (currentFilter === "recent" ? "all" : currentFilter));
   }, []);
 
   useEffect(() => {
@@ -708,6 +709,7 @@ export function RecipeBrowser({
 
     setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(id);
+    setActiveFilter((currentFilter) => (currentFilter === "recent" ? "all" : currentFilter));
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
     if (shouldOpenDesktopDrawer) {
@@ -1489,10 +1491,7 @@ export function RecipeBrowser({
                 </div>
                 <button
                   type="button"
-                  onClick={() => {
-                    setRecipeSearchQuery("");
-                    setRecipeSheetOpen(false);
-                  }}
+                  onClick={closeMobileLayovers}
                   className="recipe-tap-card rounded-2xl border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm"
                 >
                   Close
