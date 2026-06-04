@@ -1088,18 +1088,18 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       </div>
                     </div>
                     <div className="relative hidden shrink-0 sm:block" data-add-week-menu>
-                      <div className="flex items-center gap-2">
+                      <div className="grid min-w-80 grid-cols-2 gap-3">
                         <button
                           type="button"
                           onClick={() => openCookMode(selectedRecipe)}
-                          className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
+                          className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-red-800 bg-red-800 px-4 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
                         >
                           Cook Mode
                         </button>
                         <button
                           type="button"
                           onClick={() => setAddToWeekOpen((current) => !current)}
-                          className="inline-flex min-h-10 items-center justify-center rounded-xl border border-stone-300 bg-white px-3 text-sm font-black text-red-800 shadow-sm transition hover:border-red-900/35 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-900/20"
+                          className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-red-800 bg-white px-4 text-base font-black text-red-800 shadow-sm transition hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-900/20"
                           aria-expanded={addToWeekOpen}
                           aria-haspopup="menu"
                         >
@@ -1141,18 +1141,18 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   </div>
 
                   <div className="mt-4 sm:hidden" data-add-week-menu>
-                    <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-2">
+                    <div className="grid grid-cols-2 gap-3">
                       <button
                         type="button"
                         onClick={() => openCookMode(selectedRecipe)}
-                        className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition active:scale-[0.98]"
+                        className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-red-800 bg-red-800 px-4 text-base font-black text-white shadow-sm transition active:scale-[0.98]"
                       >
                         Cook Mode
                       </button>
                       <button
                         type="button"
                         onClick={() => setAddToWeekOpen((current) => !current)}
-                        className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-stone-300 bg-white px-3 text-sm font-black text-red-800 shadow-sm transition active:scale-[0.98]"
+                        className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-red-800 bg-white px-4 text-base font-black text-red-800 shadow-sm transition active:scale-[0.98]"
                         aria-expanded={addToWeekOpen}
                         aria-haspopup="menu"
                       >
@@ -1326,18 +1326,18 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
 
               <div className="relative shrink-0" data-add-week-menu>
-                <div className="flex items-center gap-2">
+                <div className="grid min-w-80 grid-cols-2 gap-3">
                   <button
                     type="button"
                     onClick={() => openCookMode(selectedRecipe)}
-                    className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
+                    className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-red-800 bg-red-800 px-4 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
                   >
                     Cook Mode
                   </button>
                   <button
                     type="button"
                     onClick={() => setAddToWeekOpen((current) => !current)}
-                    className="inline-flex min-h-10 items-center justify-center rounded-xl border border-stone-300 bg-white px-3 text-sm font-black text-red-800 shadow-sm transition hover:border-red-900/35 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-900/20"
+                    className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-red-800 bg-white px-4 text-base font-black text-red-800 shadow-sm transition hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-900/20"
                     aria-expanded={addToWeekOpen}
                     aria-haspopup="menu"
                   >
