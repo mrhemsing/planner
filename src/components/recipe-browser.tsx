@@ -106,6 +106,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const [weekPlanHydrated, setWeekPlanHydrated] = useState(false);
   const [addToWeekOpen, setAddToWeekOpen] = useState(false);
   const [addToWeekConfirmation, setAddToWeekConfirmation] = useState<WeekDay | null>(null);
+  const [cookModeRecipe, setCookModeRecipe] = useState<RecipeLibraryEntry | null>(null);
   const shareCopyStatusTimeoutRef = useRef<number | null>(null);
   const mobileLayoverHistoryActiveRef = useRef(false);
   const isRecipeSheetOpenRef = useRef(isRecipeSheetOpen);
@@ -635,6 +636,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     setAddToWeekConfirmation(day);
   };
 
+  const openCookMode = (recipe: RecipeLibraryEntry) => {
+    setAddToWeekOpen(false);
+    setRecipeSheetOpen(false);
+    setDesktopRecipeDialogOpen(false);
+    setCookModeRecipe(recipe);
+  };
+
   const getSelectedRecipeShareUrl = () => {
     if (!selectedRecipe) return "";
 
@@ -1080,15 +1088,24 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                       </div>
                     </div>
                     <div className="relative hidden shrink-0 sm:block" data-add-week-menu>
-                      <button
-                        type="button"
-                        onClick={() => setAddToWeekOpen((current) => !current)}
-                        className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
-                        aria-expanded={addToWeekOpen}
-                        aria-haspopup="menu"
-                      >
-                        Add to Week
-                      </button>
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => openCookMode(selectedRecipe)}
+                          className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
+                        >
+                          Cook Mode
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setAddToWeekOpen((current) => !current)}
+                          className="inline-flex min-h-10 items-center justify-center rounded-xl border border-stone-300 bg-white px-3 text-sm font-black text-red-800 shadow-sm transition hover:border-red-900/35 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-900/20"
+                          aria-expanded={addToWeekOpen}
+                          aria-haspopup="menu"
+                        >
+                          Add to Week
+                        </button>
+                      </div>
                       {addToWeekConfirmation ? (
                         <p className="mt-2 rounded-full bg-emerald-50 px-3 py-1.5 text-center text-xs font-black uppercase tracking-[0.1em] text-emerald-800">
                           Added to {addToWeekConfirmation}
@@ -1124,15 +1141,24 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
                   </div>
 
                   <div className="mt-4 sm:hidden" data-add-week-menu>
-                    <button
-                      type="button"
-                      onClick={() => setAddToWeekOpen((current) => !current)}
-                      className="inline-flex min-h-12 w-full items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition active:scale-[0.98]"
-                      aria-expanded={addToWeekOpen}
-                      aria-haspopup="menu"
-                    >
-                      Add to Week
-                    </button>
+                    <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-2">
+                      <button
+                        type="button"
+                        onClick={() => openCookMode(selectedRecipe)}
+                        className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition active:scale-[0.98]"
+                      >
+                        Cook Mode
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setAddToWeekOpen((current) => !current)}
+                        className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-stone-300 bg-white px-3 text-sm font-black text-red-800 shadow-sm transition active:scale-[0.98]"
+                        aria-expanded={addToWeekOpen}
+                        aria-haspopup="menu"
+                      >
+                        Add to Week
+                      </button>
+                    </div>
                     {addToWeekConfirmation ? (
                       <p className="mt-2 rounded-full bg-emerald-50 px-3 py-1.5 text-center text-xs font-black uppercase tracking-[0.1em] text-emerald-800">
                         Added to {addToWeekConfirmation}
@@ -1300,15 +1326,24 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
               </div>
 
               <div className="relative shrink-0" data-add-week-menu>
-                <button
-                  type="button"
-                  onClick={() => setAddToWeekOpen((current) => !current)}
-                  className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
-                  aria-expanded={addToWeekOpen}
-                  aria-haspopup="menu"
-                >
-                  Add to Week
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => openCookMode(selectedRecipe)}
+                    className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-red-900 bg-red-800 px-5 text-base font-black text-white shadow-sm transition hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-900/25"
+                  >
+                    Cook Mode
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setAddToWeekOpen((current) => !current)}
+                    className="inline-flex min-h-10 items-center justify-center rounded-xl border border-stone-300 bg-white px-3 text-sm font-black text-red-800 shadow-sm transition hover:border-red-900/35 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-900/20"
+                    aria-expanded={addToWeekOpen}
+                    aria-haspopup="menu"
+                  >
+                    Add to Week
+                  </button>
+                </div>
                 {addToWeekConfirmation ? (
                   <p className="mt-2 rounded-full bg-emerald-50 px-3 py-1.5 text-center text-xs font-black uppercase tracking-[0.1em] text-emerald-800">
                     Added to {addToWeekConfirmation}
@@ -1489,7 +1524,104 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
         </div>
       ) : null}
 
+      {cookModeRecipe ? <CookMode key={cookModeRecipe.id} recipe={cookModeRecipe} onClose={() => setCookModeRecipe(null)} /> : null}
+
     </section>
+  );
+}
+
+function CookMode({ recipe, onClose }: { recipe: RecipeLibraryEntry; onClose: () => void }) {
+  const [stepIndex, setStepIndex] = useState(0);
+  const touchStartXRef = useRef<number | null>(null);
+  const wakeLockRef = useRef<{ release: () => Promise<void> } | null>(null);
+  const steps = recipe.instructions?.length ? recipe.instructions : ["Read the recipe, prep ingredients, and cook with confidence."];
+  const isFirstStep = stepIndex === 0;
+  const isLastStep = stepIndex === steps.length - 1;
+  const goBack = () => setStepIndex((current) => Math.max(0, current - 1));
+  const goNext = () => setStepIndex((current) => Math.min(steps.length - 1, current + 1));
+
+  useEffect(() => {
+    let cancelled = false;
+    const previousBodyOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = "hidden";
+
+    async function requestWakeLock() {
+      try {
+        const wakeLock = await navigator.wakeLock?.request("screen");
+        if (!cancelled && wakeLock) {
+          wakeLockRef.current = wakeLock;
+        }
+      } catch {
+        wakeLockRef.current = null;
+      }
+    }
+
+    requestWakeLock();
+
+    return () => {
+      cancelled = true;
+      document.body.style.overflow = previousBodyOverflow;
+      void wakeLockRef.current?.release();
+      wakeLockRef.current = null;
+    };
+  }, []);
+
+  return (
+    <div className="fixed inset-0 z-[60] flex h-[100svh] flex-col bg-stone-950 text-white">
+      <header className="shrink-0 border-b border-white/10 p-4">
+        <div className="flex items-center justify-between gap-3">
+          <div className="min-w-0">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-amber-200">Cook mode</p>
+            <h2 className="line-clamp-1 text-xl font-black">{recipe.title}</h2>
+          </div>
+          <button type="button" onClick={onClose} className="min-h-11 shrink-0 touch-manipulation rounded-full bg-white px-4 py-2 font-black text-stone-950 transition active:scale-[0.98]">
+            Close
+          </button>
+        </div>
+      </header>
+      <main
+        className="min-h-0 flex-1 touch-pan-y overflow-y-auto px-6 py-7"
+        onTouchStart={(event) => {
+          touchStartXRef.current = event.touches[0]?.clientX ?? null;
+        }}
+        onTouchEnd={(event) => {
+          const startX = touchStartXRef.current;
+          const endX = event.changedTouches[0]?.clientX;
+          touchStartXRef.current = null;
+          if (startX == null || endX == null) return;
+          const delta = endX - startX;
+          if (Math.abs(delta) < 48) return;
+          if (delta < 0) {
+            goNext();
+          } else {
+            goBack();
+          }
+        }}
+      >
+        <div className="flex min-h-full flex-col justify-center py-2">
+          <p className="text-sm font-black uppercase tracking-[0.22em] text-amber-200">Step {stepIndex + 1} of {steps.length}</p>
+          <p className="mt-4 text-3xl font-black leading-tight sm:text-5xl">{steps[stepIndex]}</p>
+        </div>
+      </main>
+      <footer className="grid shrink-0 grid-cols-2 gap-3 border-t border-white/10 bg-stone-950/95 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
+        <button
+          type="button"
+          onClick={goBack}
+          disabled={isFirstStep}
+          className="min-h-16 touch-manipulation rounded-2xl bg-white/10 px-4 py-4 font-black transition active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-white/5 disabled:text-white/35"
+        >
+          Back
+        </button>
+        <button
+          type="button"
+          onClick={isLastStep ? onClose : goNext}
+          className="min-h-16 touch-manipulation rounded-2xl bg-amber-200 px-4 py-4 font-black text-stone-950 shadow-lg shadow-amber-950/20 transition active:scale-[0.98]"
+        >
+          {isLastStep ? "Done" : "Next"}
+        </button>
+      </footer>
+    </div>
   );
 }
 
