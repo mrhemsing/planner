@@ -463,7 +463,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   const mobileTopFilters = filters.filter((filter) => filter.id !== "favourites");
 
   const showRecipeForFilter = useCallback(
-    (filterId: string) => {
+    (filterId: string, options?: { openSheetOnMobile?: boolean }) => {
       const nextFilteredRecipes = getRecipesForFilter(filterId);
       const nextDailyPickId = getUniqueDailyPickIdForFilter(filterId, sortedRecipes, dailyDateKey, favourites);
       const nextRecipeId = nextDailyPickId || nextFilteredRecipes[0]?.id || "";
@@ -471,6 +471,11 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       setSelectedRecipeFromUrl(Boolean(nextRecipeId));
       setSelectedRecipeId(nextRecipeId);
       setActiveFilter(filterId);
+
+      if (options?.openSheetOnMobile && window.innerWidth < 640 && nextFilteredRecipes.length > 0) {
+        setRecipeSearchQuery("");
+        setRecipeSheetOpen(true);
+      }
     },
     [dailyDateKey, favourites, getRecipesForFilter, sortedRecipes],
   );
@@ -778,11 +783,11 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       {showFavouritesFilter ? (
         <button
           type="button"
-          onClick={() => showRecipeForFilter(activeFilter === "favourites" ? "all" : "favourites")}
+          onClick={() => showRecipeForFilter(activeFilter === "favourites" ? "all" : "favourites", { openSheetOnMobile: activeFilter !== "favourites" })}
           aria-label={activeFilter === "favourites" ? "Show all recipes" : `${favouriteCount} favourite recipes`}
           aria-pressed={activeFilter === "favourites"}
           className={`recipe-tap-card absolute right-0 top-3 z-40 flex min-h-9 min-w-0 items-center justify-center gap-1 rounded-2xl border py-0 pl-2.5 pr-1.5 text-sm font-black text-amber-900 shadow-[0_8px_18px_rgba(146,64,14,0.18)] sm:hidden ${
-            activeFilter === "favourites" ? "border-amber-500 bg-amber-100" : "border-transparent bg-white hover:text-amber-950"
+            activeFilter === "favourites" ? "border-amber-500 bg-amber-100" : "border-amber-200 bg-amber-50 hover:border-amber-400 hover:bg-amber-100 hover:text-amber-950"
           }`}
         >
           <FavouriteStarIcon filled={activeFilter === "favourites"} className="h-5 w-5" />
@@ -863,8 +868,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
             <button
               type="button"
               onClick={() => setRecipeSheetOpen(true)}
-              className="recipe-tap-card flex min-h-11 flex-1 items-center justify-center gap-2 rounded-2xl border border-amber-700 bg-amber-500 px-4 text-center text-sm font-bold uppercase tracking-[0.08em] text-white shadow-[0_8px_18px_rgba(146,64,14,0.22)] outline-none transition hover:bg-amber-600 focus:border-amber-900 active:scale-[0.98]"
+              className={`recipe-tap-card flex min-h-11 flex-1 items-center justify-center gap-2 rounded-2xl border px-4 text-center text-sm font-bold uppercase tracking-[0.08em] shadow-[0_8px_18px_rgba(146,64,14,0.22)] outline-none transition focus:border-amber-900 active:scale-[0.98] ${
+                activeFilter === "favourites"
+                  ? "border-amber-500 bg-amber-100 text-amber-900 hover:bg-amber-200"
+                  : "border-amber-700 bg-amber-500 text-white hover:bg-amber-600"
+              }`}
             >
+              {activeFilter === "favourites" ? <FavouriteStarIcon filled className="h-5 w-5" /> : null}
               <span>{activeFilterDetails.browseLabel}</span>
               <span aria-hidden="true">＋</span>
             </button>
