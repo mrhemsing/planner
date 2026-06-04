@@ -81,6 +81,18 @@ function firstSearchParam(value: string | string[] | undefined) {
   return Array.isArray(value) ? value[0] : value;
 }
 
+function getPacificDateKey() {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Los_Angeles",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const valueFor = (type: string) => parts.find((part) => part.type === type)?.value ?? "";
+
+  return `${valueFor("year")}-${valueFor("month")}-${valueFor("day")}`;
+}
+
 function absoluteImageUrl(imageUrl: string) {
   return new URL(imageUrl, siteUrl).toString();
 }
@@ -138,11 +150,21 @@ export async function generateMetadata({
   };
 }
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: PageSearchParams;
+}) {
+  const params = await searchParams;
+  const recipeId = firstSearchParam(params.recipe)?.toLowerCase();
+  const pickedOn = firstSearchParam(params.pickedOn);
+  const initialSelectedRecipe = recipeId && pickedOn === getPacificDateKey() ? recipesById.get(recipeId) : undefined;
+
   return (
     <main className="red-texture-background min-h-screen overflow-x-clip px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 pt-0">
         <RecipeBrowser
+          initialSelectedRecipeId={initialSelectedRecipe?.id}
           recentlyAddedRecipes={recentlyAddedHealthyDinners}
           sections={[
             {

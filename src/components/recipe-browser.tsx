@@ -73,9 +73,11 @@ type WeekPlan = Record<WeekDay, PlanSlot | null>;
 
 export function RecipeBrowser({
   sections,
+  initialSelectedRecipeId,
   recentlyAddedRecipes: recentlyAddedRecipesOverride,
 }: {
   sections: RecipeSection[];
+  initialSelectedRecipeId?: string;
   recentlyAddedRecipes?: RecipeLibraryEntry[];
 }) {
   const allRecipes = useMemo(() => sections.flatMap((section) => section.recipes), [sections]);
@@ -93,9 +95,9 @@ export function RecipeBrowser({
     () => getUniqueDailyPickIdForFilter("all", sections[0]?.recipes ?? [], dailyDateKey, defaultFavourites),
     [dailyDateKey, defaultFavourites, sections],
   );
-  const [selectedRecipeId, setSelectedRecipeId] = useState<string>(dailyDinnerPickId);
-  const [hasSyncedRecipeFromUrl, setHasSyncedRecipeFromUrl] = useState(false);
-  const [selectedRecipeFromUrl, setSelectedRecipeFromUrl] = useState(false);
+  const [selectedRecipeId, setSelectedRecipeId] = useState<string>(initialSelectedRecipeId ?? dailyDinnerPickId);
+  const [hasSyncedRecipeFromUrl, setHasSyncedRecipeFromUrl] = useState(Boolean(initialSelectedRecipeId));
+  const [selectedRecipeFromUrl, setSelectedRecipeFromUrl] = useState(Boolean(initialSelectedRecipeId));
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const filterSwipeStartRef = useRef<{ x: number; y: number } | null>(null);
   const desktopRecipeListButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
