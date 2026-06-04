@@ -469,7 +469,12 @@ export function RecipeBrowser({
     },
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
-  const browseLabel = activeFilter === "recent" ? "Recently added recipes" : activeFilterDetails.browseLabel;
+  const recentlyAddedCount = recentlyAddedRecipes.length;
+  const recentlyAddedLabel =
+    recentlyAddedCount === 1
+      ? "1 recipe added in the last 30 days"
+      : `${recentlyAddedCount} recipes added in the last 30 days`;
+  const browseLabel = activeFilter === "recent" ? recentlyAddedLabel : activeFilterDetails.browseLabel;
   const recipeSearchPlaceholder = `Search ${getSearchFilterName(activeFilter)} recipes`;
   const dailyPickTitle = getDailyPickTitle(activeFilter);
   const mobileDailyPickTitle = activeFilter === "vegetarian" ? "TODAY'S VEG PICK" : dailyPickTitle;
@@ -892,7 +897,7 @@ export function RecipeBrowser({
               className="recipe-tap-card inline-flex items-center gap-1.5 px-1 py-1 text-sm font-black text-red-800 underline-offset-4 transition hover:text-red-950 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500/30"
             >
               <SparklesIcon className="h-4 w-4" />
-              <span>Recently added recipes</span>
+              <span>{recentlyAddedLabel}</span>
               <span aria-hidden="true">→</span>
             </button>
           </div>
@@ -917,7 +922,7 @@ export function RecipeBrowser({
               className="recipe-tap-card inline-flex items-center gap-1.5 px-2 py-1 text-sm font-black text-red-800 underline-offset-4 transition hover:text-red-950 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500/30"
             >
               <SparklesIcon className="h-4 w-4" />
-              <span>Recently added recipes</span>
+              <span>{recentlyAddedLabel}</span>
               <span aria-hidden="true">→</span>
             </button>
           </div>
