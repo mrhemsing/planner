@@ -59,7 +59,7 @@ body {
 
 .red-texture-background:after {
   z-index: 1;
-  background: linear-gradient(180deg, rgba(226, 54, 40, 0) 0, rgba(226, 54, 40, 0.16) 220px, rgba(226, 54, 40, 0.46) 400px, #e23628 540px, #d92f25 74%, #b92322 100%);
+  background: linear-gradient(#e2362800 500px, #e2362829 620px, #e2362875 1300px, #e23628 1740px, #d92f25 56%, #b92322 100%);
 }
 
 .red-texture-background.texture-soft:before {
