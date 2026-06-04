@@ -49,7 +49,7 @@ body {
 
 .red-texture-background:before {
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.3;
   mix-blend-mode: multiply;
   background-image: var(--recipe-background-image);
   background-repeat: repeat;
