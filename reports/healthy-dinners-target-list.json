@@ -2366,6 +2366,76 @@
       "id": "779136732",
       "slug": "spicy-tomato-and-pepper-curry",
       "recipeId": "spicy-tomato-and-pepper-curry"
+    },
+    {
+      "position": 339,
+      "url": "https://cooking.nytimes.com/recipes/780518189-mushroom-stuffed-baked-plantains",
+      "id": "780518189",
+      "slug": "mushroom-stuffed-baked-plantains",
+      "recipeId": "mushroom-stuffed-baked-plantains"
+    },
+    {
+      "position": 340,
+      "url": "https://cooking.nytimes.com/recipes/780502611-seared-tuna-with-beans-and-tomatoes",
+      "id": "780502611",
+      "slug": "seared-tuna-with-beans-and-tomatoes",
+      "recipeId": "seared-tuna-with-beans-and-tomatoes"
+    },
+    {
+      "position": 341,
+      "url": "https://cooking.nytimes.com/recipes/780328968-ila-okra-soup-with-shrimp-and-greens",
+      "id": "780328968",
+      "slug": "ila-okra-soup-with-shrimp-and-greens",
+      "recipeId": "ila-okra-soup-with-shrimp-and-greens"
+    },
+    {
+      "position": 342,
+      "url": "https://cooking.nytimes.com/recipes/780000747-halloumi-souvlaki-bowl",
+      "id": "780000747",
+      "slug": "halloumi-souvlaki-bowl",
+      "recipeId": "halloumi-souvlaki-bowl"
+    },
+    {
+      "position": 343,
+      "url": "https://cooking.nytimes.com/recipes/779397405-chile-tofu",
+      "id": "779397405",
+      "slug": "chile-tofu",
+      "recipeId": "chile-tofu"
+    },
+    {
+      "position": 344,
+      "url": "https://cooking.nytimes.com/recipes/779393454-vietnamese-inspired-roast-chicken",
+      "id": "779393454",
+      "slug": "vietnamese-inspired-roast-chicken",
+      "recipeId": "vietnamese-inspired-roast-chicken"
+    },
+    {
+      "position": 345,
+      "url": "https://cooking.nytimes.com/recipes/779380407-charred-corn-and-pickled-jalapeno-potato-salad",
+      "id": "779380407",
+      "slug": "charred-corn-and-pickled-jalapeno-potato-salad",
+      "recipeId": "charred-corn-and-pickled-jalapeno-potato-salad"
+    },
+    {
+      "position": 346,
+      "url": "https://cooking.nytimes.com/recipes/778688004-meatball-guisada",
+      "id": "778688004",
+      "slug": "meatball-guisada",
+      "recipeId": "meatball-guisada"
+    },
+    {
+      "position": 347,
+      "url": "https://cooking.nytimes.com/recipes/778684659-berbere-steak-with-rosemary-ghee",
+      "id": "778684659",
+      "slug": "berbere-steak-with-rosemary-ghee",
+      "recipeId": "berbere-steak-with-rosemary-ghee"
+    },
+    {
+      "position": 348,
+      "url": "https://cooking.nytimes.com/recipes/776710293-tofu-schnitzel-with-buttermilk-slaw",
+      "id": "776710293",
+      "slug": "tofu-schnitzel-with-buttermilk-slaw",
+      "recipeId": "tofu-schnitzel-with-buttermilk-slaw"
     }
   ]
 }
