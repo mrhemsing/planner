@@ -2438,6 +2438,70 @@
       "slug": "tofu-schnitzel-with-buttermilk-slaw",
       "recipeId": "tofu-schnitzel-with-buttermilk-slaw",
       "addedAt": "2026-06-03"
+    },
+    {
+      "position": 348,
+      "url": "https://cooking.nytimes.com/recipes/1025342-one-pot-chicken-meatballs-with-greens",
+      "id": "1025342",
+      "slug": "one-pot-chicken-meatballs-with-greens",
+      "recipeId": "one-pot-chicken-meatballs-with-greens",
+      "addedAt": "2026-06-04"
+    },
+    {
+      "position": 349,
+      "url": "https://cooking.nytimes.com/recipes/1019763-korean-bbq-style-meatballs",
+      "id": "1019763",
+      "slug": "korean-bbq-style-meatballs",
+      "recipeId": "korean-bbq-style-meatballs",
+      "addedAt": "2026-06-04"
+    },
+    {
+      "position": 350,
+      "url": "https://cooking.nytimes.com/recipes/1024135-pork-bulgogi-with-spring-vegetables",
+      "id": "1024135",
+      "slug": "pork-bulgogi-with-spring-vegetables",
+      "recipeId": "pork-bulgogi-with-spring-vegetables",
+      "addedAt": "2026-06-04"
+    },
+    {
+      "position": 351,
+      "url": "https://cooking.nytimes.com/recipes/1018974-peruvian-roasted-chicken-with-spicy-cilantro-sauce",
+      "id": "1018974",
+      "slug": "peruvian-roasted-chicken-with-spicy-cilantro-sauce",
+      "recipeId": "peruvian-roasted-chicken-with-spicy-cilantro-sauce",
+      "addedAt": "2026-06-04"
+    },
+    {
+      "position": 352,
+      "url": "https://cooking.nytimes.com/recipes/1024373-grilled-steak-with-sauce-rof",
+      "id": "1024373",
+      "slug": "grilled-steak-with-sauce-rof",
+      "recipeId": "grilled-steak-with-sauce-rof",
+      "addedAt": "2026-06-04"
+    },
+    {
+      "position": 353,
+      "url": "https://cooking.nytimes.com/recipes/1025484-stuffed-zucchini",
+      "id": "1025484",
+      "slug": "stuffed-zucchini",
+      "recipeId": "stuffed-zucchini",
+      "addedAt": "2026-06-04"
+    },
+    {
+      "position": 354,
+      "url": "https://cooking.nytimes.com/recipes/1025525-parmesan-crusted-chicken",
+      "id": "1025525",
+      "slug": "parmesan-crusted-chicken",
+      "recipeId": "parmesan-crusted-chicken",
+      "addedAt": "2026-06-04"
+    },
+    {
+      "position": 355,
+      "url": "https://cooking.nytimes.com/recipes/1025595-roasted-shrimp-jambalaya",
+      "id": "1025595",
+      "slug": "roasted-shrimp-jambalaya",
+      "recipeId": "roasted-shrimp-jambalaya",
+      "addedAt": "2026-06-04"
     }
   ]
 }
