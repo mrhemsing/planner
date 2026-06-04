@@ -14,6 +14,15 @@ type HealthyDinnerTarget = (typeof healthyDinnerTargets.items)[number];
 const recentlyAddedWindowDays = 30;
 const recentlyAddedWindowMs = recentlyAddedWindowDays * 24 * 60 * 60 * 1000;
 const recentCutoff = Date.now() - recentlyAddedWindowMs;
+const retiredDailyPickUrlIds: Record<string, Set<string>> = {
+  "2026-06-04": new Set([
+    "spinach-and-feta-lentil-bowls",
+    "quick-lamb-ragu-with-artichokes",
+    "green-goddess-chicken-salad-sandwiches",
+    "salmon-tostadas-with-citrus-salsa",
+    "ras-el-hanout-chickpea-and-spinach-stew",
+  ]),
+};
 
 function preferDinner(current: (typeof recipeLibrary)[number] | undefined, candidate: (typeof recipeLibrary)[number]) {
   if (!current) return candidate;
@@ -93,6 +102,10 @@ function getPacificDateKey() {
   return `${valueFor("year")}-${valueFor("month")}-${valueFor("day")}`;
 }
 
+function isRetiredDailyPickUrl(recipeId: string, dateKey: string) {
+  return retiredDailyPickUrlIds[dateKey]?.has(recipeId) ?? false;
+}
+
 function absoluteImageUrl(imageUrl: string) {
   return new URL(imageUrl, siteUrl).toString();
 }
@@ -158,7 +171,9 @@ export default async function Home({
   const params = await searchParams;
   const recipeId = firstSearchParam(params.recipe)?.toLowerCase();
   const pickedOn = firstSearchParam(params.pickedOn);
-  const initialSelectedRecipe = recipeId && pickedOn === getPacificDateKey() ? recipesById.get(recipeId) : undefined;
+  const todayDateKey = getPacificDateKey();
+  const initialSelectedRecipe =
+    recipeId && pickedOn === todayDateKey && !isRetiredDailyPickUrl(recipeId, todayDateKey) ? recipesById.get(recipeId) : undefined;
 
   return (
     <main className="red-texture-background min-h-screen overflow-x-clip px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">

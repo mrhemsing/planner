@@ -29,6 +29,15 @@ const MANUAL_DAILY_PICK_OVERRIDES: Record<string, Partial<Record<string, string>
     vegetarian: "broccoli-cheddar-beans",
   },
 };
+const RETIRED_DAILY_PICK_URL_IDS: Record<string, Set<string>> = {
+  "2026-06-04": new Set([
+    "spinach-and-feta-lentil-bowls",
+    "quick-lamb-ragu-with-artichokes",
+    "green-goddess-chicken-salad-sandwiches",
+    "salmon-tostadas-with-citrus-salsa",
+    "ras-el-hanout-chickpea-and-spinach-stew",
+  ]),
+};
 const warmedHomepageThumbnailSrcs = new Set<string>();
 const VEGETARIAN_CATEGORY_OVERRIDES = new Set([
   "chickpea-noodle-soup",
@@ -253,11 +262,12 @@ export function RecipeBrowser({
       const params = new URLSearchParams(window.location.search);
       const recipeIdFromUrl = params.get("recipe");
       if (!recipeIdFromUrl) {
+        setSelectedRecipeFromUrl(false);
         setHasSyncedRecipeFromUrl(true);
         return;
       }
 
-      if (params.get("pickedOn") !== dailyDateKey) {
+      if (params.get("pickedOn") !== dailyDateKey || isRetiredDailyPickUrl(recipeIdFromUrl, dailyDateKey)) {
         params.delete("recipe");
         params.delete("pickedOn");
         const query = params.toString();
@@ -1823,6 +1833,10 @@ function getManualDailyPickId(recipes: RecipeLibraryEntry[], dateKey: string, fi
   if (!overrideId || reservedPickIds.has(overrideId)) return undefined;
 
   return recipes.some((recipe) => recipe.id === overrideId) ? overrideId : undefined;
+}
+
+function isRetiredDailyPickUrl(recipeId: string, dateKey: string) {
+  return RETIRED_DAILY_PICK_URL_IDS[dateKey]?.has(recipeId) ?? false;
 }
 
 function getDailyDinnerPickId(recipes: RecipeLibraryEntry[], dateKey: string, filterId: string, reservedPickIds = new Set<string>()) {
