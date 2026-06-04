@@ -470,7 +470,7 @@ export function RecipeBrowser({
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
   const recentlyAddedCount = recentlyAddedRecipes.length;
-  const recentlyAddedTitle = "Recipes added in the last 30 days";
+  const recentlyAddedTitle = "View recipes added in the last 30 days";
   const recentlyAddedLabel = `${recentlyAddedTitle} (${recentlyAddedCount})`;
   const browseLabel = activeFilter === "recent" ? recentlyAddedLabel : activeFilterDetails.browseLabel;
   const recipeSearchPlaceholder = `Search ${getSearchFilterName(activeFilter)} recipes`;
@@ -892,7 +892,7 @@ export function RecipeBrowser({
             <button
               type="button"
               onClick={showRecentlyAddedRecipes}
-              className="recipe-tap-card inline-flex items-center gap-1.5 px-1 py-1 text-sm font-black text-red-800 underline-offset-4 transition hover:text-red-950 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+              className="recipe-tap-card inline-flex items-center gap-1.5 px-1 py-1 text-sm font-black text-red-800 underline underline-offset-4 transition hover:text-red-950 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
             >
               <SparklesIcon className="h-4 w-4" />
               <span>{recentlyAddedLabel}</span>
@@ -916,7 +916,7 @@ export function RecipeBrowser({
             <button
               type="button"
               onClick={showRecentlyAddedRecipes}
-              className="recipe-tap-card inline-flex items-center gap-1.5 px-2 py-1 text-sm font-black text-red-800 underline-offset-4 transition hover:text-red-950 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+              className="recipe-tap-card inline-flex items-center gap-1.5 px-2 py-1 text-sm font-black text-red-800 underline underline-offset-4 transition hover:text-red-950 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
             >
               <SparklesIcon className="h-4 w-4" />
               <span>{recentlyAddedLabel}</span>
