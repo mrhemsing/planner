@@ -307,7 +307,7 @@ export function RecipeBrowser({
 
   const activeSection = sections.find((section) => section.id === activeSectionId) ?? sections[0];
   const recentlyAddedRecipes = useMemo(
-    () => (recentlyAddedRecipesOverride?.length ? recentlyAddedRecipesOverride : [...(activeSection?.recipes ?? [])].reverse()),
+    () => recentlyAddedRecipesOverride ?? [...(activeSection?.recipes ?? [])].reverse(),
     [activeSection, recentlyAddedRecipesOverride],
   );
   const sortedRecipes = useMemo(

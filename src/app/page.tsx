@@ -9,6 +9,11 @@ const defaultDescription =
   "Five-day healthy dinner planning with NYT Cooking recipes, quick-glance recipe cards, checkable ingredients, and step-by-step instructions.";
 
 type PageSearchParams = Promise<Record<string, string | string[] | undefined>>;
+type HealthyDinnerTarget = (typeof healthyDinnerTargets.items)[number];
+
+const recentlyAddedWindowDays = 30;
+const recentlyAddedWindowMs = recentlyAddedWindowDays * 24 * 60 * 60 * 1000;
+const recentCutoff = Date.now() - recentlyAddedWindowMs;
 
 function preferDinner(current: (typeof recipeLibrary)[number] | undefined, candidate: (typeof recipeLibrary)[number]) {
   if (!current) return candidate;
@@ -43,7 +48,20 @@ const healthyDinners = healthyDinnerTargets.items
   )
   .filter((recipe, index, array): recipe is NonNullable<(typeof recipeLibrary)[number]> => Boolean(recipe) && array.indexOf(recipe) === index);
 
-const recentlyAddedHealthyDinners = [...healthyDinners].reverse();
+function isRecentlyAddedTarget(item: HealthyDinnerTarget) {
+  if (!("addedAt" in item) || typeof item.addedAt !== "string") return false;
+
+  const addedAt = Date.parse(`${item.addedAt}T00:00:00.000Z`);
+  return Number.isFinite(addedAt) && addedAt >= recentCutoff;
+}
+
+const recentlyAddedHealthyDinnerIds = new Set(
+  healthyDinnerTargets.items.filter(isRecentlyAddedTarget).map((item) => item.recipeId.toLowerCase()),
+);
+
+const recentlyAddedHealthyDinners = [...healthyDinners]
+  .filter((recipe) => recentlyAddedHealthyDinnerIds.has(recipe.id.toLowerCase()))
+  .reverse();
 
 const healthyDinnersMissingDetails = healthyDinners.filter(
   (recipe) => !recipe.ingredients?.length || !recipe.instructions?.length,
