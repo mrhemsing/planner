@@ -105,6 +105,7 @@ export function RecipeBrowser({
   const recipeSheetScrollPositionsRef = useRef<Record<string, number>>({});
   const [hydrated, setHydrated] = useState(false);
   const [isRecipeSheetOpen, setRecipeSheetOpen] = useState(false);
+  const [recipeSheetFilterId, setRecipeSheetFilterId] = useState<string>("all");
   const [isDesktopRecipeDialogOpen, setDesktopRecipeDialogOpen] = useState(false);
   const [recipeSearchQuery, setRecipeSearchQuery] = useState("");
   const [shareCopyStatus, setShareCopyStatus] = useState("");
@@ -121,8 +122,8 @@ export function RecipeBrowser({
   const closeMobileLayovers = useCallback(() => {
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
+    setRecipeSheetFilterId("all");
     setAddToWeekOpen(false);
-    setActiveFilter((currentFilter) => (currentFilter === "recent" ? "all" : currentFilter));
   }, []);
 
   useEffect(() => {
@@ -326,11 +327,13 @@ export function RecipeBrowser({
 
   const filteredRecipes = useMemo(() => getRecipesForFilter(activeFilter), [activeFilter, getRecipesForFilter]);
 
+  const recipeSheetFilteredRecipes = useMemo(() => getRecipesForFilter(recipeSheetFilterId), [getRecipesForFilter, recipeSheetFilterId]);
+
   const recipeSheetRecipes = useMemo(() => {
     const normalizedQuery = recipeSearchQuery.trim().toLowerCase();
-    if (!normalizedQuery) return filteredRecipes;
+    if (!normalizedQuery) return recipeSheetFilteredRecipes;
 
-    return filteredRecipes.filter((recipe) => {
+    return recipeSheetFilteredRecipes.filter((recipe) => {
       const haystack = [recipe.title, recipe.description, recipe.prepTime, recipe.serves]
         .filter(Boolean)
         .join(" ")
@@ -338,7 +341,7 @@ export function RecipeBrowser({
 
       return haystack.includes(normalizedQuery);
     });
-  }, [filteredRecipes, recipeSearchQuery]);
+  }, [recipeSearchQuery, recipeSheetFilteredRecipes]);
 
   useEffect(() => {
     const thumbnailSrcs = recipeSheetRecipes
@@ -474,8 +477,8 @@ export function RecipeBrowser({
   const recentlyAddedTitle = "Recently added recipes";
   const recentlyAddedLabel = `Recently added recipes (${recentlyAddedCount})`;
   const browseLabel = activeFilterDetails.browseLabel;
-  const recipeSheetTitle = activeFilter === "recent" ? recentlyAddedTitle : browseLabel;
-  const recipeSearchPlaceholder = `Search ${getSearchFilterName(activeFilter)} recipes`;
+  const recipeSheetTitle = recipeSheetFilterId === "recent" ? recentlyAddedTitle : browseLabel;
+  const recipeSearchPlaceholder = `Search ${getSearchFilterName(recipeSheetFilterId)} recipes`;
   const dailyPickTitle = getDailyPickTitle(activeFilter);
   const mobileDailyPickTitle = activeFilter === "vegetarian" ? "TODAY'S VEG PICK" : dailyPickTitle;
   const mobileTopFilters = filters.filter((filter) => filter.id !== "favourites");
@@ -489,6 +492,7 @@ export function RecipeBrowser({
       setSelectedRecipeFromUrl(Boolean(nextRecipeId));
       setSelectedRecipeId(nextRecipeId);
       setActiveFilter(filterId);
+      setRecipeSheetFilterId(filterId);
 
       if (options?.openSheetOnMobile && window.innerWidth < 640 && nextFilteredRecipes.length > 0) {
         setRecipeSearchQuery("");
@@ -499,8 +503,21 @@ export function RecipeBrowser({
   );
 
   const showRecentlyAddedRecipes = useCallback(() => {
-    showRecipeForFilter("recent", { openSheetOnMobile: true });
-  }, [showRecipeForFilter]);
+    const nextRecipeId = recentlyAddedRecipes[0]?.id ?? "";
+
+    if (nextRecipeId) {
+      setSelectedRecipeFromUrl(true);
+      setSelectedRecipeId(nextRecipeId);
+    }
+
+    setActiveFilter("all");
+    setRecipeSheetFilterId("recent");
+    setRecipeSearchQuery("");
+
+    if (window.innerWidth < 640 && recentlyAddedRecipes.length > 0) {
+      setRecipeSheetOpen(true);
+    }
+  }, [recentlyAddedRecipes]);
 
   const moveActiveFilter = (direction: 1 | -1) => {
     const filterOrder = mobileTopFilters.length ? mobileTopFilters : filters;
@@ -549,11 +566,11 @@ export function RecipeBrowser({
       const sheet = recipeSheetScrollRef.current;
       if (!sheet) return;
 
-      sheet.scrollTop = recipeSheetScrollPositionsRef.current[activeFilter] ?? 0;
+      sheet.scrollTop = recipeSheetScrollPositionsRef.current[recipeSheetFilterId] ?? 0;
     });
 
     return () => window.cancelAnimationFrame(frame);
-  }, [activeFilter, isRecipeSheetOpen]);
+  }, [isRecipeSheetOpen, recipeSheetFilterId]);
 
   useEffect(() => {
     if (!isDesktopRecipeDialogOpen) return;
@@ -710,6 +727,7 @@ export function RecipeBrowser({
     setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(id);
     setActiveFilter((currentFilter) => (currentFilter === "recent" ? "all" : currentFilter));
+    setRecipeSheetFilterId("all");
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
     if (shouldOpenDesktopDrawer) {
@@ -780,6 +798,7 @@ export function RecipeBrowser({
     setSelectedRecipeId(dailyDinnerPickId);
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
+    setRecipeSheetFilterId("all");
     setDesktopRecipeDialogOpen(false);
     window.history.replaceState(null, "", window.location.pathname);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -905,7 +924,10 @@ export function RecipeBrowser({
           <div className="flex flex-col items-center gap-2 sm:hidden">
             <button
               type="button"
-              onClick={() => setRecipeSheetOpen(true)}
+              onClick={() => {
+                setRecipeSheetFilterId(activeFilter);
+                setRecipeSheetOpen(true);
+              }}
               className={`recipe-tap-card flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl border px-4 text-center text-sm font-bold uppercase tracking-[0.08em] shadow-[0_8px_18px_rgba(146,64,14,0.22)] outline-none transition focus:border-amber-900 active:scale-[0.98] ${
                 activeFilter === "favourites"
                   ? "border-amber-500 bg-amber-100 text-amber-900 hover:bg-amber-200"
@@ -1487,7 +1509,7 @@ export function RecipeBrowser({
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">{recipeSheetTitle}</p>
-                  <p className="mt-1 text-sm text-stone-500">{recipeSheetRecipes.length} of {filteredRecipes.length} recipes</p>
+                  <p className="mt-1 text-sm text-stone-500">{recipeSheetRecipes.length} of {recipeSheetFilteredRecipes.length} recipes</p>
                 </div>
                 <button
                   type="button"
@@ -1519,7 +1541,7 @@ export function RecipeBrowser({
             <div
               ref={recipeSheetScrollRef}
               onScroll={(event) => {
-                recipeSheetScrollPositionsRef.current[activeFilter] = event.currentTarget.scrollTop;
+                recipeSheetScrollPositionsRef.current[recipeSheetFilterId] = event.currentTarget.scrollTop;
               }}
               className="min-h-0 flex-1 overflow-y-auto px-4 py-4"
             >
