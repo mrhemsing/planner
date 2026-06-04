@@ -1,4 +1,4 @@
-import { mealPlan, recipeLibrary } from "@/data/recipes";
+import { mealPlan, recipeLibrary, recentlyAddedDinnerRecipes } from "@/data/recipes";
 
 export type GroceryItem = {
   name: string;
@@ -7,7 +7,7 @@ export type GroceryItem = {
   recipeTitles: string[];
 };
 
-export { mealPlan, recipeLibrary };
+export { mealPlan, recipeLibrary, recentlyAddedDinnerRecipes };
 
 export const todayPlan = mealPlan[0];
 export const upcomingPlan = mealPlan.slice(1, 4);

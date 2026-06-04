@@ -71,7 +71,13 @@ type WeekDay = (typeof WEEK_DAYS)[number];
 type PlanSlot = { recipe: RecipeLibraryEntry; servings: number };
 type WeekPlan = Record<WeekDay, PlanSlot | null>;
 
-export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
+export function RecipeBrowser({
+  sections,
+  recentlyAddedRecipes: recentlyAddedRecipesOverride,
+}: {
+  sections: RecipeSection[];
+  recentlyAddedRecipes?: RecipeLibraryEntry[];
+}) {
   const allRecipes = useMemo(() => sections.flatMap((section) => section.recipes), [sections]);
   const defaultFavourites = useMemo(
     () => Object.fromEntries(allRecipes.map((recipe) => [recipe.id, recipe.favourite])),
@@ -300,6 +306,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
   }, [addToWeekOpen, isRecipeSheetOpen]);
 
   const activeSection = sections.find((section) => section.id === activeSectionId) ?? sections[0];
+  const recentlyAddedRecipes = useMemo(
+    () => (recentlyAddedRecipesOverride?.length ? recentlyAddedRecipesOverride : [...(activeSection?.recipes ?? [])].reverse()),
+    [activeSection, recentlyAddedRecipesOverride],
+  );
   const sortedRecipes = useMemo(
     () => [...(activeSection?.recipes ?? [])].sort((a, b) => a.title.localeCompare(b.title)),
     [activeSection],
@@ -307,9 +317,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
 
   const getRecipesForFilter = useCallback(
     (filterId: string) => {
-      return sortedRecipes.filter((recipe) => recipeMatchesFilter(recipe, filterId, favourites));
+      const recipeOrder = filterId === "recent" ? recentlyAddedRecipes : sortedRecipes;
+      return recipeOrder.filter((recipe) => recipeMatchesFilter(recipe, filterId, favourites));
     },
-    [favourites, sortedRecipes],
+    [favourites, recentlyAddedRecipes, sortedRecipes],
   );
 
   const filteredRecipes = useMemo(() => getRecipesForFilter(activeFilter), [activeFilter, getRecipesForFilter]);
@@ -458,6 +469,7 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     },
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
+  const browseLabel = activeFilter === "recent" ? "Recently added recipes" : activeFilterDetails.browseLabel;
   const recipeSearchPlaceholder = `Search ${getSearchFilterName(activeFilter)} recipes`;
   const dailyPickTitle = getDailyPickTitle(activeFilter);
   const mobileDailyPickTitle = activeFilter === "vegetarian" ? "TODAY'S VEG PICK" : dailyPickTitle;
@@ -480,6 +492,10 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
     },
     [dailyDateKey, favourites, getRecipesForFilter, sortedRecipes],
   );
+
+  const showRecentlyAddedRecipes = useCallback(() => {
+    showRecipeForFilter("recent", { openSheetOnMobile: true });
+  }, [showRecipeForFilter]);
 
   const moveActiveFilter = (direction: 1 | -1) => {
     const filterOrder = mobileTopFilters.length ? mobileTopFilters : filters;
@@ -870,21 +886,39 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
           </div>
           <div className="hidden flex-col items-start gap-2 sm:flex">
             <div className="flex flex-wrap items-center justify-start gap-2">{filters.map(renderFilterButton)}</div>
+            <button
+              type="button"
+              onClick={showRecentlyAddedRecipes}
+              className="recipe-tap-card inline-flex items-center gap-1.5 px-1 py-1 text-sm font-black text-red-800 underline-offset-4 transition hover:text-red-950 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+            >
+              <SparklesIcon className="h-4 w-4" />
+              <span>Recently added recipes</span>
+              <span aria-hidden="true">→</span>
+            </button>
           </div>
 
-          <div className="flex gap-2 sm:hidden">
+          <div className="flex flex-col items-center gap-2 sm:hidden">
             <button
               type="button"
               onClick={() => setRecipeSheetOpen(true)}
-              className={`recipe-tap-card flex min-h-11 flex-1 items-center justify-center gap-2 rounded-2xl border px-4 text-center text-sm font-bold uppercase tracking-[0.08em] shadow-[0_8px_18px_rgba(146,64,14,0.22)] outline-none transition focus:border-amber-900 active:scale-[0.98] ${
+              className={`recipe-tap-card flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl border px-4 text-center text-sm font-bold uppercase tracking-[0.08em] shadow-[0_8px_18px_rgba(146,64,14,0.22)] outline-none transition focus:border-amber-900 active:scale-[0.98] ${
                 activeFilter === "favourites"
                   ? "border-amber-500 bg-amber-100 text-amber-900 hover:bg-amber-200"
                   : "border-amber-700 bg-amber-500 text-white hover:bg-amber-600"
               }`}
             >
               {activeFilter === "favourites" ? <FavouriteStarIcon filled className="h-5 w-5" /> : null}
-              <span>{activeFilterDetails.browseLabel}</span>
+              <span>{browseLabel}</span>
               <span aria-hidden="true">＋</span>
+            </button>
+            <button
+              type="button"
+              onClick={showRecentlyAddedRecipes}
+              className="recipe-tap-card inline-flex items-center gap-1.5 px-2 py-1 text-sm font-black text-red-800 underline-offset-4 transition hover:text-red-950 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+            >
+              <SparklesIcon className="h-4 w-4" />
+              <span>Recently added recipes</span>
+              <span aria-hidden="true">→</span>
             </button>
           </div>
         </div>
@@ -1442,13 +1476,13 @@ export function RecipeBrowser({ sections }: { sections: RecipeSection[] }) {
       ) : null}
 
       {isRecipeSheetOpen ? (
-        <div className="bottom-sheet-backdrop fixed inset-0 z-50 bg-black/35 sm:hidden" role="dialog" aria-modal="true" aria-label={activeFilterDetails.browseLabel}>
+        <div className="bottom-sheet-backdrop fixed inset-0 z-50 bg-black/35 sm:hidden" role="dialog" aria-modal="true" aria-label={browseLabel}>
           <div className="bottom-sheet-panel absolute inset-x-0 bottom-0 flex h-[94dvh] flex-col rounded-t-[28px] bg-white shadow-[0_-18px_60px_rgba(0,0,0,0.24)]">
             <div className="sticky top-0 z-10 border-b border-stone-200 bg-white px-5 py-4">
               <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-stone-300" aria-hidden="true" />
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">{activeFilterDetails.browseLabel}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">{browseLabel}</p>
                   <p className="mt-1 text-sm text-stone-500">{recipeSheetRecipes.length} of {filteredRecipes.length} recipes</p>
                 </div>
                 <button
@@ -1646,6 +1680,25 @@ function FavouriteStarIcon({ filled, className = "h-6 w-6" }: { filled: boolean;
   );
 }
 
+function SparklesIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M12 3l1.6 5.1L19 10l-5.4 1.9L12 17l-1.6-5.1L5 10l5.4-1.9L12 3Z" />
+      <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z" />
+      <path d="M5 14l.7 1.8L8 16.5l-2.3.7L5 19l-.7-1.8-2.3-.7 2.3-.7L5 14Z" />
+    </svg>
+  );
+}
+
 function buildRecipeShareUrl(recipeId: string, dateKey: string) {
   if (typeof window === "undefined") return "";
 
@@ -1657,6 +1710,7 @@ function buildRecipeShareUrl(recipeId: string, dateKey: string) {
 }
 
 function getDailyPickTitle(activeFilter: string) {
+  if (activeFilter === "recent") return "RECENTLY ADDED";
   if (activeFilter === "quick") return "TODAY’S 30 MIN PICK";
   if (activeFilter === "meat") return "TODAY’S MEAT PICK";
   if (activeFilter === "fish") return "TODAY’S FISH PICK";
@@ -1667,6 +1721,7 @@ function getDailyPickTitle(activeFilter: string) {
 }
 
 function getSearchFilterName(activeFilter: string) {
+  if (activeFilter === "recent") return "recently added";
   if (activeFilter === "quick") return "30-min";
   if (activeFilter === "meat") return "meat";
   if (activeFilter === "fish") return "fish";
@@ -1722,6 +1777,7 @@ function isQuickPrepRecipe(recipe: RecipeLibraryEntry) {
 const UNIQUE_DAILY_PICK_FILTER_ORDER = ["all", "quick", "meat", "fish", "vegetarian"];
 
 function recipeMatchesFilter(recipe: RecipeLibraryEntry, filterId: string, favourites: Record<string, boolean>) {
+  if (filterId === "recent") return true;
   if (filterId === "favourites") return Boolean(favourites[recipe.id]);
   if (filterId === "quick") return isQuickPrepRecipe(recipe);
   if (filterId === "all") return true;
@@ -1730,6 +1786,7 @@ function recipeMatchesFilter(recipe: RecipeLibraryEntry, filterId: string, favou
 }
 
 function getUniqueDailyPickIdForFilter(filterId: string, recipes: RecipeLibraryEntry[], dateKey: string, favourites: Record<string, boolean>) {
+  if (filterId === "recent") return "";
   if (filterId === "favourites") return "";
 
   const reservedPickIds = new Set<string>();

@@ -18249,14 +18249,20 @@ const recipeDetailsMap: Record<string, RecipeDetailsEntry> = {
 const generatedHealthyDinnerDetails = healthyDinnerDetails as Record<string, RecipeDetailsEntry>;
 const generatedMissingFullDetails = missingFullDetails as Record<string, RecipeDetailsEntry>;
 
-export const recipeLibrary: RecipeLibraryEntry[] = [...dinnerRecipes, ...lunchRecipes]
-  .map((recipe) => ({
+function withGeneratedRecipeDetails(recipe: RecipeLibraryEntry): RecipeLibraryEntry {
+  return {
     ...recipe,
     ...recipeDetailsMap[recipe.id],
     ...generatedHealthyDinnerDetails[recipe.id],
     ...generatedMissingFullDetails[recipe.id],
-  }))
+  };
+}
+
+export const recipeLibrary: RecipeLibraryEntry[] = [...dinnerRecipes, ...lunchRecipes]
+  .map(withGeneratedRecipeDetails)
   .sort((a, b) => a.title.localeCompare(b.title));
+
+export const recentlyAddedDinnerRecipes: RecipeLibraryEntry[] = [...dinnerRecipes].reverse().map(withGeneratedRecipeDetails);
 
 const recipeById = new Map(recipeLibrary.map((recipe) => [recipe.id, recipe]));
 
