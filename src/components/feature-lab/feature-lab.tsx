@@ -1766,6 +1766,8 @@ function CookMode({ recipe, onClose }: { recipe: RecipeLibraryEntry; onClose: ()
   const touchStartXRef = useRef<number | null>(null);
   const wakeLockRef = useRef<{ release: () => Promise<void> } | null>(null);
   const steps = recipe.instructions?.length ? recipe.instructions : ["Read the recipe, prep ingredients, and cook with confidence."];
+  const isFirstStep = stepIndex === 0;
+  const isLastStep = stepIndex === steps.length - 1;
   const goBack = () => setStepIndex((current) => Math.max(0, current - 1));
   const goNext = () => setStepIndex((current) => Math.min(steps.length - 1, current + 1));
 
@@ -1793,16 +1795,20 @@ function CookMode({ recipe, onClose }: { recipe: RecipeLibraryEntry; onClose: ()
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-stone-950 text-white">
-      <header className="flex items-center justify-between gap-3 border-b border-white/10 p-4">
-        <div>
-          <p className="text-xs font-black uppercase tracking-[0.22em] text-amber-200">Cook mode</p>
-          <h2 className="line-clamp-1 text-xl font-black">{recipe.title}</h2>
+    <div className="fixed inset-0 z-50 flex h-[100svh] flex-col bg-stone-950 text-white">
+      <header className="shrink-0 border-b border-white/10 p-4">
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-amber-200">Cook mode</p>
+            <h2 className="line-clamp-1 text-xl font-black">{recipe.title}</h2>
+          </div>
+          <button type="button" onClick={onClose} className="min-h-11 shrink-0 touch-manipulation rounded-full bg-white px-4 py-2 font-black text-stone-950 transition active:scale-[0.98]">
+            Close
+          </button>
         </div>
-        <button type="button" onClick={onClose} className="rounded-full bg-white px-4 py-2 font-black text-stone-950">Close</button>
       </header>
       <main
-        className="flex flex-1 flex-col justify-center p-6"
+        className="flex min-h-0 flex-1 touch-pan-y flex-col justify-center overflow-y-auto p-6"
         onTouchStart={(event) => {
           touchStartXRef.current = event.touches[0]?.clientX ?? null;
         }}
@@ -1823,9 +1829,22 @@ function CookMode({ recipe, onClose }: { recipe: RecipeLibraryEntry; onClose: ()
         <p className="text-sm font-black uppercase tracking-[0.22em] text-amber-200">Step {stepIndex + 1} of {steps.length}</p>
         <p className="mt-4 text-3xl font-black leading-tight sm:text-5xl">{steps[stepIndex]}</p>
       </main>
-      <footer className="grid grid-cols-2 gap-2 p-4">
-        <button type="button" onClick={goBack} className="rounded-2xl bg-white/10 py-4 font-black">Back</button>
-        <button type="button" onClick={goNext} className="rounded-2xl bg-white/10 py-4 font-black">Next</button>
+      <footer className="grid shrink-0 grid-cols-2 gap-3 border-t border-white/10 bg-stone-950/95 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
+        <button
+          type="button"
+          onClick={goBack}
+          disabled={isFirstStep}
+          className="min-h-16 touch-manipulation rounded-2xl bg-white/10 px-4 py-4 font-black transition active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-white/5 disabled:text-white/35"
+        >
+          Back
+        </button>
+        <button
+          type="button"
+          onClick={isLastStep ? onClose : goNext}
+          className="min-h-16 touch-manipulation rounded-2xl bg-amber-200 px-4 py-4 font-black text-stone-950 shadow-lg shadow-amber-950/20 transition active:scale-[0.98]"
+        >
+          {isLastStep ? "Done" : "Next"}
+        </button>
       </footer>
     </div>
   );
