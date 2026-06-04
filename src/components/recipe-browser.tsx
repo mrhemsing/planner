@@ -916,7 +916,7 @@ export function RecipeBrowser({
             <button
               type="button"
               onClick={showRecentlyAddedRecipes}
-              className="recipe-tap-card inline-flex items-center gap-1.5 px-1 py-1 text-sm font-black text-orange-800 underline underline-offset-4 transition hover:text-orange-950 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+              className="recipe-tap-card inline-flex items-center gap-1.5 px-1 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
             >
               <SparklesIcon className="h-4 w-4" />
               <span>{recentlyAddedLabel}</span>
@@ -943,7 +943,7 @@ export function RecipeBrowser({
             <button
               type="button"
               onClick={showRecentlyAddedRecipes}
-              className="recipe-tap-card inline-flex items-center gap-1.5 px-2 py-1 text-sm font-black text-orange-800 underline underline-offset-4 transition hover:text-orange-950 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+              className="recipe-tap-card inline-flex items-center gap-1.5 px-2 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
             >
               <SparklesIcon className="h-4 w-4" />
               <span>{recentlyAddedLabel}</span>
