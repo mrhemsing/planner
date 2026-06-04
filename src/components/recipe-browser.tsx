@@ -20,6 +20,15 @@ const INGREDIENT_STRIKE_CLASSES = [
 const DAILY_PICK_REFRESH_SALT = "2026-05-29-refresh-1";
 const DAILY_PICK_ROTATION_ANCHOR_DATE = "2026-05-01";
 const DAILY_PICK_RECENT_HISTORY_DAYS = 21;
+const MANUAL_DAILY_PICK_OVERRIDES: Record<string, Partial<Record<string, string>>> = {
+  "2026-06-04": {
+    all: "parmesan-crusted-chicken",
+    quick: "korean-bbq-style-meatballs",
+    meat: "pork-bulgogi-with-spring-vegetables",
+    fish: "roasted-shrimp-jambalaya",
+    vegetarian: "broccoli-cheddar-beans",
+  },
+};
 const warmedHomepageThumbnailSrcs = new Set<string>();
 const VEGETARIAN_CATEGORY_OVERRIDES = new Set([
   "chickpea-noodle-soup",
@@ -1797,7 +1806,9 @@ function getUniqueDailyPickIdForFilter(filterId: string, recipes: RecipeLibraryE
 
   for (const orderedFilterId of UNIQUE_DAILY_PICK_FILTER_ORDER) {
     const candidates = recipes.filter((recipe) => recipeMatchesFilter(recipe, orderedFilterId, favourites));
-    const pickId = getDailyDinnerPickId(candidates, dateKey, orderedFilterId, reservedPickIds);
+    const pickId =
+      getManualDailyPickId(candidates, dateKey, orderedFilterId, reservedPickIds) ??
+      getDailyDinnerPickId(candidates, dateKey, orderedFilterId, reservedPickIds);
 
     if (orderedFilterId === filterId) return pickId;
     if (pickId) reservedPickIds.add(pickId);
@@ -1805,6 +1816,13 @@ function getUniqueDailyPickIdForFilter(filterId: string, recipes: RecipeLibraryE
 
   const fallbackCandidates = recipes.filter((recipe) => recipeMatchesFilter(recipe, filterId, favourites));
   return getDailyDinnerPickId(fallbackCandidates, dateKey, filterId, reservedPickIds);
+}
+
+function getManualDailyPickId(recipes: RecipeLibraryEntry[], dateKey: string, filterId: string, reservedPickIds = new Set<string>()) {
+  const overrideId = MANUAL_DAILY_PICK_OVERRIDES[dateKey]?.[filterId];
+  if (!overrideId || reservedPickIds.has(overrideId)) return undefined;
+
+  return recipes.some((recipe) => recipe.id === overrideId) ? overrideId : undefined;
 }
 
 function getDailyDinnerPickId(recipes: RecipeLibraryEntry[], dateKey: string, filterId: string, reservedPickIds = new Set<string>()) {
