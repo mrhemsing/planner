@@ -3,6 +3,7 @@
 :root {
   --background: #e23628;
   --foreground: #1c1917;
+  --recipe-background-image: url("/recipe-images/recipe-notes-background-715.webp");
 }
 
 @theme inline {
@@ -50,10 +51,10 @@ body {
   z-index: 0;
   opacity: 0.4;
   mix-blend-mode: multiply;
-  background-image: url("/recipe-images/cooking-bg-2.webp");
+  background-image: var(--recipe-background-image);
   background-repeat: repeat;
-  background-size: 100%;
-  background-position-y: -23rem;
+  background-position: top center;
+  background-size: min(100vw, 715px) auto;
 }
 
 .red-texture-background:after {
@@ -66,12 +67,23 @@ body {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --recipe-background-image: url("/recipe-images/recipe-notes-background-540.webp");
+  }
+
   .red-texture-background:before {
     opacity: 0.8;
+    background-size: 100% auto;
   }
 
   .red-texture-background.texture-soft:before {
     opacity: 0.56;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --recipe-background-image: url("/recipe-images/recipe-notes-background-360.webp");
   }
 }
 
@@ -300,10 +312,10 @@ input:focus-visible {
   z-index: -3;
   opacity: 0.42;
   mix-blend-mode: multiply;
-  background-image: url("/recipe-images/cooking-bg-2.webp");
-  background-position-y: -23rem;
+  background-image: var(--recipe-background-image);
+  background-position: top center;
   background-repeat: repeat;
-  background-size: 100%;
+  background-size: min(100vw, 715px) auto;
 }
 
 .royale-stage::after {
