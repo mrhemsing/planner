@@ -2417,14 +2417,6 @@
     },
     {
       "position": 345,
-      "url": "https://cooking.nytimes.com/recipes/779380407-charred-corn-and-pickled-jalapeno-potato-salad",
-      "id": "779380407",
-      "slug": "charred-corn-and-pickled-jalapeno-potato-salad",
-      "recipeId": "charred-corn-and-pickled-jalapeno-potato-salad",
-      "addedAt": "2026-06-03"
-    },
-    {
-      "position": 346,
       "url": "https://cooking.nytimes.com/recipes/778688004-meatball-guisada",
       "id": "778688004",
       "slug": "meatball-guisada",
@@ -2432,7 +2424,7 @@
       "addedAt": "2026-06-03"
     },
     {
-      "position": 347,
+      "position": 346,
       "url": "https://cooking.nytimes.com/recipes/778684659-berbere-steak-with-rosemary-ghee",
       "id": "778684659",
       "slug": "berbere-steak-with-rosemary-ghee",
@@ -2440,7 +2432,7 @@
       "addedAt": "2026-06-03"
     },
     {
-      "position": 348,
+      "position": 347,
       "url": "https://cooking.nytimes.com/recipes/776710293-tofu-schnitzel-with-buttermilk-slaw",
       "id": "776710293",
       "slug": "tofu-schnitzel-with-buttermilk-slaw",

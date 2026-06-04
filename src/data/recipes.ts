@@ -10361,37 +10361,6 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
     ],
   },
   {
-    id: "charred-corn-and-pickled-jalapeno-potato-salad",
-    title: "Charred Corn and Pickled Jalapeño Potato Salad",
-    category: "Dinner",
-    sourceName: dinnerSourceName,
-    sourceUrl:
-      "https://cooking.nytimes.com/recipes/779380407-charred-corn-and-pickled-jalapeno-potato-salad?unlocked_article_code=1.nlA.uxBu.4mciThZHEXaG",
-    imageUrl:
-      "https://static01.nyt.com/images/2026/05/21/multimedia/SL-Potato-and-Grilled-Corn-Salad-With-Pickled-Jalapenos-pckm/SL-Potato-and-Grilled-Corn-Salad-With-Pickled-Jalapenos-pckm-videoSixteenByNineJumbo1600.jpg",
-    description:
-      "A creamy five-ingredient potato salad with charred corn, pickled jalapenos, garlic, mayo, and brine.",
-    favourite: false,
-    tags: ["dinner", "nyt", "vegetarian", "potato salad", "corn", "quick"],
-    plannedDays: [],
-    prepTime: "35 min",
-    serves: 6,
-    ingredients: [
-      { item: "Yukon Gold potatoes", amount: "2 lb", category: "produce" },
-      { item: "corn", amount: "3 ears", category: "produce" },
-      { item: "mayonnaise", amount: "1 tbsp plus 1/3 cup", category: "fridge" },
-      { item: "pickled jalapenos and brine", amount: "1/4 cup plus 2 to 3 tbsp brine", category: "pantry" },
-      { item: "garlic", amount: "2 cloves", category: "produce" },
-    ],
-    instructions: [
-      "Simmer quartered potatoes in salted water until very tender, then drain and dry them briefly.",
-      "Rub corn with a little mayonnaise and char it in a hot skillet.",
-      "Cut the corn from the cobs and add it to the potatoes.",
-      "Mix in chopped pickled jalapenos, brine, grated garlic, and the remaining mayonnaise, letting some potatoes mash into the dressing.",
-      "Season to taste and serve warm, room temperature, or chilled.",
-    ],
-  },
-  {
     id: "meatball-guisada",
     title: "Meatball Guisada",
     category: "Dinner",
