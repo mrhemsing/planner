@@ -470,10 +470,8 @@ export function RecipeBrowser({
   ];
   const activeFilterDetails = filters.find((filter) => filter.id === activeFilter) ?? filters[0];
   const recentlyAddedCount = recentlyAddedRecipes.length;
-  const recentlyAddedLabel =
-    recentlyAddedCount === 1
-      ? "1 recipe added in the last 30 days"
-      : `${recentlyAddedCount} recipes added in the last 30 days`;
+  const recentlyAddedTitle = "Recipes added in the last 30 days";
+  const recentlyAddedLabel = `${recentlyAddedTitle} (${recentlyAddedCount})`;
   const browseLabel = activeFilter === "recent" ? recentlyAddedLabel : activeFilterDetails.browseLabel;
   const recipeSearchPlaceholder = `Search ${getSearchFilterName(activeFilter)} recipes`;
   const dailyPickTitle = getDailyPickTitle(activeFilter);
@@ -898,7 +896,6 @@ export function RecipeBrowser({
             >
               <SparklesIcon className="h-4 w-4" />
               <span>{recentlyAddedLabel}</span>
-              <span aria-hidden="true">→</span>
             </button>
           </div>
 
@@ -923,7 +920,6 @@ export function RecipeBrowser({
             >
               <SparklesIcon className="h-4 w-4" />
               <span>{recentlyAddedLabel}</span>
-              <span aria-hidden="true">→</span>
             </button>
           </div>
         </div>
