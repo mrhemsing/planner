@@ -38,6 +38,34 @@ const RETIRED_DAILY_PICK_URL_IDS: Record<string, Set<string>> = {
     "ras-el-hanout-chickpea-and-spinach-stew",
   ]),
 };
+const TAGLINES_MOBILE = [
+  "Dinners, sorted fast.",
+  "Dinner, handled.",
+  "Hungry? Decided.",
+  "Pick a dinner. Done.",
+  "No more dinner panic.",
+  "Dinner, minus the dread.",
+  "Beat the 5pm panic.",
+  "What's for dinner? This.",
+  "Tonight, sorted.",
+  "Fast, healthy, done.",
+  "Skip the fridge stare.",
+  "Plan dinner in seconds.",
+];
+const TAGLINES_DESKTOP = [
+  "Dinner decided before you're hangry.",
+  'The "what\'s for dinner" problem, solved.',
+  "Good dinners, zero deliberation.",
+  "Healthy dinners without the doom-scroll.",
+  'For when "I don\'t know, what do you want?" ends in a fight.',
+  "Fewer tabs. Better dinners.",
+  "You bring the appetite, we'll bring the plan.",
+  "Less scrolling, more eating.",
+  "Beat the 5pm panic with one tap.",
+  "Healthy dinners, decided in seconds.",
+  "Stop staring at the fridge like it owes you answers.",
+  "The end of the nightly dinner negotiation.",
+];
 const warmedHomepageThumbnailSrcs = new Set<string>();
 const VEGETARIAN_CATEGORY_OVERRIDES = new Set([
   "chickpea-noodle-soup",
@@ -113,6 +141,7 @@ export function RecipeBrowser({
     () => getUniqueDailyPickIdForFilter("all", sections[0]?.recipes ?? [], dailyDateKey, defaultFavourites),
     [dailyDateKey, defaultFavourites, sections],
   );
+  const dailyTaglines = useMemo(() => getDailyTaglines(dailyDateKey), [dailyDateKey]);
   const [selectedRecipeId, setSelectedRecipeId] = useState<string>(initialSelectedRecipeId ?? dailyDinnerPickId);
   const [hasSyncedRecipeFromUrl, setHasSyncedRecipeFromUrl] = useState(Boolean(initialSelectedRecipeId));
   const [selectedRecipeFromUrl, setSelectedRecipeFromUrl] = useState(Boolean(initialSelectedRecipeId));
@@ -918,8 +947,8 @@ export function RecipeBrowser({
       <section className="rounded-[24px] border border-white/50 bg-white/92 p-4 shadow-xl shadow-red-950/15 backdrop-blur sm:p-5">
         <p className="text-xs font-black uppercase tracking-[0.22em] text-red-800">Filter recipes</p>
         <h2 className="mt-1 text-3xl font-black tracking-tight text-stone-950 sm:text-4xl">
-          <span className="sm:hidden">Dinners, sorted fast.</span>
-          <span className="hidden sm:inline">Healthy dinners, sorted fast.</span>
+          <span className="sm:hidden">{dailyTaglines.mobile}</span>
+          <span className="hidden sm:inline">{dailyTaglines.desktop}</span>
         </h2>
 
         <div className="mt-4 flex flex-col gap-3 sm:items-start">
@@ -1896,6 +1925,16 @@ function getDateKeyOffset(dateKey: string, dayOffset: number) {
   if (!Number.isFinite(dateTime)) return dateKey;
 
   return new Date(dateTime + dayOffset * 86_400_000).toISOString().slice(0, 10);
+}
+
+function getDailyTaglines(dateKey: string) {
+  const dateTime = Date.parse(`${dateKey}T00:00:00Z`);
+  const dayIndex = Number.isFinite(dateTime) ? Math.floor(dateTime / 86_400_000) : Math.floor(Date.now() / 86_400_000);
+
+  return {
+    mobile: TAGLINES_MOBILE[dayIndex % TAGLINES_MOBILE.length],
+    desktop: TAGLINES_DESKTOP[dayIndex % TAGLINES_DESKTOP.length],
+  };
 }
 
 function getPacificDateKey() {
