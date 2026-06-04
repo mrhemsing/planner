@@ -472,7 +472,8 @@ export function RecipeBrowser({
   const recentlyAddedCount = recentlyAddedRecipes.length;
   const recentlyAddedTitle = "Recently added recipes";
   const recentlyAddedLabel = `View recipes recently added (${recentlyAddedCount})`;
-  const browseLabel = activeFilter === "recent" ? recentlyAddedTitle : activeFilterDetails.browseLabel;
+  const browseLabel = activeFilterDetails.browseLabel;
+  const recipeSheetTitle = activeFilter === "recent" ? recentlyAddedTitle : browseLabel;
   const recipeSearchPlaceholder = `Search ${getSearchFilterName(activeFilter)} recipes`;
   const dailyPickTitle = getDailyPickTitle(activeFilter);
   const mobileDailyPickTitle = activeFilter === "vegetarian" ? "TODAY'S VEG PICK" : dailyPickTitle;
@@ -1477,13 +1478,13 @@ export function RecipeBrowser({
       ) : null}
 
       {isRecipeSheetOpen ? (
-        <div className="bottom-sheet-backdrop fixed inset-0 z-50 bg-black/35 sm:hidden" role="dialog" aria-modal="true" aria-label={browseLabel}>
+        <div className="bottom-sheet-backdrop fixed inset-0 z-50 bg-black/35 sm:hidden" role="dialog" aria-modal="true" aria-label={recipeSheetTitle}>
           <div className="bottom-sheet-panel absolute inset-x-0 bottom-0 flex h-[94dvh] flex-col rounded-t-[28px] bg-white shadow-[0_-18px_60px_rgba(0,0,0,0.24)]">
             <div className="sticky top-0 z-10 border-b border-stone-200 bg-white px-5 py-4">
               <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-stone-300" aria-hidden="true" />
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">{browseLabel}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">{recipeSheetTitle}</p>
                   <p className="mt-1 text-sm text-stone-500">{recipeSheetRecipes.length} of {filteredRecipes.length} recipes</p>
                 </div>
                 <button
