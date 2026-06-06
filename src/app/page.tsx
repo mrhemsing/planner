@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { RecipeBrowser } from "@/components/recipe-browser";
 import { recipeLibrary } from "@/lib/planner";
+import { getRecipeImageSrc } from "@/lib/recipe-images";
 import healthyDinnerTargets from "../../reports/healthy-dinners-target-list.json";
 
 const siteUrl = "https://cook.b-average.com";
@@ -135,7 +136,7 @@ export async function generateMetadata({
   }
 
   const description = `${recipe.title}: ${recipe.description}`;
-  const imageUrl = absoluteImageUrl(recipe.imageUrl);
+  const imageUrl = absoluteImageUrl(getRecipeImageSrc(recipe.imageUrl));
 
   return {
     title: recipe.title,
