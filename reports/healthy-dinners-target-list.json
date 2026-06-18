@@ -1,5 +1,5 @@
 {
-  "count": 361,
+  "count": 367,
   "items": [
     {
       "position": 1,
@@ -2550,6 +2550,54 @@
       "slug": "one-pan-kuku-paka-chicken-in-coconut-curry",
       "recipeId": "one-pan-kuku-paka-chicken-in-coconut-curry",
       "addedAt": "2026-06-12"
+    },
+    {
+      "position": 362,
+      "url": "https://cooking.nytimes.com/recipes/781215539-bowen-yangs-mapo-tofu",
+      "id": "781215539",
+      "slug": "bowen-yangs-mapo-tofu",
+      "recipeId": "bowen-yangs-mapo-tofu",
+      "addedAt": "2026-06-18"
+    },
+    {
+      "position": 363,
+      "url": "https://cooking.nytimes.com/recipes/781291674-chermoula-chicken-kebabs-with-zucchini-salad",
+      "id": "781291674",
+      "slug": "chermoula-chicken-kebabs-with-zucchini-salad",
+      "recipeId": "chermoula-chicken-kebabs-with-zucchini-salad",
+      "addedAt": "2026-06-18"
+    },
+    {
+      "position": 364,
+      "url": "https://cooking.nytimes.com/recipes/781285932-grilled-pork-chops-with-fennel-and-cherry-agrodolce",
+      "id": "781285932",
+      "slug": "grilled-pork-chops-with-fennel-and-cherry-agrodolce",
+      "recipeId": "grilled-pork-chops-with-fennel-and-cherry-agrodolce",
+      "addedAt": "2026-06-18"
+    },
+    {
+      "position": 365,
+      "url": "https://cooking.nytimes.com/recipes/781641273-silken-tofu-with-peanut-chile-crisp",
+      "id": "781641273",
+      "slug": "silken-tofu-with-peanut-chile-crisp",
+      "recipeId": "silken-tofu-with-peanut-chile-crisp",
+      "addedAt": "2026-06-18"
+    },
+    {
+      "position": 366,
+      "url": "https://cooking.nytimes.com/recipes/781710951-summer-vegetable-grits-with-basil-gremolata",
+      "id": "781710951",
+      "slug": "summer-vegetable-grits-with-basil-gremolata",
+      "recipeId": "summer-vegetable-grits-with-basil-gremolata",
+      "addedAt": "2026-06-18"
+    },
+    {
+      "position": 367,
+      "url": "https://cooking.nytimes.com/recipes/781792282-no-cook-beet-and-lentil-salad",
+      "id": "781792282",
+      "slug": "no-cook-beet-and-lentil-salad",
+      "recipeId": "no-cook-beet-and-lentil-salad",
+      "addedAt": "2026-06-18"
     }
   ]
 }
