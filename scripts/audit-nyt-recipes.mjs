@@ -44,21 +44,21 @@ const duplicateTitles = duplicates(titleCategoryPairs).map(([value, count]) => {
   return [`${title} [${category}]`, count];
 });
 
-const slugMismatchMap = new Map();
-for (const [index, url] of urls.entries()) {
+const slugMismatches = [];
+for (const [index, entry] of recipeEntries.entries()) {
+  const url = entry.sourceUrl;
   if (!url.includes("cooking.nytimes.com")) continue;
-  const slug = url.split("/").filter(Boolean).pop() ?? "";
-  const id = ids[index];
+  const pathname = new URL(url).pathname;
+  const slug = pathname.split("/").filter(Boolean).pop() ?? "";
+  const id = entry.id;
   if (!id || !slug || id === slug) continue;
-  const key = `${index}:${id}:${slug}`;
-  slugMismatchMap.set(key, {
+  slugMismatches.push({
     index: index + 1,
     id,
     slug,
     url,
   });
 }
-const slugMismatches = [...slugMismatchMap.values()];
 
 const invalidNytUrls = nytUrls.filter(
   (url) => !/^https:\/\/cooking\.nytimes\.com\/recipes\/\d+-[a-z0-9-]+$/.test(url),
@@ -89,6 +89,62 @@ const plannedCount = (text.match(/plannedDays: \[[^\]]+\]/g) ?? []).filter(
   (entry) => entry !== "plannedDays: []",
 ).length;
 
+const healthyDinnerTargetsPath = path.join(process.cwd(), "reports", "healthy-dinners-target-list.json");
+const healthyDinnerTargets = JSON.parse(fs.readFileSync(healthyDinnerTargetsPath, "utf8"));
+const healthyDinnerItems = Array.isArray(healthyDinnerTargets.items) ? healthyDinnerTargets.items : [];
+
+function preferDinner(current, candidate) {
+  if (!current) return candidate;
+  if (current.category === "Dinner") return current;
+  if (candidate.category === "Dinner") return candidate;
+  return current;
+}
+
+const recipesByUrl = new Map();
+const recipesById = new Map();
+const recipesBySourceId = new Map();
+
+for (const recipe of recipeEntries) {
+  recipesByUrl.set(recipe.sourceUrl.toLowerCase(), preferDinner(recipesByUrl.get(recipe.sourceUrl.toLowerCase()), recipe));
+  recipesById.set(recipe.id.toLowerCase(), preferDinner(recipesById.get(recipe.id.toLowerCase()), recipe));
+
+  const sourceId = recipe.sourceUrl.match(/\/recipes\/(\d+)/i)?.[1] ?? recipe.id;
+  recipesBySourceId.set(sourceId, preferDinner(recipesBySourceId.get(sourceId), recipe));
+}
+
+const matchedHealthyDinnerRecipeIds = new Set();
+const missingHealthyDinnerTargets = [];
+
+for (const item of healthyDinnerItems) {
+  const recipe =
+    recipesByUrl.get(String(item.url ?? "").toLowerCase()) ??
+    recipesById.get(String(item.recipeId ?? "").toLowerCase()) ??
+    recipesById.get(String(item.slug ?? "").toLowerCase()) ??
+    recipesBySourceId.get(String(item.id ?? ""));
+
+  if (recipe) {
+    matchedHealthyDinnerRecipeIds.add(recipe.id);
+  } else {
+    missingHealthyDinnerTargets.push(item);
+  }
+}
+
+const recentlyAddedWindowMs = 30 * 24 * 60 * 60 * 1000;
+const recentCutoff = Date.now() - recentlyAddedWindowMs;
+const recentlyAddedTargetRecipeIds = healthyDinnerItems
+  .filter((item) => {
+    if (typeof item.addedAt !== "string") return false;
+    const addedAt = Date.parse(`${item.addedAt}T00:00:00.000Z`);
+    return Number.isFinite(addedAt) && addedAt >= recentCutoff;
+  })
+  .map((item) => String(item.recipeId ?? "").toLowerCase());
+const recentlyAddedTargetsMissingRecipes = recentlyAddedTargetRecipeIds.filter((recipeId) => !recipesById.has(recipeId));
+
+const healthyDinnerReportCount = Number(healthyDinnerTargets.count);
+const healthyDinnerItemCount = healthyDinnerItems.length;
+const healthyDinnerHomepageCount = matchedHealthyDinnerRecipeIds.size;
+const recentlyAddedHomepageCount = recentlyAddedTargetRecipeIds.length - recentlyAddedTargetsMissingRecipes.length;
+
 const summary = {
   recipeCount: ids.length,
   dinnerCount,
@@ -109,6 +165,11 @@ const summary = {
   literalPlaceholderImages,
   recipesWithoutRealImages,
   recipesWithRealImages,
+  healthyDinnerReportCount,
+  healthyDinnerItemCount,
+  healthyDinnerHomepageCount,
+  recentlyAddedTargetCount: recentlyAddedTargetRecipeIds.length,
+  recentlyAddedHomepageCount,
 };
 
 console.log(JSON.stringify(summary, null, 2));
@@ -141,6 +202,35 @@ if (invalidNytUrls.length) {
   }
 }
 
-if (!duplicateIds.length && !duplicateTitles.length && !slugCoreMismatches.length && !invalidNytUrls.length) {
-  console.log("\nAudit passed without duplicate titles, duplicate IDs, slug core mismatches, or NYT URL format errors.");
+if (healthyDinnerReportCount !== healthyDinnerItemCount) {
+  console.log(`\nHealthy dinner report count mismatch: count=${healthyDinnerReportCount}, items=${healthyDinnerItemCount}`);
+}
+
+if (missingHealthyDinnerTargets.length) {
+  console.log("\nHealthy dinner targets missing matching recipes:");
+  for (const item of missingHealthyDinnerTargets) {
+    console.log(`- #${item.position}: ${item.recipeId ?? item.slug ?? item.id} (${item.url})`);
+  }
+}
+
+if (recentlyAddedTargetsMissingRecipes.length) {
+  console.log("\nRecently added healthy dinner targets missing matching recipes:");
+  for (const recipeId of recentlyAddedTargetsMissingRecipes) {
+    console.log(`- ${recipeId}`);
+  }
+}
+
+const hasHealthyDinnerCountError =
+  healthyDinnerReportCount !== healthyDinnerItemCount ||
+  healthyDinnerHomepageCount !== healthyDinnerItemCount ||
+  recentlyAddedHomepageCount !== recentlyAddedTargetRecipeIds.length;
+
+if (!duplicateIds.length && !duplicateTitles.length && !slugCoreMismatches.length && !invalidNytUrls.length && !hasHealthyDinnerCountError) {
+  console.log(
+    "\nAudit passed without duplicate titles, duplicate IDs, slug core mismatches, NYT URL format errors, or homepage/report count drift.",
+  );
+}
+
+if (hasHealthyDinnerCountError) {
+  process.exitCode = 1;
 }
