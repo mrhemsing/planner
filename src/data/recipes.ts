@@ -11658,6 +11658,70 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
       "Toss the warm shrimp in the shimi sauce and serve immediately with jasmine rice and lime wedges.",
     ],
   },
+  {
+    id: "plum-and-mozzarella-salad-with-serrano-lime-dressing",
+    title: "Plum and Mozzarella Salad With Serrano-Lime Dressing",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/783530839-plum-and-mozzarella-salad-with-serrano-lime-dressing",
+    imageUrl:
+      "https://static01.nyt.com/images/2026/07/08/multimedia/AL-Plum-and-Mozzarella-Salad-With-Serrano-Lime-Vinaigrette-qjkm/AL-Plum-and-Mozzarella-Salad-With-Serrano-Lime-Vinaigrette-qjkm-videoSixteenByNineJumbo1600.jpg",
+    description:
+      "A cooling summer salad of ripe plums and fresh mozzarella with a sweet, spicy serrano-lime dressing and mint.",
+    favourite: false,
+    tags: ["dinner", "nyt", "salad", "plums", "mozzarella", "serrano", "vegetarian", "quick"],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 6,
+    ingredients: [
+      { item: "fresh lime juice", amount: "2 tbsp", category: "produce" },
+      { item: "red wine vinegar", amount: "2 tbsp", category: "pantry" },
+      { item: "honey", amount: "2 tbsp", category: "pantry" },
+      { item: "serrano chile, thinly sliced", amount: "1", category: "produce" },
+      { item: "whole-grain mustard", amount: "1 tbsp", category: "fridge" },
+      { item: "mixed plums, sliced", amount: "2 lb", category: "produce" },
+      { item: "fresh mozzarella", amount: "1 lb", category: "fridge" },
+      { item: "extra-virgin olive oil", amount: "1/4 cup", category: "pantry" },
+      { item: "fresh mint leaves, thinly sliced", amount: "1/4 cup", category: "produce" },
+    ],
+    instructions: [
+      "Combine the lime juice, vinegar, honey, chile and mustard. Toss the plums with the dressing, salt and pepper, then set aside.",
+      "Drain the mozzarella if needed, tear it into bite-size pieces and arrange it on a platter or individual plates.",
+      "Spoon the plums and their juices around the mozzarella, drizzle with olive oil, season and garnish with mint.",
+    ],
+  },
+  {
+    id: "lemony-wild-rice-salad",
+    title: "Lemony Wild Rice Salad",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/783613814-lemony-wild-rice-salad",
+    imageUrl:
+      "https://static01.nyt.com/images/2026/07/09/multimedia/YF-Wild-Rice-Salad-With-Feta-Parsley-Olives-and-Tomatoes--jctb/YF-Wild-Rice-Salad-With-Feta-Parsley-Olives-and-Tomatoes--jctb-videoSixteenByNineJumbo1600.jpg",
+    description:
+      "A hearty, citrus-forward wild rice salad with tomatoes, green olives, parsley, scallions and feta.",
+    favourite: false,
+    tags: ["dinner", "nyt", "salad", "wild rice", "tomatoes", "feta", "vegetarian", "make ahead"],
+    plannedDays: [],
+    prepTime: "55 min",
+    serves: 6,
+    ingredients: [
+      { item: "wild rice", amount: "1 1/2 cups", category: "pantry" },
+      { item: "olive oil", amount: "1/4 cup", category: "pantry" },
+      { item: "fresh lemon juice", amount: "1/4 cup", category: "produce" },
+      { item: "Dijon mustard", amount: "2 tbsp", category: "fridge" },
+      { item: "scallions", amount: "1 bunch", category: "produce" },
+      { item: "cherry or grape tomatoes", amount: "2 cups", category: "produce" },
+      { item: "pitted green olives", amount: "1 cup", category: "pantry" },
+      { item: "parsley leaves and tender stems", amount: "1 packed cup", category: "produce" },
+      { item: "feta", amount: "6 to 8 oz", category: "fridge" },
+    ],
+    instructions: [
+      "Simmer the wild rice in salted water, partially covered, until tender, about 40 minutes.",
+      "Whisk the olive oil, lemon juice and mustard in a serving bowl. Add sliced scallions, halved tomatoes and olives, chopped parsley and a little salt.",
+      "Drain and briefly cool the rice, toss it with the dressing and vegetables, then mix in the feta and season to taste.",
+    ],
+  },
 ];
 
 const lunchRecipes: RecipeLibraryEntry[] = [

@@ -1,5 +1,5 @@
 {
-  "count": 381,
+  "count": 383,
   "items": [
     {
       "position": 1,
@@ -2709,6 +2709,22 @@
       "id": "784210932",
       "slug": "charred-shrimp-with-shimi-sauce",
       "recipeId": "charred-shrimp-with-shimi-sauce",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 382,
+      "url": "https://cooking.nytimes.com/recipes/783530839-plum-and-mozzarella-salad-with-serrano-lime-dressing",
+      "id": "783530839",
+      "slug": "plum-and-mozzarella-salad-with-serrano-lime-dressing",
+      "recipeId": "plum-and-mozzarella-salad-with-serrano-lime-dressing",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 383,
+      "url": "https://cooking.nytimes.com/recipes/783613814-lemony-wild-rice-salad",
+      "id": "783613814",
+      "slug": "lemony-wild-rice-salad",
+      "recipeId": "lemony-wild-rice-salad",
       "addedAt": "2026-07-25"
     }
   ]
