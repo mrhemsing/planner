@@ -1,5 +1,5 @@
 {
-  "count": 375,
+  "count": 381,
   "items": [
     {
       "position": 1,
@@ -2662,6 +2662,54 @@
       "slug": "spicy-and-creamy-cashew-chicken-salad",
       "recipeId": "spicy-and-creamy-cashew-chicken-salad",
       "addedAt": "2026-06-28"
+    },
+    {
+      "position": 376,
+      "url": "https://cooking.nytimes.com/recipes/1024544-cold-sesame-noodles-with-cucumber-corn-and-basil",
+      "id": "1024544",
+      "slug": "cold-sesame-noodles-with-cucumber-corn-and-basil",
+      "recipeId": "cold-sesame-noodles-with-cucumber-corn-and-basil",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 377,
+      "url": "https://cooking.nytimes.com/recipes/1019608-pickled-mackerel",
+      "id": "1019608",
+      "slug": "pickled-mackerel",
+      "recipeId": "pickled-mackerel",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 378,
+      "url": "https://cooking.nytimes.com/recipes/784564371-quinoa-salad-with-corn-and-basil",
+      "id": "784564371",
+      "slug": "quinoa-salad-with-corn-and-basil",
+      "recipeId": "quinoa-salad-with-corn-and-basil",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 379,
+      "url": "https://cooking.nytimes.com/recipes/784906212-chilled-cucumber-noodles",
+      "id": "784906212",
+      "slug": "chilled-cucumber-noodles",
+      "recipeId": "chilled-cucumber-noodles",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 380,
+      "url": "https://cooking.nytimes.com/recipes/784903295-chicken-eggplant-and-basil-stir-fry",
+      "id": "784903295",
+      "slug": "chicken-eggplant-and-basil-stir-fry",
+      "recipeId": "chicken-eggplant-and-basil-stir-fry",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 381,
+      "url": "https://cooking.nytimes.com/recipes/784210932-charred-shrimp-with-shimi-sauce",
+      "id": "784210932",
+      "slug": "charred-shrimp-with-shimi-sauce",
+      "recipeId": "charred-shrimp-with-shimi-sauce",
+      "addedAt": "2026-07-25"
     }
   ]
 }
