@@ -1,5 +1,5 @@
 {
-  "count": 383,
+  "count": 385,
   "items": [
     {
       "position": 1,
@@ -2725,6 +2725,22 @@
       "id": "783613814",
       "slug": "lemony-wild-rice-salad",
       "recipeId": "lemony-wild-rice-salad",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 384,
+      "url": "https://cooking.nytimes.com/recipes/782934840-grilled-chicken-thighs-with-tomato-and-avocado",
+      "id": "782934840",
+      "slug": "grilled-chicken-thighs-with-tomato-and-avocado",
+      "recipeId": "grilled-chicken-thighs-with-tomato-and-avocado",
+      "addedAt": "2026-07-25"
+    },
+    {
+      "position": 385,
+      "url": "https://cooking.nytimes.com/recipes/780934238-cold-peanut-ginger-noodles",
+      "id": "780934238",
+      "slug": "cold-peanut-ginger-noodles",
+      "recipeId": "cold-peanut-ginger-noodles",
       "addedAt": "2026-07-25"
     }
   ]
