@@ -1,5 +1,5 @@
 {
-  "count": 385,
+  "count": 386,
   "items": [
     {
       "position": 1,
@@ -2742,6 +2742,14 @@
       "slug": "cold-peanut-ginger-noodles",
       "recipeId": "cold-peanut-ginger-noodles",
       "addedAt": "2026-07-25"
+    },
+    {
+      "position": 386,
+      "url": "https://cooking.nytimes.com/recipes/785351902-portuguese-kale-soup",
+      "id": "785351902",
+      "slug": "portuguese-kale-soup",
+      "recipeId": "portuguese-kale-soup",
+      "addedAt": "2026-08-05"
     }
   ]
 }

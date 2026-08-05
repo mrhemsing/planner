@@ -11794,6 +11794,41 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
       "Adjust the chile crisp, soy and lime to taste and top with herbs and extra crystallized ginger if desired.",
     ],
   },
+  {
+    id: "portuguese-kale-soup",
+    title: "Portuguese Kale Soup",
+    category: "Dinner",
+    sourceName: dinnerSourceName,
+    sourceUrl: "https://cooking.nytimes.com/recipes/785351902-portuguese-kale-soup",
+    imageUrl:
+      "https://static01.nyt.com/images/2026/07/29/multimedia/29FD-BOURDAIN-PTOWNREX-SK-Portuguese-Kale-Soup-bmjz/29FD-BOURDAIN-PTOWNREX-SK-Portuguese-Kale-Soup-bmjz-videoSixteenByNineJumbo1600.jpg",
+    description:
+      "A deeply simmered Portuguese kale soup with kidney beans, smoked ham hock, linguiça, chouriço and potatoes.",
+    favourite: false,
+    tags: ["dinner", "nyt", "soup", "kale", "sausage", "beans", "potatoes", "make ahead"],
+    plannedDays: [],
+    prepTime: "5 hr 45 min",
+    serves: 10,
+    ingredients: [
+      { item: "dried red kidney beans", amount: "1 1/2 cups", category: "pantry" },
+      { item: "water, divided", amount: "8 cups", category: "pantry" },
+      { item: "salt and freshly ground black pepper", amount: "to taste", category: "pantry" },
+      { item: "large smoked ham hock", amount: "1", category: "protein" },
+      { item: "low-sodium beef stock", amount: "3 to 4 quarts", category: "pantry" },
+      { item: "linguiça sausage, sliced", amount: "1 lb", category: "protein" },
+      { item: "Portuguese chouriço sausage, sliced", amount: "1/2 lb", category: "protein" },
+      { item: "curly kale, stemmed and chopped", amount: "2 bunches", category: "produce" },
+      { item: "waxy potatoes, peeled and diced", amount: "4 large or 5 medium", category: "produce" },
+      { item: "sherry vinegar", amount: "1 tbsp", category: "pantry" },
+      { item: "crushed red pepper", amount: "to taste", category: "pantry" },
+    ],
+    instructions: [
+      "Cover the beans with 4 cups water in a large heavy pot, add salt and bring to a rapid boil. Cover, remove from the heat and let stand for 90 minutes, then drain.",
+      "Add the ham hock, beef stock and remaining 4 cups water. Bring to a boil, reduce to a simmer and cook for 1 hour, skimming away any scum.",
+      "Add the linguiça, chouriço and kale and simmer for another hour.",
+      "Add the potatoes, vinegar and crushed red pepper; season with salt and black pepper. Simmer for at least 1 hour more, adding stock or water to keep everything submerged. For the best flavor, aim for about 5 hours of total simmering.",
+    ],
+  },
 ];
 
 const lunchRecipes: RecipeLibraryEntry[] = [
