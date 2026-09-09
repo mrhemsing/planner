@@ -1,5 +1,5 @@
 {
-  "count": 386,
+  "count": 394,
   "items": [
     {
       "position": 1,
@@ -2565,7 +2565,7 @@
       "id": "781291674",
       "slug": "chermoula-chicken-kebabs-with-zucchini-salad",
       "recipeId": "chermoula-chicken-kebabs-with-zucchini-salad",
-      "addedAt": "2026-06-18"
+      "addedAt": "2026-09-08"
     },
     {
       "position": 364,
@@ -2589,7 +2589,7 @@
       "id": "781710951",
       "slug": "summer-vegetable-grits-with-basil-gremolata",
       "recipeId": "summer-vegetable-grits-with-basil-gremolata",
-      "addedAt": "2026-06-18"
+      "addedAt": "2026-09-08"
     },
     {
       "position": 367,
@@ -2605,7 +2605,7 @@
       "id": "781623159",
       "slug": "greek-salad-with-sardines-and-beans",
       "recipeId": "greek-salad-with-sardines-and-beans",
-      "addedAt": "2026-06-28"
+      "addedAt": "2026-09-08"
     },
     {
       "position": 369,
@@ -2613,7 +2613,7 @@
       "id": "782247610",
       "slug": "roasted-fish-al-pastor",
       "recipeId": "roasted-fish-al-pastor",
-      "addedAt": "2026-06-28"
+      "addedAt": "2026-09-08"
     },
     {
       "position": 370,
@@ -2709,7 +2709,7 @@
       "id": "784210932",
       "slug": "charred-shrimp-with-shimi-sauce",
       "recipeId": "charred-shrimp-with-shimi-sauce",
-      "addedAt": "2026-07-25"
+      "addedAt": "2026-09-08"
     },
     {
       "position": 382,
@@ -2717,7 +2717,7 @@
       "id": "783530839",
       "slug": "plum-and-mozzarella-salad-with-serrano-lime-dressing",
       "recipeId": "plum-and-mozzarella-salad-with-serrano-lime-dressing",
-      "addedAt": "2026-07-25"
+      "addedAt": "2026-09-08"
     },
     {
       "position": 383,
@@ -2725,7 +2725,7 @@
       "id": "783613814",
       "slug": "lemony-wild-rice-salad",
       "recipeId": "lemony-wild-rice-salad",
-      "addedAt": "2026-07-25"
+      "addedAt": "2026-09-08"
     },
     {
       "position": 384,
@@ -2750,6 +2750,70 @@
       "slug": "portuguese-kale-soup",
       "recipeId": "portuguese-kale-soup",
       "addedAt": "2026-08-05"
+    },
+    {
+      "position": 387,
+      "url": "https://cooking.nytimes.com/recipes/783022762-lemon-garlic-grilled-chicken-breasts",
+      "id": "783022762",
+      "slug": "lemon-garlic-grilled-chicken-breasts",
+      "recipeId": "lemon-garlic-grilled-chicken-breasts",
+      "addedAt": "2026-09-08"
+    },
+    {
+      "position": 388,
+      "url": "https://cooking.nytimes.com/recipes/788894409-seared-chicken-and-figs-with-olives",
+      "id": "788894409",
+      "slug": "seared-chicken-and-figs-with-olives",
+      "recipeId": "seared-chicken-and-figs-with-olives",
+      "addedAt": "2026-09-08"
+    },
+    {
+      "position": 389,
+      "url": "https://cooking.nytimes.com/recipes/788458680-crispy-masala-tofu-with-lemon-rice-and-raita",
+      "id": "788458680",
+      "slug": "crispy-masala-tofu-with-lemon-rice-and-raita",
+      "recipeId": "crispy-masala-tofu-with-lemon-rice-and-raita",
+      "addedAt": "2026-09-08"
+    },
+    {
+      "position": 390,
+      "url": "https://cooking.nytimes.com/recipes/788210323-coconut-chicken-curry-with-tomatoes-and-corn",
+      "id": "788210323",
+      "slug": "coconut-chicken-curry-with-tomatoes-and-corn",
+      "recipeId": "coconut-chicken-curry-with-tomatoes-and-corn",
+      "addedAt": "2026-09-08"
+    },
+    {
+      "position": 391,
+      "url": "https://cooking.nytimes.com/recipes/787932749-roasted-turmeric-fish-and-grapes",
+      "id": "787932749",
+      "slug": "roasted-turmeric-fish-and-grapes",
+      "recipeId": "roasted-turmeric-fish-and-grapes",
+      "addedAt": "2026-09-08"
+    },
+    {
+      "position": 392,
+      "url": "https://cooking.nytimes.com/recipes/787602775-eggplant-involtini-with-fresh-tomato-sauce",
+      "id": "787602775",
+      "slug": "eggplant-involtini-with-fresh-tomato-sauce",
+      "recipeId": "eggplant-involtini-with-fresh-tomato-sauce",
+      "addedAt": "2026-09-08"
+    },
+    {
+      "position": 393,
+      "url": "https://cooking.nytimes.com/recipes/786029914-grilled-zaatar-shrimp-with-herby-yogurt",
+      "id": "786029914",
+      "slug": "grilled-zaatar-shrimp-with-herby-yogurt",
+      "recipeId": "grilled-zaatar-shrimp-with-herby-yogurt",
+      "addedAt": "2026-09-08"
+    },
+    {
+      "position": 394,
+      "url": "https://cooking.nytimes.com/recipes/785340527-cold-noodles-with-steak-and-tomatoes",
+      "id": "785340527",
+      "slug": "cold-noodles-with-steak-and-tomatoes",
+      "recipeId": "cold-noodles-with-steak-and-tomatoes",
+      "addedAt": "2026-09-08"
     }
   ]
 }
