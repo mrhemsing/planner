@@ -91,18 +91,6 @@ function firstSearchParam(value: string | string[] | undefined) {
   return Array.isArray(value) ? value[0] : value;
 }
 
-function getPacificDateKey() {
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/Los_Angeles",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).formatToParts(new Date());
-  const valueFor = (type: string) => parts.find((part) => part.type === type)?.value ?? "";
-
-  return `${valueFor("year")}-${valueFor("month")}-${valueFor("day")}`;
-}
-
 function isRetiredDailyPickUrl(recipeId: string, dateKey: string) {
   return retiredDailyPickUrlIds[dateKey]?.has(recipeId) ?? false;
 }
@@ -172,9 +160,8 @@ export default async function Home({
   const params = await searchParams;
   const recipeId = firstSearchParam(params.recipe)?.toLowerCase();
   const pickedOn = firstSearchParam(params.pickedOn);
-  const todayDateKey = getPacificDateKey();
   const initialSelectedRecipe =
-    recipeId && pickedOn === todayDateKey && !isRetiredDailyPickUrl(recipeId, todayDateKey) ? recipesById.get(recipeId) : undefined;
+    recipeId && !(pickedOn && isRetiredDailyPickUrl(recipeId, pickedOn)) ? recipesById.get(recipeId) : undefined;
 
   return (
     <main className="red-texture-background min-h-screen overflow-x-clip px-4 pb-5 pt-0 text-stone-900 sm:px-6 sm:pb-8 sm:pt-0 lg:px-10">

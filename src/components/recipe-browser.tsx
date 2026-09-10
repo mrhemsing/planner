@@ -283,6 +283,7 @@ export function RecipeBrowser({
     if (previousDailyDateKeyRef.current === dailyDateKey) return;
 
     previousDailyDateKeyRef.current = dailyDateKey;
+    if (new URLSearchParams(window.location.search).has("recipe")) return;
     setSelectedRecipeFromUrl(false);
   }, [dailyDateKey]);
 
@@ -290,13 +291,14 @@ export function RecipeBrowser({
     const syncFromUrl = () => {
       const params = new URLSearchParams(window.location.search);
       const recipeIdFromUrl = params.get("recipe");
+      const pickedOnFromUrl = params.get("pickedOn");
       if (!recipeIdFromUrl) {
         setSelectedRecipeFromUrl(false);
         setHasSyncedRecipeFromUrl(true);
         return;
       }
 
-      if (params.get("pickedOn") !== dailyDateKey || isRetiredDailyPickUrl(recipeIdFromUrl, dailyDateKey)) {
+      if (pickedOnFromUrl && isRetiredDailyPickUrl(recipeIdFromUrl, pickedOnFromUrl)) {
         params.delete("recipe");
         params.delete("pickedOn");
         const query = params.toString();
@@ -455,10 +457,20 @@ export function RecipeBrowser({
       return;
     }
 
-    if (params.get("recipe") === selectedRecipeId && params.get("pickedOn") === dailyDateKey) return;
+    if (params.get("recipe") === selectedRecipeId) {
+      if (!params.has("pickedOn")) {
+        params.set("pickedOn", dailyDateKey);
+        const query = params.toString();
+        const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+        window.history.replaceState(null, "", nextUrl);
+      }
+      return;
+    }
 
     params.set("recipe", selectedRecipeId);
-    params.set("pickedOn", dailyDateKey);
+    if (!params.has("pickedOn")) {
+      params.set("pickedOn", dailyDateKey);
+    }
     const query = params.toString();
     const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
     window.history.replaceState(null, "", nextUrl);
