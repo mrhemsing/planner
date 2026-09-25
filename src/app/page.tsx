@@ -65,13 +65,21 @@ function isRecentlyAddedTarget(item: HealthyDinnerTarget) {
   return Number.isFinite(addedAt) && addedAt >= recentCutoff;
 }
 
-const recentlyAddedHealthyDinnerIds = new Set(
-  healthyDinnerTargets.items.filter(isRecentlyAddedTarget).map((item) => item.recipeId.toLowerCase()),
+const recentlyAddedHealthyDinnerMetadata = new Map(
+  healthyDinnerTargets.items.filter(isRecentlyAddedTarget).map((item) => [
+    item.recipeId.toLowerCase(),
+    { addedAt: Date.parse(`${item.addedAt}T00:00:00.000Z`), position: item.position },
+  ]),
 );
 
 const recentlyAddedHealthyDinners = [...healthyDinners]
-  .filter((recipe) => recentlyAddedHealthyDinnerIds.has(recipe.id.toLowerCase()))
-  .reverse();
+  .filter((recipe) => recentlyAddedHealthyDinnerMetadata.has(recipe.id.toLowerCase()))
+  .sort((a, b) => {
+    const aAdded = recentlyAddedHealthyDinnerMetadata.get(a.id.toLowerCase())!;
+    const bAdded = recentlyAddedHealthyDinnerMetadata.get(b.id.toLowerCase())!;
+    // Newest batch first; later additions win ties within the same day.
+    return bAdded.addedAt - aAdded.addedAt || bAdded.position - aAdded.position;
+  });
 
 const healthyDinnersMissingDetails = healthyDinners.filter(
   (recipe) => !recipe.ingredients?.length || !recipe.instructions?.length,
