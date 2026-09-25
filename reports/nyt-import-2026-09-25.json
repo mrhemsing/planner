@@ -1,0 +1,138 @@
+{
+  "date": "2026-09-25",
+  "checked": 28,
+  "added": 20,
+  "alreadyPresent": [
+    "coconut-chicken-curry-with-tomatoes-and-corn",
+    "seared-chicken-and-figs-with-olives",
+    "roasted-turmeric-fish-and-grapes",
+    "eggplant-involtini-with-fresh-tomato-sauce",
+    "hearty-miso-soup-with-yuba-and-shiitakes",
+    "summer-vegetable-pancit-canton",
+    "chicken-eggplant-and-basil-stir-fry",
+    "roasted-fish-al-pastor"
+  ],
+  "recipes": [
+    {
+      "id": "crispy-chicken-thighs-with-cucumber-yogurt",
+      "url": "https://cooking.nytimes.com/recipes/789750577-crispy-chicken-thighs-with-cucumber-yogurt",
+      "ingredients": 11,
+      "steps": 9
+    },
+    {
+      "id": "one-pot-creamy-brown-rice-and-vegetables",
+      "url": "https://cooking.nytimes.com/recipes/789657892-one-pot-creamy-brown-rice-and-vegetables",
+      "ingredients": 9,
+      "steps": 5
+    },
+    {
+      "id": "kale-and-date-salad-with-crispy-sausage-bread-crumbs",
+      "url": "https://cooking.nytimes.com/recipes/790099155-kale-and-date-salad-with-crispy-sausage-bread-crumbs",
+      "ingredients": 11,
+      "steps": 3
+    },
+    {
+      "id": "roast-chicken-and-peach-salad-with-feta",
+      "url": "https://cooking.nytimes.com/recipes/790183847-roast-chicken-and-peach-salad-with-feta",
+      "ingredients": 17,
+      "steps": 7
+    },
+    {
+      "id": "tofu-piccata",
+      "url": "https://cooking.nytimes.com/recipes/789500476-tofu-piccata",
+      "ingredients": 14,
+      "steps": 6
+    },
+    {
+      "id": "slow-cooker-coconut-black-bean-soup",
+      "url": "https://cooking.nytimes.com/recipes/789592707-slow-cooker-coconut-black-bean-soup",
+      "ingredients": 11,
+      "steps": 3
+    },
+    {
+      "id": "lamb-shank-birria",
+      "url": "https://cooking.nytimes.com/recipes/789077640-lamb-shank-birria",
+      "ingredients": 26,
+      "steps": 9
+    },
+    {
+      "id": "fresh-herb-and-mozzarella-salad",
+      "url": "https://cooking.nytimes.com/recipes/789585481-fresh-herb-and-mozzarella-salad",
+      "ingredients": 8,
+      "steps": 5
+    },
+    {
+      "id": "caramelized-garlic-fish",
+      "url": "https://cooking.nytimes.com/recipes/789066270-caramelized-garlic-fish",
+      "ingredients": 9,
+      "steps": 4
+    },
+    {
+      "id": "maple-dijon-roasted-vegetables",
+      "url": "https://cooking.nytimes.com/recipes/788885533-maple-dijon-roasted-vegetables",
+      "ingredients": 11,
+      "steps": 5
+    },
+    {
+      "id": "braised-butter-beans-with-broccolini",
+      "url": "https://cooking.nytimes.com/recipes/789076459-braised-butter-beans-with-broccolini",
+      "ingredients": 20,
+      "steps": 6
+    },
+    {
+      "id": "salsa-de-chorizo",
+      "url": "https://cooking.nytimes.com/recipes/789411738-salsa-de-chorizo",
+      "ingredients": 12,
+      "steps": 3
+    },
+    {
+      "id": "masala-chicken-and-chickpeas",
+      "url": "https://cooking.nytimes.com/recipes/788532860-masala-chicken-and-chickpeas",
+      "ingredients": 17,
+      "steps": 3
+    },
+    {
+      "id": "miso-tomato-toasts-with-shichimi-togarashi",
+      "url": "https://cooking.nytimes.com/recipes/788876212-miso-tomato-toasts-with-shichimi-togarashi",
+      "ingredients": 12,
+      "steps": 5
+    },
+    {
+      "id": "reverse-seared-rib-eye-steak",
+      "url": "https://cooking.nytimes.com/recipes/788467857-reverse-seared-rib-eye-steak",
+      "ingredients": 2,
+      "steps": 5
+    },
+    {
+      "id": "maple-shallot-pork-tenderloin",
+      "url": "https://cooking.nytimes.com/recipes/788384454-maple-shallot-pork-tenderloin",
+      "ingredients": 9,
+      "steps": 4
+    },
+    {
+      "id": "mirin-basted-eggs",
+      "url": "https://cooking.nytimes.com/recipes/788186877-mirin-basted-eggs",
+      "ingredients": 6,
+      "steps": 2
+    },
+    {
+      "id": "brothy-corn-and-salmon-chowder",
+      "url": "https://cooking.nytimes.com/recipes/786728643-brothy-corn-and-salmon-chowder",
+      "ingredients": 13,
+      "steps": 7
+    },
+    {
+      "id": "sweet-and-sour-chicken",
+      "url": "https://cooking.nytimes.com/recipes/787337842-sweet-and-sour-chicken",
+      "ingredients": 22,
+      "steps": 5
+    },
+    {
+      "id": "sesame-soy-chicken-with-ginger-scallion-noodles",
+      "url": "https://cooking.nytimes.com/recipes/786382737-sesame-soy-chicken-with-ginger-scallion-noodles",
+      "ingredients": 18,
+      "steps": 6
+    }
+  ],
+  "source": "NYT Recipe JSON-LD retrieved from user-provided unlocked links"
+}

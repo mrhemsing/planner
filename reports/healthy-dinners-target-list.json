@@ -1,5 +1,5 @@
 {
-  "count": 394,
+  "count": 414,
   "items": [
     {
       "position": 1,
@@ -2814,6 +2814,166 @@
       "slug": "cold-noodles-with-steak-and-tomatoes",
       "recipeId": "cold-noodles-with-steak-and-tomatoes",
       "addedAt": "2026-09-08"
+    },
+    {
+      "position": 395,
+      "url": "https://cooking.nytimes.com/recipes/789750577-crispy-chicken-thighs-with-cucumber-yogurt",
+      "id": "789750577",
+      "slug": "crispy-chicken-thighs-with-cucumber-yogurt",
+      "recipeId": "crispy-chicken-thighs-with-cucumber-yogurt",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 396,
+      "url": "https://cooking.nytimes.com/recipes/789657892-one-pot-creamy-brown-rice-and-vegetables",
+      "id": "789657892",
+      "slug": "one-pot-creamy-brown-rice-and-vegetables",
+      "recipeId": "one-pot-creamy-brown-rice-and-vegetables",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 397,
+      "url": "https://cooking.nytimes.com/recipes/790099155-kale-and-date-salad-with-crispy-sausage-bread-crumbs",
+      "id": "790099155",
+      "slug": "kale-and-date-salad-with-crispy-sausage-bread-crumbs",
+      "recipeId": "kale-and-date-salad-with-crispy-sausage-bread-crumbs",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 398,
+      "url": "https://cooking.nytimes.com/recipes/790183847-roast-chicken-and-peach-salad-with-feta",
+      "id": "790183847",
+      "slug": "roast-chicken-and-peach-salad-with-feta",
+      "recipeId": "roast-chicken-and-peach-salad-with-feta",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 399,
+      "url": "https://cooking.nytimes.com/recipes/789500476-tofu-piccata",
+      "id": "789500476",
+      "slug": "tofu-piccata",
+      "recipeId": "tofu-piccata",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 400,
+      "url": "https://cooking.nytimes.com/recipes/789592707-slow-cooker-coconut-black-bean-soup",
+      "id": "789592707",
+      "slug": "slow-cooker-coconut-black-bean-soup",
+      "recipeId": "slow-cooker-coconut-black-bean-soup",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 401,
+      "url": "https://cooking.nytimes.com/recipes/789077640-lamb-shank-birria",
+      "id": "789077640",
+      "slug": "lamb-shank-birria",
+      "recipeId": "lamb-shank-birria",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 402,
+      "url": "https://cooking.nytimes.com/recipes/789585481-fresh-herb-and-mozzarella-salad",
+      "id": "789585481",
+      "slug": "fresh-herb-and-mozzarella-salad",
+      "recipeId": "fresh-herb-and-mozzarella-salad",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 403,
+      "url": "https://cooking.nytimes.com/recipes/789066270-caramelized-garlic-fish",
+      "id": "789066270",
+      "slug": "caramelized-garlic-fish",
+      "recipeId": "caramelized-garlic-fish",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 404,
+      "url": "https://cooking.nytimes.com/recipes/788885533-maple-dijon-roasted-vegetables",
+      "id": "788885533",
+      "slug": "maple-dijon-roasted-vegetables",
+      "recipeId": "maple-dijon-roasted-vegetables",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 405,
+      "url": "https://cooking.nytimes.com/recipes/789076459-braised-butter-beans-with-broccolini",
+      "id": "789076459",
+      "slug": "braised-butter-beans-with-broccolini",
+      "recipeId": "braised-butter-beans-with-broccolini",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 406,
+      "url": "https://cooking.nytimes.com/recipes/789411738-salsa-de-chorizo",
+      "id": "789411738",
+      "slug": "salsa-de-chorizo",
+      "recipeId": "salsa-de-chorizo",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 407,
+      "url": "https://cooking.nytimes.com/recipes/788532860-masala-chicken-and-chickpeas",
+      "id": "788532860",
+      "slug": "masala-chicken-and-chickpeas",
+      "recipeId": "masala-chicken-and-chickpeas",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 408,
+      "url": "https://cooking.nytimes.com/recipes/788876212-miso-tomato-toasts-with-shichimi-togarashi",
+      "id": "788876212",
+      "slug": "miso-tomato-toasts-with-shichimi-togarashi",
+      "recipeId": "miso-tomato-toasts-with-shichimi-togarashi",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 409,
+      "url": "https://cooking.nytimes.com/recipes/788467857-reverse-seared-rib-eye-steak",
+      "id": "788467857",
+      "slug": "reverse-seared-rib-eye-steak",
+      "recipeId": "reverse-seared-rib-eye-steak",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 410,
+      "url": "https://cooking.nytimes.com/recipes/788384454-maple-shallot-pork-tenderloin",
+      "id": "788384454",
+      "slug": "maple-shallot-pork-tenderloin",
+      "recipeId": "maple-shallot-pork-tenderloin",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 411,
+      "url": "https://cooking.nytimes.com/recipes/788186877-mirin-basted-eggs",
+      "id": "788186877",
+      "slug": "mirin-basted-eggs",
+      "recipeId": "mirin-basted-eggs",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 412,
+      "url": "https://cooking.nytimes.com/recipes/786728643-brothy-corn-and-salmon-chowder",
+      "id": "786728643",
+      "slug": "brothy-corn-and-salmon-chowder",
+      "recipeId": "brothy-corn-and-salmon-chowder",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 413,
+      "url": "https://cooking.nytimes.com/recipes/787337842-sweet-and-sour-chicken",
+      "id": "787337842",
+      "slug": "sweet-and-sour-chicken",
+      "recipeId": "sweet-and-sour-chicken",
+      "addedAt": "2026-09-25"
+    },
+    {
+      "position": 414,
+      "url": "https://cooking.nytimes.com/recipes/786382737-sesame-soy-chicken-with-ginger-scallion-noodles",
+      "id": "786382737",
+      "slug": "sesame-soy-chicken-with-ginger-scallion-noodles",
+      "recipeId": "sesame-soy-chicken-with-ginger-scallion-noodles",
+      "addedAt": "2026-09-25"
     }
   ]
 }

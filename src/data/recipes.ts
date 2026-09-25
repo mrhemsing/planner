@@ -12106,6 +12106,1819 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
       "Serve the noodles and tomatoes topped with steak, onion and cilantro.",
     ],
   },
+  {
+    id: "crispy-chicken-thighs-with-cucumber-yogurt",
+    title: "Crispy Chicken Thighs With Cucumber Yogurt",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789750577-crispy-chicken-thighs-with-cucumber-yogurt",
+    imageUrl: "https://static01.nyt.com/images/2026/09/18/multimedia/21FD-APPE-CHICKEN-MC-Chicken-thighs-with-cucumber-yogurt-vlcb/21FD-APPE-CHICKEN-MC-Chicken-thighs-with-cucumber-yogurt-vlcb-googleFourByThree.jpg",
+    description: "Adapted from “A Kitchen on Goose Cove” (Artisan, 2026) by Devin Finigan with Peter Kaminsky, these tender chicken thighs have supremely crisp and burnished skins. The trick is to start them in a cold skillet, then weigh them down as they cook. This ensures the chicken skin makes maximum contact with the pan, allowing it to sear slowly and evenly. Although Ms. Finigan is the chef and owner of Aragosta restaurant on Deer Isle, Maine, this is the kind of simple recipe she makes at home with her two daughters, who love to help grate the cucumber and dice the shallot for the herby yogurt served alongside.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "chicken"
+    ],
+    plannedDays: [],
+    prepTime: "60 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "bone-in, skin-on chicken thighs",
+        amount: "1 ½ pounds",
+        category: "protein"
+      },
+      {
+        item: "fine sea or table salt, plus more as needed",
+        amount: "1 ½ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "freshly ground black pepper, plus more as needed",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "thinly sliced shallot or red onion",
+        amount: "½ cup",
+        category: "produce"
+      },
+      {
+        item: "Juice of 1 lime",
+        amount: "",
+        category: "produce"
+      },
+      {
+        item: "Pinch of sugar (optional)",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "chicken stock or water",
+        amount: "½ cup",
+        category: "protein"
+      },
+      {
+        item: "Persian cucumber (or 1 regular cucumber, peeled, halved lengthwise and seeded)",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "plain Greek yogurt, preferably full fat",
+        amount: "1 cup",
+        category: "fridge"
+      },
+      {
+        item: "minced mint, dill or basil, plus more for garnish",
+        amount: "1 tablespoon",
+        category: "produce"
+      },
+      {
+        item: "Crushed red pepper or chile crisp, for serving",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Position a rack in the bottom third of the oven and heat to 350 degrees.",
+      "Pat the chicken thighs dry with a paper towel and season both sides with 1 teaspoon each salt and pepper.",
+      "Place the thighs skin side down in a large, cold, preferably cast-iron skillet. Place the skillet over medium heat and cook the thighs for 5 minutes without moving them. After 5 minutes, weigh the chicken down with another skillet or a plate (for extra weight, you can top the second skillet or plate with canned goods like tomatoes). Cook until the skin is golden brown, 12 to 15 minutes. If you nudge the chicken, you should be able to feel the skin start to release from the pan. If it won’t budge at all, cook it for another minute or two.",
+      "Meanwhile, make a quick pickle: In a small bowl, combine shallot, lime juice and a pinch each salt and sugar if you like. Let rest while the chicken cooks.",
+      "Warm the chicken stock in a pot on the stove or in the microwave.",
+      "When the thighs are golden brown and starting to release from the pan, use a metal spatula to flip them: Work confidently and aim to keep the skin intact.",
+      "Pour enough warm stock into the skillet to reach about a third of the way up the sides of the thighs. Transfer skillet to the oven and roast until cooked through and tender, 20 to 30 minutes.",
+      "In the meantime, use the coarse holes of a box grater to grate 1 Persian cucumber or ½ regular cucumber onto a clean kitchen towel. Dice the remaining cucumber and add it to the bowl with the shallots. Use the towel to wring out the excess moisture from the grated cucumber. Transfer cucumber to a small bowl, and stir in yogurt, herbs and salt to taste.",
+      "To serve, smear a couple tablespoons of the yogurt mixture onto the plate and place a chicken thigh on top. Garnish with extra herbs, pickled shallot and cucumber mixture and some crushed red pepper or chile crisp if desired."
+    ]
+  },
+  {
+    id: "one-pot-creamy-brown-rice-and-vegetables",
+    title: "One-Pot Creamy Brown Rice and Vegetables",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789657892-one-pot-creamy-brown-rice-and-vegetables",
+    imageUrl: "https://static01.nyt.com/images/2026/09/16/multimedia/KF-Steamed-Brown-Rice-and-Vegetables-with-Yogurt-gpjv/KF-Steamed-Brown-Rice-and-Vegetables-with-Yogurt-gpjv-googleFourByThree.jpg",
+    description: "What’s surprising here isn’t just that you can steam your rice and vegetables in one pot; it’s also that topping hearty brown rice with a big dollop of yogurt or crème fraîche takes it from virtuous to truly craveable. Wrapping the lid of your pot with a towel helps to absorb excess moisture from the steaming vegetables so that your brown rice doesn’t get mushy. This recipe is built to adapt to whatever fall or winter vegetables are lurking in your crisper and it’s pretty hands off once you’ve prepped them. Sesame oil brings out the nutty nature of brown rice, and the addition of crumbled seaweed snack sheets or furikake provides a nice umami crunch. When citrus season arrives, try topping your bowl with chopped pieces of mandarin or kumquats.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "rice",
+      "vegetables"
+    ],
+    plannedDays: [],
+    prepTime: "60 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "cups/270 grams short-grain brown rice",
+        amount: "1 ½",
+        category: "pantry"
+      },
+      {
+        item: "vegetable oil, coconut oil or butter",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "garlic clove",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "Kosher salt, such as Diamond Crystal",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "water",
+        amount: "3 ½ cups",
+        category: "pantry"
+      },
+      {
+        item: "to 10 ounces fresh or unthawed frozen vegetables (such as broccoli, cauliflower, collard greens, kale, sweet potato, pumpkin, winter squash or a combination)",
+        amount: "9",
+        category: "frozen"
+      },
+      {
+        item: "Plain whole milk yogurt, or crème fraîche",
+        amount: "",
+        category: "fridge"
+      },
+      {
+        item: "Toasted sesame oil, for drizzling",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "to 12 roasted seaweed snack sheets or furikake",
+        amount: "8",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Gather a large (4-quart) pot with a tight fitting lid. Wrap the lid in a clean dish towel, taking care to arrange the towel on top so that it will not fall near your stove’s heat source; tie it in a knot around the handle or use a rubber band to secure it.",
+      "To the pot, add rice, oil and garlic and stir over medium-high heat until rice is coated in oil and fragrant, about 3 minutes. Add 1½ teaspoons salt and water and bring to a boil. Lower to a gentle simmer and immediately cover. Let cook, undisturbed, for 35 minutes.",
+      "While the rice cooks, prep your vegetables: Cut florets into bite-size pieces and dice thicker stems. Remove and discard tough center ribs from greens, then roughly chop into ½ inch wide pieces. Cut sweet potato and squash into ½ inch pieces. Sprinkle with salt.",
+      "Working quickly so as to minimize steam loss from the pot, remove the lid, add 3 tablespoons water and arrange the cut vegetables on top of the rice in one layer. Replace the lid, cook for 10 minutes more, then turn off the heat and let the pot stand for 5 minutes. Remove the lid and stir the vegetables into the rice, smashing the garlic into the mixture.",
+      "To serve, scoop a generous amount of rice and vegetables into a bowl, then top each one with a very generous dollop of yogurt and a drizzle of sesame oil. Garnish with crushed seaweed sheets or a generous sprinkle of furikake."
+    ]
+  },
+  {
+    id: "kale-and-date-salad-with-crispy-sausage-bread-crumbs",
+    title: "Kale and Date Salad With Crispy Sausage Bread Crumbs",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/790099155-kale-and-date-salad-with-crispy-sausage-bread-crumbs",
+    imageUrl: "https://static01.nyt.com/images/2026/09/24/multimedia/AS-Crispy-sausage-and-kale-bowls-zpgt/AS-Crispy-sausage-and-kale-bowls-zpgt-googleFourByThree.jpg",
+    description: "This spicy-sweet kale salad has gusto – enough to be a complete meal. The star is the sausage breadcrumbs, made by crumbling and crisping hot sausage in a pan, then toasting bread crumbs in the sausages’ flavorful rendered fat. Add them to the kale, along with chewy-sweet dates, a shower of salty Parmesan and crunchy celery. That’s what’s great about a kale salad: The leaves are sturdy enough to handle hefty additions, even after a soak in vinegar tenderizes and brightens them. Feel free to add white beans or chopped almonds, too.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "salad"
+    ],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "extra-virgin olive oil",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "sherry or red wine vinegar",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "honey or maple syrup",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "large bunch Tuscan kale (about 12 ounces), stems stripped from leaves, both thinly sliced but kept separate",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "celery stalks, thinly sliced",
+        amount: "4",
+        category: "pantry"
+      },
+      {
+        item: "Salt and black pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "hot Italian sausages (about 12 ounces), casings removed",
+        amount: "3",
+        category: "pantry"
+      },
+      {
+        item: "panko or coarse fresh bread crumbs",
+        amount: "1 cup",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, finely chopped",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "Medjool dates, pitted",
+        amount: "4",
+        category: "pantry"
+      },
+      {
+        item: "finely grated Parmesan",
+        amount: "½ cup",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "In a large bowl, stir together the oil, vinegar and honey until the honey dissolves. Add the kale leaves (not the stems) and celery, season with salt and pepper, and toss until shiny. Set aside to soften.",
+      "Meanwhile, add the sausage and kale stems to a large nonstick or cast-iron skillet and set over medium-high. Cook, breaking up the sausage into crumbles, until golden brown, 6 to 8 minutes. Add the bread crumbs and cook, stirring occasionally, until toasted, 2 to 4 minutes. Turn off the heat and stir in the garlic until fragrant, about 1 minute.",
+      "Rip the dates into small pieces. Top the kale salad with the dates, sausage bread crumbs and Parmesan. Eat right away."
+    ]
+  },
+  {
+    id: "roast-chicken-and-peach-salad-with-feta",
+    title: "Roast Chicken and Peach Salad With Feta",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/790183847-roast-chicken-and-peach-salad-with-feta",
+    imageUrl: "https://static01.nyt.com/images/2026/09/23/multimedia/NB-Warm-Grain-Salad-With-Roasted-Peaches-Feta-and-Ras-el-Hanout--Chicken-hjct/NB-Warm-Grain-Salad-With-Roasted-Peaches-Feta-and-Ras-el-Hanout--Chicken-hjct-googleFourByThree.jpg",
+    description: "This is the ideal sort of salad to make when you want something that feels both comforting and fresh. Sweet roasted peaches, salty feta, leafy greens and warmly spiced chicken come together in one generous dish that's just as good for a relaxed dinner as it is for sharing with guests. As the peaches and chicken roast, they release sweet, savory juices that mingle with the spices, creating a dressing with a fruity depth and richness. Ras el hanout lends the chicken fragrant Moroccan warmth, but if you don't have any on hand, a simple combination of sweet paprika and ground cumin will deliver the classic flavor just as beautifully. The salad is wonderfully adaptable too: Swap the peaches for nectarines or sliced apples, or use another grain, such as farro, freekeh or quinoa. The result is a salad that's delicious served warm, at room temperature or even straight from the fridge the next day.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "chicken",
+      "salad"
+    ],
+    plannedDays: [],
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "olive oil",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "ras el hanout, or 1½ teaspoons sweet paprika plus 1 teaspoon ground cumin",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "garlic powder",
+        amount: "1 teaspoon",
+        category: "produce"
+      },
+      {
+        item: "fine sea salt",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "boneless, skinless chicken thighs",
+        amount: "1¼ pounds",
+        category: "protein"
+      },
+      {
+        item: "small/medium ripe but firm peaches, pitted and cut into ½- to 1-inch wedges",
+        amount: "3",
+        category: "produce"
+      },
+      {
+        item: "pearl couscous, or 1 cup farro, freekeh or quinoa",
+        amount: "¾ cup",
+        category: "pantry"
+      },
+      {
+        item: "baby spinach or arugula",
+        amount: "5 ounces",
+        category: "produce"
+      },
+      {
+        item: "cilantro leaves and tender stems, roughly chopped",
+        amount: "½ cup",
+        category: "produce"
+      },
+      {
+        item: "feta, crumbled",
+        amount: "3 ounces",
+        category: "fridge"
+      },
+      {
+        item: "Sliced fresh chiles, such as Fresno, jalapeño or serrano, for serving (optional)",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "olive oil",
+        amount: "2½ tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "red wine vinegar",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "honey",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "Dijon mustard",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "fine sea salt",
+        amount: "¼ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "freshly ground black pepper",
+        amount: "¼ teaspoon",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Heat the oven to 425 degrees. In a large bowl, combine the olive oil, ras el hanout, garlic powder and salt. Add the chicken and peaches and toss until evenly coated.",
+      "Line a sheet pan with parchment paper. Arrange the chicken thighs and peaches in a single layer and roast for 20 to 25 minutes, until the chicken is cooked through and the peaches are softened and jammy but still holding their shape.",
+      "Meanwhile, cook the couscous according to the package directions.",
+      "In a small bowl, whisk together the olive oil, vinegar, honey, mustard, salt and pepper.",
+      "Transfer the cooked chicken to a cutting board and slice into ¾-inch strips. Add any juices left on the sheet pan to the dressing and whisk to combine.",
+      "In a large serving bowl, combine the warm couscous, spinach, cilantro and about three-quarters of the dressing. Toss until evenly coated.",
+      "Top the salad with the sliced chicken, roasted peaches and feta. Scatter over the sliced chiles, if using. Drizzle with remaining dressing and serve warm, at room temperature or chilled."
+    ]
+  },
+  {
+    id: "tofu-piccata",
+    title: "Tofu Piccata",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789500476-tofu-piccata",
+    imageUrl: "https://static01.nyt.com/images/2026/09/11/multimedia/KD-Tofu-Piccata-qtlz/KD-Tofu-Piccata-qtlz-googleFourByThree.jpg",
+    description: "Making piccata typically involves frying thinly sliced meat, like chicken or veal, and dressing it in a lemon and caper pan sauce. But what if the “meat” isn’t meat at all? That’s the inventive idea that this quick recipe—which features a firm block of tofu instead—explores. Pressing the water out of the tofu before cooking firms it up and allows it to soak up the sauce’s deep flavors. A cornstarch dredge ensures a crispy fry and acts as a thickener when it’s time to make the sauce. The result is a meatless meal that’s light, punchy and satisfying.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "tofu"
+    ],
+    plannedDays: [],
+    prepTime: "35 min",
+    serves: 2,
+    ingredients: [
+      {
+        item: "(12-ounce) package medium-firm tofu",
+        amount: "1",
+        category: "protein"
+      },
+      {
+        item: "cornstarch",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "kosher salt (such as Diamond Crystal)",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "freshly ground black pepper",
+        amount: "1½ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "smoked paprika",
+        amount: "1½ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "garlic powder",
+        amount: "2 teaspoons",
+        category: "produce"
+      },
+      {
+        item: "olive oil",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "unsalted butter, cubed, divided",
+        amount: "6 tablespoons",
+        category: "fridge"
+      },
+      {
+        item: "small shallot, diced small (about ¼ cup)",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "garlic cloves, minced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "vegetable broth",
+        amount: "1½ cups",
+        category: "pantry"
+      },
+      {
+        item: "lemon, zested and juiced",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "jarred capers",
+        amount: "1½ tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "chopped flat-leaf parsley, optional",
+        amount: "1 tablespoon",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "To press the excess water from your tofu, place it between two layers of paper towels, then set it on a large plate or cutting board. Top with something flat and sturdy such as another heavy cutting board, a cast-iron skillet or a baking sheet topped with cookbooks. Let the tofu drain for at least 15 minutes. (You can also do this step the day before and press the tofu overnight in the refrigerator.)",
+      "Once the tofu is pressed, discard the paper towels. Set the tofu on a cutting board with the largest surface laying flat. Cut the tofu in half lengthwise. Cut each slice into thirds crosswise, then cut each of the logs into thirds.",
+      "Whisk the cornstarch, salt, pepper, paprika and garlic powder in a large bowl. Add the tofu a few pieces at a time and toss until well-coated. Set aside.",
+      "In a large skillet over medium heat, heat the olive oil and 3 tablespoons butter. Once the butter is melted and slightly foamy, add the tofu. Pan-fry the tofu until browned and crispy, 2 to 3 minutes per side, then remove from the pan and set aside on a plate.",
+      "Add the shallot to the pan and cook, stirring, over medium heat until softened, about 1 to 2 minutes. Add the garlic, cooking for another 1 to 2 minutes, until the garlic has browned around the edges. Pour the vegetable broth into the pan and bring to a boil. Once boiling, reduce the heat to medium-low. Simmer stock until it reduces by half, about 8 minutes, then whisk in the remaining butter until it emulsifies. The sauce should coat the back of a spoon like a light gravy. Stir in the lemon zest and juice, capers and, if using, chopped parsley. Season to taste with salt and pepper.",
+      "Return the tofu to the pan and spoon the sauce over the top. Serve garnished with parsley, if desired."
+    ]
+  },
+  {
+    id: "slow-cooker-coconut-black-bean-soup",
+    title: "Slow-Cooker Coconut Black Bean Soup",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789592707-slow-cooker-coconut-black-bean-soup",
+    imageUrl: "https://static01.nyt.com/images/2026/09/16/multimedia/SD-Spicy-Coconut-Black-Bean-Soup-tmkb/SD-Spicy-Coconut-Black-Bean-Soup-tmkb-googleFourByThree.jpg",
+    description: "Braised beans and greens are a beloved duo for a reason—delicious, nutritious, thrifty!—with many cultural permutations. This rich and spicy vegetarian version is inspired by Caribbean flavors, starring black beans and coconut, plus the sharp green heat of jalapeños, both fresh and pickled. (Seed your jalapeño partially or fully for less heat.) The recipe as written results in very tender, slumped greens; if you prefer yours with more bite, wait to add them until there’s about an hour left in the cooking time. The slow cooker is brilliant with beans; this dish can hold on warm for several hours, making it suitable for setting up in the morning and cooking while you’re at work. Serve with avocado, hot sauce and plantain chips for a simple dinner.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "soup"
+    ],
+    plannedDays: [],
+    prepTime: "255 min",
+    serves: 6,
+    ingredients: [
+      {
+        item: "dried black beans (no need to soak)",
+        amount: "1½ cups",
+        category: "pantry"
+      },
+      {
+        item: "jalapeño, chopped",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "drained pickled jalapeños, chopped",
+        amount: "⅓ cup",
+        category: "pantry"
+      },
+      {
+        item: "cloves garlic, smashed and chopped",
+        amount: "5",
+        category: "produce"
+      },
+      {
+        item: "kosher salt (such as Diamond Crystal)",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "water",
+        amount: "4 cups",
+        category: "pantry"
+      },
+      {
+        item: "small bunch (10 to 14 ounces) kale, collards or mustard greens, leaves stripped from tough ribs and finely chopped",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "(13.5-ounce) can coconut milk",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "Juice of 1 large lime, plus 1 lime sliced into wedges for serving (optional)",
+        amount: "",
+        category: "produce"
+      },
+      {
+        item: "honey",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "Avocado, hot sauce and plantain chips, optional, for serving",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Combine the beans, fresh and pickled jalepeños, garlic, salt and water in a 6- to 8-quart slow cooker. Lay the chopped greens on top, pressing them down into the water as much as possible. (They will not be totally submerged but the tops will steam.) Cook on high until the beans are tender, about 4 hours. (Timing may vary depending on the age of your beans and the temperament of your slow cooker.)",
+      "Stir the greens into the beans and add the coconut milk, lime juice and honey. Using a fork, roughly smash some of the beans against the side of the cooker to thicken. Cover and cook for another 5 minutes to warm through.",
+      "Divide among bowls and serve, if desired, with lime wedges, sliced avocado, plantain chips and hot sauce on the side."
+    ]
+  },
+  {
+    id: "lamb-shank-birria",
+    title: "Lamb Shank Birria",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789077640-lamb-shank-birria",
+    imageUrl: "https://static01.nyt.com/images/2026/09/11/multimedia/14FD-NATIONAL-LISTREX6-NYT-Lamb-Shank-Birria-jmqp/14FD-NATIONAL-LISTREX6-NYT-Lamb-Shank-Birria-jmqp-googleFourByThree.jpg",
+    description: "Carlos Salgado uses lamb shanks, in place of the more traditional whole animal, for his version of birria, which he serves at La Sirena, the excellent Mexican restaurant he runs in rural Wisconsin with his wife and business partner Emilie Coulson Salgado. The stew is a particularly satisfying dish to make in the heart of winter, and well worth the effort. Toasted chiles, caramelized onions and avocado leaves, slow-cooked in lard and then blended with coffee and vinegar, form the foundation of the dish. Mr. Salgado marinates the lamb in the birria paste overnight, then gently simmers the shanks until tender and surrounded by rich consomé, ready to savor with warm tortillas. Brett Anderson",
+    favourite: false,
+    tags: [
+      "dinner",
+      "lamb"
+    ],
+    plannedDays: [],
+    prepTime: "755 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "black peppercorns",
+        amount: "2½ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "cumin seeds",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "star anise pods",
+        amount: "4",
+        category: "pantry"
+      },
+      {
+        item: "whole Mexican (Ceylon) cinnamon sticks (about 3 inches each), broken into a few pieces",
+        amount: "3",
+        category: "pantry"
+      },
+      {
+        item: "allspice berries",
+        amount: "4",
+        category: "pantry"
+      },
+      {
+        item: "whole cloves",
+        amount: "2",
+        category: "pantry"
+      },
+      {
+        item: "dried avocado leaves (hoja de aguacate) or dried bay leaves",
+        amount: "2",
+        category: "pantry"
+      },
+      {
+        item: "dried guajillo chiles, seeded",
+        amount: "6",
+        category: "pantry"
+      },
+      {
+        item: "dried mulato chiles, seeded",
+        amount: "3",
+        category: "pantry"
+      },
+      {
+        item: "dried puya chiles, seeded",
+        amount: "9",
+        category: "pantry"
+      },
+      {
+        item: "boiling water, plus more as needed",
+        amount: "3 cups",
+        category: "pantry"
+      },
+      {
+        item: "lard",
+        amount: "1 cup",
+        category: "pantry"
+      },
+      {
+        item: "large white onion (about 1 pound), chopped",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "garlic cloves, chopped",
+        amount: "7",
+        category: "produce"
+      },
+      {
+        item: "avocado leaves",
+        amount: "2",
+        category: "pantry"
+      },
+      {
+        item: "dried Mexican oregano, plus more for garnish",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "grated piloncillo or light brown sugar",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "cold brew coffee concentrate",
+        amount: "½ cup",
+        category: "pantry"
+      },
+      {
+        item: "malt vinegar, divided",
+        amount: "1 cup",
+        category: "pantry"
+      },
+      {
+        item: "meaty lamb shanks (4½ to 5 pounds total)",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "limes, zested and juiced, plus more zest for garnish",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "Kosher salt (such as Diamond Crystal)",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "to 8 cups beef or lamb stock (1½ to 2 quarts)",
+        amount: "6",
+        category: "protein"
+      },
+      {
+        item: "Very thinly sliced white onion rings, rinsed in cold water and patted dry, for garnish",
+        amount: "",
+        category: "produce"
+      },
+      {
+        item: "Finely ground espresso powder, for garnish (optional)",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "Warm corn tortillas and black beans (such as Frijoles de Olla), for serving (optional)",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Make the spice paste: In a spice grinder, grind the peppercorns, cumin seeds, star anise, cinnamon sticks, allspice and cloves until finely ground; set aside.",
+      "Heat a dry medium frying pan (not nonstick) or comal over medium-low heat. In batches, toast the avocado leaves and chiles in the pan, turning occasionally, until slightly softened, aromatic and a shade darker, 2 to 3 minutes per batch. Set aside the toasted avocado leaves, and transfer chiles to a large bowl and cover with 3 cups boiling water; let soak until softened, stirring occasionally, about 5 minutes.",
+      "Using tongs, remove chiles from the bowl, reserving the soaking liquid. Transfer the chiles to a blender along with about ¾ cup of soaking liquid (reserving the remaining soaking liquid) and puree to make a thick paste.",
+      "In a large pan, heat the lard over medium-high heat. Add the onions and cook, stirring occasionally, until golden brown and caramelized, about 15 minutes. Stir in the reserved ground spices and stir constantly until they release their fragrance and darken slightly, about 1 minute. Stir in the garlic and cook, stirring, for 1 minute.",
+      "Add the chile paste and cook, stirring, for 1 minute. Add the toasted avocado leaves to the pot, along with 1¼ cups of the reserved chile soaking liquid. Bring to a gentle simmer, adjusting the heat if needed, then cover and gently simmer until the oil floats to the surface and the solids are deeply flavorful, about 40 minutes.",
+      "Remove the avocado leaves, then stir in the oregano and piloncillo. Return the mixture to the blender and puree with the coffee and ½ cup of vinegar, adding a bit of water or more reserved chile soaking liquid if the mixture seems too thick. Strain through a fine-mesh sieve into a large bowl and set birria paste aside to cool.",
+      "Make the lamb: Place the lamb in a large baking dish and rub with the remaining ½ cup vinegar and season with the lime zest and 2 tablespoons salt. Coat with the birria paste and refrigerate overnight, uncovered.",
+      "When ready to cook, transfer the lamb along with any liquid in the dish to a large Dutch oven or other heavy pot and cover with stock (it’s fine if the lamb isn’t fully submerged). Bring to a simmer, then adjust the heat to the lowest simmer and braise until tender, about 2½ hours. Turn off the heat and let the shanks rest in the pot for 30 minutes. Pull the meat off the bone, reserving the consomé it cooked in.",
+      "Adjust the seasoning of the consomé to taste with lime juice and salt. Serve the lamb with a generous amount of consomé, garnished with onion rings and a light dusting of lime zest, oregano and, if desired, ground espresso. Serve with warm corn tortillas and black beans, if you like."
+    ]
+  },
+  {
+    id: "fresh-herb-and-mozzarella-salad",
+    title: "Fresh Herb and Mozzarella Salad",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789585481-fresh-herb-and-mozzarella-salad",
+    imageUrl: "https://static01.nyt.com/images/2026/09/15/multimedia/16FD-TANISREX1-DT-Herb-Salad-With-Mozzarella-gbvj/16FD-TANISREX1-DT-Herb-Salad-With-Mozzarella-gbvj-googleFourByThree.jpg",
+    description: "Try to get super-fresh, soft mozzarella (or fior di latte cows’ milk cheese) and serve it at cool room temperature. The most important thing here is to wait till the very last minute to dress the tender herbs, and then barely dress them. More dressing is drizzled over the mozzarella. For the herb salad (which can feature a medley of herbs, including parsley, watercress, chervil, basil, mint, tarragon, shiso, sunflower sprouts, small red sorrel, purslane, etc), it’s important to have some filler, like baby arugula or shredded small lettuce leaves, to support the tender herbs.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "salad"
+    ],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 6,
+    ingredients: [
+      {
+        item: "small shallot, finely diced",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "lime juice, lemon juice or white wine vinegar",
+        amount: "3 tablespoons",
+        category: "produce"
+      },
+      {
+        item: "Salt and pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "extra-virgin olive oil",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "loosely packed cups mixed tender herbs (parsley, watercress, chervil, basil, mint, tarragon, shiso, sunflower sprouts, small red sorrel, purslane), washed and blotted dry if necessary",
+        amount: "3",
+        category: "produce"
+      },
+      {
+        item: "loosely packed cups baby arugula or other baby greens",
+        amount: "3",
+        category: "pantry"
+      },
+      {
+        item: "half-pound balls of fresh mozzarella (or 1 pound ciliegini, ovalini or bocconcini)",
+        amount: "2",
+        category: "fridge"
+      },
+      {
+        item: "radishes, thinly sliced",
+        amount: "3",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Put shallot in a small bowl. Add lime juice, a small pinch of salt and a little black pepper. Let sit for 5 minutes, then whisk in olive oil.",
+      "Place herbs in a mixing bowl. Combine with arugula or shredded small lettuce leaves.",
+      "Cut mozzarella into ¼-inch thick slices. (Smaller shapes can be halved, if desired.)",
+      "Add a pinch of salt and 1 tablespoon dressing to the mixing bowl. Toss to coat salad very lightly. Arrange dressed leaves on a platter and garnish with radish slices. Surround with mozzarella slices, sprinkling each slice with a tiny bit of salt.",
+      "Spoon remaining dressing over the mozzarella slices and radishes, and serve immediately."
+    ]
+  },
+  {
+    id: "caramelized-garlic-fish",
+    title: "Caramelized Garlic Fish",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789066270-caramelized-garlic-fish",
+    imageUrl: "https://static01.nyt.com/images/2026/09/10/multimedia/11FD-KOREX-GK-Sticky-Quick-Braised-Fish-lqvm/11FD-KOREX-GK-Sticky-Quick-Braised-Fish-lqvm-googleFourByThree.jpg",
+    description: "Mild white fish becomes deeply savory in this quick one-pot meal inspired by cá kho tộ, which the chef Mai Pham described as the “one dish that best represents Vietnamese home cooking” in her 2001 cookbook “Pleasures of the Vietnamese Table” (HarperCollins). Originally from the south of the country, the dish of freshwater snakehead fish (cá lóc) is braised (kho) in a claypot (tộ) with a blend of sugar melted to a dark brown, garlic and fish sauce. Sometimes known as nước sốt (or kho sauce in English), there are countless variations in Vietnam and its diaspora. The sauce is fantastic with tofu, chicken, beef, pork, duck and all kinds of vegetables and seafood. Just make sure you have plenty of rice to soak it up.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "fish"
+    ],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 2,
+    ingredients: [
+      {
+        item: "sugar",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "plus 1 teaspoon hot water",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "grapeseed, canola or other neutral-flavored oil",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, very thinly sliced",
+        amount: "3",
+        category: "produce"
+      },
+      {
+        item: "fish sauce",
+        amount: "2 tablespoons",
+        category: "protein"
+      },
+      {
+        item: "cod, catfish or other flaky white fish fillets, cut into 2-inch pieces",
+        amount: "1 pound",
+        category: "protein"
+      },
+      {
+        item: "Freshly ground black pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "A small handful of cilantro leaves and tender stems, coarsely chopped",
+        amount: "",
+        category: "produce"
+      },
+      {
+        item: "Steamed rice, for serving",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Put the sugar in a large saucepan and crush any clumps. Sprinkle 1 teaspoon water over the sugar to dampen it and set over medium heat. Cook without stirring until the sugar melts to a dark gold, swirling the pan if needed to evenly brown, 3 to 5 minutes.",
+      "Add the oil and garlic, and cook, stirring, until the garlic is evenly coated and just tender, 1 to 2 minutes. Add the fish sauce and remaining 2 tablespoons water, and cook, stirring, until any sugar clumps dissolve and the sauce bubbles.",
+      "Add the fish in a single layer, reduce the heat to medium-low and partly cover. Cook, turning once, until just opaque on both sides, 4 to 5 minutes. Uncover and continue simmering until the fish is just opaque throughout, 1 to 2 minutes more.",
+      "Remove from the heat, generously grind black pepper all over and top with cilantro. If the fish hasn’t already flaked apart, gently nudge it into smaller pieces to soak up all the sauce and serve immediately over rice or noodles."
+    ]
+  },
+  {
+    id: "maple-dijon-roasted-vegetables",
+    title: "Maple-Dijon Roasted Vegetables",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/788885533-maple-dijon-roasted-vegetables",
+    imageUrl: "https://static01.nyt.com/images/2026/09/11/multimedia/KH-Maple-Dijon-Roasted-Vegetables-zgvt/KH-Maple-Dijon-Roasted-Vegetables-zgvt-googleFourByThree.jpg",
+    description: "This hearty assortment of perfectly cooked roasted fall vegetables is ultra savory, delightfully sweet and comes together without having to use multiple sheet pans. Though butternut squash, broccoli and brussels sprouts vary in cooking times, they can be roasted at the same rate using several tricks. Arranging the squash around the hotter edges of the pan, snugly packing in a single layer and roasting at a high temperature yields vegetables that become tender and browned at the same rate. Moreover, cutting the dense squash and brussels sprouts into smaller pieces and the broccoli into larger florets yields silky squash, deeply browned sprouts and crisp-tender broccoli. A dressing of maple syrup, Dijon and garlic adds a sweet, subtly sharp edge and a handful of chopped nuts brings even more texture. Consider transforming this side into a filling salad by tossing it with massaged kale, dried fruit and your favorite protein.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "vegetables"
+    ],
+    plannedDays: [],
+    prepTime: "55 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "broccoli",
+        amount: "8 ounces",
+        category: "pantry"
+      },
+      {
+        item: "butternut squash (about half of a small squash), peeled and cut into ¾-inch cubes",
+        amount: "1 pound",
+        category: "pantry"
+      },
+      {
+        item: "brussels sprouts, trimmed and halved (quartered if large)",
+        amount: "8 ounces",
+        category: "pantry"
+      },
+      {
+        item: "small red onion (optional), cut into ½-inch wedges",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "olive oil",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "kosher salt, such as Diamond Crystal",
+        amount: "¾ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "black pepper",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "garlic clove",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "Dijon mustard",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "maple syrup",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "pecans or walnuts (optional), roughly chopped",
+        amount: "½ cup",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Heat the oven to 450 degrees.",
+      "From the head of broccoli, cut 2-inch-long florets, then slice any remaining stem crosswise into 1-inch pieces. On a rimmed baking sheet, toss the broccoli, squash, brussels sprouts and red onion (if using) with the olive oil, salt and pepper. Arrange in a single layer with the squash around the perimeter of the pan and all the other vegetables in the center, cut side down. Roast, untouched, until the vegetables have shrunk, the broccoli is browned in spots, the squash and sprouts are lightly browned on the underside and the vegetables easily release from the pan, 20 to 25 minutes.",
+      "Meanwhile, grate the garlic into a small bowl. Add the mustard and maple syrup and stir to combine.",
+      "Remove the baking sheet from the oven. Add the nuts to the pan (if using) and pour the syrup mixture over the vegetables and nuts. Use a spatula to toss until evenly coated and arrange back into an even layer (it’s OK for the vegetables to now be mixed). Return to the oven and continue to roast until the squash is fork-tender, the vegetables are browned in spots and the nuts are fragrant, about 10 minutes more.",
+      "Transfer to a serving platter, if desired, or use a spatula to toss the vegetables and nuts once more and serve directly on the baking sheet."
+    ]
+  },
+  {
+    id: "braised-butter-beans-with-broccolini",
+    title: "Braised Butter Beans With Broccolini",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789076459-braised-butter-beans-with-broccolini",
+    imageUrl: "https://static01.nyt.com/images/2026/09/11/multimedia/14FD-NATIONAL-LISTREX4-NYT-Braised-Butter-Beans-With-Broccolini-ctkq/14FD-NATIONAL-LISTREX4-NYT-Braised-Butter-Beans-With-Broccolini-ctkq-googleFourByThree.jpg",
+    description: "At Bar Panisse in Berkeley, Calif., a platter of big, creamy butter beans is always on the menu, cooked simply with aromatics and topped with something highly seasonal, depending on the week and the chef Amelia Telč's mood. Here, the beans are paired with crisp, broiled broccolini with lemon juice and a bit of chile crisp on top, but feel free to switch things up. Ms. Telč has covered them with garlicky sautéed spigarello, smoked eggplant or olive tapenade. Ms. Telč buys her dried butter beans from Iacopi Farms in Half Moon Bay, Calif., so seek out similar ones (see Tip) and make sure to soak them overnight and cook them until they're completely tender all the way through. Tejal Rao",
+    favourite: false,
+    tags: [
+      "dinner",
+      "beans"
+    ],
+    plannedDays: [],
+    prepTime: "510 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "dried butter beans, see Tip",
+        amount: "2 cups",
+        category: "fridge"
+      },
+      {
+        item: "Kosher salt, such as Diamond Crystal",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "small or medium yellow onion, cut in half",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "head of garlic, cut in half horizontally",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "medium carrot",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "medium parsnip",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "large celery stalk",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "lemon",
+        amount: "½",
+        category: "produce"
+      },
+      {
+        item: "dried chile de árbol",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "bay leaf",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "sprigs fresh parsley",
+        amount: "6",
+        category: "produce"
+      },
+      {
+        item: "sprigs fresh thyme",
+        amount: "6",
+        category: "pantry"
+      },
+      {
+        item: "olive oil",
+        amount: "1 ½ tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "white wine vinegar",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "Chile oil (preferably with a bit of sediment), for drizzling",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "bunch broccolini (about ½ pound), tough stems trimmed",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "olive oil",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "Salt to taste",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "Juice from 1 lemon",
+        amount: "",
+        category: "produce"
+      },
+      {
+        item: "garlic clove",
+        amount: "1",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "Soak dried beans in 2 quarts of cold water mixed with 1 tablespoon salt; leave at room temperature to soak overnight.",
+      "The following day, drain the soaked beans and place them in a large heavy pot along with the onion, garlic, carrot, parsnip, celery, lemon, chile, herbs, 2 tablespoons salt and olive oil. Cover with enough water to fully submerge the beans by a few extra inches — roughly 3 quarts of water total.",
+      "Place the pot over medium heat and bring it to a simmer, skimming off any froth as needed. Adjust the heat to a gentle simmer, then cook, stirring occasionally, for 30 minutes, then begin checking for doneness. The beans should have intact skins and a very creamy interior. If they're still chalky or al dente, allow them to keep cooking and check them every 5 minutes until done. They will continue to “cook” slightly as they cool.",
+      "Turn off the heat and use a slotted spoon to remove the vegetables, then pluck out as many of the herbs as possible with tongs. Stir in the vinegar and taste the broth for seasoning; it should be just slightly over-seasoned, which helps to flavor the beans.",
+      "When ready to serve the beans, place a rack 6 inches under the broiler heating element. Heat the broiler to high. On a sheet pan, toss the broccolini in the olive oil and season with salt. Broil the broccolini until bright green, barely tender and starting to char on the ends, flipping halfway through, about 8 minutes total.",
+      "Remove the broccolini from the oven and immediately drizzle with lemon juice. Using a microplane, finely grate the garlic over the broccolini and toss until well combined. Serve the beans with some of their cooking liquid, topped with the broccolini and drizzled with a spoonful of chile oil."
+    ]
+  },
+  {
+    id: "salsa-de-chorizo",
+    title: "Salsa de Chorizo",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/789411738-salsa-de-chorizo",
+    imageUrl: "https://static01.nyt.com/images/2026/09/14/multimedia/14FD-CHORIZO-SALSAREX-PJ-Chorizo-Salsa-ktlm/14FD-CHORIZO-SALSAREX-PJ-Chorizo-Salsa-ktlm-googleFourByThree.jpg",
+    description: "In Coahuila, Mexico, this salsa is not a condiment but a meal in itself, built on the prized chorizo of Múzquiz. If you can find it, all the better, but any quality Mexican chorizo will do. A mix of chiles is key here: jalapeño for grassy heat, habanero for a fruity kick, and chile de árbol for smoky depth. Tomatoes bring natural sweetness, while tomatillos add a tartness that brightens every bite. Charring all of it matters: The deeply roasted ingredients give the vegetables an intensity and smokiness that matches the chorizo’s bold personality. Pair it with eggs. Use it to sauce crispy tacos, quesadillas, rice or beans. Add potatoes and it becomes a filling guisado. Toss it with pasta or layer it into a one-of-a-kind lasagna. It can even top nachos. Once it enters your kitchen, you won’t stop finding reasons to make it.",
+    favourite: false,
+    tags: [
+      "dinner"
+    ],
+    plannedDays: [],
+    prepTime: "60 min",
+    serves: 6,
+    ingredients: [
+      {
+        item: "ripe roma tomatoes (about 6)",
+        amount: "1½ pounds",
+        category: "produce"
+      },
+      {
+        item: "tomatillos, husked and rinsed (about 2 medium)",
+        amount: "¼ pound",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, unpeeled",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "jalapeño, stemmed",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "habanero, stemmed",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "dried chile de árbol, stemmed",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "vegetable oil, plus more to cook the eggs",
+        amount: "2 tablespoons",
+        category: "protein"
+      },
+      {
+        item: "chorizo, casings removed and chopped",
+        amount: "1 pound",
+        category: "protein"
+      },
+      {
+        item: "finely chopped white onion (from 1 large white onion)",
+        amount: "1 cup",
+        category: "produce"
+      },
+      {
+        item: "kosher or sea salt, plus more to season the eggs, or to taste",
+        amount: "¾ teaspoon",
+        category: "protein"
+      },
+      {
+        item: "Eggs (optional)",
+        amount: "",
+        category: "protein"
+      },
+      {
+        item: "Coarsely ground black pepper, to taste (optional)",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Heat a comal or large cast-iron pan over medium-low heat. Once hot, add the tomatoes, tomatillos, garlic, jalapeño, habanero and chile de árbol. Char and toast, flipping for even color. The chile de árbol will take just a minute or two (set aside once done). The rest of the ingredients will take 10 to 20 minutes, with the garlic and fresh chiles ready toward the beginning; the vegetables should be fully softened and charred, and the tomatoes should be bursting at the seams. (Alternatively, place the ingredients on a baking sheet under the broiler for 10 to 15 minutes, flipping as they roast. Chile de árbol will be ready much sooner.) Remove from the heat. Once cool enough to handle, peel and discard the garlic skins. Finely chop the roasted tomatoes, tomatillos, garlic and chiles, or coarsely purée in a blender.",
+      "Heat the oil in the same skillet set over medium heat. Add the chorizo and cook for 4 to 5 minutes, breaking it apart as it cooks, until cooked through and starting to brown. Add the onion and cook in the chorizo fat until softened, 4 to 5 minutes. Pour the chile mixture over the chorizo, add ¾ teaspoon of salt, and continue cooking for a couple of minutes. Set aside. (It will keep refrigerated in an airtight container up to four days.)",
+      "If serving with eggs, heat a teaspoon of oil in a small skillet set over low, crack eggs, season with salt and pepper and cook to your desired doneness, ideally with the white just set and the yolk still runny. Serve topped with salsa."
+    ]
+  },
+  {
+    id: "masala-chicken-and-chickpeas",
+    title: "Masala Chicken and Chickpeas",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/788532860-masala-chicken-and-chickpeas",
+    imageUrl: "https://static01.nyt.com/images/2026/09/04/multimedia/KC-Masala-Chicken-and-Chickpeas-gfwk/KC-Masala-Chicken-and-Chickpeas-gfwk-googleFourByThree.jpg",
+    description: "Ground chicken is a weeknight time saver, and a quick simmer in tomato sauce keeps the meat juicy and tender. This recipe begins with blooming cumin seeds in oil, so that the heady spice infuses the dish. Using a food processor to purée the cilantro with the yogurt is the best way to extract all of the herb’s bright herbaceous flavor. But if you don’t feel like breaking out an appliance, finely chopping it by hand works as well. (The flavor will just be less intense.) A final drizzle of tangy yogurt sauce cools the spices, while a squeeze of fresh lime juice instantly brightens the meal.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "chicken"
+    ],
+    plannedDays: [],
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "plain whole milk Greek yogurt",
+        amount: "½ cup",
+        category: "fridge"
+      },
+      {
+        item: "loosely-packed, coarsely-chopped cilantro leaves and tender stems, plus 2 tablespoons finely chopped, divided",
+        amount: "1 cup",
+        category: "produce"
+      },
+      {
+        item: "water",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "Salt and black pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "neutral oil, such as safflower, divided",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "unsalted butter",
+        amount: "1 tablespoon",
+        category: "fridge"
+      },
+      {
+        item: "cumin seeds",
+        amount: "¾ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "finely chopped onion (from ½ onion)",
+        amount: "1 cup",
+        category: "produce"
+      },
+      {
+        item: "garlic cloves, minced",
+        amount: "3",
+        category: "produce"
+      },
+      {
+        item: "minced ginger",
+        amount: "1 tablespoon",
+        category: "produce"
+      },
+      {
+        item: "garam masala",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "kashmiri chile powder (or ¼ teaspoon cayenne plus ¼ teaspoon sweet paprika)",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "large tomato, diced",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "ground chicken, preferably dark meat",
+        amount: "1 pound",
+        category: "protein"
+      },
+      {
+        item: "canned chickpeas, rinsed and drained",
+        amount: "½ cup",
+        category: "pantry"
+      },
+      {
+        item: "baby spinach, coarsely chopped (about 4 cups)",
+        amount: "4 ounces",
+        category: "produce"
+      },
+      {
+        item: "Cooked basmati rice and lime wedges, for serving",
+        amount: "",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "In a food processor, combine yogurt, the coarsely chopped cilantro and water and purée, scraping down the sides and bottom of the bowl, until smooth. (If you don’t want to use a food processor, finely chop the cilantro leaves and stems by hand. Add the chopped herbs to a small bowl with the yogurt and water and stir until smooth.) Season with salt and pepper.",
+      "In a 12-inch nonstick skillet, combine 1 tablespoon of the oil and butter over medium heat and cook until butter melts.  Add cumin seeds and stir until fragrant, about 30 seconds. Add onion, season with salt and pepper and cook, stirring occasionally, until lightly golden, 5 minutes. Add the remaining 1 tablespoon oil, garlic, ginger, garam masala and chile powder and cook, stirring, until the spices are fragrant, about 1 minute. Add tomato and cook, stirring, until tomato breaks down and mixture is saucy, 3 minutes. Add chicken, season with salt and pepper and cook, stirring and breaking up the meat until it is crumbly, about 3 minutes. Add chickpeas and cook, stirring occasionally, until chicken is cooked through, 2 minutes longer. Stir in spinach and the finely chopped cilantro until spinach is wilted.",
+      "To serve, divide chicken mixture among bowls over rice. Drizzle with the cilantro yogurt and serve with lime wedges for squeezing over."
+    ]
+  },
+  {
+    id: "miso-tomato-toasts-with-shichimi-togarashi",
+    title: "Miso Tomato Toasts With Shichimi Togarashi",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/788876212-miso-tomato-toasts-with-shichimi-togarashi",
+    imageUrl: "https://static01.nyt.com/images/2026/09/09/multimedia/09FD-OTTOLENGHIREX-YO-Miso-Tomato-Toasts-With-Shichimi-Togarashi-NEW-mglh/09FD-OTTOLENGHIREX-YO-Miso-Tomato-Toasts-With-Shichimi-Togarashi-NEW-mglh-googleFourByThree.jpg",
+    description: "These toasts are bruschetta, pan con tomate and panzanella all rolled into one — with extra savory depth from miso and the Japanese spice blend shichimi togarashi. A simple drizzle of hot oil blooms the miso, bringing a savory depth against the tomatoes’ sweetness, while a light hand-crushing keeps the tomatoes chunky and rough, their juices pooling around the torn, oil-crisped toast. Shichimi togarashi, made here with black sesame, chile flakes, orange zest and crumbled nori, is what makes the dish, so don't skip it (you’ll have extra to sprinkle over rice, noodles, eggs or avocado). If you don’t want to blend your own, using a good store-bought version works, too. Taste your tomatoes before you start, since sweetness varies, and adjust the sugar accordingly. A mix of regular (or heirloom) and cherry tomatoes is good here, but feel free to choose whatever looks best on the day. The toasts are delicious as part of a spread, or on their own for a light lunch.",
+    favourite: false,
+    tags: [
+      "dinner"
+    ],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "roasted black sesame seeds (see Tip)",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "tsp gochugaru (Korean red pepper flakes) or ½ tsp crushed red pepper",
+        amount: "¾",
+        category: "pantry"
+      },
+      {
+        item: "Fine sea salt",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "small orange (½ teaspoon finely grated zest, plus a wedge for squeezing later)",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "snack-size sheets salted crispy nori, roughly crumbled",
+        amount: "4",
+        category: "pantry"
+      },
+      {
+        item: "ripe tomatoes (2 to 3 medium-large), cut into bite-size chunks",
+        amount: "1 ½ pounds",
+        category: "produce"
+      },
+      {
+        item: "sugar (optional)",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "garlic clove, crushed",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "white miso",
+        amount: "1½ tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "good-quality neutral oil (such as expeller-pressed canola or sunflower), divided",
+        amount: "½ cup",
+        category: "pantry"
+      },
+      {
+        item: "to 4 slices sourdough bread",
+        amount: "3",
+        category: "pantry"
+      },
+      {
+        item: "rice vinegar",
+        amount: "½ tablespoon",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Add the sesame seeds, pepper flakes and ½ teaspoon salt to a mortar and pestle and pound together until roughly crushed. Stir through the orange zest and crumbled nori and set aside.",
+      "Add the tomatoes to a bowl, sprinkle over the sugar, if using, and ½ teaspoon of salt, then dot the garlic and miso on top (do not mix) and set aside.",
+      "Heat 3 tablespoons of oil in a large frying pan on medium-high heat. Add in the sourdough slices and turn to coat in the oil. Cook for about 7 minutes, turning over halfway through, until lightly charred and crisp. Transfer to a cooling rack and keep the pan on the heat.",
+      "Add the remaining 5 tablespoons of oil to the pan and heat until shimmering hot, about another minute, then carefully pour the oil over the tomatoes (it should sizzle), trying to aim for the miso and garlic so that the oil blooms them. Add the vinegar and stir to combine until the miso has dissolved, then go in with your hands (the oil won’t be hot anymore) to lightly crush the tomatoes.",
+      "Roughly tear each sourdough slice into 3 or 4 pieces and arrange snugly on a large  serving platter, kind of like a jigsaw. Spoon over the tomatoes, with all their juices, and sprinkle with as much togarashi as you like. Finish with a squeeze of orange juice and serve."
+    ]
+  },
+  {
+    id: "reverse-seared-rib-eye-steak",
+    title: "Reverse-Seared Rib-Eye Steak",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/788467857-reverse-seared-rib-eye-steak",
+    imageUrl: "https://static01.nyt.com/images/2026/09/04/multimedia/04FD-REVERSE-SEARED-STEAKREX-SS-Reverse-Seared-Rib-Eye-1-jtmg/04FD-REVERSE-SEARED-STEAKREX-SS-Reverse-Seared-Rib-Eye-1-jtmg-googleFourByThree.jpg",
+    description: "If you’ve spent a lot of money on a honking big chop of prime rib-eye beef, you want it to come off the grill perfect — not simply good, but fantastic. That calls for a reverse-sear: Cooking the steak slowly in a warm oven, then finishing it over high heat on a grill or plancha. This doesn't take expertise, or even much experience, so long as you have an instant-read digital thermometer to test the internal temperature of the meat. Get one immediately. (Wirecutter has recommendations.) Because if you're going to cook expensive proteins, the thermometer is as important a tool as a knife. Once you start using one, you'll use one all the time.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "steak"
+    ],
+    plannedDays: [],
+    prepTime: "60 min",
+    serves: 2,
+    ingredients: [
+      {
+        item: "(2-inch-thick) bone-in rib-eye steak (about 2 pounds)",
+        amount: "1",
+        category: "protein"
+      },
+      {
+        item: "Kosher salt (such as Diamond Crystal) and freshly ground black pepper",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Take your steak out of the fridge an hour or so before you plan to cook it, so it loses its chill. Salt it well and, if you like, hit it with some freshly ground black pepper.",
+      "Heat the oven to 200 degrees and set a wire rack in a rimmed sheet pan.",
+      "Set the steak on the rack and roast it until its internal temperature is around 110 degrees. That will take something between 20 to 30 minutes, but don’t use time as your guide. Use the thermometer.",
+      "Rest the meat for 20 minutes while you light either a charcoal grill or heat a gas one until it’s ripping. (You can definitely finish the steak on a stovetop, but you’ll get a lot of smoke.)",
+      "Sear the meat to deeply brown, about 90 seconds a side, then check the temperature. It should be in the low 120s for rare. Rest for about 5 minutes and carve."
+    ]
+  },
+  {
+    id: "maple-shallot-pork-tenderloin",
+    title: "Maple-Shallot Pork Tenderloin",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/788384454-maple-shallot-pork-tenderloin",
+    imageUrl: "https://static01.nyt.com/images/2026/09/02/multimedia/KD-Pork-Tenderloin-with-Maple-Agrodolce-chkz/KD-Pork-Tenderloin-with-Maple-Agrodolce-chkz-googleFourByThree.jpg",
+    description: "Pork tenderloin is a top contender in the category of quick, inexpensive and flavorful dinners. In this recipe, the versatile cut is paired with a punchy, vibrant agrodolce sauce — an Italian condiment that translates as “sour-sweet” and can be used on everything from meats and vegetables to pasta. In this variation, sherry vinegar adds a sour note, while maple syrup provides the sweet. The agrodolce comes together rather quickly and cooks down while the pork is in the oven. This guarantees a showstopping weeknight meal without much fuss in the kitchen. Consider serving alongside classic mashed potatoes and roasted broccolini. Agrodolce is easily customizable, so if you don’t have sherry vinegar, a balsamic, apple cider, red or white vinegar is a suitable substitute. Also, because this recipe yields extra agrodolce, you could easily roast another tenderloin and serve more people using the same amount of sauce.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "pork"
+    ],
+    plannedDays: [],
+    prepTime: "35 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "(1½-pound) pork tenderloin, silver skin removed (see Tip)",
+        amount: "1",
+        category: "protein"
+      },
+      {
+        item: "kosher salt (such as Diamond Crystal)",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "smoked paprika",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "garlic powder",
+        amount: "1 teaspoon",
+        category: "produce"
+      },
+      {
+        item: "olive oil",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "maple syrup",
+        amount: "¾ cup",
+        category: "pantry"
+      },
+      {
+        item: "sherry vinegar",
+        amount: "½ cup",
+        category: "pantry"
+      },
+      {
+        item: "medium shallot, thinly sliced",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "regular or golden raisins, roughly chopped",
+        amount: "3 tablespoons",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Heat the oven to 425 degrees and position a rack in the middle of the oven. Line a sheet pan with aluminum foil and place an oven-safe wire rack in the pan.",
+      "In a small bowl, whisk together the salt, smoked paprika and garlic powder. Pat the pork dry, then coat it in olive oil and sprinkle evenly with the seasoning blend. Place pork on the rack in the prepared sheet pan and roast on middle rack until the internal temperature reaches 145 degrees, about 20 minutes.",
+      "While the pork is roasting, make the agrodolce: Combine the maple syrup, vinegar, shallots and raisins in a small saucepan. Whisk well, then bring to a boil. Once boiling, reduce the heat to maintain a simmer. Cook, whisking occasionally, until the liquid has reduced by half, 18 to 20 minutes. Remove from the heat.",
+      "When the pork has finished cooking, remove it from the oven and let it rest 5 minutes before slicing into ½-inch-thick rounds. Transfer to a serving plate and top with a couple spoonfuls of the agrodolce. Serve with the remaining sauce on the side. (Any leftover sauce is delicious on roasted fish or grilled vegetables.)"
+    ]
+  },
+  {
+    id: "mirin-basted-eggs",
+    title: "Mirin-Basted Eggs",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/788186877-mirin-basted-eggs",
+    imageUrl: "https://static01.nyt.com/images/2026/08/31/multimedia/31FD-KIMREX-EK-Mirin-Basted-Fried-Eggs-1-hwjv/31FD-KIMREX-EK-Mirin-Basted-Fried-Eggs-1-hwjv-googleFourByThree.jpg",
+    description: "These speedy, last-minute eggs are “fried” in a flavorful mirin-soy broth that doubles as a basting liquid so you end up with runny yolks and gently cooked whites. The result is like the soft, custardy part of an oyakodon, the homey chicken and egg rice dish, or like a soy-sauce ramen egg that went to the Korean spa (to become silky and soft). Enjoy these lovely eggs on their own with white rice.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "eggs"
+    ],
+    plannedDays: [],
+    prepTime: "5 min",
+    serves: 2,
+    ingredients: [
+      {
+        item: "chicken, beef or vegetable broth",
+        amount: "½ cup",
+        category: "protein"
+      },
+      {
+        item: "unsalted butter or olive oil",
+        amount: "1 tablespoon",
+        category: "fridge"
+      },
+      {
+        item: "hon mirin (Japanese rice wine; see Tip) or dry sherry",
+        amount: "½ tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "soy sauce",
+        amount: "½ tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "large eggs",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "Thinly sliced scallions, for garnish (optional)",
+        amount: "",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "In a large (12-inch) skillet over medium, heat the broth, butter, mirin and soy sauce until the butter melts and the broth is simmering gently.",
+      "Crack in the eggs and cook over medium-low, spooning the broth repeatedly over the eggs until their whites are no longer translucent, 2 ½ to 3 minutes. Serve immediately with any remaining broth spooned over."
+    ]
+  },
+  {
+    id: "brothy-corn-and-salmon-chowder",
+    title: "Brothy Corn and Salmon Chowder",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/786728643-brothy-corn-and-salmon-chowder",
+    imageUrl: "https://static01.nyt.com/images/2026/08/14/multimedia/14FD-APPE-CHOWDERREX-MC-Corn-and-Salmon-Chowder-1-jgtz/14FD-APPE-CHOWDERREX-MC-Corn-and-Salmon-Chowder-1-jgtz-googleFourByThree.jpg",
+    description: "Filled with tender pieces of salmon, sweet corn kernels, and cubed potatoes and tomatoes, this lovely soup is both satisfying and easy to make. In the summer, it’s a perfect vehicle for fresh corn, and you can simmer the cobs in the broth to bolster the flavors. But it’s just as good with frozen corn whenever you’re craving a light, herby soup with a horseradish kick.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "salmon"
+    ],
+    plannedDays: [],
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "skinless salmon fillets, cut into 1-inch pieces",
+        amount: "1 ½ pounds",
+        category: "protein"
+      },
+      {
+        item: "fine sea or table salt, divided, plus more to taste",
+        amount: "1 ¼ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "Freshly ground black pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "prepared horseradish, divided, plus more to taste",
+        amount: "3 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "unsalted butter",
+        amount: "2 tablespoons",
+        category: "fridge"
+      },
+      {
+        item: "shallots, chopped",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "small Yukon Gold or red potatoes, cut into ½-inch cubes",
+        amount: "1 pound",
+        category: "produce"
+      },
+      {
+        item: "vegetable broth",
+        amount: "1 quart",
+        category: "pantry"
+      },
+      {
+        item: "corn kernels (from 3 to 4 ears of corn, save the cobs), or use frozen corn",
+        amount: "3 cups",
+        category: "frozen"
+      },
+      {
+        item: "halved cherry tomatoes or cubed plum tomatoes",
+        amount: "1 cup",
+        category: "produce"
+      },
+      {
+        item: "chopped basil, dill or chives (or a combination)",
+        amount: "¼ cup",
+        category: "produce"
+      },
+      {
+        item: "to 3 teaspoons fresh lemon juice, more to taste",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "Heavy cream or plain yogurt (or both), for serving (optional)",
+        amount: "",
+        category: "fridge"
+      }
+    ],
+    instructions: [
+      "Season salmon lightly with ½ teaspoon salt and a generous grinding of black pepper, then smear the pieces with 2 teaspoons horseradish. Set aside to marinate briefly.",
+      "In a soup pot or Dutch oven, melt butter over medium heat. Add shallots and ¾  teaspoon salt, and cook until golden, about 5 minutes.",
+      "Add the potatoes, broth and corn cobs, if you have them, to the pot. Bring liquid to a simmer and let cook for 15 minutes; the potatoes should be almost cooked through.",
+      "Remove cobs from the pot if you’ve used them. If you like, you can let the cobs cool and squeeze their liquid back into the pot.",
+      "Add salmon, corn kernels and tomatoes to the pot and cook until the salmon is just cooked through and the potatoes are tender, about 5 minutes longer.",
+      "Stir in the remaining 1 teaspoon horseradish, herbs and lemon juice. Taste and add more salt, horseradish and lemon, if needed.",
+      "Serve in bowls, drizzled with heavy cream or dolloped with a little yogurt (or both), if you like."
+    ]
+  },
+  {
+    id: "sweet-and-sour-chicken",
+    title: "Sweet and Sour Chicken",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/787337842-sweet-and-sour-chicken",
+    imageUrl: "https://static01.nyt.com/images/2026/08/21/multimedia/TC-Sweet-and-Sour-Chicken-1-vhjc/TC-Sweet-and-Sour-Chicken-1-vhjc-googleFourByThree.jpg",
+    description: "This glossy, one-wok meal lands somewhere between a Cantonese-American sweet and sour stir-fry and a tropical pineapple chicken. Boneless thighs, dusted lightly in cornstarch and shallow-fried until the edges crisp, get tossed with bell peppers, onion, pineapple and a sauce sharpened with apple cider vinegar and rounded out with five-spice powder. (Boneless, skinless chicken breasts or firm tofu would make fine substitutes for the thighs, if you prefer. Just make sure to pat the pieces very dry.) The whole thing comes together in about twenty minutes once the wok is hot, so cut and measure everything before you start. Serve over jasmine rice.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "chicken"
+    ],
+    plannedDays: [],
+    prepTime: "50 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "kosher salt (such as Diamond Crystal)",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "garlic powder",
+        amount: "1 tablespoon",
+        category: "produce"
+      },
+      {
+        item: "smoked paprika",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "black pepper",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "boneless skinless chicken thighs, cut into bite-size chunks",
+        amount: "2 pounds",
+        category: "protein"
+      },
+      {
+        item: "cornstarch",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "vegetable oil (for searing)",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "(8-ounce) can pineapple chunks in juice (juice reserved for the sauce, pineapple set aside)",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "medium onion, sliced",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "red bell pepper, seeded and sliced",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "green bell pepper, seeded and sliced",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "ketchup",
+        amount: "⅓ cup",
+        category: "pantry"
+      },
+      {
+        item: "pineapple juice (reserved from the can of pineapple chunks)",
+        amount: "⅓ cup",
+        category: "pantry"
+      },
+      {
+        item: "apple cider vinegar",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "brown sugar",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "honey",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "low sodium soy sauce",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "minced garlic",
+        amount: "1 tablespoon",
+        category: "produce"
+      },
+      {
+        item: "minced peeled ginger",
+        amount: "1 tablespoon",
+        category: "produce"
+      },
+      {
+        item: "five-spice powder",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "Cooked jasmine or other rice of choice",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "Sliced scallions or sesame seeds, optional",
+        amount: "",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "In a large bowl, combine the salt, garlic powder, paprika and black pepper. Pat the chicken chunks very dry with paper towels, add to the bowl with the spices and toss until evenly coated. Sprinkle the cornstarch over the chicken and toss with your hands until each piece is lightly coated. You are looking for a thin, dry dusting; if the chicken looks pasty, it is still too wet, so let it sit for a few minutes to dry.",
+      "Heat the oil in a wok or large skillet over medium-high heat until shimmering. Working in two or three batches so the pieces sit in a single layer, sear the chicken, undisturbed, until deeply golden on the bottom, 2 to 3 minutes. Flip and cook until golden on the second side and cooked through, about 2 minutes. Using tongs or a slotted spoon, transfer the chicken to a wire rack set over a baking sheet and set aside.",
+      "Reduce the heat to medium. Using the oil already in the wok, add the onion and bell peppers and increase the heat to high. Stir-fry just until the vegetables begin to soften but still snap when bitten, 2 to 3 minutes.",
+      "Pour the ketchup, reserved pineapple juice, vinegar, brown sugar, honey, soy sauce, garlic, ginger and five-spice powder directly into the wok with the vegetables. Lower the heat to medium, stir to combine and bring to a simmer. Simmer until the sauce turns glossy and is lightly thickened, about 2 minutes.",
+      "Return the chicken to the wok and scatter the pineapple chunks over the top. Toss gently so the cornstarch crust on the chicken stays intact. Cook for 1 minute more, just until everything is hot and the sauce coats every piece. Remove from the heat and serve immediately over jasmine rice, with sliced scallions or sesame seeds, if you like."
+    ]
+  },
+  {
+    id: "sesame-soy-chicken-with-ginger-scallion-noodles",
+    title: "Sesame Soy Chicken With Ginger-Scallion Noodles",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/786382737-sesame-soy-chicken-with-ginger-scallion-noodles",
+    imageUrl: "https://static01.nyt.com/images/2026/08/14/multimedia/17FD-BUDGETREX3-KP-Ginger-Scallion-Noodles-With-Chicken-hkjv/17FD-BUDGETREX3-KP-Ginger-Scallion-Noodles-With-Chicken-hkjv-googleFourByThree.jpg",
+    description: "Every time I return to my native Hong Kong, I visit one of the city’s famed cha chaan teng, the noisy diners known for cheap, satisfying meals and brusque service. I once had a dish there that I’ve been making at home ever since: Instant ramen tossed in ginger-scallion sauce, topped with a pan-fried chicken cutlet and a fried egg. The yolk broke and ran over everything, mixing with the oil until the two became a rich and savory coating. The ginger-scallion sauce is the engine here — make it once and it keeps all week, improving poached chicken, pork chops and even a bowl of plain rice.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "chicken",
+      "noodles"
+    ],
+    plannedDays: [],
+    prepTime: "50 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "boneless skinless chicken thighs (or deboned skin-on thighs)",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "soy sauce",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "sugar",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "kosher salt (such as Diamond Crystal), plus more for seasoning",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "white or black pepper, plus more for seasoning",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "cloves garlic, minced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "toasted sesame oil",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "Shaoxing wine or dry sherry (optional)",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "vegetable oil, divided",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "instant ramen bricks",
+        amount: "4",
+        category: "pantry"
+      },
+      {
+        item: "eggs",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "Chile oil or chile crisp (optional)",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "medium scallions sliced, white and green parts",
+        amount: "6",
+        category: "produce"
+      },
+      {
+        item: "ginger, peeled and minced",
+        amount: "2 ounces",
+        category: "produce"
+      },
+      {
+        item: "kosher salt, such as Diamond Crystal (If not using fish sauce, use 1 ½ teaspoons salt.)",
+        amount: "1 teaspoon",
+        category: "protein"
+      },
+      {
+        item: "sugar",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "vegetable oil",
+        amount: "½ cup",
+        category: "pantry"
+      },
+      {
+        item: "fish sauce (optional)",
+        amount: "½ teaspoon",
+        category: "protein"
+      }
+    ],
+    instructions: [
+      "At least 2 hours before serving, cut a number of slits into the chicken thighs without piercing them completely (if using deboned skin-on chicken, cut slits on the meaty underside of the thighs). Place thighs in a bowl, and add soy sauce, sugar, salt and pepper, minced garlic, toasted sesame oil and Shaoxing wine if using. Cover bowl with plastic wrap and allow to marinate in the fridge.",
+      "Make the ginger-scallion sauce: In a small heat-safe bowl, combine scallions, ginger, salt and sugar. Mix thoroughly to release some of the liquid. Let sit for at least 5 minutes.",
+      "Add the oil to a small saucepan and heat until it reads 325 degrees on an instant-read thermometer. Carefully pour the hot oil into ginger-scallion mixture. The mixture will immediately sizzle. Add fish sauce if using, stir, and let cool. (Sauce can be refrigerated in an airtight container for up to one week.)",
+      "When ready to eat, bring a large pot of water to boil. Add 1 tablespoon vegetable oil to a large (12-inch) nonstick or well-seasoned cast-iron skillet over medium-high heat. Sear chicken thighs until beautifully brown, about 5 minutes on each side. When the chicken is cooked (it should register at least 165 degrees with an instant-read thermometer), remove from heat onto a plate.",
+      "Cook the ramen bricks in the pot of boiling water according to package directions. Divide cooked noodles among four bowls, and spoon a generous tablespoon of ginger-scallion sauce and its flavored oil onto the noodles, tossing to combine. Slice each thigh into strips and lay over each bowl of noodles. Spoon more ginger-scallion sauce onto the chicken.",
+      "In the same pan you used to cook the chicken, add the remaining tablespoon of oil to the drippings and fry four eggs sunny-side up. Lightly season with salt and pepper. Drape one fried egg each over each bowl and add chile oil or chile crisp if desired. Break the yolk over noodles, chicken and sauce."
+    ]
+  },
 ];
 
 const lunchRecipes: RecipeLibraryEntry[] = [
