@@ -171,7 +171,6 @@ export function RecipeBrowser({
   const closeMobileLayovers = useCallback(() => {
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
-    setRecipeSheetFilterId("all");
     setAddToWeekOpen(false);
   }, []);
 
@@ -538,7 +537,7 @@ export function RecipeBrowser({
   const recentlyAddedCount = recentlyAddedRecipes.length;
   const recentlyAddedTitle = "Recently added recipes";
   const recentlyAddedLabel = `Recently added recipes (${recentlyAddedCount})`;
-  const browseLabel = activeFilterDetails.browseLabel;
+  const browseLabel = activeFilter === "recent" ? recentlyAddedLabel : activeFilterDetails.browseLabel;
   const recipeSheetTitle = recipeSheetFilterId === "recent" ? recentlyAddedTitle : browseLabel;
   const recipeSearchPlaceholder = `Search ${getSearchFilterName(recipeSheetFilterId)} recipes`;
   const dailyPickTitle = getDailyPickTitle(activeFilter);
@@ -572,7 +571,7 @@ export function RecipeBrowser({
       setSelectedRecipeId(nextRecipeId);
     }
 
-    setActiveFilter("all");
+    setActiveFilter("recent");
     setRecipeSheetFilterId("recent");
     setRecipeSearchQuery("");
 
@@ -788,8 +787,6 @@ export function RecipeBrowser({
 
     setSelectedRecipeFromUrl(true);
     setSelectedRecipeId(id);
-    setActiveFilter((currentFilter) => (currentFilter === "recent" ? "all" : currentFilter));
-    setRecipeSheetFilterId("all");
     setRecipeSearchQuery("");
     setRecipeSheetOpen(false);
     if (shouldOpenDesktopDrawer) {
@@ -976,7 +973,9 @@ export function RecipeBrowser({
             <button
               type="button"
               onClick={showRecentlyAddedRecipes}
-              className="recipe-tap-card inline-flex items-center gap-1.5 px-1 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+              aria-pressed={activeFilter === "recent"}
+              data-active={activeFilter === "recent"}
+              className="recipe-tap-card inline-flex items-center gap-1.5 rounded-lg px-1 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30 data-[active=true]:bg-amber-100 data-[active=true]:ring-1 data-[active=true]:ring-amber-500"
             >
               <span>{recentlyAddedLabel}</span>
             </button>
@@ -1002,7 +1001,9 @@ export function RecipeBrowser({
             <button
               type="button"
               onClick={showRecentlyAddedRecipes}
-              className="recipe-tap-card inline-flex items-center gap-1.5 px-2 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+              aria-pressed={activeFilter === "recent"}
+              data-active={activeFilter === "recent"}
+              className="recipe-tap-card inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30 data-[active=true]:bg-amber-100 data-[active=true]:ring-1 data-[active=true]:ring-amber-500"
             >
               <span>{recentlyAddedLabel}</span>
             </button>
