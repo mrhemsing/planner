@@ -975,7 +975,7 @@ export function RecipeBrowser({
               onClick={showRecentlyAddedRecipes}
               aria-pressed={activeFilter === "recent"}
               data-active={activeFilter === "recent"}
-              className="recipe-tap-card inline-flex items-center gap-1.5 rounded-lg px-1 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30 data-[active=true]:bg-amber-100 data-[active=true]:ring-1 data-[active=true]:ring-amber-500"
+              className="recipe-tap-card inline-flex items-center gap-1.5 rounded-lg px-1 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30 data-[active=true]:bg-amber-100 data-[active=true]:no-underline data-[active=true]:px-2 data-[active=true]:ring-1 data-[active=true]:ring-amber-500"
             >
               <span>{recentlyAddedLabel}</span>
             </button>
@@ -1003,7 +1003,7 @@ export function RecipeBrowser({
               onClick={showRecentlyAddedRecipes}
               aria-pressed={activeFilter === "recent"}
               data-active={activeFilter === "recent"}
-              className="recipe-tap-card inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30 data-[active=true]:bg-amber-100 data-[active=true]:ring-1 data-[active=true]:ring-amber-500"
+              className="recipe-tap-card inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-sm font-black text-amber-700 underline underline-offset-4 transition hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500/30 data-[active=true]:bg-amber-100 data-[active=true]:no-underline data-[active=true]:px-3 data-[active=true]:ring-1 data-[active=true]:ring-amber-500"
             >
               <span>{recentlyAddedLabel}</span>
             </button>
