@@ -564,7 +564,8 @@ export function RecipeBrowser({
   );
 
   const showRecentlyAddedRecipes = useCallback(() => {
-    const nextRecipeId = recentlyAddedRecipes[0]?.id ?? "";
+    const nextRecipeId = recentlyAddedRecipes.find((recipe) => recipe.id === selectedRecipe?.id)?.id
+      ?? recentlyAddedRecipes[0]?.id ?? "";
 
     if (nextRecipeId) {
       setSelectedRecipeFromUrl(true);
@@ -578,7 +579,7 @@ export function RecipeBrowser({
     if (window.innerWidth < 640 && recentlyAddedRecipes.length > 0) {
       setRecipeSheetOpen(true);
     }
-  }, [recentlyAddedRecipes]);
+  }, [recentlyAddedRecipes, selectedRecipe?.id]);
 
   const moveActiveFilter = (direction: 1 | -1) => {
     const filterOrder = mobileTopFilters.length ? mobileTopFilters : filters;
@@ -1608,13 +1609,14 @@ export function RecipeBrowser({
             >
               <div className="grid gap-3 pb-8">
                 {recipeSheetRecipes.map((recipe) => {
-                  const isSelected = recipe.id === selectedRecipeId;
+                  const isSelected = recipe.id === selectedRecipe?.id;
 
                   return (
                     <button
                       key={`${activeSection?.id ?? "recipes"}-sheet-${recipe.id}`}
                       type="button"
                       onClick={() => selectRecipe(recipe.id)}
+                      aria-current={isSelected ? "true" : undefined}
                       className={`recipe-tap-card grid grid-cols-[72px_1fr] gap-3 rounded-[18px] border p-2 text-left ${
                         isSelected ? "border-amber-500 bg-amber-50" : "border-stone-200 bg-white"
                       }`}
