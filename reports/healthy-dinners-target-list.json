@@ -1,5 +1,5 @@
 {
-  "count": 414,
+  "count": 436,
   "items": [
     {
       "position": 1,
@@ -2974,6 +2974,182 @@
       "slug": "sesame-soy-chicken-with-ginger-scallion-noodles",
       "recipeId": "sesame-soy-chicken-with-ginger-scallion-noodles",
       "addedAt": "2026-09-25"
+    },
+    {
+      "position": 415,
+      "url": "https://cooking.nytimes.com/recipes/762879401-maple-harissa-chicken-with-butternut-squash",
+      "id": "762879401",
+      "slug": "maple-harissa-chicken-with-butternut-squash",
+      "recipeId": "maple-harissa-chicken-with-butternut-squash",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 416,
+      "url": "https://cooking.nytimes.com/recipes/1015968-roasted-cauliflower-gratin-with-tomatoes-and-goat-cheese",
+      "id": "1015968",
+      "slug": "roasted-cauliflower-gratin-with-tomatoes-and-goat-cheese",
+      "recipeId": "roasted-cauliflower-gratin-with-tomatoes-and-goat-cheese",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 417,
+      "url": "https://cooking.nytimes.com/recipes/765919246-salmon-with-olive-oil-braised-zucchini-and-chickpeas",
+      "id": "765919246",
+      "slug": "salmon-with-olive-oil-braised-zucchini-and-chickpeas",
+      "recipeId": "salmon-with-olive-oil-braised-zucchini-and-chickpeas",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 418,
+      "url": "https://cooking.nytimes.com/recipes/768942440-pesto-white-fish-with-greens-and-beans",
+      "id": "768942440",
+      "slug": "pesto-white-fish-with-greens-and-beans",
+      "recipeId": "pesto-white-fish-with-greens-and-beans",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 419,
+      "url": "https://cooking.nytimes.com/recipes/773758690-roasted-cumin-salmon-with-carrots",
+      "id": "773758690",
+      "slug": "roasted-cumin-salmon-with-carrots",
+      "recipeId": "roasted-cumin-salmon-with-carrots",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 420,
+      "url": "https://cooking.nytimes.com/recipes/1024123-ginger-scallion-steamed-fish",
+      "id": "1024123",
+      "slug": "ginger-scallion-steamed-fish",
+      "recipeId": "ginger-scallion-steamed-fish",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 421,
+      "url": "https://cooking.nytimes.com/recipes/1026712-asparagus-gomaae-with-chilled-tofu",
+      "id": "1026712",
+      "slug": "asparagus-gomaae-with-chilled-tofu",
+      "recipeId": "asparagus-gomaae-with-chilled-tofu",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 422,
+      "url": "https://cooking.nytimes.com/recipes/1024226-roasted-red-peppers-with-beans-and-greens",
+      "id": "1024226",
+      "slug": "roasted-red-peppers-with-beans-and-greens",
+      "recipeId": "roasted-red-peppers-with-beans-and-greens",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 423,
+      "url": "https://cooking.nytimes.com/recipes/1026309-one-pot-sesame-salmon-and-quinoa",
+      "id": "1026309",
+      "slug": "one-pot-sesame-salmon-and-quinoa",
+      "recipeId": "one-pot-sesame-salmon-and-quinoa",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 424,
+      "url": "https://cooking.nytimes.com/recipes/1023372-fish-with-citrus-chile-sauce",
+      "id": "1023372",
+      "slug": "fish-with-citrus-chile-sauce",
+      "recipeId": "fish-with-citrus-chile-sauce",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 425,
+      "url": "https://cooking.nytimes.com/recipes/1026305-fragrant-coconut-chicken-and-sweet-potato",
+      "id": "1026305",
+      "slug": "fragrant-coconut-chicken-and-sweet-potato",
+      "recipeId": "fragrant-coconut-chicken-and-sweet-potato",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 426,
+      "url": "https://cooking.nytimes.com/recipes/1015966-fennel-kale-and-rice-gratin",
+      "id": "1015966",
+      "slug": "fennel-kale-and-rice-gratin",
+      "recipeId": "fennel-kale-and-rice-gratin",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 427,
+      "url": "https://cooking.nytimes.com/recipes/1015709-dried-porcini-consomme",
+      "id": "1015709",
+      "slug": "dried-porcini-consomme",
+      "recipeId": "dried-porcini-consomme",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 428,
+      "url": "https://cooking.nytimes.com/recipes/761573409-basil-tofu",
+      "id": "761573409",
+      "slug": "basil-tofu",
+      "recipeId": "basil-tofu",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 429,
+      "url": "https://cooking.nytimes.com/recipes/1024186-asparagus-mushroom-grain-bowl",
+      "id": "1024186",
+      "slug": "asparagus-mushroom-grain-bowl",
+      "recipeId": "asparagus-mushroom-grain-bowl",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 430,
+      "url": "https://cooking.nytimes.com/recipes/1027236-vegetarian-tomato-mapo-tofu",
+      "id": "1027236",
+      "slug": "vegetarian-tomato-mapo-tofu",
+      "recipeId": "vegetarian-tomato-mapo-tofu",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 431,
+      "url": "https://cooking.nytimes.com/recipes/1026695-baked-salmon-with-harissa-and-cherry-tomatoes",
+      "id": "1026695",
+      "slug": "baked-salmon-with-harissa-and-cherry-tomatoes",
+      "recipeId": "baked-salmon-with-harissa-and-cherry-tomatoes",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 432,
+      "url": "https://cooking.nytimes.com/recipes/1023058-sazon-chicken-breasts",
+      "id": "1023058",
+      "slug": "sazon-chicken-breasts",
+      "recipeId": "sazon-chicken-breasts",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 433,
+      "url": "https://cooking.nytimes.com/recipes/1023666-mushroom-and-eggplant-yassa",
+      "id": "1023666",
+      "slug": "mushroom-and-eggplant-yassa",
+      "recipeId": "mushroom-and-eggplant-yassa",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 434,
+      "url": "https://cooking.nytimes.com/recipes/1026706-lemon-miso-tofu-with-broccoli",
+      "id": "1026706",
+      "slug": "lemon-miso-tofu-with-broccoli",
+      "recipeId": "lemon-miso-tofu-with-broccoli",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 435,
+      "url": "https://cooking.nytimes.com/recipes/1019034-garlic-braised-short-ribs-with-red-wine",
+      "id": "1019034",
+      "slug": "garlic-braised-short-ribs-with-red-wine",
+      "recipeId": "garlic-braised-short-ribs-with-red-wine",
+      "addedAt": "2026-11-02"
+    },
+    {
+      "position": 436,
+      "url": "https://cooking.nytimes.com/recipes/1027320-coconut-beef-curry",
+      "id": "1027320",
+      "slug": "coconut-beef-curry",
+      "recipeId": "coconut-beef-curry",
+      "addedAt": "2026-11-02"
     }
   ]
 }

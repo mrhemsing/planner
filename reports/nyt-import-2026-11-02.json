@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-02",
+  "submittedLinks": 49,
+  "uniqueRecipes": 48,
+  "alreadyOnHomepage": 26,
+  "newCatalogRecipes": 21,
+  "existingCatalogRecipesAddedToHomepage": 1,
+  "recipes": [
+    {
+      "id": "maple-harissa-chicken-with-butternut-squash",
+      "sourceId": "762879401",
+      "url": "https://cooking.nytimes.com/recipes/762879401-maple-harissa-chicken-with-butternut-squash",
+      "action": "added",
+      "ingredients": 13,
+      "steps": 6
+    },
+    {
+      "id": "roasted-cauliflower-gratin-with-tomatoes-and-goat-cheese",
+      "sourceId": "1015968",
+      "url": "https://cooking.nytimes.com/recipes/1015968-roasted-cauliflower-gratin-with-tomatoes-and-goat-cheese",
+      "action": "added",
+      "ingredients": 12,
+      "steps": 5
+    },
+    {
+      "id": "salmon-with-olive-oil-braised-zucchini-and-chickpeas",
+      "sourceId": "765919246",
+      "url": "https://cooking.nytimes.com/recipes/765919246-salmon-with-olive-oil-braised-zucchini-and-chickpeas",
+      "action": "added",
+      "ingredients": 8,
+      "steps": 5
+    },
+    {
+      "id": "pesto-white-fish-with-greens-and-beans",
+      "sourceId": "768942440",
+      "url": "https://cooking.nytimes.com/recipes/768942440-pesto-white-fish-with-greens-and-beans",
+      "action": "added",
+      "ingredients": 11,
+      "steps": 6
+    },
+    {
+      "id": "roasted-cumin-salmon-with-carrots",
+      "sourceId": "773758690",
+      "url": "https://cooking.nytimes.com/recipes/773758690-roasted-cumin-salmon-with-carrots",
+      "action": "added",
+      "ingredients": 9,
+      "steps": 7
+    },
+    {
+      "id": "ginger-scallion-steamed-fish",
+      "sourceId": "1024123",
+      "url": "https://cooking.nytimes.com/recipes/1024123-ginger-scallion-steamed-fish",
+      "action": "exposed-existing",
+      "ingredients": 6,
+      "steps": 5
+    },
+    {
+      "id": "asparagus-gomaae-with-chilled-tofu",
+      "sourceId": "1026712",
+      "url": "https://cooking.nytimes.com/recipes/1026712-asparagus-gomaae-with-chilled-tofu",
+      "action": "added",
+      "ingredients": 10,
+      "steps": 4
+    },
+    {
+      "id": "roasted-red-peppers-with-beans-and-greens",
+      "sourceId": "1024226",
+      "url": "https://cooking.nytimes.com/recipes/1024226-roasted-red-peppers-with-beans-and-greens",
+      "action": "added",
+      "ingredients": 9,
+      "steps": 3
+    },
+    {
+      "id": "one-pot-sesame-salmon-and-quinoa",
+      "sourceId": "1026309",
+      "url": "https://cooking.nytimes.com/recipes/1026309-one-pot-sesame-salmon-and-quinoa",
+      "action": "added",
+      "ingredients": 13,
+      "steps": 6
+    },
+    {
+      "id": "fish-with-citrus-chile-sauce",
+      "sourceId": "1023372",
+      "url": "https://cooking.nytimes.com/recipes/1023372-fish-with-citrus-chile-sauce",
+      "action": "added",
+      "ingredients": 12,
+      "steps": 4
+    },
+    {
+      "id": "fragrant-coconut-chicken-and-sweet-potato",
+      "sourceId": "1026305",
+      "url": "https://cooking.nytimes.com/recipes/1026305-fragrant-coconut-chicken-and-sweet-potato",
+      "action": "added",
+      "ingredients": 13,
+      "steps": 4
+    },
+    {
+      "id": "fennel-kale-and-rice-gratin",
+      "sourceId": "1015966",
+      "url": "https://cooking.nytimes.com/recipes/1015966-fennel-kale-and-rice-gratin",
+      "action": "added",
+      "ingredients": 13,
+      "steps": 3
+    },
+    {
+      "id": "dried-porcini-consomme",
+      "sourceId": "1015709",
+      "url": "https://cooking.nytimes.com/recipes/1015709-dried-porcini-consomme",
+      "action": "added",
+      "ingredients": 9,
+      "steps": 4
+    },
+    {
+      "id": "basil-tofu",
+      "sourceId": "761573409",
+      "url": "https://cooking.nytimes.com/recipes/761573409-basil-tofu",
+      "action": "added",
+      "ingredients": 13,
+      "steps": 3
+    },
+    {
+      "id": "asparagus-mushroom-grain-bowl",
+      "sourceId": "1024186",
+      "url": "https://cooking.nytimes.com/recipes/1024186-asparagus-mushroom-grain-bowl",
+      "action": "added",
+      "ingredients": 15,
+      "steps": 7
+    },
+    {
+      "id": "vegetarian-tomato-mapo-tofu",
+      "sourceId": "1027236",
+      "url": "https://cooking.nytimes.com/recipes/1027236-vegetarian-tomato-mapo-tofu",
+      "action": "added",
+      "ingredients": 15,
+      "steps": 4
+    },
+    {
+      "id": "baked-salmon-with-harissa-and-cherry-tomatoes",
+      "sourceId": "1026695",
+      "url": "https://cooking.nytimes.com/recipes/1026695-baked-salmon-with-harissa-and-cherry-tomatoes",
+      "action": "added",
+      "ingredients": 17,
+      "steps": 4
+    },
+    {
+      "id": "sazon-chicken-breasts",
+      "sourceId": "1023058",
+      "url": "https://cooking.nytimes.com/recipes/1023058-sazon-chicken-breasts",
+      "action": "added",
+      "ingredients": 7,
+      "steps": 4
+    },
+    {
+      "id": "mushroom-and-eggplant-yassa",
+      "sourceId": "1023666",
+      "url": "https://cooking.nytimes.com/recipes/1023666-mushroom-and-eggplant-yassa",
+      "action": "added",
+      "ingredients": 14,
+      "steps": 4
+    },
+    {
+      "id": "lemon-miso-tofu-with-broccoli",
+      "sourceId": "1026706",
+      "url": "https://cooking.nytimes.com/recipes/1026706-lemon-miso-tofu-with-broccoli",
+      "action": "added",
+      "ingredients": 16,
+      "steps": 6
+    },
+    {
+      "id": "garlic-braised-short-ribs-with-red-wine",
+      "sourceId": "1019034",
+      "url": "https://cooking.nytimes.com/recipes/1019034-garlic-braised-short-ribs-with-red-wine",
+      "action": "added",
+      "ingredients": 14,
+      "steps": 5
+    },
+    {
+      "id": "coconut-beef-curry",
+      "sourceId": "1027320",
+      "url": "https://cooking.nytimes.com/recipes/1027320-coconut-beef-curry",
+      "action": "added",
+      "ingredients": 27,
+      "steps": 6
+    }
+  ]
+}

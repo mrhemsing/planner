@@ -1516,27 +1516,58 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
     id: "ginger-scallion-steamed-fish",
     title: "Ginger-Scallion Steamed Fish",
     category: "Dinner",
-    sourceName: dinnerSourceName,
+    sourceName: "NYT Cooking",
     sourceUrl: "https://cooking.nytimes.com/recipes/1024123-ginger-scallion-steamed-fish",
-    imageUrl: "https://static01.nyt.com/images/2023/04/20/multimedia/as-ginger-scallion-fish-fgqk/as-ginger-scallion-fish-fgqk-threeByTwoMediumAt2X.jpg",
-    description: "A fast steamed fish dinner with ginger, scallions, and a clean savory finish.",
+    imageUrl: "https://static01.nyt.com/images/2023/04/20/multimedia/as-ginger-scallion-fish-fgqk/as-ginger-scallion-fish-fgqk-videoSixteenByNineJumbo1600.jpg",
+    description: "Connie Chung wanted to add steamed whole fish — a dish served at the Cantonese banquet meals of her childhood — to the menu at Milu, her restaurant in New York City. But to make it work in a fast-casual setting, she needed to make some changes. She wanted to keep the tender fish heady with soy sauce, ginger and scallions, but it had to hold up during delivery and be easy to eat. She landed on steaming cubed fish with soy sauce and a ginger-scallion stock, a forgiving method that isn’t stinky or splattery and results in deeply seasoned, buttery fish. While any firm fish works in this adaptation, Ms. Chung uses salmon, her mom’s suggestion. At Milu, this dish is served with rice, charred broccoli, a watercress-cilantro salad and a ginger-scallion oil, but would also be great in a nori hand roll, over salad greens or tossed with ramen. Ali Slagle Yield: 4 servings.",
     favourite: false,
-    tags: ["dinner", "fish", "ginger", "steamed", "scallions", "light", "quick"],
+    tags: [
+      "dinner",
+      "nyt",
+      "fish"
+    ],
     plannedDays: [],
     prepTime: "25 min",
     serves: 4,
     ingredients: [
-      { item: "white fish fillets", amount: "1 1/2 lb", category: "protein" },
-      { item: "ginger", amount: "2 tbsp", category: "produce" },
-      { item: "scallions", amount: "5", category: "produce" },
-      { item: "soy sauce", amount: "2 tbsp", category: "pantry" },
-      { item: "neutral oil", amount: "2 tbsp", category: "pantry" },
+      {
+        item: "firm fish, such as salmon, halibut or haddock, cut into 1-inch cubes and patted dry",
+        amount: "1 ½ pounds",
+        category: "protein"
+      },
+      {
+        item: "Diamond Crystal Kosher salt or 1 ½ teaspoons fine sea salt",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "scallions",
+        amount: "4",
+        category: "produce"
+      },
+      {
+        item: "(1-inch) piece fresh ginger",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "soy sauce",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "granulated sugar, plus more as needed",
+        amount: "1 tablespoon",
+        category: "pantry"
+      }
     ],
     instructions: [
-      "Briefly brine the fish in salted water so it stays tender.",
-      "Simmer scallion segments, ginger, soy sauce, sugar, and water until the liquid reduces slightly.",
-      "Add the fish, cover, and steam-poach until cooked through, then spoon the gingery sauce over it and top with sliced scallion greens.",
-    ],
+      "In a medium bowl, stir together 1 cup water with the fish and salt. Set aside for 10 minutes. (This quick brine will help the fish stay tender.)",
+      "Meanwhile, slice the scallion whites and light green parts into 1-inch-thick segments, then thinly slice the greens for garnish. Peel the ginger and cut into thin matchsticks.",
+      "In a large pot or skillet with a lid, combine ½ cup water with the scallion segments, ginger, soy sauce and sugar. Bring to a simmer over medium-high and cook until reduced by about half, 5 to 7 minutes.",
+      "Reduce heat to low, then use a slotted spoon or your fingers to transfer the fish to the pot. (No need to pat it dry first.) Stir to coat in the soy mixture, then shake into an even layer. Cover and cook until the fish is cooked through, 8 to 12 minutes.",
+      "Taste the sauce in the pot and if it’s too salty, stir in a pinch of sugar. Divide the fish among bowls, including the sauce, ginger and scallions, and top with the thinly sliced scallion greens. It’s good warm, at room temperature (you can leave out up to 2 hours), or cold from the fridge (store it for up to 1 day)."
+    ]
   },
   {
     id: "gochugaru-salmon-with-crispy-rice",
@@ -13917,6 +13948,1915 @@ const dinnerRecipes: RecipeLibraryEntry[] = [
       "When ready to eat, bring a large pot of water to boil. Add 1 tablespoon vegetable oil to a large (12-inch) nonstick or well-seasoned cast-iron skillet over medium-high heat. Sear chicken thighs until beautifully brown, about 5 minutes on each side. When the chicken is cooked (it should register at least 165 degrees with an instant-read thermometer), remove from heat onto a plate.",
       "Cook the ramen bricks in the pot of boiling water according to package directions. Divide cooked noodles among four bowls, and spoon a generous tablespoon of ginger-scallion sauce and its flavored oil onto the noodles, tossing to combine. Slice each thigh into strips and lay over each bowl of noodles. Spoon more ginger-scallion sauce onto the chicken.",
       "In the same pan you used to cook the chicken, add the remaining tablespoon of oil to the drippings and fry four eggs sunny-side up. Lightly season with salt and pepper. Drape one fried egg each over each bowl and add chile oil or chile crisp if desired. Break the yolk over noodles, chicken and sauce."
+    ]
+  },
+  {
+    id: "maple-harissa-chicken-with-butternut-squash",
+    title: "Maple Harissa Chicken With Butternut Squash",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/762879401-maple-harissa-chicken-with-butternut-squash",
+    imageUrl: "https://static01.nyt.com/images/2025/11/13/multimedia/NB-Maple-Harissa-Chicken-With-Sweet-Potatoes-and-Edamame-tlzq/NB-Maple-Harissa-Chicken-With-Sweet-Potatoes-and-Edamame-tlzq-videoSixteenByNineJumbo1600-v2.jpg",
+    description: "This bold, comforting sheet-pan dinner is the kind of weeknight dinner that delivers maximum flavor with minimal effort. Chicken thighs are coated in a vibrant marinade made with harissa, maple syrup, garlic and warming spices, then roasted until golden and caramelized alongside cubes of butternut squash and pops of edamame. The quality of the harissa really matters in this recipe, so look for one with a rich, complex flavor rather than overwhelming heat. The balance of sweet, spicy and savory notes makes this recipe deeply satisfying and endlessly adaptable. You can easily swap the butternut squash for sweet potatoes or carrots, depending on what you have on hand. The same marinade also works beautifully with slabs of firm tofu or salmon fillets, though you’ll need to reduce the cooking time accordingly. Serve this dish straight from the pan with couscous, rice or warm flatbread to make it a complete meal. Yield: 4 to 6 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "chicken"
+    ],
+    plannedDays: [],
+    prepTime: "60 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "bone-in, skin-on chicken thighs (about 7 chicken thighs)",
+        amount: "2½ to 3 pounds",
+        category: "protein"
+      },
+      {
+        item: "Fine sea salt",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "harissa paste, to taste",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "maple syrup",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "olive oil",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "soy sauce",
+        amount: "1½ tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "ground cumin",
+        amount: "1½ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "sweet paprika",
+        amount: "1½ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, minced or pressed",
+        amount: "3",
+        category: "produce"
+      },
+      {
+        item: "butternut squash (about 1¼ pounds), peeled and cut into 1-inch pieces",
+        amount: "½",
+        category: "produce"
+      },
+      {
+        item: "cup/6 ounces frozen edamame",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "Chopped cilantro (optional), for garnish",
+        amount: "",
+        category: "produce"
+      },
+      {
+        item: "Couscous, rice or flatbread, for serving",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Heat the oven to 400 degrees. Add the chicken thighs to the sheet pan and season them on both sides with ¾ teaspoon salt total.",
+      "Make the marinade: Combine the harissa, maple syrup, olive oil, soy sauce, cumin, paprika, garlic, ¾ teaspoon salt and 2 tablespoons water in a small bowl and stir to mix.",
+      "Add the butternut squash to the sheet pan with the chicken. Pour the marinade on top and use your hands to coat the chicken and squash on all sides. Arrange the chicken, skin side up, and the squash in a single layer. (Set the bowl aside.) Roast the mixture for 30 minutes, until the chicken starts to brown.",
+      "In the bowl containing the marinade, add the edamame and toss to coat with the leftover marinade.",
+      "When the chicken has roasted for 30 minutes, remove the pan from the oven, scatter the edamame on the pan and roast for 10 to 15 minutes more, until the chicken is cooked through and golden and the squash is lightly charred.",
+      "Garnish with cilantro if desired, and serve immediately, with couscous, rice or flatbread."
+    ]
+  },
+  {
+    id: "roasted-cauliflower-gratin-with-tomatoes-and-goat-cheese",
+    title: "Roasted Cauliflower Gratin With Tomatoes and Goat Cheese",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1015968-roasted-cauliflower-gratin-with-tomatoes-and-goat-cheese",
+    imageUrl: "https://static01.nyt.com/images/2026/08/18/multimedia/18FD-cauliflowergratin-tgbz/18FD-cauliflowergratin-tgbz-videoSixteenByNineJumbo1600-v2.jpg",
+    description: "Roasting is one of my favorite ways to prepare cauliflower, and I have always loved preparations that pair the vegetable with coriander seeds. I use coriander seeds and cinnamon to season the tomato sauce that I toss with the roasted cauliflower and sautéed red onions, then add a couple of eggs beaten with goat cheese. Yield: 4 to 6 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "gratin"
+    ],
+    plannedDays: [],
+    prepTime: "80 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "medium-size head of cauliflower",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "Salt and freshly ground pepper to taste",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "extra virgin olive oil",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "small or ½ large red onion, cut in half or quarters (if using a whole onion) lengthwise, then sliced thin across the grain",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "garlic cloves, minced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "fresh thyme leaves",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "(14 8/10-ounce) can chopped tomatoes in juice",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "cinnamon",
+        amount: "⅛ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "coriander seeds, lightly toasted and coarsely ground",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "eggs",
+        amount: "2",
+        category: "protein"
+      },
+      {
+        item: "soft goat cheese (about ½ cup plus 2 tablespoons)",
+        amount: "2 ½ ounces",
+        category: "fridge"
+      },
+      {
+        item: "chopped chives",
+        amount: "2 to 3 teaspoon",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Preheat oven to 450 degrees. Line a baking sheet with parchment or foil. Cut away the bottom of the cauliflower stem and trim off leaves. Cut cauliflower into ⅓ inch thick slices, letting the florets on the edges fall off. Toss all of it, including the bits that have fallen away, with 2 tablespoons of the olive oil, salt, and pepper. Place on baking sheet in an even layer.",
+      "Roast for 15 to 20 minutes, stirring and flipping over the big slices after 8 minutes, until the slices are tender when pierced with a paring knife and the small florets are nicely browned. Remove from oven and cut large slices into smaller pieces. You should have about 2 cups. Transfer to a large bowl. Turn oven down to 375 degrees.",
+      "Oil a 1-½ to 2-quart baking dish or gratin. Heat remaining oil over medium heat in a medium-size skillet or a wide saucepan and add onion. Cook, stirring, until tender, about 5 minutes. Add a generous pinch of salt and the garlic and thyme and continue to cook, stirring, until garlic is fragrant, 30 seconds to a minute. Add tomatoes, cinnamon, ground coriander seeds, and salt and pepper to taste and bring to a simmer. Cook, stirring often, over medium-low heat, for 10 to 15 minutes, until the tomatoes have cooked down and the sauce is fragrant. Taste and adjust seasoning. Add to bowl with the cauliflower and stir everything together. Scrape into prepared baking dish.",
+      "Set aside 2 tablespoons of the goat cheese. Beat eggs, then add the remaining cheese and beat together until smooth. Pour over cauliflower mixture, making sure to scrape out every last bit with a rubber spatula. Dot top with small pieces of the remaining goat cheese and sprinkle on chives.",
+      "Bake 30 minutes, until top is beginning to brown in spots. Remove from oven and allow to sit for 5 to 10 minutes before serving."
+    ]
+  },
+  {
+    id: "salmon-with-olive-oil-braised-zucchini-and-chickpeas",
+    title: "Salmon With Olive Oil-Braised Zucchini and Chickpeas",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/765919246-salmon-with-olive-oil-braised-zucchini-and-chickpeas",
+    imageUrl: "https://static01.nyt.com/images/2025/12/19/multimedia/SP-salmon-with-zucchini-and-chickpeas-pbmq/SP-salmon-with-zucchini-and-chickpeas-pbmq-videoSixteenByNineJumbo1600.jpg",
+    description: "If you slow-cook zucchini in heart-healthy olive oil, it becomes silky and deeply flavored rather than waterlogged. It’s fantastic as is, but stir in can of chickpeas and nestle salmon fillets on top — which steam as the vegetables and beans braise — and you’ll effortlessly turn this quick recipe into a protein-packed, satisfying dinner. Crusty bread is an optional but welcome accompaniment that’ll help you savor every last bit of the garlic and lemon-heavy pan juices. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "salmon"
+    ],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "(6-ounce) skinless salmon fillets",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "Salt and black pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "extra-virgin olive oil",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "zucchini or other summer squash (about 3 medium), cut into ⅛-inch-thick half-moons",
+        amount: "1½ pounds",
+        category: "produce"
+      },
+      {
+        item: "garlic cloves, minced",
+        amount: "5",
+        category: "produce"
+      },
+      {
+        item: "Pinch of crushed red pepper (optional)",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "(15- to 16-ounce) can chickpeas, drained and rinsed",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "medium lemon, zested and juiced",
+        amount: "1",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "Pat the salmon dry and season with salt and pepper.",
+      "Heat the olive oil in a large skillet with a lid over medium-high. Add the zucchini, garlic and crushed red pepper, if using. Season with salt and pepper and cook, stirring occasionally, until the zucchini just starts to brown in spots but is not yet completely tender, about 5 minutes.",
+      "Stir in the chickpeas and lemon zest; season with salt and pepper.",
+      "Nestle the salmon fillets on top of the zucchini and chickpeas in an even layer. Cover, reduce the heat to medium-low and cook until the salmon is just cooked through, 13 to 18 minutes. (It’s done when the flesh flakes easily. An instant-read thermometer inserted into the middle of the thickest part should register 120 degrees.)",
+      "Drizzle the lemon juice over the top and serve."
+    ]
+  },
+  {
+    id: "pesto-white-fish-with-greens-and-beans",
+    title: "Pesto White Fish With Greens and Beans",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/768942440-pesto-white-fish-with-greens-and-beans",
+    imageUrl: "https://static01.nyt.com/images/2026/01/20/multimedia/NB-Pesto-White-Fish-and-Beans-With-Garlicky-Breadcrumbs-tjkv/NB-Pesto-White-Fish-and-Beans-With-Garlicky-Breadcrumbs-tjkv-videoSixteenByNineJumbo1600.jpg",
+    description: "This easy sheet-pan dinner brings together white fish, beans and greens in a single tray for a meal that’s fresh, bright and satisfying. The pesto coats both the fish and the beans, infusing everything with herby richness, while collard greens soften just enough in the oven to become tender but still hold their shape. A layer of garlicky bread crumbs on top turns golden as it bakes, adding a crisp contrast that balances the soft fish beneath. The beauty of this dish is that everything happens together on one pan: The fish steams gently over the beans, the greens soak up the juices and the oven does all the work. It’s the kind of dinner that feels almost too easy for how good it tastes. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "fish",
+      "beans"
+    ],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "basil pesto, or another pesto of your choice",
+        amount: "⅓ cup",
+        category: "produce"
+      },
+      {
+        item: "olive oil",
+        amount: "1 ½ tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "lemon, plus lemon wedges to serve",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "collard greens (about ½ pound), thick stems removed, leaves rolled crosswise and sliced into ½-inch-thick ribbons",
+        amount: "1 bunch",
+        category: "produce"
+      },
+      {
+        item: "(14-ounce) can cannellini beans, drained and liquid reserved",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "(5- to 7-ounce) white fish fillets (such as cod, haddock or hake)",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "fine sea salt, plus more for seasoning",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "panko bread crumbs",
+        amount: "⅓ cup",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, grated or minced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "olive oil",
+        amount: "1 ½ tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "fine sea salt",
+        amount: "½ teaspoon",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Prepare the fish: Heat the oven to 400 degrees. Finely grate the zest of the lemon into a medium bowl (reserve the zested lemon). Add the pesto and olive oil and stir to combine.",
+      "To a large sheet pan, add the collard greens, drained beans, half the pesto mixture, ¼ cup reserved bean liquid, and salt. Cut the lemon in half and squeeze in 2 tablespoons of juice. Use your hands or two large spoons to combine and spread in an even layer.",
+      "Pat the fish fillets dry with paper towels. Season lightly with salt on all sides and use your hands to coat the fillets with the remaining pesto mixture. Arrange the fish fillets on top of the vegetable mixture.",
+      "Prepare the bread crumbs: In a small bowl, mix together the panko, garlic, olive oil and salt. Use your hands or a large tablespoon to coat the top of the fish fillets with the bread crumbs, pressing the crumbs down so they stick onto the fish.",
+      "Bake until the fish is cooked through and flakes easily with a fork, the greens are tender and the panko topping is golden, 12 to 15 minutes, depending on the thickness of your fish.",
+      "Serve immediately with lemon wedges."
+    ]
+  },
+  {
+    id: "roasted-cumin-salmon-with-carrots",
+    title: "Roasted Cumin Salmon With Carrots",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/773758690-roasted-cumin-salmon-with-carrots",
+    imageUrl: "https://static01.nyt.com/images/2026/03/17/multimedia/SP-Roasted-Cumin-Salmon-With-Carrots-gvzp/SP-Roasted-Cumin-Salmon-With-Carrots-gvzp-videoSixteenByNineJumbo1600.jpg",
+    description: "Cumin rarely gets to play the lead spice, but here its warmth takes center stage. Combined with lots of lemon zest and garlic, the nutty, earthy seeds transform into a simple, flavorful crust for flaky roasted salmon fillets. To turn this dish into a meal, thick-cut carrots join the party; their sweetness pairs effortlessly with the spice. A big squeeze of lemon juice and a shower of optional parsley to finish bring brightness. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "salmon"
+    ],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "carrots, peeled and cut into 2-inch pieces (halved lengthwise if large)",
+        amount: "2 pounds",
+        category: "produce"
+      },
+      {
+        item: "extra-virgin olive oil, divided",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "kosher salt (such as Diamond Crystal), divided",
+        amount: "1½ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "Freshly ground black pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "medium lemon",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "large garlic cloves",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "cumin seeds",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "(6-ounce) salmon fillets (skin-on or skinless)",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "Chopped fresh parsley (optional), for serving",
+        amount: "",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "Heat oven to 450 degrees. Line a rimmed baking sheet with parchment paper.",
+      "Put the carrots on the prepared baking sheet. Drizzle with 2 tablespoons of olive oil, season with ¾ teaspoon of salt and plenty of pepper and toss to coat. Spread out in a single layer. Roast, tossing halfway through, for 20 minutes.",
+      "Meanwhile, finely grate the zest of the lemon into a small bowl. Cut the lemon in half crosswise and reserve for serving. Finely grate the garlic into the bowl. Add the cumin seeds and stir to combine.",
+      "Pat the salmon dry, rub with the remaining 1 tablespoon of olive oil and season both sides with the remaining ¾ teaspoon of salt and several grinds of pepper. Sprinkle the top of each fillet with the cumin seed mixture and press lightly to adhere.",
+      "Remove the baking sheet from the oven and reduce the oven temperature to 400 degrees. Toss the carrots then push them aside to make 4 spaces for the salmon fillets. Place the fillets in the empty spaces.",
+      "Return to the oven and roast until the salmon is just cooked through, about 10 minutes. It’s done when the flesh is just able to flake easily. An instant-read thermometer inserted into the middle of the thickest part should register 120 degrees for medium-rare. If you prefer medium, cook it a few minutes longer.",
+      "Squeeze the reserved lemon over the top of the salmon and carrots before serving and garnish with parsley, if using."
+    ]
+  },
+  {
+    id: "asparagus-gomaae-with-chilled-tofu",
+    title: "Asparagus Gomaae With Chilled Tofu",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026712-asparagus-gomaae-with-chilled-tofu",
+    imageUrl: "https://static01.nyt.com/images/2025/05/13/multimedia/hm-asparagus-gomae-jqgt/hm-asparagus-gomae-jqgt-videoSixteenByNineJumbo1600.jpg",
+    description: "The classic Japanese side dish gomaae typically features blanched spinach coated in a sesame dressing, but here, the nutty sauce pairs beautifully with earthy asparagus. The asparagus is seared just briefly to unlock its buttery sweetness and juiciness; make sure the pan is hot when the asparagus makes contact to ensure the outside chars, even with a short cook time. The asparagus goma-ae is served atop chilled tofu, which serves as a creamy, refreshing backdrop for the bold umami of the sesame sauce. Eat this as a light meal, or partner it with rice or noodles. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "tofu"
+    ],
+    plannedDays: [],
+    prepTime: "20 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "toasted white sesame seeds",
+        amount: "⅓ cup",
+        category: "pantry"
+      },
+      {
+        item: "tamari or soy sauce",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "sugar",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "rice vinegar",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "vegetable or sunflower oil",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "asparagus, woody stems removed, cut into 1-inch pieces",
+        amount: "1 pound",
+        category: "produce"
+      },
+      {
+        item: "Salt and pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "(14- to 16-ounce) packages silken tofu",
+        amount: "2",
+        category: "protein"
+      },
+      {
+        item: "scallions, thinly sliced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "Cooked rice or noodles (optional)",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Make the goma sauce: Place the sesame seeds in a spice grinder, blender, small food processor or mortar, and grind or blend until coarsely ground, leaving lots of texture. Transfer the crushed sesame seeds to a medium bowl, add the tamari, sugar and vinegar, and mix to form a paste. Set aside.",
+      "Heat a large skillet over medium-high for 2 minutes. Drizzle with oil and add the asparagus. Season with salt and pepper, and toss until asparagus is bright green and just tender, 2 to 3 minutes. Transfer to another medium bowl and immediately add half of the sesame sauce. Toss to coat, then set aside to cool for 5 minutes.",
+      "Carefully drain the liquid from the packages of tofu and gently tip the blocks onto a kitchen towel. (Try to keep each block in one piece, if possible, but don’t worry if they fall apart.) Pat with another clean kitchen towel, removing as much liquid as possible. Transfer the blocks to one large rimmed plate (or shallow bowl) or two smaller ones — leave whole or cut into 1-inch blocks — and spoon over the remaining sesame sauce, dividing it evenly between the two blocks.",
+      "Top the tofu with the asparagus, ensuring it is evenly distributed. Top with scallions and serve with rice or noodles on the side, if using."
+    ]
+  },
+  {
+    id: "roasted-red-peppers-with-beans-and-greens",
+    title: "Roasted Red Peppers With Beans and Greens",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1024226-roasted-red-peppers-with-beans-and-greens",
+    imageUrl: "https://static01.nyt.com/images/2023/05/24/multimedia/AS-Roasted-Peppers-With-Rosemary-White-Beans-gbzt/AS-Roasted-Peppers-With-Rosemary-White-Beans-gbzt-videoSixteenByNineJumbo1600.jpg",
+    description: "In this one-dish recipe, charred peppers pair with garlicky beans and greens for soft but satisfying bites. The benefit of roasting bell peppers whole is that their sweet juices concentrate, but those flavorful juices don’t evaporate in the oven as they would if cut into slices. Better yet: This recipe’s format is endlessly adaptable. For instance, roast white beans with feta and eat with pita, or cook chickpeas with ground turmeric and cumin then dollop with yogurt. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "beans"
+    ],
+    plannedDays: [],
+    prepTime: "70 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "bell peppers (preferably red)",
+        amount: "4",
+        category: "pantry"
+      },
+      {
+        item: "extra-virgin olive oil, plus more for serving",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "Salt",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "cooked beans (from two 15-ounce cans), rinsed",
+        amount: "3 cups",
+        category: "pantry"
+      },
+      {
+        item: "stemmed, chopped dark leafy greens, such as kale, collard greens, escarole or spinach",
+        amount: "3 to 4 cups",
+        category: "produce"
+      },
+      {
+        item: "garlic clove, finely grated",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "Big pinch of red-pepper flakes",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "Herbs, spices, nuts, cheese or other optional flavor-boosting ingredients (see Tip)",
+        amount: "",
+        category: "fridge"
+      },
+      {
+        item: "any vinegar or lemon or lime juice, plus more for serving",
+        amount: "1 tablespoon",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Heat the oven to 400 degrees. On a sheet pan or a large cast-iron skillet, toss the bell peppers with 2 tablespoons oil and season with salt. Roast on their sides, flipping halfway through, until browned and starting to wrinkle, 40 to 45 minutes.",
+      "When the peppers are ready, transfer them to a plate. To the pan, add the beans, greens, garlic, red-pepper flakes, a pinch of salt, the remaining 2 tablespoons olive oil plus any additional optional ingredients (if using); stir to coat. Add the peppers back on top, then roast until the beans are warmed and the greens are wilted, 5 to 10 minutes.",
+      "Pour the vinegar over the bean mixture. Eat the peppers and beans with more oil and vinegar to taste."
+    ]
+  },
+  {
+    id: "one-pot-sesame-salmon-and-quinoa",
+    title: "One-Pot Sesame Salmon and Quinoa",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026309-one-pot-sesame-salmon-and-quinoa",
+    imageUrl: "https://static01.nyt.com/images/2025/04/22/multimedia/KC-Sesame-Salmon-Quinoa-kbqf/KC-Sesame-Salmon-Quinoa-kbqf-videoSixteenByNineJumbo1600.jpg",
+    description: "This vibrant and satisfying one-pot meal pairs quick-cooking quinoa with rich, silky salmon. Broccoli and garlic are softened in olive oil to create a flavorful vegetable base for the quinoa, which steams in the pot until al dente. Cubed salmon is added during the last 10 minutes of cooking to ensure juicy, tender and flaky fish. The punchy dressing combines just three ingredients — ponzu (a pantry flavor bomb), tahini and lemon juice — yet creates a rich and tangy sauce that can be doubled to use later in the week on roasted chicken or leafy green salads. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "salmon"
+    ],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "extra-virgin olive oil",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "finely chopped white onion",
+        amount: "½ cup",
+        category: "produce"
+      },
+      {
+        item: "broccoli florets, chopped into ½-inch pieces (2 packed cups)",
+        amount: "6 ounces",
+        category: "produce"
+      },
+      {
+        item: "Salt and pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, minced",
+        amount: "3",
+        category: "produce"
+      },
+      {
+        item: "cups/8 ounces quinoa, rinsed",
+        amount: "1¼",
+        category: "pantry"
+      },
+      {
+        item: "skinless salmon fillet, cut into 1-inch pieces",
+        amount: "1½ pounds",
+        category: "protein"
+      },
+      {
+        item: "tahini",
+        amount: "6 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "ponzu",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "lemon juice, plus wedges for serving",
+        amount: "1 tablespoon",
+        category: "produce"
+      },
+      {
+        item: "chopped roasted almonds",
+        amount: "½ cup",
+        category: "pantry"
+      },
+      {
+        item: "mixed chopped herbs (such as chives, parsley, dill and tarragon), plus more for garnish",
+        amount: "¼ cup",
+        category: "produce"
+      },
+      {
+        item: "avocado, thinly sliced or cubed",
+        amount: "1",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "In a large Dutch oven or pot, heat oil over medium. Add onion and broccoli, season with salt and pepper and cook, stirring occasionally, until softened, 5 minutes. Add garlic and stir until fragrant, 30 seconds.",
+      "Add quinoa and 2 cups of water, season with salt and pepper and bring to a boil. Cover and cook over low heat until quinoa is almost tender, 8 to 10 minutes.",
+      "Season salmon with salt and arrange on top of the quinoa in a single layer. Cover and cook until salmon is just cooked through and flakes easily with a fork, quinoa is tender, and all of the liquid has been absorbed, 5 to 7 minutes longer.",
+      "Meanwhile, in a small bowl, combine tahini, ponzu, lemon juice and 3 tablespoons of water; season with salt and pepper. Mix well.",
+      "Add almonds and herbs to the pot and gently fluff the salmon and quinoa mixture with a fork.",
+      "Divide the salmon and quinoa mixture among 4 shallow bowls and top each with some avocado. Drizzle with some of the ponzu dressing and garnish with more herbs. Serve with lemon wedges for squeezing over."
+    ]
+  },
+  {
+    id: "fish-with-citrus-chile-sauce",
+    title: "Fish With Citrus-Chile Sauce",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1023372-fish-with-citrus-chile-sauce",
+    imageUrl: "https://static01.nyt.com/images/2022/07/31/dining/31EAT-fish-with-chile-citrus-sauce/merlin_210597681_83f81251-75d7-4280-82f9-092aeea025ba-videoSixteenByNineJumbo1600.jpg",
+    description: "This light yet earthy sauce lends a generous, almost floral warmth to any white, sturdy fish. For heat, there are crushed Calabrian chiles, smoky and sunny; for a mellow sourness, Moscatel vinegar — feel free to substitute apple cider vinegar and a little sugar to approximate the same fruitiness; and for funk, fermented white pepper (although regular white pepper will work too). Other notes include delicate marjoram, cousin to oregano but less forward, with its comforting contour of balsam, and Timur pepper from Nepal, fragrant and bright, calling to mind a just-peeled tangerine. (If you use Sichuan pepper instead, give it a citrus boost with extra orange juice and a shower of orange zest.) The sauce comes out denser than a vinaigrette but still loose and the orange-red of a young sunset. Ligaya Mishan Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "fish"
+    ],
+    plannedDays: [],
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "Timur (Timut) peppercorns (see Tip)",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "white peppercorns, preferably fermented (see Tip)",
+        amount: "¼ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "Moscatel vinegar (see Tip)",
+        amount: "1 ½ tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "crushed Calabrian chiles (in oil)",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "fresh marjoram leaves, finely chopped",
+        amount: "1 ½ teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "orange or tangerine juice",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "small garlic clove, minced",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "extra-virgin olive oil",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "Salt",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "sturdy white fish fillets or steaks (about 6 ounces each), such as halibut, red snapper, sea bass or swordfish",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "Salt and pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "Olive oil",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Make the sauce: Toast the Timur pepper in a dry skillet over medium heat. When the pods are fragrant but not yet darker brown, remove them from the heat and let cool. Using a spice grinder or a mortar and pestle, crush into a fine powder, along with the white peppercorns.",
+      "In a small bowl, whisk together the vinegar, chiles, marjoram, juice, garlic and the freshly ground Timur and white pepper. Let sit for 30 minutes for the flavors to meld, then gradually whisk in the olive oil. Add salt. Taste and add more of whichever seasonings you like, whisking as you go. Use immediately or refrigerate in an airtight container for up to 1 week.",
+      "Make the fish: Pat the fish dry and season on both sides with salt and pepper. If cooking on the stovetop, coat a skillet with oil and heat over medium-high. (The skillet should be large enough to hold all the fillets with space between them. If it isn’t, work in batches.) Carefully add the fish to the hot oil and pan-fry the fish until browned, about 3 minutes on each side. (Gently probe the fish with a fork; if it flakes, it’s done.) Remove from the heat and transfer to plates.",
+      "If grilling, heat a grill to medium-high. Generously brush or rub the fish with olive oil to coat. Place on the hot grill grates, skin side down if there’s skin and cover if using a gas grill. Cook until the fish releases easily from the grate, about 3 minutes. For thinner fillets, the flesh will be just opaque throughout and starting to gape and the fillets don’t need to be flipped. Simply transfer them to plates. For thick fillets or steaks, carefully flip the fish and cook until just opaque throughout, 2 to 3 minutes more, then transfer to plates. Spoon the sauce over the fish and serve."
+    ]
+  },
+  {
+    id: "fragrant-coconut-chicken-and-sweet-potato",
+    title: "Fragrant Coconut Chicken and Sweet Potato",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026305-fragrant-coconut-chicken-and-sweet-potato",
+    imageUrl: "https://static01.nyt.com/images/2025/01/07/multimedia/KC-Coconut-Chicken-Sweet-Potato-hpcz/KC-Coconut-Chicken-Sweet-Potato-hpcz-videoSixteenByNineJumbo1600.jpg",
+    description: "This deeply flavored saucy skillet meal comes together quickly thanks to rich coconut milk and fast-cooking ground chicken (though ground pork would also work well). Sweet potatoes get a head start in the skillet, where they’re speedily cooked until golden and tender; the simple act of covering the skillet with a lid expedites the process. The meat is browned with plenty of scallions, garlic and ginger, which impart lovely aromatic fragrance and depth to the dish. Coconut milk is added at the end to maintain its creamy texture and fresh flavor, while a finish of lime juice and chopped cilantro brightens and balances the sauce. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "chicken"
+    ],
+    plannedDays: [],
+    prepTime: "40 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "neutral oil, such as canola or safflower",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "medium sweet potato, peeled and diced into ¼-inch pieces",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "Salt and pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "thinly sliced scallions, plus more for garnish",
+        amount: "½ cup",
+        category: "produce"
+      },
+      {
+        item: "garlic cloves, minced",
+        amount: "3",
+        category: "produce"
+      },
+      {
+        item: "minced fresh ginger",
+        amount: "1 tablespoon",
+        category: "produce"
+      },
+      {
+        item: "ground chicken (preferably dark meat)",
+        amount: "1 pound",
+        category: "protein"
+      },
+      {
+        item: "unsweetened full-fat coconut milk (see Tip)",
+        amount: "1 cup",
+        category: "pantry"
+      },
+      {
+        item: "cups/4 ounces baby spinach",
+        amount: "4",
+        category: "produce"
+      },
+      {
+        item: "lime juice",
+        amount: "2 tablespoons",
+        category: "produce"
+      },
+      {
+        item: "coarsely chopped cilantro, plus more for garnish",
+        amount: "¼ cup",
+        category: "produce"
+      },
+      {
+        item: "Cooked rice (such as jasmine), for serving",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "Hot sauce, for serving",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "In a 12-inch nonstick skillet, heat 1 tablespoon of the oil over medium. Add the sweet potato, season with salt and pepper and stir to evenly coat in the oil. Cover and cook, stirring halfway through, until golden and tender, about 8 minutes. Transfer to a plate.",
+      "Add the remaining 2 tablespoons oil plus the scallions, garlic and ginger to the skillet and cook, stirring, until fragrant, 30 seconds. Add chicken, season with salt and pepper, and cook, breaking up the meat until no longer pink, about 5 minutes.",
+      "Add coconut milk and sweet potato and bring back to a simmer. Cook until liquid is slightly reduced and thickened, 2 to 3 minutes. Stir in spinach just until wilted, then turn off the heat. Stir in lime juice and cilantro and season again with salt and pepper.",
+      "Divide the coconut chicken mixture over rice in bowls and garnish with more scallions and cilantro. Serve warm, with hot sauce on the side."
+    ]
+  },
+  {
+    id: "fennel-kale-and-rice-gratin",
+    title: "Fennel, Kale and Rice Gratin",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1015966-fennel-kale-and-rice-gratin",
+    imageUrl: "https://static01.nyt.com/images/2014/01/21/health/21recipehealth/21recipehealth-superJumbo.jpg",
+    description: "Two types of greens provide delicious contrast in this comforting yet light dish, which is perfect for a weeknight dinner or a festive side. It's a flexible recipe, lending itself to all sorts of adaptations. Make it once, and then make it your own. Yield: 4 to 6 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "gratin"
+    ],
+    plannedDays: [],
+    prepTime: "80 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "Salt to taste",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "black kale, stemmed and washed in 2 changes water",
+        amount: "1 bunch",
+        category: "produce"
+      },
+      {
+        item: "extra virgin olive oil",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "medium onion, finely chopped",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "bulb fennel, trimmed, quartered, cored and chopped (about 4 cups chopped)",
+        amount: "1 ½ pounds",
+        category: "produce"
+      },
+      {
+        item: "Freshly ground pepper to taste",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "large garlic cloves, minced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "chopped fresh dill",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "eggs",
+        amount: "3",
+        category: "protein"
+      },
+      {
+        item: "low-fat milk (2 percent)",
+        amount: "½ cup",
+        category: "fridge"
+      },
+      {
+        item: "cooked rice, preferably short-grain",
+        amount: "1 cup",
+        category: "pantry"
+      },
+      {
+        item: "Gruyère cheese, grated (¾ cup)",
+        amount: "3 ounces",
+        category: "fridge"
+      },
+      {
+        item: "breadcrumbs, or a mixture of breadcrumbs and freshly grated Parmesan (optional)",
+        amount: "¼ cup",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Bring a large pot of water to a rolling boil, add a generous amount of salt and add kale. Blanch for 2 to 3 minutes, remove from the water with a deep fry skimmer or a slotted spoon and transfer to a bowl of cold water. Drain and, taking the greens up by the handful, squeeze hard to expel excess water. Chop medium-fine or cut in thin ribbons.",
+      "Heat 2 tablespoons of the oil over medium heat in a large, heavy skillet and add onion. Cook, stirring often, until tender, about 5 minutes, and add fennel. Cook, stirring often, until the fennel begins to soften. Add salt to taste and continue to cook, stirring often, until the fennel is very tender and fragrant, about 8 minutes. Add garlic and kale, stir together for another minute, then stir in dill. Season to taste with salt and pepper, and remove from the heat.",
+      "Heat oven to 375 degrees. Oil a 2-quart gratin or baking dish. Beat eggs in a large bowl. Whisk in milk and salt to taste (I use about ½ teaspoon). Stir in fennel and kale mixture, rice and Gruyère, and combine well. Taste and adjust seasonings. Scrape into baking dish. Sprinkle breadcrumbs over the top if using, and drizzle on the remaining tablespoon of oil. Bake 35 to 40 minutes, until set and the top and sides are beginning to color. Remove from oven and allow to sit for at least 10 minutes before serving. This is good hot, warm, or room temperature."
+    ]
+  },
+  {
+    id: "dried-porcini-consomme",
+    title: "Dried Porcini Consommé",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1015709-dried-porcini-consomme",
+    imageUrl: "https://static01.nyt.com/images/2013/11/19/science/19recipehealth/19recipehealth-superJumbo.jpg",
+    description: "A refreshing and light soup that can be an appetizer or full first course. I could drink this refreshing consommé for lunch every day. It makes a very light and satisfying appetizer soup or first course. Yield: enough for 10 to 12 shots servings; 4 to 6 bowls. servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt"
+    ],
+    plannedDays: [],
+    prepTime: "90 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "dried porcini mushrooms (about 1 cup, approximately)",
+        amount: "1 ounce",
+        category: "produce"
+      },
+      {
+        item: "boiling water",
+        amount: "2 cups",
+        category: "pantry"
+      },
+      {
+        item: "fresh white mushrooms, cleaned",
+        amount: "¼ pound",
+        category: "produce"
+      },
+      {
+        item: "quart chicken or vegetable stock",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "large garlic cloves, sliced thin",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "soy sauce",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "Salt and freshly ground pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "A few drops fresh lemon juice",
+        amount: "",
+        category: "produce"
+      },
+      {
+        item: "chopped fresh chives",
+        amount: "1 tablespoon",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Place the dried porcinis in a bowl or a pyrex measuring cup and cover with 2 cups boiling water. Let sit for 30 minutes. Meanwhile, wipe the fresh mushrooms, trim away the bottoms if they are sandy, break off the stems and set them aside. Set aside half of the caps in a separate bowl and slice the rest.",
+      "Line a strainer with cheesecloth and set it over a bowl. Drain the porcinis through the cheesecloth-lined strainer. Squeeze over the strainer to extract as much flavorful liquid as possible and set aside the broth. Rinse the reconstituted mushrooms in several changes of water. Measure the mushroom soaking water and add enough water to make 4 cups.",
+      "In a soup pot or a large saucepan, combine the mushroom soaking liquid, the chicken or vegetable stock, the soaked porcinis, fresh mushroom stems and sliced caps, garlic, and salt to taste, and bring to a simmer. Cover and simmer over very low heat for 30 minutes. Strain the soup and return to the saucepan. Add salt and freshly ground pepper to taste, and the soy sauce.",
+      "Slice the fresh mushroom caps you set aside paper-thin and toss with a couple of drops of lemon juice. Ladle the soup into bowls or espresso cups, garnish with a couple of slices of mushroom and a sprinkling of chives, and serve."
+    ]
+  },
+  {
+    id: "basil-tofu",
+    title: "Basil Tofu",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/761573409-basil-tofu",
+    imageUrl: "https://static01.nyt.com/images/2025/10/30/multimedia/HM-Basil-Tofu-cbpf/HM-Basil-Tofu-cbpf-videoSixteenByNineJumbo1600.jpg",
+    description: "Inspired by the savory heat of pad krapow, the popular Thai dish of stir-fried ground chicken or pork with chiles, garlic and basil, this tofu version is just as robustly seasoned and satiating. The traditional dish uses holy basil, but Thai or everyday sweet basil will work here. The cooking of this dish happens quickly, so have all your ingredients prepped before cooking. Tear the tofu into chunky pieces, as it will naturally break down further while being stir-fried. Keep the flavor of the basil bright and the color green by adding it right at the end, so the leaves are barely kissed with heat. Thai chiles are spicy, so add according to your taste: Two is a good choice for those who like spicy food, or three if you like it fiery. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "tofu"
+    ],
+    plannedDays: [],
+    prepTime: "25 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "Vegetable or grapeseed oil",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "shallot or small red onion, halved and sliced",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "red bell pepper, halved, seeds removed and finely diced",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "green beans, trimmed and thinly sliced into ½-inch pieces",
+        amount: "4 ounces",
+        category: "pantry"
+      },
+      {
+        item: "Salt",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, finely chopped",
+        amount: "4",
+        category: "produce"
+      },
+      {
+        item: "Thai chiles, finely chopped",
+        amount: "2 to 3",
+        category: "pantry"
+      },
+      {
+        item: "(14- to 16-ounce) packages extra-firm tofu, drained and broken into irregular 1-inch pieces",
+        amount: "2",
+        category: "protein"
+      },
+      {
+        item: "soy sauce",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "dark soy sauce",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "lime juice, plus 1 lime, quartered, to serve",
+        amount: "2 tablespoons",
+        category: "produce"
+      },
+      {
+        item: "Thai, holy or sweet basil leaves",
+        amount: "1 cup",
+        category: "produce"
+      },
+      {
+        item: "Cooked jasmine or short-grain white rice, to serve",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Heat a wok or a large 12-inch skillet on medium-high. When it’s hot, drizzle in 2 tablespoons of oil, add the shallot and toss until softened, 1 minute. Add the red bell pepper and green beans, season with ½ teaspoon of salt and toss for 1 minute. Add the garlic and Thai chiles and toss until fragrant, about 1 minute.",
+      "Add the tofu, soy sauce and dark soy sauce, and stir fry until the tofu is well coated and thoroughly warmed, 3 to 4 minutes. Finally, add the lime juice and basil leaves, and toss until the basil is wilted, about 30 seconds.",
+      "Serve with rice, with lime wedges on the side."
+    ]
+  },
+  {
+    id: "asparagus-mushroom-grain-bowl",
+    title: "Asparagus Mushroom Grain Bowl",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1024186-asparagus-mushroom-grain-bowl",
+    imageUrl: "https://static01.nyt.com/images/2023/05/10/multimedia/10apperex3-bowl-jwck/10apperex3-bowl-jwck-videoSixteenByNineJumbo1600.jpg",
+    description: "A savory, gingery mix of seared mushrooms and asparagus makes the main topping of this hearty grain bowl, which is rounded out by a jammy egg and a salad of shaved asparagus, scallion and sesame. Although shaving the asparagus for the topping does take a few minutes to do, it’s worth the extra effort for its crisp texture next to the soft sautéed vegetables. And the dish will still be ready in about half an hour. Use your favorite cooked grains here: Brown rice and farro are chewy and earthy, while quinoa and white rice are more tender and gentle in flavor. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt"
+    ],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "shiitake mushrooms, stems removed",
+        amount: "8 ounces",
+        category: "produce"
+      },
+      {
+        item: "thick asparagus (about 1 pound), ends trimmed",
+        amount: "1 bunch",
+        category: "produce"
+      },
+      {
+        item: "scallions, white parts separated from greens",
+        amount: "1 bunch",
+        category: "produce"
+      },
+      {
+        item: "neutral oil, such as grapeseed, safflower or avocado",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, finely grated or minced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "(1-inch) piece ginger, finely grated or minced",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "soy sauce or tamari, plus more for drizzling",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "gochugaru or red-pepper flakes, plus more for garnish",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "plus 1 teaspoon rice wine vinegar",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "honey",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "Fine sea or table salt",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "white or black sesame seeds",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "toasted sesame oil, plus more for drizzling",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "hot cooked grains, such as rice (brown or white), farro, quinoa or fonio",
+        amount: "4 cups",
+        category: "pantry"
+      },
+      {
+        item: "jammy eggs, halved (see Tip)",
+        amount: "2",
+        category: "protein"
+      }
+    ],
+    instructions: [
+      "Thinly slice half of the shiitake mushroom caps and set aside. Finely chop remaining mushroom caps.",
+      "Fill a bowl with ice water. Pick out 6 of the thickest asparagus spears, and using a vegetable peeler, peel long ribbons from each stalk until you’re left with thin planks that are too awkward to slice. Immediately add the ribbons to the ice water. Cut remaining asparagus (including the leftover planks) into 1-inch lengths. Set these cut pieces aside for cooking.",
+      "Thinly slice the scallion greens lengthwise into long strips and add to the ice water with the asparagus ribbons. Finely chop the scallion whites.",
+      "In a medium saucepan on medium-high heat, add 1 tablespoon neutral oil and the scallion whites. Cook for 2 to 3 minutes until they turn golden at the edges. Add the remaining 2 tablespoons oil, along with the finely chopped mushrooms, garlic and ginger, and cook for 1 minute, until fragrant. Add soy sauce and gochugaru or red-pepper flakes. Reduce heat to medium-low and cook for 5 minutes, until reduced, then add the sliced mushrooms. Continue to cook for another 5 to 7 minutes, until the mushrooms have completely softened.",
+      "Increase the heat to medium-high and add asparagus pieces to the pan. Add 1 tablespoon of rice vinegar and the honey. Let cook until the asparagus is crisp-tender, 3 to 5 minutes, adding a tablespoon or two of water to the pan if it dries out. Taste and add salt if needed, and remove from heat.",
+      "Drain the asparagus ribbons and scallions, and pat or spin dry in a salad spinner. Add to a bowl and toss with remaining 1 teaspoon rice vinegar, the sesame seeds, sesame oil and salt to taste.",
+      "Divide the grains across four bowls, and top with some of the cooked mushroom and asparagus. Add the asparagus ribbon salad and jammy eggs. Drizzle with more soy sauce and sesame oil, and garnish with a pinch of red-pepper flakes for serving."
+    ]
+  },
+  {
+    id: "vegetarian-tomato-mapo-tofu",
+    title: "Vegetarian Tomato Mapo Tofu",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027236-vegetarian-tomato-mapo-tofu",
+    imageUrl: "https://static01.nyt.com/images/2025/08/20/multimedia/hlm-mapo-tofu-with-tomatoes-cktq/hlm-mapo-tofu-with-tomatoes-cktq-videoSixteenByNineJumbo1600.jpg",
+    description: "Mapo tofu, the classic Sichuan dish that is now a Chinese American staple, receives a summery twist with the addition of tomatoes. Its signature tingly and assertive flavors are intensified by the umami tanginess of tomatoes, which also add a hint of fresh acidity. When you add the tofu, it will look like there’s not enough liquid, but rest assured, the tomatoes do break down during the cooking process, providing a soupy base. Not all brands of doubanjiang are created equal, so look for ones that come from Pixian, in Sichuan, as they tend to be the most flavorful thanks to a long period of fermentation under sunlight, resulting in a reddish-brown color with a deep and complex umami. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "tofu"
+    ],
+    plannedDays: [],
+    prepTime: "30 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "Vegetable oil (or other neutral oil)",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "yellow onion, halved and cut into ½-inch wedges",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "cremini mushrooms, trimmed and halved or quartered, depending on size",
+        amount: "6 ounces",
+        category: "produce"
+      },
+      {
+        item: "Salt and pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "(1-inch) piece fresh ginger, peeled and finely chopped",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "garlic cloves, finely chopped",
+        amount: "3",
+        category: "produce"
+      },
+      {
+        item: "whole dried red chiles (such as er jing tiao or chile de árbol) or ½ teaspoon crushed red pepper",
+        amount: "1 to 2",
+        category: "pantry"
+      },
+      {
+        item: "doubanjiang (fermented spicy broad bean paste) or Chinese black bean sauce",
+        amount: "2 to 3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "Sichuan peppercorns (to your liking)",
+        amount: "½ to 1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "tomatoes, cut into 1-inch chunks",
+        amount: "1 pound",
+        category: "produce"
+      },
+      {
+        item: "soy sauce",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "(14- to 16-ounce) packages silken tofu, drained",
+        amount: "2",
+        category: "protein"
+      },
+      {
+        item: "toasted sesame oil",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "scallions, thinly sliced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "Cooked rice, to serve",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Heat a large Dutch oven or other heavy pot on medium-high. When hot, drizzle with 1 to 2 tablespoons of oil and then add the onion and mushrooms and season with salt and pepper. Stir until the mushrooms and onions have softened and have golden edges, 2 to 3 minutes.",
+      "Add the ginger, garlic, dried chiles, doubanjiang and Sichuan peppercorns, and stir until fragrant, about 1 minute. Add the tomatoes, soy sauce and ½ cup water, and stir to combine.",
+      "Add the silken tofu to the pot, breaking it up into irregular chunks, and gently stir to combine. Reduce heat to medium, cover and cook for 10 minutes.",
+      "To serve, drizzle with sesame oil, top with scallions and eat with rice."
+    ]
+  },
+  {
+    id: "baked-salmon-with-harissa-and-cherry-tomatoes",
+    title: "Baked Salmon With Harissa and Cherry Tomatoes",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026695-baked-salmon-with-harissa-and-cherry-tomatoes",
+    imageUrl: "https://static01.nyt.com/images/2025/07/09/multimedia/NM-Harissa-Baked-Salmon-With-Cherry-Tomatoes-lvqh/NM-Harissa-Baked-Salmon-With-Cherry-Tomatoes-lvqh-videoSixteenByNineJumbo1600.jpg",
+    description: "This easy salmon tray bake packs a real punch thanks to the flavorful marinade it cooks in. The soy sauce is a bit of a non-Middle Eastern wild card, but contributes a welcome umami flavor. Tunisian harissa adds a nice subtle spice to this dish, but you can also swap it out for biber salçasi, a Turkish red pepper paste that you can find in most Turkish or Middle Eastern grocery stores. Like harissa, biber salçasi comes in both mild and hot varieties, so pick whichever one suits you. Serve the salmon with some steamed rice and lightly dressed greens if you like. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "salmon"
+    ],
+    plannedDays: [],
+    prepTime: "60 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "cumin seeds",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "coriander seeds",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "finely chopped cilantro, plus more for serving",
+        amount: "⅓ cup",
+        category: "produce"
+      },
+      {
+        item: "olive oil",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "lemon juice (from 1 large lemon)",
+        amount: "3 tablespoons",
+        category: "produce"
+      },
+      {
+        item: "soy sauce",
+        amount: "4 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "tomato paste",
+        amount: "1 tablespoon",
+        category: "produce"
+      },
+      {
+        item: "maple syrup",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "harissa, preferably Tunisian (depending on heat preference)",
+        amount: "2 to 3 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, finely chopped",
+        amount: "4",
+        category: "produce"
+      },
+      {
+        item: "sweet paprika",
+        amount: "¾ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "Fine sea salt and black pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "(6-ounce) center-cut skinless salmon fillets (about 1 ½ pounds total)",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "ripe cherry tomatoes, at room temperature",
+        amount: "8 ounces",
+        category: "produce"
+      },
+      {
+        item: "large shallots, thinly sliced",
+        amount: "3",
+        category: "pantry"
+      },
+      {
+        item: "olive oil",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "Fine sea salt and black pepper",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Make the marinade: Using a mortar and pestle or a spice grinder, lightly crush the cumin and coriander seeds, then transfer to a wide shallow bowl or baking dish. Stir in the remaining marinade ingredients, along with ¾ teaspoon salt and a good grind of pepper.",
+      "Add the salmon fillets to the marinade, spooning it over to coat. Set aside to marinate at room temperature for 20 minutes, or refrigerated for up to 4 hours if getting ahead.",
+      "Heat the oven to 400 degrees. In a shallow 9-by-13-inch baking dish, toss the tomatoes and shallots with the olive oil and a small pinch of salt and a good grind of pepper. Arrange the salmon fillets evenly on top and pour the marinade directly over the fillets.",
+      "Bake until the salmon flakes easily when pressed gently with a fork and the tomatoes have softened, about 22 minutes. Sprinkle the extra cilantro on top and serve directly from the baking dish."
+    ]
+  },
+  {
+    id: "sazon-chicken-breasts",
+    title: "Sazón Chicken Breasts",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1023058-sazon-chicken-breasts",
+    imageUrl: "https://static01.nyt.com/images/2022/04/11/dining/VD-Sazon-chicken-Breasts/merlin_204710106_2a1a3e72-d286-4f74-a261-b4441fb40bcc-videoSixteenByNineJumbo1600.jpg",
+    description: "This stovetop method of cooking chicken breasts in a sazón-heavy marinade produces juicy, fragrant, well-seasoned meat. It definitely stands up as a main course, but leftovers make for great additions to salads and tacos. The breasts benefit from an overnight marinade, which will make the meat juicier and more flavorful, but the dish can come together in 45 minutes if you’re short on time. This recipe also works great with boneless, skinless chicken thighs. Because they’re often thinner and fattier, they may cook a little more quickly than breasts. Yield: 4 to 6 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "chicken"
+    ],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "garlic cloves, minced",
+        amount: "4",
+        category: "produce"
+      },
+      {
+        item: "fresh orange juice, from 2 small oranges (preferably mandarin)",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "olive oil",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "homemade or store-bought basic sazón seasoning",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "kosher salt",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "black pepper",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "medium boneless, skinless chicken breasts (about 1 ½ pounds), trimmed of excess fat",
+        amount: "4",
+        category: "protein"
+      }
+    ],
+    instructions: [
+      "In a small food processor, combine the garlic, orange juice, olive oil, sazón, salt and pepper; pulse until it forms a creamy marinade. (Alternately, you can finely mince the garlic, then combine it with the rest of the ingredients in a small bowl, stirring with a fork.)",
+      "Pat the chicken breasts dry, then transfer them to a large resealable plastic bag. Pour the marinade on top, close, shake, then gently massage the seasoning into the meat. Let sit on the counter for at least 10 minutes. (Chicken can also be marinated overnight then set out to come to room temperature before cooking.)",
+      "Heat a large nonstick wok or deep skillet over medium-high. Add marinated chicken breasts, one by one, and pour over about half the marinade. Cook for 7 to 10 minutes, flipping frequently with tongs and being careful not to let them get too dark too fast. Reduce heat to low and cook for another 10 to 20 minutes, depending on the thickness of the breast, flipping often to ensure meat is cooked through. Thinner chicken breasts will take less time to cook, so monitor the color and texture of your meat as it cooks. Check doneness by pressing the center with your tongs. If the center is still squishy, continue to cook until meat has a bit of resistance (though not rock hard), and registers 165 degrees on a meat thermometer.",
+      "Let rest in the pan off-heat for a few minutes. Serve, pouring over any remaining pan juices if desired."
+    ]
+  },
+  {
+    id: "mushroom-and-eggplant-yassa",
+    title: "Mushroom and Eggplant Yassa",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1023666-mushroom-and-eggplant-yassa",
+    imageUrl: "https://static01.nyt.com/images/2022/11/29/dining/yk-mushroom-yassa/yk-mushroom-yassa-videoSixteenByNineJumbo1600.jpg",
+    description: "Sauce yassa is a richly flavored Senegalese stew typically cooked with poultry, meat or fish. It’s the result of slowly caramelized onions, chile, garlic and ginger simmered in stock and finished with a splash of lime juice. This vegetable version, a vegan adaptation, uses mushrooms and eggplants, which both add layers of depth to the sauce. A shower of thinly sliced fresh scallions announces itself with its delicate yet crisp bite. Serve a generous helping of the sauce over steamed rice, millet or fonio, along with additional lime wedges for squeezing, if desired. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt"
+    ],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "neutral oil, such as grapeseed or canola, plus more as needed",
+        amount: "6 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "baby bella or button mushrooms, sliced",
+        amount: "1 pound",
+        category: "produce"
+      },
+      {
+        item: "Salt and black pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "thyme sprigs",
+        amount: "8",
+        category: "pantry"
+      },
+      {
+        item: "large yellow onions (about 1 ½ pounds total), thinly sliced",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "Scotch bonnet chile",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, thinly sliced",
+        amount: "4",
+        category: "produce"
+      },
+      {
+        item: "(2-inch) piece fresh ginger, scrubbed and grated",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "fresh or dried bay leaves",
+        amount: "2",
+        category: "pantry"
+      },
+      {
+        item: "medium eggplant (about 1 ¼ pounds), trimmed and cut into 1-inch cubes",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "vegetable stock",
+        amount: "2 cups",
+        category: "pantry"
+      },
+      {
+        item: "limes",
+        amount: "2",
+        category: "pantry"
+      },
+      {
+        item: "Dijon mustard",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "scallions, thinly sliced",
+        amount: "2",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "Heat 1 tablespoon oil in a large skillet over medium-high. Working in 2 batches, add an even layer of the mushrooms to the hot oil. Season with salt and pepper and add 4 thyme sprigs. Sear, stirring, until lightly browned on both sides, about 4 minutes. Transfer the mushrooms to a plate and repeat with another tablespoon oil and the remaining mushrooms and thyme.",
+      "Heat 2 tablespoons oil over medium-high. Add the onions and season with salt and pepper. Cook, stirring occasionally, until softened and browned along the edges, about 5 minutes. Reduce the heat to medium and continue to cook, stirring frequently, until caramelized, about 12 minutes.",
+      "Add the remaining 2 tablespoons oil to the skillet. Poke holes in the Scotch bonnet with the tip of a sharp knife and drop it in. Add the garlic, ginger and bay leaves. Stir and cook until the chile starts to soften, about 1 minute. Add the eggplant and season lightly with salt. Stir to coat with the onion mixture. Return the mushrooms to the pan along with any liquid that's collected on the plate. Add the vegetable stock and simmer over medium-high heat, stirring frequently, until the liquid is saucy, about 8 minutes.",
+      "Juice 1 lime and cut the other into wedges. Add the lime juice and mustard to the sauce. Stir and cook until the sauce is thickened, about 4 minutes. Stir in the scallions and cook for an additional minute. Taste and adjust with more salt or lime juice if desired. Serve the warm yassa over steamed rice, fonio or millet, along with the lime wedges for squeezing."
+    ]
+  },
+  {
+    id: "lemon-miso-tofu-with-broccoli",
+    title: "Lemon-Miso Tofu With Broccoli",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1026706-lemon-miso-tofu-with-broccoli",
+    imageUrl: "https://static01.nyt.com/images/2025/06/06/multimedia/hm-lemon-miso-tofu-mqjh/hm-lemon-miso-tofu-mqjh-videoSixteenByNineJumbo1600.jpg",
+    description: "Inspired by Cantonese-style lemon chicken, this vegetarian version features crispy tofu and broccoli coated in a citrusy sweet and savory sauce. This lemon sauce is neither overly sweet nor tart, but has a soft umami hum thanks to the addition of miso paste. The simple technique of dusting the tofu with cornstarch before pan-frying delivers crispy tofu that is light yet robust enough to carry the sauce. (The tofu and broccoli can also be cooked in an air-fryer with comparable results; see Tip for instructions.) Once the crusted tofu hits the sauce, it will soften and become velvety, though if you prefer more crunch, you can serve the lemon sauce on the side for dipping. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "tofu"
+    ],
+    plannedDays: [],
+    prepTime: "45 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "just-boiled water",
+        amount: "¾ cup",
+        category: "pantry"
+      },
+      {
+        item: "white (shiro) miso paste",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "lemon juice (from 1 to 2 lemons)",
+        amount: "¼ cup",
+        category: "produce"
+      },
+      {
+        item: "maple syrup or honey",
+        amount: "3 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "cornstarch",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "salt",
+        amount: "½ teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "roasted sesame oil",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "garlic cloves, finely grated",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "(1-inch) piece fresh ginger, peeled and finely grated",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "cornstarch",
+        amount: "⅓ cup",
+        category: "pantry"
+      },
+      {
+        item: "Salt and pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "(14- to 16-ounce) package extra-firm tofu, drained, patted dry and cut into 1-inch cubes",
+        amount: "1",
+        category: "protein"
+      },
+      {
+        item: "Canola or vegetable oil",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "broccoli (about 2 small heads), cut into small florets",
+        amount: "1 pound",
+        category: "produce"
+      },
+      {
+        item: "scallions, trimmed and thinly chopped",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "Cooked rice, to serve",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Prepare the lemon-miso sauce: in a medium bowl or jug, add the just-boiled water and the miso paste and stir to dissolve it. Add the lemon juice, maple syrup, cornstarch and salt, and stir to combine. Set aside.",
+      "Prepare the tofu: Place the cornstarch on a large plate or tray. Season with salt and pepper and toss to combine. Add the tofu cubes and toss to coat all sides.",
+      "Heat a large (12-inch) nonstick or well-seasoned skillet on medium-high for 2 minutes. Drizzle with 3 tablespoons canola oil, swirling it around to coat the base, and add the tofu. Cook until golden and crispy, 2 to 3 minutes per side. If the pan gets dry, add a bit more oil and reduce heat to medium if the pan gets too smoky. Transfer the tofu to a large plate.",
+      "If the skillet is dry, drizzle with a bit more oil. With the heat on medium-high, add the broccoli, season with salt and pepper, and cook, tossing often, until tender and charred around the edges, 6 to 7 minutes (reduce heat to medium if it gets too hot and smoky). Transfer the broccoli to the same plate as the tofu.",
+      "Finish the lemon-miso sauce: Give the skillet a quick rinse or wipe it out with paper towels to remove any burnt bits and place it back on medium heat for 1 minute. Add the sesame oil, garlic and ginger to the skillet and bloom for 30 seconds, stirring, until fragrant. Give the lemon cornstarch mixture a stir and then pour it into the skillet. Cook, stirring, until thickened and glossy, 3 to 4 minutes. Remove from heat.",
+      "Add the tofu and broccoli to the lemon-miso sauce and toss to coat. Scatter with the scallions, and serve immediately with rice."
+    ]
+  },
+  {
+    id: "garlic-braised-short-ribs-with-red-wine",
+    title: "Garlic Braised Short Ribs With Red Wine",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1019034-garlic-braised-short-ribs-with-red-wine",
+    imageUrl: "https://static01.nyt.com/images/2017/12/16/dining/16COOKING-BRAISED-SHORTRIBS/16COOKING-BRAISED-SHORTRIBS-videoSixteenByNineJumbo1600.jpg",
+    description: "If you weren’t already sure about how easy and delicious braised short ribs can be, consider this classic and straightforward recipe an excellent gateway. The ultimate hands-off, do-ahead dinner, these are done on the stovetop in a large Dutch oven but can easily be adapted to a slow cooker if that’s your thing. When purchasing the ribs, ask for the thickest, meatiest ones available as they tend to shrink quite a bit once braised. Yield: 6 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt"
+    ],
+    plannedDays: [],
+    prepTime: "270 min",
+    serves: 6,
+    ingredients: [
+      {
+        item: "vegetable oil",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "bone-in short ribs, at least 1 ½ inches thick",
+        amount: "5 pounds",
+        category: "protein"
+      },
+      {
+        item: "Kosher salt and freshly ground pepper",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "large heads garlic, halved crosswise",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "medium onion (about 10 ounces), chopped",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "ribs celery (about 8 ounces, chopped",
+        amount: "4",
+        category: "protein"
+      },
+      {
+        item: "medium carrots (about 6 ounces), chopped",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "tomato paste",
+        amount: "3 tablespoons",
+        category: "produce"
+      },
+      {
+        item: "dry red wine (about half a bottle)",
+        amount: "2 cups",
+        category: "pantry"
+      },
+      {
+        item: "beef stock or bone broth (use beef bouillon dissolved in water if unavailable; chicken stock will work in a pinch), plus more as needed",
+        amount: "2 cups",
+        category: "pantry"
+      },
+      {
+        item: "thyme",
+        amount: "4 sprigs",
+        category: "pantry"
+      },
+      {
+        item: "parsley, coarsely chopped",
+        amount: "1 cup",
+        category: "produce"
+      },
+      {
+        item: "finely chopped chives",
+        amount: "½ cup",
+        category: "pantry"
+      },
+      {
+        item: "finely grated lemon zest",
+        amount: "1 tablespoon",
+        category: "produce"
+      }
+    ],
+    instructions: [
+      "Heat oven to 275 degrees. Heat oil in a large Dutch oven over medium-high heat. Season short ribs on all sides with salt and pepper. Working in batches, sear short ribs on all sides until deeply and evenly browned, 6 to 8 minutes per batch. Transfer browned short ribs to a large plate and continue with remaining ribs.",
+      "Pour off all but 2 tablespoons of remaining fat, leaving the good browned bits behind. Reduce heat to medium, and add garlic, cut side down and cook, undisturbed, until golden brown, about 1 to 2 minutes. Add onion, celery and carrots and season with salt and pepper. Toss to coat and continue to cook until vegetables are softened but not yet browned, about 5 to 10 minutes. Add tomato paste and stir to coat. Continue to cook, stirring occasionally, until tomato paste has started to caramelize a bit on the bottom and up the edges of the pot, about 2 to 3 minutes.",
+      "Add red wine and, using a wooden spoon, scrape up any browned or caramelized bits. Let this simmer 2 to 3 minutes, just to take the edge off and reduce a bit. Stir in beef stock along with thyme. Using tongs, return short ribs to the pot, along with any juices that have accumulated, nestling them in there so that they are submerged (if they are just barely covered, nestle them bone side up so that all the meat is submerged, adding more beef stock or water as necessary to cover). Bring to a simmer, then cover and transfer to oven.",
+      "Cook, undisturbed, until short ribs are meltingly tender and falling off the bone (you should be able to shred the meat with a fork), 3½ to 4 hours.",
+      "Using tongs, remove the ribs from the pot, taking care (for presentation purposes, really) not to let the bone slip out and transfer them to a large plate. (While you could serve the short ribs right out of this pot, the vegetables have all given up their flavor and texture and aren’t worth much now, so feel free to strain the sauce for easier eating.) Scatter parsley, chives and lemon zest over the top of the short ribs. Separate the fat from the sauce, season with salt and pepper and serve alongside."
+    ]
+  },
+  {
+    id: "coconut-beef-curry",
+    title: "Coconut Beef Curry",
+    category: "Dinner",
+    sourceName: "NYT Cooking",
+    sourceUrl: "https://cooking.nytimes.com/recipes/1027320-coconut-beef-curry",
+    imageUrl: "https://static01.nyt.com/images/2025/09/09/multimedia/zs-coconut-beef-curry-hkwf/zs-coconut-beef-curry-hkwf-videoSixteenByNineJumbo1600.jpg",
+    description: "Vijay Kumar, the chef behind the Michelin-starred restaurant Semma in New York City, once told me, “Coconut and spices have a love connection.” Inspired by an intricate beef curry he taught me, this recipe has been reimagined for home cooks. There are still many ingredients and steps, and every one earns its place. This is a dish of texture, aroma and deeply coaxed flavor, where whole spices are toasted until they bloom with warmth and then get blended into a rich paste. That paste becomes the backbone of the curry, lending a complexity and depth that ground spices alone can’t achieve. Simmered with coconut milk and spiked with green chiles, the final curry is velvety, robust and soulful; the kind of dish that rewards patience and turns an ordinary dinner into a celebration. Serve it with paratha, rice or roti, and let the sauce shine. Yield: 4 servings.",
+    favourite: false,
+    tags: [
+      "dinner",
+      "nyt",
+      "beef"
+    ],
+    plannedDays: [],
+    prepTime: "140 min",
+    serves: 4,
+    ingredients: [
+      {
+        item: "whole black peppercorns",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "coriander seeds",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "cumin seeds",
+        amount: "2 teaspoons",
+        category: "pantry"
+      },
+      {
+        item: "fennel seeds",
+        amount: "1 teaspoon",
+        category: "produce"
+      },
+      {
+        item: "poppyseeds",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "green cardamom pods",
+        amount: "5",
+        category: "pantry"
+      },
+      {
+        item: "cloves",
+        amount: "12",
+        category: "pantry"
+      },
+      {
+        item: "whole star anise",
+        amount: "2",
+        category: "pantry"
+      },
+      {
+        item: "whole dried red chiles (preferably dundicut chiles)",
+        amount: "3",
+        category: "pantry"
+      },
+      {
+        item: "fresh curry leaves",
+        amount: "8 to 10",
+        category: "pantry"
+      },
+      {
+        item: "dried unsweetened grated coconut",
+        amount: "¼ cup",
+        category: "pantry"
+      },
+      {
+        item: "sesame, canola or another neutral oil",
+        amount: "4 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "black mustard seeds",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "ginger paste or freshly grated ginger",
+        amount: "1 teaspoon",
+        category: "produce"
+      },
+      {
+        item: "garlic paste or freshly grated garlic",
+        amount: "1 teaspoon",
+        category: "produce"
+      },
+      {
+        item: "large red onion, finely chopped",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "Fine sea salt",
+        amount: "",
+        category: "pantry"
+      },
+      {
+        item: "ground coriander",
+        amount: "2 tablespoons",
+        category: "pantry"
+      },
+      {
+        item: "ground cumin",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "Kashmiri or other red chile powder",
+        amount: "1 tablespoon",
+        category: "pantry"
+      },
+      {
+        item: "ground turmeric",
+        amount: "1 teaspoon",
+        category: "pantry"
+      },
+      {
+        item: "green bird’s-eye chiles, stems removed and split",
+        amount: "2",
+        category: "pantry"
+      },
+      {
+        item: "plum tomatoes, chopped",
+        amount: "2",
+        category: "produce"
+      },
+      {
+        item: "boneless beef chuck or boneless short ribs, cut into 1-inch pieces",
+        amount: "1 ¼ pounds",
+        category: "protein"
+      },
+      {
+        item: "medium potato (optional), such as Yukon Gold, cubed into 1-inch pieces",
+        amount: "1",
+        category: "produce"
+      },
+      {
+        item: "(13-ounce) can unsweetened coconut milk",
+        amount: "1",
+        category: "pantry"
+      },
+      {
+        item: "Paratha, basmati rice or roti, for serving",
+        amount: "",
+        category: "pantry"
+      }
+    ],
+    instructions: [
+      "Make the masala paste: Heat a medium fry pan on high heat for 1 to 2 minutes, until it is scalding hot. Add the peppercorns, coriander, cumin, fennel, poppyseeds, cardamom, cloves, star anise and chile. Reduce the heat to medium, and cook, stirring frequently and reducing the heat more if the spices begin to smoke, until the seeds start to sputter and pop, about 5 minutes. Add curry leaves and coconut; continue to cook, stirring, for about 15 seconds, until the spices release an earthy, warm and smoky fragrance and the coconut darkens in color.",
+      "Transfer the spice mixture to a blender. Add ¼ cup water and pulse for 2 to 3 minutes, until a smooth paste forms. To help the spice mixture blend more easily, scrape down the sides a couple times between pulses, and add up to ¼ cup more water if needed. Set aside.",
+      "Make the curry: Heat oil in a Dutch oven or other heavy-bottomed pot on medium-high heat for 1 to 2 minutes, until the oil starts to shimmer. Add mustard seeds and let them sputter briefly. (A pan lid is helpful to shield you from any spatter.) Add ginger and garlic and stir, then immediately add onion and a pinch of salt and stir again. Cook, stirring occasionally, until the onion starts to soften and turn golden, about 15 minutes.",
+      "Stir in coriander, cumin, red chile powder, turmeric and green chile, and cook, stirring often, for 5 minutes more, lowering the heat if the mixture begins to smoke. Stir in a splash of water if the mixture starts to stick.",
+      "Reduce the heat to medium. Stir in tomatoes and continue to cook, stirring occasionally, until the tomatoes have broken down and the oil starts to separate from the jammy mixture, 10 to 15 minutes, adding a splash of water any time the mixture starts sticking to the pot. Stir in the masala paste, then add beef and stir so it’s thoroughly coated with the masala. Stir in 1 cup water and cook at a low simmer for 40 to 50 minutes, until the liquid has reduced by half. (Feel free to add up to ¾ cup more water as it cooks, depending on how saucy you like your curry.)",
+      "Add half of the coconut milk, bring to a simmer and cook for another 20 minutes. Add the potatoes, if using, bring to a simmer and continue to cook for another 20 minutes, until the beef and potatoes are tender. Stir in the remaining coconut milk and warm through, then taste and add more salt if needed. Serve with paratha, rice or roti."
     ]
   },
 ];
